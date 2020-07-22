@@ -1,7 +1,8 @@
 package com.xkcoding.elasticsearch.template;
 
-import com.xkcoding.elasticsearch.SpringBootDemoElasticsearchApplicationTests;
 import com.xkcoding.elasticsearch.model.Person;
+import com.xkcoding.elasticsearch.repository.SpringBootDemoElasticsearchApplicationTests;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;

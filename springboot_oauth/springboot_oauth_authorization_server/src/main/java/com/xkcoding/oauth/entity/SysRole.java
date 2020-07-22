@@ -3,7 +3,7 @@ package com.xkcoding.oauth.entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-import org.codehaus.jackson.annotate.JsonIgnore;
+//import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.Set;

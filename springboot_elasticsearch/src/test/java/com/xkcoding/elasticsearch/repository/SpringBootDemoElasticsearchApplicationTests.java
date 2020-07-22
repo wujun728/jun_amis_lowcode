@@ -1,4 +1,4 @@
-package com.xkcoding.elasticsearch;
+package com.xkcoding.elasticsearch.repository;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

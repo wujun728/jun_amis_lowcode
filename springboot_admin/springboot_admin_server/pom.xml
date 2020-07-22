@@ -30,7 +30,7 @@
 
     <dependency>
       <groupId>de.codecentric</groupId>
-      <artifactId>spring-boot-admin_starter-server</artifactId>
+      <artifactId>spring-boot-admin-starter-server</artifactId>
     </dependency>
 
     <dependency>

@@ -1,16 +1,13 @@
 package com.xkcoding.elasticsearch.repository;
 
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.json.JSONUtil;
-import com.google.common.collect.Lists;
-import com.xkcoding.elasticsearch.SpringBootDemoElasticsearchApplicationTests;
-import com.xkcoding.elasticsearch.model.Person;
-import lombok.extern.slf4j.Slf4j;
+import java.util.List;
+
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.StringTerms;
-import org.elasticsearch.search.aggregations.metrics.avg.InternalAvg;
+import org.elasticsearch.search.aggregations.metrics.InternalAvg;
+//import org.elasticsearch.search.aggregations.metrics.avg.InternalAvg;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
 import org.junit.Test;
@@ -22,7 +19,13 @@ import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.query.FetchSourceFilter;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 
-import java.util.List;
+import com.google.common.collect.Lists;
+//import com.xkcoding.elasticsearch.SpringBootDemoElasticsearchApplicationTests;
+import com.xkcoding.elasticsearch.model.Person;
+
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.json.JSONUtil;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>
