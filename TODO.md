@@ -1,7 +1,7 @@
 # spring-boot-demo 项目待办列表
 
 
-## 模块计划(已完成：54 / 66)
+## 模块计划(已完成：54 )
 
 - [x] ~~spring-boot-demo-helloworld（Helloworld 示例）~~
 - [x] ~~spring-boot-demo-properties（读取配置文件信息）~~
@@ -70,6 +70,4 @@
 - [ ] spring-boot-demo-security-justauth（使用 JustAuth 登录 GitHub，使用 Security 管理登录状态）
 - [x] ~~spring-boot-demo-flyway（集成 Flyway，项目启动时初始化数据库表结构，同时支持数据库脚本版本控制）~~
 
-## 备注
-
-尽量保证按照上面的顺序集成相应的 demo。
+## 备注 
