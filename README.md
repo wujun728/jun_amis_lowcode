@@ -121,7 +121,6 @@ HTTPS、Flyway(`数据库初始化`)。
 | spring-boot-starter-websocket          | Spring Boot 集成 WebSocket 功能                             |
 | spring-boot-starter-ws                 | Spring Boot 集成 WebService 功能                            |
 
-
 #### 开发环境
 
 - **JDK 1.8 +**
@@ -132,25 +131,17 @@ HTTPS、Flyway(`数据库初始化`)。
 #### 运行方式
 
 > 提示：如果是 fork 的朋友，同步代码的请参考：
-1. `git clone https://github.com/xkcoding/spring-boot-demo.git`
+1. `git clone https://github.com/wujun728/jun_xxx.git`
 2. 使用 IDEA 打开 clone 下来的项目
 3. 在 IDEA 中 Maven Projects 的面板导入项目根目录下 的 `pom.xml` 文件
 4. Maven Projects 找不到的童鞋，可以勾上 IDEA 顶部工具栏的 View -> Tool Buttons ，然后 Maven Projects 的面板就会出现在 IDEA 的右侧
 5. 找到各个 Module 的 Application 类就可以运行各个 demo 了
-6. **`注意：每个 demo 均有详细的 README 配套，食用 demo 前记得先看看哦~`**
-7. **`注意：运行各个 demo 之前，有些是需要事先初始化数据库数据的，亲们别忘记了哦~`**
+6. 注意：每个 demo 均有详细的 README 配套，用 demo 前记得先看看
+7. 注意：运行各个 demo 之前，有些是需要事先初始化数据库数据的
 
-#### 开源推荐
-
-- `JustAuth`：史上最全的整合第三方登录的开源库，https://github.com/justauth/JustAuth
-- `Mica`：SpringBoot 微服务高效开发工具集，https://github.com/lets-mica/mica
-- `awesome-collector`：https://github.com/P-P-X/awesome-collector
-- `SpringBlade`：完整的线上解决方案(企业开发必备)，https://github.com/chillzhuang/SpringBlade
-- `Pig`：宇宙最强微服务认证授权脚手架(架构师必备)，https://github.com/pigxcloud/pig
-
-
-####  待办TODO列表
-
+#### 已办&待办列表
 - [ ] spring_boot_demo_urule（集成  urule 实现规则引擎）
 - [ ] spring_boot_demo_activiti（集成 Activiti 实现流程控制引擎）
 - [x] ~~spring_boot_demo_async（Spring boot 实现异步调用）~~
+
+
