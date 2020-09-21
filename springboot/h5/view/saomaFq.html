@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">  
+    <title>扫码分期</title>
+    <style>
+        .box{display: none;position: relative;}
+        #boxA>a, #boxB>a{
+            position: absolute;
+            bottom: 1.5rem;
+            left: 5%;
+            right: 5%;
+            text-align: center;
+            height: .8rem;
+            line-height: .8rem;
+            background: #FF7E00;
+            color: #fff;
+            border-radius: .1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="maina">
+        <!-- 扫码分期 -->
+        <div class="box" id="boxA">
+            <img src="../static/images/saomafenqi.jpg" alt="">
+            <a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cmbc.cc.mbank">立即申请</a>
+        </div>
+        <!-- 招商闪电贷 -->
+        <div class="box" id="boxB">
+            <img src="../static/images/zhaoshangdai.jpg" alt="">
+            <a href="https://t.cmbchina.com/6rb3QM?LinkExtraInfo=_LLE_2CB4nGNQxxrMSWV3AnrV3lALoDhWX:cfe8e:kl6iUkU__LLE_">立即申请</a>
+        </div>
+    </div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script>
+        $(function(){
+            // 0 招商闪电贷 1 扫码分期
+            var type =  getQueryString('type');
+            if(type == '0'){
+                $("title").html('招商闪电贷');
+                $("#boxB").css("display","block");
+            }
+            if(type == '1'){
+                $("title").html('扫码分期');
+                $("#boxA").css("display","block");
+            }
+        });
+    </script>
+</body>
+</html>

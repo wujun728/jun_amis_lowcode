@@ -1,0 +1,60 @@
+[[spring-cloud-discovery-support]]
+=== Spring Cloud Discovery ===
+
+The Spring Boot Admin Server can use Spring Clouds `DiscoveryClient` to discover applications. The advantage is that the clients don't have to include the `spring-boot-admin-starter-client`. You just have to add a DiscoveryClient to your admin server - everything else is done by AutoConfiguration.
+The setup is explained <<discover-clients-via-spring-cloud-discovery,above>>.
+
+==== ServiceInstanceConverter ====
+
+The information from the service registry are converted by the `ServiceInstanceConverter`. Spring Boot Admin ships with a default and Eureka converter implementation. The correct one is selected by AutoConfiguration.
+
+TIP: You can modify how the information from the registry is used to register the application by using SBA Server configuration options and instance metadata. The values from the metadata takes precedence over the server config. If the plenty of options don't fit your needs you can provide your own `ServiceInstanceConverter`.
+
+NOTE: When using Eureka, the `healthCheckUrl` known to Eureka is used for health-checking, which can be set on your client using `eureka.instance.healthCheckUrl`.
+
+.Discovery configuration options
+|===
+| Property name |Description |Default value
+
+| spring.boot.admin.discovery.enabled
+| Enables the DiscoveryClient-support for the admin server.
+| `true`
+
+| spring.boot.admin.discovery.converter.management-context-path
+| Will be appended to the service-url of the discovered service when the management-url is converted by the `DefaultServiceInstanceConverter`.
+|
+
+| spring.boot.admin.discovery.converter.health-endpoint-path
+| Will be appended to the management-url of the discovered service when the health-url is converted by the `DefaultServiceInstanceConverter`.
+| `"health"`
+
+| spring.boot.admin.discovery.ignored-services
+| This services will be ignored when using discovery and not registered as application. Supports simple patterns (e.g. "foo*", "*bar", "foo*bar*").
+|
+
+| spring.boot.admin.discovery.services
+| This services will be included when using discovery and registered as application. Supports simple patterns (e.g. "foo*", "*bar", "foo*bar*").
+| `"*"`
+|===
+
+.Instance metadata options
+|===
+| Key |Value |Default value
+
+| user.name +
+user.password
+| Credentials being used to access the endpoints.
+|
+
+| management.port
+| The port is substituted in the service URL and will be used for accessing the actuator endpoints.
+|
+
+| management.context-path
+| The path is appended to the service URL and will be used for accessing the actuator endpoints.
+| `${spring.boot.admin.discovery.converter.mangement-context-path}`
+
+| health.path
+| The path is appended to the service URL and will be used for the health-checking. Ignored by the `EurekaServiceInstanceConverter`.
+| `${spring.boot.admin.discovery.converter.health-endpoint}`
+|===

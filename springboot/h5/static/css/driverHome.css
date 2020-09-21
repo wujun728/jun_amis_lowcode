@@ -1,0 +1,138 @@
+
+.wrap{
+    margin-top: .2rem;
+    background: #fff;
+}
+.row{
+    border-bottom: 1px solid rgba(187,187,187,.2);
+    display: flex;
+}
+.row:last-child{
+    border-bottom: none;
+}
+.row .item{
+    flex: 1;
+    border-right: 1px solid rgba(187,187,187,.2);
+}
+.row .item:nth-child(3n){
+    border-right: none;
+}
+.row .item .icon{
+    width: .8rem;
+    height: .8rem;
+    margin: .4rem auto .1rem;
+    overflow: hidden;
+}
+
+.row .item p{
+    text-align: center;
+    font-size: .24rem;
+    margin-bottom: .4rem;
+}
+.row .item .icon-1{
+    background: url(../images/icon1-1.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-2{
+    background: url(../images/icon1-2.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.row .item .icon-3{
+    background: url(../images/fenqi.png) center center no-repeat;
+    background-size: 80%;
+}
+
+.row .item .icon-4{
+    background: url(../images/icon2-1.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-5{
+    background: url(../images/icon2-2.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-6{
+    background: url(../images/icon2-3.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-7{
+    background: url(../images/icon3-1.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-8{
+    background: url(../images/icon3-2.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-9{
+    background: url(../images/icon3-3.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-10{
+    background: url(../images/icon4-1.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-11{
+    background: url(../images/icon4-2.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-12{
+    background: url(../images/icon4-3.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-13{
+    background: url(../images/icon-11.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-14{
+    background: url(../images/my-13.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-15{
+    background: url(../images/icon4-4.png) center center no-repeat;
+    background-size: 100%;
+}
+.row .item .icon-16{
+    background: url(../images/icon4-5.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.apply{
+    margin-top: .2rem;
+    background: #fff;
+    padding: .2rem;
+}
+.apply .item{
+    display: flex;
+}
+.apply .item .l{
+    flex: 1;
+    display: flex;
+}
+.apply .l .icon,
+.apply .r .icon{
+    width: .4rem;
+    height: .4rem;
+    overflow: hidden;
+}
+.icon-20{
+    background: url(../images/icon-lv.png) center center no-repeat;
+    background-size: 90%;
+    margin-right: .2rem;
+}
+.icon-21{
+    background: url(../images/right-1.png) center center no-repeat;
+    background-size: 70%;
+}
+
+.apply .r{
+    display: flex;
+}
+.apply .txt{
+    font-size: .28rem;
+}
+
+
+
+
+
+

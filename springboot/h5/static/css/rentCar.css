@@ -1,0 +1,114 @@
+
+.tj-btn{
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background: #FF7E00;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tel{
+    display: none;
+    width: 90%;
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    background: #ccc;
+    border-radius: .1rem;
+    overflow: hidden;
+    padding: .05rem;
+}
+.tel-wrap{
+    padding: .2rem;
+    background: #fff;
+}
+.tel-wrap .tit{
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    font-size: .32rem;
+    margin-bottom: .2rem;
+}
+.telipt{
+    border: 1px solid #ccc;
+    height: .8rem;
+    line-height: .8rem;
+    padding-left: .2rem;
+    margin-bottom: .2rem;
+}
+.telipt>input{
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;;
+}
+.telipt>input::placeholder{
+    color: #ADAEBB;
+}
+.tel-wrap .tips{
+    font-size: .2rem;
+    padding: 0 0 .4rem;
+    color: #FF7E00;
+}
+.tel-btn{
+    height: .8rem;
+    line-height: .8rem;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+}
+.tel-btn>div{
+    flex: 1;
+}
+.cancel{
+    border: 1px solid #ccc;
+    border-radius: .1rem;
+    margin-right: .2rem;
+}
+.success{
+    background: #FF7E00;
+    color: #fff;
+    border-radius: .1rem;
+    margin-left: .2rem;
+}
+.sex, .yuyue-sty{
+    margin-bottom: .2rem;
+    padding: 0 .2rem;
+    display: flex;
+}
+.itema{
+    height: .8rem;
+    line-height: .8rem;
+    margin-bottom: .2rem; 
+    border: 1px solid #ccc;
+    display: flex;
+    overflow: hidden;
+}
+.itema .a{
+    flex: 1;
+    /* border: 1px solid #ccc; */
+    height: .8rem;
+    line-height: .8rem;
+    padding-left: .2rem;
+}
+.itema .btn{
+    color: #999;
+    background: transparent;
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
+.sex>label{
+    width: 1.5rem;
+    display: flex;
+}
+.sex>label>input{
+    margin-top: .05rem;
+    margin-right: .1rem;
+}
+.sex>label .a{
+
+}

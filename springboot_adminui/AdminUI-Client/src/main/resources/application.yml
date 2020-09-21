@@ -1,0 +1,22 @@
+## 将Client作为服务注册到Server，通过Server来监听项目的运行情况
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+ ## application实例名       
+  application:
+    name : spring-boot-admin-client
+ 
+server:
+  port: 8081
+
+## 启用所有端点的监控权限
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

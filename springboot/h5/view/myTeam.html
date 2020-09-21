@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" style="background: rgb(245, 247, 250);">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/myTeam.css">  
+    <title>我的团队</title>
+</head>
+<body style="background: rgb(245, 247, 250);">
+    <div class="maina">
+        <a href="xrrz.html" class="tips" style="display: none;">您还未完成新人认证，请前往认证</a>
+        <div class="top">
+            <p class="txt">可提现金额</p>
+            <p class="price" id="price">0.00</p>
+            <a href="javascript:void(0);" class="cash-btn" id="cashBtn">提现</a>
+            <div class="box">
+                <div class="l">
+                    <div class="l">我的当前等级：<span id="dengji">初级会员</span></div>
+                </div>
+                <div class="r" id="grade">立即升级</div>
+            </div>
+            <div class="logo"></div>
+        </div>
+        <div class="title">奖励明细</div>
+        <div class="jiangli">
+            <div class="item">
+                <div class="p">累计总奖励</div>
+                <p id="A">¥0.00</p>
+            </div>
+            <div class="item">
+                <div class="p">已提现奖励</div>
+                <p id="B">¥0.00</p>
+            </div>
+        </div>
+        <div class="title">我的团队</div>
+        <div class="wrap">
+            <div class="item" data-flag="true">
+                <div class="tit">
+                    <div class="l" id="chuji">初级会员</div>
+                    <div class="r">
+                        <div class="txt">展开查看</div>
+                        <div class="icona"></div>
+                    </div>
+                </div>
+                <div class="box" id="chujiList"></div>
+            </div>
+            <div class="item" data-flag="true">
+                <div class="tit">
+                    <div class="l" id="gaoji">高级会员</div>
+                    <div class="r">
+                        <div class="txt">展开查看</div>
+                        <div class="icona"></div>
+                    </div>
+                </div>
+                <div class="box" id="gaojiList"></div>
+            </div>
+            <div class="item" data-flag="true">
+                <div class="tit">
+                    <div class="l" id="siji">龙锟司机</div>
+                    <div class="r">
+                        <div class="txt">展开查看</div>
+                        <div class="icona"></div>
+                    </div>
+                </div>
+                <div class="box" id="sijiList"></div>
+            </div>
+        </div>
+        <div class="title" id="fxdda" data-flag="true">我的分销订单</div>
+        <div class="fxdd" id="fxdd">
+            <!-- <div class="no">暂无数据</div> -->
+            <!-- <div class="itema">
+                <div class="l">吴伟泉</div>
+                <div class="r">15160409976</div>
+            </div> -->
+        </div>
+        <div class="title">我的推广</div>
+        <div class="tg">
+            <a class="item" href="javascript:void(0);" id="share">
+                <div class="l">
+                    <div class="icon icon-a"></div>
+                </div>
+                <div class="r">邀请好友成为会员</div>
+            </a>
+            <a class="item" href="javascript:void(0);" id="driverApply">
+                <div class="l">
+                    <div class="icon icon-b"></div>
+                </div>
+                <div class="r">邀请好友成为司机</div>
+            </a>
+        </div>
+
+        <!-- 
+        <div class="box">
+            <div class="wrap">
+                
+                <div class="d">我的团队<span id="a"></span></div>
+                <div class="e">
+                    <div class="f" id="chuji">初级会员</div>
+                    <div class="f" id="gaoji">高级会员</div>
+                    <div class="f" id="siji">龙锟司机</div>
+                </div>
+                <div class="team" id="team">
+                    
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <input type="hidden" name="" id="arr"> <!-- 初级会员 -->
+    <input type="hidden" name="" id="brr"> <!-- 高级会员 -->
+    <input type="hidden" name="" id="crr"> <!-- 高级会员 -->
+    <div class="message-box"></div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script src="../static/js/myTeam.js"></script>
+</body>
+</html>

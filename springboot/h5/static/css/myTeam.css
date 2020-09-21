@@ -1,0 +1,232 @@
+.maina{
+    padding: .3rem;
+    background: #fff;
+}
+.top{
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(to right, #51cc95, #1eacb8);
+    /* background: linear-gradient(to right,#1eacb8,#51cc95); */
+    border-radius: .1rem;
+    padding: .3rem;
+    margin-bottom: .2rem;
+    color: #fff;
+    position: relative;
+}
+.top .txt{
+    font-size: .24rem;
+    margin-bottom: .2rem;
+}
+.top .price{
+    font-size: .6rem;
+    color: #FF7E00;
+    margin-bottom: .3rem;
+}
+.cash-btn{
+    display: inline-block;
+    color: #fff;
+    width: 1rem;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: .2rem;
+    font-size: .2rem;
+    margin-bottom: .1rem;
+}
+.top .box{
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .24rem;
+    display: flex;
+}
+.top .box>.l{
+    flex: 1;
+}
+.top .box>.l span{
+    /* color: #FF7E00; */
+}
+.top .box>.r{
+    color: #FF7E00
+}
+.logo{
+    width: 2.5rem;
+    height: 1rem;
+    overflow: hidden;
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    background: url(../images/logo1.png) center center no-repeat;
+    background-size: 100%;
+    opacity: .5;
+}
+.tg{
+    display: flex;
+}
+.tg .item{
+    flex: 1;
+    height: .8rem;
+    line-height: .8rem;
+    background: #f6f7fb;
+    border-radius: .4rem;
+    font-size: .24rem;
+    padding: 0 .4rem;
+    display: flex;
+}
+.tg .item:first-child{
+    margin-right: .1rem;
+}
+.tg .item:last-child{
+    margin-left: .1rem;
+}
+.tg .item .l{
+    margin-right: .2rem;
+}
+.tg .l .icon{
+    width: .3rem;
+    height: .3rem;
+    overflow: hidden;
+    margin-top: .25rem;
+}
+.icon-a{
+    background: url(../images/vip.png) center center no-repeat;
+    background-size: 100%;
+}
+.icon-b{
+    background: url(../images/icon-a.png) center center no-repeat;
+    background-size: 150%;
+}
+
+.title{
+    height: .8rem;
+    line-height: .8rem;
+    padding-left: .2rem;
+    font-size: .28rem;
+    position: relative;
+}
+.title::before{
+    content: " ";
+    width: 3px;
+    height: .3rem;
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    background: #FF7E00;
+}
+.jiangli{
+    display: flex;
+}
+.jiangli .item{
+    flex: 1;
+    background: #f6f7fb;
+    border-radius: .1rem;
+    padding: .4rem;
+    text-align: center;
+}
+.jiangli .item:first-child{
+    margin-right: .1rem;
+}
+.jiangli .item:last-child{
+    margin-left: .1rem;
+}
+.jiangli .item .p{
+    font-size: .2rem;
+    margin-bottom: .1rem;
+}
+.jiangli .item p{
+    font-size: .4rem;
+    color: #FF7E00;
+}
+.wrap .item{
+    margin-bottom: .2rem;
+}
+.wrap .item:last-child{
+    margin-bottom: 0;
+}
+.wrap .item .tit{
+    height: .8rem;
+    line-height: .8rem;
+    padding: 0 .2rem;
+    display: flex;
+    /* border-bottom: 1px solid #e7e5e5; */
+    background: #f6f7fb;
+}
+.wrap .tit .l{
+    flex: 1;
+    margin-right: .2rem;
+    font-size: .28rem;
+}
+.wrap .tit .r{
+    font-size: .2rem;
+    display: flex;
+}
+.wrap .tit .r .icona{
+    width: .2rem;
+    height: .2rem;
+    margin-left: .1rem;
+    overflow: hidden;
+    background: url(../images/right-1.png) center center no-repeat;
+    background-size: 100%;
+    margin-top: .3rem;
+}
+
+
+.wrap .item .box{
+    /* display: none; */
+    border: 1px solid #f6f7fb;
+    padding: 0 .3rem;
+}
+.wrap .box{
+    max-height: 10rem;
+    overflow-y: scroll;
+}
+.wrap .box .no{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: .24rem;
+}
+.wrap .box .list{
+    height: .6rem;
+    line-height: .6rem;
+    display: flex;
+    border-bottom: 1px solid #f6f7fb;
+}
+.wrap .list .l{
+    flex: 1;
+}
+.wrap .list .r{
+    margin-left: .2rem;
+}
+
+.tips{
+    color: #FF7E00;
+    margin-bottom: .3rem;
+    display: block;
+}
+
+.fxdd{
+    display: none;
+    max-height: 3rem;
+    overflow-y: auto;
+    border: 1px solid #f6f7fb;
+}
+.fxdd .itema {
+    height: .8rem;
+    line-height: .8rem;
+    border-bottom: 1px solid #f6f7fb;
+    display: flex;
+}
+.fxdd .itema .l{
+    margin-left: .2rem;
+}
+.fxdd .itema .r{
+    flex: 1;
+    text-align: right;
+    margin-right: .2rem;
+}
+.fxdd .no{
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}

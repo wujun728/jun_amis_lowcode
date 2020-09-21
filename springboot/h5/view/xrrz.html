@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">  
+    <link rel="stylesheet" href="../static/css/cwqd.css">
+    <title>新人认证领取红包</title>
+</head>
+<body>
+    <div class="main" style="padding: .2rem;">
+        <div class="box" style="margin-bottom: 2.5rem;box-shadow: 0 0.07rem 0.8rem rgba(0,0,0,.11);">
+            <div class="tit" style="font-size: .24rem;margin-bottom: .5rem;color: #FF7E00;">
+                <span id="rm" style="margin-right: .1rem;font-size: .28rem;color: #000;"></span>
+                请完成新人认证
+            </div>
+            <!-- <div class="item">
+                <div class="l">姓名</div>
+                <div class="r">
+                    <input type="text" class="ipt" id="name" placeholder="请输入姓名">
+                </div>
+            </div> -->
+            <div class="item">
+                <div class="l"><span style="color: red;">*</span>手机号码</div>
+                <div class="r">
+                    <input type="tel" class="ipt" id="mobile" placeholder="请输入手机号码">
+                </div>
+            </div>
+            <div class="item">
+                <div class="l">验证码</div>
+                <div class="r" style="border: none;padding-left: 0;">
+                    <input type="text" class="a" id="code1" autocomplete="off" name="" placeholder="短信验证码">
+                    <input type="button" id="btnSendCode1" class="btna btn-default" value="获取验证码" onclick="sendMessage1()">
+                </div>
+            </div>
+            <div class="agree">
+                <div class="icon"></div>
+                <div class="a">我已认真阅读并同意：</div>
+                <a class="b" href="fwxy.html">《平台服务协议》</a>的所有条款
+            </div>
+            <div class="btn" id="btn">认证并领取</div>
+        </div>
+        <div class="tips">
+            <div class="titl">
+                <div class="icon"></div>
+                <div class="txt">注意事项：</div>
+            </div>
+            <p>1.需关注公众号；</p>
+            <p>2.必须填写真实个人信息，否则无法在平台办理任何业务</p>
+            <p>3.填写会员认证信息时，需与今后参与办理各项业务、领取权益和奖励活动时使用的信息一致，方可享受各项会员权益和活动奖励。</p>
+        </div>
+    </div>
+    <input type="hidden" name="" id="templateparam">
+    <div class="message-box"></div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script src="../static/js/xrrz.js"></script>
+    <script>
+            var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;//手机号正则 
+            var count = 60; //间隔函数，1秒执行
+            var InterValObj1; //timer变量，控制时间
+            var curCount1;//当前剩余秒数
+            /*第一*/
+            function sendMessage1() {
+                curCount1 = count;		 		 
+                var phone = $.trim($('#mobile').val());
+                if (!phoneReg.test(phone)) {
+                    messageBox("请输入有效的手机号码"); 
+                    return false;
+                }
+                //设置button效果，开始计时
+                $("#btnSendCode1").attr("disabled", "true");
+                $("#btnSendCode1").val( + curCount1 + "秒再获取");
+                InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+                //向后台发送处理数据
+                var appCode = 'fxjsms';
+                var templateparam = Math.round((Math.random()*9000) + 1000);
+                $("#templateparam").val(templateparam);
+                $.ajax({
+                    type: "GET",
+                    url: baseUrl + "/rest/base/sendsms?appCode="+appCode+"&phonenumbers="+phone+"&templateparam="+templateparam,
+                    contentType:"application/json;charset=UTF-8",
+                    success: function(data){
+                        let e = JSON.parse(data);
+                        if(e.ok){
+                            messageBox("短信验证码已发送！");
+                        }else{
+                            messageBox(e.message);
+                        }
+                    }
+                });
+                    
+            }
+            function SetRemainTime1() {
+                if (curCount1 == 0) {                
+                    window.clearInterval(InterValObj1);//停止计时器
+                    $("#btnSendCode1").removeAttr("disabled");//启用按钮
+                    $("#btnSendCode1").val("重新发送");
+                }
+                else {
+                    curCount1--;
+                    $("#btnSendCode1").val( + curCount1 + "秒再获取");
+                }
+            } 
+        </script>
+</body>
+</html>

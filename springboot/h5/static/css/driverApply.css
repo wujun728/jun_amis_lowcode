@@ -1,0 +1,353 @@
+
+.banner img{
+    height: 100%;
+    width: 100%;
+}
+.item-1{
+    font-size: .6rem;
+    text-align: center;
+    margin: .8rem 0 .5rem;
+    color: #373737;
+}
+.item-2{
+    text-align: center;
+    color: #FF7E00;
+    font-size: .4rem;
+}
+.item{
+    display: flex;
+    text-align: center;
+    /* margin-top: 30px; */
+}
+.item .wrap{
+    flex: 1;
+    border-right: 1px solid #e0e0e0;
+    font-size: .2rem;
+}
+.item .wrap:last-child{
+    border-right: none;
+}
+.item .wrap .icon{
+    width: .8rem;
+    height: .8rem;
+    overflow: hidden;
+    margin: 0 auto .16rem;
+}
+.item .wrap .icon-a{
+    background: url(../images/because-1.png) center center no-repeat;
+    background-size: 120%;
+}
+.item .wrap .icon-b{
+    background: url(../images/because-2.png) center center no-repeat;
+    background-size: 90%;
+}
+.item .wrap .icon-c{
+    background: url(../images/because-3.png) center center no-repeat;
+    background-size: 90%;
+}
+.item .wrap .icon-d{
+    background: url(../images/icon-10.png) center center no-repeat;
+    background-size: 90%;
+}
+.item .wrap .wrap-1{
+    color: #373737;
+}
+.item .wrap .wrap-2{
+    color: #6B6B6B;
+}
+.item-3{
+    text-align: center;
+    color: #FF7E00;
+    margin: .4rem 0;
+    font-size: .4rem;
+}
+.picture{
+    display: flex;
+}
+.picture .item{
+    flex: 1;
+    margin-top: 0;
+}
+.picture .item .icon{
+    width: .8rem;
+    height: .8rem;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.picture .item .icon-a{
+    background: url(../images/because-4.png) center center no-repeat;
+    background-size: 100%;
+    width: 1rem;
+    height: 1rem;
+}
+.picture .item .icon-b{
+    background: url(../images/because-5.png) center center no-repeat;
+    background-size: 100%;
+}
+.picture .item .icon-c{
+    background: url(../images/because-6.jpg) center center no-repeat;
+    background-size: 110%;
+    width: 2rem;
+}
+.item-4{
+    text-align: center;
+    color: #FF7E00;
+    margin: .4rem 0;
+    font-size: .4rem;
+}
+
+.yaoqiu{
+    padding: 0 .2rem;
+    margin-left: .5rem;
+    margin-bottom: .4rem;
+}
+.yaoqiu ul{
+    list-style: square;
+}
+.yaoqiu ul li{
+    font-size: .28rem;
+    color: #373737;
+    margin-bottom: .1rem;
+    list-style: square;
+}
+.yaoqiu ul div{
+    font-size: .24rem;
+    color: #6B6B6B;
+    margin-bottom: .1rem;
+}
+
+.name{
+    padding: 0 .4rem .4rem;
+    font-size: 14px;
+}
+.name-item{
+    margin-bottom: .3rem;
+}
+.name-item .good{
+    margin-bottom: .3rem;
+}
+.name-item .good>label{
+    color: red;
+    margin-right: .2rem;
+}
+.name-item .inp{
+    /* width: 100%; */
+    height: .8rem;
+    line-height: .8rem;
+    overflow: hidden;
+    border: 1px solid #BBBBBB;
+    margin-left: .3rem;
+}
+.name-item .inp>input[type="text"],
+.name-item .inp>input[type="tel"]{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 .2rem;
+}
+
+.aa{
+    display: flex;
+}
+.aa .a{
+    height: 100%;
+    padding-left: .2rem;
+    flex: 1;
+}
+.aa .b{
+    margin: 0 .2rem;
+    background: transparent;
+    color: #919191;
+}
+.name-item .inp>input::placeholder{
+    color: #e0e0e0;
+}
+.name-item .inp>input::-moz-placeholder{
+    color: #e0e0e0;
+}
+.name-item .item{
+    height: .5rem;
+    line-height: .5rem;
+    display: flex;
+    margin-bottom: .2rem;
+}
+.name-item .rad{
+    flex: 1;
+}
+.name-item .rad:last-child{
+    margin-bottom: 0;
+}
+.name-item .rad>label{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: .3rem;
+    text-align: left;
+}
+.name-item .rad input{
+    margin-right: .2rem;
+}
+
+.agree{
+    display: flex;
+    padding-left: .3rem;
+    font-size: .24rem;
+    height: .4rem;
+    line-height: .4rem;
+    margin-bottom: .3rem;
+}
+.agree .icon{
+    margin-top: .05rem;
+    width: .3rem;
+    height: .3rem;
+    overflow: hidden;
+    background: url(../images/check2.png) center center no-repeat;
+    background-size: 100%;
+    margin-right: .2rem;
+}
+.agree.active .icon{
+    margin-top: .05rem;
+    width: .3rem;
+    height: .3rem;
+    overflow: hidden;
+    background: url(../images/checked2.png) center center no-repeat;
+    background-size: 100%;
+    margin-right: .2rem;
+}
+.agree .a{
+    color: #373737;
+}
+.agree .b{
+    flex: 1;
+    color: rgb(128,143,155);
+}
+.btn-wrap{
+    height: .8rem;
+    line-height: .8rem;
+    display: flex;
+    font-size: .24rem;
+}
+.btn-wrap .a{
+    flex: 1;
+}
+.btn-wrap .a:first-child{
+    margin-right: .2rem;
+}
+.btn-wrap .a:last-child{
+    margin-left: .2rem;
+}
+.btn-wrap>a{
+    display: block;
+    text-align: center;
+    background: #FF7E00;
+    color: #fff;
+    border-radius: .1rem;
+}
+#btnTwo .b{
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    background-color: #4A4C5B;
+    color: #fff;
+    border-radius: .1rem;
+}
+.btn{
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    background-color: #4A4C5B;
+    color: #fff;
+    border-radius: .1rem;
+}
+.named{
+    display: none;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: .28rem;
+    color: red;
+}
+
+
+.tips{
+    height: .8rem;
+    line-height: .8rem;
+    padding: .1rem.3rem 0;
+    display: flex;
+    color: #FF7E00;
+}
+.tips .xx{
+    margin-right: .2rem;
+}
+.tips .txt{
+    flex: 1;
+}
+.pop{
+    display: none;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(../images/share-bg.png) center center;
+    background-size: 100%;
+}
+
+.sharea{
+    display: none;
+    width: 3rem;
+    z-index: 999;
+    border-radius: .1rem;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5rem;
+    margin-top: -3.8rem;
+}
+.sharea-wrap{
+
+}
+.sharea-img{
+    margin-bottom: .4rem;
+}
+.sharea-info{
+    color: #fff;
+    font-size: .24rem;
+    text-align: center;
+    margin-bottom: .4rem;
+}
+.sharea-info .a{
+
+}
+.sharea-info .a>span{
+    color: red;
+    margin: 0 .1rem;
+}
+.sharea-info .b{
+
+}
+.sharea-wrap .closea{
+    width: .4rem;
+    height: .4rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../images/hb-bgb.png) center center no-repeat;
+    background-size: 100%;
+}
+.bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 99;
+}

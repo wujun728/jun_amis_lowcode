@@ -1,0 +1,22 @@
+.maina{
+    padding: .5rem .3rem .5rem;
+}
+.maina p{
+    font-size: .24rem;
+    text-indent: .56rem;
+    line-height: .6rem;
+}
+
+.maina .tit{
+    font-size: .36rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: .3rem;
+}
+
+.maina .sub-tit{
+    font-size: .28rem;
+}
+.maina .xieyi{
+
+}

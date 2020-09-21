@@ -1,0 +1,30 @@
+= Spring Boot Admin Reference Guide =
+Johannes Edmeier <https://twitter.com/joshiste[@joshiste]>
+:revnumber: {project-version}
+:revdate: {commit-time}
+:toc: left
+:toclevels: 3
+:doctype: book
+:sectanchors:
+:sectlinks:
+:sectnums:
+:icons: font
+:hide-uri-scheme:
+:last-update-label!:
+:tabsize: 2
+
+== What is Spring Boot Admin? ==
+
+Spring Boot Admin is a application to manage and monitor your http://projects.spring.io/spring-boot/[Spring Boot Applications].
+The applications register with our Spring Boot Admin Client (via HTTP) or are discovered using Spring Cloud (e.g. Eureka).
+The UI is just an AngularJs application on top of the Spring Boot Actuator endpoints.
+
+include::getting-started.adoc[]
+
+include::client.adoc[]
+
+include::server.adoc[]
+
+include::security.adoc[]
+
+include::faqs.adoc[]

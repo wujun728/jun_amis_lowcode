@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/base.css">
+	<link rel="stylesheet" href="../static/css/rentCar.css">
+	<link rel="stylesheet" href="../static/css/carDetail.css">
+	<title>全部方案</title>
+</head>
+<body style="background: #fff;">
+	<div class="main">
+		<input type="hidden" id="carName">
+		<!-- 租车服务 -->
+		<div class="box box-b" id="boxA">
+			<div class="check-box">
+				<!-- <div class="left">租赁方案</div> -->
+				<div class="a" style="margin-right: 1rem;">
+					<div class="icon"></div>
+					<div class="txt">包上牌</div>
+				</div>
+				<div class="a" style="margin-right: 1rem;">
+					<div class="icon"></div>
+					<div class="txt">包保险</div>
+				</div>
+				<div class="a">
+					<div class="icon"></div>
+					<div class="txt">包保养</div>
+				</div>
+			</div>
+			<div class="fangan" id="caseA">
+				
+			</div>
+			<div class="zl-info" style="display: none;">
+				<div class="icon"></div>
+				<div class="info">需另行支付GPS费3000元</div>
+			</div>
+			<div class="tj-btn" id="btnA">立即预约</div>
+		</div>
+		<!-- 金融方案 -->
+		<div class="box box-c" id="boxB" style="display: none;">
+			<div class="check-box">
+				<!-- <div class="left">以租代购</div> -->
+				<div class="a" style="margin-right: .5rem;">
+					<div class="icon"></div>
+					<div class="txt">包上牌·购置税</div>
+				</div>
+				<div class="a" style="margin-right: .5rem;">
+					<div class="icon"></div>
+					<div class="txt">送首年保险</div>
+				</div>
+				<div class="a">
+					<div class="icon"></div>
+					<div class="txt">厂家质保</div>
+				</div>
+			</div>
+			<div class="fangan" id="caseB">
+				
+			</div>
+			<!-- <div class="zl-info">
+				<div class="icon"></div>
+				<div class="info">需另行支付GPS费3000元</div>
+			</div> -->
+			<div class="tj-btn" id="btnB">立即预约</div>
+		</div>
+
+	</div>
+	<!--  -->
+	<div class="tel">
+		<div class="tel-wrap">
+			<p class="tit">填写预约信息</p>
+			<div class="telipt">
+				<input type="text" name="" id="name" placeholder="请输入姓名">
+			</div>
+			<div class="sex">
+				<label for="nan">
+					<input type="radio" name="sex" id="nan" value="先生">
+					<div class="a">先生</div>
+				</label>
+				<label for="nv">
+					<input type="radio" name="sex" id="nv" value="女士">
+					<div class="a">女士</div>
+				</label>
+			</div>
+			<div class="telipt">
+				<input type="tel" name="" id="tel" placeholder="请输入手机号">
+			</div>
+			<div class="sex">
+				<label for="ziyong">
+					<input type="radio" name="yuyue-sty" id="ziyong" value="自用">
+					<div class="a">自用</div>
+				</label>
+				<label for="yunying">
+					<input type="radio" name="yuyue-sty" id="yunying" value="营运">
+					<div class="a">营运</div>
+				</label>
+			</div>
+			<div class="itema">
+				<input type="number" class="a" id="code1" autocomplete="off" name="" placeholder="短信验证码">
+				<input type="button" id="btnSendCode1" class="btn btn-default" value="获取验证码" onclick="sendMessage1()">
+			</div>
+			<p class="tips">注：预约成功后，我们将会在48小时内联系您，提供1对1专属服务</p>
+			<div class="tel-btn">
+				<div class="cancel">取消</div>
+				<div class="success">确认</div>
+			</div>
+		</div>
+	</div>
+    <!--  -->
+	<div class="message-box"></div>
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/rem.js"></script>
+	<script src="../static/js/base.js"></script>
+	<script src="../static/js/rentCar.js"></script>
+	<script>
+		var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;//手机号正则 
+		var count = 60; //间隔函数，1秒执行
+		var InterValObj1; //timer变量，控制时间
+		var curCount1;//当前剩余秒数
+		/*第一*/
+		function sendMessage1() {
+			curCount1 = count;		 		 
+			var phone = $.trim($('#tel').val());
+			if (!phoneReg.test(phone)) {
+				alert("请输入有效的手机号码"); 
+				return false;
+			}
+			//设置button效果，开始计时
+			$("#btnSendCode1").attr("disabled", "true");
+			$("#btnSendCode1").val( + curCount1 + "秒再获取");
+			InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+			//向后台发送处理数据
+			var appCode = 'fxjsms';
+			var templateparam = Math.round((Math.random()*9000) + 1000);
+			$.ajax({
+				type: "GET",
+				url: baseUrl + "/rest/base/sendsms?appCode="+appCode+"&phonenumbers="+phone+"&templateparam="+templateparam,
+				contentType:"application/json;charset=UTF-8",
+				success: function(data){
+					let e = JSON.parse(data);
+					if(e.ok){
+						messageBox("短信验证码已发送！");
+					}else{
+						messageBox(e.message);
+					}
+				}
+			});
+				
+		}
+		function SetRemainTime1() {
+			if (curCount1 == 0) {                
+				window.clearInterval(InterValObj1);//停止计时器
+				$("#btnSendCode1").removeAttr("disabled");//启用按钮
+				$("#btnSendCode1").val("重新发送");
+			}
+			else {
+				curCount1--;
+				$("#btnSendCode1").val( + curCount1 + "秒再获取");
+			}
+		} 
+	</script>
+</body>
+</html>

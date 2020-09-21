@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">  
+    <link rel="stylesheet" href="../static/css/cwqd.css">
+    <title>成为渠道</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box" style="display: none;">
+            <div class="tit">申请成为渠道，请填写申请资料</div>
+            <div class="item">
+                <div class="l">公司名称</div>
+                <div class="r">
+                    <input type="text" class="ipt" id="company" placeholder="请输入公司名称">
+                </div>
+            </div>
+            <div class="item">
+                <div class="l">姓名</div>
+                <div class="r">
+                    <input type="text" class="ipt" id="name" placeholder="请输入姓名">
+                </div>
+            </div>
+            <div class="item">
+                <div class="l">手机号码</div>
+                <div class="r">
+                    <input type="tel" class="ipt" id="mobile" placeholder="请输入手机号码">
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div class="l">身份证号</div>
+                <div class="r">
+                    <input type="text" class="ipt" id="idNum" placeholder="请输入身份证号">
+                </div>
+            </div> -->
+            <div class="item">
+                <div class="l">门店地址</div>
+                <div class="r">
+                    <input type="text" class="ipt" id="addr" placeholder="请输入门店地址">
+                </div>
+            </div>
+            <div class="item">
+                <div class="l">验证码</div>
+                <div class="r" style="padding-left: 0;">
+                    <input type="password" class="a" id="code1" autocomplete="off" name="" placeholder="短信验证码">
+                    <input type="button" style="margin-right: .2rem;" id="btnSendCode1" class="btna btn-default" value="获取验证码" onclick="sendMessage1()">
+                </div>
+            </div>
+            <div class="btn" id="btn">立即申请</div>
+        </div>
+        <div class="box1" style="display: none;">您已成功提交申请，我们将会安排工作人员与您联系。</div>
+    </div>
+
+    <div class="message-box"></div>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script src="../static/js/cwqd.js"></script>
+    <script>
+        var phoneReg = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;//手机号正则 
+        var count = 60; //间隔函数，1秒执行
+        var InterValObj1; //timer变量，控制时间
+        var curCount1;//当前剩余秒数
+        /*第一*/
+        function sendMessage1() {
+            curCount1 = count;		 		 
+            var phone = $.trim($('#mobile').val());
+            if (!phoneReg.test(phone)) {
+                messageBox("请输入有效的手机号码"); 
+                return false;
+            }
+            //设置button效果，开始计时
+            $("#btnSendCode1").attr("disabled", "true");
+            $("#btnSendCode1").val( + curCount1 + "秒再获取");
+            InterValObj1 = window.setInterval(SetRemainTime1, 1000); //启动计时器，1秒执行一次
+            //向后台发送处理数据
+            var appCode = 'fxjsms';
+            var templateparam = Math.round((Math.random()*9000) + 1000);
+            $.ajax({
+                type: "GET",
+                url: baseUrl + "/rest/base/sendsms?appCode="+appCode+"&phonenumbers="+phone+"&templateparam="+templateparam,
+                contentType:"application/json;charset=UTF-8",
+                success: function(data){
+                    let e = JSON.parse(data);
+                    if(e.ok){
+                        messageBox("短信验证码已发送！");
+                    }else{
+                        messageBox(e.message);
+                    }
+                }
+            });
+                
+        }
+        function SetRemainTime1() {
+            if (curCount1 == 0) {                
+                window.clearInterval(InterValObj1);//停止计时器
+                $("#btnSendCode1").removeAttr("disabled");//启用按钮
+                $("#btnSendCode1").val("重新发送");
+            }
+            else {
+                curCount1--;
+                $("#btnSendCode1").val( + curCount1 + "秒再获取");
+            }
+        } 
+    </script>
+</body>
+</html>

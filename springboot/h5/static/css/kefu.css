@@ -1,0 +1,69 @@
+.main{
+
+}
+.wrap{
+    position: relative;
+}
+.pic{
+    width: 100%;
+}
+.info{
+    width: 7rem;
+    border-radius: .1rem;
+    box-shadow: 0 0.07rem 0.8rem rgba(0,0,0,.11);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.5rem;
+    background: #fff;
+    padding: 0 .2rem .2rem;
+}
+.info .tit{
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .32rem;
+}
+.info .item{
+    height: 1rem;
+    line-height: 1rem;
+    display: flex;
+    font-size: .28rem;
+    border-bottom: 1px solid rgb(245,247,250);
+}
+.info .item:last-child{
+    border-bottom: none;
+}
+.info .item .l{
+    display: flex;
+    margin-right: .2rem;
+}
+.info .l .txt{
+    color: #373737;
+}
+.info .item .icon{
+    width: .3rem;
+    height: .3rem;
+    margin: .35rem .2rem 0 0;
+    overflow: hidden;
+}
+.info .item .icon-1{
+    background: url(../images/icon-13.png) center center no-repeat;
+    background-size: 100%;
+}
+.info .item .icon-2{
+    background: url(../images/icon-13.png) center center no-repeat;
+    background-size: 100%;
+}
+.info .item .icon-3{
+    background: url(../images/icon-12.png) center center no-repeat;
+    background-size: 100%;
+}
+
+.info .item .r{
+    flex: 1;
+}
+.info .r .txt{
+    text-align: right;
+    font-size: .24rem;
+    /* color: #deb57a; */
+}

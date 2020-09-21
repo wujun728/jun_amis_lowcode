@@ -1,0 +1,259 @@
+.swiper-container {
+    width: 100%;
+    height: 230px;
+  }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.banner img{
+    height: 150px;
+    width: 100%;
+}
+.banner .banner-text{
+position: absolute;
+left: 120px;
+top: 54px;
+color: #ffffff;
+}
+.item a{
+    flex: 1;
+}
+.item, .pic{
+    display: flex;
+    margin: .2rem .2rem 0;
+    border-radius: .1rem;
+}
+.item>div{flex: 1;}
+/* .item img{
+    width: 100%;
+    height: 100%;
+} */
+.item .pic1{
+    width: .6rem;
+    height: .6rem;
+    margin: 0 auto .1rem;
+    overflow: hidden;
+}
+.pic>img{
+    width: 100%;
+    height: 100%;
+}
+.item .rentCar{
+    margin: 0 18px;
+}
+.item .buyCar{
+    margin: 0 18px;
+}
+.item .driver{
+    margin: 0 12px;
+}
+.item .financialService{
+    margin: 0 14px;
+    
+}
+/* .pic{
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 12px;
+} */
+.rentText{
+    display: flex;
+    margin-top: .1rem;
+    font-size: .3rem;
+    padding: 0 .2rem;
+}
+.rent{
+    margin-top: .2rem;
+}
+.rentType{
+    flex: 1;
+}
+.allRent{
+    font-size: .25rem;
+}
+.pic img{width: 100%;height: 100%;}
+.pic>.left{
+    margin-right: .1rem;
+    height: 175px;
+    overflow: hidden;
+}
+.pic>.right{
+    height: 175px;
+    overflow: hidden;
+}
+.pic>.right>.top{
+    height: 85px;
+    margin-bottom: 5px;
+}
+
+.paixu{
+    width: 96%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carDetail{
+    width: 48%;
+    float: left;
+    margin: 2% 1%;
+    overflow: hidden;
+    border: 1px solid #ededed;
+    border-radius: .1rem;
+    box-shadow: 0 2px 5px #ccc;
+}
+.carDetail .car-pic{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+.carDetail img{
+    width: 100%;
+}
+.carDetail .carName{
+    width: 100%;
+    height: 1rem;
+    font-size: .25rem;
+    overflow: hidden;
+    padding: .1rem;
+}
+.carDetail .carName>span{
+    display: inline-block;
+    width: .3rem;
+    height: .4rem;
+    background: url(../images/v2_psnz2q.png) center 7px no-repeat;
+    background-size: 80%;
+    margin-left: .15rem;
+}
+.carDetail .carPrice{
+    width: 100%;
+    padding: 0 .1rem .1rem;
+    color: #E51C23;
+}
+.carDetail .carPrice>text{
+    margin-right: .2rem;
+    color: #101010;
+}
+.paixu-2{
+    display: flex;
+    width: 90%;
+    margin-left: 1%;
+}
+.paixu-1{
+    /* display: flex; */
+    width: 96%;
+    margin: 0 auto;
+}
+.carDetail-1{
+    width: 48%; 
+    float: left;
+    margin: 2% 1%;
+    overflow: hidden;
+}
+.carDetail-1 img{
+    width: 100%;
+    height: 100px;
+}
+.carDetail-1 .carName-1{
+    width: 100%;
+    overflow: hidden;
+}
+.carDetail-1 .carPrice-1{
+    width: 100%;
+}
+
+
+/* 新人红包 */
+.hb{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+.hb-bg{
+    background: #000;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+}
+.hb-wrap{
+    position: fixed;
+    top: 50%;
+    width: 5rem;
+    height: 8.02rem;
+    left: 50%;
+    margin-left: -2.5rem;
+    margin-top: -4rem;
+}
+.hb-gb{
+    width: .6rem;
+    height: .6rem;
+    background: url(../images/hb-bgb.png) center center no-repeat;
+    background-size: 100%;
+    margin-left: 4.25rem;
+}
+.hb-sx{
+    width: 1px;
+    height: .6rem;
+    margin-left: 4.25rem;
+    background: #fff;
+}
+.hb-sx{
+    width: 1px;
+    height: .6rem;
+    margin-left: 4.52rem;
+    background: #fff;
+}
+
+.hb-box{
+    width: 5rem;
+    height: 6.82rem;
+    background: url(../images/hb-bga.png) center center no-repeat;
+    background-size: 100%;
+    text-align: center;
+    position: relative;
+}
+.hb-tit{
+    padding-top: .9rem;
+    font-size: .4rem;
+    margin-bottom: .5rem;
+    color: #fb2975;
+}
+.hb-desc{
+    font-size: .7rem;
+    color: #fb2975;
+}
+.hb-btn{
+    /* width: 50%; */
+    position: absolute;
+    bottom: 1rem;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    display: block;
+    background: #fff;
+    line-height: .6rem;
+    height: .6rem;
+    border-radius: .3rem;
+    color: #000;
+}

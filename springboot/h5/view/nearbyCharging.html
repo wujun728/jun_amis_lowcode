@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/nearbyCharging.css">   
+    <script src="../static/js/jquery.min.js"></script>
+
+    <style type="text/css">
+    </style>
+    <title>附近充电桩</title>
+</head>
+<body>
+        <input type="hidden" name="" id="markerArr" >
+    <div class="map">
+            <div class="demo_main">  
+                <fieldset class="demo_content">  
+                    <div style="min-height: 160px; width: 100%;" id="map">  
+                    </div>  
+                    <script type="text/javascript"> 
+                        var  markerArr = $("#markerArr").val();
+                        console.log($("#markerArr").val())
+                        // var markerArr = [  
+                        //     { title: "名称：充电桩1", point: "118.142404,24.594820", address: "广东省广州市广州火车站", tel: "12306" },  
+                        //     { title: "名称：充电桩2", point: "118.169424,24.530824", address: "广东省广州市广州塔（赤岗塔） ", tel: "18500000000" },  
+                        //     { title: "名称：充电桩3", point: "118.174433,24.549869", address: "广东省广州市广州动物园", tel: "18500000000" },  
+                        //     { title: "名称：充电桩4", point: "118.177461,24.567870", address: "广东省广州市天河公园", tel: "18500000000" }  
+                        // ];  
+                        
+                        var map; //Map实例  
+                        function map_init() {  
+                            console.log('1')
+                            map = new BMap.Map("map");  
+                            //第1步：设置地图中心点，广州市  
+                            var point = new BMap.Point(118.14242424, 24.50484848);  
+                            //第2步：初始化地图,设置中心点坐标和地图级别。  
+                            map.centerAndZoom(point, 13);  
+                            //第3步：启用滚轮放大缩小  
+                            map.enableScrollWheelZoom(true);  
+                            //第4步：向地图中添加缩放控件  
+                            var ctrlNav = new window.BMap.NavigationControl({  
+                                anchor: BMAP_ANCHOR_TOP_LEFT,  
+                                type: BMAP_NAVIGATION_CONTROL_LARGE  
+                            });  
+                            map.addControl(ctrlNav);  
+                            //第5步：向地图中添加缩略图控件  
+                            var ctrlOve = new window.BMap.OverviewMapControl({  
+                                anchor: BMAP_ANCHOR_BOTTOM_RIGHT,  
+                                isOpen: 1  
+                            });  
+                            map.addControl(ctrlOve);  
+            
+                            //第6步：向地图中添加比例尺控件  
+                            var ctrlSca = new window.BMap.ScaleControl({  
+                                anchor: BMAP_ANCHOR_BOTTOM_LEFT  
+                            });  
+                            map.addControl(ctrlSca);  
+            
+                            //第7步：绘制点    
+                            for (var i = 0; i < markerArr.length; i++) {  
+                                var p0 = markerArr[i].point.split(",")[0];  
+                                var p1 = markerArr[i].point.split(",")[1];  
+                                var maker = addMarker(new window.BMap.Point(p0, p1), i);  
+                                addInfoWindow(maker, markerArr[i], i);   
+                            }  
+                        }  
+            
+                        // 添加标注  
+                        function addMarker(point, index) {  
+                            console.log('2')
+                            var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png",  
+                                new BMap.Size(23, 25), {  
+                                    offset: new BMap.Size(10, 25),  
+                                    imageOffset: new BMap.Size(0, 0 - index * 25)  
+                                });  
+                            var marker = new BMap.Marker(point, { icon: myIcon });  
+                            map.addOverlay(marker);  
+                            return marker;  
+                        }  
+            
+                        // 添加信息窗口  
+                        function addInfoWindow(marker, poi) {  
+                            console.log('3')
+                            //pop弹窗标题  
+                            var title = '<div style="font-weight:bold;color:#CE5521;font-size:14px">' + poi.title + '</div>';  
+                            //pop弹窗信息  
+                            var html = [];  
+                            html.push('<table cellspacing="0" style="table-layout:fixed;width:100%;font:12px arial,simsun,sans-serif"><tbody>');  
+                            html.push('<tr>');  
+                            html.push('<td style="vertical-align:top;line-height:16px;width:38px;white-space:nowrap;word-break:keep-all">地址:</td>');  
+                            html.push('<td style="vertical-align:top;line-height:16px">' + poi.address + ' </td>');  
+                            html.push('</tr>');  
+                            html.push('</tbody></table>');  
+                            var infoWindow = new BMap.InfoWindow(html.join(""), { title: title, width: 200 });  
+            
+                            var openInfoWinFun = function () {  
+                                marker.openInfoWindow(infoWindow);  
+                            };  
+                            marker.addEventListener("click", openInfoWinFun);  
+                            return openInfoWinFun;  
+                        }  
+            
+                        //异步调用百度js  
+                        function map_load() {  
+                            console.log('4')
+                            var load = document.createElement("script");  
+                            load.src = "http://api.map.baidu.com/api?v=1.4&callback=map_init";  
+                            document.body.appendChild(load);  
+                        }  
+                        window.onload = map_load;  
+                    </script>  
+                </fieldset>  
+            </div>  
+    </div>
+    <div class="my-location">
+        <div class="title">我的位置</div>
+        <div class="pic-1">
+            <img src="../static/images/weizhi.png" alt="">
+            <div class="location">福建省厦门市湖里区万翔商务中心</div>
+        </div>
+    </div>
+    <div class="noway">
+        <!-- <div class="search">
+            <div class="left">
+                <div class="top">建发湾悦城（国家电网）</div>
+                <div class="mid">
+                    <div class="distance">0.8km|</div>
+                    <div class="detail-address">厦门市湖里区日圆二里1号</div>
+                </div>
+                <div class="bottom">
+                    <div style="color: #009688;">便民网点</div>
+                    <div class="pile-number">24个桩位</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="pic-2">
+                    <img src="../static/images/gothere.png" alt="">
+                </div>
+                <div style="font-size: .2rem;">到这里</div>
+            </div>
+        </div> -->
+    </div>
+    
+
+
+    <script src="../static/js/rem.js"></script>
+    <script src="../static/js/base.js"></script>
+    <script src="../static/js/nearbyCharging.js"></script>
+</body>
+</html>

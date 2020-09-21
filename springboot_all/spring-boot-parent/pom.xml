@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
+	<groupId>com.lance</groupId>
+	<artifactId>spring-boot-parent</artifactId>
+	<version>1.1</version>
+	<packaging>pom</packaging>
+
+	<name>spring-boot-parent</name>
+	<url>http://maven.apache.org</url>
+	
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>lance</name>
+			<email>81222045@qq.com</email>
+			<url>https://github.com/leelance</url>
+		</developer>
+	</developers>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+
+		<!-- Log4j2 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>3.3.4</version>
+		</dependency>
+
+		<!-- Server -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<!-- Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>spring-boot-parent</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- multiple Module -->
+	<modules>
+		<module>../spring-boot-hello</module>
+    	<module>../spring-boot-devtools</module>
+    	<module>../spring-boot-mybatis</module>
+    	<module>../spring-boot-shiro</module>
+    	<module>../spring-boot-shiro-redis</module>
+    	<module>../spring-boot-cache-ehcache</module>
+    	<module>../spring-boot-cache-redis</module>
+    	<module>../spring-boot-activemq-producer</module>
+    	<module>../spring-boot-activemq-consumer</module>
+    	<module>../spring-boot-email</module>
+    	<module>../spring-boot-freemarker</module>
+    	<module>../spring-boot-websocket</module>
+    	<module>../spring-boot-websocket-client</module>
+    	<module>../spring-boot-sitemesh</module>
+    	<module>../spring-boot-easyui-kindeditor</module>
+    	<module>../spring-boot-quartz</module>
+    	<module>../spring-boot-springfox</module>
+    	<module>../spring-boot-crawler</module>
+    	<module>../spring-boot-jpa</module>
+    	<module>../spring-boot-activiti</module>
+    	<module>../spring-boot-welcome-page</module>
+    	<module>../spring-boot-hibernate5</module>
+    	<module>../spring-boot-jpa-querydsl</module>
+	</modules>
+</project>

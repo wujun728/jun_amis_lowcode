@@ -1,0 +1,297 @@
+
+.main{
+    padding-bottom: .5rem;
+    overflow-y: scroll;
+}
+.banner{
+    position: relative;
+    height: 3.7rem;;
+}
+.banner img{
+    height: 3.7rem;
+    width: 100%;
+}
+.banner .banner-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 80%;
+    overflow: hidden;
+    height: 2.6rem;
+    margin-top: -1.3rem;
+}
+.head{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    margin: 0 auto .1rem;
+    background: url(../images/raw_1537919606.png) center 0 no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.head .icon{
+    width: .3rem;
+    height: .3rem;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/icon-a.png) center center no-repeat;
+    background-size: 175%;
+}
+.name{
+    text-align: center;
+    color: #fff;
+    font-size: .2rem;
+    margin-bottom: .2rem;
+}
+.renzheng{
+    display: block;
+    text-align: center;
+    font-size: .2rem;
+    margin-bottom: .2rem;
+    color: #fff;
+}
+.equity{
+    display: flex;
+    height: .5rem;
+    line-height: .3rem;
+    overflow: hidden;
+    color: #fff;
+    font-size: .2rem;
+}
+.equity>div{
+    flex: 1;
+    background: rgba(153,153,153,.34);
+    border-radius: .25rem;
+    padding: .1rem;
+}
+.equity a{
+    display: flex;
+    color: #fff;
+}
+.vip{
+    margin-right: .2rem;
+}
+.charging{
+    margin-left: .2rem;
+}
+.equity .icon{
+    width: .2rem;
+    height: .3rem;
+    overflow: hidden;
+}
+.equity a>.a{
+    flex: 1;
+}
+.equity .icon-a{
+    background: url(../images/vip.png) center center no-repeat;
+    background-size: 100%;
+    margin-right: .1rem;
+}
+.equity .icon-b{
+    background: url(../images/right.png) center center no-repeat;
+    background-size: 100%;
+}
+.equity .icon-c{
+    background: url(../images/pile.png) center center no-repeat;
+    background-size: 100%;
+    margin-right: .1rem;
+}
+
+.sec{
+    display: flex;
+    background-color: #414143;
+    /* margin-top: -6px; */
+}
+.sec .item{
+    flex: 1;
+}
+.sec .item .icon{
+    width: .5rem;
+    height: .5rem;
+    overflow: hidden;
+    margin: .1rem auto 0;
+}
+.sec .item .icon-a{
+    background: url(../images/icon-b.png) center center no-repeat;
+    background-size: 100%;
+}
+.sec .item .icon-b{
+    background: url(../images/icon-c.png) center center no-repeat;
+    background-size: 100%;
+}
+.sec .item .icon-c{
+    background: url(../images/icon-d.png) center center no-repeat;
+    background-size: 100%;
+}
+.sec .item p{
+    text-align: center;
+    font-size: .24rem;
+    color: #ffffff;
+    margin-bottom: .1rem;
+}
+.tir{
+    margin: .2rem auto 0;
+    font-size: .28rem;
+    background: #fff;
+    padding: .2rem;
+    border-bottom: 1px solid rgba(187,187,187,.2);
+}
+.tir a{
+    display: flex;
+    width: 100%;
+}
+.tir .icon,
+.four .item .icon{
+    width: .4rem;
+    height: .4rem;
+    overflow: hidden;
+}
+.tir .txt{
+    flex: 1;
+}
+.tir .txta{
+    text-align: left;
+    margin-left: .2rem;
+    color: #373737;
+}
+.tir .txtb{
+    text-align: right;
+    margin-right: .2rem;
+    color: #A6A7A2;
+}
+.tir .icon-1{
+    background: url(../images/my-5.png) center center no-repeat;
+    background-size: 80%;
+}
+.tir .icon-2{
+    background: url(../images/right-1.png) center center no-repeat;
+    background-size: 100%;
+}
+.four{
+    display: flex;
+    padding: .2rem;
+    font-size: .24rem;
+    color: #A6A7A2;
+    background: #fff;
+}
+.four .item{
+    flex: 1;
+    text-align: center;
+}
+.four .item .icon-1{
+    background: url(../images/icon-5.png) center center no-repeat;
+    background-size: 100%;
+    margin: 0 auto .1rem;
+}
+.four .item .icon-2{
+    background: url(../images/icon-6.png) center center no-repeat;
+    background-size: 100%;
+    margin: 0 auto .1rem;
+}
+.four .item .icon-3{
+    background: url(../images/icon-7.png) center center no-repeat;
+    background-size: 100%;
+    margin: 0 auto .1rem;
+}
+.four .item .icon-4{
+    background: url(../images/icon-8.png) center center no-repeat;
+    background-size: 100%;
+    margin: 0 auto .1rem;
+}
+
+
+
+.five{
+    margin-top: .2rem;
+    background: #fff;
+}
+.five .wrap{
+    border-bottom: 1px solid rgba(187,187,187,.2);
+    display: flex;
+}
+.five .wrap:last-child{
+    border-bottom: none;
+}
+.five .item{
+    flex: 1;
+    border-right: 1px solid rgba(187,187,187,.2);
+}
+.five .item:nth-child(3n){
+    border-right: none;
+}
+.five .item .icon{
+    width: .8rem;
+    height: .8rem;
+    margin: .4rem auto .1rem;
+    overflow: hidden;
+}
+.five .item p{
+    text-align: center;
+    font-size: .24rem;
+    margin-bottom: .4rem;
+}
+.five .item .icon-1{
+    background: url(../images/my-11.png) center center no-repeat;
+    background-size: 100%; 
+}
+.five .item .icon-2{
+    background: url(../images/my-12.png) center center no-repeat;
+    background-size: 100%; 
+}
+.five .item .icon-3{
+    background: url(../images/my-18.png) center center no-repeat;
+    background-size: 100%; 
+}
+.five .item .icon-4{
+    background: url(../images/my-14.png) center center no-repeat;
+    background-size: 100%; 
+}
+.five .item .icon-5{
+    background: url(../images/my-15.png) center center no-repeat;
+    background-size: 100%; 
+}
+.five .item .icon-6{
+    background: url(../images/my-16.png) center center no-repeat;
+    background-size: 100%; 
+}
+
+
+.share{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: rgb(153, 153, 153);
+    border-radius: .1rem;
+    margin-left: -2.2rem;
+    margin-top: -2.4rem;
+}
+.share-wrap{
+    position: relative;
+    padding: .4rem .2rem .2rem;
+}
+.share-close{
+    width: .5rem;
+    height: .5rem;
+    line-height: .5rem;
+    text-align: center;
+    color: #fff;
+    font-size: .4rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../images/close.png) center center no-repeat;
+    background-size: 50%;
+}
+.share-wrap>p{
+    height: .5rem;
+    text-align: center;
+    color: #fff;
+}
+.share-qrcode{
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+}
