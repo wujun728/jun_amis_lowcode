@@ -1,0 +1,17 @@
+server:
+  port: 8826
+kiwipeach:
+  id: 109950
+#  如果使用hibernate validator注解，那么这个值是通不过校验的
+#  name: "liuburu"
+  name: "liuburu@qq.com"
+  birthday: 1994/11/12
+#  不支持使用SpEL表达式,
+#  weight: #{30.2*2}
+  weight: 60.2
+  pet: {name: "阿黄"}
+#  测试配置文件占位符
+  tags: ["UUID:${random.uuid}","随机数:[${random.value}、${random.int}、${random.long}、${random.int(10)}、${random.int[1024,65536]}]","Email:${kiwipeach.name}}","默认值:${kiwipeach.notexits:'不存在的值'}}"]
+  hobbies: [{hobName : "编码",hobDesc : "工作使我快乐" },{hobName : "篮球",hobDesc: "篮球是我快乐" }]
+  scores: {english: 112,chinese: 89,math: 112}
+  address-map: {home: {code: "360735",detail: "江西省赣州市石城县"},company:{code: "440100",detail: "福州省厦门市思明区"}}

@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "dynamicds",
+      "type": "com.billcoding.dynamicds.spring.boot.autoconfigure.DynamicDataSourceProperties",
+      "sourceType": "com.billcoding.dynamicds.spring.boot.autoconfigure.DynamicDataSourceProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "dynamicds.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.billcoding.dynamicds.spring.boot.autoconfigure.DynamicDataSourceProperties"
+    },
+    {
+      "name": "dynamic.master",
+      "type": "java.lang.String",
+      "defaultValue": "master",
+      "sourceType": "com.billcoding.dynamicds.spring.boot.autoconfigure.DynamicDataSourceProperties"
+    },
+    {
+      "name": "dynamic.datasource",
+      "type": "java.util.Map<String,org.springframework.boot.autoconfigure.jdbc.DataSourceProperties>",
+      "sourceType": "com.billcoding.dynamicds.spring.boot.autoconfigure.DynamicDataSourceProperties"
+    }
+  ],
+  "hints": []
+}

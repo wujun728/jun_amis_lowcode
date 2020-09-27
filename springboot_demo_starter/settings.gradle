@@ -1,0 +1,4 @@
+rootProject.name = 'springboot-demo-starter'
+include 'demo-service-autoconfig'
+include 'demo-service-tester'
+

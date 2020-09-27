@@ -1,0 +1,90 @@
+//插件开发场景中，目标插件需要依赖的包下载中央仓库
+buildscript {
+    repositories {
+        //读取%M2_HOME%环境变量下面的/conf/setting.xml中的本地maven仓库
+        mavenLocal()
+        maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        gradlePluginPortal()
+    }
+    dependencies{
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.2.1.RELEASE"
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE'
+    }
+}
+//java增强插件
+allprojects{
+
+    group 'cn.kiwipeach.demo.starter'
+    version '1.0-SNAPSHOT'
+    //编码配置
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+        options.deprecation = true
+        options.compilerArgs += ["-parameters"]
+    }
+    repositories {
+        //本地仓库->国内大厂镜像->官网提供仓库
+        mavenLocal()
+        maven { url 'https://mirrors.huaweicloud.com/repository/maven/' }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        jcenter()
+    }
+
+
+
+}
+
+
+subprojects {
+    //java增强插件
+    apply plugin: 'java-library'
+    apply plugin: 'io.spring.dependency-management'
+    //jdk版本
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    apply plugin: 'maven-publish'
+    //打包源码
+    task sourceJar(type: Jar) {
+        from sourceSets.main.allJava
+    }
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                //指定group/artifact/version信息，可以不填。默认使用项目group/name/version作为groupId/artifactId/version
+                groupId "cn.kiwipeach.demo"
+                artifactId project.name
+                version project.version
+                //如果是war包填写components.web，如果是jar包填写components.java
+                from components.java
+
+                //配置上传源码
+                artifact sourceJar {
+                    classifier "sources"
+                }
+
+            }
+        }
+        repositories {
+            maven {
+                def userName = System.getProperty("GRADLE_USER_NAME")
+                def passWord = System.getProperty("GRADLE_USER_PASSWORD")
+                def releasesRepoUrl = "https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06fc39fb36800ff20fc8c00fb9b55ae0_1_0/"
+                def snapshotsRepoUrl = "https://devrepo.devcloud.cn-north-4.huaweicloud.com/07/nexus/content/repositories/06fc39fb36800ff20fc8c00fb9b55ae0_2_0/"
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+                credentials {
+                    username userName
+                    password passWord
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+

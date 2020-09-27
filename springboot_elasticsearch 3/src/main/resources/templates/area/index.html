@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>地区查询-By blog.52itstyle.com</title>
+    <link th:href="@{/iview/iview.css}" rel="stylesheet"/>
+    <style type="text/css">
+	[v-cloak] {
+			  display: none;
+			}
+	</style>
+</head>
+<body>
+<div style="margin-left: 10px;margin-right: 10px" id="app" v-cloak>
+   <div style="margin-bottom: 10px;margin-top: 10px">
+		<i-input placeholder="输入搜索信息" v-model="area.searchContent"  @keyup.enter.native="list"  style="width: 200px"></i-input>
+		<i-button type="primary"  icon="ios-search" @click="list"  >查询</i-button>
+	</div>
+	<template> 
+		<i-table border  :content="self" :columns="tableTitle" :data="areaData"></i-table>
+	 	<br>
+		<Page :current="area.pageNumber" :total="total" :page-size="area.pageSize"  @on-change="changePage" @on-page-size-change="changePageSize" show-elevator show-sizer show-total></Page> 
+	</template>
+</div>
+<script th:src="@{/jquery/jquery-3.2.1.min.js}" type="text/javascript"></script>
+<script th:src="@{/vue/vue.min.js}" type="text/javascript"></script>
+<script th:src="@{/iview/iview.min.js}" type="text/javascript"></script>
+<script th:inline="javascript">
+var vm = new Vue({
+	el: '#app',
+	data:{
+		area:{
+			pageNumber:1,
+			pageSize:10,
+			searchContent:""
+		},
+		total:0,
+		tableTitle:[
+		            {key : "name", title : "名称",width : "150px"}, 
+		            {key : "mergerName", title : "全称",width : "260px"},
+		            {key : "zipCode", title : "邮编",width : "120px"},
+		            {key : "location", title : "经纬度"},	
+		            ],
+	   areaData:[
+       
+                ]
+	},
+	methods: {
+		list: function () {
+			$.ajax({
+				type: "POST",
+			    url: "list",
+			    data: this.area,
+			    dataType: "json",
+			    success: function(result){
+					vm.areaData = result.rows;
+					vm.total = result.total;
+				}
+			});
+		},
+		changePage : function(pageNumber){
+			this.area.pageNumber = pageNumber;
+			this.list();
+    	},
+    	changePageSize : function(pageSize) {
+    		this.area.pageSize = pageSize;
+    		this.list();
+    	},
+	},
+	created : function() {
+		this.list();
+	}
+});	
+</script>
+</body>
+</html>

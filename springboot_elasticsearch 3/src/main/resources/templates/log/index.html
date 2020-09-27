@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>日志查询-By blog.52itstyle.com</title>
+    <link th:href="@{/iview/iview.css}" rel="stylesheet"/>
+    <style type="text/css">
+	[v-cloak] {
+			  display: none;
+			}
+	</style>
+</head>
+<body>
+<div style="margin-left: 10px;margin-right: 10px" id="app" v-cloak>
+   <div style="margin-bottom: 10px;margin-top: 10px">
+		<i-input placeholder="输入搜索信息" v-model="log.searchContent"  @keyup.enter.native="list"  style="width: 200px"></i-input>
+		<template >
+    		<i-select placeholder="选择日志平台" v-model="log.platFrom" style="margin-top:7px;height:40px;width:130px">
+        		<i-option  v-for="item in platList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+    		</i-select>
+	    </template>
+		<i-button type="primary"  icon="ios-search" @click="list"  >查询</i-button>
+	</div>
+	<template> 
+		<i-table border  :content="self" :columns="tableTitle" :data="logData"></i-table>
+	 	<br>
+		<Page :current="log.pageNumber" :total="total" :page-size="log.pageSize"  @on-change="changePage" @on-page-size-change="changePageSize" show-elevator show-sizer show-total></Page> 
+	</template>
+</div>
+<script th:src="@{/jquery/jquery-3.2.1.min.js}" type="text/javascript"></script>
+<script th:src="@{/vue/vue.min.js}" type="text/javascript"></script>
+<script th:src="@{/iview/iview.min.js}" type="text/javascript"></script>
+<script th:inline="javascript">
+var vm = new Vue({
+	el: '#app',
+	data:{
+		log:{
+			pageNumber:1,
+			pageSize:10,
+			platFrom:"",
+			searchContent:""
+		},
+		total:0,
+		platList:[
+		            {
+            value: '1',
+            label: '论坛'
+        },{
+            value: '2',
+            label: '博客'
+        }],
+		tableTitle:[
+		            {key : "username", title : "用户名",width : "85px"}, 
+		            {key : "operation", title : "操作",width : "157px"},
+		            {key : "time", title : "响应时间(ms)",width : "120px"},
+		            {key : "exceptionDetail", title : "异常信息"},	
+		            {key : "ip", title : "IP地址",width : "120px"},
+		            {key : "logType", title : "日志类型",width : "120px",
+		            	render : function(h, params){
+						if(params.row.logType==1){
+							return "普通";
+						}else if(params.row.logType==2){
+							return "异常";
+						}
+					}},
+		            ],
+		logData:[
+				         
+        ]
+	},
+	methods: {
+		list: function () {
+			$.ajax({
+				type: "POST",
+			    url: "list",
+			    data: this.log,
+			    dataType: "json",
+			    success: function(result){
+					vm.logData = result.rows;
+					vm.total = result.total;
+				}
+			});
+		},
+		changePage : function(pageNumber){
+			this.log.pageNumber = pageNumber;
+			this.list();
+    	},
+    	changePageSize : function(pageSize) {
+    		this.log.pageSize = pageSize;
+    		this.list();
+    	},
+	},
+	created : function() {
+		this.list();
+	}
+});	
+</script>
+</body>
+</html>

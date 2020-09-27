@@ -1,0 +1,51 @@
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+
+		}
+		resources {
+			srcDir 'src/main/resources'
+			srcDir 'src/main/java'  exclude '**/*.java'
+		}
+
+	}
+	test {
+		java {
+			srcDir 'src/test/java'
+
+		}
+		resources {
+			srcDir 'src/test/resources'
+			srcDir 'src/test/java'  exclude '**/*.java'
+		}
+
+	}
+
+}
+
+
+
+dependencies {
+	compile project(':bboot-starter')
+	compile (
+			[group: 'io.undertow', name: 'undertow-core', version: "${undertow_version}", transitive: true],
+			[group: 'io.undertow', name: 'undertow-servlet', version: "${undertow_version}", transitive: true],
+			[group: 'io.undertow', name: 'undertow-websockets-jsr', version: "${undertow_version}", transitive: true],
+
+
+	)
+
+
+}
+
+
+
+	
+	
+
+
+
+
+

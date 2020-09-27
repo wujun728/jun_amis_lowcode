@@ -1,0 +1,324 @@
+jboot-1.1.2:
+优化：重构metrics reporter，支持监控信息输出到 console、csv、jmx、slf4j、influxdb、graphite、ganglia 和 elasticsearch。
+优化：修改代码生成器的生成model的action由baseModelName改为modelName
+优化：添加setFlashMap(Map map)方法，flashMessage可以直接设置Map或者Jfinal的Ret
+优化：代码生成器的配置信息支持不完善，修改通过jboot.properties获取不到的问题
+优化：重构分库分表的功能，支持shardingjdbc 2.0最新版，并添加jfinal、jboot分库分表的demo
+优化：移除因为dubbo而关联依赖的spring-web
+
+
+
+jboot-1.1.1:
+新增：FlashMessage功能，方便Controller进行redirect的时候可以通知用户。
+新增：websocket的功能和具体使用demo。
+新增：在JbootAppListener里新增onAppStartBefore方法，方便扩展。
+新增：zbus rpc 的实现和支持。
+优化：重构JfinalHandler，可以自由添加Handler的顺序。
+优化：重构hystrix的降级功能，在进行降级回调的时候获取更多的细节。
+优化：重构JbootCache模块，方便获取底层具体对象，方便扩展。
+其他：更新依赖、完善文档。
+
+
+jboot-1.1.0:
+新增：mq 的队列模式（之前只有广播）
+新增：redis 和 rabbitmq 对队列的支持。
+新增：zbus的支持，暂时只支持zbus的mq。
+新增：jboot的相关demos（持续完善中）。
+修复：代码生成器生成的代码 tableName 注解错误的问题。（感谢 @Rlax 提交代码）
+修复：自定义motan registry但maven打包没有加入spi配置信息导致无法发现的bug。
+优化：重构 hystrix 和 rpc模块，允许用户自己控制rpc服务抛出的异常是否抛出到Controller，方便开发调试。
+其他：更新依赖、完善文档
+
+
+jboot-1.0:
+更新Jfinal到3.3，移除源码依赖（通过maven依赖）。
+
+新增：添加分布式下的统一配置中心
+新增：添加dubborpc的相关测试和demo
+新增：添加metrics的相关注解功能
+新增：添加Swagger模块
+新增：针对多ip的情况，增加rpchost自定义配置
+新增：dubbo针对多ip的情况，增加rpchost自定义配置
+新增：motanrpctestforconsulregistry
+新增：添加了jbootCache保存数据的时候，可以设置超时时间的功能；
+新增：添加zookeeper的相关测试和demo
+新增：cache注解测试，使用ehredis二级缓存测试
+新增：删除无用的实现，防止错误配置
+新增：http客户端的okhttp实现
+新增：分布式模式下的任务调度功能，基于cron4j和redis
+
+修复：JbootServiceInterfaceGenerator类的生成的findAll方法返回值被写死了返回List<User>
+修复：修复Service代码生成器生成的Service接口导报格式化不正确的bug
+修复：修复dubbo直连模式调用失败的bug
+修复：修复统一配置中心读取远程配置在app启动之后，可能造成本地文件没有的话获取数据为null的情况。
+修复：修复统一配置中心有可能由于网络问题造成本地配置被清空配置的问题。
+修复：修复当用户使用@clear注解的时候，会造成注入无效的bug
+修复：修复dubbo注册中心模式下（非直连模式）配置验证判断错误的问题
+修复：修复maven库路径存在空格情况下，jar扫描不到的情况
+修复：修复consul升级到1.0之后motan无法注册和获取服务的问题（motan的问题，已经给motan提交pr）
+修复：修复motanspi名字重复的bug
+修复：修复服务注册时候一个BUG，导致agenthost错误超时的问题。
+修复：修复dubbo无法发现关于Opentracing的proxyfactoryspi服务的问题
+修复：修复dubbo配置为注册中心为zookeeper的时候无法自动发现的问题
+修复：修复motan配置为注册中心为zookeeper的时候无法自动发现的问题
+修复：修复当Controller或者Servicerpc错误的时候，页面显示的错误无法明确错位位置的bug。
+修复：修复在使用缓存注解不使用key模版的情况下的，不同方法参数生成相同cachekey的情况。
+修复：修复motanregistry无法识别的问题
+修复：缓存类型ehredis情况下，Jboot.me().getCache().getKeys()永远为ehcache的结果
+修复：修复通过maven命令mvncleanpackageappassembler:generate-daemons打包的后台程序无法执行的bug
+
+优化：优化jbootapp启动速度
+优化：代码生成器为jfinal3.3的模板生成方
+优化：重构对jfinalinterceptor的注入流程
+优化：重构schedule部分，添加FixedDelay和FixedRate的支持。
+其他：更新依赖、完善文档
+
+
+jboot-1.0-rc.4:
+新增： Opentracing 模块 和 默认的 zipkin 实现，用于对分布式 RPC 的追踪支持。
+新增：注解 EnableTracing ，方便通过 Opentracing 给 Jfinal 的 action 添加数据追踪。
+新增：motan 和 dubbo 默认对 Opentracing 数据追踪的支持。
+新增：Opentracing 的相关文档。
+新增：为JbootModel 默认添加 findAll 方法。
+新增：service代码生成自动添加注解 @Bean ，方便 @Inject后就可以直接使用 。
+优化：给没有JbootModel相关没必要序列化的字段添加 transient 修饰。
+优化：完善 RPC 、opentracing 、hystrix 的相关测试和文档。
+修复：当启用 Opentracing 的同时 启用 Hystrix，会出现 Opentracing 追踪断裂的bug。
+修复：注解 @Before(Tx.class) 应用在类上的时候，事务回滚失败的bug。
+修复：oracle、sqlserver、postgresql的Dialect（方言）的limit数据错误的问题。
+修复：当调用Cache.removeAll()去移除一个不存在的key时，会出现redis错误的bug。
+修复：RPC远程调用在直连模式下无法获取service的bug。
+
+
+
+
+jboot-1.0-rc.3:
+新增：添加servlet相关的配置，支持之定义servlet。
+新增：新增RPC是否自动走Hystrix的相关配置支持
+新增：新增RPC 代理的配置，jboot.rpc.proxy
+新增：findFirstByColumns方法，根据多列和值查询一条数据
+优化：重构Shiro相关的AuthorizeResult，使用不被删除的方法。
+修复：service层代码生成器出现导报错误的bug
+修复：http post请求时，请求类型判断错误的bug
+修复：通过Jboot.me().getMetrics进行统计后，在浏览器浏览的数据不正确的问题。
+
+
+
+jboot-1.0-rc.2:
+新增：hystrix 自动监控和熔断对dubbo的支持
+新增：hystrix 的keys配置，方便RPC调用的时候对方法的监控和熔断
+新增：motan的自定义代理，方便今后扩展对客户端调用的监控
+新增：Jfinal的Plugin和Handler的自动注入功能
+新增：JbootModel的columns查询对AnsiSql、Orcacle、PostgreSql、Sqlite3、SqlServer的支持
+新增：升级dubbo到最新版本2.5.6，支持dubbo通信框架netty4的配置
+优化：重构SPI加载，使代码更加简洁易懂
+优化：完善Jboot SPI 扩展功能的注释和说明
+优化：重构 注解 @EnableHystrixCommand ，不允许其使用在Controller的字段上，造成误解。
+优化：完善Hystrix功能，在客户端（例如：Controller）可以调用 Jboot.hystrix(key,runable) 轻易的通过 hystrix 进行接管。
+优化：web相关拦截器和处理器的注入功能
+优化：重构Jboot的核心类 Jboot.java，把其工具方法全部修改为静态方法。
+优化：重构JbootModel，使Column查询其支持任何的数据库，同时JbootModel代码更加简洁
+优化：参数非空验证的拦截器 ParaValidateInterceptor 代码
+修复：hystrix注解多个key时，其他key的统计失效的问题
+修复：JFinal 指令 Directive 无法进行自动注入的问题
+修复：Shiro相关文档里的指令大小写错误的问题
+修复：Undertow Server在启动的时候出现异常（比如端口号被占用）等，可能出现空指针异常的bug
+修复：CDN配置自适应http和https时，出现的重复添加CDN前缀的问题。
+文档：完善分库分表文档
+文档：完善shiro相关文档
+文档：完善MQ消息队列文档
+文档：完善RPC远程调用相关文档
+文档：完善项目构建文档
+文档：完善JbootEvent事件机制文档
+其他：依赖升级 dubbo ->2.5.6；fst->2.54
+
+
+
+jboot-1.0-rc.1:
+新增：数据库分表的支持（之前已经完成对多数据源分库的支持），分表支持依赖于sharding-jdbc
+新增：分库分表相关的使用文档
+新增：对拦截器自动注入功能的支持
+优化：Cookie的加密工具配置加密key为选配，当没配置的时候不会抛出异常，只是会发出警告。
+优化：优化拦截器注入性能
+优化：重构AOP对jfinal 的 Controller和interceptor 注入工作，代码更加容易理解。
+依赖更新：HikariCP -> 2.7.2 ；fastjson -> 1.2.38
+
+
+
+jboot-1.0-beta9:
+修复：cron4j 注解配置会抛出异常的bug。 close #IF5U1:关于cron4j使用注解创建的问题
+修复：在使用JbootServiceBase作为service层的基类时，通过注入的方式初始化会造成初始化失败的问题。
+新增：RPC直连模式调用的支持。
+
+
+
+
+jboot-1.0-beta8:
+新增：RPC模块支持自定义序列化，可以和Jboot本身的序列化不共享同一个序列化对象。
+修复：在使用redis作为默认缓存的情况下，根据主键查询一个不存在的数据可能会抛出NullPointerException的问题。
+依赖更新：metrics ->3.2.5，HikariCP ->2.7.1 ， fastjson -> 1.2.38 ，fst -> 2.53，dubbo->2.5.5。
+
+
+
+
+jboot-1.0-beta7:
+新增：多数据源情况下，是否添加表映射的配置支持。
+新增：websocket的支持，更新依赖。
+修复：启用分布式session的情况下，在同一个request里setSession又去getSession 得到空值的bug
+修复：修改方法名 RedisManager.getReidis() 为 RedisManager.getRedis()
+优化：appassembler-maven-plugin插件打包jar存放的目录由lib修改为libs
+优化：删除 无用的 JbootSessionManager 类
+更新：分布式session的相关文档。
+更新：dubbo到最新版本2.5.4
+更新：undertow到最新版本1.4.20.Final
+
+
+
+jboot-1.0-beta6:
+1、添加JbootServiceBase，方便在Jboot APP中对service的编写工作。
+2、添加JbootServiceGenerator用于对Service层的代码生成。
+3、优化Jboot代码生成逻辑，使之代码更加简洁。
+4、优化配置文件读取可以读取没有前缀的配置信息，同时可以不需要@PropertieConfig 注解的配置。
+5、修复：在 JDK9 下编译失败的问题，JDK9 添加新的类java.lang.Module，导致类引入不明。
+6、更新shiro相关的文档内容。
+
+
+jboot-1.0-beta5:
+1、新增：在分库的时候，可以给每个数据源排除表配置的支持。
+2、新增：@Cron4jTask 注解无法使用在ProcessTask和Task类的问题。
+3、新增：http模块支持自动设置multipartFormData的问题，之前是需要手动设置。
+4、新增：EncryptCookieUtils工具类，用于对cookie进行安全加密使用。
+5、新增：dubbo rpc实现的支持，据说dubbo要更新了？
+6、优化：RPC模块。
+7、优化：部分代码，提高效率。
+8、修复：无法对jfinal model 进行注入的问题。
+9、修复：ClassNewer创建的实例无法被AOP控制的问题。
+10、修复：RPC模式设置无效的问题。
+11、修复：@JbootrpcService注解的缺省配置无法注入RPC实例的问题。
+12、依赖更新： fst:2.52，undertow:1.4.18.Final，阿里云ons-client:1.6.0.Final,amqp-client:4.2.0
+
+
+
+jboot-1.0-beta4:
+1、升级Jfinal到最新版本3.2，支持Controller方法参数化获取页面提交参数，需java8编译并添加-parameters配置
+2、升级新浪RPC框架motan到最新版本0.3.1，并做简单重构功能。
+3、升级fastjson到最新版本1.2.36
+4、新增使用@Cacheable @CacheEvict @CachePut无需再添加@Named配置，需java8编译并添加-parameters配置
+5、新增生成代码的时候，可以排除指定表名的支持。
+6、重构JbootDbManager使之代码更加直观简洁。
+7、重构JbootEhredisCacheImpl二级缓存的实现。
+8、修复部分用户把sql文件放在classes目录下被读取的问题。
+9、修复当没有任何model，全部使用record操作数据库的时候出现空指针异常的问题。
+10、初始化Jboot的使用文档和帮助文档。
+
+
+
+jboot-1.0-beta3:
+1、修复使用@Inject自动注入后，再使用JFinal的@Before(Tx.Class)会出现空指针的问题。
+2、修复读取配置文件的时候，同一个Class对于不同的配置信息读取不到的问题。
+3、修复多数据源的时候，读取数据源解析错误的问题。
+4、修复readme文档编写错误的问题。
+5、修复当有JbootAppListener监听器的时候，JbootAppListenerManager无法初始化的问题。
+
+
+
+
+jboot-1.0-beta2:
+1、修复jboot shiro模块的相关bug，可以愉快的在项目中使用shiro了，而且可能是jfinal的shiro支持中最好用的一个。感谢@zhoujh
+2、修复无法实例化JbootDbManager的bug。
+3、修复JbootRedisLock基于Redis的分布式锁release出错的bug。
+4、新增datasource poolName的配置支持。
+5、新增多数据源的支持，非常非常简单的在Jfinal中使用多数据源。
+6、新增CacheEvict和CachePut两个注解，方便通过配置设置缓存。
+7、新增JbootAppListener监听器，方便监听Jboot和Jfinal的启动状态，对自己的程序进行初始化等工作。
+8、新增Jfinal sql template 配置的支持，只需在jboot.properties进行配置，无需一行代码。
+
+
+
+
+jboot-1.0-beta1:
+1、重构shiro模块，使其支持shiro.ini配置，方便其他项目迁移。
+2、新增JbootRedisLock基于redis的分布式锁。
+3、重构jboot.java 不再支持静态调用，而是通过Jboot.me().xxx这样去调用，方便后续的热加载功能。
+4、新增JbootServer的restart方法，方便后续的热加载。
+5、修复redis密码配置，在没有超时时间配置的时候无效的问题。
+6、修复：redis不能使用blpop命令和brpop命令的bug。
+7、修复：@JbootrpcService注解无法指定远程rpc分组和版本的问题。
+8、完善 jboot 的错误输出，在500错误的时候能够在页面清晰看到错误信息，方便开发排查。
+9、升级 fastjson 到最新版本 1.2.3
+10、完善jboot开发模式设置，新增jboot默认设置为dev，方便日志输出。
+11、修复：motan rpc模块在spi加载的错误问题。
+12、修复：jboot微信模块的access token cache的可能导致的缓存冲突的问题。
+13、更正readme文档，修复其他若干bug，增强稳定性。
+
+
+
+jboot-1.0-alpha5:
+1、修复AOP接口自动绑定时不成功的bug，新增了@Bean注解，方便对接口绑定的配置；
+2、移除默认的jvm对jmx的设置，因为在docker环境下，设置网络为host模式时可能会产生端口冲突的问题。
+3、移除motan的rpc序列化框架hessian，因为hessian在对bigdecimal序列化出错。
+4、修复在macos下，jboot程序无法在后台启动的问题；
+5、添加shiro框架的支持，用于对jboot的安全控制。
+6、添加 @Cacheable 注解，方便对Service进行缓存管理。
+7、修复 使用 @EnableHystrixCommand 使用Hystrix对某些服务进行管理时，某些参数无法注入的问题。
+8、修复 在某些情况下，初始化JbootMotanrpc可能会出现空指针的问题。
+9、移除 ehcache 缓存文件路径的默认设置。
+10.Jbootredis新增对集群环境的支持，Jboot.getRedis() 可以快乐的在集群和非集群环境下使用了。
+11、修复在某些情况下，通过model.getPrimaryKey() 获取不到数据的问题。
+12、依赖框架的升级：HikariCP升级到最新版本2.6.3，undertow升级到最新版本1.4.16.Final，fastjson升级到1.2.33，jsoup升级到1.10.3，shiro升级到最新版本1.4.0...
+13、更正readme文档，修复其他若干bug，增强稳定性。
+
+
+
+
+jboot-1.0-alpha4:
+1、添加SPI扩展方法，方便对Jboot内置模块的扩展实现。
+2、新增自定义序列化的支持，开发者可以选择现有系统已经支持的序列化方法（默认：fst2）。
+3、修复在某些情况下服务无法暴露的问题。
+4、设置jboot的端口号为8080。
+5、新增拦截器的AOP功能。
+6、移除ehcache的scope：provided，也就是说jboot默认内置ehcache。
+7、新增JFinal AOP的兼容，在JBoot通过注入的方式实例化对象的时候，一样可以使用Jfinal的AOP功能。
+8、移除appassembler打包对jvmSettings的默认配置。
+9、修复在某些情况下使用JbootEhredis缓存错误的问题。
+10、更正readme文档，修复其他若干bug，增强稳定性。
+
+
+
+jboot-1.0-alpha3:
+1、对jboot代码进行重构，添加component模块，引入flyway、hystrix、metrics、redis、shiro、zuul等开源软件，方便对jboot的监控和管理。
+2、新增：JbootDaoBase，方便jion操作
+3、新增：Jboot启动的服务器信息输出，比如webroot路径，当前服务地址等
+4、新增：序列化组件，方便自由对mq、rpc、cache等序列化。
+5、新增：JFianl 的 sharedMethod、sharedStaticMethod、sharedObject 注解，用于配置模板共享函数和对象
+6、新增：数据源配置 maximumPoolSize，用不配置连接池大小。
+7、新增j：boot启动完成的时候会发现启动完成的事件，方便应用初始化其他数据
+8、新增：jbootdemo项目，方便快速入门。
+9、修复 fst2 反序列化出错的问题
+10、修复 jbootredis读取数据可能出错的问题
+11、修复 jbootredis 接收数据在某些情况下可能无法接收的bug
+12、修复 代码生成器 当主键字段不为id时，报错的问题。
+13、修复 代码生成器 当主键字段不为uuid时，报错的问题。
+14、优化：重命名 UrlMapping 为 RequestMapping
+15、优化：重命名 UseHystrixCommand 为 EnableHystrixCommand
+16、优化：重命名 JbootDirective 为 JFinalDirective
+17、优化：移除JbootService
+18、优化：log输出移除log4j，修改为slf4j
+19、更新 readme文档
+
+
+
+
+jboot-1.0-alpha2:
+修复：jbootrpcService 无法在类上进行注解的bug
+修复：在某些情况下无法实例化jbootredis的bug
+修复：jfinal-weixin在集群模式下获取ticket错误的问题
+新增：添加rpc服务调用统计
+新增：@UseHystrixCommand注解，用于controller调用使用Hystrix进行管理（访问隔离、容错隔离、延迟隔离、 熔断）
+新增：基于guice的aop功能
+新增：jbootmqConfig的默认配置（之前没有配置会出现异常）
+新增：mq监听器的多渠监听功能（multiChannel）
+优化：jbootrpcService注解的使用
+优化：ClassNewer的错误信息
+优化：更新jfinal-cos到最新版本"2017.5"
+优化：修改JbootEventListner的onMessage为onEvent，防止和mq的onMessage冲突。

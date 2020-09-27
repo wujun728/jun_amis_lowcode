@@ -1,0 +1,8 @@
+dependencies {
+    //api project(':demo-service-autoconfig')
+    //如果直接依赖模块会报错，因为加载不到HelloServiceBean
+    // Field helloService in cn.kiwipeach.demo.DemoController required a bean of type 'org.kiwipeach.demo.service.HelloService' that could not be found.
+
+    implementation 'cn.kiwipeach.demo:demo-service-autoconfig:1.0-SNAPSHOT'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.1.RELEASE'
+}

@@ -1,0 +1,65 @@
+ 
+	sourceSets {
+		main {
+			java {
+				srcDir 'src/main/java'
+
+			}
+			resources {
+				srcDir 'src/main/resources'
+				srcDir 'src/main/java'  exclude '**/*.java'
+			}
+
+		}
+		test {
+			java {
+				srcDir 'src/test/java'
+
+			}
+			resources {
+				srcDir 'src/test/resources'
+				srcDir 'src/test/java'  exclude '**/*.java'
+			}
+
+		}
+
+	}
+
+
+
+	dependencies {
+		compile project(':bboot-starter')
+// https://mvnrepository.com/artifact/org.eclipse.jetty.orbit/org.objectweb.asm
+		//compile group: 'org.eclipse.jetty.orbit', name: 'org.objectweb.asm', version: '3.1.0.v200803061910'
+// https://mvnrepository.com/artifact/org.eclipse.jetty.orbit/javax.annotation
+		//compile group: 'org.eclipse.jetty.orbit', name: 'javax.annotation', version: '1.1.0.v201108011116'
+
+		compile (
+// https://mvnrepository.com/artifact/org.eclipse.jetty.orbit/org.objectweb.asm
+
+				[group: 'javax.servlet', name: 'javax.servlet-api', version: "3.0.1", transitive: false],
+				//[group: 'javax.servlet', name: 'jsp-api', version: '2.0', transitive: false],
+				[group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.1', transitive: false],
+
+				[group: 'javax.el', name: 'javax.el-api', version: '2.2.1', transitive: false],
+				[group: 'org.eclipse.jetty.aggregate', name: 'jetty-all-server', version: '8.1.19.v20160209', transitive: false],
+				//[group: 'org.eclipse.jetty.orbit', name: 'org.apache.jasper.glassfish', version: '2.2.2.v201112011158', transitive: false],
+				[group: 'org.eclipse.jetty.orbit', name: 'javax.servlet.jsp', version: '2.2.0.v201112011158', transitive: false],
+
+				[group: 'org.eclipse.jetty.orbit', name: 'org.apache.taglibs.standard.glassfish', version: '1.2.0.v201112081803', transitive: false],
+				[group: 'org.eclipse.jetty.orbit', name: 'com.sun.el', version: '2.2.0.v201108011116', transitive: false],
+
+				[group: 'org.mortbay.jetty', name: 'jsp-2.1-glassfish', version: '9.1.02.B04.p0', transitive: true],
+				[group: 'javax.servlet', name: 'jstl', version: '1.2', transitive: false],
+		)
+	}
+
+
+
+	
+	
+
+
+
+
+

@@ -1,0 +1,55 @@
+ 
+	sourceSets {
+		main {
+			java {
+				srcDir 'src/main/java'
+
+			}
+			resources {
+				srcDir 'src/main/resources'
+				srcDir 'src/main/java'  exclude '**/*.java'
+			}
+
+		}
+		test {
+			java {
+				srcDir 'src/test/java'
+
+			}
+			resources {
+				srcDir 'src/test/resources'
+				srcDir 'src/test/java'  exclude '**/*.java'
+			}
+
+		}
+
+	}
+
+
+
+	dependencies {
+		compile project(':bboot-starter')
+
+		compile (
+
+				[group: 'org.eclipse.jetty', name: 'jetty-server', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty', name: 'jetty-webapp', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty', name: 'jetty-jmx', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty', name: 'jetty-servlets', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty.websocket', name: 'javax-websocket-server-impl', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty', name: 'apache-jsp', version: "${jetty_version}", transitive: true],
+				[group: 'org.eclipse.jetty', name: 'apache-jstl', version: "${jetty_version}", transitive: true],
+
+
+		)
+	}
+
+
+
+	
+	
+
+
+
+
+

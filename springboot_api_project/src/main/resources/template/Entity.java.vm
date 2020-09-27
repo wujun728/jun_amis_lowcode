@@ -1,0 +1,38 @@
+package ${package}import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableLogic;
+import com.baomidou.mybatisplus.annotations.TableName;
+import lombok.Data;
+
+import java.io.Serializable;
+
+.entity.${moduleName};
+    #if(${hasBigDecimal})
+    #end
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Data
+@TableName("${tableName}")
+public class ${className}Entity implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    #foreach ($column in $columns)
+
+        //$column.comments
+        #if($column.columnName == $pk.columnName)
+        @TableId
+        #elseif($column.columnName == "del_state")
+        @TableField(value = "${column.columnName}")
+        @TableLogic
+        #else
+        @TableField(value = "${column.columnName}")
+        #end
+    private $column.attrType $column.attrname;
+    #end
+}

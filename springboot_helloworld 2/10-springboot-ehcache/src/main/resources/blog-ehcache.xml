@@ -1,0 +1,29 @@
+<ehcache>
+
+    <diskStore path="java.io.tmpdir/demo-ehcache2"/>
+
+    <!--defaultCache:echcache的默认缓存策略  -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            maxElementsOnDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </defaultCache>
+
+    <!-- 自定义缓存策略 -->
+    <cache name="SYSUSER_CACHE"
+           maxElementsInMemory="100"
+           eternal="false"
+           overflowToDisk="true"
+           diskPersistent="true"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="300"
+           maxElementsOnDisk="100000"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+</ehcache>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>案例导航页面</title>
+</head>
+<body style="text-align: center">
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/query">1.查询所有对象，并且进行缓存，第二次将不再查询数据库</a></h4>
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/create">2.新增数据的用户数据(id=10086)到库中</a></h4>
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/query/10086">3.查询刚刚新增到数据库的缓存数据(id=10086)</a>
+</h4>
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/update/10086">4.更新用户数据(id=10086)</a></h4>
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/delete/10086">5.删除用户数据(id=10086)</a></h4>
+<h4><a onclick="urlClick(this)" href="javascript:;" data-url="/demo/user/reloadCache">6.重置缓存，并且重置模拟数据库</a></h4>
+<div id="showBox" style="height: 300px;background: gainsboro"></div>
+<script type="text/javascript">
+    var xhr = '';
+    if (window.XMLHttpRequest) {
+        xhr = new window.XMLHttpRequest();
+    } else {
+        xhr = new ActiveXObject('Microsoft.XMLHttp');
+    }
+
+    function urlClick(target) {
+        var url = target.getAttribute('data-url');
+        xhr.open('get', url, true);
+        // xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        xhr.send(null);
+        xhr.onreadystatechange = function () {
+            //          readyState:
+            //                 0: 请求未初始化
+            //                 1: 服务器连接已建立
+            //                 2: 请求已接收
+            //                 3: 请求处理中
+            //                 4: 请求已完成，且响应已就绪
+            //             status:
+            //                 200: 'ok'
+            //                 404: 未找到页面或接口
+            //                 xhr.responseText: 后端返回的数据
+            if (xhr.status == 200) {
+                document.getElementById('showBox').innerHTML = xhr.responseText;
+                console.log('相应内容', xhr.responseText);
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

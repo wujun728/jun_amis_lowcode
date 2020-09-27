@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: dev
+  redis:
+    host: localhost
+    password:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+server:
+  port: 8090
+  servlet:
+    session:
+      timeout: PT2M
+
+mybatis-plus:
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/mapper/**/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.puboot.entity
+  global-config:
+    db-config:
+      #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      #主键类型
+      id-type: AUTO
+    banner: false
+  configuration:
+    #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  type-enums-package: com.puboot.entity.enums
+
+# 日志级别配置
+logging:
+  level:
+    com.puboot.mapper: debug

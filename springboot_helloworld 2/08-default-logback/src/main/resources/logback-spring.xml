@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="false">
+    <property name="logDir" value="logfiles"/>
+
+    <!--文件滚动日志-->
+    <appender name="ROLL_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logDir}/springboot-logback.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>${logDir}/springboot-logback.%i.log.zip</fileNamePattern>
+            <!--设置滚动窗口大小，表示在index从1~12之间滚动，按照队列先进先出进行日志滚动输出-->
+            <minIndex>1</minIndex>
+            <maxIndex>12</maxIndex>
+        </rollingPolicy>
+        <!--日志滚动触发条件-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>5MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <!--
+        %d{yyyy-MM-dd HH:mm:ss.SSS}——日志输出时间
+        %thread——输出日志的进程名字，这在Web应用以及异步任务处理中很有用
+        %5level——日志级别，并且使用5个字符靠右对齐
+        %logger{36}——日志输出者的名字
+        %msg——日志消息
+        %n——平台的换行符
+        -->
+    </appender>
+    <!-- 控制台 -->
+    <appender name="CONSOLE_APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--自定义目标包体下的日志输出级别-->
+    <logger name="cn.kiwipeach.demo.service" level="trace" />
+    <springProfile name="dev">
+        <logger name="cn.kiwipeach.demo.service" level="debug" />
+    </springProfile>
+    <springProfile name="prod">
+        <logger name="cn.kiwipeach.demo.service" level="warn" />
+    </springProfile>
+    <!-- 日志级别TRACE<DEBUG<INFO<WARN<ERROR -->
+    <root level="WARN">
+        <appender-ref ref="ROLL_APPENDER"/>
+        <appender-ref ref="CONSOLE_APPENDER"/>
+    </root>
+</configuration>

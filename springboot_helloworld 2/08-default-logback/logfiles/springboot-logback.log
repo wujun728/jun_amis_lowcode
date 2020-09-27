@@ -1,0 +1,7 @@
+14:09:50.741 [main] WARN  cn.kiwipeach.demo.utils.LogLevelUtil - LogLevelUtil warn 日志
+14:09:50.742 [main] ERROR cn.kiwipeach.demo.utils.LogLevelUtil - LogLevelUtil error 日志
+14:09:50.743 [main] TRACE c.k.d.s.impl.LogbackServiceImpl - Service trace 日志
+14:09:50.743 [main] DEBUG c.k.d.s.impl.LogbackServiceImpl - Service debug 日志
+14:09:50.743 [main] INFO  c.k.d.s.impl.LogbackServiceImpl - Service info 日志
+14:09:50.743 [main] WARN  c.k.d.s.impl.LogbackServiceImpl - Service warn 日志
+14:09:50.745 [main] ERROR c.k.d.s.impl.LogbackServiceImpl - Service error 日志

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="前后端分离"/>
+    <meta name="description" content="前后端分离"/>
+    <meta name="author" content="小柒2012" />
+    <meta name="site" content="https://blog.52itstyle.vip" />
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <title>前后端分离</title>
+</head>
+<body>
+<div style="text-align: center">
+    <div>页面有点简陋，演示而已，将就着看吧！</div>
+    <div>直接点击用户会提示！</div>
+    <div>============================</div>
+    <span onclick="login()" >登录</span>
+
+    <span onclick="user()" >用户</span>
+
+</div>
+<script>
+function login(){
+   $.ajax({
+		url : "/user/login",
+		type : "post",
+		dataType : "json",
+		success : function(data) {
+            if(data.code==0){
+               alert("登录成功")
+               $.cookie('token', data.msg);
+            }
+		},
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+
+		}
+	});
+}
+function user(){
+   $.ajax({
+		url : "/user/list",
+		type : "post",
+		dataType : "json",
+		success : function(data) {
+            alert(data.msg)
+		},
+		beforeSend: function(request) {
+            request.setRequestHeader("token", $.cookie('token'));
+        },
+		error : function(XMLHttpRequest, textStatus, errorThrown) {
+
+		}
+	});
+}
+</script>
+</body>
+</html>

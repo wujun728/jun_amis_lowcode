@@ -1,0 +1,15 @@
+package ${package}import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+.service.${moduleName}.impl;
+    ${package}
+        .mapper.${moduleName}.${className}Mapper;
+    ${package}
+        .entity.${moduleName}.${className}Entity; ${package}.service.${moduleName}.${className}Service;
+
+
+@Slf4j
+@Service
+public class ${className}ServiceImpl extends ServiceImpl<${className}Mapper, ${className}Entity> implements ${className}Service {
+
+}

@@ -1,0 +1,18 @@
+jdbcUrl = jdbc:mysql://127.0.0.1/u?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = root
+password = root
+devMode = true
+driver = com.mysql.jdbc.Driver
+maxactive = 5
+minidle = 1
+initialsize=1
+logabandoned=true
+removeabandoned=true
+removeabandonedtimeout=10
+maxwait=5000
+timebetweenevictionrunsmillis=10000
+numtestsperevictionrun=10
+minevictableidletimemillis=60000
+sellerPageSize=10
+musername=admin
+mpassword=admin
