@@ -19,8 +19,8 @@ JustAuth(`第三方登录`)、LDAP(`增删改查`)、`动态添加/切换数据�
 HTTPS、Flyway(`数据库初始化`)。
 
 
-#### jun_springboot 项目module组件功能列表
 
+#### jun_springboot 项目module组件功能列表
 - 【springboot_helloworld】springboot 的一个 helloworld  
 - 【springboot_properties】springboot 读取配置文件中的内容  
 - 【springboot_actuator】springboot 集成 springboot_starter_actuator 用于监控 springboot 的启动和运行状态  
