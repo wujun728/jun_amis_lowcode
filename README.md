@@ -145,8 +145,6 @@ HTTPS、Flyway(`数据库初始化`)。
 - [x] ~~spring_boot_demo_async（Spring boot 实现异步调用）~~
 
 
-
-
 mybatisplus-spring-boot    干掉
 redis-project    干掉，合并到springboot_redis
 springboot     *****
