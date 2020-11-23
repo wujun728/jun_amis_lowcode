@@ -3,7 +3,7 @@ package com.lhb.lhbauth.jwt.demo.authentication.social.wexin.model;
 import lombok.Data;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/4 0004 9:46
  */

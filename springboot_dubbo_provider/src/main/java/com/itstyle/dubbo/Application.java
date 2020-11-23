@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 /**
- * @author 科帮网 小柒
+ * @author Wujun
  */
 @EnableAutoConfiguration
 @ComponentScan(basePackages={"com.itstyle.web"})

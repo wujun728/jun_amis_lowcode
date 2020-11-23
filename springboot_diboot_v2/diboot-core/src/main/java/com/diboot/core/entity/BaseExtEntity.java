@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * 附带extdata扩展字段的Entity父类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2018/12/27
  */

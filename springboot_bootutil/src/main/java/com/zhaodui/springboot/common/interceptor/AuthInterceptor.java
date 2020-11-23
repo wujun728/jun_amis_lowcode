@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author zhaodui
+ * @author Wujun
  */
 @Slf4j
 public class AuthInterceptor implements HandlerInterceptor {

@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 
 /**
  * Memcached 缓存操作封装，基于 region+_key 实现多个 Region 的缓存（
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class MemCache implements Level2Cache {
 

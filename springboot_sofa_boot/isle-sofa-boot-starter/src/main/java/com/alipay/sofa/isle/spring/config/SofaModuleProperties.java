@@ -23,7 +23,7 @@ import static com.alipay.sofa.isle.spring.config.SofaModuleProperties.PREFIX;
 /**
  * Properties
  *
- * @author xuanbei 18/5/6
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = PREFIX)
 public class SofaModuleProperties {

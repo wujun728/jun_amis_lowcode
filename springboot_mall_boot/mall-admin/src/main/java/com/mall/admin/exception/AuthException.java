@@ -3,7 +3,7 @@ package com.mall.admin.exception;
 
 /**
  * torkn认证异常
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/11/25 13:30
  */

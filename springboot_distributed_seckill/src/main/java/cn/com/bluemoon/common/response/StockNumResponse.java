@@ -3,7 +3,7 @@ package cn.com.bluemoon.common.response;
 /**
  * 
  * 活动库存
- * @author Guoqing
+ * @author Wujun
  *
  */
 public class StockNumResponse extends BaseResponse {

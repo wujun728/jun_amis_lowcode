@@ -25,7 +25,7 @@ import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
 /**
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ServiceDefinitionParser extends AbstractContractDefinitionParser {
     public static final String REF     = "ref";

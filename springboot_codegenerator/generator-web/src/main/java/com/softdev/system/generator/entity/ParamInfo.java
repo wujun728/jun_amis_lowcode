@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * Post data - ParamInfo
- * @author zhengkai.blog.csdn.net
+ * @author Wujun
  */
 @Data
 public class ParamInfo {

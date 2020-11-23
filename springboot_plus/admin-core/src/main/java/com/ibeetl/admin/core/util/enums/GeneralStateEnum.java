@@ -5,7 +5,7 @@ import org.beetl.sql.core.annotatoin.EnumMapping;
 /**
  * 描述:数据是否有效
  *
- * @author : lijiazhi
+ * @author Wujun
  */
 @EnumMapping("value")
 public enum GeneralStateEnum {

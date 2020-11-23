@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * @author xuanbei 18/3/9
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class ComponentManagerImpl implements ComponentManager {

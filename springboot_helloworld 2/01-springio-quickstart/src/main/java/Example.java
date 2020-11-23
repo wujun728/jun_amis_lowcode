@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 官网helloword案例
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 @RestController

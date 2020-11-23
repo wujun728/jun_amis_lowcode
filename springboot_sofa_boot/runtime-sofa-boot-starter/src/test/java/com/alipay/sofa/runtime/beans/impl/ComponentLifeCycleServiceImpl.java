@@ -22,7 +22,7 @@ import com.alipay.sofa.runtime.beans.service.LifeCycleService;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class ComponentLifeCycleServiceImpl implements LifeCycleService, ComponentLifeCycle {

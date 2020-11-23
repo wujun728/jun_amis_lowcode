@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author xuanbei 18/3/12
+ * @author Wujun
  */
 public class DefaultPipelineContext implements PipelineContext {
     private final List<PipelineStage> stageList = new ArrayList<>();

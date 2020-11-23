@@ -25,7 +25,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 /**
- * @author xiaomo
+ * @author Wujun
  */
 @Configuration
 @ComponentScan("info.xiaomo")

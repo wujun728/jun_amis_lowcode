@@ -3,7 +3,7 @@ package me.zhyd.springboot.enums.enums;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2019/7/3 9:46

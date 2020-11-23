@@ -17,7 +17,7 @@ import java.util.Map;
  * DLX：死信交换机，通常可以将到期的死信转发到死信交换机，
  * 然后死信交换机将消息路由到死信队列消费达到延时队列的目的
  *
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Configuration

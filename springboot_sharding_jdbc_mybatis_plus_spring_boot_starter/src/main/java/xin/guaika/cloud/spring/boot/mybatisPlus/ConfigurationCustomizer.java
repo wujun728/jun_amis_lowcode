@@ -5,7 +5,7 @@ import org.apache.ibatis.session.Configuration;
 /**
  * Callback interface that can be customized a {@link Configuration} object generated on auto-configuration.
  *
- * @author Kazuki Shimizu
+ * @author Wujun
  * @since 1.2.1
  */
 public interface ConfigurationCustomizer {

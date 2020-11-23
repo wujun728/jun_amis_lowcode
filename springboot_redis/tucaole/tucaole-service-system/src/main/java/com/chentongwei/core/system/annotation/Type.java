@@ -7,7 +7,7 @@ import javax.validation.Payload;
 import java.lang.annotation.*;
 
 /**
- * @author TongWei.Chen 2017-12-27 18:59:01
+ * @author Wujun
  * @Project tucaole
  * @Description: 类型：1：吐槽的文章；2：吐槽文章的评论；
  */

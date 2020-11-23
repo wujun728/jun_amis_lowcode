@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
  * 后台用户信息
  * </p>
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-11
  */
 @Data

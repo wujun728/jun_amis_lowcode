@@ -27,7 +27,7 @@ import org.springframework.core.Ordered;
 /**
  * Common bean for extension and extension point
  *
- * @author yangyanzhao@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public class AbstractExtFactoryBean extends CommonContextBean implements BeanFactoryAware,

@@ -25,7 +25,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 /** 
  * @Description 动态数据源注册<br/>启动动态数据源请在启动类中（如SpringBootSampleApplication）添加 @Import(DynamicDataSourceRegister.class)
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 17, 2017 9:03:10 AM  
  */
 public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar, EnvironmentAware {
@@ -69,7 +69,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     /** 
      * @Description 创建DataSource
-     * @author 王鑫
+     * @author Wujun
      * @param dsMap
      * @return  
      */
@@ -113,7 +113,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     /** 
      * @Description 初始化主数据源
-     * @author 王鑫
+     * @author Wujun
      * @param env  
      */
     private void initDefaultDataSource(Environment env) {
@@ -131,7 +131,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     /** 
      * @Description 为DataSource绑定更多数据
-     * @author 王鑫
+     * @author Wujun
      * @param dataSource
      * @param env  
      */
@@ -157,7 +157,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
 
     /** 
      * @Description 初始化更多数据源
-     * @author 王鑫
+     * @author Wujun
      * @param env  
      */
     private void initCustomDataSources(Environment env) {

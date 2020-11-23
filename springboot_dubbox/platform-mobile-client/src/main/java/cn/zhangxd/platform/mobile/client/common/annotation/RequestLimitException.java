@@ -5,7 +5,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * The type Request limit exception.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class RequestLimitException extends BusinessException {
 

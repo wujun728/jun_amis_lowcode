@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
 /**
  * Log4jInfrastructureHealthCheckLoggerFactory Tester.
  *
- * @author <guanchao.ygc>
+ * @author Wujun
  * @version 1.0
  * @since <pre>九月 20, 2016</pre>
  */

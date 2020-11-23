@@ -25,7 +25,7 @@ import java.lang.reflect.Method;
  * 数据源选择器切面
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 16:52
  */
 @Aspect

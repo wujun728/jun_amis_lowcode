@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * 自定义 Spring MVC 序列化方式
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class JsonMapper extends ObjectMapper {
 

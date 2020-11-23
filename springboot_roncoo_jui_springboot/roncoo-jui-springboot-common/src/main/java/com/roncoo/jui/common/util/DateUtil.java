@@ -26,7 +26,7 @@ import java.util.Date;
 /**
  * 日期处理工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public final class DateUtil {
 

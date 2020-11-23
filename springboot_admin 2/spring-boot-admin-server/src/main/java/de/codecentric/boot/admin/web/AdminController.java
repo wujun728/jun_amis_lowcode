@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
  * Indicates that the annotated class is a mvn controller used whithin spring boot admin and
  * contains handler mappings to be registered using {@link PrefixHandlerMapping}.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

@@ -42,7 +42,7 @@ import com.alipay.sofa.runtime.spring.bean.SofaBeanNameGenerator;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since  3.1.0
  */
 public class TestSofaServiceAndReferenceException extends TestBase {

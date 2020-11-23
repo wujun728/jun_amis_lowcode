@@ -27,7 +27,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.ClassUtils;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class SofaJUnit4Runner extends Runner implements Filterable, Sortable {

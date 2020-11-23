@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 /**
  * 分布式锁注解
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 @Target(value = {ElementType.METHOD})

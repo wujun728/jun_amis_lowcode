@@ -21,9 +21,9 @@ import com.alipay.sofa.common.xmap.Context;
 import java.net.URL;
 
 /**
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
+ * @author Wujun
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public class XMapContext extends Context {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Description 自定义异常页面配置类
- * @author zhangyd
+ * @author Wujun
  * @date 2017年3月15日 下午3:13:43 
  * @version V1.0
  * @since JDK ： 1.7

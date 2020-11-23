@@ -14,7 +14,7 @@ import java.util.Date;
  * 提现申请表
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 @Data

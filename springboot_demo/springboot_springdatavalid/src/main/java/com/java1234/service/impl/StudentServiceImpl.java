@@ -10,7 +10,7 @@ import com.java1234.service.StudentService;
 
 /**
  * 学生信息Service实现类
- * @author Administrator
+ * @author Wujun
  *
  */
 @Service("studentService")

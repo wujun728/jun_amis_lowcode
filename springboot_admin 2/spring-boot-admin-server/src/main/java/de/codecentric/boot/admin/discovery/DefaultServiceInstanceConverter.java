@@ -35,7 +35,7 @@ import de.codecentric.boot.admin.model.Application;
  * <code>management.context-path</code> or <code>management.port</code> or <code>health.path</code>
  * to the instances metadata.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class DefaultServiceInstanceConverter implements ServiceInstanceConverter {
 	private static final Logger LOGGER = LoggerFactory

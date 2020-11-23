@@ -55,7 +55,7 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @author xuanbei 18/3/13
+ * @author Wujun
  */
 public class SofaRuntimeSpringContextInitializer
                                                 implements

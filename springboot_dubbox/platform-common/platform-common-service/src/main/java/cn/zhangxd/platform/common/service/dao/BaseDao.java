@@ -3,7 +3,7 @@ package cn.zhangxd.platform.common.service.dao;
 /**
  * DAO支持类实现
  *
- * @author zhangxd
+ * @author Wujun
  */
 public interface BaseDao {
 

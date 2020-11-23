@@ -38,7 +38,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * 利用ElasticsearchTemplate操作ES
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/18
  */
 @Slf4j

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-12-29 13:26:26
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章的操作数，比如：点赞数、评论数、点踩数等等
  */

@@ -4,7 +4,7 @@ import com.lhb.lhbauth.jwt.demo.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2018/12/25 0025 14:51
  */

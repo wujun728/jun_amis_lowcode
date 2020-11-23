@@ -29,7 +29,7 @@ import sun.misc.BASE64Encoder;
 
 /**
  * 摘要算法工具类
- * @author zengjintao
+ * @author Wujun
  * 2017年3月17号上午11:40
  */
 @SuppressWarnings("restriction")

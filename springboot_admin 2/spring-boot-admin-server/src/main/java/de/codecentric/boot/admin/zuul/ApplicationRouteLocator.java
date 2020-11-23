@@ -36,7 +36,7 @@ import de.codecentric.boot.admin.registry.ApplicationRegistry;
 /**
  * RouteLocator to register all applications' routes to zuul
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ApplicationRouteLocator implements RefreshableRouteLocator {
 	private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationRouteLocator.class);

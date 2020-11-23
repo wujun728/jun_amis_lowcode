@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 /**
  * string tool
  *
- * @author xuxueli 2018-05-02 20:43:25
+ * @author Wujun
  */
 public class StringUtils {
 

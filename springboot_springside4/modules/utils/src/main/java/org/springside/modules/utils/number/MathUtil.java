@@ -12,7 +12,7 @@ import com.google.common.math.LongMath;
  * 
  * 2. 其他函数如最大公约数, 乘方，开方，安全的取模，可控制取整方向的相除等。
  * 
- * @author calvin
+ * @author Wujun
  *
  */
 public class MathUtil {

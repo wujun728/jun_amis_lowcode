@@ -20,7 +20,7 @@ import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.util.Bytes;
 
 /**
- * @author emeroad
+ * @author Wujun
  */
 public final class HBaseTables {
 

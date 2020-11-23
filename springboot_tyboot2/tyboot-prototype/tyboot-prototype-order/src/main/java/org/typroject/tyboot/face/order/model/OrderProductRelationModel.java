@@ -9,7 +9,7 @@ import org.typroject.tyboot.core.rdbms.model.BaseModel;
  * 订单产品关系表 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

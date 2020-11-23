@@ -5,7 +5,7 @@ import com.xncoding.trans.modules.common.anno.TableName;
 /**
  * BscCanton
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/10
  */

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 用户session信息
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/11/2421:31
  */

@@ -8,7 +8,7 @@ import org.typroject.tyboot.face.order.orm.entity.OrderHistory;
   * 订单归档表 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 public interface OrderHistoryMapper extends BaseMapper<OrderHistory> {

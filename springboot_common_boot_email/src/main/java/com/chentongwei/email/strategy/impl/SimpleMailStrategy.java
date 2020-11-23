@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Description: 简单文本发送邮件
  *
- * @author TongWei.Chen 2018-06-15 16:46:50
+ * @author Wujun
  * @Project common-boot-email
  */
 @Component

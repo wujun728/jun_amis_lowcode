@@ -33,7 +33,7 @@ import org.springframework.web.servlet.resource.ResourceResolverChain;
  * {@link ResourceResolver} that resolves all resources for the given pattern and delegates them to
  * the chain.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ResourcePatternResolvingResourceResolver extends AbstractResourceResolver {
 	private final ResourcePatternResolver resourcePatternResolver;

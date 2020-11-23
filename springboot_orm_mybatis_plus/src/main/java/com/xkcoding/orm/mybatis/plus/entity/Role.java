@@ -13,7 +13,7 @@ import java.io.Serializable;
  * 角色实体类
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/14 14:04
  */
 @Data

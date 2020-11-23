@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * JThink@JThink
  *
- * @author JThink
+ * @author Wujun
  * @version 0.0.1
  * @desc dubbo auto configuration
  * @date 2016-12-15 15:08:57

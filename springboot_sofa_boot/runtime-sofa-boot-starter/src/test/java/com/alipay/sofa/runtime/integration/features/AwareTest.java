@@ -35,7 +35,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 @Component

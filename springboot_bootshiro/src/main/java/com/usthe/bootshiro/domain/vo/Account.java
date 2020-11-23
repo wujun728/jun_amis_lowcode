@@ -3,7 +3,7 @@ package com.usthe.bootshiro.domain.vo;
 import java.io.Serializable;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 账户
  * @Date 16:25 2018/2/27
  */

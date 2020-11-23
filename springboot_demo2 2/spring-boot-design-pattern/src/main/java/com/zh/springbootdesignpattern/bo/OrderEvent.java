@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationEvent;
 
 /**
  * 订单事件类
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/18
  */
 @Data

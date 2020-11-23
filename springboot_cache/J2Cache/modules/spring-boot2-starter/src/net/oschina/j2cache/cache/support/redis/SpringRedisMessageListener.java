@@ -11,7 +11,7 @@ import net.oschina.j2cache.util.SerializationUtils;
 
 /**
  * spring redis 订阅消息监听
- * @author zhangsaizz
+ * @author Wujun
  *
  */
 public class SpringRedisMessageListener implements MessageListener{

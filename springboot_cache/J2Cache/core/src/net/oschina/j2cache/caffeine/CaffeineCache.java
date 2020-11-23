@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * Caffeine cache
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class CaffeineCache implements Level1Cache {
 

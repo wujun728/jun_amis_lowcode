@@ -20,8 +20,8 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author qilong.zql
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class NamedThreadFactory implements ThreadFactory {

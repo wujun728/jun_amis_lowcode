@@ -22,7 +22,7 @@ import org.junit.runners.JUnit4;
 import org.springframework.core.annotation.AnnotationUtils;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class DelegateToRunnerTest {

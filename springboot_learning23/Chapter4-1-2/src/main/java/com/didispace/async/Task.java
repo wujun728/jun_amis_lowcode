@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.Future;
 
 /**
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @date 16/5/16 下午12:58.
  * @blog http://blog.didispace.com

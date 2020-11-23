@@ -12,7 +12,7 @@ import java.util.List;
  * 声明自己的实现.
  * 参见 {@link ClientRegistrationService}
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午1:39
  */
 public interface SysClientDetailsService extends ClientDetailsService {

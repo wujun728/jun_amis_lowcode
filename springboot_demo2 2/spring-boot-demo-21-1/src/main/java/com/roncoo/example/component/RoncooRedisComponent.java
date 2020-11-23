@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Component;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @Component
 public class RoncooRedisComponent {

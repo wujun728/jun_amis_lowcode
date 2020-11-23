@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
 /**
  * Log4jRestLoggerFactory Tester.
  *
- * @author <guanchao.ygc>
+ * @author Wujun
  * @version 1.0
  * @since <pre>一月 05, 2018</pre>
  */

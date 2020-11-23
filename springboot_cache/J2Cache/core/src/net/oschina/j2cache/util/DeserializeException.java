@@ -17,7 +17,7 @@ package net.oschina.j2cache.util;
 
 /**
  * 反序列化的对象兼容异常
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class DeserializeException extends RuntimeException {
 

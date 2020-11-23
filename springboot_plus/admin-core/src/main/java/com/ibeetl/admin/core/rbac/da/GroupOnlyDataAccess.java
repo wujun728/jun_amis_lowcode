@@ -15,7 +15,7 @@ import com.ibeetl.admin.core.rbac.tree.OrgItem;
 import com.ibeetl.admin.core.service.CorePlatformService;
 /**
  * 集团公司所有，但不包含集团下的公司,仅仅集团职能部门
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Component

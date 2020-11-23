@@ -17,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.roncoo.jui.common.entity.RcReport;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 public final class ReportExcelUtil {
 	private ReportExcelUtil() {

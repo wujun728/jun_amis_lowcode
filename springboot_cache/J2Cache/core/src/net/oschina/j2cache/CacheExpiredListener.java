@@ -18,7 +18,7 @@ package net.oschina.j2cache;
 /**
  * When cached data expired in ehcache, this listener will be invoked.
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public interface CacheExpiredListener {
 

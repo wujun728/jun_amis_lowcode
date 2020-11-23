@@ -20,7 +20,7 @@ import java.sql.SQLException;
 /**
  * 2015/11/16
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class UserRowMapper implements RowMapper<User> {
 

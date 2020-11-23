@@ -3,7 +3,7 @@
 * <p>Description: </p>  
 * <p>Copyright: Copyright (c) 2018</p>  
 * <p>Company: www.bluemoon.com</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */  
 package cn.com.bluemoon.service.impl;
@@ -25,7 +25,7 @@ import cn.com.bluemoon.service.ISeckillService;
 /**  
 * <p>Title: SeckillServiceImpl</p>  
 * <p>Description: </p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */
 @Service

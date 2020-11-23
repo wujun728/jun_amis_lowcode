@@ -16,7 +16,7 @@ import java.util.Objects;
  * 提供文件的保存，获取，删除等与文件管理相关的方法.
  * 为了实现统一的文件处理方案，所有要交由系统保存的文件均通过此方式处理.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class FileManager {
 

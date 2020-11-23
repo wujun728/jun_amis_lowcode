@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 /**
- * @author neo
+ * @author Wujun
  */
 @Configuration
 @EnableMongoRepositories(basePackages = "com.neo.model.repository.primary",

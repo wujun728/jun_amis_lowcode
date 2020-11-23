@@ -11,7 +11,7 @@ import com.ibeetl.admin.core.rbac.DataAccessResullt;
 import com.ibeetl.admin.core.service.CorePlatformService;
 /**
  * 只查看自己
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Component

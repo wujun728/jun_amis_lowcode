@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * 实现只读的 Redis 缓存管理，相当于只从 Redis 读数据，不往 Redis 写数据
  *
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class ReadonlyRedisCacheProvider extends RedisCacheProvider {
 

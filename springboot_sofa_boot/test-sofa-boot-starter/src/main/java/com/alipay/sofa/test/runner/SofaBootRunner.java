@@ -19,7 +19,7 @@ package com.alipay.sofa.test.runner;
 /**
  * Corresponding to {@linkplain org.springframework.test.context.junit4.SpringRunner}
  *
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class SofaBootRunner extends SofaJUnit4Runner {

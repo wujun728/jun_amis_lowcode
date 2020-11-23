@@ -23,7 +23,7 @@ import java.util.Properties;
 
 /**
  * J2Cache configurations
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class J2CacheConfig {
 

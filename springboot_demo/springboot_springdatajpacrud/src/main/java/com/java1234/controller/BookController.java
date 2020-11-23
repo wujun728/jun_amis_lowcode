@@ -23,7 +23,7 @@ import com.java1234.entity.Book;
 
 /**
  * 图书控制器
- * @author Administrator
+ * @author Wujun
  *
  */
 @Controller

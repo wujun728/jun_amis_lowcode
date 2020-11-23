@@ -9,7 +9,7 @@ import org.typroject.tyboot.core.rdbms.model.BaseModel;
  * 用户反馈 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-12-01
  */
 @EqualsAndHashCode(callSuper = true)

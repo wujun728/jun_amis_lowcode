@@ -14,7 +14,7 @@ import java.lang.annotation.*;
 /**
  * 微信消息控制器
  *
- * @author L.cm
+ * @author Wujun
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

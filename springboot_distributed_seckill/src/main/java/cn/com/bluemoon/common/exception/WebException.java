@@ -3,7 +3,7 @@ package cn.com.bluemoon.common.exception;
 /**
  * 封装异常
  *
- * @author Guoqing
+ * @author Wujun
  * @Date 2018/06/28 下午10:32
  */
 public class WebException extends RuntimeException {

@@ -35,7 +35,7 @@ import static com.alipay.sofa.isle.constants.SofaModuleFrameworkConstants.REQUIR
 import static org.junit.Assert.*;
 
 /**
- * @author xuanbei 18/5/8
+ * @author Wujun
  */
 public class ApplicationRuntimeModelTest {
     @Test

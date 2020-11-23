@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * class info
  *
- * @author xuxueli 2018-05-02 20:02:34
+ * @author Wujun
  */
 public class ClassInfo {
 

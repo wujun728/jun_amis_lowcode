@@ -28,7 +28,7 @@ import org.springframework.beans.factory.BeanFactoryAware;
 /**
  * 分布式锁aop通知
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 public class LockAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {

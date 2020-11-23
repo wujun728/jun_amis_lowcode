@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author xuanbei 18/3/9
+ * @author Wujun
  */
 public class ClientFactoryImpl implements ClientFactoryInternal {
 

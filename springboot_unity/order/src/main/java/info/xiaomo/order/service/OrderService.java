@@ -1,7 +1,7 @@
 package info.xiaomo.order.service;
 
 /**
- * @author xiaomo
+ * @author Wujun
  */
 public interface OrderService {
 

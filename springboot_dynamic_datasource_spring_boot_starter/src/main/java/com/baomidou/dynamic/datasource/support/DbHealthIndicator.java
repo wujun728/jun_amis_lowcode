@@ -36,7 +36,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 数据库健康状况指标
  *
- * @author hubin
+ * @author Wujun
  */
 public class DbHealthIndicator extends AbstractHealthIndicator {
 

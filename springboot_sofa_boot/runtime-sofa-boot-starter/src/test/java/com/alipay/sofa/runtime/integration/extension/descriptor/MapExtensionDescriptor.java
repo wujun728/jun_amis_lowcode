@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("testMap")

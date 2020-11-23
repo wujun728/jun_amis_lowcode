@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * 文件对象
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class FileIndex {
 

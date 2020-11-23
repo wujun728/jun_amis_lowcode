@@ -12,9 +12,9 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
 /**
- * @author Hans Westerbeek
- * @author Eddú Meléndez
- * @author Kazuki Shimizu
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  */
 public class SpringBootVFS extends VFS {
 

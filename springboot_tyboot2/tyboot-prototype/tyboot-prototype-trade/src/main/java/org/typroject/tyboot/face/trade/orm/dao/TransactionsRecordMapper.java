@@ -8,7 +8,7 @@ import org.typroject.tyboot.face.trade.orm.entity.TransactionsRecord;
   * 交易记录表 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-08-31
  */
 public interface TransactionsRecordMapper extends BaseMapper<TransactionsRecord> {

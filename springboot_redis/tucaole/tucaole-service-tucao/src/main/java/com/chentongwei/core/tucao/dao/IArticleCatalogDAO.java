@@ -6,7 +6,7 @@ import com.chentongwei.core.tucao.entity.vo.catalog.ArticleCatalogListVO;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-9-28 16:02:13
+ * @author Wujun
  * @Project tucaole
  * @Description: 分类DAO
  *

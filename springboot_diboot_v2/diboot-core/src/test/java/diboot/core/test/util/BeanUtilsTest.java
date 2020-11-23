@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * BeanUtils测试
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/06/02
  */

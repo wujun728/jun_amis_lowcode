@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * 登录认证接口参数
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/9
  */

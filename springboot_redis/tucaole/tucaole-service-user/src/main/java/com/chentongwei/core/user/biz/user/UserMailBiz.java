@@ -31,7 +31,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TongWei.Chen 2017-12-14 15:00:33
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户模块的emailBiz
  */

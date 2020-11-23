@@ -26,7 +26,7 @@ import com.alipay.sofa.infra.base.AbstractTestBase;
 import com.alipay.sofa.infra.base.SofaBootWebSpringBootApplication;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)

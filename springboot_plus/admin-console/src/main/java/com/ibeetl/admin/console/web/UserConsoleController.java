@@ -48,7 +48,7 @@ import com.ibeetl.admin.core.web.JsonResult;
 /**
  * 用户管理接口
  * 
- * @author xiandafu
+ * @author Wujun
  */
 @Controller
 public class UserConsoleController {

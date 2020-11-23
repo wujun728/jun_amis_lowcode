@@ -12,7 +12,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnProperty(prefix = CacheConstants.ASPECT_CACHE_PREFIX, name = "provider", havingValue = CacheConstants.CACHE_REDIS_NAME)

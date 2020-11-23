@@ -7,7 +7,7 @@ import java.nio.charset.StandardCharsets;
  * 
  * 尽量使用Charsets.UTF8而不是"UTF-8"，减少JDK里的Charset查找消耗.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class Charsets {
 	public static final String UTF_8_NAME = "UTF-8";

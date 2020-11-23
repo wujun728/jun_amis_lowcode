@@ -19,7 +19,7 @@ package com.alipay.sofa.isle.stage;
 /**
  * {@link PipelineStage} is a stage of a {@link PipelineContext}.
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public interface PipelineStage {
     /**

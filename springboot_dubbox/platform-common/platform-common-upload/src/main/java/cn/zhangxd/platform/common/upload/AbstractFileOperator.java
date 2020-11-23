@@ -7,7 +7,7 @@ import cn.zhangxd.platform.common.utils.StringHelper;
 /**
  * 文件处理器.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class AbstractFileOperator implements FileOperator {
 

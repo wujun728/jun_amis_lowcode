@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Slf4j

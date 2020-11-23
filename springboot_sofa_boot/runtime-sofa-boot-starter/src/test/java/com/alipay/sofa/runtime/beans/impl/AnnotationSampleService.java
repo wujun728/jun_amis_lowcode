@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.beans.service.SampleService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author qilong.zql 18/6/28-上午10:08
+ * @author Wujun
  */
 @SofaService
 @Component

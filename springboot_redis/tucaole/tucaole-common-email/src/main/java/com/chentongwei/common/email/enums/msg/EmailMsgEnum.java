@@ -1,7 +1,7 @@
 package com.chentongwei.common.email.enums.msg;
 
 /**
- * @author TongWei.Chen 2017-09-19 14:50:03
+ * @author Wujun
  * @Project tucaole
  * @Description: 字符串常量
  */

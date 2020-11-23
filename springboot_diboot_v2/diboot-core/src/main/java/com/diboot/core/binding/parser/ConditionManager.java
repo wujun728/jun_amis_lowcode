@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 条件表达式的管理器
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/4/1
  */

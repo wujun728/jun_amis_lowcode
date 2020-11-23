@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  *  使用@ImportResource 测试从指定spring的xml文件中配置属性bean然后加入ioc容器中,这个注解标注在main方法上
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 public class CollegeStudent {

@@ -3,7 +3,7 @@ package com.gosalelab.constants;
 /**
  * enum of cache operation type
  *
- * @author silwind
+ * @author Wujun
  */
 public enum CacheOpType {
     /**

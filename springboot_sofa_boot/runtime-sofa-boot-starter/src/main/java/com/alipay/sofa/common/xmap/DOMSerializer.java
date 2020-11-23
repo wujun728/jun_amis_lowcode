@@ -28,9 +28,9 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 /**
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public final class DOMSerializer {

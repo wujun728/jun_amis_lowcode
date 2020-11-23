@@ -3,7 +3,7 @@ package io.gitee.tooleek.lock.spring.boot.enumeration;
 /**
  * 锁类型
  *
- * @author TanRq
+ * @author Wujun
  */
 public enum LockType {
     /**

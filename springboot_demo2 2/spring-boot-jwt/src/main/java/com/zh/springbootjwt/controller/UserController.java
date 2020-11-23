@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/3
  */
 @RestController

@@ -11,7 +11,7 @@ import java.util.Date;
  * model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 @EqualsAndHashCode(callSuper = true)

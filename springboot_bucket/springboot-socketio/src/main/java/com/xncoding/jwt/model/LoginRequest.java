@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * LoginRequest
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/18
  */

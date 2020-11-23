@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.api.client.ClientFactory;
 /**
  * SOFA Runtime Context
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class SofaRuntimeContext {
     /** component manager */

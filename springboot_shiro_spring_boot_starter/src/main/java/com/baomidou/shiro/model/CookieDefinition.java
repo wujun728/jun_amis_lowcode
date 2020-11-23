@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * cookie配置参数
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 @AllArgsConstructor

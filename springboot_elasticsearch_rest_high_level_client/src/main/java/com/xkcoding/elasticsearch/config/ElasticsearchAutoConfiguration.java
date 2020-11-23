@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * ElasticsearchAutoConfiguration
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/9/15 22:59
  */
@@ -63,7 +63,7 @@ public class ElasticsearchAutoConfiguration {
      * @param builder                 RestClientBuilder
      * @param elasticsearchProperties elasticsearch default properties
      * @return {@link org.elasticsearch.client.RestHighLevelClient}
-     * @author fxbin
+     * @author Wujun
      */
     private static RestHighLevelClient getRestHighLevelClient(RestClientBuilder builder, ElasticsearchProperties elasticsearchProperties) {
 

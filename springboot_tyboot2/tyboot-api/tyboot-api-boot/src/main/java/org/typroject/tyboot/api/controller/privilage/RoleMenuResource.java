@@ -20,7 +20,7 @@ import java.util.List;
  * 角色与菜单关系表 前端控制器
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 

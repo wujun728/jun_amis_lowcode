@@ -17,7 +17,7 @@ import org.springframework.web.util.HtmlUtils;
 /**
  * 防止XSS攻击的过滤器
  * 
- * @author wujing
+ * @author Wujun
  */
 @WebFilter(filterName = "XSSFilter", urlPatterns = "/admin/**")
 public class XSSFilter implements Filter {
@@ -41,7 +41,7 @@ public class XSSFilter implements Filter {
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
 

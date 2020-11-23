@@ -3,7 +3,7 @@ package com.chentongwei.common.util;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author TongWei.Chen 2017-7-7 11:10:53
+ * @author Wujun
  * @Project tucaole
  * @Description: IP工具类
  */

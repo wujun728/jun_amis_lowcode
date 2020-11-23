@@ -21,7 +21,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TongWei.Chen 2017-9-17 13:02:44
+ * @author Wujun
  * @Project tucaole
  * @Description: 使用Get的方式返回challenge和capthca_id,此方式以实现前后端完全分离的开发模式
  */

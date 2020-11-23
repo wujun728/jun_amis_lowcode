@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 菜单管理
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2019/1/19 19:15
  */
@@ -51,7 +51,7 @@ public class MenuService extends AdminBaseService {
 
     /**
      * 获取顶级分类菜单
-     * @author zengjintao
+     * @author Wujun
      * @version 1.0
      * @create 2018/11/8 10:24
      **/
@@ -69,7 +69,7 @@ public class MenuService extends AdminBaseService {
 
     /**
      * 获取子类菜单
-     * @author zengjintao
+     * @author Wujun
      * @version 1.0
      * @create 2018/11/7 17:17
      **/

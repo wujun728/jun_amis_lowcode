@@ -14,7 +14,7 @@ import com.roncoo.example.bean.RoncooUserLog;
 import com.roncoo.example.cache.RoncooUserLogCache;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @RestController
 @RequestMapping(value = "/rest", method = RequestMethod.POST)

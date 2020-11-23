@@ -30,7 +30,7 @@ import org.springframework.cloud.netflix.zuul.filters.ZuulProperties.ZuulRoute;
 /**
  * RouteLocator for Turbine.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class TurbineRouteLocator extends SimpleRouteLocator {
 	private final Map<String, ZuulRoute> routes;

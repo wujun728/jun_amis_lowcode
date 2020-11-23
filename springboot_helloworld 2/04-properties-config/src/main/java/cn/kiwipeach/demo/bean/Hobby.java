@@ -18,7 +18,7 @@ package cn.kiwipeach.demo.bean;
 /**
  * 兴趣爱好
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 public class Hobby {

@@ -7,7 +7,7 @@ import java.util.Date;
  * Create Date: 2017/10/31
  * Description: 员工实体类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class Employ {
     /**

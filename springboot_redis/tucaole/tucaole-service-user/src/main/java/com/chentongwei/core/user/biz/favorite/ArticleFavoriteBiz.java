@@ -25,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-17 14:22:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 收藏夹Biz
  **/

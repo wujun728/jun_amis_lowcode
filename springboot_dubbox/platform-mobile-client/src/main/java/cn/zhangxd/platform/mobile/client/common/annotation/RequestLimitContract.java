@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * The type Request limit contract.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Aspect
 @Component

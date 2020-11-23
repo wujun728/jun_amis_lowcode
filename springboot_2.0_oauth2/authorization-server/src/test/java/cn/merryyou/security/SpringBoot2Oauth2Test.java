@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * Created on 2018/4/28.
  *
- * @author zlf
+ * @author Wujun
  * @since 1.0
  */
 @RunWith(SpringRunner.class)

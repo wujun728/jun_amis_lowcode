@@ -21,7 +21,7 @@ import lombok.Data;
 /**
  * Druid监控配置
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class DruidStatConfig {

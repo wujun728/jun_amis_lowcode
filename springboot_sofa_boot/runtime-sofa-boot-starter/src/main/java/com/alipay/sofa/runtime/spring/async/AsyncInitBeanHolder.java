@@ -21,8 +21,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * @author qilong.zql
- * @author xuanbei
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncInitBeanHolder {

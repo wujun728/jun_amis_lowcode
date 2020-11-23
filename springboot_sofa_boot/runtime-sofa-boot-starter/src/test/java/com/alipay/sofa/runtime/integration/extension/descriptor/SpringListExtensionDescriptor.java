@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("testSpringList")

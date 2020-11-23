@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * NIO客户端
  *
- * @author yangtao__anxpp.com
+ * @author Wujun
  * @version 1.0
  */
 public class ClientHandle implements Runnable {

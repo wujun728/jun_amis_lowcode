@@ -21,7 +21,7 @@ import lombok.Data;
 /**
  * Druid防火墙配置
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class DruidWallConfig {

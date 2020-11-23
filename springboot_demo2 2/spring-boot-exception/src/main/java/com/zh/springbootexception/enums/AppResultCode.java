@@ -2,7 +2,7 @@ package com.zh.springbootexception.enums;
 
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/5
  */
 public enum AppResultCode {

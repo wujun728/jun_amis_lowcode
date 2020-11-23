@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * 调用 Restful 接口 Util
  *
- * @author sunjianlei
+ * @author Wujun
  */
 public class RestUtil {
 

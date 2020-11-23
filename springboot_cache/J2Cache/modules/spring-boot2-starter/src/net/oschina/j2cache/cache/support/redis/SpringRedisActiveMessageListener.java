@@ -10,7 +10,7 @@ import net.oschina.j2cache.cluster.ClusterPolicy;
 /**
  * 监听二缓key失效，主动清除本地缓存
  * 
- * @author zhangsaizz
+ * @author Wujun
  *
  */
 public class SpringRedisActiveMessageListener implements MessageListener {

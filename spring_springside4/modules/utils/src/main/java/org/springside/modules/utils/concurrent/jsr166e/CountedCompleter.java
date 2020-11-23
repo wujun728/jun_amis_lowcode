@@ -380,7 +380,7 @@ package org.springside.modules.utils.concurrent.jsr166e;
  * }</pre>
  *
  * @since 1.8
- * @author Doug Lea
+ * @author Wujun
  */
 public abstract class CountedCompleter<T> extends ForkJoinTask<T> {
     private static final long serialVersionUID = 5232453752276485070L;

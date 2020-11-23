@@ -30,7 +30,7 @@ import java.util.Map;
  * 用户虚拟账户表，记录所有公网用户的虚拟账户，account_no字段预留，用以多账户支持 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 @Component

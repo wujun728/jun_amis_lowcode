@@ -13,7 +13,7 @@ import org.springframework.beans.BeanUtils;
 /**
  * 队列属性复制
  * 
- * @author wujing
+ * @author Wujun
  * @param <T>
  */
 public final class ArrayListUtil<T extends Serializable> {

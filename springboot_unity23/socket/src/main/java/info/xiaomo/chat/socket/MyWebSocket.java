@@ -22,7 +22,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/houko
  * email: xiaomo@xiaomo.info
  * <p>

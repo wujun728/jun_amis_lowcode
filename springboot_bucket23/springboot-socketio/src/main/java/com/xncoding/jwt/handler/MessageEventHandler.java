@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 /**
  * 消息事件处理器
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/19
  */

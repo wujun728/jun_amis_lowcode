@@ -4,7 +4,7 @@ import cn.springboot.model.BaseEntity;
 
 /** 
  * @Description 角色与菜单关系对象
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:11:20 AM  
  */
 public class RolePermission implements BaseEntity<String> {

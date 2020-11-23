@@ -12,7 +12,7 @@ import com.ibeetl.admin.core.conf.MVCConf;
 /**
  *  保留用户会话，以方便在业务代码任何地方调用
  *  {@link MVCConf}
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Component

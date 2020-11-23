@@ -37,7 +37,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/7/15 15:24

@@ -12,7 +12,7 @@ import com.jfinal.core.Controller;
 
 /**
  * register控制器
- * @author netbuffer
+ * @author Wujun
  *
  */
 public class RegisterController extends Controller {

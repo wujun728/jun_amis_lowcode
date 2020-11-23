@@ -25,7 +25,7 @@ import java.util.Properties;
 
 /**
  * 缓存集群策略接口
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public interface ClusterPolicy {
 

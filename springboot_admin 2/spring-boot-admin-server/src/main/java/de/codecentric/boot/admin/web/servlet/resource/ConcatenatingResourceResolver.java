@@ -37,7 +37,7 @@ import de.codecentric.boot.admin.io.resource.InMemoryFileResource;
 /**
  * {@link ResourceResolver} that returns a resource with the concatenated resources given.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ConcatenatingResourceResolver extends AbstractResourceResolver {
 	private final byte[] delimiter;

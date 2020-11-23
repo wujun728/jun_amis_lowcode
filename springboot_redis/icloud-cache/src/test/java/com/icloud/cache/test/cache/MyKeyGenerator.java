@@ -7,7 +7,7 @@ import com.icloud.cache.parser.IUserKeyGenerator;
 /**
  * ${DESCRIPTION}
  *
- * @author Li.Shangzhi
+ * @author Wujun
  * @create 2018-05-22 14:05
  */
 public class MyKeyGenerator extends IKeyGenerator {

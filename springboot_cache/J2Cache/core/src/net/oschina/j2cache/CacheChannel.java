@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 /**
  * Cache Channel, the J2Cache methods explored to developers
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public abstract class CacheChannel implements Closeable , AutoCloseable {
 

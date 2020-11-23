@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 /** 
  * @Description 安全过滤配置管理类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:45:22 PM  
  */
 @SuppressWarnings("all")

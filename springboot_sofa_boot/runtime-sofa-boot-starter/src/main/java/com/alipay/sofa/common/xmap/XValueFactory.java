@@ -31,9 +31,9 @@ import java.util.Map;
  * To register a new factory for a given XMap instance use the method
  * {@link com.alipay.sofa.common.xmap.XMap#setValueFactory(Class, com.alipay.sofa.common.xmap.XValueFactory)}
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public abstract class XValueFactory {

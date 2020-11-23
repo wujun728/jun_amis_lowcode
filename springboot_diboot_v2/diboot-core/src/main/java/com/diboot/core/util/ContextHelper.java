@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Spring上下文帮助类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 2.0
  * @date 2019/01/01
  */

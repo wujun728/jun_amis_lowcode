@@ -34,7 +34,7 @@ import java.util.Properties;
 
 /**
  * 使用 RocketMQ 实现集群内节点的数据通知（用于对数据一致性要求特别严格的场景）
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class RocketMQClusterPolicy implements ClusterPolicy, MessageListenerConcurrently {
 

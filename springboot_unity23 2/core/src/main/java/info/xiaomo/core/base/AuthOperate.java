@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.Date;
 
 /**
- * @author : xiaomo (https://xiaomo.info) (https://github.com/houko)
+ * @author Wujun
  * @version : 2017/1/13 9:51
  */
 public interface AuthOperate {

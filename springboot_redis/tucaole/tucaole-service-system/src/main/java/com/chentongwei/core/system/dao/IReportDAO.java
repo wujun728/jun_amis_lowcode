@@ -4,7 +4,7 @@ import com.chentongwei.core.system.entity.io.report.ReportIO;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @author TongWei.Chen 2017-12-16 17:05:21
+ * @author Wujun
  * @Project tucaole
  * @Description: 吐槽了举报DAO
  */

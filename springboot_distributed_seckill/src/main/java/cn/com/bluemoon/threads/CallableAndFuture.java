@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 /**
  * 执行多个带返回值的任务，并取得多个返回值
  * 异步非阻塞获取并行任务执行结果
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月9日 下午3:56:46
  *
  */

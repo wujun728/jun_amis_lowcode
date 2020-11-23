@@ -27,7 +27,7 @@ import java.util.List;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2019/3/21 11:57
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class GetAllIndices {

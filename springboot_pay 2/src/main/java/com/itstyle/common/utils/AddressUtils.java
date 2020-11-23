@@ -200,7 +200,7 @@ public class AddressUtils {
 	}
 	/**
 	 * 获取IP地址
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @return  String
 	 * @Date	2017年7月31日

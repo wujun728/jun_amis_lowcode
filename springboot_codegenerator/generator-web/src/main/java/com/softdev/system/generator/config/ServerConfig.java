@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 
 /**
  * @Description 通过实现ApplicationListener接口动态获取tomcat启动端口和访问路径，通过InetAddress类获取主机的ip地址，最后控制台打印项目访问地址
- * @Author Gao Hang Hang
+ * @author Wujun
  * @Date 2019-12-27 14:37
  **/
 @Component

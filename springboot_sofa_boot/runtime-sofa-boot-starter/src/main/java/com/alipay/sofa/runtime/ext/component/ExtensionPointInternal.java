@@ -21,8 +21,8 @@ import com.alipay.sofa.service.api.component.ExtensionPoint;
 /**
  * SOFA Extension Point Internal Object
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public interface ExtensionPointInternal extends ExtensionPoint {

@@ -3,7 +3,7 @@ package com.roncoo.example.cache;
 import com.roncoo.example.bean.RoncooUserLog;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 public interface RoncooUserLogCache {
 

@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/5/29
  */
 @Data

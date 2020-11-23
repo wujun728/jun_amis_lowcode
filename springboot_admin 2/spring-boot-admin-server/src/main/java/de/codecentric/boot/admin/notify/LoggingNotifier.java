@@ -24,7 +24,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Notifier that just writes to a logger.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class LoggingNotifier extends AbstractStatusChangeNotifier {
 	private static final Logger LOGGER = LoggerFactory.getLogger(LoggingNotifier.class);

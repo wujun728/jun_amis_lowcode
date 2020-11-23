@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  *
- * @author wujing
+ * @author Wujun
  */
 @Component
 public class RoncooAmqpComponent {

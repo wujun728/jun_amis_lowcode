@@ -135,7 +135,7 @@ public abstract class AbstractMybatisQuery implements RepositoryQuery {
 		 * Depending on the provided {@link Tuple} implementation it might return the same
 		 * value for various keys of which only one will appear in the key/entry set.
 		 *
-		 * @author Jens Schauder
+		 * @author Wujun
 		 */
 		private static class TupleBackedMap implements Map<String, Object> {
 

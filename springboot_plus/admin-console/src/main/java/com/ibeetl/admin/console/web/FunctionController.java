@@ -36,7 +36,7 @@ import com.ibeetl.admin.core.web.dto.FunctionNodeView;
 /**
  * 描述:  功能点管理
  *
- * @author : lijiazhi
+ * @author Wujun
  */
 @Controller
 public class FunctionController {

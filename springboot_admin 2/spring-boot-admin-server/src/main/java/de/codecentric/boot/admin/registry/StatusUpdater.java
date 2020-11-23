@@ -36,7 +36,7 @@ import de.codecentric.boot.admin.web.client.ApplicationOperations;
  * The StatusUpdater is responsible for updating the status of all or a single application querying
  * the healthUrl.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class StatusUpdater implements ApplicationEventPublisherAware {
 	private static final Logger LOGGER = LoggerFactory.getLogger(StatusUpdater.class);

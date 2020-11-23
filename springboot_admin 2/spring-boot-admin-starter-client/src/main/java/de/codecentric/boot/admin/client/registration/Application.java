@@ -24,7 +24,7 @@ import org.springframework.util.Assert;
 /**
  * Contains all informations which is used when this application is registered.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class Application {
 	private final String name;

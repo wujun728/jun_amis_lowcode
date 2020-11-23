@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
 * 用户角色关联Mapper
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

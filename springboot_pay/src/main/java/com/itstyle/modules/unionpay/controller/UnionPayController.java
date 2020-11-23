@@ -63,7 +63,7 @@ public class UnionPayController {
      * 我只是幻想自己是地主家的少爷，家有良田万顷，
      * 终日不学无术，没事领着一群狗奴才上街去调戏一下良家少女。
      * 然后这个方法的基本作用就是 银联支付回调 通知我们支付是否成功。
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @param response
 	 * @throws Exception  void
@@ -106,7 +106,7 @@ public class UnionPayController {
 	}
 	/**
 	 * 获取请求参数中所有的信息
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @return  Map<String,String>
 	 * @Date	2017年8月2日

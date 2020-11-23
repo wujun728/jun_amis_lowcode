@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * 锁配置文件
  *
- * @author TanRq
+ * @author Wujun
  */
 @Component
 @ConfigurationProperties(prefix = "lock-config")

@@ -24,7 +24,7 @@ import java.util.Map;
  * 多媒体信息关联 前端控制器
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 

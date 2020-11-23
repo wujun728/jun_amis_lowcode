@@ -20,7 +20,7 @@ package com.alipay.sofa.boot.gradle.plugin;
  * A marker class for {@link org.springframework.boot.gradle.plugin.SofaBootPlugin}
  * to get SOFABoot version.
  *
- * @author khotyn
+ * @author Wujun
  */
 public class Marker {
 }

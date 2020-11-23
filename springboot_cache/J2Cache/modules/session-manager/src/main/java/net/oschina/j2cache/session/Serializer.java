@@ -20,7 +20,7 @@ import java.io.*;
 /**
  * 对象序列化，为了确保兼容性，使用标准的 Java 序列化方法
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class Serializer {
 

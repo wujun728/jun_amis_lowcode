@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * 产品价格表,通用的价格表,包括了书籍和餐品的价格 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-02-01
  */
 @Data

@@ -20,7 +20,7 @@ import com.alipay.sofa.runtime.api.annotation.SofaService;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.0
  */
 @SofaService(uniqueId = "${mix-xml-annotation-unique-id}")

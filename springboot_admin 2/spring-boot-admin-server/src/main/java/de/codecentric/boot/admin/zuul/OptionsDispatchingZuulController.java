@@ -27,7 +27,7 @@ import org.springframework.web.util.WebUtils;
  * This Controller behaves like the original ZuulController except it forwads also the OPTIONS
  * request to Servlet instead of handling the request itself.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class OptionsDispatchingZuulController extends ZuulController {
 

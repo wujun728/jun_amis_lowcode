@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean;
 import org.springframework.data.repository.core.support.RepositoryFactorySupport;    
 /**
  * 持久化操作公共接口抽象工厂
- * @author HXM
+ * @author Wujun
  *
  * @param <T>
  * @param <ID>

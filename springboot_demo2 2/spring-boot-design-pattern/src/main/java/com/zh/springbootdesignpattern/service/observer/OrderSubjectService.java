@@ -1,7 +1,7 @@
 package com.zh.springbootdesignpattern.service.observer;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/18
  */
 public interface OrderSubjectService {

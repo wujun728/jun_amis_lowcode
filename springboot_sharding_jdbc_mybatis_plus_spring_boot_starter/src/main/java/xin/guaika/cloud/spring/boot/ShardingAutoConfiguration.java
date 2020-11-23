@@ -27,7 +27,7 @@ import java.util.Properties;
 /**
  * Spring boot sharding and master-slave configuration.
  *
- * @author caohao
+ * @author Wujun
  */
 @Configuration
 @EnableConfigurationProperties({SpringBootShardingRuleConfigurationProperties.class, SpringBootMasterSlaveRuleConfigurationProperties.class})

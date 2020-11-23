@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * Security User Detail Service
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

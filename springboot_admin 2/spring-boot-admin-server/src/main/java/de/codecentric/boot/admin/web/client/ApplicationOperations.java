@@ -34,7 +34,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 /**
  * Handles all rest operations invoked on a registered application.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ApplicationOperations {
     private static final Logger LOGGER = LoggerFactory.getLogger(ApplicationOperations.class);

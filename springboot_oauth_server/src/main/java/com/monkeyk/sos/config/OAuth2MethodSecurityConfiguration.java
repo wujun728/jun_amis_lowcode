@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.provider.expression.OAuth2MethodSecur
 /**
  * 2018/3/22
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true, proxyTargetClass = true)

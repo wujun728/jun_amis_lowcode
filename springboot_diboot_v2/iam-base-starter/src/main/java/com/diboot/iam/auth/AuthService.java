@@ -8,7 +8,7 @@ import org.apache.shiro.authc.AuthenticationException;
 
 /**
  * 账号认证的service
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/25
  */

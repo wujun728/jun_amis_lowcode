@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 数据分页组件
  * 
- * @author wujing
+ * @author Wujun
  */
 public class Page<T> implements Serializable {
 	private static final long serialVersionUID = -5764853545343945831L;

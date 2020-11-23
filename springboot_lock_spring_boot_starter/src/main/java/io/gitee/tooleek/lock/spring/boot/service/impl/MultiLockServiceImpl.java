@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * 联锁操作服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public class MultiLockServiceImpl implements LockService {

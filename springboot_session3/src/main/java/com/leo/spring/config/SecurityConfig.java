@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * SecurityConfig
  *
- * @author lmhy
+ * @author Wujun
  * @date 2017-1-11
  */
 @Configuration

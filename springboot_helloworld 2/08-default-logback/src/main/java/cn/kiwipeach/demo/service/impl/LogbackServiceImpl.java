@@ -23,7 +23,7 @@ import org.springframework.stereotype.Service;
 /**
  * 日志服务实现类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/05
  */
 @Service

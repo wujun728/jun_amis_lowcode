@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Yahoo汇率服务
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 public class YahooRateService {

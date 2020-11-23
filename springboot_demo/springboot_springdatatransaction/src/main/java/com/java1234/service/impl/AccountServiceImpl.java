@@ -11,7 +11,7 @@ import com.java1234.service.AccountService;
 
 /**
  * 帐号Service实现类
- * @author Administrator
+ * @author Wujun
  *
  */
 @Service("accountService")

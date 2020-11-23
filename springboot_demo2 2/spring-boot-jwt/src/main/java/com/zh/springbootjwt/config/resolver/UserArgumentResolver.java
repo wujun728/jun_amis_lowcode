@@ -16,7 +16,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 /**
  * 参数解析器
  * 将当前登陆用户的信息注入到参数里
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/25
  */
 @Component

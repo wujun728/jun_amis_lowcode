@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * ExampleAutoConfigure
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/28
  */

@@ -82,7 +82,7 @@ public class WeixinMobilePayController {
     }
 	/**
 	 * 预下单(对于已经产生的订单)
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @param response
 	 * @return
@@ -156,7 +156,7 @@ public class WeixinMobilePayController {
 	}
 	/**
 	 * 手机支付完成回调
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @param response
 	 * @Date	2017年7月31日

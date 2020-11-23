@@ -7,7 +7,7 @@ import org.apache.shiro.subject.SubjectContext;
 import org.apache.shiro.web.mgt.DefaultWebSubjectFactory;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 对于无状态的TOKEN不创建session 这里都不使用session
  * @Date 21:52 2018/3/3
  */

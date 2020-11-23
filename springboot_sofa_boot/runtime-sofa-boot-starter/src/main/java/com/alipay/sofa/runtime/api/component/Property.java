@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.api.component;
 import java.util.List;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class Property {
 

@@ -1,7 +1,7 @@
 package com.demo.weixin.enums;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description
  * @date 2017/7/31
  * @since 1.0

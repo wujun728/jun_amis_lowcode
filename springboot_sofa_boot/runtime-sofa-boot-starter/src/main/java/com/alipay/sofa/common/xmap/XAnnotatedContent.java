@@ -29,8 +29,8 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class XAnnotatedContent extends XAnnotatedMember {

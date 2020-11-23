@@ -26,7 +26,7 @@ import com.alipay.sofa.runtime.SofaRuntimeProperties;
 import com.alipay.sofa.runtime.spi.component.SofaRuntimeManager;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaEventHandler implements EventHandler {

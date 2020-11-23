@@ -8,7 +8,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  * md5密码加密
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2017年4月26日 下午5:19:15
  */

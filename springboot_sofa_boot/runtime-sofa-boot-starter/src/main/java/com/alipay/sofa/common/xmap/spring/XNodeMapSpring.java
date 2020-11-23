@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 
 /**
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 @XMemberAnnotation(XMemberAnnotation.NODE_MAP_SPRING)

@@ -6,7 +6,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * 用户未存在
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class UserNotExistException extends BusinessException {
 

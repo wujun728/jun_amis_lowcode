@@ -18,7 +18,7 @@ package com.baomidou.kaptcha.exception;
 import java.io.IOException;
 
 /**
- * @author TaoYu
+ * @author Wujun
  */
 public class KaptchaRenderException extends KaptchaException {
 

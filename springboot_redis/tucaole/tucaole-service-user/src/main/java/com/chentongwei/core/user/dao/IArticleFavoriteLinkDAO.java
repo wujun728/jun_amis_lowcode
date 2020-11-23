@@ -4,7 +4,7 @@ import com.chentongwei.core.user.entity.io.favorite.ArticleFavoriteLinkSaveIO;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @author TongWei.Chen 2017-12-17 17:26:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 资源收藏DAO
  **/

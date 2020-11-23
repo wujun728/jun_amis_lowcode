@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import java.util.List;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/19
  */
 public interface ProductRepository extends ElasticsearchRepository<Product,String> {

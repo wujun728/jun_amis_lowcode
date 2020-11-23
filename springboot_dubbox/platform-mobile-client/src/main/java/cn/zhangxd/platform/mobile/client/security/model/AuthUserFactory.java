@@ -5,7 +5,7 @@ import cn.zhangxd.platform.system.api.entity.TripUser;
 /**
  * The type Auth user factory.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class AuthUserFactory {
 

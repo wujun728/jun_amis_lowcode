@@ -8,7 +8,7 @@ import com.itstyle.common.model.Product;
 public interface IUnionPayService {
 	/**
 	 * 银联支付
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param product
 	 * @return  String
 	 * @Date	2017年8月2日
@@ -19,7 +19,7 @@ public interface IUnionPayService {
 	String unionPay(Product product);
 	/**
 	 * 前台回调验证
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param valideData
 	 * @param encoding
 	 * @return  String
@@ -31,7 +31,7 @@ public interface IUnionPayService {
 	String validate(Map<String, String> valideData, String encoding);
 	/**
 	 * 对账单下载
-	 * @Author  科帮网  void
+	 * @author Wujun
 	 * @Date	2017年8月2日
 	 * 更新日志
 	 * 2017年8月2日  科帮网 首次创建

@@ -30,7 +30,7 @@ import java.util.*;
 /**
  * 定时读取远程配置信息
  *
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.config
  */

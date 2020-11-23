@@ -37,7 +37,7 @@ import javax.sql.DataSource;
  * <p>
  * OAuth2 config
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Configuration
 public class OAuth2ServerConfiguration {

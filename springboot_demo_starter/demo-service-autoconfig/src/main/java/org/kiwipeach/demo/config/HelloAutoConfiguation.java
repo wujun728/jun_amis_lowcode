@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 描述：
  *
- * @author kiwipeach
+ * @author Wujun
  * @since 2.0
  */
 @Configuration

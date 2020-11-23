@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 /**
  * 分页辅助类
- * @author lance
+ * @author Wujun
  * @param <T>
  */
 public class PageInfo<T> implements Serializable {

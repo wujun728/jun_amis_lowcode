@@ -30,7 +30,7 @@ import static org.junit.Assert.assertNotNull;
 /**
  * Log4jInfrastructureHealthCheckLoggerFactory Tester.
  *
- * @author <guanchao.ygc>
+ * @author Wujun
  * @version 1.0
  * @since <pre>1月 20, 2018</pre>
  */

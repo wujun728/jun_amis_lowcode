@@ -7,7 +7,7 @@ import com.ibeetl.admin.core.annotation.Dict;
 
 /**
  * excel导出需要的模板数据
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class UserExcelExportData  {

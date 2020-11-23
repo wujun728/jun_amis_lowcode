@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  *  使用@Bean 注解把当前的bean放入到ioc容器中,这个需要结合配置类cn.kiwipeach.demo.config.MyConfiguration一起工作
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 public class GraduateStudent {

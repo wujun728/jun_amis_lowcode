@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * Web 工具类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class WebUtils {
 

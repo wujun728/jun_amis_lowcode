@@ -10,7 +10,7 @@ import org.springframework.data.repository.core.RepositoryInformation;
 import org.springframework.data.repository.core.RepositoryMetadata;
 /**
  * 持久化操作公共接口工厂
- * @author HXM
+ * @author Wujun
  *
  * @param <T>
  * @param <ID>

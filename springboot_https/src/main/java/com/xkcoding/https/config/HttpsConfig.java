@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * HTTPS 配置类
  * </p>
  *
- * @author Chen.Chao
+ * @author Wujun
  * @date Created in 2020/1/12 10:31
  */
 @Configuration

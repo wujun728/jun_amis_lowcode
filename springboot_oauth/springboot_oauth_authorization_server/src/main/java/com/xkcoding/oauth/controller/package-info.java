@@ -7,7 +7,7 @@
  * 页面跳转的控制器，这里拿出来是因为真的可以做很多事。比如登录的时候携带点什么
  * 或者退出的时候携带什么标识，都可以。
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/7 上午11:25
  * @see org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint
  */

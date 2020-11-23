@@ -4,7 +4,7 @@ import io.gitee.tooleek.lock.spring.boot.core.LockKey;
 
 /**
  * 锁服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public interface LockService {

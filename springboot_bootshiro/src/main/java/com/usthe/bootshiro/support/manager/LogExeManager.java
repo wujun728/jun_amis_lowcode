@@ -5,7 +5,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 日志操作任务运行管理器 单例
  * @Date 9:37 2018/4/22
  */

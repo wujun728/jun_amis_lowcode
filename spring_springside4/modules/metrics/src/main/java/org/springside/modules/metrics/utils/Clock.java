@@ -8,7 +8,7 @@ package org.springside.modules.metrics.utils;
 /**
  * 日期提供者，使用它而不是直接取得系统时间，方便测试。
  * 
- * @author calvin
+ * @author Wujun
  */
 public interface Clock {
 

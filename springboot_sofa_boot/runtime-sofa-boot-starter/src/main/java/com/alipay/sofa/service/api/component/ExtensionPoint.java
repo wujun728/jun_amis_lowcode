@@ -21,8 +21,8 @@ import java.util.List;
 /**
  * SOFA Extension Point Object
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public interface ExtensionPoint {

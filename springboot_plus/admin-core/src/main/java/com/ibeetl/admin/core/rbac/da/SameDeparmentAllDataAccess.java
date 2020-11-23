@@ -16,7 +16,7 @@ import com.ibeetl.admin.core.rbac.tree.OrgItem;
 import com.ibeetl.admin.core.service.CorePlatformService;
 /**
  * 同部门下所有
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Component

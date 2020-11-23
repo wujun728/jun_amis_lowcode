@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSession;
 /**
  *  用户Controller对应的功能
  *  {@link MVCConf}
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public class FunctionLocal {

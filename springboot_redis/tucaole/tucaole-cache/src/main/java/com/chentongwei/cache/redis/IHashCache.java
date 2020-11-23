@@ -3,7 +3,7 @@ package com.chentongwei.cache.redis;
 import java.util.Map;
 
 /**
- * @author TongWei.Chen 2017-5-21 14:11:55
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的Hash操作接口
  */

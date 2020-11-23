@@ -18,7 +18,7 @@ import org.springframework.social.security.SpringSocialConfigurer;
 import javax.sql.DataSource;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 关于社交的的配置
  * @date 2019/1/3 0003 10:21
  */

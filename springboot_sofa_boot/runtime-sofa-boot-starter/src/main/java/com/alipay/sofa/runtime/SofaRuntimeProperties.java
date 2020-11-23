@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.spi.component.SofaRuntimeContext;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaRuntimeProperties {

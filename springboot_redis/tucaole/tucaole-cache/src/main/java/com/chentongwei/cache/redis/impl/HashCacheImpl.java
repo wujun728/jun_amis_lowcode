@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Map;
 
 /**
- * @author TongWei.Chen 2017-5-21 14:13:38
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的Hash类型操作实现
  */

@@ -18,7 +18,7 @@ import net.oschina.j2cache.cache.support.util.SpringJ2CacheConfigUtil;
 import net.oschina.j2cache.cache.support.util.SpringUtil;
 /**
  * 启动入口
- * @author zhangsaizz
+ * @author Wujun
  *
  */
 @ConditionalOnClass(J2Cache.class)

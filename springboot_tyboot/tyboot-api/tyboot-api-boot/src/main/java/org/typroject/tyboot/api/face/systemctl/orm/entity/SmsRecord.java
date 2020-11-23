@@ -13,7 +13,7 @@ import java.util.Date;
  * 验证码发送记录
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-09-09
  */
 @EqualsAndHashCode(callSuper = true)

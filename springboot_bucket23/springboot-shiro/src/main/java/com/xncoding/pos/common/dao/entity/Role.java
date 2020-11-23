@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 角色表
  *
- * @author 熊能
+ * @author Wujun
  * @version 1.0
  * @since 2018/01/02
  */

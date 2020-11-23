@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description QQ服务
  * @date 2017/7/25
  * @since 1.0

@@ -29,7 +29,7 @@ import de.codecentric.boot.admin.model.Application;
 /**
  * Converts {@link EurekaServiceInstance}s to {@link Application}s
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class EurekaServiceInstanceConverter extends DefaultServiceInstanceConverter {
 

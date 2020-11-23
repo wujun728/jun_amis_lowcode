@@ -25,7 +25,7 @@ import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
 
 /**
- * @author Seer
+ * @author Wujun
  * @version v0.1 2015年11月06日 下午1:23 Seer Exp.
  */
 @Component("cacheClient")

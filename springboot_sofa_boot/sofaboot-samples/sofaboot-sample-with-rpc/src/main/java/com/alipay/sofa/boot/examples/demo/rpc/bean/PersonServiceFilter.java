@@ -24,7 +24,7 @@ import com.alipay.sofa.rpc.filter.FilterInvoker;
 
 /**
  *
- * @author liangen
+ * @author Wujun
  * @version $Id: Filter.java, v 0.1 2018年04月09日 下午4:17 liangen Exp $
  */
 public class PersonServiceFilter extends Filter {

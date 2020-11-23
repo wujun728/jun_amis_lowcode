@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  * 数据字典实体
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2018/12/27
  */

@@ -3,7 +3,7 @@ package cn.zhangxd.platform.common.service.datasource;
 /**
  * 动态数据源持有者
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class DynamicDataSourceHolder {
 

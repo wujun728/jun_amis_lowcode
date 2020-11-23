@@ -13,7 +13,7 @@ import org.springframework.social.connect.ConnectionFactory;
 import org.springframework.web.servlet.View;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/4 0004 9:58
  */

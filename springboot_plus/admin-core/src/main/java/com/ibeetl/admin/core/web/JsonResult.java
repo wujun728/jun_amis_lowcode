@@ -2,7 +2,7 @@ package com.ibeetl.admin.core.web;
 
 /**
  * 描述: json格式数据返回对象，使用CustomJsonResultSerializer 来序列化
- * @author : lijiazhi
+ * @author Wujun
  */
 public class JsonResult<T> {
   

@@ -7,7 +7,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 
 /**
- * @author TongWei.Chen 2017-9-17 17:00:55
+ * @author Wujun
  * @Project tucaole
  * @Description: Result 工具类，封装返回结果给客户端
  */

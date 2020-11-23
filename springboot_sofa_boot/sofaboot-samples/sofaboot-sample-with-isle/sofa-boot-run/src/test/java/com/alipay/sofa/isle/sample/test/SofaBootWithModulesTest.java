@@ -25,7 +25,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @author xuanbei 18/5/17
+ * @author Wujun
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)

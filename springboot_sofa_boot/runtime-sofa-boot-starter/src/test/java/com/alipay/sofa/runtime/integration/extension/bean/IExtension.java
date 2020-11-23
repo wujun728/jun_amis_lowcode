@@ -23,8 +23,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author khotyn
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public interface IExtension {

@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 public class CacheHelper {
 

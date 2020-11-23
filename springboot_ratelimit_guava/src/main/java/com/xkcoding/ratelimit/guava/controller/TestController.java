@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 测试
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/12 14:22
  */
 @Slf4j

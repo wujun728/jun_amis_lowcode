@@ -21,7 +21,7 @@ import lombok.Data;
 /**
  * Druid日志配置
  *
- * @author Lhx
+ * @author Wujun
  */
 @Data
 public class DruidSlf4jConfig {

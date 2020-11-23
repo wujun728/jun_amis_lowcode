@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * API处理Handler
  * 
- * @author Seer
+ * @author Wujun
  * @version RestApiHandler.java, v 0.1 2016年2月10日 下午3:18:54 Seer Exp.
  */
 public interface RestApiHandler {

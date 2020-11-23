@@ -16,7 +16,7 @@ import java.time.LocalDate;
 /**
  * The type Swagger config.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Configuration
 @EnableSwagger2

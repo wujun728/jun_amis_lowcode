@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基础类
  * 
- * @author wujing
+ * @author Wujun
  */
 public class Base {
 	

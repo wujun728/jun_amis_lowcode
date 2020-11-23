@@ -20,7 +20,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author xuanbei 18/5/5
+ * @author Wujun
  */
 @SpringBootApplication
 public class ApplicationRun {

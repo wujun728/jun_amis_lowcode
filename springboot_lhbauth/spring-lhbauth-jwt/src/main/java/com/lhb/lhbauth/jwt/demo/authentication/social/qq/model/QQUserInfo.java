@@ -3,7 +3,7 @@ package com.lhb.lhbauth.jwt.demo.authentication.social.qq.model;
 import lombok.Data;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description QQ返回的用户信息
  * @date 2019/1/3 0003 9:58
  */

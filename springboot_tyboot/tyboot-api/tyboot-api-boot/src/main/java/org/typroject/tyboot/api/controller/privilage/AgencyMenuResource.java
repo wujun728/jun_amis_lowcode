@@ -10,7 +10,7 @@ import org.typroject.tyboot.core.restful.doc.TycloudResource;
  * 角色与菜单关系表 前端控制器
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @RestController

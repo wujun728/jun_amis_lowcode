@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 /**
  * session配置参数
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class SessionDefinition {

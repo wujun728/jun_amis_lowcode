@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.Length;
 /**
  * 用户
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class TripUser extends DataEntity {
     /**

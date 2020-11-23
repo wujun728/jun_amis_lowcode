@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * POS机历史归属表
  *
- * @author 熊能
+ * @author Wujun
  * @version 1.0
  * @since 2018/01/02
  */

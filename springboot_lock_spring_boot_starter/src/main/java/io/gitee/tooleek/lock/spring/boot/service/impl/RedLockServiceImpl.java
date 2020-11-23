@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * 红锁操作服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public class RedLockServiceImpl implements LockService {

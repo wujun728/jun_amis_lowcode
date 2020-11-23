@@ -28,7 +28,7 @@ import com.roncoo.jui.common.util.jui.Jui;
 import com.xiaoleilu.hutool.json.JSONUtil;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @Controller
 public class LoginController extends BaseController {

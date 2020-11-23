@@ -22,7 +22,7 @@ import com.alipay.sofa.common.xmap.annotation.XObject;
 import org.springframework.context.ApplicationContext;
 
 /**
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  * */
 public class XAnnotatedSpringObject extends XAnnotatedObject {

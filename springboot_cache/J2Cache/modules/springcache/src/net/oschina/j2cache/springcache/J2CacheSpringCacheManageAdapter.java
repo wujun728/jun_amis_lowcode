@@ -9,7 +9,7 @@ import org.springframework.cache.transaction.AbstractTransactionSupportingCacheM
 import java.util.Collection;
 
 /**
- * @author Chen
+ * @author Wujun
  */
 public class J2CacheSpringCacheManageAdapter extends AbstractTransactionSupportingCacheManager {
     /**

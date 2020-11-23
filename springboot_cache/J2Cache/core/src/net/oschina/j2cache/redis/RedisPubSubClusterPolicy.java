@@ -31,7 +31,7 @@ import java.util.Set;
 /**
  * 使用 Redis 的订阅和发布进行集群中的节点通知
  * 该策略器使用 j2cache.properties 中的 redis 配置自行保持两个到 redis 的连接用于发布和订阅消息（并在失败时自动重连）
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class RedisPubSubClusterPolicy extends JedisPubSub implements ClusterPolicy {
 

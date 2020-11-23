@@ -12,7 +12,7 @@ import java.text.NumberFormat;
 /**
  * 数字工具类,继承自org.apache.commons.lang3.math.NumberUtils类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class NumberHelper extends NumberUtils {
 

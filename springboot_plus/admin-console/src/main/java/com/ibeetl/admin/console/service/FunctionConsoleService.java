@@ -23,7 +23,7 @@ import com.ibeetl.admin.core.service.CoreBaseService;
 import com.ibeetl.admin.core.service.CorePlatformService;
 import com.ibeetl.admin.core.util.PlatformException;
 /**
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Service

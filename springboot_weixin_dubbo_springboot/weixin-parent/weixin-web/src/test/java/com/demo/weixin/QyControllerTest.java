@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description
  * @date 2017/8/1
  * @since 1.0

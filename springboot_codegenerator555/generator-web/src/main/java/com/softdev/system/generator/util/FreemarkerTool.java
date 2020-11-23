@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * freemarker tool
  *
- * @author xuxueli 2018-05-02 19:56:00
+ * @author Wujun
  */
 @Component
 public class FreemarkerTool {

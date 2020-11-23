@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Controller
 @RequestMapping("/user/")

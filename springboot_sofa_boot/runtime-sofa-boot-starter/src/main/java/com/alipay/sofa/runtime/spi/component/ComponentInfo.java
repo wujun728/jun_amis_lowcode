@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * Component info interface
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ComponentInfo extends Component {
     /**

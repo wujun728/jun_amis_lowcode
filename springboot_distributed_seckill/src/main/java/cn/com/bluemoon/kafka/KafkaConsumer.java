@@ -15,7 +15,7 @@ import cn.com.bluemoon.utils.SerialNo;
 
 /**
  * 消费者 spring-kafka 2.0 + 依赖JDK8
- * @author Guoqing
+ * @author Wujun
  */
 @Component
 public class KafkaConsumer {

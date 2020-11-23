@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/3
  */
 @Controller

@@ -24,7 +24,7 @@ import org.springframework.util.StringUtils;
 /**
  * SofaBootLogSpaceIsolationInit
  *
- * @author yangguanchao
+ * @author Wujun
  * @since 2018/04/09
  */
 @Deprecated

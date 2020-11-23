@@ -19,7 +19,7 @@ package com.alipay.sofa.test.utils;
 import org.springframework.util.ClassUtils;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class TestModeUtil {

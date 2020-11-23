@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description durid监控页面配置 默认地址 localhost:8080/druid/login.html
  * @Date 15:40 2018/3/5
  */

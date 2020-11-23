@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 数据源缓存释放调度器
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 14:42
  */
 public enum DatasourceScheduler {

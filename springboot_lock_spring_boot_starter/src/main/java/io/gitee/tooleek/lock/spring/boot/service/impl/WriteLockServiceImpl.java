@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * 写锁操作服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public class WriteLockServiceImpl implements LockService {

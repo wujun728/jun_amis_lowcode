@@ -19,7 +19,7 @@ package com.alipay.sofa.isle.constants;
 /**
  * Framework Constants
  *
- * @author khotyn 7/25/14 8:21 PM
+ * @author Wujun
  */
 public interface SofaModuleFrameworkConstants {
     /** framework constants **/

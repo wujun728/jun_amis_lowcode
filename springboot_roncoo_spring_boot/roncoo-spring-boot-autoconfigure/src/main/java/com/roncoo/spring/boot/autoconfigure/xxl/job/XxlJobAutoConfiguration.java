@@ -10,7 +10,7 @@ import com.xxl.job.core.handler.annotation.XxlJob;
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnClass(XxlJob.class)

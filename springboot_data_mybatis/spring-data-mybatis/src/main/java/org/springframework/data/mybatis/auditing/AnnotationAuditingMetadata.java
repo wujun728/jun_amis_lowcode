@@ -46,9 +46,9 @@ import lombok.NonNull;
  * {@link CreatedDate}, {@link LastModifiedBy} , and {@link LastModifiedDate}. Only one
  * field per annotation is stored.
  *
- * @author Ranie Jade Ramiso
- * @author Oliver Gierke
- * @author Christoph Strobl
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 1.5
  */
 final class AnnotationAuditingMetadata {

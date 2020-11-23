@@ -14,7 +14,7 @@ import java.util.Date;
  * 在订单流转结束之后将被转移到订单历史表，当前表只保存流转中的订单信息
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

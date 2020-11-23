@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * amqp 队列配置
  * 
- * @author wujing
+ * @author Wujun
  */
 @Configuration
 public class AmqpConfiguration {

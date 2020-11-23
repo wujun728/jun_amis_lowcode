@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * 搜索请求参数
- * @author shenzhanwang
+ * @author Wujun
  *
  */
 public class ElasticSearchRequest {

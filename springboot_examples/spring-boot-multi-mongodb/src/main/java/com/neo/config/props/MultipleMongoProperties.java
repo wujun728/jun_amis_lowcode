@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.mongo.MongoProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author neo
+ * @author Wujun
  */
 @Data
 @ConfigurationProperties(prefix = "mongodb")

@@ -20,7 +20,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.TestPropertySource;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @TestPropertySource(properties = "com.alipay.sofa.boot.module-start-up-parallel=true")

@@ -23,7 +23,7 @@ import org.springframework.core.OrderComparator;
 import java.util.*;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.0.0
  */
 public class HealthCheckUtils {

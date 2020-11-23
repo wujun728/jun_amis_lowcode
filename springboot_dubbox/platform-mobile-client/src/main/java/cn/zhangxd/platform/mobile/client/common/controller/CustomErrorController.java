@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * ERROR处理控制器
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Controller
 @RequestMapping("/error")

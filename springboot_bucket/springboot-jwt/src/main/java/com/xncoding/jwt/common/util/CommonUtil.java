@@ -3,7 +3,7 @@ package com.xncoding.jwt.common.util;
 /**
  * 常用工具类，字符串、数字相关
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/15
  */

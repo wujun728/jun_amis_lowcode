@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * Create Date: 2017/10/31
  * Description: 部门实体类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class Department {
     /**

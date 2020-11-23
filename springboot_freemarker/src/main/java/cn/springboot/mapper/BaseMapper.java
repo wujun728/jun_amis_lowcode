@@ -5,7 +5,7 @@ import java.util.Map;
 
 /** 
  * @Description IBaseMapper
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:18:48 PM 
  * @param <S>
  * @param <T> 
@@ -21,7 +21,7 @@ public interface BaseMapper<S, T> {
 
     /**
      * @Title 根据对象插入数据
-     * @author <font color="green"><b>Vincent.wang</b></font>
+     * @author Wujun
      * @param t
      * @throws Exception
      * @return
@@ -30,7 +30,7 @@ public interface BaseMapper<S, T> {
 
     /**
      * @Title 根据PK删除
-     * @author <font color="green"><b>Vincent.wang</b></font>
+     * @author Wujun
      * @param pk
      * @throws Exception
      * @return
@@ -39,7 +39,7 @@ public interface BaseMapper<S, T> {
 
     /**
      * @Title 根据用户修改
-     * @author <font color="green"><b>Vincent.wang</b></font>
+     * @author Wujun
      * @param t
      * @throws Exception
      * @return
@@ -48,7 +48,7 @@ public interface BaseMapper<S, T> {
 
     /**
      * @Title 根据Map查找单个
-     * @author <font color="green"><b>Vincent.wang</b></font>
+     * @author Wujun
      * @param map
      * @return Map
      * @throws Exception
@@ -57,7 +57,7 @@ public interface BaseMapper<S, T> {
 
     /**
      * @Title 根据Map查找多个
-     * @author <font color="green"><b>Vincent.wang</b></font>
+     * @author Wujun
      * @param map
      * @return List<Map>
      * @throws Exception

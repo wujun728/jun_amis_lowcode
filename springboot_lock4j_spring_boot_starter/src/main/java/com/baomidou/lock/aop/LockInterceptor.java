@@ -27,7 +27,7 @@ import org.aopalliance.intercept.MethodInvocation;
 /**
  * 分布式锁aop处理器
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 @Slf4j

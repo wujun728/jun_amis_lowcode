@@ -1,7 +1,7 @@
 package com.chentongwei.common.enums.constant;
 
 /**
- * @author TongWei.Chen 2017-12-15 10:28:47
+ * @author Wujun
  * @Project tucaole
  * @Description: 时间常量枚举
  */

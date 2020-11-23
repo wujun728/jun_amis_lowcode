@@ -22,7 +22,7 @@ import java.io.Serializable;
 /**
  * 系统用户
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2019-01-24
  */
 @Getter

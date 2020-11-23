@@ -5,7 +5,7 @@ import com.chentongwei.core.system.entity.vo.report.ReportTypeListVO;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-16 18:15:33
+ * @author Wujun
  * @Project tucaole
  * @Description: 吐槽了举报类型DAO
  */

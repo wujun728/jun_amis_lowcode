@@ -27,8 +27,8 @@ import java.util.Map;
 /**
  * The liveness health check.
  *
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2.3.0
  */
 public class SofaBootHealthIndicator implements HealthIndicator {

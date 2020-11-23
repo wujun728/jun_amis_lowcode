@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 锁用户配置
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class LockDefinition {

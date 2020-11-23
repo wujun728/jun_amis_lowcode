@@ -19,7 +19,7 @@ package com.alipay.sofa.infra.constants;
 /**
  * SofaBootInfraConstants
  *
- * @author yangguanchao
+ * @author Wujun
  * @since 2017/09/07
  */
 public class SofaBootInfraConstants {

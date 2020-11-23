@@ -102,7 +102,7 @@ public class SensitiveWordUtil {
      *
      * @return
      * @throws Exception
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午2:31:18
      * @version 1.0
      */
@@ -169,7 +169,7 @@ public class SensitiveWordUtil {
      * }
      *
      * @param keyWordSet 敏感词库
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午3:04:20
      * @version 1.0
      */
@@ -236,7 +236,7 @@ public class SensitiveWordUtil {
      * @param txt       文字
      * @param matchType 匹配规则&nbsp;1：最小匹配规则，2：最大匹配规则
      * @return 若包含返回true，否则返回false
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午4:28:30
      * @version 1.0
      */
@@ -257,7 +257,7 @@ public class SensitiveWordUtil {
      * @param txt       文字
      * @param matchType 匹配规则&nbsp;1：最小匹配规则，2：最大匹配规则
      * @return
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午5:10:52
      * @version 1.0
      */
@@ -281,7 +281,7 @@ public class SensitiveWordUtil {
      * @param txt
      * @param matchType
      * @param replaceChar 替换字符，默认*
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午5:12:07
      * @version 1.0
      */
@@ -306,7 +306,7 @@ public class SensitiveWordUtil {
      * @param replaceChar
      * @param length
      * @return
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午5:21:19
      * @version 1.0
      */
@@ -325,7 +325,7 @@ public class SensitiveWordUtil {
      * @param txt
      * @param beginIndex
      * @param matchType
-     * @author chenming
+     * @author Wujun
      * @date 2014年4月20日 下午4:31:03
      * @return，如果存在，则返回敏感词字符的长度，不存在返回0
      * @version 1.0

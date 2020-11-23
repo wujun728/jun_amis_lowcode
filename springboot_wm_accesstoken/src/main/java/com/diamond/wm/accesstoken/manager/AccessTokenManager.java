@@ -14,7 +14,7 @@ import com.diamond.wm.accesstoken.utils.HttpRequest;
 
 /**
  * 单例使用
- * @author Diamond
+ * @author Wujun
  */
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)

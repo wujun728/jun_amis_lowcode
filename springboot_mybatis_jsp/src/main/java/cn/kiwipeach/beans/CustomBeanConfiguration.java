@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  * Create Date: 2017/11/05
  * Description: Bean工厂
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @Configuration
 public class CustomBeanConfiguration {

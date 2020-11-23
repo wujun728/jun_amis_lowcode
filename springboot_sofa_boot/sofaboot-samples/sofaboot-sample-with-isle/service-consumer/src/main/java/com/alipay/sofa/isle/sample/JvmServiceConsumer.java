@@ -24,7 +24,7 @@ import com.alipay.sofa.runtime.api.client.param.ReferenceParam;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * @author xuanbei 18/5/5
+ * @author Wujun
  */
 public class JvmServiceConsumer implements ClientFactoryAware {
     private ClientFactory    clientFactory;

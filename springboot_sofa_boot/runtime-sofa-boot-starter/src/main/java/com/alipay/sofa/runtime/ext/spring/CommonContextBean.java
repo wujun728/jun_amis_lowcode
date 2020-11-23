@@ -27,7 +27,7 @@ import org.springframework.context.ApplicationContextAware;
 
 /**
  *
- * @author linfengqi
+ * @author Wujun
  * @since 2.6.0
  */
 public class CommonContextBean implements ApplicationContextAware, BeanNameAware, InitializingBean {

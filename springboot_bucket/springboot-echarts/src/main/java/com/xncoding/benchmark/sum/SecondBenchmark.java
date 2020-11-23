@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
 /**
  * SecondBenchmark
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/24
  */

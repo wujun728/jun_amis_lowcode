@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2020/1/5 12:14
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 @RestController

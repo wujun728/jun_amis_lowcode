@@ -22,7 +22,7 @@ import de.codecentric.boot.admin.model.Application;
 import de.codecentric.boot.admin.model.StatusInfo;
 
 /**
- * @author Jamie Brown
+ * @author Wujun
  */
 public class HipchatNotifierTest {
 	private HipchatNotifier notifier;

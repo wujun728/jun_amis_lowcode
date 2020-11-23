@@ -3,7 +3,7 @@ package com.chentongwei.cache.redis;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-05-19 09:23:06
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的List操作
  */

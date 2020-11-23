@@ -29,7 +29,7 @@ import java.util.*;
 import java.util.stream.Stream;
 
 /**
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: AbstractDeploymentDescriptor.java, v 0.1 2012-2-1 15:13:00
  *          yangyanzhao Exp $
  */

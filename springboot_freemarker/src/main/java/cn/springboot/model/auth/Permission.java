@@ -4,7 +4,7 @@ import cn.springboot.model.BaseEntity;
 
 /** 
  * @Description 菜单对象
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:10:38 AM  
  */
 public class Permission implements BaseEntity<String> {

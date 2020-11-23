@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description Spring的ApplicationContext的持有者,可以用静态方法的方式获取spring容器中的bean
  * @Date 21:07 2018/4/18
  */

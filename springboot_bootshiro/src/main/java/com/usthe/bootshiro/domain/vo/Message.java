@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 前后端统一消息定义协议 Message  之后前后端数据交互都按照规定的类型进行交互
  * {
  *   meta:{"code":code,“msg”:message}

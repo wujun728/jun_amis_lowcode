@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * Token 工具类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class AbstractTokenUtil {
 

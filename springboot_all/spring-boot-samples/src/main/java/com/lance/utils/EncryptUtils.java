@@ -11,7 +11,7 @@ import javax.crypto.spec.PBEKeySpec;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author lance 2014-06-10
+ * @author Wujun
  * 提供部分加密方法
  */
 public class EncryptUtils {

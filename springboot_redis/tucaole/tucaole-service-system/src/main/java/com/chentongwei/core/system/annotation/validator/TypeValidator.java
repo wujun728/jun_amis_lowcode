@@ -9,7 +9,7 @@ import javax.validation.ConstraintValidatorContext;
 import java.util.Objects;
 
 /**
- * @author TongWei.Chen 2017-12-27 19:01:13
+ * @author Wujun
  * @Project tucaole
  * @Description: 类型校验器
  */

@@ -8,7 +8,7 @@ import com.ibeetl.admin.core.util.ClassLoaderUtil;
 
 /**
  * 页面查询条件
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public class QueryParser {

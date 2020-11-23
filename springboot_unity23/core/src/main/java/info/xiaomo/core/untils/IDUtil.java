@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 public class IDUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(IDUtil.class);

@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 /** 
  * @Description 数据表配置类
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 2:12:02 PM  
  */
 public enum TablesPKEnum {

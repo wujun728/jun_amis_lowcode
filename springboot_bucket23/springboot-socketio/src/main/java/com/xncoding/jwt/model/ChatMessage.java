@@ -3,7 +3,7 @@ package com.xncoding.jwt.model;
 /**
  * ChatMessage
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/30
  */

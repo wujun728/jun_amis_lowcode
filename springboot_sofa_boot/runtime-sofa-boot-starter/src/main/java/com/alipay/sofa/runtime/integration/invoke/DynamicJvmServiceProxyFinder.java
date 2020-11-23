@@ -41,7 +41,7 @@ import java.lang.reflect.Method;
 import java.util.Collection;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class DynamicJvmServiceProxyFinder {

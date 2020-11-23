@@ -11,7 +11,7 @@ import java.util.Date;
  * 系统字典表数据
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-06-27
  */
 @EqualsAndHashCode(callSuper = true)

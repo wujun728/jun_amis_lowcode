@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Description: 
  * 
  * @date Nov 15, 2018 11:11:39 AM
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  */
 @SpringBootApplication

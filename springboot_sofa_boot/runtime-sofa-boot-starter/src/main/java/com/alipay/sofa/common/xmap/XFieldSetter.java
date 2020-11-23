@@ -20,7 +20,7 @@ import java.lang.reflect.Field;
 
 /**
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public class XFieldSetter implements XSetter {

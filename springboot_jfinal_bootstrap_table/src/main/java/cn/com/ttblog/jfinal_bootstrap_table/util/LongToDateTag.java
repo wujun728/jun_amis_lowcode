@@ -9,7 +9,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 /**
  * 自定义标签开发
  * 教程:http://www.runoob.com/jsp/jsp-custom-tags.html
- * @author netbuffer
+ * @author Wujun
  *
  */
 public class LongToDateTag extends SimpleTagSupport {

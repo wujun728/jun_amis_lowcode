@@ -19,7 +19,7 @@ import static org.junit.Assert.assertNull;
 /**
  * UserServiceTest
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/2
  */

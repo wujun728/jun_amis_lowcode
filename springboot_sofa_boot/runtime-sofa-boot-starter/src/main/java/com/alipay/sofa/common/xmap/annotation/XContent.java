@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
  * An annotation that injects the content of the current node as an XML string or
  * DocumentFragment depending on the field type.
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
+ * @author Wujun
  * @since 2.6.0
  */
 @XMemberAnnotation(XMemberAnnotation.CONTENT)

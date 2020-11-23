@@ -22,8 +22,8 @@ import com.alipay.sofa.runtime.spi.component.SofaRuntimeContext;
  * Interface to be implemented by any object that wishes to be notified
  * of the {@link com.alipay.sofa.runtime.spi.component.SofaRuntimeContext} that it runs in.
  *
- * @author qilong.zql
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
  * @since 2.5.0
  */
 public interface SofaRuntimeContextAware {

@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * 用户认证拦截器
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2017年5月18日 下午2:41:05
  */

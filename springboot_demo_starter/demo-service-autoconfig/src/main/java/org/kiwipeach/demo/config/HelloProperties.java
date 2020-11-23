@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * 描述：配置属性bean
  *
- * @author kiwipeach
+ * @author Wujun
  * @since 2.0
  */
 @ConfigurationProperties(prefix = "cn.kiwipeach")

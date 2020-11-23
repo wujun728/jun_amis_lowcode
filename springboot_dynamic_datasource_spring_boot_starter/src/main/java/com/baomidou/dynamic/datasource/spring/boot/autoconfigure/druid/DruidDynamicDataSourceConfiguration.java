@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Import;
 /**
  * 从原生DruidDataSourceAutoConfigure复制
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.1.0
  */
 @Configuration

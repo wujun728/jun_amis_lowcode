@@ -7,7 +7,7 @@ import java.util.Date;
 
 
 /**
- * @author TongWei.Chen 2017-11-30 12:55:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户表
  */

@@ -13,7 +13,7 @@ import com.ibeetl.admin.core.rbac.tree.OrgItem;
 /**
  * 系统提供的数据访问权限设置，适合大多数情况。如果只是小型公司，只需要配置数据字典组织机构类型和数据访问类型为系统默认的子集即可
  * 
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class DefaultDataAccessFactory implements DataAccessFactory {

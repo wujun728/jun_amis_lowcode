@@ -17,7 +17,7 @@ import net.sf.cglib.reflect.FastMethod;
  * 
  * 注意: 需要参考本模块的POM文件，显式引用cglib.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class FastMethodInvoker {
 

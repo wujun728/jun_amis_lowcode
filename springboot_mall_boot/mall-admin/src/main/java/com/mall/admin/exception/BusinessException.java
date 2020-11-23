@@ -4,7 +4,7 @@ import com.mall.common.utils.ResultCode;
 
 /**
  * 业务异常
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/11/26 22:28
  */

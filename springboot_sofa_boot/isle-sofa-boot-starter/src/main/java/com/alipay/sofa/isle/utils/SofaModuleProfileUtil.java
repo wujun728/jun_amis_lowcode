@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
- * @author xuanbei 18/5/3
+ * @author Wujun
  */
 public class SofaModuleProfileUtil {
     private static final ConcurrentMap<ApplicationContext, SofaModuleProfileEnvironment> map = new ConcurrentHashMap<>();

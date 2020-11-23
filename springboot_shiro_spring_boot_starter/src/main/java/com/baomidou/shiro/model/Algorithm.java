@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * shiro内置算法枚举
  *
- * @author TaoYu
+ * @author Wujun
  */
 public enum Algorithm {
   /**

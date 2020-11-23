@@ -16,7 +16,7 @@ import cn.springboot.service.key.KeyService;
 
 /** 
  * @Description 主键生成
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 1:48:30 PM  
  */
 @Service("keyService")

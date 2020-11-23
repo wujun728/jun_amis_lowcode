@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @ClassName LockTest
  * @Description 测试类
- * @Author zzm
+ * @author Wujun
  * @Date 2019/7/5 9:33
  * @Version 1.0
  */

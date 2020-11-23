@@ -26,7 +26,7 @@ package com.zyd.shiro.framework.object;
 import java.util.List;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @website https://www.zhyd.me
  * @version 1.0
  * @date 2018/4/16 16:26

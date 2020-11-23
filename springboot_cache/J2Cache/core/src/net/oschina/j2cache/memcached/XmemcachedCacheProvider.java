@@ -34,7 +34,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Memcached 缓存管理
  *
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class XmemcachedCacheProvider implements CacheProvider {
 

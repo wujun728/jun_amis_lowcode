@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.SofaRuntimeProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author xuanbei 18/5/9
+ * @author Wujun
  */
 @ConfigurationProperties(SofaBootInfraConstants.PREFIX)
 public class SofaRuntimeConfigurationProperties {

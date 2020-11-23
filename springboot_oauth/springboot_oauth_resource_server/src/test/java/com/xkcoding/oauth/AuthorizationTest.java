@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * .
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/9 下午3:44
  */
 public class AuthorizationTest {

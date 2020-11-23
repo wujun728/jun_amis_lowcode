@@ -22,8 +22,8 @@ import org.w3c.dom.Element;
 /**
  * SOFA Extension Object
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public interface Extension {

@@ -1,5 +1,5 @@
 /**
- * @author TongWei.Chen 2017-10-14 20:28:31
+ * @author Wujun
  * @Project tucaole
  * @Description: 统一邮件发送
  */

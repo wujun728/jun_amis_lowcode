@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncInitTest extends TestBase {

@@ -12,7 +12,7 @@ import com.roncoo.example.cache.RoncooUserLogCache;
 import com.roncoo.example.dao.RoncooUserLogDao;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @CacheConfig(cacheNames = "roncooCache")
 @Repository

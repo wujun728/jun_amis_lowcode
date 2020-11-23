@@ -11,7 +11,7 @@ import cn.springboot.model.simple.News;
 
 /** 
  * @Description 新闻mapper接口
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 3:35:19 PM  
  */
 @Mapper

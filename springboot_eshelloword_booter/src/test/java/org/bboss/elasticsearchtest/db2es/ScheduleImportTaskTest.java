@@ -26,7 +26,7 @@ import org.junit.Test;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/9/10 9:29
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class ScheduleImportTaskTest {

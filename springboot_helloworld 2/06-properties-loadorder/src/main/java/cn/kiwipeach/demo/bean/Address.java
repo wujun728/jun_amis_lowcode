@@ -18,7 +18,7 @@ package cn.kiwipeach.demo.bean;
 /**
  * 地址信息
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 public class Address {

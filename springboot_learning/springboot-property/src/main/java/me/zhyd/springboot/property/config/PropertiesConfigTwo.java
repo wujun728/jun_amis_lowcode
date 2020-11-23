@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * 
- * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+ * @author Wujun
  * @date 2017年6月1日 下午4:34:18 
  * @version V1.0
  * @since JDK ： 1.7

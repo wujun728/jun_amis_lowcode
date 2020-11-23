@@ -12,7 +12,7 @@ import org.typroject.tyboot.core.rdbms.service.BaseService;
  * 角色与菜单关系表 服务实现类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @Service

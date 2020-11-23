@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * ZipUtils on spring-boot-filemanager
  *
- * @author <a href="mailto:akhuting@hotmail.com">Alex Yang</a>
+ * @author Wujun
  * @date 2016年08月25日 10:08
  */
 public class ZipUtils {

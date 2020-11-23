@@ -3,7 +3,7 @@ package com.gosalelab.provider;
 import java.lang.reflect.Type;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 public interface CacheProvider {
     /**

@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.provider.refresh.RefreshTokenGranter;
  * <p>
  * grant_type = refresh_token
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @since 2.0.1
  */
 public class RefreshTokenInlineAccessTokenInvoker extends InlineAccessTokenInvoker {

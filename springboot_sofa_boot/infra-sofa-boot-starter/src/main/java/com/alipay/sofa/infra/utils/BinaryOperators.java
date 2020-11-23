@@ -19,7 +19,7 @@ package com.alipay.sofa.infra.utils;
 import java.util.function.BinaryOperator;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.0.0
  */
 public class BinaryOperators {

@@ -15,7 +15,7 @@ import org.springside.modules.utils.time.ClockUtil;
  * From facebook
  * https://github.com/facebook/jcommon/blob/master/logging-util/src/main/java/com/facebook/logging/util/TimeSamplingSLF4JLogger.java
  * 
- * @author calvin
+ * @author Wujun
  */
 public class ThrottledSlf4jLogger implements Logger {
 

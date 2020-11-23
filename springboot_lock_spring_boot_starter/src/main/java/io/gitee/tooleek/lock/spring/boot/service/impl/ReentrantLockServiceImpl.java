@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * 可重入锁加锁服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public class ReentrantLockServiceImpl implements LockService {

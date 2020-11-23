@@ -20,7 +20,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public interface NewsReadService<T> {

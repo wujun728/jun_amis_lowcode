@@ -14,7 +14,7 @@ import java.util.function.Function;
  * Convenience interface to allow pulling in {@link PagingAndSortingRepository} and
  * {@link QuerydslPredicateExecutor} functionality in one go.
  * 
- * @author Damien Arrachequesne
+ * @author Wujun
  */
 @NoRepositoryBean
 public interface QDataTablesRepository<T, ID extends Serializable>

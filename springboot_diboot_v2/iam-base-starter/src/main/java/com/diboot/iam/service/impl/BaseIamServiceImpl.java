@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
 * 自定义BaseService接口实现
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

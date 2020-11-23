@@ -26,7 +26,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Event-Store backed by a Hazelcast-list.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class HazelcastJournaledEventStore implements JournaledEventStore {
 

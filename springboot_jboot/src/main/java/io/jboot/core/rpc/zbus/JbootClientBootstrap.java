@@ -23,7 +23,7 @@ import io.zbus.rpc.transport.mq.RpcMessageInvoker;
 import io.zbus.transport.ServerAddress;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.core.rpc.zbus
  */

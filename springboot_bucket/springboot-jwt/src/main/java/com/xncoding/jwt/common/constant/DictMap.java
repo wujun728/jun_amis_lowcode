@@ -7,7 +7,7 @@ import java.util.TreeMap;
 /**
  * 表常量字典
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/01/07
  */

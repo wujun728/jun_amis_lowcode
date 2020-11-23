@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentMap;
  * 限流切面
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/12 14:27
  */
 @Slf4j

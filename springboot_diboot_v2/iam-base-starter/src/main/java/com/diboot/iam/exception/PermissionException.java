@@ -5,7 +5,7 @@ import com.diboot.core.vo.Status;
 
 /**
  * 权限校验异常
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/30
  */

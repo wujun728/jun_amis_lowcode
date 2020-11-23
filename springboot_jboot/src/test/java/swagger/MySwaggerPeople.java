@@ -20,7 +20,7 @@ import io.jboot.component.swagger.annotation.SwaggerDefinition;
 import java.util.Date;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Description: 测试用的
  * @Package swagger

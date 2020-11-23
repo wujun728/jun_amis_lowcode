@@ -29,7 +29,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 /**
  * HikariCp参数配置
  *
- * @author TaoYu
+ * @author Wujun
  * @since 2.4.1
  */
 @Data

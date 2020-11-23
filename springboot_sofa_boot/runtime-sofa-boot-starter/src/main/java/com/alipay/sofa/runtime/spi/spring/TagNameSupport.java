@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.spi.spring;
 /**
  * Get supported xml element tag name
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface TagNameSupport {
     /**

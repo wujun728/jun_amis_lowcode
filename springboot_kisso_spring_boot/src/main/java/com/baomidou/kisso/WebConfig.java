@@ -13,7 +13,7 @@ import com.baomidou.kisso.web.interceptor.SSOSpringInterceptor;
  * WEB 初始化相关配置
  * </p>
  *
- * @author 青苗
+ * @author Wujun
  * @since 2017-08-08
  */
 @ControllerAdvice

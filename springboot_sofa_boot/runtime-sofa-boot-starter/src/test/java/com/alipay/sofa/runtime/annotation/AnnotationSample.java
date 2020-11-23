@@ -23,7 +23,7 @@ import com.alipay.sofa.runtime.api.annotation.SofaServiceBinding;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.2
  */
 @SofaService(interfaceType = SampleService.class, uniqueId = "${annotation.sample.service.uniqueId}", bindings = { @SofaServiceBinding(bindingType = "${annotation.sample.service.bindingType}", filters = {

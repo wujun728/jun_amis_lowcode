@@ -12,7 +12,7 @@ import de.codecentric.boot.admin.model.Application;
  * Provides Basic Auth headers for the {@link Application} using the metadata for "user.name" and
  * "user.password".
  * 
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class BasicAuthHttpHeaderProvider implements HttpHeadersProvider {
 

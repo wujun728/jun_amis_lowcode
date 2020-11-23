@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * PersonService
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/9/15 23:07
  */
@@ -17,7 +17,7 @@ public interface PersonService {
     /**
      * create Index
      *
-     * @author fxbin
+     * @author Wujun
      * @param index elasticsearch index name
      */
     void createIndex(String index);
@@ -25,7 +25,7 @@ public interface PersonService {
     /**
      * delete Index
      *
-     * @author fxbin
+     * @author Wujun
      * @param index elasticsearch index name
      */
     void deleteIndex(String index);
@@ -33,7 +33,7 @@ public interface PersonService {
     /**
      * insert document source
      *
-     * @author fxbin
+     * @author Wujun
      * @param index elasticsearch index name
      * @param list data source
      */
@@ -42,7 +42,7 @@ public interface PersonService {
     /**
      * update document source
      *
-     * @author fxbin
+     * @author Wujun
      * @param index elasticsearch index name
      * @param list data source
      */
@@ -51,7 +51,7 @@ public interface PersonService {
     /**
      * delete document source
      *
-     * @author fxbin
+     * @author Wujun
      * @param person delete data source and allow null object
      */
     void delete(String index, @Nullable Person person);
@@ -59,7 +59,7 @@ public interface PersonService {
     /**
      * search all doc records
      *
-     * @author fxbin
+     * @author Wujun
      * @param index elasticsearch index name
      * @return person list
      */

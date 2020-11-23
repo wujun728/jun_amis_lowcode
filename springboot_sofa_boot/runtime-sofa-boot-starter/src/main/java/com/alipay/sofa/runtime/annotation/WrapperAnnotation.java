@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.annotation;
 /**
  * A marker interface
  *
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.2
  */
 public interface WrapperAnnotation {

@@ -3,7 +3,7 @@ package com.chentongwei.spider.entity;
 import java.util.Date;
 
 /**
- * @author TongWei.Chen 2017-09-27 19:28:58
+ * @author Wujun
  * @Project tucaole
  * @Description: csdn文章
  */

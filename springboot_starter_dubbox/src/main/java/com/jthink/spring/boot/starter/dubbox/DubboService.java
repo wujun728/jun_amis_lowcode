@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * JThink@JThink
  *
- * @author JThink
+ * @author Wujun
  * @version 0.0.1
  * @desc 提供暴露和获取service的方法
  * @date 2016-12-15 14:23:24

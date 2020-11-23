@@ -25,7 +25,7 @@ import com.alipay.sofa.runtime.spi.health.HealthResult;
 /**
  * abstract component implementation
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public abstract class AbstractComponent implements ComponentInfo {
     /**

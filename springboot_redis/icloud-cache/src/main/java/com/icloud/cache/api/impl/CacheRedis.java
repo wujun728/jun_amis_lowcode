@@ -24,7 +24,7 @@ import com.icloud.cache.service.IRedisService;
  * <p/>
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月4日
  * @since 1.7
@@ -133,7 +133,7 @@ public class CacheRedis implements CacheAPI {
      *
      * @param key
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月4日
      */
     @Override

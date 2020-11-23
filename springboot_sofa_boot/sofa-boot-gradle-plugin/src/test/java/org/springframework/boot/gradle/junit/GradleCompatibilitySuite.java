@@ -34,7 +34,7 @@ import java.util.List;
  * using the suite must have a public {@link GradleBuild} field named {@code gradleBuild}
  * and annotated with {@link Rule}.
  *
- * @author Andy Wilkinson
+ * @author Wujun
  */
 public final class GradleCompatibilitySuite extends Suite {
     public static void main(String[] args) {

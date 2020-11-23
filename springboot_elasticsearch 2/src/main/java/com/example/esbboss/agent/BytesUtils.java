@@ -21,7 +21,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 /**
- * @author emeroad
+ * @author Wujun
  */
 public final class BytesUtils {
     public static final int SHORT_BYTE_LENGTH = 2;

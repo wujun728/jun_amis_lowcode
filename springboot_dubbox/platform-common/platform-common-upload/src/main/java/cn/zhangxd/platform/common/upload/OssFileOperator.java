@@ -8,7 +8,7 @@ import java.io.File;
 /**
  * 文件OSS操作
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class OssFileOperator extends AbstractFileOperator implements FileOperator {
 

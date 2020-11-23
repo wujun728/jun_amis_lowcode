@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.sleuth.zipkin.stream.EnableZipkinStreamServer;
 
 /**
- * @author zhangxd
+ * @author Wujun
  */
 @SpringBootApplication
 @EnableZipkinStreamServer

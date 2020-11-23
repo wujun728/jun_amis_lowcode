@@ -12,7 +12,7 @@ import org.springside.modules.utils.base.annotation.NotNull;
  * 
  * 在不方便使用joda-time时，使用本类降低Date处理的复杂度与性能消耗, 封装Common Lang及移植Jodd的最常用日期方法
  * 
- * @author calvin
+ * @author Wujun
  */
 public class DateUtil {
 

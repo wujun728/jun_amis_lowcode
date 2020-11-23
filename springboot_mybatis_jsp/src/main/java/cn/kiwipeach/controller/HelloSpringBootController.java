@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Hello World Spring Boot
  *
- * @author liuburu
+ * @author Wujun
  * @create 2017/07/10
  **/
 @RestController

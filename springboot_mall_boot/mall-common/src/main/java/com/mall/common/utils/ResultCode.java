@@ -1,7 +1,7 @@
 package com.mall.common.utils;
 /**
  * 为方便处理ajax请求
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2017年6月28日上午9:28:04
  */

@@ -16,7 +16,7 @@ import cn.com.bluemoon.common.response.ResponseBean;
 
 /**
  * 全局异常处理
- * @author Guoqing
+ * @author Wujun
  * @version 1.0
  */
 @ControllerAdvice

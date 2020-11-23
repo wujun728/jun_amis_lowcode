@@ -22,7 +22,7 @@ import com.alipay.sofa.isle.deployment.ModuleDeploymentValidator;
 /**
  * Default Module Deployment Validator.
  *
- * @author khotyn 9/12/14 4:28 PM
+ * @author Wujun
  */
 public class DefaultModuleDeploymentValidator implements ModuleDeploymentValidator {
     @Override

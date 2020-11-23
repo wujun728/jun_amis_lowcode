@@ -84,7 +84,7 @@ public class StringQuery {
 	/**
 	 * A parser that extracts the parameter bindings from a given query string.
 	 *
-	 * @author Thomas Darimont
+	 * @author Wujun
 	 */
 	enum ParameterBindingParser {
 
@@ -351,8 +351,8 @@ public class StringQuery {
 		/**
 		 * An enum for the different types of bindings.
 		 *
-		 * @author Thomas Darimont
-		 * @author Oliver Gierke
+		 * @author Wujun
+		 * @author Wujun
 		 */
 		private enum ParameterBindingType {
 
@@ -587,7 +587,7 @@ public class StringQuery {
 	 * Represents a {@link ParameterBinding} in a JPQL query augmented with instructions
 	 * of how to apply a parameter as an {@code IN} parameter.
 	 *
-	 * @author Thomas Darimont
+	 * @author Wujun
 	 */
 	public static class InParameterBinding extends ParameterBinding {
 
@@ -637,8 +637,8 @@ public class StringQuery {
 	 * to apply a parameter as LIKE parameter. This allows expressions like
 	 * {@code …like %?1} in the JPQL query, which is not allowed by plain JPA.
 	 *
-	 * @author Oliver Gierke
-	 * @author Thomas Darimont
+	 * @author Wujun
+	 * @author Wujun
 	 */
 	public static class LikeParameterBinding extends ParameterBinding {
 

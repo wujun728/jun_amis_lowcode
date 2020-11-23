@@ -42,7 +42,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * EhCache 3.x 缓存管理器的封装，用来管理多个缓存区域
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class EhCacheProvider3 implements CacheProvider {
 

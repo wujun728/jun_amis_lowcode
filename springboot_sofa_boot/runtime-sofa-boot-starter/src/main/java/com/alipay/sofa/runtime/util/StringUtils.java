@@ -17,14 +17,14 @@
 package com.alipay.sofa.runtime.util;
 
 /**
- * @author Rod Johnson
- * @author Juergen Hoeller
- * @author Keith Donald
- * @author Rob Harrop
- * @author Rick Evans
- * @author Arjen Poutsma
- * @author Sam Brannen
- * @author Brian Clozel
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.5.0
  */
 public class StringUtils {

@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * 学生信息实体
- * @author Administrator
+ * @author Wujun
  *
  */
 @Entity

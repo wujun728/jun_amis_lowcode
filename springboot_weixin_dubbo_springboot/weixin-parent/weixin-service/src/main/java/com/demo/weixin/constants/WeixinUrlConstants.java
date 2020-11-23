@@ -2,7 +2,7 @@ package com.demo.weixin.constants;
 
 /**
  * 微信接口 url常量
- * @author blueriver
+ * @author Wujun
  */
 public class WeixinUrlConstants {
 

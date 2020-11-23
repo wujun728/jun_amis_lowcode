@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 评论/回复List
  *
- * @author TongWei.Chen 2017-12-22 09:35
+ * @author Wujun
  */
 @Data
 public class ArticleCommentListVO implements Serializable {

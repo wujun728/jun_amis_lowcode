@@ -22,7 +22,7 @@ import java.lang.annotation.*;
 /**
  * The core Annotation to switch datasource. It can be annotate at class or method.
  *
- * @author TaoYu Kanyuxia
+ * @author Wujun
  * @since 1.0.0
  */
 @Target({ElementType.TYPE, ElementType.METHOD})

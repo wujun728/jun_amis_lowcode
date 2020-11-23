@@ -9,7 +9,7 @@ import java.io.Serializable;
 /**
  * 持久化操作公共接口实现类
  * 
- * @author HXM
+ * @author Wujun
  *
  * @param <M>
  *            实体类型

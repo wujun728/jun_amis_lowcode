@@ -21,7 +21,7 @@ import java.nio.ByteBuffer;
 
 /**
  * 使用字节编码
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class LettuceByteCodec implements RedisCodec<String, byte[]> {
 

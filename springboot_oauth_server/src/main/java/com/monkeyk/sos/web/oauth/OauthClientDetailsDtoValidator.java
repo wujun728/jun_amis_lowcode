@@ -9,7 +9,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Component
 public class OauthClientDetailsDtoValidator implements Validator {

@@ -33,7 +33,7 @@ import java.lang.annotation.Target;
  * }
  * </pre>
  *
- * @author xuanbei 18/3/2
+ * @author Wujun
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER })

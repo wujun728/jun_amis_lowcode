@@ -39,7 +39,7 @@ import com.alipay.sofa.runtime.api.client.ExtensionClient;
  *
  * </pre>
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public interface ExtensionClientAware {

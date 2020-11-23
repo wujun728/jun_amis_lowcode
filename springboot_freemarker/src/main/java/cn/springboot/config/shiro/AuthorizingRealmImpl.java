@@ -37,7 +37,7 @@ import cn.springboot.service.auth.RoleService;
 import cn.springboot.service.auth.UserService;
 
 /**
- * @author Vincent.wang
+ * @author Wujun
  *
  */
 public class AuthorizingRealmImpl extends AuthorizingRealm {

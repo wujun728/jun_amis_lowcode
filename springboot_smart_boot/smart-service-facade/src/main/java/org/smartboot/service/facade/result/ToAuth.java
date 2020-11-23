@@ -3,7 +3,7 @@ package org.smartboot.service.facade.result;
 /**
  * 鉴权对象
  * 
- * @author Seer
+ * @author Wujun
  * @version ToAuth.java, v 0.1 2016年1月20日 下午4:02:00 Seer Exp.
  */
 public class ToAuth extends ToString {

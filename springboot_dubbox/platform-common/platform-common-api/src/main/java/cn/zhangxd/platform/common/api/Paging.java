@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 分页对象
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class Paging implements Serializable {
 

@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 
 /**
  * 子类继承此类获得翻页功能
- * @author lijiazhi
+ * @author Wujun
  */
 public class PageParam {
     private Integer page = null;

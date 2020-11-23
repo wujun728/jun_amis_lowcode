@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * POS绑定网点参数
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/7
  */

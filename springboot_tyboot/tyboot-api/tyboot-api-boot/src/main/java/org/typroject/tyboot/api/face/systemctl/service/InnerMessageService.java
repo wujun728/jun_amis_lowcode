@@ -20,7 +20,7 @@ import java.util.List;
  * 简单内部消息 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-12
  */
 @Component

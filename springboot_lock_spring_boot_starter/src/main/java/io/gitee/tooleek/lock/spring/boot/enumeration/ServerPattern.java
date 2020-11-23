@@ -3,7 +3,7 @@ package io.gitee.tooleek.lock.spring.boot.enumeration;
 /**
  * Redis的运行模式
  *
- * @author TanRq
+ * @author Wujun
  */
 public enum ServerPattern {
 

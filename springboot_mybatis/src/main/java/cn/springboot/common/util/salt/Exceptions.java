@@ -5,7 +5,7 @@ import java.io.StringWriter;
 
 /** 
  * @Description 关于异常的工具类
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:39:38 AM  
  */
 public class Exceptions {

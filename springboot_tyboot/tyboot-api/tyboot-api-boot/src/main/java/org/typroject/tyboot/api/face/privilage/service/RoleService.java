@@ -20,7 +20,7 @@ import java.util.List;
  * 角色表 服务实现类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @Service

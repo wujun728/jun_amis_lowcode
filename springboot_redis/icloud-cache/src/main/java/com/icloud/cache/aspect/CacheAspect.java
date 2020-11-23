@@ -23,7 +23,7 @@ import com.icloud.cache.parser.impl.DefaultKeyGenerator;
 /**
  * 缓存开启注解拦截
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @description
  * @date 2018年5月18日
  * @since 1.7

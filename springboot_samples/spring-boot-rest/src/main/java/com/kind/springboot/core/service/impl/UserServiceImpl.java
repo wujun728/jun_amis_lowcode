@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * Function:用户服务实现. <br/>
  * Date: 2016年8月11日 下午12:50:53 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @version
  * @since JDK 1.7
  * @see

@@ -19,7 +19,7 @@ import static org.shaofan.utils.FileUtils.fileProber;
 /**
  * TargzUtils on spring-boot-filemanager
  *
- * @author <a href="mailto:akhuting@hotmail.com">Alex Yang</a>
+ * @author Wujun
  * @date 2016年08月25日 10:12
  */
 public class TargzUtils {

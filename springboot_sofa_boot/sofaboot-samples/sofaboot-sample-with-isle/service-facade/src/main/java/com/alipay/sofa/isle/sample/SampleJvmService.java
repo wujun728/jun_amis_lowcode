@@ -17,7 +17,7 @@
 package com.alipay.sofa.isle.sample;
 
 /**
- * @author xuanbei 18/5/5
+ * @author Wujun
  */
 public interface SampleJvmService {
     String message();

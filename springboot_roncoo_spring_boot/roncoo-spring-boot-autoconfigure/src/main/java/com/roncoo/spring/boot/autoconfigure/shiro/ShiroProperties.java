@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = "spring.shiro")
 public class ShiroProperties {

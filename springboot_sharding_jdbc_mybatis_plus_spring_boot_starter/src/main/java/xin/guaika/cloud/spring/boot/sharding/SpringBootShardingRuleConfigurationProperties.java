@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Sharding rule configuration properties.
  *
- * @author caohao
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = "sharding.jdbc.config.sharding")
 public class SpringBootShardingRuleConfigurationProperties extends YamlShardingRuleConfiguration {

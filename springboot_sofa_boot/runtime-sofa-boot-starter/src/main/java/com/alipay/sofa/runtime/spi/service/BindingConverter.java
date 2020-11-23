@@ -29,7 +29,7 @@ import org.w3c.dom.Element;
 /**
  * Binding Converter, convert {@link BindingParam} or xml Element to concrete {@link Binding}
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface BindingConverter<L extends BindingParam, R extends Binding> extends TagNameSupport {
     /**

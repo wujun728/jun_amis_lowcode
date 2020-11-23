@@ -3,7 +3,7 @@ package info.xiaomo.redis.model;
 import java.io.Serializable;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 public class CityInfo implements Serializable {
     private static final long serialVersionUID = 2845294956907027149L;

@@ -6,7 +6,7 @@ import diboot.core.test.binder.entity.Department;
 import java.util.List;
 
 /**
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/1/5
  */

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * rabbitMQ配置类
  * rabbitmq交换机有4种：fanout，direct，topic，header
  * header用的少，这里略
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Configuration

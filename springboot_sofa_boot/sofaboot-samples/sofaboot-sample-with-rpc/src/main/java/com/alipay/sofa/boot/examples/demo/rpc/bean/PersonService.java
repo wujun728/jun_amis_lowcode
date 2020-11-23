@@ -20,7 +20,7 @@ import javax.ws.rs.*;
 
 /**
  *
- * @author liangen
+ * @author Wujun
  * @version $Id: Person.java, v 0.1 2018年04月09日 下午3:30 liangen Exp $
  */
 @Path("/webapi/rest/person")

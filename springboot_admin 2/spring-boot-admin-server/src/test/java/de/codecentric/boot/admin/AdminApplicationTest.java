@@ -39,7 +39,7 @@ import de.codecentric.boot.admin.config.EnableAdminServer;
 /**
  * Integration test to verify the correct functionality of the REST API.
  *
- * @author Dennis Schulte
+ * @author Wujun
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = TestAdminApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT, properties = {

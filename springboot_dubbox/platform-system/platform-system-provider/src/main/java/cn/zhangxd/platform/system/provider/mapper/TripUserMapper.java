@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 /**
  * 用户
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Mapper
 public interface TripUserMapper extends CrudDao<TripUser> {

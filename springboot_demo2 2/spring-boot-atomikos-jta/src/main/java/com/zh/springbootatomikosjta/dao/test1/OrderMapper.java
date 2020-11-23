@@ -4,7 +4,7 @@ import com.zh.springbootatomikosjta.model.test1.Order;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 public interface OrderMapper {

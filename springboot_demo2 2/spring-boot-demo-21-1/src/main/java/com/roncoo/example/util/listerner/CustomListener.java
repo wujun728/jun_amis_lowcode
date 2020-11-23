@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebListener;
 /**
  * 自定义listener
  * 
- * @author wujing
+ * @author Wujun
  */
 @WebListener
 public class CustomListener implements ServletContextListener {

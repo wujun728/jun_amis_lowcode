@@ -1,7 +1,7 @@
 package com.lhb.lhbauth.jwt.demo.service;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/2 0002 10:50
  */

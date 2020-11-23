@@ -13,7 +13,7 @@ import org.springframework.web.multipart.MaxUploadSizeExceededException;
 /**
  * 全局异常处理
  *
- * @author zhaodui
+ * @author Wujun
  */
 @Slf4j
 @ControllerAdvice

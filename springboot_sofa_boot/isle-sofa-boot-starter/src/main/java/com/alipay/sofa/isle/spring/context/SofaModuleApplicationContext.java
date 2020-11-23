@@ -32,7 +32,7 @@ import java.util.Set;
 /**
  * ApplicationContext which won't publish event via parent context.
  *
- * @author xuanbei 18/3/5
+ * @author Wujun
  */
 public class SofaModuleApplicationContext extends GenericApplicationContext {
     private static final Method getApplicationEventMulticasterMethod;

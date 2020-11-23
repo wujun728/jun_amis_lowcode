@@ -11,7 +11,7 @@ import com.jfinal.aop.Invocation;
 
 /**
  * 认证拦截器
- * @author champ
+ * @author Wujun
  */
 public class AuthInterceptor implements Interceptor {
 	private static Logger authlogger=LoggerFactory.getLogger(AuthInterceptor.class);

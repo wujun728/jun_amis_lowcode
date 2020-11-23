@@ -8,7 +8,7 @@ import com.ibeetl.admin.core.rbac.tree.FunctionItem;
 
 /**
  * 创建一个功能树，用于前端选择
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class FunctionBuildUtil {

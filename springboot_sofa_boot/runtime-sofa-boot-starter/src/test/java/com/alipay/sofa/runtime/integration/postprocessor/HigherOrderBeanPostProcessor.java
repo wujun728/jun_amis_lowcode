@@ -29,7 +29,7 @@ import org.springframework.core.PriorityOrdered;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class HigherOrderBeanPostProcessor implements BeanPostProcessor, PriorityOrdered,

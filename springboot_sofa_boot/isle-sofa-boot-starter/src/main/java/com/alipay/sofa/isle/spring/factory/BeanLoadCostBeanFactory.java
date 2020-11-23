@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * beanFactory which can get bean load time
  *
- * @author xiangxing.deng 2012-11-20
+ * @author Wujun
  */
 public class BeanLoadCostBeanFactory extends DefaultListableBeanFactory {
     private static final long    DEFAULT_BEAN_LOAD_COST = 100;

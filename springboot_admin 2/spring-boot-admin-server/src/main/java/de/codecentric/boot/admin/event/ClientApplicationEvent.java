@@ -22,7 +22,7 @@ import de.codecentric.boot.admin.model.Application;
 /**
  * Abstract Event regearding spring boot admin clients
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public abstract class ClientApplicationEvent implements Serializable {
 	private static final long serialVersionUID = 1L;

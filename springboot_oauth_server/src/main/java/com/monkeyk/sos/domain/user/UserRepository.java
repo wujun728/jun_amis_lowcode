@@ -5,7 +5,7 @@ import com.monkeyk.sos.domain.shared.Repository;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 
 public interface UserRepository extends Repository {

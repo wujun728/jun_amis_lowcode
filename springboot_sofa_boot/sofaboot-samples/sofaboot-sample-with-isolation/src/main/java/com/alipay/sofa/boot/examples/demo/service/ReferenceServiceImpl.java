@@ -22,7 +22,7 @@ import com.alipay.sofa.rpc.config.ConsumerConfig;
 import org.junit.Assert;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class ReferenceServiceImpl implements ReferenceService {

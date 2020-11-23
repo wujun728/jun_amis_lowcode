@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 密码详细
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class PasswordDetail {

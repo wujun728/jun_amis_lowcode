@@ -31,7 +31,7 @@ import com.roncoo.jui.common.util.jui.Page;
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 @Repository
 public class ReportDaoImpl implements ReportDao {

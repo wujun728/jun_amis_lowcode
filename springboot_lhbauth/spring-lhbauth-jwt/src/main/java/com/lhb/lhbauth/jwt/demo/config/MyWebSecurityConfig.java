@@ -22,7 +22,7 @@ import org.springframework.social.security.SpringSocialConfigurer;
 import javax.sql.DataSource;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 浏览器配置
  * @date 2018/12/25 0025 10:53
  */

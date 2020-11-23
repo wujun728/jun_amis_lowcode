@@ -22,7 +22,7 @@ package com.zyd.shiro.business.consts;
 /**
  * 程序中公用的常量类
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/4/16 16:26

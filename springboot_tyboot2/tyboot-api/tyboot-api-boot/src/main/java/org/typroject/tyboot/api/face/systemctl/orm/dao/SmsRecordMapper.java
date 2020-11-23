@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.SmsRecord;
   * 验证码发送记录 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-09-09
  */
 public interface SmsRecordMapper extends BaseMapper<SmsRecord> {

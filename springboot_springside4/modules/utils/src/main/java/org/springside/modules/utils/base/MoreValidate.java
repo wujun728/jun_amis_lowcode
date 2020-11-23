@@ -11,7 +11,7 @@ import org.springside.modules.utils.base.annotation.Nullable;
  * 
  * @see com.google.common.math.MathPreconditions
  * 
- * @author calvin
+ * @author Wujun
  */
 public class MoreValidate {
 

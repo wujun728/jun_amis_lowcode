@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.api;
 /**
  * Exception indicate some error in SOFA runtime.
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ServiceRuntimeException extends RuntimeException {
 

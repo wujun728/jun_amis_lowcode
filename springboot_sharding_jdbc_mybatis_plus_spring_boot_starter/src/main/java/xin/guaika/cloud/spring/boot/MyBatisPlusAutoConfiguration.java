@@ -51,7 +51,7 @@ import xin.guaika.cloud.spring.boot.mybatisPlus.SpringBootVFS;
 
 
 /**
- * @author junchen
+ * @author Wujun
  *
  */
 @Configuration

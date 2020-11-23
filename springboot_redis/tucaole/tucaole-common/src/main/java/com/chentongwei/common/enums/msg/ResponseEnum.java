@@ -3,7 +3,7 @@ package com.chentongwei.common.enums.msg;
 import com.chentongwei.common.enums.IBaseEnum;
 
 /**
- * @author TongWei.Chen 2017-05-16 13:32:19
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用响应常量
  */

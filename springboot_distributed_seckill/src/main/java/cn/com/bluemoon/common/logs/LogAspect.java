@@ -19,7 +19,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
  * 统一日志处理
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月3日 上午11:29:13
  *
  */

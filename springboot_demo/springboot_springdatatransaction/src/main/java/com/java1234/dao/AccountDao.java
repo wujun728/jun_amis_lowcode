@@ -6,7 +6,7 @@ import com.java1234.entity.Account;
 
 /**
  * 账户Dao接口
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface AccountDao extends JpaRepository<Account, Integer>{

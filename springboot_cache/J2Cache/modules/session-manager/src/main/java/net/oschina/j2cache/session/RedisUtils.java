@@ -21,7 +21,7 @@ import java.util.Properties;
 
 /**
  * 用于解析 redis 的配置信息
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class RedisUtils {
 

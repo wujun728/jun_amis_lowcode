@@ -7,7 +7,7 @@ import java.util.UUID;
 
 /** 
  * @Description UUID工具类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:19:54 PM  
  */
 public class UUIDUtil {

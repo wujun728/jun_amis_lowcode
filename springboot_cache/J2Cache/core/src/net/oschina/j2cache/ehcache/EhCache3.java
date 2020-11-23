@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
  * <p>EHCache 3.x 的缓存封装</p>
  * <p>该封装类实现了缓存操作以及对缓存数据失效的侦听</p>
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 @SuppressWarnings("rawtypes")
 public class EhCache3 implements Level1Cache, CacheEventListener {

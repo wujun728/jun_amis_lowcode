@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.api.ServiceRuntimeException;
 /**
  * Interface used to implemented by components who wants to do something when certain lifecycle event of the component.
  *
- * @author khotyn
+ * @author Wujun
  * @since 2.6.0
  */
 public interface ComponentLifeCycle {

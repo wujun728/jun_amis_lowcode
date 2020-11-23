@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @author TongWei.Chen 2017-12-16 17:12:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 举报记录接口
  **/

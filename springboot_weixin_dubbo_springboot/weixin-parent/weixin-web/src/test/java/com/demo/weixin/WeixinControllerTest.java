@@ -1,7 +1,7 @@
 package com.demo.weixin;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description
  * @date 2017/8/1
  * @since 1.0

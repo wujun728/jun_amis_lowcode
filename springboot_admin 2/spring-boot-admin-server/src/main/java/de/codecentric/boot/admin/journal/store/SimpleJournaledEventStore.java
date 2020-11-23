@@ -25,7 +25,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Simple, non-persistent Store for JournaledEvent
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public class SimpleJournaledEventStore implements JournaledEventStore {
 	private final List<ClientApplicationEvent> store = new LinkedList<ClientApplicationEvent>();

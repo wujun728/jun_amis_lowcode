@@ -29,7 +29,7 @@ import java.util.Map;
 
 /**
  * 绑定管理器
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/7/18
  */

@@ -2,7 +2,7 @@ package com.zh.springbootmongodb.base.enums;
 
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/5
  */
 public enum AppResultCode {

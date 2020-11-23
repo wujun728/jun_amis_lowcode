@@ -21,7 +21,7 @@ import com.google.gson.GsonBuilder;
 /**
  * Socket处理器
  * 
- * @author Goofy
+ * @author Wujun
  * @Date 2015年6月11日 下午1:19:50
  */
 @Component

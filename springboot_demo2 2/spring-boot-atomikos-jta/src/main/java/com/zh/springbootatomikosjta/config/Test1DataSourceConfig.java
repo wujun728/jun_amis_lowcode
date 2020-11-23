@@ -22,7 +22,7 @@ import com.mysql.cj.jdbc.MysqlXADataSource;
 import java.sql.SQLException;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 @Configuration

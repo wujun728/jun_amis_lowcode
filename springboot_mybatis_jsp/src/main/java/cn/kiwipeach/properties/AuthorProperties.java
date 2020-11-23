@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
  * Create Date: 2017/11/05
  * Description: SpringBoot入门案例之作者实体类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @Component
 @ConfigurationProperties(prefix = "author")

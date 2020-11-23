@@ -10,7 +10,7 @@ import org.typroject.tyboot.core.rdbms.model.BaseModel;
  * 保存订单相关的明细信息包括：用户名称，昵称，商品名称，商品总数，商家明细信息，订单提交和支付附言等 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

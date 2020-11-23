@@ -6,7 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * 2016/3/25
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public abstract class PasswordHandler {
 

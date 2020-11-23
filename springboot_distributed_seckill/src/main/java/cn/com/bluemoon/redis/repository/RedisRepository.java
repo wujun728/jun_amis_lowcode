@@ -18,7 +18,7 @@ import java.util.*;
 /**
  * Redis Repository
  *
- * @author Guoqing
+ * @author Wujun
  */
 public class RedisRepository {
 

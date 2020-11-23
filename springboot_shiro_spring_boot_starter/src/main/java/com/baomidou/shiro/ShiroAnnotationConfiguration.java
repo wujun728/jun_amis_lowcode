@@ -12,7 +12,7 @@ import org.springframework.context.annotation.DependsOn;
 /**
  * 权限注解配置启动器
  *
- * @author TaoYu
+ * @author Wujun
  */
 public class ShiroAnnotationConfiguration {
 

@@ -16,7 +16,7 @@ import com.ibeetl.admin.core.util.PlatformException;
 import com.ibeetl.admin.core.util.UUIDUtil;
 /**
  * 一个本地文件系统，管理临时文件和用户文件
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class LocalFileService   implements FileService {

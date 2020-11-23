@@ -27,7 +27,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * 单集群演示功能测试用例，spring boot配置项以spring.elasticsearch.bboss开头
  * 对应的配置文件为application.properties文件
- * @author  yinbp [122054810@qq.com]
+ * @author Wujun
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

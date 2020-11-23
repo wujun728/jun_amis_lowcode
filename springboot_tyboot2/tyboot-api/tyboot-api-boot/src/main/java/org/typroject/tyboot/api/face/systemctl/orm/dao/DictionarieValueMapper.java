@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.DictionarieValue;
   * 系统字典表数据 Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-06-27
  */
 public interface DictionarieValueMapper extends BaseMapper<DictionarieValue> {

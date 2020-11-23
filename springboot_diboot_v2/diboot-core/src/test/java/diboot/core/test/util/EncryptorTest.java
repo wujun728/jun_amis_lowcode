@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * <Description>
  *
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 1.0
  * @date 2019/06/02
  */

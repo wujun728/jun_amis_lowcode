@@ -21,7 +21,7 @@ import java.time.ZoneId;
 /**
  * 2015/11/16
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class OauthClientDetailsRowMapper implements RowMapper<OauthClientDetails> {
 

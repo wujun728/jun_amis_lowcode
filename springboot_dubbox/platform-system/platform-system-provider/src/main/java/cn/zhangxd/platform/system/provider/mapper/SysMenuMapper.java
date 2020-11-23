@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 菜单DAO接口
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Mapper
 public interface SysMenuMapper extends CrudDao<SysMenu> {

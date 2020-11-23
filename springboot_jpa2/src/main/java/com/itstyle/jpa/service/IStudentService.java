@@ -7,7 +7,7 @@ import com.itstyle.jpa.model.Student;
 public interface IStudentService {
 	 /**
 	  * 返回List<Object[]>
-	  * @Author  科帮网
+	  * @author Wujun
 	  * @return  List<Object[]>
 	  * @Date	2018年3月28日
 	  * 更新日志
@@ -17,7 +17,7 @@ public interface IStudentService {
 	 List<Object[]> listStudent();
 	 /**
 	  * 返回List<Student>
-	  * @Author  科帮网
+	  * @author Wujun
 	  * @return  List<Student>
 	  * @Date	2018年3月28日
 	  * 更新日志
@@ -27,7 +27,7 @@ public interface IStudentService {
      List<Student> listStudentModel();
      /**
       * List<Map<Object, Object>>
-      * @Author  科帮网
+      * @author Wujun
       * @return  List<Map<Object,Object>>
       * @Date	2018年3月28日
       * 更新日志
@@ -37,7 +37,7 @@ public interface IStudentService {
      List<Map<Object, Object>> listStudentMap();
      /**
       * 批量插入
-      * @Author  科帮网  void
+      * @author Wujun
       * @Date	2018年4月16日
       * 更新日志
       * 2018年4月16日  科帮网 首次创建
@@ -46,7 +46,7 @@ public interface IStudentService {
      void batchSave();
      /**
       * 并行任务
-      * @Author  科帮网  void
+      * @author Wujun
       * @Date	2018年4月16日
       * 更新日志
       * 2018年4月16日  科帮网 首次创建

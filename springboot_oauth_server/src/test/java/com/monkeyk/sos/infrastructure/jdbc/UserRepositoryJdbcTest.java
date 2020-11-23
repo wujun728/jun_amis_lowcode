@@ -24,7 +24,7 @@ import static org.junit.Assert.*;
 
 
 /*
-  * @author Shengzhao Li
+  * @author Wujun
   */
 public class UserRepositoryJdbcTest extends AbstractRepositoryTest {
 

@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 /**
  * LdapDemoApplicationTest
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/8/26 1:06
  */

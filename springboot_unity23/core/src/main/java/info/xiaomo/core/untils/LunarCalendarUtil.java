@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- * @author : xiaomo (https://xiaomo.info) (https://github.com/houko)
+ * @author Wujun
  * @version : 2017/1/14 9:59
  */
 

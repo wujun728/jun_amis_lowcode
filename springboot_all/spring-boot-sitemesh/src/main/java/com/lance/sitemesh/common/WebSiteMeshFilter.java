@@ -5,7 +5,7 @@ import org.sitemesh.config.ConfigurableSiteMeshFilter;
 
 /**
  * 配置装饰器
- * @author lance
+ * @author Wujun
  */
 public class WebSiteMeshFilter extends ConfigurableSiteMeshFilter{
 

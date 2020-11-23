@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import com.roncoo.example.bean.RoncooUser;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @Component
 public class RoncooMongodbComponent {

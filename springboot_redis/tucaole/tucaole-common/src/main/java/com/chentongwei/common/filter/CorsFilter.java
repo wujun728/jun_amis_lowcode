@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Tongwei.Chen 2017-9-17 12:58:56
+ * @author Wujun
  * @Project tucaole
  * @Description: 跨域过滤器
  */

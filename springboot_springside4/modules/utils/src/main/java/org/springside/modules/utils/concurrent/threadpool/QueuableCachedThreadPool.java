@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 
  * 2. TaskQueue中可能3次有锁的读取线程数量，改为只读取1次，这把锁也是这个实现里的唯一遗憾了。
  * 
- * @author calvin
+ * @author Wujun
  *
  */
 public class QueuableCachedThreadPool extends java.util.concurrent.ThreadPoolExecutor {

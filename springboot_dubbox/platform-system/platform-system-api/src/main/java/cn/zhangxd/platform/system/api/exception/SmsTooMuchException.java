@@ -6,7 +6,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * 短信发送太频繁
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class SmsTooMuchException extends BusinessException {
 

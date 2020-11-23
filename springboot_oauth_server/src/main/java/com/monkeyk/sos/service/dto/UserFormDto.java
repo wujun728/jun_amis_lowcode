@@ -7,7 +7,7 @@ import com.monkeyk.sos.infrastructure.PasswordHandler;
 /**
  * 2016/3/25
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class UserFormDto extends UserDto {
     private static final long serialVersionUID = 7959857016962260738L;

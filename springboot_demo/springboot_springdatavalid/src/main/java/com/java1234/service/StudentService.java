@@ -4,7 +4,7 @@ import com.java1234.entity.Student;
 
 /**
  * 学生信息Service接口
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface StudentService {

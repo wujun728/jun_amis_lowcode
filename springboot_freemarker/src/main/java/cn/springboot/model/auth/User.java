@@ -6,7 +6,7 @@ import cn.springboot.model.BaseEntity;
 
 /** 
  * @Description 用户对象
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:11:44 AM  
  */
 public class User implements BaseEntity<String> {

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * common returnT:公共返回封装类
- * @author zhengkai.blog.csdn.net
+ * @author Wujun
  */
 @Data
 public class ReturnT implements Serializable {

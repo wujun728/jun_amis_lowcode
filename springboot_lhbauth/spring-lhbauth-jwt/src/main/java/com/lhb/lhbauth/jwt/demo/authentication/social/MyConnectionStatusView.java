@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 查看某个账号绑定了哪些社交账号
  * @date 2019/1/7 0007 14:39
  */

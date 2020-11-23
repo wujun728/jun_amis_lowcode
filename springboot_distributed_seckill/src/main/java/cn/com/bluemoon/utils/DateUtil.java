@@ -12,7 +12,7 @@ import java.util.TimeZone;
 /**
  * 
  * @Description: 日期工具类
- * @author Luxh
+ * @author Wujun
  * @date Nov 13, 2012
  * @version V1.0
  */

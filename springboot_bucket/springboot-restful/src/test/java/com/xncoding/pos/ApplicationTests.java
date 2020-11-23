@@ -32,7 +32,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * ApplicationTests
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/3/4
  */

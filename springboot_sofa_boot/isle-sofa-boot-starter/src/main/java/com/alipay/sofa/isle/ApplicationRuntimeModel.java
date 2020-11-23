@@ -26,7 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * contains all deployments of the application
  *
- * @author khotyn 7/25/14 8:15 PM
+ * @author Wujun
  */
 public class ApplicationRuntimeModel {
     /** deploys */

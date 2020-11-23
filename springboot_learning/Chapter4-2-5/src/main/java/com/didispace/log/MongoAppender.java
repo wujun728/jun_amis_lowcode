@@ -11,7 +11,7 @@ import org.apache.log4j.spi.LoggingEvent;
 /**
  * 日志插入MongoDB
  *
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @date 16/5/23 下午4:53.
  * @blog http://blog.didispace.com

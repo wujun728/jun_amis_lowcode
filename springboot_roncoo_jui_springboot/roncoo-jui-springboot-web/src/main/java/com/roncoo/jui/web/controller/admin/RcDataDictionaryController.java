@@ -15,7 +15,7 @@ import com.roncoo.jui.web.service.RcDataDictionaryService;
 /**
  * 数据字典
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-11
  */
 @Controller

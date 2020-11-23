@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * Entity集合绑定实现
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/1/19
  */

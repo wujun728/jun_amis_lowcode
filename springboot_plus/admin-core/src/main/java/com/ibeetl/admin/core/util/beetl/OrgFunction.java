@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 通过orgId获取orgName,从缓存中获取
- * @author xiandafu
+ * @author Wujun
  *
  */
 @Component

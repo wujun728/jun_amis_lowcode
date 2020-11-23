@@ -24,7 +24,7 @@ import java.util.EnumMap;
 /**
  * 条形码和二维码编码解码
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class ZxingHelper {
 

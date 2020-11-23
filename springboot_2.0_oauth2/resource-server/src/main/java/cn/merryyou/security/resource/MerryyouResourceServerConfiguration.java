@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 /**
  * Created on 2018/5/5 0005.
  *
- * @author zlf
+ * @author Wujun
  * @email i@merryyou.cn
  * @since 1.0
  */

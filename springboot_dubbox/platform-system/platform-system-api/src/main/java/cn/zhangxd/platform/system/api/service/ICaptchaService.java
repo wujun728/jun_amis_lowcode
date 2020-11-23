@@ -7,7 +7,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * 短信服务
  *
- * @author zhangxd
+ * @author Wujun
  */
 public interface ICaptchaService {
 

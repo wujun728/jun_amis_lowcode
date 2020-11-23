@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
  * 
  * 5. 其他杂项
  * 
- * @author calvin
+ * @author Wujun
  */
 public class ClassUtil {
 

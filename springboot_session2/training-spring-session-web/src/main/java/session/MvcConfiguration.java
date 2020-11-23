@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 /**
  * Spring Config
  * 
- * @author percy
+ * @author Wujun
  *
  */
 @Configuration

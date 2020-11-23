@@ -30,7 +30,7 @@ import org.springframework.web.servlet.resource.ResourceResolverChain;
 /**
  * {@link ResourceResolver} which is looking for minified version of resources.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class PreferMinifiedFilteringResourceResolver extends AbstractResourceResolver {
 	private final String extensionPrefix;

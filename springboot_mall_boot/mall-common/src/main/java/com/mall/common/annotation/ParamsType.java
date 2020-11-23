@@ -1,7 +1,7 @@
 package com.mall.common.annotation;
 
 /**
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/12/22 20:18
  */

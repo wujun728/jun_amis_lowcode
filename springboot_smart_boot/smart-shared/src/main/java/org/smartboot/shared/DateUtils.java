@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
  * 
  * 提供了常用的日期处理功能
  *
- * @author Seer
+ * @author Wujun
  * @version DateUtils.java, v 0.1 2015年11月4日 下午6:51:28 Seer Exp.
  */
 public final class DateUtils {

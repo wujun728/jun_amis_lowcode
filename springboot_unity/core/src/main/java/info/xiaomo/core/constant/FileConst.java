@@ -1,7 +1,7 @@
 package info.xiaomo.core.constant;
 
 /**
- * @author qq
+ * @author Wujun
  */
 
 public enum FileConst {

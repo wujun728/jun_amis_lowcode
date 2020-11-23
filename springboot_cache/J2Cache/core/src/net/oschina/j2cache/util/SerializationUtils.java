@@ -25,7 +25,7 @@ import java.util.Properties;
 /**
  * 对象序列化工具包
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class SerializationUtils {
 

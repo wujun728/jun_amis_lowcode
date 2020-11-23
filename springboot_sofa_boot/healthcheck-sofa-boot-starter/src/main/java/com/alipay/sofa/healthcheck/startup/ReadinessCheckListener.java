@@ -33,8 +33,8 @@ import java.util.Map;
 
 /**
  * Health check start checker.
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  */
 public class ReadinessCheckListener implements PriorityOrdered,
                                    ApplicationListener<ContextRefreshedEvent> {

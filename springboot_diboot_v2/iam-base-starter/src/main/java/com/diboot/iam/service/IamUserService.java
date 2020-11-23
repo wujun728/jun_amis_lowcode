@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
 * 系统用户相关Service
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

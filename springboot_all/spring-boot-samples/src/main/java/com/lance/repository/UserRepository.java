@@ -8,7 +8,7 @@ public interface UserRepository extends JpaRepository<UserEntity, Long>{
 	
 	/**
 	 * 根据userName查询
-	 * @author lance
+	 * @author Wujun
 	 * 2014-6-11下午11:30:31
 	 * @param userName
 	 * @return

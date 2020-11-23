@@ -35,7 +35,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @RunWith(SeparateClassLoaderTestRunner.class)

@@ -28,7 +28,7 @@ import static com.alibaba.druid.pool.DruidAbstractDataSource.*;
 /**
  * Druid参数配置
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 @Data

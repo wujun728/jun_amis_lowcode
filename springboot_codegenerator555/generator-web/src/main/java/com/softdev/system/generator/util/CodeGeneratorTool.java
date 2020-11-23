@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * code generate tool
  *
- * @author xuxueli 2018-04-25 16:29:58
+ * @author Wujun
  */
 public class CodeGeneratorTool {
 

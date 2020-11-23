@@ -23,7 +23,7 @@ import org.springframework.util.StringUtils;
 import org.w3c.dom.Element;
 
 /**
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ReferenceDefinitionParser extends AbstractContractDefinitionParser {
     public static final String JVM_FIRST             = "jvm-first";

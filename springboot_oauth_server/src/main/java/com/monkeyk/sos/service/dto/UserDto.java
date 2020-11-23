@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 2016/3/12
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class UserDto implements Serializable {
     private static final long serialVersionUID = -2502329463915439215L;

@@ -66,7 +66,7 @@ public class AliPayController {
     }
     /**
      * 支付宝支付回调(二维码、H5、网站)
-     * @Author  科帮网
+     * @author Wujun
      * @param request
      * @param response
      * @throws Exception  void

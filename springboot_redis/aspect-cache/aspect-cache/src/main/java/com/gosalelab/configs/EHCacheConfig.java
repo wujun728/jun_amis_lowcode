@@ -21,7 +21,7 @@ import java.net.URL;
 import java.time.Duration;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnProperty(prefix = CacheConstants.ASPECT_CACHE_PREFIX, name = "provider", havingValue = CacheConstants.CACHE_EHCACHE_NAME)

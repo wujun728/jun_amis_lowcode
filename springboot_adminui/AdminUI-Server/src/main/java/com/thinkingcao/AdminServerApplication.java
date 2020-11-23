@@ -8,7 +8,7 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
 
 /**
  * <pre>
- * @author cao_wencao
+ * @author Wujun
  * @date 2018年11月22日 上午10:36:11
  * </pre>
  */
@@ -19,7 +19,7 @@ public class AdminServerApplication {
 
 	/**
 	 * <pre>  
-	 * @author cao_wencao
+	 * @author Wujun
 	 * @param args
 	 * </pre>  
 	 */

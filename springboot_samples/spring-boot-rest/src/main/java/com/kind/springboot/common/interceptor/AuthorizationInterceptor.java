@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
  * Function:自定义拦截器，判断此次请求是否有权限. <br/>
  * Date:     2016年8月11日 下午1:09:56 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

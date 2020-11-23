@@ -12,7 +12,7 @@ import java.lang.annotation.RetentionPolicy;
  * </pre>
  * 
  * 只有拥有此项功能的角色才能操作，否则，权限不足
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Retention(RetentionPolicy.RUNTIME)

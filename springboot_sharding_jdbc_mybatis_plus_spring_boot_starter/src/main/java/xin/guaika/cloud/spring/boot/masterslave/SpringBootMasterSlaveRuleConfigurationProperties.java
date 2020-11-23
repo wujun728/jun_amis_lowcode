@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Master slave rule configuration properties.
  *
- * @author caohao
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = "sharding.jdbc.config.masterslave")
 public class SpringBootMasterSlaveRuleConfigurationProperties extends YamMasterSlaveRuleConfiguration {

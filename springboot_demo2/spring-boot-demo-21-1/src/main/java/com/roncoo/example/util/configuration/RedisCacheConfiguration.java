@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * redis 自定义缓存管理器
  * 
- * @author wujing
+ * @author Wujun
  */
 @Configuration
 public class RedisCacheConfiguration extends CachingConfigurerSupport {

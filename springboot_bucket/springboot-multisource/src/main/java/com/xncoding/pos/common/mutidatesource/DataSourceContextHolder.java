@@ -3,7 +3,7 @@ package com.xncoding.pos.common.mutidatesource;
 /**
  * datasource的上下文
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017年3月5日 上午9:10:58
  */
 public class DataSourceContextHolder {

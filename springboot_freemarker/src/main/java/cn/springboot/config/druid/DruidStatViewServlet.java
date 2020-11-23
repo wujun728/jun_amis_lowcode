@@ -7,7 +7,7 @@ import com.alibaba.druid.support.http.StatViewServlet;
 
 /** 
  * @Description druid数据源状态监控
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 3:15:56 PM  
  */
 @WebServlet(urlPatterns = "/druid/*", initParams = { @WebInitParam(name = "allow", value = "192.168.1.72,127.0.0.1"), // IP白名单 (没有配置或者为空，则允许所有访问)

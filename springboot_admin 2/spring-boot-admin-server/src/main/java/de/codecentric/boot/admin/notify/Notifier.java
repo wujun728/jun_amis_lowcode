@@ -20,7 +20,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Interface for components which emits notifications upon status changes in clients
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public interface Notifier {
 

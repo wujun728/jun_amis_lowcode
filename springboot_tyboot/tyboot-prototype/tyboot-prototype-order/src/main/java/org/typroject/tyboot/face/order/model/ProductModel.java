@@ -13,7 +13,7 @@ import java.util.List;
  * 商品表 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

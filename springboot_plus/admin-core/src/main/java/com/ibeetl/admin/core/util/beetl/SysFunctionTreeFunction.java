@@ -13,7 +13,7 @@ import com.ibeetl.admin.core.service.CorePlatformService;
 
 /**
  * 手工构造一个功能树，书上包含模块，功能，按钮
- * @author Administrator
+ * @author Wujun
  *
  */
 @Component

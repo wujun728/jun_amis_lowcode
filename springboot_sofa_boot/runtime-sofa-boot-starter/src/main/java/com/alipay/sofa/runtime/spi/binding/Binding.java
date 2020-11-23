@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.spi.health.HealthResult;
 import org.w3c.dom.Element;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface Binding {
     /**

@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * Service Implementation
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ServiceImpl extends AbstractContract implements Service {
     private Object target;

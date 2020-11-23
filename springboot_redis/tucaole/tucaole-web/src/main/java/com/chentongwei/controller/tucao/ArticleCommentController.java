@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @author TongWei.Chen 2017-12-22 10:23:48
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章评论接口
  */

@@ -44,7 +44,7 @@ import com.alipay.sofa.runtime.spi.service.BindingConverter;
 import com.alipay.sofa.runtime.spi.service.BindingConverterFactory;
 
 /**
- * @author xuanbei 18/5/15
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 @RunWith(PowerMockRunner.class)

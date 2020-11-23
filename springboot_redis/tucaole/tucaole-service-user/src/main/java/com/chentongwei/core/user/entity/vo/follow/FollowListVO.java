@@ -3,7 +3,7 @@ package com.chentongwei.core.user.entity.vo.follow;
 import lombok.Data;
 
 /**
- * @author TongWei.Chen 2017-12-20 19:10:42
+ * @author Wujun
  * @Project tucaole
  * @Description: 我关注的、关注我的人
  */

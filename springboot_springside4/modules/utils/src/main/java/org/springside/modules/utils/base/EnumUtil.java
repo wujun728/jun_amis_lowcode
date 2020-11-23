@@ -7,7 +7,7 @@ import org.apache.commons.lang3.EnumUtils;
 /**
  * 枚举工具集
  * 
- * @author calvin
+ * @author Wujun
  *
  */
 public class EnumUtil {

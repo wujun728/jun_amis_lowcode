@@ -12,7 +12,7 @@ import junit.framework.TestCase;
 /**
  * Function:junit4SpringContextTests. <br/>
  *
- * @author weiguo.liu
+ * @author Wujun
  * @version
  * @since JDK 1.7
  * @see

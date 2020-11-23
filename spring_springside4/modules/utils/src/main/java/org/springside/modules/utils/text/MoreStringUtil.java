@@ -20,7 +20,7 @@ import com.google.common.base.Utf8;
  * 
  * 2. 针对char的replace first/last, startWith,endWith 等
  * 
- * @author calvin
+ * @author Wujun
  */
 public class MoreStringUtil {
 

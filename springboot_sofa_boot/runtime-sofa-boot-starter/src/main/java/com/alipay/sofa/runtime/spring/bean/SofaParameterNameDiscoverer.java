@@ -29,7 +29,7 @@ import com.alipay.sofa.runtime.annotation.PlaceHolderBinder;
 import com.alipay.sofa.runtime.api.annotation.SofaReference;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.0
  */
 public class SofaParameterNameDiscoverer implements ParameterNameDiscoverer {

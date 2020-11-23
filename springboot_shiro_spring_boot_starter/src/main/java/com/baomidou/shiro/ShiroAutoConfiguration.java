@@ -50,7 +50,7 @@ import org.springframework.util.CollectionUtils;
 /**
  * shiro集成spring-boot启动器
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Configuration
 @Import({ShiroAnnotationConfiguration.class})

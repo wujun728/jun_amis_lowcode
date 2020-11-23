@@ -11,7 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 微信用户service
  * @date 2017/7/27
  * @since 1.0

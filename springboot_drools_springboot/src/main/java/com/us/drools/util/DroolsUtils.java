@@ -23,7 +23,7 @@ import org.kie.internal.io.ResourceFactory;
 
 /**
  * 动态生成kjar工具类
- * @author caicongyang1
+ * @author Wujun
  * @version id: DroolsUtils, v 0.1 16/10/26 下午1:58 caicongyang1 Exp $$
  */
 public class DroolsUtils {

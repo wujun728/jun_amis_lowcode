@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 /**
  * 安全配置.
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午1:27
  */
 @EnableWebSecurity

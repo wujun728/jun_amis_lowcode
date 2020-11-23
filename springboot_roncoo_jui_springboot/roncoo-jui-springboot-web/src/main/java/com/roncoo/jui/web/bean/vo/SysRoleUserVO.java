@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
  * 角色用户关联表
  * </p>
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-21
  */
 @Data

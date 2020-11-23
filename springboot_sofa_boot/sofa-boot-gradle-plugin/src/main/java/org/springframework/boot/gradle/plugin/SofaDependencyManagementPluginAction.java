@@ -30,8 +30,8 @@ import java.util.Objects;
  * <p>
  * Origin from {@link DependencyManagementPlugin}
  *
- * @author Andy Wilkinson
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
  */
 public class SofaDependencyManagementPluginAction implements PluginApplicationAction {
     @Override

@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 /**
  * 表格解析Util
- * @author zhengkai.blog.csdn.net
+ * @author Wujun
  */
 public class TableParseUtil {
 
@@ -329,7 +329,7 @@ public class TableParseUtil {
     }
     /**
      * parse SQL by regex
-     * @author https://github.com/ydq
+     * @author Wujun
      * @param paramInfo
      * @return
      */

@@ -20,7 +20,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 
 /**
- * @author emeroad
+ * @author Wujun
  */
 public interface Buffer {
 

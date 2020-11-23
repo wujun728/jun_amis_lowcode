@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * @Description: 邮件实体
  *
- * @author TongWei.Chen 2018-06-15 16:23:14
+ * @author Wujun
  * @Project common-boot-email
  */
 @Data

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 /**
- * @author TongWei.Chen 2017-09-21 19:36:59
+ * @author Wujun
  * @Project tucaole
  * @Description: 系统日志拦截器
  */

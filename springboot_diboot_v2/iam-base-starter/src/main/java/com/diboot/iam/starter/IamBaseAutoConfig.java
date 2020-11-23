@@ -45,7 +45,7 @@ import java.util.Map;
 
 /**
  * IAM自动配置类
- * @author : wee
+ * @author Wujun
  * @version : v2.0
  * @Date 2019-10-11  10:54
  */

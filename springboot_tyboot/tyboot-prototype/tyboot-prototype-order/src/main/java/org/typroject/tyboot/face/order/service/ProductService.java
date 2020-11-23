@@ -16,7 +16,7 @@ import java.util.List;
  * 商品表 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Component

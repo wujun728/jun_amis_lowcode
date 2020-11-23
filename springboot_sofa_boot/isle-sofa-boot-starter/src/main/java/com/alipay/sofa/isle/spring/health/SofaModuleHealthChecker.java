@@ -24,7 +24,7 @@ import org.springframework.boot.actuate.health.Health;
 /**
  * module health checker which implements ${@link com.alipay.sofa.healthcheck.core.HealthChecker}
  *
- * @author xuanbei 18/5/6
+ * @author Wujun
  */
 public class SofaModuleHealthChecker extends AbstractModuleHealthChecker implements HealthChecker {
 

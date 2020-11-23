@@ -8,7 +8,7 @@ import org.springside.modules.utils.number.RandomUtil;
  * 
  * from Twitter Common, 优化使用ThreadLocalRandom
  * 
- * @author calvin
+ * @author Wujun
  */
 public class Sampler {
 

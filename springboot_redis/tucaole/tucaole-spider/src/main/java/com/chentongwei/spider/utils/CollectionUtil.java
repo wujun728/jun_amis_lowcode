@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author TongWei.Chen 2017-09-27 18:45:19
+ * @author Wujun
  * @Project tucaole
  * @Description: 集合工具类
  */

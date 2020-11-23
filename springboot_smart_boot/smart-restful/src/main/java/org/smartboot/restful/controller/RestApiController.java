@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * 动态API适配接口(Facade), 这里的代码任何时候都不会改变.
  * 
- * @author Seer
+ * @author Wujun
  * @version DynApiController.java, v 0.1 2016年2月10日 下午2:25:45 Seer Exp.
  */
 @RestController

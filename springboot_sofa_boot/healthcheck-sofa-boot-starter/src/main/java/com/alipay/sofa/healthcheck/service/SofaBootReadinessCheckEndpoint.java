@@ -32,8 +32,8 @@ import java.util.Map;
 /**
  * The health check HTTP checker for start status.
  *
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 @Endpoint(id = "readiness")

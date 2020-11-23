@@ -17,7 +17,7 @@ import com.roncoo.jui.web.service.SysMenuService;
 /**
  * 菜单角色关联表
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-20
  */
 @Controller

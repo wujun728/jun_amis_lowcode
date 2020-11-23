@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.beans.impl;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.0
  */
 public class MethodBeanMethodAnnotationSampleService implements SampleService {

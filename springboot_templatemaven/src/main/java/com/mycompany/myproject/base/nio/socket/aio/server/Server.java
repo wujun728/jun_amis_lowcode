@@ -2,7 +2,7 @@ package com.mycompany.myproject.base.nio.socket.aio.server;
 
 /** 
   * AIO服务端 
-  * @author yangtao__anxpp.com 
+  * @author Wujun
   * @version 1.0 
   */
 public class Server {

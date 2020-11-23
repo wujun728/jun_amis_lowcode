@@ -32,7 +32,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Notifier submitting events to Pagerduty.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class PagerdutyNotifier extends AbstractStatusChangeNotifier {
 	public static final URI DEFAULT_URI = URI

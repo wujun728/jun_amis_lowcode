@@ -3,7 +3,7 @@ package com.usthe.bootshiro.util;
 import java.util.regex.Pattern;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description Web防火墙工具类
  * @Date 19:51 2018/4/15
  */

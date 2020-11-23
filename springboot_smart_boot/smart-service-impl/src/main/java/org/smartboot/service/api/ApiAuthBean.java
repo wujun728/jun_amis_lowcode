@@ -8,7 +8,7 @@ import org.smartboot.shared.ToString;
 /**
  * API鉴权数据实体
  * 
- * @author Seer
+ * @author Wujun
  * @versio n ApiAuthBean.java, v 0.1 2016年2月10日 下午2:20:43 Seer Exp.
  */
 public class ApiAuthBean extends ToString {
@@ -27,7 +27,7 @@ public class ApiAuthBean extends ToString {
 	/**
 	 * Api鉴权上下文对象键名
 	 * 
-	 * @author Seer
+	 * @author Wujun
 	 * @version ApiAuthBean.java, v 0.1 2016年6月16日 下午2:24:58 Seer Exp.
 	 */
 	public interface ContextKey {

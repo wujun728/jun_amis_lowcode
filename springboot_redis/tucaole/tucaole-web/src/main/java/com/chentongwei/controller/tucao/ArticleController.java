@@ -23,7 +23,7 @@ import javax.validation.Valid;
 import java.util.Date;
 
 /**
- * @author TongWei.Chen 2017-12-12 19:33:49
+ * @author Wujun
  * @Project tucaole
  * @Description: 吐槽文章接口
  */

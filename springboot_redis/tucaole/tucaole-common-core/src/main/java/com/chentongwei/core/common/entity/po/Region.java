@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-11-30 12:55:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 省市区
  */

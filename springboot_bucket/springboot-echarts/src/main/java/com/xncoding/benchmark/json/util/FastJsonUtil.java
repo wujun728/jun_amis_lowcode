@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 /**
  * FastJsonUtil
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/24
  */

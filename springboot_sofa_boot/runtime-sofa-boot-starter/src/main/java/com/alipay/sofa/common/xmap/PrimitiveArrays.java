@@ -20,8 +20,8 @@ import java.util.Collection;
 import java.util.Iterator;
 
 /**
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public final class PrimitiveArrays {

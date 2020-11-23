@@ -37,7 +37,7 @@ import de.codecentric.boot.admin.web.AdminController;
 /**
  * REST-Controller for managing notification filters
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 @AdminController
 @ResponseBody

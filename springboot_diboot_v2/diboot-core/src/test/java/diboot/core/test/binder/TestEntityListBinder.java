@@ -25,7 +25,7 @@ import java.util.List;
 
 /**
  *  测试字段绑定
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/06/22
  */

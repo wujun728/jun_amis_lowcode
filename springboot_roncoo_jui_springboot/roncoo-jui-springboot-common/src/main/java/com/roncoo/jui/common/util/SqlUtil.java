@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 /**
  * sql工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public final class SqlUtil {
 	private SqlUtil() {

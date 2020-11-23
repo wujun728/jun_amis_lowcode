@@ -2,7 +2,7 @@ package org.typroject.tyboot.core.foundation.utils;
 
 /**
  * 
- * @author magintursh
+ * @author Wujun
  * 字节工具类，提供字节的基本转换
  */
 public class ByteUtil {

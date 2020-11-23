@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.privilage.orm.entity.Menu;
   * 菜单管理 Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 public interface MenuMapper extends BaseMapper<Menu> {

@@ -27,8 +27,8 @@ import java.util.List;
 /**
  * ExtensionPoint Implementation。
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionPointImpl implements ExtensionPointInternal, Serializable {

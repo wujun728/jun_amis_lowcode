@@ -5,7 +5,7 @@ import com.demo.weixin.exception.WeixinException;
 import com.qq.connect.QQConnectException;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description
  * @date 2017/7/25
  * @since 1.0

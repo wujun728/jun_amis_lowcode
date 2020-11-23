@@ -24,7 +24,7 @@ import java.util.Date;
 /**
  * 我的bean配置类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/04
  */
 @Configuration

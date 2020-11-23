@@ -4,7 +4,7 @@ package com.kind.springboot.common.config;
  * Function: 用户常量. <br/>
  * Date:     2016年8月11日 上午11:31:57 <br/>
  *
- * @author weiguo.liu
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

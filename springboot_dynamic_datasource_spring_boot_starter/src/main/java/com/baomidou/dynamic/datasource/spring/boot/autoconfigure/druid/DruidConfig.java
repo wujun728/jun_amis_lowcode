@@ -32,7 +32,7 @@ import static com.baomidou.dynamic.datasource.spring.boot.autoconfigure.druid.Dr
 /**
  * Druid参数配置
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 @Data

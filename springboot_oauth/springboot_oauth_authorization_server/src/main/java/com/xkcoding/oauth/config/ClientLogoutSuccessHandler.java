@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * 客户团退出登录成功处理器.
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午22:11
  */
 @Slf4j

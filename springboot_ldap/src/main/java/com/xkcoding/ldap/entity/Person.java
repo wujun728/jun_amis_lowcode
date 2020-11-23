@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * People
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/8/26 0:51
  */

@@ -3,7 +3,7 @@ package com.zh.springbootatomikosjta.config.properties;
 import lombok.Data;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/10
  */
 @Data

@@ -1,7 +1,7 @@
 package com.demo.weixin.constants;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 企业微信的 corpId corp secret
  * @date 2017/7/31
  * @since 1.0

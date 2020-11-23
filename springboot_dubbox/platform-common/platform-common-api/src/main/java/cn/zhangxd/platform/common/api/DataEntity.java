@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 数据Entity类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class DataEntity extends BaseEntity {
 

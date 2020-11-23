@@ -8,7 +8,7 @@ import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 /**
  * 微信的OAuth2流程处理器的提供器，供spring social的connect体系调用
  *
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/4 0004 10:02
  */

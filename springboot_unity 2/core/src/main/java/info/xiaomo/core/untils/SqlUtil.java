@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * Created by IntelliJ IDEA.
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/syoubaku
  * email: xiaomo@xiamoo.info
  * QQ_NO: 83387856

@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * 数据分页组件
  * 
- * @author wujing
+ * @author Wujun
  * @param <T>
  */
 public class Page<T extends Serializable> implements Serializable {

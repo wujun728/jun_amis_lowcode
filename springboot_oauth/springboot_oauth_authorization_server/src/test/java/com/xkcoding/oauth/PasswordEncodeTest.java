@@ -7,7 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * .
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午3:51
  */
 public class PasswordEncodeTest {

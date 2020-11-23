@@ -1,7 +1,7 @@
 package com.lhb.lhbauth.jwt.demo.common;
 
 /**
- * @Author lvhaibao
+ * @author Wujun
  * @Date 2018/11/20 23:10
  */
 public enum SWCodeEnum {

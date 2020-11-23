@@ -3,7 +3,7 @@ package cn.com.bluemoon.common.exception;
 /**
  * 抽象接口
  *
- * @author fengshuonan
+ * @author Wujun
  * @date 2017-12-28-下午10:27
  */
 public interface ServiceExceptionEnum {

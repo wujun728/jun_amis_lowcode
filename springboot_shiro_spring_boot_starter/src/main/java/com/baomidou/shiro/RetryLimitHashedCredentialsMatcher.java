@@ -10,7 +10,7 @@ import org.apache.shiro.cache.Cache;
 /**
  * 重试验证器
  *
- * @author TaoYu
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class RetryLimitHashedCredentialsMatcher extends HashedCredentialsMatcher {

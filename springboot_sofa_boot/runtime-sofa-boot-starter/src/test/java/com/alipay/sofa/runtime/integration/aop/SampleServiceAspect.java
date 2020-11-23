@@ -21,7 +21,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @author xuanbei
+ * @author Wujun
  * @since 2.4.5
  */
 public class SampleServiceAspect {

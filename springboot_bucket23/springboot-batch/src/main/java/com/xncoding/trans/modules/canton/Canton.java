@@ -3,7 +3,7 @@ package com.xncoding.trans.modules.canton;
 /**
  * Canton
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/5
  */

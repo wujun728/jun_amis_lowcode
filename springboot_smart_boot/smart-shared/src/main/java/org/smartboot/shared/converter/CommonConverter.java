@@ -14,7 +14,7 @@ import net.sf.cglib.core.Converter;
 /**
  * 通用转换器,要转换的对象间的变量名称要一致
  * 
- * @author Seer
+ * @author Wujun
  * @version CommonConverter.java, v 0.1 2015年11月18日 下午1:56:53 Seer Exp.
  */
 public class CommonConverter {

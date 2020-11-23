@@ -10,7 +10,7 @@ import com.ibeetl.admin.core.service.CoreRoleService;
 
 /**
  * 获取系统的所有角色列表
- * @author xiandafu
+ * @author Wujun
  *
  */
 @Component

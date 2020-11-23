@@ -15,7 +15,7 @@ import com.roncoo.jui.web.service.WebSiteUrlService;
 /**
  * 网址汇总地址
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-22
  */
 @Controller

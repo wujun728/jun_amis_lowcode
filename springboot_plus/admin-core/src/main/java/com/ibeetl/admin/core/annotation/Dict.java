@@ -11,7 +11,7 @@ import com.ibeetl.admin.core.util.enums.CoreDictType;
  * 描述: 用来标注词典字段
  * 
  *
- * @author : lijiazhi
+ * @author Wujun
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

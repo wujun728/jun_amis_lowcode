@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TongWei.Chen 2017-05-19 09:23:34
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的List操作
  */

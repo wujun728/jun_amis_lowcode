@@ -4,7 +4,7 @@ package com.usthe.bootshiro.shiro.provider;
 import com.usthe.bootshiro.domain.vo.Account;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description  数据库用户密码账户提供
  * @Date 16:35 2018/2/11
  */

@@ -14,7 +14,7 @@ import com.google.common.base.Utf8;
  * 
  * 本类仅补充少量额外方法, 尤其是针对char的运算
  * 
- * @author calvin
+ * @author Wujun
  */
 public class MoreStringUtil {
 

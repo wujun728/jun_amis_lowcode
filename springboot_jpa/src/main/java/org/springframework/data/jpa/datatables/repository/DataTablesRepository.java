@@ -14,7 +14,7 @@ import java.util.function.Function;
  * Convenience interface to allow pulling in {@link PagingAndSortingRepository} and
  * {@link JpaSpecificationExecutor} functionality in one go.
  * 
- * @author Damien Arrachequesne
+ * @author Wujun
  */
 @NoRepositoryBean
 public interface DataTablesRepository<T, ID extends Serializable>

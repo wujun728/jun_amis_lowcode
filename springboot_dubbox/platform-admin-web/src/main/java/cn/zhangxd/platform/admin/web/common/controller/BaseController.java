@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * 控制器支持类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class BaseController {
 

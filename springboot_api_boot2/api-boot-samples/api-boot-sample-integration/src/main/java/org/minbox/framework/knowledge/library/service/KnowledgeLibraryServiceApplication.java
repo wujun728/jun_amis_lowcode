@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 /**
  * 恒宇少年知识库服务接口
  *
- * @author yuqiyu
+ * @author Wujun
  */
 @SpringBootApplication
 @EnableApiBootSwagger

@@ -11,7 +11,7 @@ import java.util.Date;
  * 验证码发送记录 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-05
  */
 @EqualsAndHashCode(callSuper = true)

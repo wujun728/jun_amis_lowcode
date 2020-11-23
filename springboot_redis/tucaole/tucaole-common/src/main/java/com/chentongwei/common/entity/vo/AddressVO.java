@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-11-30 13:23:39
+ * @author Wujun
  * @Project tucaole
  * @Description: 省市区外层VO
  */

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author TongWei.Chen 2017-9-28 17:56:41
+ * @author Wujun
  * @Project tucaole
  * @Description: 分类接口
  */

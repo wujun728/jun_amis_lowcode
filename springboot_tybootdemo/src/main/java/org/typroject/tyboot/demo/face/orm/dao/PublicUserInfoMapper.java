@@ -8,7 +8,7 @@ import org.typroject.tyboot.demo.face.orm.entity.PublicUserInfo;
  * 农户信息 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-09-16
  */
 public interface PublicUserInfoMapper extends BaseMapper<PublicUserInfo> {

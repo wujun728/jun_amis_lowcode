@@ -25,7 +25,7 @@ import org.junit.Test;
 import java.util.Map;
 
 /**
- * @author xuanbei 18/5/11
+ * @author Wujun
  */
 public class AbstractComponentTest {
     private AbstractComponent abstractComponent = new AbstractComponent() {

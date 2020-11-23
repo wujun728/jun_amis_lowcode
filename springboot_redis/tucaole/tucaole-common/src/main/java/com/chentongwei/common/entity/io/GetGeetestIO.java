@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-09-24 17:23:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 极验验证码IO
  **/

@@ -44,7 +44,7 @@ import java.util.Map;
 /**
  * 动态数据源核心自动配置类
  *
- * @author TaoYu Kanyuxia
+ * @author Wujun
  * @see DynamicDataSourceProvider
  * @see DynamicDataSourceStrategy
  * @see DynamicRoutingDataSource

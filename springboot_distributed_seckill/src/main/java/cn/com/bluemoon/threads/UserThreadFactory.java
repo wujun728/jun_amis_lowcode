@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 线程工厂
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年5月24日 上午11:20:52
  *
  */

@@ -13,7 +13,7 @@ import java.net.Socket;
 
 /**
  * 客户端线程
- * @author yangtao__anxpp.com
+ * @author Wujun
  * 用于处理一个客户端的Socket链路
  */
 public class ServerHandler implements Runnable{

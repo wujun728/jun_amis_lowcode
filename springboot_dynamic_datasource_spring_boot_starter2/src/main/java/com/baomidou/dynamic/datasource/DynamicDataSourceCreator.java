@@ -33,7 +33,7 @@ import java.sql.SQLException;
 /**
  * 数据源创建器
  *
- * @author TaoYu
+ * @author Wujun
  * @since 2.3.0
  */
 @Slf4j
@@ -219,7 +219,7 @@ public class DynamicDataSourceCreator {
      *
      * @param dataSourceProperty 数据源参数
      * @return 数据源
-     * @author 离世庭院 小锅盖
+     * @author Wujun
      */
     public DataSource createHikariDataSource(DataSourceProperty dataSourceProperty) {
         HikariCpConfig hikariCpConfig = dataSourceProperty.getHikari();

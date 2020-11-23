@@ -7,7 +7,7 @@ package com.ibeetl.admin.core.web;
  *      <li>200 : 成功 </li>
  *      <li>300 : 失败 </li>
  * </ul>
- * @author : Administrator
+ * @author Wujun
  */
 public enum JsonReturnCode {
 

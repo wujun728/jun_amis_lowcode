@@ -3,7 +3,7 @@ package com.didispace.domain;
 import org.springframework.data.annotation.Id;
 
 /**
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @date 16/4/27 下午10:04.
  * @blog http://blog.didispace.com

@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.Optional;
 
 /**
- * @author itmuch.com
+ * @author Wujun
  */
 @Mapper
 public interface UserMapper {

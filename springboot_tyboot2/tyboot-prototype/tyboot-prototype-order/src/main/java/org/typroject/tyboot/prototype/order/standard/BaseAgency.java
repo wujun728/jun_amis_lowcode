@@ -2,7 +2,7 @@ package org.typroject.tyboot.prototype.order.standard;
 
 /**
  * 商家信息
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface BaseAgency {

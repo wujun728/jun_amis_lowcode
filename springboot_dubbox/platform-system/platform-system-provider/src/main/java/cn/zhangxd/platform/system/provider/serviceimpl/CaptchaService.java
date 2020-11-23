@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 验证码服务
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 @Transactional(readOnly = true)

@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * API接口权限
  * 
- * @author Seer
+ * @author Wujun
  * @version Permission.java, v 0.1 2016年6月16日 上午10:47:51 Seer Exp.
  */
 @Target(ElementType.TYPE)

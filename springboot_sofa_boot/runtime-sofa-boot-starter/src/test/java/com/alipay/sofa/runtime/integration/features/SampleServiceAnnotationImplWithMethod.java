@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.beans.service.SampleService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xuanbei 18/5/12
+ * @author Wujun
  */
 @Component
 @SofaService(uniqueId = "method")

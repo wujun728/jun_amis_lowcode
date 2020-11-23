@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * @author TongWei.Chen 2017-6-4 11:37:56
+ * @author Wujun
  * @Project tucaole
  * @Description: 极验验证配置
  */

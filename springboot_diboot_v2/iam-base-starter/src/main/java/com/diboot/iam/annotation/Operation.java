@@ -2,7 +2,7 @@ package com.diboot.iam.annotation;
 
 /**
  * 权限-操作 类型定义
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/23
  */

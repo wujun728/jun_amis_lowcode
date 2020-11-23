@@ -26,7 +26,7 @@ import java.util.Properties;
 
 /**
  * 为 Hibernate 3 提供 J2Cache 的适配
- * @author liao
+ * @author Wujun
  */
 @SuppressWarnings("deprecation")
 public class J2CacheProvider implements CacheProvider {

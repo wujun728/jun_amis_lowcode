@@ -22,7 +22,7 @@ import com.alipay.sofa.rpc.config.ProviderConfig;
 import com.alipay.sofa.rpc.config.ServerConfig;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 public class PublishServiceImpl implements PublishService {

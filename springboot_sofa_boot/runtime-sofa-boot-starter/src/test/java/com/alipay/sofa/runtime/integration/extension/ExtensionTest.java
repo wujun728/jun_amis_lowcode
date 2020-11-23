@@ -48,7 +48,7 @@ import java.io.OutputStream;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)

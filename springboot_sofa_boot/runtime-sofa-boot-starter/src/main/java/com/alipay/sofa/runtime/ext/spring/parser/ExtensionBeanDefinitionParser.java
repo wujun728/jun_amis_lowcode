@@ -26,9 +26,9 @@ import org.w3c.dom.NodeList;
 /**
  * Extension definition parser
  *
- * @author xi.hux@alipay.com
- * @author yangyanzhao@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionBeanDefinitionParser extends AbstractExtBeanDefinitionParser {

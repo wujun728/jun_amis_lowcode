@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.beans.impl;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author xuanbei 18/5/10
+ * @author Wujun
  */
 public class SampleServiceImpl implements SampleService {
     private String message;

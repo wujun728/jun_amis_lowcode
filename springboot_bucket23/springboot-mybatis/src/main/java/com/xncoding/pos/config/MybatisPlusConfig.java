@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 /**
  * MybatisPlus配置
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017/5/20 21:58
  */
 @Configuration

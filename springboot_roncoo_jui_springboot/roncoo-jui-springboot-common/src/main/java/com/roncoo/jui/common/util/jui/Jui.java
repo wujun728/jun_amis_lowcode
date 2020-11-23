@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 封装jui
  * 
- * @author wujing
+ * @author Wujun
  */
 public class Jui implements Serializable {
 

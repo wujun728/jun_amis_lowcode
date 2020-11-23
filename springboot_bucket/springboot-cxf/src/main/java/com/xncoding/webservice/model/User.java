@@ -3,7 +3,7 @@ package com.xncoding.webservice.model;
 /**
  * 用户
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/3/4
  */

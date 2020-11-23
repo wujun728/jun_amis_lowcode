@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * IndexCtrl
  *
- * @author lmhy
+ * @author Wujun
  * @date 2017-1-11
  */
 @Controller

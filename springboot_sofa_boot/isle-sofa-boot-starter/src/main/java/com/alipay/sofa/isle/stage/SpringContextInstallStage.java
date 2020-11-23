@@ -36,9 +36,9 @@ import java.util.List;
 import java.util.concurrent.*;
 
 /**
- * @author linfengqi
- * @author yangyanzhao
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @version $Id: SpringContextInstallStage.java, v 0.1 2012-3-16 21:17:48 fengqi.lin Exp $
  */
 public class SpringContextInstallStage extends AbstractPipelineStage {

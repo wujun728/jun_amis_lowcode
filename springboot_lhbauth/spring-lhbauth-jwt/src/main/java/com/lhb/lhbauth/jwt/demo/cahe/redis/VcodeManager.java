@@ -3,7 +3,7 @@ package com.lhb.lhbauth.jwt.demo.cahe.redis;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2018/12/17 0017 17:15
  */

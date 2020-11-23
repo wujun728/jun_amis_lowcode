@@ -9,7 +9,7 @@ import java.io.OutputStream;
 import com.ibeetl.admin.core.util.PlatformException;
 /**
  * 本地文件系统
- * @author xiandafu
+ * @author Wujun
  *
  */
 class LocalFileItem extends PersistFileItem{

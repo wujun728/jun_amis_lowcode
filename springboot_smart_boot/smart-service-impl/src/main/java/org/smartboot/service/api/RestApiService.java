@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * 动态API接口
  * 
- * @author Seer
+ * @author Wujun
  * @version DynApiService.java, v 0.1 2016年2月10日 下午2:20:56 Seer Exp.
  */
 public interface RestApiService {

@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 /**
  * shiro的配置参数
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 @ConfigurationProperties(prefix = "shiro")

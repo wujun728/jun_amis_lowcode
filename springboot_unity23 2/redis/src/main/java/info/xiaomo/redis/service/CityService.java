@@ -6,7 +6,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 @Component
 @CacheConfig(cacheNames = "CityService")

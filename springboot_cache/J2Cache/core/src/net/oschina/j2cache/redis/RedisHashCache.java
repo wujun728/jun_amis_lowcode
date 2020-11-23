@@ -22,8 +22,8 @@ import java.util.stream.Collectors;
 
 /**
  * Redis 缓存操作封装，基于 Hashs 实现多个 Region 的缓存
- * @author wendal
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
+ * @author Wujun
  *
  * 重要提示！！！  hash 存储模式无法单独对 key 设置 expire
  */

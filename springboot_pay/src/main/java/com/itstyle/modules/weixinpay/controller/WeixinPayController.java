@@ -77,7 +77,7 @@ public class WeixinPayController {
     }
 	/**
 	 * 支付后台回调
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @param response
 	 * @throws Exception  void
@@ -151,7 +151,7 @@ public class WeixinPayController {
 	/**
 	 * 模式一支付回调URL(生成二维码见 qrCodeUtil)
 	 * 商户支付回调URL设置指引：进入公众平台-->微信支付-->开发配置-->扫码支付-->修改
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @param response
 	 * @throws Exception  void

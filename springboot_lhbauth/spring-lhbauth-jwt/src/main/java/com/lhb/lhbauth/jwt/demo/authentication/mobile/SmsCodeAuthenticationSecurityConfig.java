@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/2 0002 10:39
  */

@@ -1,7 +1,7 @@
 package com.demo.weixin.exception;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 微信异常
  * @date 2017/7/31
  * @since 1.0

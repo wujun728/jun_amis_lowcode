@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 业务侧工作流的基本功能，工作流的一些功能将在业务侧完成，比如选人操作
- * @author lijiazhi
+ * @author Wujun
  */
 @SqlResource("core.workflow")
 public interface CoreWorkflowDao extends BaseMapper {

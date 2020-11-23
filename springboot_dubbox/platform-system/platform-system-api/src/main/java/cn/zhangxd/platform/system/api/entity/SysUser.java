@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 用户Entity
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class SysUser extends DataEntity {
 

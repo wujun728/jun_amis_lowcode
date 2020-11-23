@@ -4,7 +4,7 @@ import cn.springboot.model.BaseEntity;
 
 /** 
  * @Description 用户与角色关系对象
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:11:56 AM  
  */
 public class UserRole implements BaseEntity<String> {

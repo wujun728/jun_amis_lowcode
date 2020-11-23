@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 /** 
  * @Description 切换数据源Advice
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 17, 2017 9:01:09 AM  
  */
 @Aspect

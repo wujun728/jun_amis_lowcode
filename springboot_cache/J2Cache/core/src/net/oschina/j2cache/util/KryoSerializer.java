@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * 使用 Kryo 实现序列化
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class KryoSerializer implements Serializer {
 

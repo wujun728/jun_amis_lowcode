@@ -5,7 +5,7 @@ import com.chentongwei.core.common.entity.vo.RegionVO;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-11-30 15:48:50
+ * @author Wujun
  * @Project tucaole
  * @Description: 省市区DAO
  */

@@ -19,7 +19,7 @@ package com.alipay.sofa.isle.deployment;
 /**
  * Module Deployment Validator, determine whether a module is sofa module
  *
- * @author khotyn 9/12/14 4:24 PM
+ * @author Wujun
  */
 public interface ModuleDeploymentValidator {
     /**

@@ -7,7 +7,7 @@ import org.minbox.framework.knowledge.library.common.entity.*;
  * <p>本类由Code-Builder自动生成</p>
  * <p>表名: kl_user_read_record - 文章阅读记录 - 动态查询实体</p>
  *
- * @author Code-Builder
+ * @author Wujun
  * @since 恒宇少年
  * ===============================
  * Created with Code-Builder.

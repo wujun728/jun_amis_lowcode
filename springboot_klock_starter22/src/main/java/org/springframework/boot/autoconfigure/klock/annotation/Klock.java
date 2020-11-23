@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 
 /**
  *
- * @author kl
+ * @author Wujun
  * @date 2017/12/29
  * Content :加锁注解
  */

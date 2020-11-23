@@ -5,7 +5,7 @@ import org.apache.commons.lang.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 public abstract class WebUtils {
 

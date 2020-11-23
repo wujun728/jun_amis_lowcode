@@ -12,7 +12,7 @@ import org.springframework.scripting.support.ResourceScriptSource;
  * Redis 配置
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/30 11:37
  */
 @Configuration

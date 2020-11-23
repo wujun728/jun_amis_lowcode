@@ -20,7 +20,7 @@ import de.codecentric.boot.admin.model.Application;
 /**
  * This event gets emitted when an application is unregistered.
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public class ClientApplicationDeregisteredEvent extends ClientApplicationEvent {
 	private static final long serialVersionUID = 1L;

@@ -5,7 +5,7 @@ package com.xkcoding.dynamic.datasource.datasource;
  * 数据源标识管理
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 14:16
  */
 public class DatasourceConfigContextHolder {

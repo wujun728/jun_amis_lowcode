@@ -25,7 +25,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.PriorityOrdered;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncTaskExecutionListener implements PriorityOrdered,

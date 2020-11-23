@@ -13,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 /**
  * WebSocketService
  *
- * @author lmhy
+ * @author Wujun
  * @date 2017-1-11
  */
 @ServerEndpoint("/ws")

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 /**
  * 在非生产环境里，初始化H2Console管理嵌入式H2.
  * 
- * @author calvin
+ * @author Wujun
  */
 @Configuration
 @Profile(Profiles.NOT_PRODUCTION)

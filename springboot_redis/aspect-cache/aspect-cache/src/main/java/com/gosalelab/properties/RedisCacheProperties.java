@@ -1,7 +1,7 @@
 package com.gosalelab.properties;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 public class RedisCacheProperties {
 

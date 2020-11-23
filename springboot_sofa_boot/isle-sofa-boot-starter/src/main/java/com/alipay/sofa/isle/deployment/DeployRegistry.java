@@ -20,7 +20,7 @@ import java.util.*;
 
 /**
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: DeployRegistry.java, v 0.1 2012-1-12 上午12:34:44 yangyanzhao Exp
  *          $
  */

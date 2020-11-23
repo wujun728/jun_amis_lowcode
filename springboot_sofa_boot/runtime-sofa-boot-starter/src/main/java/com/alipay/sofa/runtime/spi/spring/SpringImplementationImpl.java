@@ -23,7 +23,7 @@ import org.springframework.util.Assert;
 /**
  * Spring Component Implement
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 

@@ -33,7 +33,7 @@ import com.google.common.hash.Hashing;
  * 
  * 其中crc32基于JDK, murmurhash基于guava
  * 
- * @author calvin
+ * @author Wujun
  */
 public class HashUtil {
 

@@ -29,7 +29,7 @@ import net.sf.ehcache.event.CacheEventListener;
  * <p>EHCache 2.x 的缓存封装</p>
  * <p>该封装类实现了缓存操作以及对缓存数据失效的侦听</p>
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class EhCache implements Level1Cache, CacheEventListener {
 	

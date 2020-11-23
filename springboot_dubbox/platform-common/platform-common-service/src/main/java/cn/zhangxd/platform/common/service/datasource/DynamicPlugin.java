@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 动态数据源Mybatis拦截器插件
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Intercepts({
     @Signature(type = Executor.class, method = "update", args = {

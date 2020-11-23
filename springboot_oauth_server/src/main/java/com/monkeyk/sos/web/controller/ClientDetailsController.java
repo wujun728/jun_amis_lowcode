@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Handle 'client_details' management
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Controller
 public class ClientDetailsController {

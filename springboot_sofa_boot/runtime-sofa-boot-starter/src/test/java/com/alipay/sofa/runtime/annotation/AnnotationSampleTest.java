@@ -32,7 +32,7 @@ import com.alipay.sofa.runtime.api.annotation.SofaServiceBinding;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @sicne 2.5.2
  */
 @TestPropertySource({ "/config/application-annotation.properties" })

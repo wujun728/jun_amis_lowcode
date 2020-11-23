@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.Dictionarie;
   * 系统字典表 Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-06-27
  */
 public interface DictionarieMapper extends BaseMapper<Dictionarie> {

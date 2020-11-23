@@ -25,7 +25,7 @@ import java.util.Set;
 /**
  * Contract Description Interface
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface Contract {
     /**

@@ -28,7 +28,7 @@ import static com.alipay.sofa.isle.constants.SofaModuleFrameworkConstants.SOFA_M
 
 /**
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: FileDescriptor.java, v 0.1 2012-1-11 17:41:52 yangyanzhao Exp $
 */
 public class FileDeploymentDescriptor extends AbstractDeploymentDescriptor {

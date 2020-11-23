@@ -23,7 +23,7 @@ import org.springframework.boot.actuate.health.HealthIndicator;
 /**
  * component health checker which implements ${@link org.springframework.boot.actuate.health.HealthIndicator}
  *
- * @author xuanbei 18/5/15
+ * @author Wujun
  */
 public class SofaComponentHealthIndicator extends AbstractComponentHealthChecker implements
                                                                                 HealthIndicator {

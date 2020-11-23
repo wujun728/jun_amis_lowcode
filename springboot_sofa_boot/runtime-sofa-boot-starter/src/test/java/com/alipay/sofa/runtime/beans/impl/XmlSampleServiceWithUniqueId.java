@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.beans.impl;
 import com.alipay.sofa.runtime.beans.service.SampleService;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 public class XmlSampleServiceWithUniqueId implements SampleService {

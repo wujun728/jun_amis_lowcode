@@ -33,8 +33,8 @@ import java.util.List;
 
 /**
  *
- * @author fengqi.lin
- * @author yangyanzhao
+ * @author Wujun
+ * @author Wujun
  * @version $Id: ModuleLogOutputStage.java, v 0.1 2012-3-16 18:17:48 fengqi.lin Exp $
  */
 public class ModuleLogOutputStage extends AbstractPipelineStage {

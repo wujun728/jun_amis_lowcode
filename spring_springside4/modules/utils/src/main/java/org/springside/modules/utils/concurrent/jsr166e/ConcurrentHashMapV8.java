@@ -213,7 +213,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * Java Collections Framework</a>.
  *
  * @since 1.5
- * @author Doug Lea
+ * @author Wujun
  * @param <K> the type of keys maintained by this map
  * @param <V> the type of mapped values
  */

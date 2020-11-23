@@ -30,7 +30,7 @@ import org.springframework.beans.factory.BeanFactoryAware;
 /**
  * 动态数据源AOP织入
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 public class DynamicDataSourceAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {

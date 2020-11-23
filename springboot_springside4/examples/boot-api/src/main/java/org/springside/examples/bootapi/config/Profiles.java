@@ -3,7 +3,7 @@ package org.springside.examples.bootapi.config;
 /**
  * 定义项目中使用的Profiles
  * 
- * @author calvin
+ * @author Wujun
  */
 public class Profiles {
 

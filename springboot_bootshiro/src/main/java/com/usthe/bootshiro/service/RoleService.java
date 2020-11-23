@@ -5,7 +5,7 @@ import com.usthe.bootshiro.domain.bo.AuthRole;
 import java.util.List;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 
  * @Date 9:10 2018/3/20
  */

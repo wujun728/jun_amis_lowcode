@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 汇率接口
  *
- * @author zhangxd
+ * @author Wujun
  */
 @FunctionalInterface
 public interface ICurrencyRateService {

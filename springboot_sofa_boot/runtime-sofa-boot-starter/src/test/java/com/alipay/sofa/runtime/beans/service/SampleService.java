@@ -17,7 +17,7 @@
 package com.alipay.sofa.runtime.beans.service;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 public interface SampleService {

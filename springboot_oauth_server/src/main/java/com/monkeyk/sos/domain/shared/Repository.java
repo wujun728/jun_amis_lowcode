@@ -1,7 +1,7 @@
 package com.monkeyk.sos.domain.shared;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 
 public interface Repository {

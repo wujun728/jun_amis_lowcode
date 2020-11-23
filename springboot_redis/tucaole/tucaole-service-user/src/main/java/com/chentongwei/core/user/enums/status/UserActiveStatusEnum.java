@@ -1,7 +1,7 @@
 package com.chentongwei.core.user.enums.status;
 
 /**
- * @author TongWei.Chen 2017-12-04 13:34:27
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户激活状态
  */

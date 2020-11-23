@@ -3,7 +3,7 @@ package io.gitee.tooleek.lock.spring.boot.exception;
 /**
  * 没有找到相应的锁服务实现类
  *
- * @author TanRq
+ * @author Wujun
  */
 public class ServiceNotFoundException extends RuntimeException {
 

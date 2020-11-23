@@ -21,8 +21,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /***
- * @author yangguanchao
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  *
  * @since 2.3.0
  */

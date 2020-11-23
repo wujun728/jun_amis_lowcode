@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * The type Sys menu controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Validated
 @RestController

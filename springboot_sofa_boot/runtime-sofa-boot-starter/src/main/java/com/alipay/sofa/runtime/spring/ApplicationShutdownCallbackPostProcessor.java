@@ -24,8 +24,8 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.core.PriorityOrdered;
 
 /**
- * @author xuanbei
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2.5.0
  */
 public class ApplicationShutdownCallbackPostProcessor implements MergedBeanDefinitionPostProcessor,

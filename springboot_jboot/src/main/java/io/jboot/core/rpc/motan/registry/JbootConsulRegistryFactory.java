@@ -25,7 +25,7 @@ import com.weibo.api.motan.rpc.URL;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Description: 用于修复 motan consul1.0 无法注册的问题 ，问题出现在 consul.10对 对http get 和 put 进行了验证。
  * 而AgentConsulClient.java 把很多get请求和put请求搞混淆了，因此需要对AgentConsulClient 进行重写。

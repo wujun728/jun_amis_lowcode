@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author TongWei.Chen 2017-12-20 19:16:05
+ * @author Wujun
  * @Project tucaole
  * @Description: 我关注的人、关注我的人列表
  */

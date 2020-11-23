@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 /**
  * websocket实现
- * @author zhanghang
+ * @author Wujun
  * @date 2019/1/3 17:54
  */
 @Slf4j

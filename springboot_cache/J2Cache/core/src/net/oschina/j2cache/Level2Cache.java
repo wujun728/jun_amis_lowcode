@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 
 /**
  * 二级缓存接口
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public interface Level2Cache extends Cache {
 

@@ -3,7 +3,7 @@ package com.roncoo.jui.common.util.base;
 /**
  * 异常处理类
  * 
- * @author wujing
+ * @author Wujun
  */
 public class RoncooException extends RuntimeException {
 

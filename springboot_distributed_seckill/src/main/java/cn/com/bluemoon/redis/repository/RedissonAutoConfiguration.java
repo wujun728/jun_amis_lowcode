@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * redisson装配各种模式
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月23日 下午3:14:07
  *
  */

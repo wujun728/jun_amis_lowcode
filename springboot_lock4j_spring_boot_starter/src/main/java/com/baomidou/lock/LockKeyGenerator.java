@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 分布式锁Key生成器
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 public class LockKeyGenerator {

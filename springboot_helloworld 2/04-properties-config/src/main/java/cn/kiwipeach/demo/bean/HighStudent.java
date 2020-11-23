@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  *  使用@PropertySource 测试从指定的配置文件注入属性值
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 @Component

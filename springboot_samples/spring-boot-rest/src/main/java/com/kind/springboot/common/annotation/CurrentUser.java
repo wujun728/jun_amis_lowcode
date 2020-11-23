@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * Function:在Controller的方法参数中使用此注解，该方法在映射时会注入当前登录用户. <br/>
  * Date:     2016年8月11日 上午11:31:20 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

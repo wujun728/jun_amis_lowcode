@@ -3,7 +3,7 @@ package com.chentongwei.core.common.dao;
 import com.chentongwei.core.common.entity.io.ExistsOneSelfIO;
 
 /**
- * @author TongWei.Chen 2017-12-17 18:36:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用DAO层
  **/

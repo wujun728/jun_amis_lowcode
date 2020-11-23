@@ -41,7 +41,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * reference component
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class ReferenceComponent extends AbstractComponent {

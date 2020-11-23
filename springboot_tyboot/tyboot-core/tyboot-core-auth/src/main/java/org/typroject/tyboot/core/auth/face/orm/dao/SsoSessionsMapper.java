@@ -8,7 +8,7 @@ import org.typroject.tyboot.core.auth.face.orm.entity.SsoSessions;
   * 登录SESSION Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-07-06
  */
 public interface SsoSessionsMapper extends BaseMapper<SsoSessions> {

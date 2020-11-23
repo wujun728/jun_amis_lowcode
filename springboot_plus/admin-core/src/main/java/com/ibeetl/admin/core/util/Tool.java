@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 常用工具类方法
  * 
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public class Tool {

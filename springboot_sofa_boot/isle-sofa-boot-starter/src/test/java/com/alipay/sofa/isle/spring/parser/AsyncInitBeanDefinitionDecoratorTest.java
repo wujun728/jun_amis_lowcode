@@ -24,8 +24,8 @@ import org.junit.Test;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 
 /**
- * @author qilong.zql
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncInitBeanDefinitionDecoratorTest {

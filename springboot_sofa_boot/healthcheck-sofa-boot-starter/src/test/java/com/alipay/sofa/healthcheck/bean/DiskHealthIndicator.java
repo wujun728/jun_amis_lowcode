@@ -20,7 +20,7 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 
 /**
- * @author liangen
+ * @author Wujun
  * @version 2.3.0
  */
 public class DiskHealthIndicator implements HealthIndicator {

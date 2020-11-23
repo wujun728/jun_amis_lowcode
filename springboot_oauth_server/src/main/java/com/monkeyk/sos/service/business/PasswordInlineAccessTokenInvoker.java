@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.provider.password.ResourceOwnerPasswo
  * <p>
  * grant_type = password
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @since 2.0.1
  */
 public class PasswordInlineAccessTokenInvoker extends InlineAccessTokenInvoker {

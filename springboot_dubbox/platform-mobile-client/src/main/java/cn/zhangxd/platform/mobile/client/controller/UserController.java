@@ -40,7 +40,7 @@ import java.util.Map;
 /**
  * The type User controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Validated
 @RestController

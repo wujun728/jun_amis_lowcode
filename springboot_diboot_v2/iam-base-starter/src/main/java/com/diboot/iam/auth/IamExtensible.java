@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * IAM扩展接口
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2020/01/04
  */

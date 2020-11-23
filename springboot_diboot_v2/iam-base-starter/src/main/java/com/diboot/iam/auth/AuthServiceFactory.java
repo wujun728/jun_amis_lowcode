@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 账号认证Manager
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/25
  */

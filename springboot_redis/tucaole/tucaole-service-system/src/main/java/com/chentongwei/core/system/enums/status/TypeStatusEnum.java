@@ -1,7 +1,7 @@
 package com.chentongwei.core.system.enums.status;
 
 /**
- * @author TongWei.Chen 2017-12-27 19:18:25
+ * @author Wujun
  * @Project tucaole
  * @Description: 举报功能的类型枚举状态; 1：吐槽的文章；2：吐槽文章的评论；
  */

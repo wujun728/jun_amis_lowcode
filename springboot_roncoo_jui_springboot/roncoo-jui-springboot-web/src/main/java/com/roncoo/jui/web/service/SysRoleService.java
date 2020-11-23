@@ -21,7 +21,7 @@ import com.roncoo.jui.web.bean.vo.SysRoleVO;
 /**
  * 角色信息
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-20
  */
 @Component

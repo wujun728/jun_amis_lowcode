@@ -2,7 +2,7 @@ package com.lance.utils;
 
 /**
  * 处理service抛出运行时异常处理
- * @author lance
+ * @author Wujun
  */
 public class ServiceException extends RuntimeException {
 	private static final long serialVersionUID = 1389958090308317369L;

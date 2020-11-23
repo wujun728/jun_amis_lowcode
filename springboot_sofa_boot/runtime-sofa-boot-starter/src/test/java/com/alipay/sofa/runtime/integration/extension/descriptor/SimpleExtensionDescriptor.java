@@ -25,8 +25,8 @@ import java.net.URL;
 import java.util.Date;
 
 /**
- * @author khotyn
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("simple")

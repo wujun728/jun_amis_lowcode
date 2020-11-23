@@ -13,7 +13,7 @@ import java.util.Date;
  * 
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @EqualsAndHashCode(callSuper = true)

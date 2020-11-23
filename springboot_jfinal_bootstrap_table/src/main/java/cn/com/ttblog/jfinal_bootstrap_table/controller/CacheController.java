@@ -12,7 +12,7 @@ import com.jfinal.core.Controller;
 import com.jfinal.plugin.ehcache.CacheKit;
 
 /**
- * @author netbuffer
+ * @author Wujun
  */
 public class CacheController extends Controller {
 	private static Logger cacheLog = LoggerFactory

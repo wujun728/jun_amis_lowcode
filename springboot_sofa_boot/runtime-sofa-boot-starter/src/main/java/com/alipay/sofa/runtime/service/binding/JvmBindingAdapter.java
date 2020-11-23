@@ -36,7 +36,7 @@ import java.lang.reflect.Proxy;
 /**
  * JVM Binding Adapter, used to handle JvmBinding
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @version $Id: DefaultBindingAdapter.java,v 0.1 2009-10-12 17:14:41 xi.hux Exp $
  */
 public class JvmBindingAdapter implements BindingAdapter<JvmBinding> {

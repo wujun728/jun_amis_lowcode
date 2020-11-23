@@ -23,7 +23,7 @@ import java.util.Properties;
 
 /**
  * 集群策略工厂
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class ClusterPolicyFactory {
 

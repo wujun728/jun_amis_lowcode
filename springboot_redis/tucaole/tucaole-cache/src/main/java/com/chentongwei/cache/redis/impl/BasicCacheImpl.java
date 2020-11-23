@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TongWei.Chen 2017-05-18 16:39:56
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的String类型
  */

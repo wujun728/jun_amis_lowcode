@@ -23,7 +23,7 @@ import java.util.List;
  * 多数据源选择策略接口
  * 一般默认为负载均衡策略，默认提供了一个随机策略
  *
- * @author TaoYu Kanyuxia
+ * @author Wujun
  * @see RandomDynamicDataSourceStrategy
  * @see LoadBalanceDynamicDataSourceStrategy
  * @since 1.0.0

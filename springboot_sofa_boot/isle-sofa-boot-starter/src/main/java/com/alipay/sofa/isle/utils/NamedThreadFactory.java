@@ -20,7 +20,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author ruoshan 17/9/20
+ * @author Wujun
  */
 public class NamedThreadFactory implements ThreadFactory {
     private static final AtomicInteger poolNumber   = new AtomicInteger(1);

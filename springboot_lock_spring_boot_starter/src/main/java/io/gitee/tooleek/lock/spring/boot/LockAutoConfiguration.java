@@ -45,7 +45,7 @@ import java.util.Map;
 /**
  * 自动装配
  *
- * @author TanRq
+ * @author Wujun
  */
 @Configuration
 @EnableConfigurationProperties(LockConfig.class)

@@ -3,7 +3,7 @@ package com.xncoding.echarts.api.model;
 /**
  * API接口的基础返回类
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/7
  */

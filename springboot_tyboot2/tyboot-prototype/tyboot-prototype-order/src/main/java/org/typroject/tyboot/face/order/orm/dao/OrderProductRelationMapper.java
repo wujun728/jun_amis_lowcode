@@ -10,7 +10,7 @@ import org.typroject.tyboot.face.order.orm.entity.OrderProductRelation;
   * 订单产品关系表 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 public interface OrderProductRelationMapper extends BaseMapper<OrderProductRelation> {

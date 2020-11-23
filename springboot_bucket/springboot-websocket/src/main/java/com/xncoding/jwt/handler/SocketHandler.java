@@ -20,7 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * SocketHandler
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/3/22
  */

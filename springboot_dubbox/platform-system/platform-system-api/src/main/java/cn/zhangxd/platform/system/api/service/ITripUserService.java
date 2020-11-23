@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 用户接口
  *
- * @author zhangxd
+ * @author Wujun
  */
 public interface ITripUserService {
 

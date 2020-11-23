@@ -30,7 +30,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
  * should not be annotated as {@code @Controller} (otherwise they will be mapped by the normal MVC
  * mechanisms).
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class PrefixHandlerMapping extends RequestMappingHandlerMapping {
 	private String prefix = "";

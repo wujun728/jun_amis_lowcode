@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author TongWei.Chen 2017-09-19 15:53:19
+ * @author Wujun
  * @Project tucaole
  * @Description: 日期工具类
  */

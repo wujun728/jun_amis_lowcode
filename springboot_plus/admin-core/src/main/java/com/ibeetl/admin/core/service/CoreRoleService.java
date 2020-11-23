@@ -13,7 +13,7 @@ import com.ibeetl.admin.core.entity.CoreRole;
 
 /**
  * 描述: 字典 service，包含常规字典和级联字典的操作。
- * @author : xiandafu
+ * @author Wujun
  */
 @Service
 @Transactional

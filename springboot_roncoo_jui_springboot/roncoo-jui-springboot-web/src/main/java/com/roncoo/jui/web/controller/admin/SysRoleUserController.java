@@ -20,7 +20,7 @@ import com.roncoo.jui.web.service.SysRoleUserService;
 /**
  * 角色用户关联表
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-20
  */
 @Controller

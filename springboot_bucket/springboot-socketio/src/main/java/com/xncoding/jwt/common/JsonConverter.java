@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * 对象和Json转换器
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/18
  */

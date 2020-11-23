@@ -16,7 +16,7 @@ import java.nio.charset.Charset;
 import java.util.Map;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 重写OAuth2Template
  * @date 2019/1/4 0004 10:00
  */

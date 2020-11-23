@@ -32,7 +32,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Swagger2MarkupTest
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/26
  */

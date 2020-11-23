@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * @author : xiaomo (https://xiaomo.info) (https://github.com/houko)
+ * @author Wujun
  * @created : 2016/12/24 15:09
  */
 

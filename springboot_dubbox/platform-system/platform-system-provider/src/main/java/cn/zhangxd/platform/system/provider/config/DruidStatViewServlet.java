@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 /**
  * The type Druid stat view servlet.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @WebServlet(urlPatterns = "/druid/*",
     initParams = {

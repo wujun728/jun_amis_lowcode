@@ -7,7 +7,7 @@ import java.util.List;
 
 /** 
  * @Description 新闻接口类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:19:14 PM  
  */
 public interface NewsService {

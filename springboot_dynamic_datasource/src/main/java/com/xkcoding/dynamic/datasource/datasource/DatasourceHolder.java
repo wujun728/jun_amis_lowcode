@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 数据源管理
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 14:23
  */
 public enum DatasourceHolder {

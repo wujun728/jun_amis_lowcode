@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.OperationRecord;
   *  Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 public interface OperationRecordMapper extends BaseMapper<OperationRecord> {

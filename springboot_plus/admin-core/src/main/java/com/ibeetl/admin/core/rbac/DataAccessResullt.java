@@ -3,7 +3,7 @@ package com.ibeetl.admin.core.rbac;
 import java.util.List;
 /**
  * 通过DataAccess 得出跟查询相关的用户或者组织机构列表
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public class DataAccessResullt {

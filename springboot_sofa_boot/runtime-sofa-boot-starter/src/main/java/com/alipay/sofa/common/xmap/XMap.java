@@ -74,9 +74,9 @@ import java.util.Map;
  * <li> The DOM document is parsed and the nodes mapping is resolved
  * </ul>
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  */
 
 public class XMap {

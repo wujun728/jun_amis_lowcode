@@ -26,7 +26,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.ReflectionUtils;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.2
  */
 public class PlaceHolderAnnotationInvocationHandler implements InvocationHandler {

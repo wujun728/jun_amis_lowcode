@@ -24,7 +24,7 @@ import cn.springboot.service.simple.NewsService;
 
 /** 
  * @Description 新闻接口实现类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:19:24 PM  
  */
 @Service("newsService")

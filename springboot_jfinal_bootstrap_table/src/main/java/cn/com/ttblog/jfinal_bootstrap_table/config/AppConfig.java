@@ -31,7 +31,7 @@ import com.jfinal.render.ViewType;
 /**
  * jfinal配置文件
  * 
- * @author champ
+ * @author Wujun
  *
  */
 public class AppConfig extends JFinalConfig {

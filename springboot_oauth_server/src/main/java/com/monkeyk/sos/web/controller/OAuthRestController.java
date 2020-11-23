@@ -50,7 +50,7 @@ import java.util.Map;
  * <p/>
  * Restful OAuth API
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @see org.springframework.security.oauth2.provider.endpoint.TokenEndpoint
  */
 @Controller

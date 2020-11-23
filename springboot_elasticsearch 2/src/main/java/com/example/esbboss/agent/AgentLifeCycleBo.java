@@ -17,7 +17,7 @@
 package com.example.esbboss.agent;
 
 /**
- * @author HyunGil Jeong
+ * @author Wujun
  */
 public class AgentLifeCycleBo {
 

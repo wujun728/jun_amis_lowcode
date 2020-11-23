@@ -17,7 +17,7 @@
 package com.alipay.sofa.common.dal.dao;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class NewsDO {

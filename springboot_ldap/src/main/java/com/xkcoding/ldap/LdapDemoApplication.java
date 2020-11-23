@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * LdapDemoApplication Ldap demo 启动类
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/8/26 0:37
  */

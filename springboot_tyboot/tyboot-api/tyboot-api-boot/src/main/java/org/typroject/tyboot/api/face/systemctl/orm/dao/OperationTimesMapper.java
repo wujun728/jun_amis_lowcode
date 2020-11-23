@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.OperationTimes;
   * 操作计数 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-26
  */
 public interface OperationTimesMapper extends BaseMapper<OperationTimes> {

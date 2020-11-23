@@ -33,7 +33,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Notifier submitting events to HipChat.
  *
- * @author Jamie Brown
+ * @author Wujun
  */
 public class HipchatNotifier extends AbstractStatusChangeNotifier {
 	private static final String DEFAULT_DESCRIPTION = "<strong>#{application.name}</strong>/#{application.id} is <strong>#{to.status}</strong>";

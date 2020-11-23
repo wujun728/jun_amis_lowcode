@@ -19,7 +19,7 @@ import org.springside.modules.utils.number.NumberUtil;
  * 
  * 2. 从文件或字符串装载Properties
  * 
- * @author calvin
+ * @author Wujun
  */
 public class PropertiesUtil {
 

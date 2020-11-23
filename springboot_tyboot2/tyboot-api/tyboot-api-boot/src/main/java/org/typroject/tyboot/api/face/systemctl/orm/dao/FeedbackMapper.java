@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.systemctl.orm.entity.Feedback;
   * 用户反馈 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-12-01
  */
 public interface FeedbackMapper extends BaseMapper<Feedback> {

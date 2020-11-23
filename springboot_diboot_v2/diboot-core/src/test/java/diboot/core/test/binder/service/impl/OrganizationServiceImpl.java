@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * 单位相关Service实现
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 2018/12/23
  * Copyright © www.dibo.ltd
  */

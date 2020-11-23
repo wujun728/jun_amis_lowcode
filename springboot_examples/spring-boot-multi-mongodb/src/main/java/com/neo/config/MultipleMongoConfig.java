@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 /**
- * @author neo
+ * @author Wujun
  */
 @Configuration
 public class MultipleMongoConfig {

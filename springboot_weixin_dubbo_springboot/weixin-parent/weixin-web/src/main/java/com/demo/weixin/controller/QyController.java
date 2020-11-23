@@ -21,7 +21,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 企业微信服务
  * @date 2017/7/25
  * @since 1.0

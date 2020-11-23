@@ -16,7 +16,7 @@ import java.util.Set;
  * 我们就手动构建一个 {@link User} 的默认实现就可以了
  * 实现接口的方式可以参考 {@link SysClientDetails}
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午12:41
  */
 @Data

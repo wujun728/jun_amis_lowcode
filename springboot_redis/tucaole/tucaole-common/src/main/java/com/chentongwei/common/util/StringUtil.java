@@ -3,7 +3,7 @@ package com.chentongwei.common.util;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @author TongWei.Chen 2017-12-13 14:55:56
+ * @author Wujun
  * @Project tucaole
  * @Description: 字符串工具类
  */

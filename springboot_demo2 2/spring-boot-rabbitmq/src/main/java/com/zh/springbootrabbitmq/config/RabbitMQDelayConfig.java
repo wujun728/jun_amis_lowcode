@@ -16,7 +16,7 @@ import java.util.Map;
  * 这是一个官方提供的插件，3.6及以上版本才能使用，可以去官网下载插件：
  * http://www.rabbitmq.com/community-plugins.html
  * 使用方法：https://blog.csdn.net/eumenides_/article/details/86027185
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Configuration

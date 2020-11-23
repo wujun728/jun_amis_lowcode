@@ -21,7 +21,7 @@ import cn.springboot.common.authority.service.xss.XSSSecurityConstants;
 
 /** 
  * @Description 防止SQL注入
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:42:29 PM  
  */
 @WebFilter(urlPatterns = "/*", filterName = "SQLInjection", initParams = { @WebInitParam(name = "regularExpression", value = "(?:')|(?:--)|(/\\*(?:.|[\\n\\r])*?\\*/)|" + "(\\b(select|update|and|or|delete|insert|trancate|char|into|substr|ascii|declare|exec|count|master|into|drop|execute)\\b)") })

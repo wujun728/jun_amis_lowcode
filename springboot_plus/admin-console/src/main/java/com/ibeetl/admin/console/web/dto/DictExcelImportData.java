@@ -4,7 +4,7 @@ import com.ibeetl.admin.core.entity.CoreDict;
 
 /**
  * 字典数据导入,参考 dict_mapping.xml
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class DictExcelImportData extends CoreDict {

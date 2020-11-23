@@ -36,7 +36,7 @@ package org.springside.modules.utils.concurrent.jsr166e;
  * sequentially solve rather than subdividing.
  *
  * @since 1.7
- * @author Doug Lea
+ * @author Wujun
  */
 public abstract class RecursiveTask<V> extends ForkJoinTask<V> {
     private static final long serialVersionUID = 5232453952276485270L;

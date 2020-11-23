@@ -4,7 +4,7 @@ import com.diboot.core.service.BaseService;
 
 /**
 * 自定义BaseService接口
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

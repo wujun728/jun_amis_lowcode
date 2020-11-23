@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 动态数据源实现读写分离
  *
- * @author mij
+ * @author Wujun
  */
 public class DynamicDataSource extends AbstractRoutingDataSource {
 

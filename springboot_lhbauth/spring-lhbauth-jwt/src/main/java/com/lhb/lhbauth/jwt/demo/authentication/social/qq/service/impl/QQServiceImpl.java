@@ -11,7 +11,7 @@ import org.springframework.social.oauth2.TokenStrategy;
 import java.io.IOException;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/3 0003 9:59
  */

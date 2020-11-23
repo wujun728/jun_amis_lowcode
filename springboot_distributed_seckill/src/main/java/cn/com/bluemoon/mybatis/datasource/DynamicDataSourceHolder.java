@@ -3,7 +3,7 @@ package cn.com.bluemoon.mybatis.datasource;
 /**
  * 动态数据源持有者
  *
- * @author mij
+ * @author Wujun
  */
 public final class DynamicDataSourceHolder {
 

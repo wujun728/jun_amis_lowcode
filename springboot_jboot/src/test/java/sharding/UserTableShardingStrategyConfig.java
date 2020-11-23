@@ -9,7 +9,7 @@ import io.shardingjdbc.core.routing.strategy.ShardingStrategy;
 import java.util.Collection;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package sharding
  */

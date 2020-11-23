@@ -22,7 +22,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.0.0
  */
 @Order(Ordered.LOWEST_PRECEDENCE - 9)

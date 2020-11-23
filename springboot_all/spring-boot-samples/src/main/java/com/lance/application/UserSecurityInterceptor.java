@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.lance.entity.UserEntity;
 /**
  * 拦截未登录的用户信息
- * @author lance
+ * @author Wujun
  * 2014-6-10下午9:57:20
  */
 public class UserSecurityInterceptor implements HandlerInterceptor {

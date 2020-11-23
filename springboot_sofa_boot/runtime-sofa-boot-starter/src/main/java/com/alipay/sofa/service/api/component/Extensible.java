@@ -18,8 +18,8 @@ package com.alipay.sofa.service.api.component;
 
 /**
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 

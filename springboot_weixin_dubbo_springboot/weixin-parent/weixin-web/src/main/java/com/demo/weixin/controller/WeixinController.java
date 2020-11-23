@@ -19,7 +19,7 @@ import java.net.URISyntaxException;
 
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 微信公众号服务
  * @date 2017/7/25
  * @since 1.0

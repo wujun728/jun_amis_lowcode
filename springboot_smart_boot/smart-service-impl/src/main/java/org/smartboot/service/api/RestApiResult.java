@@ -7,7 +7,7 @@ import org.smartboot.service.facade.result.ServiceResult;
 /**
  * 调用rest api的响应结果存放类
  *
- * @author Seer
+ * @author Wujun
  * @version RestApiResult.java, v 0.1 2016年2月10日 下午3:04:06 Seer Exp. 
  */
 public class RestApiResult<T> extends ServiceResult<T> {

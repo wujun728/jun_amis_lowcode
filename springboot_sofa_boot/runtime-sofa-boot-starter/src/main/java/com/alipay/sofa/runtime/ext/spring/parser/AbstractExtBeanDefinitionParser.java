@@ -29,8 +29,8 @@ import org.w3c.dom.Element;
 /**
  * Common parser for extension and extension point
  *
- * @author yangyanzhao@alipay.com
- * @author yangyanzhao
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public abstract class AbstractExtBeanDefinitionParser extends

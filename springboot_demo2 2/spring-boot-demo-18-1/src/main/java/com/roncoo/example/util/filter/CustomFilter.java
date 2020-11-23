@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebFilter;
 /**
  * 自定义filter
  * 
- * @author wujing
+ * @author Wujun
  */
 @WebFilter(urlPatterns="/*")
 public class CustomFilter implements Filter {

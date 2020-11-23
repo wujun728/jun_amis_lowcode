@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.PostConstruct;
 
 /**
- * @author TongWei.Chen 2017-10-18 19:01:17
+ * @author Wujun
  * @Project tucaole
  * @Description: ES启动类
  */

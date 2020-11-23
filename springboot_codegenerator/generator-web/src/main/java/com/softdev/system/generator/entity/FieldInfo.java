@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * field info
  *
- * @author xuxueli 2018-05-02 20:11:05
+ * @author Wujun
  */
 @Data
 public class FieldInfo {

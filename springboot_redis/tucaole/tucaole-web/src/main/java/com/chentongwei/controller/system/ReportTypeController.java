@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author TongWei.Chen 2017-12-16 18:39:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 举报类型接口
  **/

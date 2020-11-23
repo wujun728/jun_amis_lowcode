@@ -20,7 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 @Configuration

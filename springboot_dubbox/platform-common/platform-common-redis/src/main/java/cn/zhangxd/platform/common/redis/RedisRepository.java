@@ -19,7 +19,7 @@ import java.util.Set;
 /**
  * Redis Repository
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class RedisRepository {
 

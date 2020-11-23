@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 菜单Entity
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class SysMenu extends DataEntity {
 

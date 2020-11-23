@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Parameter class used when using {@link com.alipay.sofa.runtime.api.client.ServiceClient} to create a SOFA service.
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ServiceParam {
 

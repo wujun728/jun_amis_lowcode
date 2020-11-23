@@ -12,7 +12,7 @@ import com.java1234.service.StudentService;
 
 /**
  * 学生信息controller层
- * @author Administrator
+ * @author Wujun
  *
  */
 @RestController

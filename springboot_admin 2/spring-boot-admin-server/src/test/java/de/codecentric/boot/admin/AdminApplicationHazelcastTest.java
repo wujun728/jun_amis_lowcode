@@ -50,7 +50,7 @@ import de.codecentric.boot.admin.config.EnableAdminServer;
 /**
  * Integration test to verify the correct functionality of the REST API with Hazelcast
  *
- * @author Dennis Schulte
+ * @author Wujun
  */
 public class AdminApplicationHazelcastTest {
 	private TestRestTemplate template = new TestRestTemplate();

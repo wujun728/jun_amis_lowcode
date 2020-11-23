@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.util.List;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/25
  */
 @Configuration

@@ -12,7 +12,7 @@ import java.io.Serializable;
  * <p>
  * {"access_token":"iuy0fbfe-da2c-4840-8b66-848168ad8d00","token_type":"bearer","refresh_token":"9406e12f-d62e-42bd-ad40-0206d94ae7ds","expires_in":7199,"scope":"read"}
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @since 2.0.1
  */
 public class AccessTokenDto implements Serializable {

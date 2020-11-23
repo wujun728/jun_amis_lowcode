@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 更新成员
  * @date 2017/7/31
  * @since 1.0

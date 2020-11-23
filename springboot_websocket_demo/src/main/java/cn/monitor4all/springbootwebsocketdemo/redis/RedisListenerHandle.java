@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Redis订阅频道处理类
- * @author yangzhendong01
+ * @author Wujun
  */
 @Component
 public class RedisListenerHandle extends MessageListenerAdapter {

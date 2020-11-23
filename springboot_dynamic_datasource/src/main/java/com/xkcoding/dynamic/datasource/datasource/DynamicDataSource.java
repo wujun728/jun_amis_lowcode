@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * 动态数据源
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 10:41
  */
 @Slf4j

@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 /**
  * spring-security配置
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Configuration
 public class WebSecurityConfig extends AbstractWebSecurityConfig {

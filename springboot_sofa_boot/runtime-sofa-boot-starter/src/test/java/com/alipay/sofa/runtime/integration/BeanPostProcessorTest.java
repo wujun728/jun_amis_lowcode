@@ -22,7 +22,7 @@ import org.junit.Test;
 import org.springframework.util.Assert;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.4.1
  */
 public class BeanPostProcessorTest extends AbstractTestBase {

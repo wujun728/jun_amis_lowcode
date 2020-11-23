@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * BaseElasticsearchService
  *
- * @author fxbin
+ * @author Wujun
  * @version 1.0v
  * @since 2019/9/16 15:44
  */
@@ -53,7 +53,7 @@ public abstract class BaseElasticsearchService {
      * create elasticsearch index (asyc)
      *
      * @param index elasticsearch index
-     * @author fxbin
+     * @author Wujun
      */
     protected void createIndexRequest(String index) {
         try {
@@ -74,7 +74,7 @@ public abstract class BaseElasticsearchService {
      * delete elasticsearch index
      *
      * @param index elasticsearch index name
-     * @author fxbin
+     * @author Wujun
      */
     protected void deleteIndexRequest(String index) {
         DeleteIndexRequest deleteIndexRequest = buildDeleteIndexRequest(index);
@@ -89,7 +89,7 @@ public abstract class BaseElasticsearchService {
      * build DeleteIndexRequest
      *
      * @param index elasticsearch index name
-     * @author fxbin
+     * @author Wujun
      */
     private static DeleteIndexRequest buildDeleteIndexRequest(String index) {
         return new DeleteIndexRequest(index);
@@ -102,7 +102,7 @@ public abstract class BaseElasticsearchService {
      * @param id     request object id
      * @param object request object
      * @return {@link org.elasticsearch.action.index.IndexRequest}
-     * @author fxbin
+     * @author Wujun
      */
     protected static IndexRequest buildIndexRequest(String index, String id, Object object) {
         return new IndexRequest(index).id(id).source(BeanUtil.beanToMap(object), XContentType.JSON);
@@ -114,7 +114,7 @@ public abstract class BaseElasticsearchService {
      * @param index  elasticsearch index name
      * @param id     Document id
      * @param object request object
-     * @author fxbin
+     * @author Wujun
      */
     protected void updateRequest(String index, String id, Object object) {
         try {
@@ -130,7 +130,7 @@ public abstract class BaseElasticsearchService {
      *
      * @param index elasticsearch index name
      * @param id    Document id
-     * @author fxbin
+     * @author Wujun
      */
     protected void deleteRequest(String index, String id) {
         try {
@@ -146,7 +146,7 @@ public abstract class BaseElasticsearchService {
      *
      * @param index elasticsearch index name
      * @return {@link SearchResponse}
-     * @author fxbin
+     * @author Wujun
      */
     protected SearchResponse search(String index) {
         SearchRequest searchRequest = new SearchRequest(index);

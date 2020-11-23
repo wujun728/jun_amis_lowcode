@@ -15,7 +15,7 @@ import static com.monkeyk.sos.config.OAuth2ServerConfiguration.RESOURCE_ID;
 /**
  * 2019/7/6
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public abstract class AbstractInlineAccessTokenInvokerTest extends AbstractRepositoryTest {
 

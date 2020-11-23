@@ -28,7 +28,7 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * Abstract Module Health Checker
  *
- * @author xuanbei 18/5/16
+ * @author Wujun
  */
 public abstract class AbstractModuleHealthChecker implements ApplicationContextAware {
     private ApplicationContext applicationContext;

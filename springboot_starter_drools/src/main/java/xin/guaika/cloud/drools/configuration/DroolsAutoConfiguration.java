@@ -40,7 +40,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
  * Drools 配置
  * </P>
  * 
- * @author guaika junchen1314@foxmail.com
+ * @author Wujun
  * @Data 2017年8月30日 上午10:00:09
  */
 @Configuration

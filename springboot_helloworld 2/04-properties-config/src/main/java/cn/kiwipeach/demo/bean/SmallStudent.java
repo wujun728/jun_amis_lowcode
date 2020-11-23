@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  *  使用@ConfigurationProperties("kiwipeach")注解注入配置文件中的各个属性
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 @Component

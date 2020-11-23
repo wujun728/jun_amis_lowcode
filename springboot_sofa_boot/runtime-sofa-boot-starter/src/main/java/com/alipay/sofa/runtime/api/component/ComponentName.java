@@ -23,7 +23,7 @@ import java.io.Serializable;
 /**
  * ComponentName used to identify the component uniquely.
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ComponentName implements Serializable {
     private static final long   serialVersionUID = -6856142686482394411L;

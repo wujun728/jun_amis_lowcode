@@ -23,7 +23,7 @@ import java.util.List;
  * 菜单管理 前端控制器
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @TycloudResource(module = "privilege",value = "menu")

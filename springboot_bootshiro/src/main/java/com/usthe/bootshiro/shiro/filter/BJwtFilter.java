@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 支持restful url 的过滤链  JWT json web token 过滤器，无状态验证
  * @Date 0:04 2018/4/20
  */

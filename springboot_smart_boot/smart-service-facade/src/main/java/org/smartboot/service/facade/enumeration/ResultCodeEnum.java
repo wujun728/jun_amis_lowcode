@@ -3,7 +3,7 @@ package org.smartboot.service.facade.enumeration;
 /**
  * 返回码枚举
  * 
- * @author Seer
+ * @author Wujun
  * @version ResultCodeEnum.java, v 0.1 2016年3月6日 下午2:40:37 Seer Exp.
  */
 public enum ResultCodeEnum {

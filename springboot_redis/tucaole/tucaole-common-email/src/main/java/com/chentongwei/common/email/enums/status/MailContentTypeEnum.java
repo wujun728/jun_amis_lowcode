@@ -1,7 +1,7 @@
 package com.chentongwei.common.email.enums.status;
 
 /**
- * @author TongWei.Chen 2017-09-19 10:20:28
+ * @author Wujun
  * @Project tucaole
  * @Description: 邮件内容的类型
  */

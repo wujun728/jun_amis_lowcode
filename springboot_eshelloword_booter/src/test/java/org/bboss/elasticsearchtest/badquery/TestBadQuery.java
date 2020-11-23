@@ -28,7 +28,7 @@ import java.util.Map;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/12/30 20:39
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class TestBadQuery {

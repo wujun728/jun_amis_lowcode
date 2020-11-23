@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author xuanbei
+ * @author Wujun
  * @since 2.4.4
  */
 @Configuration

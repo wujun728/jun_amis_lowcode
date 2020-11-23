@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Session 会话对象
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class SessionObject implements Serializable {
 

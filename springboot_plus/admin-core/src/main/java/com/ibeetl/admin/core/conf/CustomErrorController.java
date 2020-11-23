@@ -32,7 +32,7 @@ import com.ibeetl.admin.core.web.JsonResult;
 /**
  * 自定义的全局错误页面
  *
- * @author lijiazhi
+ * @author Wujun
  */
 @Controller
 public class CustomErrorController  extends AbstractErrorController {

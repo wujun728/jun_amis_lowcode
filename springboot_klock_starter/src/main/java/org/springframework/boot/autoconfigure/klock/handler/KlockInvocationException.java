@@ -1,7 +1,7 @@
 package org.springframework.boot.autoconfigure.klock.handler;
 
 /**
- * @author wanglaomo
+ * @author Wujun
  * @since 2019/4/16
  **/
 public class KlockInvocationException extends RuntimeException {

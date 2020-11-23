@@ -31,7 +31,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
     
     /**
      * 配置拦截器
-     * @author lance
+     * @author Wujun
      * @param registry
      */
     public void addInterceptors(InterceptorRegistry registry) {

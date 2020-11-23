@@ -5,7 +5,7 @@ import com.redis.exception.RedisLockException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author zzm
+ * @author Wujun
  * @version V1.0
  * @date 2017-09-26 10:45
  **/

@@ -20,7 +20,7 @@ import org.springframework.beans.factory.InitializingBean;
 
 /**
  * Test For Fail Module
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class FailBean implements InitializingBean {

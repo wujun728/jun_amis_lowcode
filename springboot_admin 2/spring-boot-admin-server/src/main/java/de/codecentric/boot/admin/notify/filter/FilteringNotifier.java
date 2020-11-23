@@ -34,7 +34,7 @@ import de.codecentric.boot.admin.notify.Notifier;
 /**
  * Notifier that allows to filter certain events based on policies.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class FilteringNotifier extends AbstractEventNotifier {
 	private static final Logger LOGGER = LoggerFactory.getLogger(FilteringNotifier.class);

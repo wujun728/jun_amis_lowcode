@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * HttpClient连接池配置
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2018/7/09 22:31
  */
 @Component

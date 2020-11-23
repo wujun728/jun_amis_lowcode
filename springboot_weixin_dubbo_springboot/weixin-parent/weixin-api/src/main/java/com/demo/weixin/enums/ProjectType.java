@@ -4,7 +4,7 @@ package com.demo.weixin.enums;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 项目类型
  * @date 2017/7/31
  * @since 1.0

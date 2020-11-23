@@ -1,7 +1,7 @@
 package com.zh.springbootatomikosjta.service;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 public interface BookProductService {

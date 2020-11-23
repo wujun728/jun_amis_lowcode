@@ -26,7 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 @RunWith(SofaBootRunner.class)

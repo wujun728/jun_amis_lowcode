@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.model;
 /**
  * component type
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ComponentType {
     private String typeName;

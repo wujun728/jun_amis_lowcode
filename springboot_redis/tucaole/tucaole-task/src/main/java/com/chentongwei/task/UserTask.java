@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
- * @author TongWei.Chen 2017-09-21 13:11:25
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户模块Task
  */

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * The type Yahoo rate bean.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class YahooRateBean {
 

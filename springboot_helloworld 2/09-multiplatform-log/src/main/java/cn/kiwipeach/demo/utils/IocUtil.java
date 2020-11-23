@@ -23,7 +23,7 @@ import org.springframework.stereotype.Component;
 /**
  * spring的容器工具类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/04
  */
 @Component

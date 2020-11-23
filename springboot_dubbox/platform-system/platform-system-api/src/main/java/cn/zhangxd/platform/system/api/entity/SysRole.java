@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 角色Entity
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class SysRole extends DataEntity {
     /**

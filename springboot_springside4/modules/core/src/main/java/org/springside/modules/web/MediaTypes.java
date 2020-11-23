@@ -12,7 +12,7 @@ package org.springside.modules.web;
  * 
  * Google的MediaType必须再调用toString()函数而不是常量，不能用于Restful方法的annotation。
  * 
- * @author calvin
+ * @author Wujun
  */
 public abstract class MediaTypes {
 

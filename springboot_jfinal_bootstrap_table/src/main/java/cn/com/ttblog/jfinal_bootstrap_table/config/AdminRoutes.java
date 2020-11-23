@@ -7,7 +7,7 @@ import com.jfinal.config.Routes;
 
 /**
  * 后端路由规则
- * @author champ
+ * @author Wujun
  */
 public class AdminRoutes extends Routes {
 

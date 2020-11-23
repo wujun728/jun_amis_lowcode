@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * 多数据源标识
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017年3月5日 上午9:44:24
  */
 @Inherited

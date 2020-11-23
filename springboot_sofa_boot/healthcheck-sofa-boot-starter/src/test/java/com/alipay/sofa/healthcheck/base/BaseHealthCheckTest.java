@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * init an annotation application context with properties and classes
  *
- * @author scienjus
+ * @author Wujun
  */
 public class BaseHealthCheckTest {
     protected final AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();

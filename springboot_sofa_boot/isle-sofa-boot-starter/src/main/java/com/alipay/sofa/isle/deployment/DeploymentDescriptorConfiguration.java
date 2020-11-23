@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * deployment configuration
  *
- * @author khotyn 9/11/14 4:51 PM
+ * @author Wujun
  */
 public class DeploymentDescriptorConfiguration {
     /** module name identities */

@@ -18,7 +18,7 @@ import org.springframework.web.multipart.support.MissingServletRequestPartExcept
  * Function:增加方法注入，将含有CurrentUser注解的方法参数注入当前登录用户. <br/>
  * Date: 2016年8月11日 下午1:11:58 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

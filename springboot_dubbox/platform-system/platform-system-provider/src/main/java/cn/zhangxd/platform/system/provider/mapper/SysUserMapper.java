@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 用户DAO接口
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Mapper
 public interface SysUserMapper extends CrudDao<SysUser> {

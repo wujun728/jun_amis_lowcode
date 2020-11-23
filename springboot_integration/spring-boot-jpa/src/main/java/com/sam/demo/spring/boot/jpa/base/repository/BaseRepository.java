@@ -10,7 +10,7 @@ import org.springframework.data.repository.NoRepositoryBean;
 /**
  * 持久化操作公共接口
  * 
- * @author HXM
+ * @author Wujun
  *
  * @param <M>  实体类型
  * @param <ID> 实体主键类型

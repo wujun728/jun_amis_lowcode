@@ -42,7 +42,7 @@ import java.util.concurrent.TimeUnit;
  * - Has a custom connection keep-alive strategy (to apply a default keep-alive if one isn't specified)
  * - Starts an idle connection monitor to continuously clean up stale connections.
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/7/5
  */

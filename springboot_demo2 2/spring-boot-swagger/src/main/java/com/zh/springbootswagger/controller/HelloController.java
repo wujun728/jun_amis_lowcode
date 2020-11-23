@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/5/31
  */
 @Api(value = "欢迎", description = "欢迎业务相关API")

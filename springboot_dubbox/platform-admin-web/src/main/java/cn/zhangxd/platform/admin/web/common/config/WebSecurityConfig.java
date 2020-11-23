@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 /**
  * spring-security配置
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Configuration
 public class WebSecurityConfig extends AbstractWebSecurityConfig {

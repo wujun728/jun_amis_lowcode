@@ -17,7 +17,7 @@ import com.jfinal.plugin.ehcache.CacheInterceptor;
 
 /**
  * user控制器
- * @author netbuffer
+ * @author Wujun
  *
  */
 @Before({ TimeInterceptor.class })

@@ -1,7 +1,7 @@
 package com.zh.springbootbloomfilter.service;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/1
  */
 public interface TestService {

@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 /**
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月5日
  * @since 1.7

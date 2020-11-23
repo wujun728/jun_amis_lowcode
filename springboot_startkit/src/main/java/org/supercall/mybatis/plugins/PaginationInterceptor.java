@@ -28,7 +28,7 @@ import org.supercall.mybatis.dialect.OracleDialect;
 /**
  * 分页拦截器
  * 
- * @author ArchX[archx@foxmail.com]
+ * @author Wujun
  */
 @Intercepts({ @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class }) })
 public class PaginationInterceptor implements Interceptor {

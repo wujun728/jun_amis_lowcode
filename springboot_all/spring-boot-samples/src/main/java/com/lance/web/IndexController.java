@@ -18,7 +18,7 @@ import com.lance.utils.ServiceException;
 
 /**
  * 
- * @author lance
+ * @author Wujun
  * 2014-6-8下午6:47:18
  */
 @Controller
@@ -31,7 +31,7 @@ public class IndexController {
 	
 	/**
 	 * 跳转登录页面
-	 * @author lance
+	 * @author Wujun
 	 * 2014-6-8下午6:49:40
 	 * @return
 	 */
@@ -42,7 +42,7 @@ public class IndexController {
 	
 	/**
 	 * 登录成功后跳转页面
-	 * @author lance
+	 * @author Wujun
 	 * 2014-6-8下午6:50:47
 	 * @param name
 	 * @param password

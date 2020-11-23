@@ -2,7 +2,7 @@ package com.gosalelab.constants;
 
 /**
  * aspect cache's constants
- * @author silwind
+ * @author Wujun
  */
 public class CacheConstants {
     public final static String CACHE_EHCACHE_NAME = "eh";

@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
  * <p>
  * This annotation has a single parameter "value" of type <code>int</code> that specifies the type of the annotation.
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
+ * @author Wujun
  * @since 2.6.0
  */
 @Retention(RetentionPolicy.RUNTIME)

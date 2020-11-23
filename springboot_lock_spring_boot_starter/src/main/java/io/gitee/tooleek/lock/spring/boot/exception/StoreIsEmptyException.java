@@ -3,7 +3,7 @@ package io.gitee.tooleek.lock.spring.boot.exception;
 /**
  * 仓库为空的异常
  *
- * @author TanRq
+ * @author Wujun
  */
 public class StoreIsEmptyException extends RuntimeException {
 

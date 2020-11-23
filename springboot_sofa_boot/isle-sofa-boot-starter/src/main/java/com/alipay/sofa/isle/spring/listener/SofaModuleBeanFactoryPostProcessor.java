@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * get all the BeanPostProcessors and BeanFactoryPostProcessors of the root application context
  *
- * @author xuanbei 18/3/26
+ * @author Wujun
  */
 public class SofaModuleBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     /** spring will add automatically  **/

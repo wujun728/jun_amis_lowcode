@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Security User
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class AuthUser extends AbstractAuthUser {
 

@@ -3,7 +3,7 @@ package com.lhb.lhbauth.jwt.demo.authentication.mobile;
 import org.springframework.security.core.AuthenticationException;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/2 0002 10:45
  */

@@ -24,7 +24,7 @@ import org.junit.Test;
  * <p></p>
  * <p>Copyright (c) 2020</p>
  * @Date 2020/4/23 17:09
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class TestInit {

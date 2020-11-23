@@ -1,7 +1,7 @@
 package com.chentongwei.common.email.enums.template;
 
 /**
- * @author TongWei.Chen 2017-12-07 10:18:02
+ * @author Wujun
  * @Project tucaole
  * @Description: 模板名称枚举
  */

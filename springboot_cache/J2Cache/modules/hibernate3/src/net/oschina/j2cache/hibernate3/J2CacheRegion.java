@@ -28,7 +28,7 @@ import java.util.Map;
 
 /**
  * J2Cache implements Hibernate Cache Region
- * @author winterlau
+ * @author Wujun
  */
 public class J2CacheRegion implements GeneralDataRegion {
 	

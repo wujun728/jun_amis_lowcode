@@ -24,7 +24,7 @@ import java.util.Set;
  *     对Buffer编解码，处理半包消息，将解码成功的消息封装成Task
  *     将应答消息编码为Buffer，调用SocketChannel的write将消息异步发送给客户端
  *
- * @author yangtao__anxpp.com
+ * @author Wujun
  * @version 1.0
  */
 public class ServerHandle implements Runnable {

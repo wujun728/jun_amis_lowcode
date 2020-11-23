@@ -15,7 +15,7 @@ import io.gitee.tooleek.lock.spring.boot.util.SpringUtil;
 
 /**
  * 服务Bean工厂
- * @author TanRq
+ * @author Wujun
  *
  */
 public class ServiceBeanFactory {

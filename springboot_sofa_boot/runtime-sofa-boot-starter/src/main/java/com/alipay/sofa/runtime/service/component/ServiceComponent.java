@@ -38,7 +38,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Service Component
  *
- * @author xuanbei 18/3/9
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class ServiceComponent extends AbstractComponent {

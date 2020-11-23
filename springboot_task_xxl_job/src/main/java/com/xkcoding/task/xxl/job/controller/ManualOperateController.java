@@ -20,7 +20,7 @@ import java.util.Map;
  * 手动操作 xxl-job
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019-08-07 14:58
  */
 @Slf4j

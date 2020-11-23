@@ -28,7 +28,7 @@ import java.util.TimerTask;
 /**
  * 定时扫描本地配置文件，提供给远程读取
  *
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.config
  */

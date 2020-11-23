@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.model;
 /**
  * interface mode, include spring xml, Client Api, Annotation
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public enum InterfaceMode {
     spring, api, annotation

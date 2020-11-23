@@ -22,7 +22,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaRuntimeLoggerFactoryTest {

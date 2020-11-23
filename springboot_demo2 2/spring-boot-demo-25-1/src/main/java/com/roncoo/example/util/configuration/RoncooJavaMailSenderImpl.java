@@ -16,7 +16,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 /**
  * 实现多账号，轮询发送
  * 
- * @author wujing
+ * @author Wujun
  */
 @Configuration
 @EnableConfigurationProperties(MailProperties.class)

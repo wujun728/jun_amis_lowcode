@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * 本地日志参考类
- * @author Administrator
+ * @author Wujun
  *
  */
 public class LogUtils {

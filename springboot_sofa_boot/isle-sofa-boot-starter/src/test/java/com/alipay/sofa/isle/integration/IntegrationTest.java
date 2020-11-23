@@ -46,7 +46,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * @author xuanbei 18/5/8
+ * @author Wujun
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SofaBootTestApplication.class)

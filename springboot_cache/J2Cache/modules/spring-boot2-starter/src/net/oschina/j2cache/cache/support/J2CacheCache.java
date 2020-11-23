@@ -12,7 +12,7 @@ import net.oschina.j2cache.NullObject;
 
 /**
  * {@link CacheManager} implementation for J2Cache.
- * @author zhangsaizz
+ * @author Wujun
  *
  */
 public class J2CacheCache extends AbstractValueAdaptingCache {

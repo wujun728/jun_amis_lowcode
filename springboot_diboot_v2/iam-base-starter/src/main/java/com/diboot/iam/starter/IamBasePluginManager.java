@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 
 /**
  * IAM组件相关的初始化
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/23
  */

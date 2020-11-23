@@ -21,7 +21,7 @@ import de.codecentric.boot.admin.model.StatusInfo;
 /**
  * This event gets emitted when an application is registered.
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public class ClientApplicationStatusChangedEvent extends ClientApplicationEvent {
 	private static final long serialVersionUID = 1L;

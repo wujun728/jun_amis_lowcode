@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * Represents the info fetched from the info actuator endpoint at a certain time.
  * 
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class Info implements Serializable {
 	private static final long serialVersionUID = 2L;

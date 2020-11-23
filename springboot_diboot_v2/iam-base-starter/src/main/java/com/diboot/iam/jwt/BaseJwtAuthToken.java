@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.RememberMeAuthenticationToken;
 
 /**
- * @author Yangzhao
+ * @author Wujun
  * @version v2.0
  * @date 2019/6/6
  */

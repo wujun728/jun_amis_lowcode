@@ -6,7 +6,7 @@ import com.monkeyk.sos.domain.oauth.OauthClientDetails;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 
 public interface OauthService {

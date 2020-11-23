@@ -3,7 +3,7 @@
 * <p>Description: </p>  
 * <p>Copyright: Copyright (c) 2018</p>  
 * <p>Company: www.bluemoon.com</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */  
 package cn.com.bluemoon.controller;
@@ -37,7 +37,7 @@ import io.swagger.annotations.ApiOperation;
 /**  
 * <p>Title: SeckillApiController</p>  
 * <p>Description: 秒杀相关接口</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */
 @Api(tags="分布式秒杀")

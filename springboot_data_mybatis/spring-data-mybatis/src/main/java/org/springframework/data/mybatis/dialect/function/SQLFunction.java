@@ -1,7 +1,7 @@
 package org.springframework.data.mybatis.dialect.function;
 
 /**
- * @author Jarvis Song
+ * @author Wujun
  */
 public interface SQLFunction {
 

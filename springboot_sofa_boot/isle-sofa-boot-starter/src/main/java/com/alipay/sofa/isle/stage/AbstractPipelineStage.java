@@ -24,7 +24,7 @@ import org.springframework.core.Ordered;
 /**
  * {@link AbstractPipelineStage} is a common base class for {@link PipelineStage} implementations.
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public abstract class AbstractPipelineStage implements PipelineStage, Ordered {
     protected final ClassLoader                appClassLoader = AbstractPipelineStage.class

@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 /**
  * 商品信息顶级接口
- * @author Administrator
+ * @author Wujun
  *
  */
 public  interface StandardProduct {

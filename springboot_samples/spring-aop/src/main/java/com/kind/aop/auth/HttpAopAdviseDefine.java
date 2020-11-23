@@ -14,7 +14,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author xiongyongshun
+ * @author Wujun
  * @version 1.0
  * @created 2016/11/11 22:42
  */

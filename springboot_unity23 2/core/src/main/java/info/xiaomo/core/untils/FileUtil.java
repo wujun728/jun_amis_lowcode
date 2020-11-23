@@ -15,7 +15,7 @@ import java.util.List;
  * 所有方法都是静态方法，不需要生成此类的实例，
  * 为避免生成此类的实例，构造方法被申明为private类型的。
  *
- * @author : xiaomo
+ * @author Wujun
  * @since 1.0
  */
 

@@ -1,7 +1,7 @@
 package com.zh.springbootmongodb.base.constance;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/14
  */
 public class DateConstance {

@@ -11,7 +11,7 @@ import net.sf.cglib.core.Converter;
 /**
  * Cglib转换器，针对Cglib不能转换的类型手动处理
  *
- * @author Seer
+ * @author Wujun
  * @version CglibConverter.java, v 0.1 2015年11月18日 下午2:02:24 Seer Exp.
  */
 public class CglibConverter implements Converter {

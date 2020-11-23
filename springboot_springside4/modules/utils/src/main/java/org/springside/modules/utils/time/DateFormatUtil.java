@@ -22,7 +22,7 @@ import org.springside.modules.utils.base.annotation.NotNull;
  * @see FastDateFormat#format(java.util.Date)
  * @see FastDateFormat#format(long)
  * 
- * @author calvin
+ * @author Wujun
  */
 public class DateFormatUtil {
 

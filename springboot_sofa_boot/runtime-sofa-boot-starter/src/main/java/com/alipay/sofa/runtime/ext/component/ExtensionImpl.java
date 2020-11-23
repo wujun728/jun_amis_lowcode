@@ -24,8 +24,8 @@ import java.io.Serializable;
 /**
  * Extension Implement
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 

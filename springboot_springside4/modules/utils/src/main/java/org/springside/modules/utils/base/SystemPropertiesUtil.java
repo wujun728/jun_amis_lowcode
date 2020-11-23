@@ -16,7 +16,7 @@ import org.springside.modules.utils.number.NumberUtil;
  * 3. Properties 本质上是一个HashTable，每次读写都会加锁，所以不支持频繁的System.getProperty(name)来检查系统内容变化 因此扩展了一个ListenableProperties,
  * 在其所关心的属性变化时进行通知.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class SystemPropertiesUtil {
 

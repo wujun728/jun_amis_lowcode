@@ -6,7 +6,7 @@ package org.supercall.mybatis;
  * <p>
  * 针对不同的数据库使用不同的分页实现
  * 
- * @author ArchX[archx@foxmail.com]
+ * @author Wujun
  */
 public interface IDialect {
     

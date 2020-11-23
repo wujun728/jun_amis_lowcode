@@ -133,7 +133,7 @@ package org.springside.modules.utils.concurrent.jsr166e;
  * }}</pre>
  *
  * @since 1.7
- * @author Doug Lea
+ * @author Wujun
  */
 public abstract class RecursiveAction extends ForkJoinTask<Void> {
     private static final long serialVersionUID = 5232453952276485070L;

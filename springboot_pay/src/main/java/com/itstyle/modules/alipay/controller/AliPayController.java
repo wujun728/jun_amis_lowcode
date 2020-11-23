@@ -82,7 +82,7 @@ public class AliPayController {
     }
     /**
      * 支付宝支付后台回调(二维码、H5、网站)
-     * @Author  科帮网
+     * @author Wujun
      * @param request
      * @param response
      * @throws Exception  void
@@ -146,7 +146,7 @@ public class AliPayController {
 	
 	/**
 	 * 支付宝支付PC端前台回调
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @return  String
 	 * @Date	2018年11月20日

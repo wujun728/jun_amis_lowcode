@@ -20,7 +20,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 
 /**
- * @author emeroad
+ * @author Wujun
  */
 public class FixedBuffer implements Buffer {
     protected static final int NULL = -1;

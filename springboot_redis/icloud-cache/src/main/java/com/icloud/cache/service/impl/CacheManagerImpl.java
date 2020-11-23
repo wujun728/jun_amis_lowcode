@@ -23,7 +23,7 @@ import com.icloud.cache.vo.CacheTree;
 /**
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月3日
  * @since 1.7
@@ -82,7 +82,7 @@ public class CacheManagerImpl implements ICacheManager {
     /**
      * @param caches
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月11日
      */
     private List<CacheTree> toTree(List<CacheBean> caches) {

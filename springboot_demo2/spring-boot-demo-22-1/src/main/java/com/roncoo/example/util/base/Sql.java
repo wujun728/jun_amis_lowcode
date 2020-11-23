@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * sql工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public class Sql {
 	private Sql() {

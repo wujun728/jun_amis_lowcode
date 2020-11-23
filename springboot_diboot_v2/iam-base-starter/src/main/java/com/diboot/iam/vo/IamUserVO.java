@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
 * 系统用户 VO定义
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

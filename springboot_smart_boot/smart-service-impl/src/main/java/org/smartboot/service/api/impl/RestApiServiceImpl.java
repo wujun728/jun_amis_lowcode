@@ -23,7 +23,7 @@ import org.springframework.util.CollectionUtils;
 /**
  * API服务实现类
  * 
- * @author Seer
+ * @author Wujun
  * @version RestApiServiceImpl.java, v 0.1 2016年2月10日 下午3:17:16 Seer Exp.
  */
 public class RestApiServiceImpl extends AbstractService implements RestApiService {

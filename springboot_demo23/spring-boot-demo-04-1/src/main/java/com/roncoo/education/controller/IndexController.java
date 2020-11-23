@@ -16,7 +16,7 @@ import com.roncoo.education.bean.User;
 /**
  * spring-boot-demo-4-1
  * 
- * @author wujing
+ * @author Wujun
  */
 @RestController
 @RequestMapping(value = "/index")

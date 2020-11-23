@@ -31,7 +31,7 @@ import java.util.Properties;
  * json.map.list = java.util.Arrays$ArrayList
  * json.map.person = net.oschina.j2cache.demo.Person
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class FstJSONSerializer implements Serializer {
 

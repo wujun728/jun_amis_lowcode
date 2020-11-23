@@ -4,7 +4,7 @@ import org.typroject.tyboot.prototype.order.BaseOrder;
 
 /**
  * 订单顶级接口,只负责主流程的流转
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface StateHandler {

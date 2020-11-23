@@ -27,7 +27,7 @@ import java.util.List;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/11/13 9:55
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class MappingTest {

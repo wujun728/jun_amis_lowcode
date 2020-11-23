@@ -15,7 +15,7 @@ import org.springframework.util.CollectionUtils;
  * Convenient super class for MyBatis SqlSession data access objects. It gives you access
  * to the template which can then be used to execute SQL methods.
  *
- * @author JARVIS SONG
+ * @author Wujun
  */
 public abstract class SqlSessionRepositorySupport {
 

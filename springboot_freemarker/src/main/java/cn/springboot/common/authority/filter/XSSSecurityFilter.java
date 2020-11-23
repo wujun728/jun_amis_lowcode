@@ -27,7 +27,7 @@ import cn.springboot.common.authority.service.xss.XSSSecurityManager;
 
 /** 
  * @Description xss攻击脚本过滤器
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:43:01 PM  
  */
 @WebFilter(urlPatterns = "/*", filterName = "XSSCheck", initParams = { @WebInitParam(name = "securityconfig", value = "conf/xss_security_config.xml") })

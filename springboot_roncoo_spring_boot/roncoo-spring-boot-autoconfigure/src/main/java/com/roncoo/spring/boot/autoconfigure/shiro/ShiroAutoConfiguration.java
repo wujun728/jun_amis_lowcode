@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnClass(LifecycleBeanPostProcessor.class)

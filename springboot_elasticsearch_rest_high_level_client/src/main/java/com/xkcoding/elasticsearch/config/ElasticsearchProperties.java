@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * ElasticsearchProperties
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/9/15 22:58
  */

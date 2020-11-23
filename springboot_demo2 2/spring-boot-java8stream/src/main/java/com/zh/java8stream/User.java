@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/5/29
  */
 @Data

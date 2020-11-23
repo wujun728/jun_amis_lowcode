@@ -13,7 +13,7 @@ import java.util.List;
  * 用户角色关系表 服务实现类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @Service

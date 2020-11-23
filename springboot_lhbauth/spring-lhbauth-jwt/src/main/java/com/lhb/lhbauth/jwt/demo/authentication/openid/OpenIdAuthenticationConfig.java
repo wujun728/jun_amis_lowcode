@@ -16,7 +16,7 @@ import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/8 0008 14:54
  */

@@ -8,7 +8,7 @@ import java.net.Socket;
  * BIO服务端源码
  *  从以上代码，很容易看出，BIO主要的问题在于每当有一个新的客户端请求接入时，
  *  服务端必须创建一个新的线程来处理这条链路，在需要满足高性能、高并发的场景是没法应用的（大量创建新的线程会严重影响服务器性能，甚至罢工）。
- * @author yangtao__anxpp.com
+ * @author Wujun
  * @version 1.0
  */
 public final class ServerNormal {

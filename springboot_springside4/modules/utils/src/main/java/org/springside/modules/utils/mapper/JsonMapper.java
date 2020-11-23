@@ -31,7 +31,7 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
  * 
  * 注意: 需要参考本模块的POM文件，显式引用jackson.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class JsonMapper {
 

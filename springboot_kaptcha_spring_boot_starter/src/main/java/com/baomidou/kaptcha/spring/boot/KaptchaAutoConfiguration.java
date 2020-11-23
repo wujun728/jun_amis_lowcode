@@ -35,7 +35,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 谷歌验证码 的springBoot快速启动器
  *
- * @author TaoYu MaYing
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnClass(DefaultKaptcha.class)

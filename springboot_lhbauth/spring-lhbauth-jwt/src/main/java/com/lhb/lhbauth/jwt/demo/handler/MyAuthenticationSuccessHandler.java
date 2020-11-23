@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 当用户登录成功之后做的处理
  * @date 2019/1/8 0008 10:06
  */

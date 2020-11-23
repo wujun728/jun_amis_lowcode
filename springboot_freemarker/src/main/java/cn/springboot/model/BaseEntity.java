@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /** 
  * @Description 实体基类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 3:25:15 PM 
  * @param <E> 
  */

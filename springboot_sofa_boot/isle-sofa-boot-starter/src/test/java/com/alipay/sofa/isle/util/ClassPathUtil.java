@@ -24,7 +24,7 @@ import java.net.URLClassLoader;
 import java.util.Enumeration;
 
 /**
- * @author xuanbei 18/5/8
+ * @author Wujun
  */
 public class ClassPathUtil {
     public static void addClassPathAtRuntime(String jarName) throws Exception {

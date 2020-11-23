@@ -22,7 +22,7 @@ import java.net.NetworkInterface;
 /**
  * 分布式锁工具类
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 public class LockUtil {

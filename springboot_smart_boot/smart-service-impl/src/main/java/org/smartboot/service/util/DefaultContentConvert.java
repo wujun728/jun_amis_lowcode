@@ -12,7 +12,7 @@ import com.alibaba.fastjson.JSONObject;
 /**
  * 内容转换器
  * 
- * @author seer
+ * @author Wujun
  * @version DefaultContentConvert.java, v 0.1 2017年1月4日 下午8:24:54 Seer Exp.
  */
 public class DefaultContentConvert implements Convert<JSONArray, String> {

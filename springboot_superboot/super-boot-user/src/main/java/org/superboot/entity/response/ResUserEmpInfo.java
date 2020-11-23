@@ -12,7 +12,7 @@ import java.io.Serializable;
  * 功能描述:ResUserEmpInfo响应实体
  * </p>
  *
- * @author wangrui
+ * @author Wujun
  * @date 2018/2/6
  * @time 14:45
  * @path cn.phxg.entity.response.ResUserEmpInfo

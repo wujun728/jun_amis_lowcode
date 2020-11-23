@@ -10,7 +10,7 @@ import org.springside.modules.utils.base.annotation.Nullable;
  * 
  * 从AndroidUtilCode的RegexUtils移植, 性能优化将正则表达式为预编译, 并修改了TEL的正则表达式.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class TextValidator {
 

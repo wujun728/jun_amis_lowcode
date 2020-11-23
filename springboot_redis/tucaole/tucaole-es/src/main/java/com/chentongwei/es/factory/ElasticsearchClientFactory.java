@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @author TongWei.Chen 2017-7-17 16:52:28
+ * @author Wujun
  * @Project tucaole
  * @Description: ES客户端工厂
  */

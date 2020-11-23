@@ -8,7 +8,7 @@ import org.apache.ibatis.session.RowBounds;
  * 用户可以通过继承 org.apache.ibatis.session.RowBounds实现自己的分页模型<br>
  * 注意：插件仅支持RowBounds及其子类作为分页参数
  * 
- * @author ArchX[archx@foxmail.com]
+ * @author Wujun
  */
 public class Pagination extends RowBounds {
     private int total; // 总记录条数

@@ -4,7 +4,7 @@ import io.jboot.db.annotation.Table;
 import io.jboot.db.model.JbootModel;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package sharding
  */

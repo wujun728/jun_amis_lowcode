@@ -6,7 +6,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * 无效验证码
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class InvalidCaptchaException extends BusinessException {
 

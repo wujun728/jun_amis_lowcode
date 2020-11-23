@@ -17,8 +17,8 @@
 package com.alipay.sofa.healthcheck.configuration;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 public class HealthCheckConstants {

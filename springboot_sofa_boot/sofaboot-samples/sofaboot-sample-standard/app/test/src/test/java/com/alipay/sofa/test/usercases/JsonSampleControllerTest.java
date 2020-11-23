@@ -24,7 +24,7 @@ import org.springframework.http.ResponseEntity;
 
 /**
  * JsonSampleControllerTest
- * @author ruoshan
+ * @author Wujun
  */
 public class JsonSampleControllerTest extends AbstractTestBase {
 

@@ -4,7 +4,7 @@ import com.zh.springbootexception.enums.AppResultCode;
 import lombok.Data;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/5
  */
 @Data

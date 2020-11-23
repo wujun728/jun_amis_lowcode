@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
  * 网址汇总
  * </p>
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-22
  */
 @Data

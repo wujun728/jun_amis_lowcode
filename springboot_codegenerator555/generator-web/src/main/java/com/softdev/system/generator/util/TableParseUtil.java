@@ -13,7 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author xuxueli 2018-05-02 21:10:45
+ * @author Wujun
  * @modify zhengk/moshow 20180913
  */
 public class TableParseUtil {

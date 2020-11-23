@@ -32,7 +32,7 @@ import org.springside.modules.utils.text.Charsets;
  * 4. InputStream/Reader与OutputStream/Writer之间复制的copy(from Commons IO)
  * 
  * 
- * @author calvin
+ * @author Wujun
  */
 public class IOUtil {
 	private static final Logger logger = LoggerFactory.getLogger(IOUtil.class);

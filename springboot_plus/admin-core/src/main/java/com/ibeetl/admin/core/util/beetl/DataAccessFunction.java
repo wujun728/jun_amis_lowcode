@@ -22,7 +22,7 @@ import com.ibeetl.admin.core.util.FunctionLocal;
 
 /**
  * 数据权限拼sql，配合DataAccessFactory
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Component

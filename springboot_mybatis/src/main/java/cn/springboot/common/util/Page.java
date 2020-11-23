@@ -9,7 +9,7 @@ import cn.springboot.common.constants.Constants;
 
 /** 
  * @Description 分页对象
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:20:25 PM 
  * @param <T> 
  */

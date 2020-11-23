@@ -26,7 +26,7 @@ import org.springframework.util.StringUtils;
 import java.util.Properties;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class EnvironmentCustomizer implements EnvironmentPostProcessor {

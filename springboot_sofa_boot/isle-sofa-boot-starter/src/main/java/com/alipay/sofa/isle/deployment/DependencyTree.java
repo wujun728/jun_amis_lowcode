@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: DependencyTree.java, v 0.1 2012-1-12 12:28:24 yangyanzhao Exp $
  */
 public class DependencyTree<K, T> implements Iterable<DependencyTree.Entry<K, T>> {

@@ -4,7 +4,7 @@ import org.beetl.sql.core.annotatoin.EnumMapping;
 
 /**
  * 描述:数据是否被逻辑删除
- * @author : xiandafu
+ * @author Wujun
  */
 @EnumMapping("value")
 public enum DelFlagEnum {

@@ -21,7 +21,7 @@ import java.io.PrintWriter;
 
 /**
  * JWT 认证过滤器
- * @author Yangzhao
+ * @author Wujun
  * @version v2.0
  * @date 2019/6/6
  */

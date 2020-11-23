@@ -10,7 +10,7 @@ import org.springframework.data.mybatis.dialect.pagination.LimitHelper;
 import org.springframework.util.ClassUtils;
 
 /**
- * @author Jarvis Song
+ * @author Wujun
  */
 @Slf4j
 public class H2Dialect extends Dialect {

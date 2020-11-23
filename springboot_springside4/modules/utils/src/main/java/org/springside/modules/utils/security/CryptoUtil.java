@@ -24,7 +24,7 @@ import org.springside.modules.utils.number.RandomUtil;
  * 
  * 支持Hex与Base64两种编码方式.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class CryptoUtil {
 

@@ -1,14 +1,14 @@
 /**
  * Function: TODO ADD FUNCTION. <br/>
  *
- * @author weiguo.liu
+ * @author Wujun
  * @version
  * @see
  * @since JDK 1.7
  */
 /**
  * Function: TODO ADD FUNCTION. <br/>
- * @author weiguo.liu
+ * @author Wujun
  * @version
  * @since JDK 1.7
  * @see

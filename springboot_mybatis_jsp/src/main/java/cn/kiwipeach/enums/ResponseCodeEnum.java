@@ -6,7 +6,7 @@ import org.springframework.util.StringUtils;
  * Create Date: 2017/11/06
  * Description: 返回统一枚举类型
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public enum ResponseCodeEnum {
     SUCCESS("10000","请求成功,系统异常"),

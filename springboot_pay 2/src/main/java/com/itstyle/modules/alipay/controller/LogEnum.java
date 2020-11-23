@@ -2,7 +2,7 @@ package com.itstyle.modules.alipay.controller;
 
 /**
  * 本地日志枚举
- * @author Administrator
+ * @author Wujun
  *
  */
 public enum  LogEnum {

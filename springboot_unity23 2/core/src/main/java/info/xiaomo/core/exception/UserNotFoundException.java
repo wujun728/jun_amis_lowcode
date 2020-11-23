@@ -14,7 +14,7 @@ package info.xiaomo.core.exception;
  * Today the best performance  as tomorrow newest starter!
 
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/houko
  * email: xiaomo@xiaomo.info
  * <p>

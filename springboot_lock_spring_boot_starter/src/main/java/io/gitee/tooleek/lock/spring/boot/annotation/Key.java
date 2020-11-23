@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 /**
  * 用于分布式锁的key
- * @author TanRq
+ * @author Wujun
  *
  */
 @Target({ElementType.PARAMETER,ElementType.FIELD,ElementType.METHOD})

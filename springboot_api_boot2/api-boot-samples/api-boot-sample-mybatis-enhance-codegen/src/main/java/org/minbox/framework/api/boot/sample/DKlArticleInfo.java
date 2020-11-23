@@ -5,7 +5,7 @@ import com.gitee.hengboy.mybatis.enhance.dsl.expression.TableExpression;
 
 /**
  * 文章信息表
- * @author ApiBoot Mybatis Enhance Codegen
+ * @author Wujun
  */
 public class DKlArticleInfo extends TableExpression<KlArticleInfo> {
 

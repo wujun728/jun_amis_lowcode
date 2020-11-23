@@ -22,7 +22,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Interface for storing JournaledEvent
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public interface JournaledEventStore {
 

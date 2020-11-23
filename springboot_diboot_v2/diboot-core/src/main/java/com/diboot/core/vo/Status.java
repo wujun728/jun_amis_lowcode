@@ -2,7 +2,7 @@ package com.diboot.core.vo;
 
 /**
  * 状态码定义
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/01/01
  */

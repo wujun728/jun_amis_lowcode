@@ -13,7 +13,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 /** 
  * @Description Druid单数据源配置
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:18:24 PM  
  */
 //@Configuration

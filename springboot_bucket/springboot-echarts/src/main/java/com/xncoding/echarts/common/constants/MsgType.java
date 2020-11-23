@@ -3,7 +3,7 @@ package com.xncoding.echarts.common.constants;
 /**
  * 消息类型
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/8
  */

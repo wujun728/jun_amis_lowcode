@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.spi.binding;
 /**
  * abstract binding implementation
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public abstract class AbstractBinding implements Binding {
     protected boolean isHealthy   = true;

@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import java.util.TimerTask;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 日志操作任务工厂
  * @Date 9:44 2018/4/22
  */

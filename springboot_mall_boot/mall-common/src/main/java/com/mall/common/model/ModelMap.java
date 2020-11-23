@@ -6,7 +6,7 @@ import java.util.Set;
 
 /**
  * 封装map 类型转换
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create 2018/11/8 11:26
  **/

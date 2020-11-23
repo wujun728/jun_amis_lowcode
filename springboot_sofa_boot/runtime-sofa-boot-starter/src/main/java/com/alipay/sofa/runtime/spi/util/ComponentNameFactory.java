@@ -23,7 +23,7 @@ import com.alipay.sofa.runtime.util.StringUtils;
 /**
  * ComponentName Factory
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ComponentNameFactory {
     /**

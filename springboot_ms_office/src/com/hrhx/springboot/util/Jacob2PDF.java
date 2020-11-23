@@ -12,7 +12,7 @@ import com.jacob.com.Variant;
  * ComThread.InitSTA();
  * 结束加上
  * ComThread.Release(); //释放进程
- * @author duhongming
+ * @author Wujun
  * 
  */
 public class Jacob2PDF {

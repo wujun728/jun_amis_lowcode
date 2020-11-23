@@ -7,7 +7,7 @@ import org.springframework.data.mybatis.dialect.pagination.LimitHandler;
 import org.springframework.data.mybatis.dialect.pagination.LimitHelper;
 
 /**
- * @author Jarvis Song
+ * @author Wujun
  */
 public class MySQLDialect extends Dialect {
 

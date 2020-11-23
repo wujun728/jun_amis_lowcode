@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-12-13 17:18:01
+ * @author Wujun
  * @Project tucaole
  * @Description: Token+userId
  */

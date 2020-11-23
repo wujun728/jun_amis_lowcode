@@ -21,8 +21,8 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.core.Ordered;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 public class NetworkHealthChecker implements HealthChecker, Ordered {

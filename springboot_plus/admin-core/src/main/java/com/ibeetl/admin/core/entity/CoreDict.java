@@ -15,7 +15,7 @@ import com.ibeetl.admin.core.util.ValidateConfig;
 
 /**
  * 描述: 字典
- * @author : xiandafu
+ * @author Wujun
  */
 public class CoreDict extends BaseEntity {
 

@@ -14,7 +14,7 @@ import java.util.Map;
  * 需要注意的是： 不能在代码中 setComplete，因为整个授权流程并没有结束
  * 我们只是在中途修改了它确认的一些信息而已。
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午4:42
  */
 @Controller

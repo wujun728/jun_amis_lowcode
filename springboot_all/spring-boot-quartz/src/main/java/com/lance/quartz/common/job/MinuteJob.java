@@ -8,7 +8,7 @@ import org.quartz.JobExecutionException;
 
 /**
  * 该方法仅仅用来测试每分钟执行
- * @author lance
+ * @author Wujun
  */
 public class MinuteJob implements Job{
 	Logger logger = LogManager.getLogger(getClass());

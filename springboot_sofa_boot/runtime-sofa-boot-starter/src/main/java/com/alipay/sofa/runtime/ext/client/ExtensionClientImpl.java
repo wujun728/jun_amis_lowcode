@@ -34,8 +34,8 @@ import org.springframework.util.Assert;
 /**
  * Programming API Implement for Extension/Extension-Point
  *
- * @author khotyn
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionClientImpl implements ExtensionClient {

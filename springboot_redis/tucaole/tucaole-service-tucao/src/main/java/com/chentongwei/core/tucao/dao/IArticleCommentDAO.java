@@ -7,7 +7,7 @@ import com.chentongwei.core.tucao.entity.vo.comment.ArticleCommentListVO;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-22 09:39:15
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章评论DAO
  */

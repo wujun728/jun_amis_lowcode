@@ -12,7 +12,7 @@ import org.typroject.tyboot.core.rdbms.orm.entity.BaseEntity;
  * 订单产品关系表
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

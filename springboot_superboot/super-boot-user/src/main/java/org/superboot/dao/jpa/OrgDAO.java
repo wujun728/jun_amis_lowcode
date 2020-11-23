@@ -15,7 +15,7 @@ import org.superboot.entity.jpa.SuperbootOrg;
  * 功能描述:
  * </p>
  *
- * @author zhangshuai
+ * @author Wujun
  * @date 2017/11/14
  * @time 10:41
  * @Path org.superboot.dao.jpa.ImpOrgDAO

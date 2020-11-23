@@ -14,7 +14,7 @@ import java.util.List;
  * Function:配置类，增加自定义拦截器和解析器. <br/>
  * Date:     2016年8月11日 下午1:10:49 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

@@ -4,7 +4,7 @@ import com.ibeetl.admin.core.service.CorePlatformService;
 
 /**
  * 数据权限接口类
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface DataAccess {

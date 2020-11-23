@@ -32,7 +32,7 @@ import java.lang.reflect.Modifier;
  *  {@link ClientFactoryAware}
  * {@link SofaClientFactory} handler
  *
- * @author xuanbei 18/3/2
+ * @author Wujun
  */
 public class ClientFactoryBeanPostProcessor implements BeanPostProcessor, PriorityOrdered {
     private ClientFactory clientFactory;

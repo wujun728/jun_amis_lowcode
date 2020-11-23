@@ -21,7 +21,7 @@ import com.alipay.sofa.isle.deployment.DeploymentDescriptor;
 
 /**
  *
- * @author linfengqi  2011-7-26
+ * @author Wujun
  */
 public interface SpringContextLoader {
     /**

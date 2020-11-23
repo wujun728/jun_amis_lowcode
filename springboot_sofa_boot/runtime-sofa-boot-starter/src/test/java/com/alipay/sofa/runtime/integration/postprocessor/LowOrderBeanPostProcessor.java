@@ -21,7 +21,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class LowOrderBeanPostProcessor implements BeanPostProcessor {

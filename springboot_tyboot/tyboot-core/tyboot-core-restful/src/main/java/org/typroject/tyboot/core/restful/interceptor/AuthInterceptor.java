@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义拦截器
- * @author 子杨
+ * @author Wujun
  */
 @Component
 public class AuthInterceptor extends HandlerInterceptorAdapter {

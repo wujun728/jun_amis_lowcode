@@ -21,7 +21,7 @@ import com.xiaoleilu.hutool.util.CollectionUtil;
 /**
  * 菜单角色关联表
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-20
  */
 @Component

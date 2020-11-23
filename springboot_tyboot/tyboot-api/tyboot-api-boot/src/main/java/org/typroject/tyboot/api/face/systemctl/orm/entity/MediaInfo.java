@@ -11,7 +11,7 @@ import org.typroject.tyboot.core.rdbms.orm.entity.BaseEntity;
  * 多媒体信息关联
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 @EqualsAndHashCode(callSuper = true)

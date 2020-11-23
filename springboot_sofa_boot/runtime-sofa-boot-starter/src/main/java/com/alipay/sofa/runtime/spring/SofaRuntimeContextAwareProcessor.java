@@ -23,8 +23,8 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.PriorityOrdered;
 
 /**
- * @author qilong.zql
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
  * @since  2.5.0
  */
 public class SofaRuntimeContextAwareProcessor implements BeanPostProcessor, PriorityOrdered {

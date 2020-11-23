@@ -23,7 +23,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author TaoYu
+ * @author Wujun
  * @since 2.5.0
  */
 public class DsHeaderProcessor extends DsProcessor {

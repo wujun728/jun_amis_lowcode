@@ -26,7 +26,7 @@ import com.baomidou.mybatisplus.toolkit.StringUtils;
  * Mybatis全局缓存
  * </p>
  *
- * @author Caratacus
+ * @author Wujun
  * @since 2017-05-01
  */
 public class GlobalConfig {

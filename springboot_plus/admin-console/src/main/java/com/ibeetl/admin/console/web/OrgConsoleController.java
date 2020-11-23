@@ -33,7 +33,7 @@ import com.ibeetl.admin.core.web.JsonResult;
 
 /**
  * 描述: 组织机构 controller
- * @author : xiandafu
+ * @author Wujun
  */
 @Controller
 public class OrgConsoleController {

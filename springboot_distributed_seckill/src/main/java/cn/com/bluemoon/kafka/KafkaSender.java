@@ -5,7 +5,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 /**
  * 生产者
- * @author Guoqing
+ * @author Wujun
  * @date 2018/11/16 15:09
  */
 @Component

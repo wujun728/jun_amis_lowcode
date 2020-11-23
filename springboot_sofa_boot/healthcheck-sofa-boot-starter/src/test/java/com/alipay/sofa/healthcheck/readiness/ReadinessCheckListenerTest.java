@@ -33,7 +33,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.HashMap;
 
 /**
- * @author liangen
+ * @author Wujun
  * @version 2.3.0
  */
 public class ReadinessCheckListenerTest extends BaseHealthCheckTest {

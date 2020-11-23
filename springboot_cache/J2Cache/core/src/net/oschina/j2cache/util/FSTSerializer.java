@@ -20,7 +20,7 @@ import org.nustaq.serialization.FSTConfiguration;
 /**
  * 使用 FST 实现序列化
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class FSTSerializer implements Serializer {
 

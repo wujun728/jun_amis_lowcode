@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * @Description: 邮件发送类
  *
- * @author TongWei.Chen 2018-06-15 17:02:00
+ * @author Wujun
  * @Project common-boot-email
  **/
 @Component

@@ -29,8 +29,8 @@ import java.net.URL;
  * The URL class cannot be used directly because it already has a factory associated to it that constructs the URL using
  * its constructor.
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class Resource {

@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 /**
  * ExecutorConfig
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/5/17
  */

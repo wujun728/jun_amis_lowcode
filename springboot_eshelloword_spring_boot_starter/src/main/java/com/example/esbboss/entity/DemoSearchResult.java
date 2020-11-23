@@ -19,7 +19,7 @@ package com.example.esbboss.entity;
 import java.util.List;
 
 /**
- * @author yinbp[yin-bp@163.com]
+ * @author Wujun
  */
 public class DemoSearchResult {
 	private List<Demo> demos;

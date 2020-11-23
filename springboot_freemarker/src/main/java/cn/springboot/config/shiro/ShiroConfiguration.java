@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 
 /** 
  * @Description Shiro 配置
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 3:51:55 PM  
  */
 @Configuration

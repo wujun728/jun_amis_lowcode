@@ -25,7 +25,7 @@ import org.springframework.util.ClassUtils;
 /**
  * SOFABootEnvUtils
  *
- * @author yangguanchao
+ * @author Wujun
  * @since 2.5.0
  */
 public class SOFABootEnvUtils {

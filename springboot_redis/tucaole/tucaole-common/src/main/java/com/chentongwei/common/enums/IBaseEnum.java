@@ -1,7 +1,7 @@
 package com.chentongwei.common.enums;
 
 /**
- * @author TongWei.Chen 2017-05-16 13:29:48
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用枚举信息接口
  */

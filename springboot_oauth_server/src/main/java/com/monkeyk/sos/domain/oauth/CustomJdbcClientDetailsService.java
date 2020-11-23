@@ -7,7 +7,7 @@ import javax.sql.DataSource;
 /**
  * Add  <i>archived = 0</i> condition
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class CustomJdbcClientDetailsService extends JdbcClientDetailsService {
 

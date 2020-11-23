@@ -2,7 +2,7 @@ package cn.springboot.common.authority.service.xss;
 
 /** 
  * @Description 安全过滤配置信息类 
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:44:47 PM  
  */
 public class XSSSecurityConfig {

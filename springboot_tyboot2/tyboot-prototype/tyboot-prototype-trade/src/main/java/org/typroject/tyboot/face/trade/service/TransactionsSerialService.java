@@ -22,7 +22,7 @@ import java.util.Date;
  * 交易流水表 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-08-31
  */
 @Component

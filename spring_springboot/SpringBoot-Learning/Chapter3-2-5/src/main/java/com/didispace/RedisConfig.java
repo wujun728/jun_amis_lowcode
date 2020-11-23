@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.*;
 
 /**
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @date 16/4/15 下午3:19.
  * @blog http://blog.didispace.com

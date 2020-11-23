@@ -17,7 +17,7 @@ import com.roncoo.jui.web.service.SysUserService;
 /**
  * 后台用户信息 
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-25
  */
 @Controller

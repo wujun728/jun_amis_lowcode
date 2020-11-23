@@ -438,8 +438,8 @@ public class HttpRequest {
    * to check for updates or to contribute improvements.
    * </p>
    *
-   * @author Robert Harder
-   * @author rob@iharder.net
+   * @author Wujun
+   * @author Wujun
    * @version 2.3.7
    */
   public static class Base64 {

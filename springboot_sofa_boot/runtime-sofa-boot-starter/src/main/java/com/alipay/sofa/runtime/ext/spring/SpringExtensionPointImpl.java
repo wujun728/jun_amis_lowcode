@@ -26,7 +26,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * Extension point implement in spring env
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 

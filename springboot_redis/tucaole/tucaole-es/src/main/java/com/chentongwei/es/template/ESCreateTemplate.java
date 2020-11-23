@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-23 20:33:17
+ * @author Wujun
  * @Project tucaole
  * @Description: Elasticsearch创建工具类
  */

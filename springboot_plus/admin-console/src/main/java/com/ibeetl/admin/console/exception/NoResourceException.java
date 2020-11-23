@@ -5,7 +5,7 @@ import com.ibeetl.admin.core.util.PlatformException;
 /**
  * 描述: 资源不存在异常
  *
- * @author : xiandafu
+ * @author Wujun
  */
 public class NoResourceException extends PlatformException {
     public NoResourceException() {

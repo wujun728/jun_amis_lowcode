@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-16 17:06:28
+ * @author Wujun
  * @Project tucaole
  * @Description: 吐槽了举报类型Biz
  */

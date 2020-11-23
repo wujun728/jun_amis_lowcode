@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author TongWei.Chen 2017-12-17 14:17:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 收藏夹列表IO
  **/

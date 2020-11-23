@@ -12,7 +12,7 @@ import static org.junit.Assert.assertNotNull;
 /**
  * 2019/7/6
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class ClientCredentialsInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
 

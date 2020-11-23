@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 密码匹配器配置参数
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 public class CredentialsMatcherDefinition {

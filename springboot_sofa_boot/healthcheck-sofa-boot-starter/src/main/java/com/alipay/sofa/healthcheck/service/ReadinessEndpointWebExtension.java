@@ -26,7 +26,7 @@ import org.springframework.boot.actuate.health.HealthWebEndpointResponseMapper;
 import org.springframework.boot.actuate.health.ShowDetails;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.0.0
  */
 @EndpointWebExtension(endpoint = SofaBootReadinessCheckEndpoint.class)

@@ -22,7 +22,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 /**
  * 使用 fastjson 进行对象的 JSON 格式序列化
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class FastjsonSerializer implements Serializer {
 

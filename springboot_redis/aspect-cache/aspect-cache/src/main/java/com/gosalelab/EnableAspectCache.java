@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * Created by IntelliJ IDEA.
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/xiaomoinfo
  * email: xiaomo@xiaomo.info
  * <p>

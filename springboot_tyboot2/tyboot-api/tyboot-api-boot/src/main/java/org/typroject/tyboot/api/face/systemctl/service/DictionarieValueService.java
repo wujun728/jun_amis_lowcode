@@ -14,7 +14,7 @@ import java.util.List;
  * 系统字典表 服务类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-06-27
  */
 @Component

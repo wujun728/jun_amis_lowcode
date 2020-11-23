@@ -3,7 +3,7 @@ package cn.zhangxd.platform.system.api.exception.base;
 /**
  * 系统业务异常.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class SystemException extends RuntimeException {
 

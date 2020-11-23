@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.6.0
  */
 public class TimeWasteBean {

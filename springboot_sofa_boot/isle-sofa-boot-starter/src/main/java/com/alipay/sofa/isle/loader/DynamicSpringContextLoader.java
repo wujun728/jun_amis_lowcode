@@ -44,7 +44,7 @@ import com.alipay.sofa.runtime.spi.log.SofaLogger;
 
 /**
  *
- * @author linfengqi  2011-7-26
+ * @author Wujun
  */
 public class DynamicSpringContextLoader implements SpringContextLoader {
     protected final ConfigurableApplicationContext rootApplicationContext;

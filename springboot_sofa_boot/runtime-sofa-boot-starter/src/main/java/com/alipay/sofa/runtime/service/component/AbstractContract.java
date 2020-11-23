@@ -29,7 +29,7 @@ import java.util.Set;
 /**
  * abstract contract implementation
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public abstract class AbstractContract implements Contract {
     /** associated binding */

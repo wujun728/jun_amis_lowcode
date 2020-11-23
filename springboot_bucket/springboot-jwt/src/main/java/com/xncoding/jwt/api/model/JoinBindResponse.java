@@ -3,7 +3,7 @@ package com.xncoding.jwt.api.model;
 /**
  * 入网绑定返回
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/16
  */

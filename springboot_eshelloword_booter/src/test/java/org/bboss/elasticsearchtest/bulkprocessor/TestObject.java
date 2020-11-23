@@ -20,7 +20,7 @@ package org.bboss.elasticsearchtest.bulkprocessor;
  * <p></p>
  * <p>Copyright (c) 2020</p>
  * @Date 2020/3/3 17:12
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class TestObject {

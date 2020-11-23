@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * AfterStartRunner
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/9/15
  */

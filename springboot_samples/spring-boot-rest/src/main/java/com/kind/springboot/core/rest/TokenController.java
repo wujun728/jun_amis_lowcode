@@ -26,7 +26,7 @@ import javax.annotation.Resource;
  * Function:获取和删除token的请求地址，在Restful设计中其实就对应着登录和退出. <br/>
  * Date: 2016年8月11日 下午12:56:34 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

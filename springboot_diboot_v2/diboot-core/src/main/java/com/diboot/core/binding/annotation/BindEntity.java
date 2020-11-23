@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * 绑定Entity 注解定义
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/1/21
  */

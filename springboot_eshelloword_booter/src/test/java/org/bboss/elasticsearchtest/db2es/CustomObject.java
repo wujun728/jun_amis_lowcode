@@ -20,7 +20,7 @@ package org.bboss.elasticsearchtest.db2es;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/9/4 10:37
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class CustomObject {

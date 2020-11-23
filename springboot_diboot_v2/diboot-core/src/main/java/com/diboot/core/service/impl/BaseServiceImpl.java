@@ -28,7 +28,7 @@ import java.util.*;
 
 /***
  * CRUD通用接口实现类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @param <M> mapper类
  * @param <T> entity类
  * @version 2.0

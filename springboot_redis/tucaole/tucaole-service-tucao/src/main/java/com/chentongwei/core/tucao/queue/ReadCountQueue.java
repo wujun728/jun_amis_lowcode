@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.PriorityBlockingQueue;
 
 /**
- * @author TongWei.Chen 2017-12-15 13:15:12
+ * @author Wujun
  * @Project tucaole
  * @Description: 分类记录浏览次数标识队列，只记录浏览的数据标识 主键ID
  */

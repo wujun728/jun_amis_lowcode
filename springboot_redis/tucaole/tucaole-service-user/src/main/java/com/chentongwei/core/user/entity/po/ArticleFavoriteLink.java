@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author TongWei.Chen 2017-12-17 14:07:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 资源收藏表
  */

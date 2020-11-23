@@ -6,7 +6,7 @@ import com.lhb.lhbauth.jwt.demo.authentication.social.qq.apapter.QQAdapter;
 import org.springframework.social.connect.support.OAuth2ConnectionFactory;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description QQ连接工厂
  * @date 2019/1/3 0003 10:24
  */

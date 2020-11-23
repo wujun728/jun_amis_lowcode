@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Boot IOC
  * 
- * @author percy
+ * @author Wujun
  *
  */
 @Configuration

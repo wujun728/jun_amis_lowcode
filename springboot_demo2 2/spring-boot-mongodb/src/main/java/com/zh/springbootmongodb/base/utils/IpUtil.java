@@ -8,7 +8,7 @@ import java.net.SocketException;
 import java.util.Enumeration;
 
 /**
- * @author : zhanghang
+ * @author Wujun
  * @date 2019/6/14
  */
 public class IpUtil {

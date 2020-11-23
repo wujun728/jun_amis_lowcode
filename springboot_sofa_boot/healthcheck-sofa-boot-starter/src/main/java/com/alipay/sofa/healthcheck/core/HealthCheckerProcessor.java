@@ -35,8 +35,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * Used to process all implementations of {@link HealthChecker}
  *
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2.3.0
  */
 public class HealthCheckerProcessor {

@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * Reference Implementation
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ReferenceImpl extends AbstractContract implements Reference {
     /** jvm first or not */

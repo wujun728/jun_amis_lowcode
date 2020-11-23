@@ -9,7 +9,7 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 import java.util.Map;
 
 /**
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create 2018-08-14 22:24
  **/

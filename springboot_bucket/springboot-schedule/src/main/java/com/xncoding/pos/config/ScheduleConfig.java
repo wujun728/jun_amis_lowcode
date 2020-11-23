@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 /**
  * ScheduleConfig
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2017/9/13
  */

@@ -50,7 +50,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaEventHandlerTest {

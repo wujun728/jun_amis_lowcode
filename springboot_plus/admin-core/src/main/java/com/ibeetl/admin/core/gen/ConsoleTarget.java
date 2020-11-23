@@ -3,7 +3,7 @@ package com.ibeetl.admin.core.gen;
 
 /**
  * 用于代码生成
- * @author xiandafu
+ * @author Wujun
  *
  */
 

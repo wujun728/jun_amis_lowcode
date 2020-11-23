@@ -22,7 +22,7 @@ public class DynamicDataSourceContextHolder {
 
     /** 
      * @Description 判断指定DataSrouce当前是否存在
-     * @author 王鑫
+     * @author Wujun
      * @param dataSourceId
      * @return  
      */

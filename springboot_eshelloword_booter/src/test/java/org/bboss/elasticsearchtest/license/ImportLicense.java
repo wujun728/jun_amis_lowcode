@@ -25,7 +25,7 @@ import org.junit.Test;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/8/18 23:33
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class ImportLicense {

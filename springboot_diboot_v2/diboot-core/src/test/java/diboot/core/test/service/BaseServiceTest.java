@@ -31,7 +31,7 @@ import java.util.Map;
 
 /**
  *  BaseService接口实现测试 (需先执行example中的初始化SQL)
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/06/15
  */

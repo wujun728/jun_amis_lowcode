@@ -13,7 +13,7 @@ import com.kind.springboot.core.domain.UserDo;
 /**
  * Function:用户服务接口. <br/>
  * Date:     2016年8月11日 下午12:50:10 <br/>
- * @author weiguo.liu
+ * @author Wujun
  * @version
  * @since JDK 1.7
  * @see

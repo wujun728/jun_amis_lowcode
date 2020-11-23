@@ -3,7 +3,7 @@ package org.smartboot.component.cache;
 /**
  * 缓存前缀枚举
  *
- * @author Seer
+ * @author Wujun
  * @version v0.1 2015年11月06日 下午1:46 Seer Exp.
  */
 public enum PrefixEnum {

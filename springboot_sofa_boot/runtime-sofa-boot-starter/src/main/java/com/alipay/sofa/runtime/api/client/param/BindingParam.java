@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.api.binding.BindingType;
 /**
  * The binding parameter used when create a SOFA service or a SOFA reference when using SOFA's programming API.
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface BindingParam {
 

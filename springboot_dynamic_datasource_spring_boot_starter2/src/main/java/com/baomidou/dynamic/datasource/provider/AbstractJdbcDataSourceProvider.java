@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * JDBC数据源提供者(抽象)
  *
- * @author TaoYu
+ * @author Wujun
  * @since 2.1.2
  */
 @Slf4j

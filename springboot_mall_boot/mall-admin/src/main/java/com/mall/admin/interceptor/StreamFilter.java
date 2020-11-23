@@ -16,7 +16,7 @@ import java.io.*;
  *  详情参考 https://blog.csdn.net/mazhen1991/article/details/80695473
  *   解决方案：定义一个过滤器将流中的数据读取到一个数组中，并重写getInputStream()和getRead()方法，
  *   后续获取流中的数据的时候，直接去数组中读取
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/12/22 20:48
  */

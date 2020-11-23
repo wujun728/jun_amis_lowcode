@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Level;
 /**
  * 统一异常类
  * 
- * @author Seer
+ * @author Wujun
  * @version DbApiException.java, v 0.1 2016年1月26日 下午4:01:51 Seer Exp.
  */
 public class SmartException extends RuntimeException {

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description bean初始化之前和初始化之后都会经过这个
  * @date 2018/12/18 0018 11:07
  */

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 分页对象
  *
- * @author zhaodui
+ * @author Wujun
  * @param <T>
  */
 public class Page<T> {

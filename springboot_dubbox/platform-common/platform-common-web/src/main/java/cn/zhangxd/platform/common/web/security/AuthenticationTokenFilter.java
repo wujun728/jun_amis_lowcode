@@ -18,7 +18,7 @@ import java.io.IOException;
 /**
  * Token 校验过滤器
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class AuthenticationTokenFilter extends GenericFilterBean {
 

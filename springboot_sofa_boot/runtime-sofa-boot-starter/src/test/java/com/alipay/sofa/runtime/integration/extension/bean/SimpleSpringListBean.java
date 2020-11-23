@@ -18,7 +18,7 @@ package com.alipay.sofa.runtime.integration.extension.bean;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class SimpleSpringListBean {

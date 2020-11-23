@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-11-30 15:53:15
+ * @author Wujun
  * @Project tucaole
  * @Description: 省市区VO
  */

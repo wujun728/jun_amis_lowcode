@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author itmuch.com
+ * @author Wujun
  */
 @SuppressWarnings("ALL")
 @RestController

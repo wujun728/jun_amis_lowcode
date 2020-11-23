@@ -19,7 +19,7 @@ import com.lance.quartz.service.TaskServiceImpl;
 
 /**
  * 任务管理
- * @author lance
+ * @author Wujun
  */
 @Controller
 public class TaskManageController {

@@ -19,7 +19,7 @@ import org.springframework.beans.BeanWrapperImpl;
 /**
  * 缓存拦截器,通过配置化拦截设置于接口处的注解
  * 
- * @author Seer
+ * @author Wujun
  * @version CacheInterceptor.java, v 0.1 2016年3月22日 上午10:33:37 Seer Exp. 
  */
 public class CacheInterceptor implements MethodInterceptor {

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
  * Create Date: 2017/11/05
  * Description: 全局异常处理类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @ControllerAdvice
 @ResponseBody

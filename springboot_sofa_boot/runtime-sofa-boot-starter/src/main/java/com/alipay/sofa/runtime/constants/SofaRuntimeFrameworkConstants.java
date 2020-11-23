@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.constants;
 /**
  * Framework Constants
  *
- * @author xuanbei 18/5/12
+ * @author Wujun
  */
 public interface SofaRuntimeFrameworkConstants {
     String SOFA_RUNTIME_CONTEXT_BEAN_ID      = "sofaRuntimeContext";

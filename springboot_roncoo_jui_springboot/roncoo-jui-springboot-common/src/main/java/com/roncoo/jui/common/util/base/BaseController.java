@@ -23,7 +23,7 @@ import com.roncoo.jui.common.util.jui.Jui;
 /**
  * 控制基础类，所以controller都应该继承这个类
  * 
- * @author wujing
+ * @author Wujun
  */
 public class BaseController extends Base {
 

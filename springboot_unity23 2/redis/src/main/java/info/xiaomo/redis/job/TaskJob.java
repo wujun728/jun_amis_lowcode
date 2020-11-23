@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 @Component
 public class TaskJob {

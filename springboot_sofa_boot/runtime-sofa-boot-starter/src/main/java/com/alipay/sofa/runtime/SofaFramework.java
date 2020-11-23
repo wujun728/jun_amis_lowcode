@@ -25,7 +25,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 /**
  * SofaFramework Manager Interface
  *
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaFramework {

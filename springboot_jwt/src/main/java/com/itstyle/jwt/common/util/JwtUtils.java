@@ -23,7 +23,7 @@ import com.itstyle.jwt.common.entity.CheckResult;
 public class JwtUtils {
 	/**
 	 * 签发JWT
-	 * @Author  科帮网 
+	 * @author Wujun
 	 * @param id
 	 * @param subject 可以是JSON数据 尽可能少
 	 * @param ttlMillis

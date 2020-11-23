@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  * from Facebook
  * https://github.com/facebook/jcommon/blob/master/config/src/main/java/com/facebook/config/ConfigUtil.java
  * 
- * @author calvin
+ * @author Wujun
  *
  */
 public class UnitConverter {

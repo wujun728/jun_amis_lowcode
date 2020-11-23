@@ -3,7 +3,7 @@ package io.gitee.tooleek.lock.spring.boot.constant;
 /**
  * 公共常量
  *
- * @author 54lxb
+ * @author Wujun
  * @version 1.1.0
  * @apiNote 知识改变命运，技术改变世界
  * @since 2018-12-23 15:35

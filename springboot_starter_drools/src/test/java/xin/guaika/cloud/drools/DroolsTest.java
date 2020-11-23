@@ -31,7 +31,7 @@ import xin.guaika.cloud.drools.model.User;
  * Drools 测试
  * </P>
  * 
- * @author guaika junchen1314@foxmail.com
+ * @author Wujun
  * @Data 2017年8月30日 上午10:08:48
  */
 @RunWith(SpringJUnit4ClassRunner.class)

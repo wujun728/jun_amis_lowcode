@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import java.util.Date;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/14
  */
 @Data

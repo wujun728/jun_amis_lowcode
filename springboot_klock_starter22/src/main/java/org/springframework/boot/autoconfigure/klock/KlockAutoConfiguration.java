@@ -23,7 +23,7 @@ import org.springframework.util.ClassUtils;
 
 /**
  *
- * @author kl
+ * @author Wujun
  * @date 2017/12/29
  * Content :klock自动装配
  */

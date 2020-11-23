@@ -38,7 +38,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
- * @author xuanbei 18/5/8
+ * @author Wujun
  */
 public class SofaModuleProfileUtilTest {
     @Test

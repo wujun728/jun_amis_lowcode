@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 接口返回对象实体
  * 
- * @author wujing
+ * @author Wujun
  * @param <T>
  */
 public class Result<T> implements Serializable {

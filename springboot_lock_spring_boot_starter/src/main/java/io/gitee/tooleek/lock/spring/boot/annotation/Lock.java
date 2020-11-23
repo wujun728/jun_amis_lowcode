@@ -11,7 +11,7 @@ import io.gitee.tooleek.lock.spring.boot.enumeration.LockType;
 
 /**
  * 锁的注解
- * @author TanRq
+ * @author Wujun
  *
  */
 @Retention(value = RetentionPolicy.RUNTIME)

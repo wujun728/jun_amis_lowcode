@@ -11,7 +11,7 @@ import com.lance.utils.ServiceException;
 
 /**
  * 登录信息
- * @author lance
+ * @author Wujun
  */
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -19,7 +19,7 @@ public class LoginServiceImpl implements LoginService {
 	private UserRepository userRepository;
 	/**
 	 * 用户登录
-	 * @author lance
+	 * @author Wujun
 	 * 2014-6-11下午11:26:05
 	 * @param user
 	 * @return

@@ -21,7 +21,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author hyungil.jeong
+ * @author Wujun
  */
 public class ServiceInfoBo {
 

@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2018/12/26 0026 18:19
  */

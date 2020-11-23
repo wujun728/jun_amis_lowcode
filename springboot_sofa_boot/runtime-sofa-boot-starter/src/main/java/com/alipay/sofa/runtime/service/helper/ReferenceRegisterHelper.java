@@ -32,7 +32,7 @@ import java.util.Collection;
 /**
  * reference register helper
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ReferenceRegisterHelper {
     public static Object registerReference(Reference reference,

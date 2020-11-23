@@ -3,7 +3,7 @@ package com.chentongwei.core.system.dao;
 import com.chentongwei.core.system.entity.io.SysLogIO;
 
 /**
- * @author TongWei.Chen 2017-9-22 09:43:56
+ * @author Wujun
  * @Project tucaole
  * @Description: 系统日志DAO
  */

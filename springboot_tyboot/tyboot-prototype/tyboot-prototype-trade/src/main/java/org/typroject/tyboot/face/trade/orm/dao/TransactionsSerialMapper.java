@@ -8,7 +8,7 @@ import org.typroject.tyboot.face.trade.orm.entity.TransactionsSerial;
   * 交易流水表 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-08-31
  */
 public interface TransactionsSerialMapper extends BaseMapper<TransactionsSerial> {

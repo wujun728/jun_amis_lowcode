@@ -5,7 +5,7 @@ import com.zh.springbootmongodb.entity.model.AppVisitLog;
 import java.util.Date;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/14
  */
 public interface AppVisitLogService {

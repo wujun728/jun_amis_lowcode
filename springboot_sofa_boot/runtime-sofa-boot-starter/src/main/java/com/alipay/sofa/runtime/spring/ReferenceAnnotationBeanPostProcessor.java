@@ -49,7 +49,7 @@ import com.alipay.sofa.runtime.spi.service.BindingConverterFactory;
  * Responsible to inject field annotated by @SofaReference and
  * invoke setXX method annotated by @SofaReference
  *
- * @author xuanbei 18/5/9
+ * @author Wujun
  */
 public class ReferenceAnnotationBeanPostProcessor implements BeanPostProcessor, PriorityOrdered {
     private final PlaceHolderBinder binder = new DefaultPlaceHolderBinder();

@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * 用户标识仅可以使用默认数据源
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 17:37
  */
 @Target({ElementType.METHOD})

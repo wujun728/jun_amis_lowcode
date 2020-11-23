@@ -32,8 +32,8 @@ import java.util.*;
 
 /**
  *
- * @author fengqi.lin
- * @author yangyanzhao
+ * @author Wujun
+ * @author Wujun
  * @version $Id: ModelCreatingStage.java, v 0.1 2012-3-16 14:17:48 fengqi.lin Exp $
  */
 public class ModelCreatingStage extends AbstractPipelineStage {

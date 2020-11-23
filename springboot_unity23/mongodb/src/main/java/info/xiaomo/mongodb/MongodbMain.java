@@ -29,7 +29,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * Today the best performance  as tomorrow newest starter!
 
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/houko
  * email: xiaomo@xiaomo.info
  * <p>

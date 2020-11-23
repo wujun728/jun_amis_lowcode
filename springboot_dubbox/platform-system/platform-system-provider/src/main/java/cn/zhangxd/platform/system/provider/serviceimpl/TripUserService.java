@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * 用户服务实现
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 @Transactional(readOnly = true)

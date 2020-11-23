@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 public interface OrderMapper {

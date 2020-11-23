@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * RestTemplate客户端连接池配置
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/24
  */

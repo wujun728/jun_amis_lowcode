@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /** 
  * @Description request信息封装类，用于判断、处理request请求中特殊字符
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:44:32 PM  
  */
 public class XSSHttpRequestWrapper extends HttpServletRequestWrapper {

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 /**
  * S工具类测试
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 1.0
  * @date 2019/06/02
  */

@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description AES 双向加密解密工具
  * @Date 20:04 2018/2/11
  */

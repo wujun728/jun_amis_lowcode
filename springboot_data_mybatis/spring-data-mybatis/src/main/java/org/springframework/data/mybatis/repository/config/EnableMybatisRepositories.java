@@ -22,7 +22,7 @@ import org.springframework.transaction.PlatformTransactionManager;
  * Annotation to enable Mybatis repositories. Will scan the package of the annotated
  * configuration class for Spring Data * repositories by default.
  *
- * @author JARVIS SONG
+ * @author Wujun
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

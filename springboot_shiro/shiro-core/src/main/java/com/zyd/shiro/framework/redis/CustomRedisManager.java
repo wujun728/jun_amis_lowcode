@@ -14,7 +14,7 @@ import java.util.Set;
  * 1.增加database参数，可跟随配置文件的数据库索引选择redis数据库保存相关数据，避免了多个项目共用一个redis database所潜在的问题<br/>
  * 2.修改expire参数，默认值为30天 = 2592000s <br/>
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/6/12 14:22

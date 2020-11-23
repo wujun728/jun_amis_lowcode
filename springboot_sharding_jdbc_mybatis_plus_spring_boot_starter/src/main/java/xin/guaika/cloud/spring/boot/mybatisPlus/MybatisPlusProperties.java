@@ -18,8 +18,8 @@ import com.baomidou.mybatisplus.MybatisConfiguration;
 /**
  * Configuration properties for MyBatis.
  *
- * @author Eddú Meléndez
- * @author Kazuki Shimizu
+ * @author Wujun
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = MybatisPlusProperties.MYBATIS_PLUS_PREFIX)
 public class MybatisPlusProperties {

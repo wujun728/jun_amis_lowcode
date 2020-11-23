@@ -11,7 +11,7 @@ import com.icloud.cache.parser.impl.DefaultKeyGenerator;
 /**
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月4日
  * @since 1.7
@@ -23,7 +23,7 @@ public @interface CacheClear {
      * 缓存key的前缀
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public String pre() default "";
@@ -32,7 +32,7 @@ public @interface CacheClear {
      * 缓存key
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public String key() default "";
@@ -41,7 +41,7 @@ public @interface CacheClear {
      * 缓存keys
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public String[] keys() default "";

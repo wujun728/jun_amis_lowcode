@@ -7,7 +7,7 @@ import com.jfinal.config.Routes;
 
 /**
  * 前端路由规则
- * @author netbuffer
+ * @author Wujun
  */
 public class FrontRoutes extends Routes {
 

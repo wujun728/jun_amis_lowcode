@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Entity 基类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class BaseEntity implements Serializable {
 

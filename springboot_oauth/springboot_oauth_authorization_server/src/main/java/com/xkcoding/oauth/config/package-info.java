@@ -16,7 +16,7 @@
  * 这个处理器就是来完成登出成功以后的跳转操作的。
  *
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/7 上午9:16
  */
 package com.xkcoding.oauth.config;

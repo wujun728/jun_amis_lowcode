@@ -20,7 +20,7 @@ import com.alipay.sofa.common.xmap.annotation.XNode;
 import com.alipay.sofa.common.xmap.annotation.XObject;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("clientValue")

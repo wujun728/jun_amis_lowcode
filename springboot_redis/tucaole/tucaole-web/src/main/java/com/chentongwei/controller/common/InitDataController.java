@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.PostConstruct;
 
 /**
- * @author TongWei.Chen 2017-9-28 17:59:47
+ * @author Wujun
  * @Project tucaole
  * @Description: 初始化数据的控制器。容器启动时自动执行的方法，无需开发者手动调用。
  */

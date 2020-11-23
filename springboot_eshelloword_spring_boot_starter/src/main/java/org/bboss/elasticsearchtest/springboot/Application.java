@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- *  @author yinbp [122054810@qq.com]
+ *  @author Wujun
  *
  */
 

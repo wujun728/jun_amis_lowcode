@@ -19,8 +19,8 @@ package com.alipay.sofa.healthcheck.core;
 import org.springframework.boot.actuate.health.Health;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2.3.0
  */
 public interface HealthChecker {

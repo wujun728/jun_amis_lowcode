@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 /**
  * 账户实体
- * @author Administrator
+ * @author Wujun
  *
  */
 @Entity

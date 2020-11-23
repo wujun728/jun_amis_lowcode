@@ -31,7 +31,7 @@ import org.junit.Test;
 import java.util.Map;
 
 /**
- * @author xuanbei 18/4/3
+ * @author Wujun
  */
 public class ComponentManagerImplTest {
 

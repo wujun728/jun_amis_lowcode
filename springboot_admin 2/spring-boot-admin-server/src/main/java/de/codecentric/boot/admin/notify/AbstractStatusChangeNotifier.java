@@ -23,7 +23,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Abstract Notifier for status change which allows filtering of certain status changes.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public abstract class AbstractStatusChangeNotifier extends AbstractEventNotifier {
 

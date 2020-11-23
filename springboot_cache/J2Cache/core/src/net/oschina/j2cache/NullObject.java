@@ -19,7 +19,7 @@ import java.io.Serializable;
 
 /**
  * Null Object
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class NullObject implements Serializable {
 

@@ -14,7 +14,7 @@ import org.springframework.util.Assert;
 /**
  * spirng jdbc 基本支撑类
  * 
- * @author wujing
+ * @author Wujun
  */
 public abstract class JdbcDaoImpl {
 

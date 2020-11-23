@@ -6,7 +6,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.integration.redis.util.RedisLockRegistry;
 
 /**
- * @author itmuch.com
+ * @author Wujun
  */
 @Configuration
 public class RedisLockConfiguration {

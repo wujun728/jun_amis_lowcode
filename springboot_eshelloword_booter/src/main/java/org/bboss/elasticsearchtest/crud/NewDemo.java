@@ -22,7 +22,7 @@ import com.frameworkset.orm.annotation.ESId;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/7/8 13:41
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class NewDemo {

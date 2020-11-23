@@ -30,7 +30,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2019/9/18 10:27
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 @RunWith(SpringRunner.class)

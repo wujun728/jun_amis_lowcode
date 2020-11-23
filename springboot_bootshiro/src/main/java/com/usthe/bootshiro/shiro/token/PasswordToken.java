@@ -4,7 +4,7 @@ import com.usthe.bootshiro.util.AESUtil;
 import org.apache.shiro.authc.AuthenticationToken;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 
  * @Date 12:34 2018/2/27
  */

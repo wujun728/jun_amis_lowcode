@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * DynamicDataSourceProperties
  *
- * @author TaoYu Kanyuxia
+ * @author Wujun
  * @see DataSourceProperties
  * @since 1.0.0
  */

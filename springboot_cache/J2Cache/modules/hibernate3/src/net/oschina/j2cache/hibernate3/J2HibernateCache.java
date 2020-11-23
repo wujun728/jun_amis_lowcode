@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 
 /**
- * @author liao
+ * @author Wujun
  */
 @SuppressWarnings("deprecation")
 public class J2HibernateCache implements Cache {

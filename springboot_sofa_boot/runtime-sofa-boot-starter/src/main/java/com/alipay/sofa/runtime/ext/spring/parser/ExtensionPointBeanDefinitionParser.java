@@ -34,9 +34,9 @@ import java.util.Set;
 /**
  * Extension point definition parser
  *
- * @author xi.hux@alipay.com
- * @author yangyanzhao@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionPointBeanDefinitionParser extends AbstractExtBeanDefinitionParser {

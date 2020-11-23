@@ -10,7 +10,7 @@ import javax.servlet.ServletException;
 /**
  * 2017-12-05
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class SpringOauthServerServletInitializer extends SpringBootServletInitializer {
 

@@ -11,7 +11,7 @@ import org.apache.commons.lang3.time.FastDateFormat;
  * 
  * 注意如果输出格式为毫秒级的话，根据QPS决定性价比
  * 
- * @author calvin
+ * @author Wujun
  */
 public class CachingDateFormatter {
 	private FastDateFormat fastDateFormat;

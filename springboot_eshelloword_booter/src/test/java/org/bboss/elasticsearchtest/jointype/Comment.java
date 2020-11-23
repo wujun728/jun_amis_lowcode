@@ -30,7 +30,7 @@ import java.util.Date;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/11/22 16:15
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class Comment  extends ESBaseData {

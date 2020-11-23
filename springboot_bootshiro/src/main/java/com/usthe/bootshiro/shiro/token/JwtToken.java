@@ -3,7 +3,7 @@ package com.usthe.bootshiro.shiro.token;
 import org.apache.shiro.authc.AuthenticationToken;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description JWT token
  * @Date 19:37 2018/2/10
  */

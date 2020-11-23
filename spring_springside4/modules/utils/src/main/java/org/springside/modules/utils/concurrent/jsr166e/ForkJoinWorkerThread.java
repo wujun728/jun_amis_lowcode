@@ -21,7 +21,7 @@ package org.springside.modules.utils.concurrent.jsr166e;
  * {@linkplain ForkJoinPool#ForkJoinPool use it} in a {@code ForkJoinPool}.
  *
  * @since 1.7
- * @author Doug Lea
+ * @author Wujun
  */
 public class ForkJoinWorkerThread extends Thread {
     /*

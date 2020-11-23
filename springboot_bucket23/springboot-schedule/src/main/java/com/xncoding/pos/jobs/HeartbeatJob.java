@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  * 第六位，星期，取值1-7，1表示星期天，2表示星期一
  * 第七位，年份，可以留空，取值1970-2099
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2017/9/27
  */

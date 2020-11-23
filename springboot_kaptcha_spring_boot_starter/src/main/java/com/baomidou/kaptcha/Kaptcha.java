@@ -18,7 +18,7 @@ package com.baomidou.kaptcha;
 /**
  * 验证码组件接口
  *
- * @author TaoYu
+ * @author Wujun
  */
 public interface Kaptcha {
 

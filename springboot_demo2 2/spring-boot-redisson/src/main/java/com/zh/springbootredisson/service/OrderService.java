@@ -1,7 +1,7 @@
 package com.zh.springbootredisson.service;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 public interface OrderService {

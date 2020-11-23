@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Import;
 import java.lang.annotation.*;
 
 /**
- * @author Li.shangzhi
+ * @author Wujun
  * @create 2018/11/15.
  */
 @Target(ElementType.TYPE)

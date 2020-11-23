@@ -27,7 +27,7 @@ import cn.springboot.service.simple.NewsService;
 
 /** 
  * @Description 新闻示例
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 3:58:01 PM  
  */
 @Controller
@@ -50,7 +50,7 @@ public class NewsController {
 
     /** 
      * @Description 进入新增页面
-     * @author 王鑫
+     * @author Wujun
      * @return  
      */
     @RequestMapping(value = "/news/add", method = RequestMethod.GET)
@@ -61,7 +61,7 @@ public class NewsController {
 
     /** 
      * @Description ajax保存发布新闻
-     * @author 王鑫
+     * @author Wujun
      * @param news
      * @return  
      */
@@ -82,7 +82,7 @@ public class NewsController {
 
     /** 
      * @Description ajax加载新闻对象
-     * @author 王鑫
+     * @author Wujun
      * @return  
      */
     @RequestMapping(value = "/news/load/{id}", method = RequestMethod.GET)
@@ -95,7 +95,7 @@ public class NewsController {
 
     /**
      * @Description ajax保存更新重新发布新闻
-     * @author 王鑫
+     * @author Wujun
      * @param news
      * @return
      */

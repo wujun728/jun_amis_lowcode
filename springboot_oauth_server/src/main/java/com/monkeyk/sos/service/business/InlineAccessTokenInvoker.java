@@ -22,7 +22,7 @@ import static org.springframework.security.oauth2.common.util.OAuth2Utils.SCOPE;
 /**
  * 2019/7/5
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @see org.springframework.security.oauth2.provider.endpoint.TokenEndpoint
  * @since 2.0.1
  */

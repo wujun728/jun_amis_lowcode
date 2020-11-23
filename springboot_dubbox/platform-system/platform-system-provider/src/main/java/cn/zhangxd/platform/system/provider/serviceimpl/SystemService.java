@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * 系统管理，安全相关实体的管理类,包括用户、角色、菜单.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 @Transactional(readOnly = true)

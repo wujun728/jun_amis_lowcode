@@ -11,7 +11,7 @@ import org.springframework.data.repository.config.RepositoryConfigurationExtensi
  * {@link ImportBeanDefinitionRegistrar} used to auto-configure Spring Data MyBatis
  * Repositories.
  * 
- * @author Jarvis Song
+ * @author Wujun
  */
 class MyBatisRepositoriesAutoConfigureRegistrar
 		extends AbstractRepositoryConfigurationSourceSupport {

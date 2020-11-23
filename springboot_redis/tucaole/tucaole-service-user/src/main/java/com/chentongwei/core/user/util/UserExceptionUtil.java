@@ -9,7 +9,7 @@ import com.chentongwei.core.user.enums.status.UserDisabledStatusEnum;
 import java.util.Objects;
 
 /**
- * @author TongWei.Chen 2017-12-04 14:06:20
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户部分异常处理
  */

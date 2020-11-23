@@ -13,7 +13,7 @@ import java.util.Map;
  * 加入交换机通过routingkey无法匹配到绑定了他的队列的bingingkey时
  * 为了消息不丢失，指定备份交换机，这样消息可以路由到备份交换机上，
  * 在路由到队列里消费，通常备份交换机是fanout类型
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Configuration

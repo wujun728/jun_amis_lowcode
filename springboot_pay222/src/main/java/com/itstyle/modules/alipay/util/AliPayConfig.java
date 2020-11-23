@@ -45,7 +45,7 @@ public final class AliPayConfig {
     }
     /**
      * 支付宝APP请求客户端实例
-     * @Author  科帮网
+     * @author Wujun
      * @return  AlipayClient
      * @Date	2017年7月27日
      * 更新日志
@@ -57,7 +57,7 @@ public final class AliPayConfig {
     }
     /**
      * 电脑端预下单
-     * @Author  科帮网
+     * @author Wujun
      * @return  AlipayTradeService
      * @Date	2017年7月27日
      * 更新日志

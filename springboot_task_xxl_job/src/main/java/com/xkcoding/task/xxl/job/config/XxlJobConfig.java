@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * xxl-job 自动装配
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019-08-07 10:20
  */
 @Slf4j

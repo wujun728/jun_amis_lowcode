@@ -3,7 +3,7 @@ package com.didispace.web;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @date 16/5/19 下午1:27.
  * @blog http://blog.didispace.com

@@ -8,7 +8,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 /**
  * 用户Realm
  *
- * @author zhaodui
+ * @author Wujun
  */
 public class UserRealm extends AuthorizingRealm {
 	@Override

@@ -27,7 +27,7 @@ import org.springframework.core.env.Environment;
 /**
  * SOFABoot Infrastructure 启动初始化器
  *
- * @author yangguanchao
+ * @author Wujun
  * @since 2.3.0
  */
 public class SOFABootInfrastructureSpringContextInitializer

@@ -31,7 +31,7 @@ import javax.validation.Valid;
 import java.util.Objects;
 
 /**
- * @author TongWei.Chen 2017-9-17 17:36:56
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户控制层接口
  */

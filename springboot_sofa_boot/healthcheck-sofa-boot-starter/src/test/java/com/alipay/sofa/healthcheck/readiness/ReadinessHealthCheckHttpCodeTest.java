@@ -32,8 +32,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 @SpringBootApplication

@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.model;
 /**
  * component status
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public enum ComponentStatus {
     UNREGISTERED(0, "unregistered"), REGISTERED(0, "registered"), RESOLVED(0, "resolved"), ACTIVATED(

@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.stereotype.Component;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Component
 @ConfigurationProperties(prefix = CacheConstants.ASPECT_CACHE_PREFIX)

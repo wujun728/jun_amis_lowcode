@@ -29,7 +29,7 @@ import org.xml.sax.SAXParseException;
 /**
  * XML validation with rpc.xsd
  *
- * @author <a href="mailto:scienjus@gmail.com">ScienJus</a>
+ * @author Wujun
  */
 public class XsdValidationTest {
 

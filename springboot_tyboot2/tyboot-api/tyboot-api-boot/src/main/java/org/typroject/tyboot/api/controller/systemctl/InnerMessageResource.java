@@ -23,7 +23,7 @@ import org.typroject.tyboot.core.restful.utils.ResponseModel;
  * 内部消息 前端控制器
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-12
  */
 

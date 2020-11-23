@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 /**
  * 微信Api接口注解用于拦截器
  *
- * @author L.cm
+ * @author Wujun
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 
 /**
  * 参数校验注解
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create 2018/12/22 16:34
  **/

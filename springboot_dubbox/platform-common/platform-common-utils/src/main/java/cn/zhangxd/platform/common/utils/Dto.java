@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Map接口的扩展.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public interface Dto extends Map<String, Object> {
 

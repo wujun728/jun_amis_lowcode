@@ -34,8 +34,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * Used to check {@link ReadinessCheckCallback}
  *
- * @author liangen
- * @author qiong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 public class AfterReadinessCheckCallbackProcessor {

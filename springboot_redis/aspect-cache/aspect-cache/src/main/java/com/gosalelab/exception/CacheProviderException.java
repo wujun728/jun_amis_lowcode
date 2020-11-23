@@ -1,7 +1,7 @@
 package com.gosalelab.exception;
 
 /**
- * @author liang
+ * @author Wujun
  */
 public class CacheProviderException extends RuntimeException {
 

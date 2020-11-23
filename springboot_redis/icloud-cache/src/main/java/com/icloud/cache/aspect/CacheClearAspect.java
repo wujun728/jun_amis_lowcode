@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 /**
  * 清除缓存注解拦截
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @description
  * @date 2018年5月18日
  * @since 1.7

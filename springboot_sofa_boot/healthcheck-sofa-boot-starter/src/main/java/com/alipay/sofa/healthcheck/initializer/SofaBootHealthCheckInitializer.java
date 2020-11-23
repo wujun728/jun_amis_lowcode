@@ -24,8 +24,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2.3.0
  */
 public class SofaBootHealthCheckInitializer

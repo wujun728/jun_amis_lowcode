@@ -8,7 +8,7 @@ import org.typroject.tyboot.api.face.privilage.orm.entity.AgencyMenu;
   * 角色与菜单关系表 Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 public interface AgencyMenuMapper extends BaseMapper<AgencyMenu> {

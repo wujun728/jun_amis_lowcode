@@ -30,7 +30,7 @@ import com.alipay.sofa.runtime.spi.component.Implementation;
 import com.alipay.sofa.runtime.spi.service.BindingConverterContext;
 
 /**
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ServiceFactoryBean extends AbstractContractFactoryBean {
     protected Object  ref;

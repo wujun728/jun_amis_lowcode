@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 重写过滤链路径匹配规则，增加REST风格post,get.delete,put..支持
  * @Date 23:37 2018/4/19
  */

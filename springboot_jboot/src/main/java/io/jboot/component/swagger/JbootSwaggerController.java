@@ -22,7 +22,7 @@ import io.jboot.web.controller.JbootController;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.component.swagger
  */

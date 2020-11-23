@@ -18,7 +18,7 @@ import net.oschina.j2cache.cache.support.J2CacheCacheManger;
 
 /**
  * 开启对spring cache支持的配置入口
- * @author zhangsaizz
+ * @author Wujun
  *
  */
 @Configuration

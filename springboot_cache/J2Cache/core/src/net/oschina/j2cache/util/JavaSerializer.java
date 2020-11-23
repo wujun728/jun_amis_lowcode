@@ -22,7 +22,7 @@ import java.io.*;
 /**
  * 标准的 Java 序列化
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class JavaSerializer implements Serializer {
 

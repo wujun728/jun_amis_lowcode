@@ -16,7 +16,7 @@
 package io.jboot;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Title: Jboot 常量定义
  * @Description: Jboot APP 内置的所有常量信息

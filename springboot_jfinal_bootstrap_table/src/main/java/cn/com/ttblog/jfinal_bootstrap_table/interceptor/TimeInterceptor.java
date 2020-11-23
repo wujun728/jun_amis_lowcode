@@ -9,7 +9,7 @@ import com.jfinal.aop.Invocation;
 
 /**
  * 时间打印
- * @author netbuffer
+ * @author Wujun
  */
 public class TimeInterceptor implements Interceptor {
 	private static Logger timeInterceptor= LoggerFactory

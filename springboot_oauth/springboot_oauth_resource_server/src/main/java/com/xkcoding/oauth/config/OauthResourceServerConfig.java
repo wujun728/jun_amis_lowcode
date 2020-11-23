@@ -14,7 +14,7 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
  * 资源服务器配置.
  * 我们自己实现了它的配置，所以它的自动装配不会生效
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/9 下午2:20
  */
 @Configuration

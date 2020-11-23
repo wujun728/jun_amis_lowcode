@@ -17,7 +17,7 @@ import org.apache.commons.lang3.Validate;
  * 
  * 参考Spring ResourceUtils
  * 
- * @author calvin
+ * @author Wujun
  */
 public class URLResourceUtil {
 

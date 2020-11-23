@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
 /**
  * 动态数据源AOP核心拦截器
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 public class DynamicDataSourceAnnotationInterceptor implements MethodInterceptor {

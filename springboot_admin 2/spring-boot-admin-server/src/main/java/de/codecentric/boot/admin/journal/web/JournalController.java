@@ -41,7 +41,7 @@ import de.codecentric.boot.admin.web.AdminController;
 /**
  * REST-Controller for querying all client application events.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 @AdminController
 @ResponseBody

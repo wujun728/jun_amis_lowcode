@@ -25,7 +25,7 @@ import java.util.Date;
 /**
  * Test entity, which can inherit the meta attribute from the ESBaseData object.
  * The meta attribute of the document will be set to the object instance during retrieval
- * @author yinbp[yin-bp@163.com]
+ * @author Wujun
  */
 public class Demo extends ESBaseData {
 	private Object dynamicPriceTemplate;

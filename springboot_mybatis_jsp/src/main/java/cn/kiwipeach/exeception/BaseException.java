@@ -4,7 +4,7 @@ package cn.kiwipeach.exeception;
  * Create Date: 2017/11/06
  * Description: 自定义基础异常
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class BaseException extends RuntimeException {
     /**

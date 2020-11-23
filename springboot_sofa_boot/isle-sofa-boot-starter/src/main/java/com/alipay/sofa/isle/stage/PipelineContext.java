@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * A {@link PipelineContext} contains all {@link PipelineStage}s.
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public interface PipelineContext {
     /**

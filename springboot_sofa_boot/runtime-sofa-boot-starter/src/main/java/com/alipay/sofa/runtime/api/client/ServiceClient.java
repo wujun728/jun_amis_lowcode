@@ -27,7 +27,7 @@ import com.alipay.sofa.runtime.api.client.param.ServiceParam;
  * {@link com.alipay.sofa.runtime.api.annotation.SofaClientFactory}.</li>
  * </ol>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ServiceClient {
 

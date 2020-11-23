@@ -25,7 +25,7 @@ import de.codecentric.boot.admin.journal.store.JournaledEventStore;
 /**
  * Listens for all ClientApplicationEvents and stores them as JournaledEvents in a store.
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public class ApplicationEventJournal {
 

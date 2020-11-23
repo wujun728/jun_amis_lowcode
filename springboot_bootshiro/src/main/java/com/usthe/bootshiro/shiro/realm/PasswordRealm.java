@@ -11,7 +11,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 这里是登录认证realm
  * @Date 21:08 2018/2/10
  */

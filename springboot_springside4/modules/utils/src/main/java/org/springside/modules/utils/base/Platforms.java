@@ -10,7 +10,7 @@ import org.apache.commons.lang3.SystemUtils;
  * 
  * via Common Lang
  * 
- * @author calvin
+ * @author Wujun
  */
 public class Platforms {
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description  tree 抽象节点 树可继承这个节点
  * @Date 16:47 2018/3/20
  */

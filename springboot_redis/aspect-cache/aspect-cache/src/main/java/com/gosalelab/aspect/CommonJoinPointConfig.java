@@ -3,7 +3,7 @@ package com.gosalelab.aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 public class CommonJoinPointConfig {
     @Pointcut("@annotation(com.gosalelab.annotation.CacheInject)")

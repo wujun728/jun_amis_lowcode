@@ -27,7 +27,7 @@ import org.springframework.context.ApplicationContextAware;
 import java.util.Map;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class DefaultRuntimeHealthChecker implements RuntimeHealthChecker, ApplicationContextAware {

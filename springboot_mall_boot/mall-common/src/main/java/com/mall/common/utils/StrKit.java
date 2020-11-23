@@ -3,7 +3,7 @@ package com.mall.common.utils;
 
 /**
  * 字符串处理工具类
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2017年6月18日 下午10:02:37
  */

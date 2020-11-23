@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * Create Date: 2017/11/05
  * Description: 苹果类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class Apple extends Fruit {
     private String name;

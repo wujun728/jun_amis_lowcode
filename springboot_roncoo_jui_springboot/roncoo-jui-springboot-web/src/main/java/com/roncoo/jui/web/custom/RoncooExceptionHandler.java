@@ -11,7 +11,7 @@ import com.roncoo.jui.common.util.base.RoncooException;
 /**
  * 错误处理
  * 
- * @author wujing
+ * @author Wujun
  */
 @RestControllerAdvice
 public class RoncooExceptionHandler extends BaseController {

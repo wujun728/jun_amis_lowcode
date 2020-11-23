@@ -6,7 +6,7 @@ import org.junit.runner.Description;
 /**
  * 在Console里打印Case的开始与结束，更容易分清Console里的日志归属于哪个Case.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class TestProgress extends TestWatcher {
 

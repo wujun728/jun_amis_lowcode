@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * Today the best performance  as tomorrow newest starter!
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/syoubaku
  * email: xiaomo@xiamoo.info
  * QQ_NO: 83387856

@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface TradeResultProcessor {

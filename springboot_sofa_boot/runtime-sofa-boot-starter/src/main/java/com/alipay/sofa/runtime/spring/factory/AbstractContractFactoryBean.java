@@ -43,7 +43,7 @@ import org.xml.sax.InputSource;
 /**
  * Abstract Contract Factory Bean
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public abstract class AbstractContractFactoryBean implements InitializingBean, FactoryBean,
                                                  ApplicationContextAware {

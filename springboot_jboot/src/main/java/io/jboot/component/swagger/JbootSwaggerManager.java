@@ -28,7 +28,7 @@ import java.lang.reflect.Method;
 import java.util.*;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.component.swagger
  * <p>

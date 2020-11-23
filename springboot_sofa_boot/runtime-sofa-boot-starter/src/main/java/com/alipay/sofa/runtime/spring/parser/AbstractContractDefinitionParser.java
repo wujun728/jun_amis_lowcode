@@ -37,7 +37,7 @@ import com.alipay.sofa.infra.config.spring.namespace.spi.SofaBootTagNameSupport;
 import com.alipay.sofa.runtime.api.ServiceRuntimeException;
 
 /**
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public abstract class AbstractContractDefinitionParser extends AbstractSingleBeanDefinitionParser
                                                                                                  implements

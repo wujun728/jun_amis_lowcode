@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 /**
- * @author itmuch.com
+ * @author Wujun
  */
 @AllArgsConstructor
 @NoArgsConstructor

@@ -20,7 +20,7 @@ import javax.sql.DataSource;
 /**
  * 数据源配置
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Configuration
 public class DatasourceConfig {

@@ -35,7 +35,7 @@ import java.util.jar.JarFile;
 
 /**
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: JarDescriptor.java, v 0.1 2012-1-11 17:43:17 yangyanzhao Exp $
  */
 public class JarDeploymentDescriptor extends AbstractDeploymentDescriptor {

@@ -3,7 +3,7 @@ package com.xkcoding.elasticsearch.contants;
 /**
  * ElasticsearchConstant
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/9/15 23:03
  */

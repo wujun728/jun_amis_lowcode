@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 数据源配置 Mapper
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 16:20
  */
 @Mapper

@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * github: https://github.com/houko
  * email: xiaomo@xiaomo.info
  * <p>

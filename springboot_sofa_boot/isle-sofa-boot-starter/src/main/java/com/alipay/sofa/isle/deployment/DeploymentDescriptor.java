@@ -25,7 +25,7 @@ import java.util.Map;
 /**
  * SOFABoot Module Deployment Descriptor.
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: DeploymentDescriptor.java, v 0.1 2012-1-10 12:28:28 yangyanzhao Exp $
  */
 public interface DeploymentDescriptor extends Comparable<DeploymentDescriptor> {

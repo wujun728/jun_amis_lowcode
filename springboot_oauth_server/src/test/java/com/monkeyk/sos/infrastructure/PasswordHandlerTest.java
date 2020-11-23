@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertNotNull;
 
 /*
-  * @author Shengzhao Li
+  * @author Wujun
   */
 public class PasswordHandlerTest {
 

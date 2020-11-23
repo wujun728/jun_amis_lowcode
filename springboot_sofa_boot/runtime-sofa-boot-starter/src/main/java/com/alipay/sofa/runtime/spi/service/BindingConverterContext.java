@@ -21,7 +21,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * context information for binding convert
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class BindingConverterContext {
     /** is inBinding  */

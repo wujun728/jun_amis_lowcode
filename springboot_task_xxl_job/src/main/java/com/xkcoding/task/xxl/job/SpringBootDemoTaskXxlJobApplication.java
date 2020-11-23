@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 启动器
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019-08-07 10:13
  */
 @SpringBootApplication

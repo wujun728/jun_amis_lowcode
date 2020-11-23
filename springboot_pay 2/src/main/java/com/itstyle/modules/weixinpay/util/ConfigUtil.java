@@ -81,7 +81,7 @@ public class ConfigUtil {
     
 	/**
 	 * 基础参数
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param packageParams  void
 	 * @Date	2017年7月31日
 	 * 更新日志
@@ -104,7 +104,7 @@ public class ConfigUtil {
 
 	/**
 	 * 该接口主要用于扫码原生支付模式一中的二维码链接转成短链接(weixin://wxpay/s/XXXXXX)，减小二维码数据量，提升扫描速度和精确度
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param urlCode  void
 	 * @Date	2017年7月31日
 	 * 更新日志

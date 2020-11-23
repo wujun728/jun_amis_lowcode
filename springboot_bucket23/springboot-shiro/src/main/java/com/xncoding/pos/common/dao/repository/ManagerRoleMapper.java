@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 /**
  * 用户角色关联表 Mapper
  *
- * @author 熊能
+ * @author Wujun
  * @version 1.0
  * @since 2018/01/02
  */

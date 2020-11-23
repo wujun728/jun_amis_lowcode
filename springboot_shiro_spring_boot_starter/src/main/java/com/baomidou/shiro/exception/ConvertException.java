@@ -3,7 +3,7 @@ package com.baomidou.shiro.exception;
 /**
  * 转换异常
  *
- * @author TaoYu
+ * @author Wujun
  */
 public class ConvertException extends RuntimeException {
 

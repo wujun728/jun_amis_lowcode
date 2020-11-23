@@ -21,7 +21,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 /** 
-* @author 等待美丽的花儿  E-mail: 417791635@qq.com
+* @author Wujun
 * @version 创建时间：2016年9月30日15:25:12
 * springboot 启动文件
 */

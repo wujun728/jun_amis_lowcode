@@ -2,7 +2,7 @@ package cn.com.bluemoon.common.response;
 
 /**
  * 通用响应model
- * @author Guoqing
+ * @author Wujun
  * @version 1.0
  */
 public class BaseResponse{

@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * 学生实体类型
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 @Component

@@ -17,7 +17,7 @@
 package com.alipay.sofa.runtime.api.annotation;
 
 /**
- * @author xuanbei 18/5/11
+ * @author Wujun
  */
 public @interface SofaServiceBinding {
     /**

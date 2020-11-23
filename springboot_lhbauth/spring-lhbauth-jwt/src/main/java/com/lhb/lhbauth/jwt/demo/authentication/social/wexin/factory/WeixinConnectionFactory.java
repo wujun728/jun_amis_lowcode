@@ -13,7 +13,7 @@ import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2ServiceProvider;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 创建连接工厂
  * @date 2019/1/4 0004 9:59
  */

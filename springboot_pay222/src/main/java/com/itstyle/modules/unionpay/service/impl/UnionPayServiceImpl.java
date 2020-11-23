@@ -25,7 +25,7 @@ public class UnionPayServiceImpl implements IUnionPayService{
 	
     /**
      * 银联支付返回一个form表单
-     * @Author  科帮网
+     * @author Wujun
      * @param product
      * @return 
      * @Date	2017年8月2日

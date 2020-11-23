@@ -29,7 +29,7 @@ import com.baomidou.kisso.web.interceptor.SSOPermissionInterceptor;
 import com.baomidou.kisso.web.interceptor.SSOSpringInterceptor;
 
 /** 
-* @author 等待美丽的花儿  E-mail: 417791635@qq.com
+* @author Wujun
 * @version 创建时间：2016年9月30日 下午3:13:01 
 * springboot 配置文件
 */

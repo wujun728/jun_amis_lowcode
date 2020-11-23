@@ -4,7 +4,7 @@ import com.usthe.bootshiro.domain.bo.AuthUser;
 import com.usthe.bootshiro.domain.vo.Account;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 
  * @Date 22:02 2018/3/7
  */

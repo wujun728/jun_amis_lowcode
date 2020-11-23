@@ -4,7 +4,7 @@ import com.diboot.core.config.BaseConfig;
 
 /**
  * IAM数据字典等常量定义
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/19
  */

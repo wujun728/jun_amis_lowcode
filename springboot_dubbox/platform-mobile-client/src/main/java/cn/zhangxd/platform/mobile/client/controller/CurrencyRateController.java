@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * The type Currency rate controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @RestController
 @RequestMapping("/{version}/currency")

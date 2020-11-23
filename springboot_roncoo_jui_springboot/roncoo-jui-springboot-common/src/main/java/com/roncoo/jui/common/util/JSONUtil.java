@@ -10,7 +10,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 public final class JSONUtil {
 	private static final Logger logger = LoggerFactory.getLogger(JSONUtil.class);

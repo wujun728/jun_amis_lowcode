@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author 翟永超
+ * @author Wujun
  * @create 2016/9/25.
  * @blog http://blog.didispace.com
  */

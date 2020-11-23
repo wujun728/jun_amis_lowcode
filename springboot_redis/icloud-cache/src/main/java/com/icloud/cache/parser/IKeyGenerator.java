@@ -5,7 +5,7 @@ import com.icloud.cache.constants.CacheScope;
 /**
  * 缓存键值表达式
  *
- * @author Li.Shangzhi
+ * @author Wujun
  * @description
  * @date 2018年5月18日
  * @since 1.7

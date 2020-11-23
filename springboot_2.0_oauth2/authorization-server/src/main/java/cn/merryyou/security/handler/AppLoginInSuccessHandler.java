@@ -25,7 +25,7 @@ import java.util.HashMap;
  * APP登录成功处理器
  * Created on 2018/1/21 0021.
  *
- * @author zlf
+ * @author Wujun
  * @email i@merryyou.cn
  * @since 1.0
  */

@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 数据格式转化类
- * @author xiandafu
+ * @author Wujun
  *
  */
 public class ConvertUtil {

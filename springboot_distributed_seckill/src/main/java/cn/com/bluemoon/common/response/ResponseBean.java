@@ -3,7 +3,7 @@ package cn.com.bluemoon.common.response;
 
 /**
  * 返回对象的基础bean
- * @author Guoqing
+ * @author Wujun
  *
  */
 public class ResponseBean {

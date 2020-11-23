@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author TongWei.Chen 2017-12-14 11:16:57
+ * @author Wujun
  * @Project tucaole
  * @Description: 修改邮箱
  */

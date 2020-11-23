@@ -22,7 +22,7 @@ import org.springframework.util.StringUtils;
 import com.alipay.sofa.runtime.spring.parser.AbstractContractDefinitionParser;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.0
  */
 public class SofaBeanNameGenerator {

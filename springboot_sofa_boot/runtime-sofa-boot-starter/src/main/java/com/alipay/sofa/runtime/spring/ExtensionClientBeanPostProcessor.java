@@ -25,7 +25,7 @@ import org.springframework.core.PriorityOrdered;
 /**
  * {@link ExtensionClientAware}
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionClientBeanPostProcessor implements BeanPostProcessor, PriorityOrdered {

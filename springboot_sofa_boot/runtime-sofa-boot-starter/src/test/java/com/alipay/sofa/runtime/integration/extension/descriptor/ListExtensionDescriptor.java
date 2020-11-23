@@ -24,7 +24,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("testList")

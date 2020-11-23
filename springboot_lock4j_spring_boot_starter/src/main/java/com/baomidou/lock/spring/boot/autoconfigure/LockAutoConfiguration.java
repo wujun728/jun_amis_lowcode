@@ -30,7 +30,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * 分布式锁自动配置器
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @since 1.0.0
  */
 @Configuration

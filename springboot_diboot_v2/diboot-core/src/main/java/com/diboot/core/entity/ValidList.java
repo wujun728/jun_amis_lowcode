@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  * 可校验的List包装类，用于接收List并绑定校验
- * @author : uu
+ * @author Wujun
  * @version : v2.0.4
  * @Date 2020-01-10
  */

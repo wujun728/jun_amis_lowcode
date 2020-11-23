@@ -41,7 +41,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *  lettuce.database = 0
  *  lettuce.sentinelMasterId =
  *
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class LettuceCacheProvider extends RedisPubSubAdapter<String, String> implements CacheProvider, ClusterPolicy {
 

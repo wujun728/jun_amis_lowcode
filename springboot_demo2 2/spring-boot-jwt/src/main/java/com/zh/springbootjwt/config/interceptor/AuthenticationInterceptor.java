@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * token校验拦截器
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/25
  */
 @Component

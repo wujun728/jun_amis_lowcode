@@ -25,7 +25,7 @@ import org.springframework.boot.actuate.health.Status;
 /**
  * Abstract Component Health Checker
  *
- * @author xuanbei 18/5/15
+ * @author Wujun
  */
 public abstract class AbstractComponentHealthChecker {
     private SofaRuntimeContext sofaRuntimeContext;

@@ -3,7 +3,7 @@ package com.chentongwei.common.exception;
 import com.chentongwei.common.enums.IBaseEnum;
 
 /**
- * @author Tongwei.Chen 2017-9-17 16:59:34
+ * @author Wujun
  * @Project tucaole
  * @Description: 业务异常
  */

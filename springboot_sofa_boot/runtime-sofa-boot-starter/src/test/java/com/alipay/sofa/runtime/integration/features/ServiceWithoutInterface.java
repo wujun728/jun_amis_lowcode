@@ -20,7 +20,7 @@ import com.alipay.sofa.runtime.api.annotation.SofaService;
 import org.springframework.stereotype.Component;
 
 /**
- * @author xuanbei
+ * @author Wujun
  * @since 2.4.5
  */
 @Component

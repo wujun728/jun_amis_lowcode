@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 2017-12-05
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @SpringBootApplication
 public class SpringOauthServerApplication {

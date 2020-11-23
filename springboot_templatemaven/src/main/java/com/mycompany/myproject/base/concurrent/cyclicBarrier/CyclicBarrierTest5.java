@@ -14,7 +14,7 @@ public class CyclicBarrierTest5 {
     /**
      * <p>CyclicBarrier-循环屏障-模拟多线程计算</p>
      *
-     * @author hanchao 2018/3/29 22:48
+     * @author Wujun
      **/
     public static void main(String[] args) {
         //数组大小

@@ -7,7 +7,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 
 /**
  * 如果需要连接公有云上的redis服务、则必须加这个配置。
- * @author benny
+ * @author Wujun
  *
  */
 @Configuration  

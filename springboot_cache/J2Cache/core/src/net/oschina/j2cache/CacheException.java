@@ -18,7 +18,7 @@ package net.oschina.j2cache;
 /**
  * J2Cache exception
  *
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class CacheException extends RuntimeException {
 

@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * GeneratorService
- * @author zhengkai.blog.csdn.net
+ * @author Wujun
  */
 public interface GeneratorService {
 

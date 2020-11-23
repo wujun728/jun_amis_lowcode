@@ -18,7 +18,7 @@ package com.example.esbboss.agent;
 
 /**
  * Buffer that can be expanded automatically
- * @author emeroad
+ * @author Wujun
  */
 public class AutomaticBuffer extends FixedBuffer {
 

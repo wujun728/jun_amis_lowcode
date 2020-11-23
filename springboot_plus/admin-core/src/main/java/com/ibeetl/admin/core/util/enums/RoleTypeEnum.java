@@ -5,7 +5,7 @@ import org.beetl.sql.core.annotatoin.EnumMapping;
 /**
  * 描述: 工作流角色
  *
- * @author : Administrator
+ * @author Wujun
  */
 @EnumMapping("value")
 public enum RoleTypeEnum {

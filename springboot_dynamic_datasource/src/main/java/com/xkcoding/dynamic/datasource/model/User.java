@@ -13,7 +13,7 @@ import java.io.Serializable;
  * 用户
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 16:41
  */
 @Data

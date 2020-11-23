@@ -38,7 +38,7 @@ public class URLPermissionsFilter extends PermissionsAuthorizationFilter{
 	
 	/**
 	 * 获取当前URL+Parameter
-	 * @author lance
+	 * @author Wujun
 	 * @since  2014年12月18日 下午3:09:26
 	 * @param request	拦截请求request
 	 * @return			返回完整URL

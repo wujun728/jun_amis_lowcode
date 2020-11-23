@@ -17,7 +17,7 @@
 package com.alipay.sofa.runtime.util;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.4.1
  */
 public class StateMessage {

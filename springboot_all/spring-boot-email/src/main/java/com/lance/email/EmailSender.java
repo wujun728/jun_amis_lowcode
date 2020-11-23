@@ -21,7 +21,7 @@ public class EmailSender {
 	 * @param to			收件人地址
 	 * @param subject		邮件主题
 	 * @param content		邮件内容
-	 * @author lance
+	 * @author Wujun
 	 */
 	public boolean sender(String to, String subject, String content) {
 		return sender(to, subject, content, true);
@@ -33,7 +33,7 @@ public class EmailSender {
 	 * @param subject		邮件主题
 	 * @param content		邮件内容
 	 * @param html			是否格式内容为HTML
-	 * @author lance
+	 * @author Wujun
 	 */
 	public boolean sender(String to, String subject, String content, boolean html){
 		if(StringUtils.isBlank(to)) {

@@ -22,7 +22,7 @@ import org.springframework.core.type.AnnotationMetadata;
  * Defers the imports for our {@code @Configuration}-classes, because the need to be processed after
  * normal @Configuration-classes.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class AdminServerImportSelector implements DeferredImportSelector {
 

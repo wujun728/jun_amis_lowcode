@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
 /**
- * @author zhangcb
+ * @author Wujun
  * @created 2017-07-10 17:34.
  */
 @Aspect

@@ -16,7 +16,7 @@ import com.roncoo.jui.web.bean.vo.RcDataDictionaryListVO;
 /**
  * 数据字典明细表 
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-11
  */
 @Component

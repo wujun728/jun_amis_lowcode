@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
  * 
  * 因为ThreadInfo的toString()最多只会打印8层的StackTrace，所以加上了最大打印层数的选项.(默认为8)
  * 
- * @author calvin
+ * @author Wujun
  */
 public class ThreadDumpper {
 

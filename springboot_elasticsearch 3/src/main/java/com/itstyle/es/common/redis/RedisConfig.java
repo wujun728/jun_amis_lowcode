@@ -22,7 +22,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 	/**
 	 * 自定义key(消息队列 暂时用不到 自行忽略)
      * 此方法将会根据类名+方法名+所有参数的值生成唯一的一个key,即使@Cacheable中的value属性一样，key也会不一样。
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @return 
 	 * @Date	2018年1月24日
 	 * 更新日志
@@ -46,7 +46,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 	}
     /**
      * 缓存管理器
-     * @Author  科帮网
+     * @author Wujun
      * @param redisTemplate
      * @return  CacheManager
      * @Date	2017年8月13日
@@ -60,7 +60,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 	}
     /**
      * 序列化Java对象
-     * @Author  科帮网
+     * @author Wujun
      * @param factory
      * @return  RedisTemplate<String,String>
      * @Date	2017年8月13日

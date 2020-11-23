@@ -39,7 +39,7 @@ import java.lang.reflect.Method;
 /**
  * Integrate XMap with spring
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public class XMapSpring extends XMap {

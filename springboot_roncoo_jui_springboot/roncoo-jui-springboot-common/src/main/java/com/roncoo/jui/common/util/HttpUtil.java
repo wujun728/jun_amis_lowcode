@@ -27,7 +27,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 /**
  * Restful 调用工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public final class HttpUtil {
 	private HttpUtil() {

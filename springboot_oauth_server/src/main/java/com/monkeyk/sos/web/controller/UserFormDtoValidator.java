@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * 2016/3/25
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Component
 public class UserFormDtoValidator implements Validator {

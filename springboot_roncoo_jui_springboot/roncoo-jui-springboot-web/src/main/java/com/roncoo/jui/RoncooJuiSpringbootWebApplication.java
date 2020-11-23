@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * 
- * @author wujing
+ * @author Wujun
  */
 @EnableAsync
 @EnableScheduling

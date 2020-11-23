@@ -22,7 +22,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 @RunWith(SofaJUnit4Runner.class)

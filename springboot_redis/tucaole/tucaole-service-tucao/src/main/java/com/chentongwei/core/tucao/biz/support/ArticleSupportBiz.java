@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * @author TongWei.Chen 2017-12-18 17:42:59
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章点赞业务
  */

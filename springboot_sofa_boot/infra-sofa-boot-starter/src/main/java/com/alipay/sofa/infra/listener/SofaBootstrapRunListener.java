@@ -41,7 +41,7 @@ import com.alipay.sofa.infra.constants.SofaBootInfraConstants;
 import com.alipay.sofa.infra.utils.SOFABootEnvUtils;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.0.0
  */
 public class SofaBootstrapRunListener implements

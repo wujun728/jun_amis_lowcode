@@ -24,7 +24,7 @@ import java.util.UUID;
 
 /**
  * 实现基于 J2Cache 的分布式的 Session 管理
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class J2CacheSessionFilter implements Filter {
 

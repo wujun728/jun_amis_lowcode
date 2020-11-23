@@ -34,7 +34,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.AbstractApplicationContext;
 
 /**
- * @author xuanbei 18/3/12
+ * @author Wujun
  */
 @Configuration
 public class SofaModuleAutoConfiguration {

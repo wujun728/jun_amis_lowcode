@@ -6,7 +6,7 @@ import javax.mail.MessagingException;
 import java.util.Map;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/3
  */
 public interface MailService {

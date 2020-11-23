@@ -35,7 +35,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Notifier submitting events to let´s Chat.
  *
- * @author Rico Pahlisch
+ * @author Wujun
  */
 public class LetsChatNotifier extends AbstractStatusChangeNotifier {
 	private static final String DEFAULT_MESSAGE = "*#{application.name}* (#{application.id}) is *#{to.status}*";

@@ -21,7 +21,7 @@ import com.alipay.sofa.common.xmap.annotation.XParent;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("testSub")

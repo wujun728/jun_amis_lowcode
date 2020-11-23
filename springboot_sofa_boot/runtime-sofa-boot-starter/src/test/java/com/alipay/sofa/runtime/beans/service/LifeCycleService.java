@@ -18,7 +18,7 @@ package com.alipay.sofa.runtime.beans.service;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public interface LifeCycleService {

@@ -11,7 +11,7 @@ import org.apache.commons.lang3.Validate;
 /** 
  * @Description 支持SHA-1/MD5消息摘要的工具类<br>
  * 返回ByteSource，可进一步被编码为Hex, Base64或UrlSafeBase64
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:36:27 AM  
  */
 public class Digests {

@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.db
  */

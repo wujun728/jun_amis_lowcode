@@ -5,7 +5,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 @Component
 @RabbitListener(queues = "hello")

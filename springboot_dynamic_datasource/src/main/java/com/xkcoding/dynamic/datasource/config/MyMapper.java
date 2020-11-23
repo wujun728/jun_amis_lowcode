@@ -9,7 +9,7 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * 通用 mapper 自定义 mapper 文件
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 16:23
  */
 @RegisterMapper

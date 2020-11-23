@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * 测试定时任务
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019-08-07 10:15
  */
 @Slf4j

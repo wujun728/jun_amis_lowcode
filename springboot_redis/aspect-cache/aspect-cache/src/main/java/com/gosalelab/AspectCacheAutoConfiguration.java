@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @ComponentScan({CacheConstants.MAIN_PACKAGE})
 @EnableAspectJAutoProxy

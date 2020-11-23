@@ -13,7 +13,7 @@ import org.springframework.util.Assert;
  * Spring ApplicationContext Holder,
  * get Spring bean from ApplicationContext
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @since 2.0.1
  */
 public class SOSContextHolder implements ApplicationContextAware, InitializingBean {

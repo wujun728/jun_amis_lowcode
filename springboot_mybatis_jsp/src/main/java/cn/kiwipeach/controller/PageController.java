@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Create Date: 2017/11/05
  * Description: 页面跳转控制器
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @Controller
 public class PageController {

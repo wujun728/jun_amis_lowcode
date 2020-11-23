@@ -72,7 +72,7 @@ import com.alipay.sofa.runtime.spring.parser.AbstractContractDefinitionParser;
 import com.alipay.sofa.runtime.spring.parser.ServiceDefinitionParser;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.0
  */
 public class ServiceBeanFactoryPostProcessor implements BeanFactoryPostProcessor {

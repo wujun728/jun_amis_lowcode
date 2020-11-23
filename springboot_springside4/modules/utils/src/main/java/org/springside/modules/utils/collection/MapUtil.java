@@ -47,7 +47,7 @@ import com.google.common.util.concurrent.AtomicLongMap;
  * 
  * 参考文章：《高性能场景下，Map家族的优化使用建议》 http://calvin1978.blogcn.com/articles/hashmap.html
  * 
- * @author calvin
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class MapUtil {

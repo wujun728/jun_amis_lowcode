@@ -1,7 +1,7 @@
 package com.chentongwei.common.enums.constant;
 
 /**
- * @author TongWei.Chen 2017-12-15 13:41:54
+ * @author Wujun
  * @Project tucaole
  * @Description: 队列枚举
  */

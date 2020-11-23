@@ -12,7 +12,7 @@ import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 
 /**
- * @author TongWei.Chen 2017-6-4 11:37:56
+ * @author Wujun
  * @Project tucaole
  * @Description: Java SDK
  */

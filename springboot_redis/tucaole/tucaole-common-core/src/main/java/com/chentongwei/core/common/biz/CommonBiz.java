@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @author TongWei.Chen 2017-12-17 19:16:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用业务处理
  **/

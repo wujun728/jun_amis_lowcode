@@ -17,7 +17,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import javax.sql.DataSource;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 @Configuration

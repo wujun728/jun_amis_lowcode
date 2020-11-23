@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 消息的基本属性
  * @date 2017/7/31
  * @since 1.0

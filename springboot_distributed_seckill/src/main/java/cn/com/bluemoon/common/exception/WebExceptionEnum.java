@@ -3,7 +3,7 @@ package cn.com.bluemoon.common.exception;
 /**
  * 异常枚举
  *
- * @author Guoqing
+ * @author Wujun
  * @Date 2018/06/28 下午10:33
  */
 public enum WebExceptionEnum implements ServiceExceptionEnum{

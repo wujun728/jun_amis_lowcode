@@ -20,7 +20,7 @@ import java.io.Serializable;
 /**
  * Signals that the routes needs to be recalculated.
  * 
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class RoutesOutdatedEvent implements Serializable {
 	private static final long serialVersionUID = 1L;

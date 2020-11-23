@@ -30,7 +30,7 @@ import com.google.common.io.Files;
  * 
  * 2.文件及目录操作
  * 
- * @author calvin
+ * @author Wujun
  */
 public class FileUtil {
 	

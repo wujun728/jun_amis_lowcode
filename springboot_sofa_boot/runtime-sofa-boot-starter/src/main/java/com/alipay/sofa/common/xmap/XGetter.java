@@ -18,7 +18,7 @@ package com.alipay.sofa.common.xmap;
 
 /**
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public interface XGetter {

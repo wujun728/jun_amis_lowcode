@@ -37,7 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 public abstract class AbstractTestBase extends TestBase {

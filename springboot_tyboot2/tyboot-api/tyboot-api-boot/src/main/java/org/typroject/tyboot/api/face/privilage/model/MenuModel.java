@@ -11,7 +11,7 @@ import java.util.Date;
  * 菜单管理
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @EqualsAndHashCode(callSuper = true)

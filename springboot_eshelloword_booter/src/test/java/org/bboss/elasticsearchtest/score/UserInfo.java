@@ -23,7 +23,7 @@ import org.frameworkset.elasticsearch.entity.ESBaseData;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2019/3/16 14:19
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class UserInfo extends ESBaseData {

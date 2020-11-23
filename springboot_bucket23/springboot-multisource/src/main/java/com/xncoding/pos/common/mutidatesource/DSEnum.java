@@ -3,7 +3,7 @@ package com.xncoding.pos.common.mutidatesource;
 /**
  * 多数据源的枚举
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017年3月5日 上午10:15:02
  */
 public interface DSEnum {

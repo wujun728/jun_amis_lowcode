@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 /**
  * Extension implement in spring env
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 

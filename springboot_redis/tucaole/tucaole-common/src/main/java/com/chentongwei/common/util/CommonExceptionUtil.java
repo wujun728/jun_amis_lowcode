@@ -9,7 +9,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-9-17 17:00:01
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用的异常处理
  */

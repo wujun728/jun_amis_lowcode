@@ -34,7 +34,7 @@ import java.util.Map;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2019/3/22 11:21
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class TestClusterSetting {

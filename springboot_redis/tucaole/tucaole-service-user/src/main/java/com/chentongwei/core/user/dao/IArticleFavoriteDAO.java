@@ -9,7 +9,7 @@ import com.chentongwei.core.user.entity.vo.favorite.ArticleFavoriteListVO;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-17 14:16:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 收藏夹DAO
  **/

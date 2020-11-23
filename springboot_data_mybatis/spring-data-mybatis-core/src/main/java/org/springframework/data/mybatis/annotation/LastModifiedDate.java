@@ -26,8 +26,8 @@ import java.lang.annotation.Target;
 /**
  * Declares a field as the one representing the date the entity containing the field was recently modified.
  *
- * @author Ranie Jade Ramiso
- * @author Oliver Gierke
+ * @author Wujun
+ * @author Wujun
  * @since 1.5
  */
 @Retention(RetentionPolicy.RUNTIME)

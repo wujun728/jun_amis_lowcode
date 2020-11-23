@@ -11,7 +11,7 @@ public interface IAliPayService {
 	 * 如果你调用的是当面付预下单接口(alipay.trade.precreate)，调用成功后订单实际上是没有生成，因为创建一笔订单要买家、卖家、金额三要素。
      * 预下单并没有创建订单，所以根据商户订单号操作订单，比如查询或者关闭，会报错订单不存在。
      * 当用户扫码后订单才会创建，用户扫码之前二维码有效期2小时，扫码之后有效期根据timeout_express时间指定。
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param product
 	 * @return  String
 	 * @Date	2017年7月27日
@@ -22,7 +22,7 @@ public interface IAliPayService {
 	String aliPay(Product product);
     /**
      * 阿里支付退款
-     * @Author  科帮网
+     * @author Wujun
      * @param product
      * @return  String
      * @Date	2017年7月27日
@@ -33,7 +33,7 @@ public interface IAliPayService {
 	String aliRefund(Product product);
 	/**
 	 * 关闭订单
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param product
 	 * @return  String
 	 * @Date	2017年7月27日
@@ -61,7 +61,7 @@ public interface IAliPayService {
 	 * 为开发者生成前台页面请求需要的完整form表单的html（包含自动提交脚本），商户直接将这个表单的String输出到http response中即可。
 	 * 方法二：
 	 * 如果是远程调用返回消费放一个form表单 然后调用方刷新到页面自动提交即可
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param product
 	 * @return  String
 	 * @Date	2017年7月27日
@@ -73,7 +73,7 @@ public interface IAliPayService {
 	String aliPayMobile(Product product);
 	/**
 	 * 网站支付
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param product
 	 * @return  String
 	 * @Date	2017年7月30日

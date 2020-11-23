@@ -2,7 +2,7 @@ package com.ibeetl.admin.core.rbac;
 
 /**
  * 数据权限算法结果
- * @author xiandafu
+ * @author Wujun
  *
  */
 public enum AccessType {

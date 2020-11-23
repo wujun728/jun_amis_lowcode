@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author yinbp[yin-bp@163.com]
+ * @author Wujun
  */
 @RestController
 public class EsController {

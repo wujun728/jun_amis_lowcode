@@ -1,7 +1,7 @@
 package com.mall.common.constants;
 
 /**
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/11/27 20:01
  */

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * 本项目自定义配置
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2018/01/06 21:09
  */
 @Component

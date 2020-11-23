@@ -3,7 +3,7 @@
 * <p>Description: </p>  
 * <p>Copyright: Copyright (c) 2018</p>  
 * <p>Company: www.bluemoon.com</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */  
 package cn.com.bluemoon.service;
@@ -13,7 +13,7 @@ import cn.com.bluemoon.common.response.SeckillInfoResponse;
 /**  
 * <p>Title: ISeckillService</p>  
 * <p>Description: 秒杀相关方法</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年8月10日  
 */
 public interface ISeckillService {

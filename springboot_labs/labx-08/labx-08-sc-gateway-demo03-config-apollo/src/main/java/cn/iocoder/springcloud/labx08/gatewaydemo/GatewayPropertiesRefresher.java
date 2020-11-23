@@ -62,7 +62,7 @@ public class GatewayPropertiesRefresher implements ApplicationContextAware, Appl
      *
      * @param changeEvent
      * @return void
-     * @author ksewen
+     * @author Wujun
      * @date 2019/5/21 2:13 PM
      */
     private void refreshGatewayProperties(ConfigChangeEvent changeEvent) {
@@ -86,7 +86,7 @@ public class GatewayPropertiesRefresher implements ApplicationContextAware, Appl
      *
      * @param
      * @return void
-     * @author ksewen
+     * @author Wujun
      * @date 2019/5/21 2:13 PM
      */
     private synchronized void preDestroyGatewayProperties(ConfigChangeEvent changeEvent) {
@@ -117,7 +117,7 @@ public class GatewayPropertiesRefresher implements ApplicationContextAware, Appl
      * @param pattern
      * @param existSize
      * @return boolean
-     * @author ksewen
+     * @author Wujun
      * @date 2019/5/23 2:18 PM
      */
     // 判断是否清除的标准，是通过指定配置项被删除的数量，是否和内存中的该配置项的数量一样。如果一样，说明被清空了

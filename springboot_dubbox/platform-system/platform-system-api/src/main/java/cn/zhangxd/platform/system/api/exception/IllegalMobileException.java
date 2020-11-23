@@ -6,7 +6,7 @@ import cn.zhangxd.platform.system.api.exception.base.BusinessException;
 /**
  * 手机号码不合法
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class IllegalMobileException extends BusinessException {
 

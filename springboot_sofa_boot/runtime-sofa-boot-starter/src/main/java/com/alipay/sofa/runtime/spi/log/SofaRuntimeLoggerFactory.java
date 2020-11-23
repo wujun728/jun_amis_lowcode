@@ -20,7 +20,7 @@ import com.alipay.sofa.common.log.LoggerSpaceManager;
 import org.slf4j.Logger;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class SofaRuntimeLoggerFactory {
     /***

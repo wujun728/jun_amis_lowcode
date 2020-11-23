@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * 锁拦截器
  *
- * @author TanRq
+ * @author Wujun
  */
 @Aspect
 @Component

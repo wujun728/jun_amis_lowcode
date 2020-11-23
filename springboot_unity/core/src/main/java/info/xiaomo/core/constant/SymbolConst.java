@@ -1,7 +1,7 @@
 package info.xiaomo.core.constant;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 public class SymbolConst {
     public static final String JINHAO = "#";

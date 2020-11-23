@@ -17,7 +17,7 @@
 package com.alipay.sofa.runtime.spi.health;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class HealthResult {
     public HealthResult() {

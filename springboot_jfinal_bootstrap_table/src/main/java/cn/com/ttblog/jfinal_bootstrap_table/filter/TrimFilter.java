@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 过滤空白符号filter
  * 
- * @author champ
+ * @author Wujun
  *
  */
 public class TrimFilter implements Filter {

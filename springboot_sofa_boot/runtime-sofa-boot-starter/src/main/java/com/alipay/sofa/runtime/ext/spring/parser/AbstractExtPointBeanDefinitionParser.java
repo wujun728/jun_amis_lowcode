@@ -29,7 +29,7 @@ import org.springframework.util.StringUtils;
 import org.w3c.dom.Element;
 
 /**
- * @author fengqi.lin
+ * @author Wujun
  * @since 2.6.0
  */
 public abstract class AbstractExtPointBeanDefinitionParser implements BeanDefinitionParser {

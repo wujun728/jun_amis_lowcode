@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 
 
 /**
- * @author TongWei.Chen 2017-05-14 13:44:44
+ * @author Wujun
  * @Project tucaole
  * @Description: 启动类
  */

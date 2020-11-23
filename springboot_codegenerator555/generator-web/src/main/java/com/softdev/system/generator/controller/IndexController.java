@@ -19,7 +19,7 @@ import java.util.Map;
 
 /**
  * spring boot code generator
- * @author zhengk/moshow
+ * @author Wujun
  */
 @Controller
 public class IndexController {

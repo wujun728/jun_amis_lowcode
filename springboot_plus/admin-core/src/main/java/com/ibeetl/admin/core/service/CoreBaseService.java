@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 /**
  *
  * 描述:
- * @author : xiandafu
+ * @author Wujun
  */
 public class CoreBaseService<T> {
 

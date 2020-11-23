@@ -6,7 +6,7 @@ import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/8 0008 15:15
  */

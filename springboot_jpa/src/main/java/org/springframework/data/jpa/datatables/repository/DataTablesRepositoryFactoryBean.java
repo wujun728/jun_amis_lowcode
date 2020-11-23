@@ -13,7 +13,7 @@ import java.io.Serializable;
 /**
  * {@link FactoryBean} creating DataTablesRepositoryFactory instances.
  * 
- * @author Damien Arrachequesne
+ * @author Wujun
  */
 public class DataTablesRepositoryFactoryBean<R extends JpaRepository<T, ID>, T, ID extends Serializable>
     extends JpaRepositoryFactoryBean<R, T, ID> {

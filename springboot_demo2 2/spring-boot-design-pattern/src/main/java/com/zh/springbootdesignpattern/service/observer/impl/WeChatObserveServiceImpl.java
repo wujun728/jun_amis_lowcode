@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * 微信类观察者
  * 使用原生观察和模式只需要实现OrderObserver接口
  * 使用spring监听器实现观察者需要实现ApplicationListener接口
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/18
  */
 @Slf4j

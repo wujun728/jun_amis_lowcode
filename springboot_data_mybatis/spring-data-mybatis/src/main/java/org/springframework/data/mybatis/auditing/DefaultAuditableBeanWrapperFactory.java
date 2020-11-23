@@ -42,9 +42,9 @@ import lombok.RequiredArgsConstructor;
 /**
  * A factory class to {@link AuditableBeanWrapper} instances.
  *
- * @author Oliver Gierke
- * @author Christoph Strobl
- * @author Jens Schauder
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 1.5
  */
 class DefaultAuditableBeanWrapperFactory implements AuditableBeanWrapperFactory {
@@ -81,7 +81,7 @@ class DefaultAuditableBeanWrapperFactory implements AuditableBeanWrapperFactory 
 	/**
 	 * An {@link AuditableBeanWrapper} that works with objects implementing
 	 *
-	 * @author Oliver Gierke
+	 * @author Wujun
 	 */
 	@RequiredArgsConstructor
 	static class AuditableInterfaceBeanWrapper extends
@@ -190,7 +190,7 @@ class DefaultAuditableBeanWrapperFactory implements AuditableBeanWrapperFactory 
 	 * convert {@link Calendar} values into compatible types when setting date/time
 	 * information.
 	 *
-	 * @author Oliver Gierke
+	 * @author Wujun
 	 * @since 1.8
 	 */
 	abstract static class DateConvertingAuditableBeanWrapper<T>
@@ -289,7 +289,7 @@ class DefaultAuditableBeanWrapperFactory implements AuditableBeanWrapperFactory 
 	 * An {@link AuditableBeanWrapper} implementation that sets values on the target
 	 * object using reflection.
 	 *
-	 * @author Oliver Gierke
+	 * @author Wujun
 	 */
 	static class ReflectionAuditingBeanWrapper<T>
 			extends DateConvertingAuditableBeanWrapper<T> {

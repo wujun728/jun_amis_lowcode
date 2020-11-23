@@ -1,7 +1,7 @@
 package com.chentongwei.core.tucao.enums.status;
 
 /**
- * @author TongWei.Chen 2017-12-18 18:26:01
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章点赞枚举
  */

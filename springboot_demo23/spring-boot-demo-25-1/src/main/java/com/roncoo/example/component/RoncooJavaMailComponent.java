@@ -24,7 +24,7 @@ import freemarker.template.TemplateNotFoundException;
 
 /**
  *
- * @author wujing
+ * @author Wujun
  */
 @Component
 public class RoncooJavaMailComponent {

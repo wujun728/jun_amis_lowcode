@@ -24,7 +24,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 配置文件读取工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public final class ConfUtil {
 	private static final Logger logger = LoggerFactory.getLogger(ConfUtil.class);

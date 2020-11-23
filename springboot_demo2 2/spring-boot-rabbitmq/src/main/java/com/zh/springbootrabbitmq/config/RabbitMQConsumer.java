@@ -17,7 +17,7 @@ import java.io.IOException;
  * basicRecover(requeue):是重发消息的意思，参数设置为true意味着消息回到队列里可能会被分配给其他消费者，设置为false意味着还分配给该消费者
  * 因为出现问题多半是处理业务出现异常，重发没意义，自己补偿即可
  * nack和reject丢弃消息时，如果交换器绑定了死信队列，还可以触发死信队列
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/9
  */
 @Slf4j

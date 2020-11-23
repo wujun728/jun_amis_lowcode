@@ -12,7 +12,7 @@ import java.util.Date;
  * 交易账单表 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-08-31
  */
 

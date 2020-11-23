@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description QQ服务实现
  * @date 2017/7/25
  * @since 1.0

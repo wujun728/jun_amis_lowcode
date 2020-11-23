@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author zhaodui
+ * @author Wujun
  */
 public abstract class AbstractService<T>  {
 	@Autowired(required = false)

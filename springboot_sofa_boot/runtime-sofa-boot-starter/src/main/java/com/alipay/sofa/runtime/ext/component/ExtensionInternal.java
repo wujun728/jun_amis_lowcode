@@ -23,8 +23,8 @@ import org.w3c.dom.Element;
 /**
  * SOFA Extension Internal Object
  *
- * @author xi.hux@alipay.com
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 

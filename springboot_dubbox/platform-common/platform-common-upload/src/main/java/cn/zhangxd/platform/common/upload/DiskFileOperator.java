@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * 文件硬盘操作
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class DiskFileOperator extends AbstractFileOperator implements FileOperator {
 

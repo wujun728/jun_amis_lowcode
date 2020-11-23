@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * 汇率服务
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Service
 @Transactional(readOnly = true)

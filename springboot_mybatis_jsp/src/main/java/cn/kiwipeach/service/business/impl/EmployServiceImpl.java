@@ -14,7 +14,7 @@ import java.math.BigDecimal;
  * Create Date: 2017/11/06
  * Description: 员工服务接口实现类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @Service
 public class EmployServiceImpl implements EmployService {

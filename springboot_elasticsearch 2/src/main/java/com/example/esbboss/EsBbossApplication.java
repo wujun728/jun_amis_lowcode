@@ -18,7 +18,7 @@ package com.example.esbboss;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
- * @author yinbp[yin-bp@163.com]
+ * @author Wujun
  */
 @SpringBootApplication
 //@EnableAutoConfiguration(exclude = {ElasticsearchAutoConfiguration.class, ElasticsearchDataAutoConfiguration.class})

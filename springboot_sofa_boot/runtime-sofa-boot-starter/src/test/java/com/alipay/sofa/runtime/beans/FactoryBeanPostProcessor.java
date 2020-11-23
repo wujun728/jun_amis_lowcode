@@ -24,7 +24,7 @@ import org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator;
 import org.springframework.beans.BeansException;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.4.1
  */
 public class FactoryBeanPostProcessor extends AbstractAutoProxyCreator {

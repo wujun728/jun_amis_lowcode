@@ -20,7 +20,7 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.context.ApplicationContext;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 @FunctionalInterface

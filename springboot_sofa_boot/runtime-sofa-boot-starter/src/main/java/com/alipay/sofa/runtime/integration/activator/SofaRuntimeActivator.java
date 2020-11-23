@@ -24,7 +24,7 @@ import com.alipay.sofa.runtime.integration.service.SofaEventHandler;
 import com.alipay.sofa.runtime.spi.log.SofaLogger;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class SofaRuntimeActivator implements PluginActivator {

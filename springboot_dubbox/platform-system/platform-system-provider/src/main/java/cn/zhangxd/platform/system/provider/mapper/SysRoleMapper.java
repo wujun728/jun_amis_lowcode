@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 角色DAO接口
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Mapper
 public interface SysRoleMapper extends CrudDao<SysRole> {

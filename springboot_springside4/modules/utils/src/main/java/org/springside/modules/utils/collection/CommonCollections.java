@@ -14,7 +14,7 @@ import org.apache.commons.collections4.map.MultiKeyMap;
  * 
  * 参考pom.xml, 引入apache Commons Collections4依赖
  * 
- * @author calvin
+ * @author Wujun
  */
 public class CommonCollections {
 

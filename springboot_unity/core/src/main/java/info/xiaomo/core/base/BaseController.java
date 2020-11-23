@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * @author : xiaomo (https://xiaomo.info) (https://github.com/xiaomoinfo)
+ * @author Wujun
  * @version : 2017/1/11 16:41
  */
 @RestController

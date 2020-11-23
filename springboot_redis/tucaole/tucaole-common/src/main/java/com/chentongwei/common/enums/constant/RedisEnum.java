@@ -1,7 +1,7 @@
 package com.chentongwei.common.enums.constant;
 
 /**
- * @author TongWei.Chen 2017-5-21 20:19:24
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的前缀常量
  */

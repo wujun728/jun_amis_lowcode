@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
  * 对字符串的简单处理
  * <p>
  *
- * @author : xiaomo
+ * @author Wujun
  * @Date 2013-6-6 下午5:08:06
  */
 public class StringUtil extends StringUtils {

@@ -144,7 +144,7 @@ public class DateUtil {
      * @throws
      * @Title: compareDate
      * @Description:(日期比较，如果s>=e 返回true 否则返回false)
-     * @author luguosui
+     * @author Wujun
      */
     public static boolean compareDate(String s, String e) {
         if (parseDate(s) == null || parseDate(e) == null) {

@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * Web层面的工具类.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class WebHelper {
 

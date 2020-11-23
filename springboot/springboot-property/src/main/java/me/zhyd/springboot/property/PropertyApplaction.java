@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
+ * @author Wujun
  * @date 2017年6月1日 下午3:49:30 
  * @version V1.0
  * @since JDK ： 1.7
@@ -35,7 +35,7 @@ public class PropertyApplaction {
 	 * 
 	 * 第一种方式：使用`@ConfigurationProperties`注解将配置文件属性注入到配置对象类中
 	 * 
-	 * @author zyd
+	 * @author Wujun
 	 * @throws UnsupportedEncodingException
 	 * @since JDK 1.7
 	 */
@@ -50,7 +50,7 @@ public class PropertyApplaction {
 	 *
 	 * 第一种方式：使用`@ConfigurationProperties`注解将配置文件属性注入到配置对象类中
 	 *
-	 * @author zyd
+	 * @author Wujun
 	 * @throws UnsupportedEncodingException
 	 * @since JDK 1.7
 	 */
@@ -74,7 +74,7 @@ public class PropertyApplaction {
 	 * 
 	 * 第二种方式：使用`@Value("${propertyName}")`注解
 	 * 
-	 * @author zyd
+	 * @author Wujun
 	 * @throws UnsupportedEncodingException
 	 * @since JDK 1.7
 	 */
@@ -94,7 +94,7 @@ public class PropertyApplaction {
 	 * 
 	 * 第三种方式：使用`Environment`
 	 * 
-	 * @author zyd
+	 * @author Wujun
 	 * @throws UnsupportedEncodingException
 	 * @since JDK 1.7
 	 */
@@ -110,7 +110,7 @@ public class PropertyApplaction {
 	 * 
 	 * 第四种方式：通过注册监听器(`Listeners`) + `PropertiesLoaderUtils`的方式
 	 * 
-	 * @author zyd
+	 * @author Wujun
 	 * @throws UnsupportedEncodingException
 	 * @since JDK 1.7
 	 */

@@ -11,7 +11,7 @@ import org.typroject.tyboot.core.rdbms.orm.entity.BaseEntity;
  * 用户反馈
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-12-01
  */
 @EqualsAndHashCode(callSuper = true)

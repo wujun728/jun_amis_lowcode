@@ -8,7 +8,7 @@ import org.typroject.tyboot.core.auth.face.orm.entity.ResourceOperation;
   * 资源操作表 Mapper 接口
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-17
  */
 public interface ResourceOperationMapper extends BaseMapper<ResourceOperation> {

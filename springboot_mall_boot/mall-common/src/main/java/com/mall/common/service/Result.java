@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * 业务返回结果接口
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2017年6月13日 下午8:22:38
  */

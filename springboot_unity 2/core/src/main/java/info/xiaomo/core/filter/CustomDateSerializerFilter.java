@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 public class CustomDateSerializerFilter extends JsonSerializer<Date> {
 

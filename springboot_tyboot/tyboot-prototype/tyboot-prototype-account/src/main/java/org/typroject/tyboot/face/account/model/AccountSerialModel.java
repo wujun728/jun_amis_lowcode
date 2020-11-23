@@ -12,7 +12,7 @@ import java.util.Date;
  * 虚拟账户金额变更记录表，所有针对账户金额的变动操作都要记录到此表中， model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 @Data

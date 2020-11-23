@@ -7,7 +7,7 @@ import org.springframework.core.env.Environment;
 
 /**
  * 配置文件工具类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/01/01
  */

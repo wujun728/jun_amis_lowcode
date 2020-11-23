@@ -41,7 +41,7 @@ import java.util.Map;
 /**
  * Service Client Implementation，you can publish a service by this class
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ServiceClientImpl implements ServiceClient {
     private SofaRuntimeContext      sofaRuntimeContext;

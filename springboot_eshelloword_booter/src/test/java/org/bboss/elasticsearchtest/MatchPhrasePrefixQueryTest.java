@@ -29,7 +29,7 @@ import java.util.Map;
  * <p></p>
  * <p>Copyright (c) 2018</p>
  * @Date 2018/7/31 11:30
- * @author biaoping.yin
+ * @author Wujun
  * @version 1.0
  */
 public class MatchPhrasePrefixQueryTest {

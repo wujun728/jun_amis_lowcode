@@ -3,7 +3,7 @@ package com.chentongwei.common.util;
 import java.security.MessageDigest;
 
 /**
- * @author TongWei.Chen 2017-06-10 18:00:08
+ * @author Wujun
  * @Project tucaole
  * @Description: MD5工具类
  */

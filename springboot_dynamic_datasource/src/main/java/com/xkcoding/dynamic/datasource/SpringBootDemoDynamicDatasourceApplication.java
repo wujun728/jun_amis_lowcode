@@ -17,7 +17,7 @@ import java.util.List;
  * 启动器
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 17:57
  */
 @SpringBootApplication

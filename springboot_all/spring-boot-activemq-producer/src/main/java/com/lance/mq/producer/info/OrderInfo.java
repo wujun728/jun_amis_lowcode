@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * 订单信息
- * @author Administrator
+ * @author Wujun
  */
 public class OrderInfo implements Serializable{
 	private static final long serialVersionUID = 1196327608575230459L;

@@ -28,7 +28,7 @@ import com.roncoo.jui.web.service.SysRoleUserService;
 import com.roncoo.jui.web.service.WebSiteService;
 
 /**
- * @author wujing
+ * @author Wujun
  */
 @Controller
 public class IndexController extends BaseController {

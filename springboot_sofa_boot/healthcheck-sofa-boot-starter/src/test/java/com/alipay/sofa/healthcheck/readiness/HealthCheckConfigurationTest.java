@@ -29,7 +29,7 @@ import org.springframework.util.Assert;
 import java.util.HashMap;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class HealthCheckConfigurationTest extends BaseHealthCheckTest {

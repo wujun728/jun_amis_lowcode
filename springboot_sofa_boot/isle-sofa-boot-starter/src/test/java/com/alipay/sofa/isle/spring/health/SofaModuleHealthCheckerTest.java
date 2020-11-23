@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author abby.zh
+ * @author Wujun
  * @since 2.4.10
  */
 public class SofaModuleHealthCheckerTest {

@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * The type Trip user controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Validated
 @RestController

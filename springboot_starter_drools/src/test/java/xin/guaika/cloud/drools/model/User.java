@@ -22,7 +22,7 @@ import java.io.Serializable;
  * TODO
  * </P>
  * 
- * @author guaika junchen1314@foxmail.com
+ * @author Wujun
  * @Data 2017年8月30日 上午10:26:06
  */
 public class User implements Serializable{

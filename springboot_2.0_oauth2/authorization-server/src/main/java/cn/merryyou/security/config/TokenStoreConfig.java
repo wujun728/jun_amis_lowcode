@@ -17,7 +17,7 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 /**
  * Created on 2018/1/21 0021.
  *
- * @author zlf
+ * @author Wujun
  * @email i@merryyou.cn
  * @since 1.0
  */

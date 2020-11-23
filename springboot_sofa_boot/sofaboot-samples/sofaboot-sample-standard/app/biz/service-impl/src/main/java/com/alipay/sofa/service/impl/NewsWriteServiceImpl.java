@@ -24,7 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.sql.SQLException;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public class NewsWriteServiceImpl implements NewsWriteService {

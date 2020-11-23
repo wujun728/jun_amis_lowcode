@@ -20,7 +20,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ImportResource;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 @ImportResource({ "classpath*:META-INF/spring/*.xml" })

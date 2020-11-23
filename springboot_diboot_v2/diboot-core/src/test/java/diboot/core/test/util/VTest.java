@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * V校验工具类测试
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 1.0
  * @date 2019/06/02
  */

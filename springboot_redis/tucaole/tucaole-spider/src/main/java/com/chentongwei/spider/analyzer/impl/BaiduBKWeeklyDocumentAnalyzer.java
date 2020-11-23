@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author TongWei.Chen 2017-09-29 16:40:14
+ * @author Wujun
  * @Project tucaole
  * @Description: 百度百科分析器
  */

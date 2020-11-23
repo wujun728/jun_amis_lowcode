@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * Cache Data Operation Interface
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public interface Cache {
 

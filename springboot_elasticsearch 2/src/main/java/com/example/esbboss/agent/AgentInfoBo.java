@@ -20,8 +20,8 @@ package com.example.esbboss.agent;
 import java.util.Comparator;
 
 /**
- * @author emeroad
- * @author hyungil.jeong
+ * @author Wujun
+ * @author Wujun
  */
 public class AgentInfoBo {
 

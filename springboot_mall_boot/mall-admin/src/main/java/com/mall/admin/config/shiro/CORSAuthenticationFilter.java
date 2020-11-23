@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * 解决shiro Failed to load http://localhost/system/admin: Response for preflight is invalid (redirect)
  * 问题
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2019/1/1 20:26
  */

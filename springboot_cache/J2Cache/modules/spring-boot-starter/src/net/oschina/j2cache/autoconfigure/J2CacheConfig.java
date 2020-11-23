@@ -3,7 +3,7 @@ package net.oschina.j2cache.autoconfigure;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * 相关的配置信息
- * @author 小雨哥哥
+ * @author Wujun
  *
  */
 @ConfigurationProperties(prefix = "j2cache")

@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  * 登录SESSION 服务实现类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-07-06
  */
 @Service

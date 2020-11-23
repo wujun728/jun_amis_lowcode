@@ -21,7 +21,7 @@ import org.springside.modules.web.MediaTypes;
 /**
  * 重载替换Spring Boot默认的BasicErrorController, 增加日志并让错误返回方式统一.
  * 
- * @author calvin
+ * @author Wujun
  */
 @Controller
 public class ErrorPageController implements ErrorController {

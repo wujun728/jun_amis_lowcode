@@ -31,7 +31,7 @@ import org.springframework.web.context.WebApplicationContext;
  * Listener responsible for starting and stopping the registration task when the application is
  * ready.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class RegistrationApplicationListener {
 	private static final Logger LOGGER = LoggerFactory

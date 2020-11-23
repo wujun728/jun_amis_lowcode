@@ -25,7 +25,7 @@ import com.alipay.sofa.runtime.spi.component.SofaRuntimeContext;
  * refer {@link BindingType} to get supported binding types.
  * </p>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface BindingAdapter<T extends Binding> {
     /**

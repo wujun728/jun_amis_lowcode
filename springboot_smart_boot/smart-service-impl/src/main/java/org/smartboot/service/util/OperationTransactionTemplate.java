@@ -13,7 +13,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 /**
  * 服务层事务模板
  *
- * @author Seer
+ * @author Wujun
  * @version OperationTransactionTemplate.java, v 0.1 2015年11月5日 上午11:21:11 Seer
  *          Exp.
  */

@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * 2016/1/30
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class CharacterEncodingIPFilter extends CharacterEncodingFilter {
 

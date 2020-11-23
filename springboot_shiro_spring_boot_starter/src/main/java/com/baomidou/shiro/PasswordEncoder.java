@@ -8,7 +8,7 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 /**
  * 密码加密器
  *
- * @author TaoYu
+ * @author Wujun
  */
 public class PasswordEncoder {
 

@@ -16,7 +16,7 @@ import java.util.List;
  * Description: 解决SpringBoot配置文件*.properties中文乱码问题
  * 更多内容参考：http://blog.csdn.net/wangshuang1631/article/details/70753801
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 @Configuration
 public class MvcEncodeConfiguration extends WebMvcConfigurerAdapter {

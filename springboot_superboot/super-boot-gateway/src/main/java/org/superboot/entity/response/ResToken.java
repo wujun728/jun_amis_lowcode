@@ -12,7 +12,7 @@ import java.io.Serializable;
  * 功能描述:
  * </p>
  *
- * @author zhangshuai
+ * @author Wujun
  * @date 2017/11/16
  * @time 13:58
  * @Path cn.phxg.entity.response.ResToken

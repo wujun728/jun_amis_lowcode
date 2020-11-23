@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/05
  */
 @Component

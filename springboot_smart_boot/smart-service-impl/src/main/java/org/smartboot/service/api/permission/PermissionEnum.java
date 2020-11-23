@@ -3,7 +3,7 @@ package org.smartboot.service.api.permission;
 /**
  * 权限枚举
  * 
- * @author Seer
+ * @author Wujun
  *
  */
 public enum PermissionEnum {

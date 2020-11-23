@@ -13,7 +13,7 @@ import java.io.Serializable;
  * いま 最高の表現 として 明日最新の始発．．～
  * Today the best performance  as tomorrow newest starter!
  *
- * @author : xiaomo
+ * @author Wujun
  * github  : https://github.com/houko
  * email   : xiaomo@xiaomo.info
  * QQ      : 83387856

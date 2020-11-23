@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 图文消息
  * @date 2017/7/31
  * @since 1.0

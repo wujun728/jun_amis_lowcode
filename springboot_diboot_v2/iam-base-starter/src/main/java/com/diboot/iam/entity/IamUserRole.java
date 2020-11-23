@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 /**
 * 用户角色关联 Entity定义
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

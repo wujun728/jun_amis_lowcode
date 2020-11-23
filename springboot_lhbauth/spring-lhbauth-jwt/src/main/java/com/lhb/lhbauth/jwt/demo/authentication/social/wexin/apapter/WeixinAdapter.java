@@ -9,7 +9,7 @@ import org.springframework.social.connect.UserProfile;
 /**
  * 微信 api适配器，将微信 api的数据模型转为spring social的标准模型。
  *
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/4 0004 9:56
  */

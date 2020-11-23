@@ -22,7 +22,7 @@ import java.util.*;
 
 /**
  * 实现对 Session 的自定义管理
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 public class J2CacheSession implements HttpSession {
 

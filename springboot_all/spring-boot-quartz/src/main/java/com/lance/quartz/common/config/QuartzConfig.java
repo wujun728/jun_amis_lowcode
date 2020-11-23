@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 配置任务调度中心
  * [QRTZ_JOB_DETAILS], [QRTZ_TRIGGERS] and [QRTZ_CRON_TRIGGERS]
- * @author lance
+ * @author Wujun
  */
 @Configuration
 public class QuartzConfig {

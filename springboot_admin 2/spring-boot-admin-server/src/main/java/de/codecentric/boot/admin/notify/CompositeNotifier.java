@@ -22,7 +22,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * A notifier delegating notifications to all specified notifiers.
  *
- * @author Sebastian Meiser
+ * @author Wujun
  */
 public class CompositeNotifier extends AbstractEventNotifier {
 	private final Iterable<Notifier> delegates;

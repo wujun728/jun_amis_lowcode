@@ -22,7 +22,7 @@ import java.util.List;
  * Spring MVC 扩展配置
  * <p>
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Configuration
 public class MVCConfiguration implements WebMvcConfigurer {

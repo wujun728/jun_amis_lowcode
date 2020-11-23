@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 import java.beans.PropertyEditorSupport;
 
 /**
- * @author zhangxd
+ * @author Wujun
  */
 public class StringEditor extends PropertyEditorSupport {
 

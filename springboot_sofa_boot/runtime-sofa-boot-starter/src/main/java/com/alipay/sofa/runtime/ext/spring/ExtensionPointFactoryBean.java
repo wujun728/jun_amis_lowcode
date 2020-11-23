@@ -29,8 +29,8 @@ import org.springframework.util.StringUtils;
 /**
  * Extension point factory bean
  *
- * @author xi.hux@alipay.com
- * @author yangyanzhao@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionPointFactoryBean extends AbstractExtFactoryBean {

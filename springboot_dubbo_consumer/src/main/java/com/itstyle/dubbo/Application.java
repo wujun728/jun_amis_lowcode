@@ -12,7 +12,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.itstyle.dubbo.domain.User;
 import com.itstyle.dubbo.service.IUserService;
 /**
- * @author 科帮网 小柒
+ * @author Wujun
  */
 @EnableAutoConfiguration
 @ImportResource({"classpath:dubbo.xml"})

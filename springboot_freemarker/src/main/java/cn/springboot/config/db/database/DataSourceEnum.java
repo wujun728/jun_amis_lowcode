@@ -2,7 +2,7 @@ package cn.springboot.config.db.database;
 
 /** 
  * @Description 数据源枚举常量类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 17, 2017 2:00:22 PM  
  */
 public enum DataSourceEnum {

@@ -8,7 +8,7 @@ import com.chentongwei.core.user.entity.vo.user.UserVO;
 import org.apache.ibatis.annotations.Param;
 
 /**
- * @author TongWei.Chen 2017-9-17 17:32:31
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户DAO
  **/

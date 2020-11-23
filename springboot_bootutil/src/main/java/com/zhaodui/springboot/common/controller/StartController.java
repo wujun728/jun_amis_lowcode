@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 容器启动后执行的方法
  *
- * @author zhaodui
+ * @author Wujun
  */
 @Controller
 public class StartController implements ApplicationListener<ContextRefreshedEvent> {

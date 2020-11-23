@@ -18,7 +18,7 @@ import com.ibeetl.admin.core.util.PlatformException;
 
 /**
  * 
- * @author : xiandafu
+ * @author Wujun
  */
 @Service
 @Transactional

@@ -6,7 +6,7 @@ import com.kind.springboot.common.config.ResultStatus;
  * Function:返回结果. <br/>
  * Date:     2016年8月11日 下午1:19:21 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

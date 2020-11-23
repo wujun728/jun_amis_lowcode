@@ -27,8 +27,8 @@ import org.springframework.boot.gradle.testkit.GradleBuild;
 /**
  * Integration tests for the configuration applied by DependencyManagementPlugin
  *
- * @author Andy Wilkinson
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
  */
 @RunWith(GradleCompatibilitySuite.class)
 public class DependencyManagementPluginActionIntegrationTests {

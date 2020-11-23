@@ -36,8 +36,8 @@ import org.springframework.context.annotation.Configuration;
 import java.util.*;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 public class HealthCheckerProcessorTest extends BaseHealthCheckTest {

@@ -38,7 +38,7 @@ import java.util.Map;
  * In order to ensure this class execute at first, this class implement
  * ${@link PriorityOrdered} interface and return ${@link Ordered#HIGHEST_PRECEDENCE}.
  *
- * @author xuanbei 18/3/12
+ * @author Wujun
  */
 public class SofaModuleContextRefreshedListener implements PriorityOrdered,
                                                ApplicationListener<ContextRefreshedEvent>,

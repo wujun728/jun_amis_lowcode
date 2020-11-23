@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 用户名密码认证的service实现
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/25
  */

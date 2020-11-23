@@ -20,7 +20,7 @@ import com.lance.shiro.service.UserService;
 /**
  * 验证用户登录
  * 
- * @author Administrator
+ * @author Wujun
  */
 @Component("userRealm")
 public class UserRealm extends AuthorizingRealm {

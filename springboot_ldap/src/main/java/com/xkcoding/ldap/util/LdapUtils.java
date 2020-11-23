@@ -8,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * LdapUtils
  *
- * @author fxbin
+ * @author Wujun
  * @version v1.0
  * @since 2019/8/26 1:03
  */

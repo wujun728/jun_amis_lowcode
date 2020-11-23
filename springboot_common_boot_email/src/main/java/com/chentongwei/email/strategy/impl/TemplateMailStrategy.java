@@ -19,7 +19,7 @@ import java.util.Map;
 /**
  * @Description: 自定义模板格式发送邮件
  *
- * @author TongWei.Chen 2018-06-15 16:49:18
+ * @author Wujun
  * @Project common-boot-email
  */
 @Component

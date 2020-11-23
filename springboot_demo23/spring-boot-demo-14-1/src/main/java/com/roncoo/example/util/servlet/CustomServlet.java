@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 自定义servlet
  * 
- * @author wujing
+ * @author Wujun
  */
 @WebServlet(urlPatterns="/roncoo", name="customServlet")
 public class CustomServlet extends HttpServlet {

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequestWrapper;
 
 /**
  * TrimRequestWrapper 删除多余空格,装饰HttpServletRequest对象,装饰模式的使用
- * @author netbuffer
+ * @author Wujun
  *
  */
 public class TrimRequestWrapper extends HttpServletRequestWrapper {

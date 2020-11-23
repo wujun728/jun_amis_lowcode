@@ -450,7 +450,7 @@ public class ValidationUtil {
 	/**
 	 * this method is moved from ValidatorUtil
 	 * 
-	 * @author rocket.he
+	 * @author Wujun
 	 * @param url
 	 * @return
 	 */
@@ -462,7 +462,7 @@ public class ValidationUtil {
 	/**
 	 * this method is moved from ValidatorUtil
 	 * 
-	 * @author rocket.he
+	 * @author Wujun
 	 * @param inputObject
 	 * @return
 	 */

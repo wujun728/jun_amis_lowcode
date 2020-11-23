@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 @Component
 public class Sender {

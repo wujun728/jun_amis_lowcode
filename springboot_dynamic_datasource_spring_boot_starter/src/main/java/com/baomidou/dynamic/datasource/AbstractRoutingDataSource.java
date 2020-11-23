@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * 抽象动态获取数据源
  *
- * @author TaoYu
+ * @author Wujun
  * @since 2.2.0
  */
 public abstract class AbstractRoutingDataSource extends AbstractDataSource {

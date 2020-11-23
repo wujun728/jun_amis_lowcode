@@ -46,7 +46,7 @@ import java.util.Set;
 /**
  * Shiro-密码输入错误的状态下重试次数的匹配管理
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/4/24 14:37

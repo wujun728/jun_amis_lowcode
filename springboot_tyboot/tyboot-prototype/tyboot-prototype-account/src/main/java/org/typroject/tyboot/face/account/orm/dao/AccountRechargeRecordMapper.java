@@ -10,7 +10,7 @@ import org.typroject.tyboot.face.account.orm.entity.AccountRechargeRecord;
   * 充值记录表，只记录交易成功的充值信息 Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 public interface AccountRechargeRecordMapper extends BaseMapper<AccountRechargeRecord> {

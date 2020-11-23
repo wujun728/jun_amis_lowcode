@@ -32,8 +32,8 @@ import java.util.Map;
 /**
  * SOFA ExtensionPoint Component
  *
- * @author khotyn
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionPointComponent extends AbstractComponent {

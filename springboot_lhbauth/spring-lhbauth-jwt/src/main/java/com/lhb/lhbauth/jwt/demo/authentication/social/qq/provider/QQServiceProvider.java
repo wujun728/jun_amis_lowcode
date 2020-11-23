@@ -6,7 +6,7 @@ import com.lhb.lhbauth.jwt.demo.authentication.social.qq.template.QQOAuth2Templa
 import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/3 0003 10:10
  */

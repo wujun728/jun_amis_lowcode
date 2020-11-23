@@ -28,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 微信服务实现
  * @date 2017/7/27
  * @since 1.0

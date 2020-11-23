@@ -22,7 +22,7 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
  * 
  * 3. 防止第三方Runnable未捕捉异常导致线程跑飞
  * 
- * @author calvin
+ * @author Wujun
  *
  */
 public class ThreadPoolUtil {

@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author TongWei.Chen 2017-09-23 19:02:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 邮件发送类
  **/

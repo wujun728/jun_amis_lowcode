@@ -20,7 +20,7 @@ import org.springframework.data.mybatis.repository.support.MybatisRepositoryFact
  * {@link EnableAutoConfiguration Auto-configuration} for Spring Data's MyBatis
  * Repositories.
  * 
- * @author Jarvis Song
+ * @author Wujun
  */
 @Configuration
 @ConditionalOnBean(DataSource.class)

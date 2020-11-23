@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * bootstrap table用到的返回json格式
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/4/16 16:26

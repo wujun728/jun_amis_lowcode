@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class OauthClientDetailsDto implements Serializable {
 

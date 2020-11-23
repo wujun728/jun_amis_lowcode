@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 实现RPC服务的抽象类
  * 
- * @author Seer
+ * @author Wujun
  * @version AbstractRpcService.java, v 0.1 2016年6月23日 下午6:12:27 Seer Exp.
  */
 public abstract class AbstractRpcService extends AbstractService {

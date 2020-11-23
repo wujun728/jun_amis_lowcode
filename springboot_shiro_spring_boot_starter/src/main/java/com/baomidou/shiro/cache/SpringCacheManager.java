@@ -7,7 +7,7 @@ import org.apache.shiro.cache.CacheManager;
 /**
  * springCacheManager对原生shiroCacheManager的包装
  *
- * @author TaoYu
+ * @author Wujun
  */
 public class SpringCacheManager implements CacheManager {
 

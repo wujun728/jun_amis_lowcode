@@ -12,7 +12,7 @@ package com.kind.springboot.common.config;
  * Function:登录状态. <br/>
  * Date: 2016年8月11日 上午11:32:52 <br/>
  *
- * @author weiguo.liu
+ * @author Wujun
  * @version
  * @since JDK 1.7
  * @see

@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * 随机策略
  *
- * @author TaoYu Kanyuxia
+ * @author Wujun
  * @since 1.0.0
  */
 public class RandomDynamicDataSourceStrategy implements DynamicDataSourceStrategy {

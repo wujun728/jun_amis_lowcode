@@ -4,7 +4,7 @@
 package net.oschina.j2cache.hibernate3;
 
 /**
- * @author liao
+ * @author Wujun
  *
  */
 public class User {

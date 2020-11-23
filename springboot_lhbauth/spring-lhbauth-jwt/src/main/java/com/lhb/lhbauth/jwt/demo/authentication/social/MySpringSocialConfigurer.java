@@ -5,7 +5,7 @@ import org.springframework.social.security.SocialAuthenticationFilter;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 自定义生成自己的处理的URL
  * @date 2019/1/3 0003 10:27
  */

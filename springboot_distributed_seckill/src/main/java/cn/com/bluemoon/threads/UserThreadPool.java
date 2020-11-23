@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 多线程编程
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年5月24日 下午5:19:35
  *
  */

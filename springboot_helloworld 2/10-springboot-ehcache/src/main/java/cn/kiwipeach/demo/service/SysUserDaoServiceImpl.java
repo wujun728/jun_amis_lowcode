@@ -27,7 +27,7 @@ import org.springframework.stereotype.Service;
 /**
  * 描述：用户服务实现类
  *
- * @author kiwipeach
+ * @author Wujun
  * @create 2019-03-30
  */
 @Service

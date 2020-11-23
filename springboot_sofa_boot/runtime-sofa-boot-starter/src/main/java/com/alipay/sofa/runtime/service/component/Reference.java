@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.spi.binding.Contract;
 /**
  * Reference Definition
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public interface Reference extends Contract {
     /**

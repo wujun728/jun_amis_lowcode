@@ -30,8 +30,8 @@ import java.util.Set;
 
 /**
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class XAnnotatedMap extends XAnnotatedList {
@@ -145,7 +145,7 @@ public class XAnnotatedMap extends XAnnotatedList {
 /**
  * <code>ElementMap</code><code>NodeVisitor</code>
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class ElementMapVisitor extends DOMHelper.NodeMapVisitor {
@@ -164,7 +164,7 @@ class ElementMapVisitor extends DOMHelper.NodeMapVisitor {
 /**
  * <code>ElementValueMap</code><code>NodeVisitor</code>
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class ElementValueMapVisitor extends DOMHelper.NodeMapVisitor {
@@ -188,7 +188,7 @@ class ElementValueMapVisitor extends DOMHelper.NodeMapVisitor {
 /**
  * <code>AttributeValueMap</code><code>NodeVisitor</code>
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class AttributeValueMapVisitor extends DOMHelper.NodeMapVisitor {

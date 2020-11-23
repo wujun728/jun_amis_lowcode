@@ -30,7 +30,7 @@ import com.jfinal.plugin.ehcache.CacheInterceptor;
 
 /**
  * index控制器
- * @author netbuffer
+ * @author Wujun
  *
  */
 @Before({ TimeInterceptor.class })

@@ -8,7 +8,7 @@ import org.springframework.boot.diagnostics.FailureAnalysis;
 /**
  * realm或filter转换异常处理器
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

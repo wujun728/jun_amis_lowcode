@@ -19,7 +19,7 @@ import com.itstyle.modules.weixinpay.util.ConfigUtil;
 public class MobileUtil {
 	/**
 	 * 获取用户openID
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param code
 	 * @return  String
 	 * @Date	2017年7月31日
@@ -65,7 +65,7 @@ public class MobileUtil {
 	}
 	/**
 	 * 回调request 参数解析为map格式
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param request
 	 * @return
 	 * @throws Exception  Map<String,String>

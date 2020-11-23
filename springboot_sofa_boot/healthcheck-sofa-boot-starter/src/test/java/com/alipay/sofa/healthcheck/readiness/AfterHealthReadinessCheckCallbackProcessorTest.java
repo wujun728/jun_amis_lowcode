@@ -34,8 +34,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author liangen
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @version 2.3.0
  */
 public class AfterHealthReadinessCheckCallbackProcessorTest extends BaseHealthCheckTest {

@@ -28,7 +28,7 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @RunWith(SpringRunner.class)

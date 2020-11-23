@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * @param <D> the type parameter
  * @param <T> the type parameter
- * @author zhangxd
+ * @author Wujun
  */
 @Transactional(readOnly = true)
 public abstract class CrudService<D extends CrudDao<T>, T extends DataEntity> {

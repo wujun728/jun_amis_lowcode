@@ -7,7 +7,7 @@ import java.util.Date;
  * 
  * 平时使用DEFAULT，测试时替换为DummyClock，可准确控制时间变化而不用Thread.sleep()等待时间流逝.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class ClockUtil {
 

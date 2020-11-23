@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 
 /**
  * 使用ExecutorService、Callable、Future实现有返回结果的多线程
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月9日 下午4:37:32
  *
  */

@@ -21,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * 描述：
  *
- * @author kiwipeach
+ * @author Wujun
  * @create 2019-03-30
  */
 @Configuration

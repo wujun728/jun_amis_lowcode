@@ -24,7 +24,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
  * 指定数据源的Repository路径
  * 数据源的entityManagerFactory
  * 事务是公共事务
- * @author Administrator
+ * @author Wujun
  *
  */
 @EnableJpaRepositories(basePackages = "com.sam.demo.spring.boot.jpa.primary", entityManagerFactoryRef = "entityManagerFactory", transactionManagerRef = "transactionManager")

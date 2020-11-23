@@ -4,7 +4,7 @@ package com.zh.springbootatomikosjta.service;
 import com.zh.springbootatomikosjta.model.test2.Stock;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/6
  */
 public interface StockService {

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 比较字符串直接相加和StringBuilder的效率
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/25
  */

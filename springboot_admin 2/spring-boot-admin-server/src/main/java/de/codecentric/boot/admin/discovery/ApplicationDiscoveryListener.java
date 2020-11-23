@@ -36,7 +36,7 @@ import de.codecentric.boot.admin.registry.ApplicationRegistry;
 /**
  * Listener for Heartbeats events to publish all services to the application registry.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ApplicationDiscoveryListener {
 	private static final Logger LOGGER = LoggerFactory

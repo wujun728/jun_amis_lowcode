@@ -12,7 +12,7 @@ import java.util.Date;
  * 订单归档表 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-14
  */
 @Data

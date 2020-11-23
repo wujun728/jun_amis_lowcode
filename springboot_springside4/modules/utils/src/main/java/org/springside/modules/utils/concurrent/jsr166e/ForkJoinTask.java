@@ -181,7 +181,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * execution. Serialization is not relied on during execution itself.
  *
  * @since 1.7
- * @author Doug Lea
+ * @author Wujun
  */
 public abstract class ForkJoinTask<V> implements Future<V>, Serializable {
 

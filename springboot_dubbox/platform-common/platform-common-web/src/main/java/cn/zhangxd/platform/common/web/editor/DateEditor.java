@@ -5,7 +5,7 @@ import cn.zhangxd.platform.common.utils.DateHelper;
 import java.beans.PropertyEditorSupport;
 
 /**
- * @author zhangxd
+ * @author Wujun
  */
 public class DateEditor extends PropertyEditorSupport {
 

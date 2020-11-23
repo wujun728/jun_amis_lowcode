@@ -37,7 +37,7 @@ import org.springframework.http.HttpHeaders;
 /**
  * 谷歌默认验证码组件
  *
- * @author TaoYu
+ * @author Wujun
  */
 @Slf4j
 public class GoogleKaptcha implements Kaptcha {

@@ -16,7 +16,7 @@
 package com.baomidou.kaptcha.exception;
 
 /**
- * @author TaoYu
+ * @author Wujun
  */
 public class KaptchaNotFoundException extends KaptchaException {
 

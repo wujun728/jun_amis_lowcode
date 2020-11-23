@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @author TongWei.Chen 2017-12-23 16:06:20
+ * @author Wujun
  * @Project tucaole
  * @Description: Elasticsearch删除工具类
  */

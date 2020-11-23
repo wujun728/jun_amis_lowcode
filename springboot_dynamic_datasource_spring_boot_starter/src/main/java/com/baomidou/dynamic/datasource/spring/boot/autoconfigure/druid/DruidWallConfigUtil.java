@@ -22,7 +22,7 @@ import org.springframework.util.StringUtils;
 /**
  * 防火墙配置工具类 解决打war包外部部署的异常
  *
- * @author Taoyu
+ * @author Wujun
  * @since 2.5.4
  */
 public final class DruidWallConfigUtil {

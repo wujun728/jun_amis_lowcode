@@ -11,7 +11,7 @@ import com.ibeetl.admin.core.entity.CoreFile;
 
 /**
  * 从数据库搜索文档信息，对应core_file,和core_file_tag,目前先忽略tag功能
- * @author xiandafu
+ * @author Wujun
  *
  */
 

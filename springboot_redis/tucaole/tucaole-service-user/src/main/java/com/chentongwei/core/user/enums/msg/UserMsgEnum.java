@@ -3,7 +3,7 @@ package com.chentongwei.core.user.enums.msg;
 import com.chentongwei.common.enums.IBaseEnum;
 
 /**
- * @author TongWei.Chen 2017-12-04 14:28:43
+ * @author Wujun
  * @Project tucaole
  * @Description: 用户部分字符串常量
  */

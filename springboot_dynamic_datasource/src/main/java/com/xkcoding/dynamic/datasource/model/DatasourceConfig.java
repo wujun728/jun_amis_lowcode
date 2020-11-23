@@ -13,7 +13,7 @@ import java.io.Serializable;
  * 数据源配置表
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 10:58
  */
 @Data

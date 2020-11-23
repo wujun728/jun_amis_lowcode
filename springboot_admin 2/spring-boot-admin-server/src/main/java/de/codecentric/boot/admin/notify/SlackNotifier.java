@@ -16,7 +16,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Notifier submitting events to Slack.
  *
- * @author Artur Dobosiewicz
+ * @author Wujun
  */
 public class SlackNotifier extends AbstractStatusChangeNotifier {
 	private static final String DEFAULT_MESSAGE = "*#{application.name}* (#{application.id}) is *#{to.status}*";

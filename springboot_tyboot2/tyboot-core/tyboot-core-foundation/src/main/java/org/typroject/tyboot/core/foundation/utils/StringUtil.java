@@ -57,7 +57,7 @@ public final class StringUtil
 
 	/**
 	 * 汉字转换位汉语拼音，英文字符不变
-	 * @author yangbochao
+	 * @author Wujun
 	 * @param chines 汉字
 	 * @return 拼音
 	 */
@@ -101,7 +101,7 @@ public final class StringUtil
 	
 	/**
 	 * 将文件名中的汉字转为UTF8编码的串,以便下载时能正确显示另存的文件名.
-	 * @author zhaoqiang
+	 * @author Wujun
 	 * @param s 原文件名
 	 * @return 重新编码后的文件名
 	 */
@@ -141,7 +141,7 @@ public final class StringUtil
 
 	/**
 	 * 将utf-8编码的汉字转为中文
-	 * @author zhaoqiang
+	 * @author Wujun
 	 * @param str
 	 * @return
 	 */
@@ -163,7 +163,7 @@ public final class StringUtil
 	 * 将数字类型的字符串转换成大写字母形式的字符串
 	 * 转换规则按照0-A; 1-B;依次类推
 	 * TODO.
-	 * @author leishuaifeng ;
+	 * @author Wujun
 	 * 2015-06-10 
 	 * @param str
 	 * @return
@@ -188,7 +188,7 @@ public final class StringUtil
 	 * 将A-J的字符串转换成数字形式的字符串
 	 * 转换规则按照A-0; B-1;依次类推
 	 * TODO.
-	 * @author leishuaifeng ;
+	 * @author Wujun
 	 * 2015-06-10 
 	 * @param str
 	 * @return

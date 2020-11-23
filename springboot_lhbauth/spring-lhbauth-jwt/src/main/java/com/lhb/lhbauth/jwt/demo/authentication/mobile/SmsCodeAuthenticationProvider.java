@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/2 0002 10:34
  */

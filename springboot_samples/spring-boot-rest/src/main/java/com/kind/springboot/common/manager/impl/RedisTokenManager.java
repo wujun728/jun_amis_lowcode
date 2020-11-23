@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * Function:Redis存储和验证token的实现类.<br/>
  * Date:     2016年8月11日 下午12:55:31 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

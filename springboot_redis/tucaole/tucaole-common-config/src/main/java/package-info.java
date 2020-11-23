@@ -1,5 +1,5 @@
 /**
- * @author TongWei.Chen 2017-09-21 18:43:32
+ * @author Wujun
  * @Project tucaole
  * @Description: 通用配置
  */

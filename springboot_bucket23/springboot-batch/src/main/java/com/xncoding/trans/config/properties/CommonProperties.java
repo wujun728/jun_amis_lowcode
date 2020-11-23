@@ -10,7 +10,7 @@ import java.sql.SQLException;
 /**
  * 自定义配置文件
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017-05-21 11:18
  */
 @Component

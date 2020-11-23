@@ -7,7 +7,7 @@ import org.springframework.cache.support.AbstractValueAdaptingCache;
 import java.util.concurrent.Callable;
 
 /**
- * @author Chen
+ * @author Wujun
  */
 public class J2CacheSpringCacheAdapter extends AbstractValueAdaptingCache {
     private final String name;

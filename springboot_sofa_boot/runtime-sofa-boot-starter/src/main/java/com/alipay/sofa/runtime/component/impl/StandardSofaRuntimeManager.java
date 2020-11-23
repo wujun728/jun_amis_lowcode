@@ -30,7 +30,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Default Sofa Runtime Manager
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class StandardSofaRuntimeManager implements SofaRuntimeManager {
 

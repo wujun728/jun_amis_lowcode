@@ -11,7 +11,7 @@ import java.util.UUID;
 
 /***
  * String 操作类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/01/01
  */

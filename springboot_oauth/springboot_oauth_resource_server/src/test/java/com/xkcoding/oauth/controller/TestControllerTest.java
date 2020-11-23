@@ -18,7 +18,7 @@ import static org.springframework.http.HttpMethod.GET;
 /**
  * .
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/9 下午3:46
  */
 public class TestControllerTest extends AuthorizationTest {

@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 3.1.1
  */
 @Configuration

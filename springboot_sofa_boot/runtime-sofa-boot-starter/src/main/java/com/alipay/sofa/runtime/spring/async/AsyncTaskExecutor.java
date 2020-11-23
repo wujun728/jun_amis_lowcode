@@ -31,8 +31,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * @author qilong.zql
- * @author xuanbei
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncTaskExecutor {

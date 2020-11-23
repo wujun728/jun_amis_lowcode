@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 版本检查结果
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/9
  */

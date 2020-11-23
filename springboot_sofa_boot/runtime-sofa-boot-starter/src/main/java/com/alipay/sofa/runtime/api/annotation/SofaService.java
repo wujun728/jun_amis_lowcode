@@ -36,7 +36,7 @@ import java.lang.annotation.Target;
  * }
  * </pre>
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.METHOD })

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 小程序消息控制器
- * @author L.cm
+ * @author Wujun
  *
  */
 public abstract class DreamWxaMsgController {

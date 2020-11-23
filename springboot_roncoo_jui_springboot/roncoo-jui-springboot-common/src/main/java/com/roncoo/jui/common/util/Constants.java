@@ -18,7 +18,7 @@ package com.roncoo.jui.common.util;
 /**
  * 常量工具类
  * 
- * @author wujing
+ * @author Wujun
  */
 public final class Constants {
 
@@ -29,7 +29,7 @@ public final class Constants {
 	/**
 	 * 常量
 	 * 
-	 * @author wujing
+	 * @author Wujun
 	 */
 	public interface Session {
 		public final static String USER = "user";
@@ -40,7 +40,7 @@ public final class Constants {
 	/**
 	 * 常量
 	 * 
-	 * @author wujing
+	 * @author Wujun
 	 */
 	public interface Token {
 		public final static String RONCOO = "roncoo";

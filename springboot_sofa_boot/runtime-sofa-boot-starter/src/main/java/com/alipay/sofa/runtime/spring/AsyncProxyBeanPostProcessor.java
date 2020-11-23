@@ -36,8 +36,8 @@ import java.lang.reflect.Method;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author qilong.zql
- * @author xuanbei
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class AsyncProxyBeanPostProcessor implements BeanPostProcessor, ApplicationContextAware,

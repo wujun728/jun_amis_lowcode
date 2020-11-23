@@ -23,7 +23,7 @@ import java.util.Set;
 /**
  * Binding Adapter Factory
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface BindingAdapterFactory {
     /**

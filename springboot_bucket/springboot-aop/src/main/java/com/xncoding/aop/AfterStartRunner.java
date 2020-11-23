@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 /**
  * MonitorBossAfterStart
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/7/18
  */

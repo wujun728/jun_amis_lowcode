@@ -15,7 +15,7 @@ import com.ibeetl.admin.core.util.AnnotationUtil;
 /**
  * 描述: 通过解析注解，获取表达查询条件信息
  *
- * @author : lijiazhi
+ * @author Wujun
  */
 @Component
 public class SearchCondtionFunction implements Function {

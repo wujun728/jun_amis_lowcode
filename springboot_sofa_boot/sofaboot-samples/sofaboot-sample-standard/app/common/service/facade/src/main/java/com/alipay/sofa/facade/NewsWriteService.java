@@ -19,7 +19,7 @@ package com.alipay.sofa.facade;
 import java.sql.SQLException;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public interface NewsWriteService {

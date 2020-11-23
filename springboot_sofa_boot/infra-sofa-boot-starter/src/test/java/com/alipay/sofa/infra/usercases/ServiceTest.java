@@ -27,7 +27,7 @@ import static org.junit.Assert.assertNotNull;
 /**
  * ServiceTest
  *
- * @author yangguanchao
+ * @author Wujun
  * @since 2018/01/04
  */
 public class ServiceTest extends AbstractTestBase {

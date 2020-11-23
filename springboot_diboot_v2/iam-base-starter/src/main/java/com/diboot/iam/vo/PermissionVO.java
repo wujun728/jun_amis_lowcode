@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * 权限VO
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/12/23
  */

@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Service("oauthService")
 public class OauthServiceImpl implements OauthService {

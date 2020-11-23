@@ -9,7 +9,7 @@ import java.util.List;
 
 /** 
  * @Description 用户Mapper
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:13:21 AM  
  */
 @Mapper
@@ -31,7 +31,7 @@ public interface UserMapper extends BaseMapper<String, User> {
      * @param id
      *            店铺ID
      * @return
-     * @author wangxin
+     * @author Wujun
      */
     public List<User> findUserByShop(String organizeId);
 

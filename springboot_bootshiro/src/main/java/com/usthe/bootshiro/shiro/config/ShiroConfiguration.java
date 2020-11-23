@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description shiro配置
  * @Date 12:41 2018/3/6
  */

@@ -29,8 +29,8 @@ import java.util.stream.StreamSupport;
 /**
  * SofaBootNamespaceHandler
  *
- * @author yangguanchao
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2018/04/08
  */
 public class SofaBootNamespaceHandler extends NamespaceHandlerSupport {

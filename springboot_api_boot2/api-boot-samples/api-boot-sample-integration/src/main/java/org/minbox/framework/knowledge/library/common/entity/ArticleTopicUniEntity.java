@@ -12,7 +12,7 @@ import lombok.Data;
  * <p>本类由Code-Builder自动生成</p>
  * <p>表名: kl_article_topic_uni - 文章专题关联信息表 - 数据实体</p>
  *
- * @author Code-Builder
+ * @author Wujun
  * @since 恒宇少年
  * ===============================
  * Created with Code-Builder.

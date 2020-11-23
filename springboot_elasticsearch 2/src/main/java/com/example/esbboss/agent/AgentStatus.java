@@ -18,8 +18,8 @@ package com.example.esbboss.agent;
 
 /**
  * 
- * @author netspider
- * @author HyunGil Jeong
+ * @author Wujun
+ * @author Wujun
  */
 public class AgentStatus {
 

@@ -21,7 +21,7 @@ import org.slf4j.Logger;
 import java.text.MessageFormat;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class SofaLogger {
     /** SOFA Default Logger */

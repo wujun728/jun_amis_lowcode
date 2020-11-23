@@ -17,7 +17,7 @@ import com.roncoo.jui.common.util.jui.Page;
 /**
  * 分页
  * 
- * @author wujing
+ * @author Wujun
  * @param <T>
  */
 public final class PageUtil<T extends Serializable> implements Serializable {

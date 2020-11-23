@@ -20,7 +20,7 @@ package com.alipay.sofa.runtime.api.binding;
  * The type of the binding, used to distinguish different types of
  * {@link com.alipay.sofa.runtime.api.client.param.BindingParam}
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class BindingType {
 

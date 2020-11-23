@@ -3,7 +3,7 @@ package com.chentongwei.core.tucao.entity.vo.article;
 import lombok.Data;
 
 /**
- * @author TongWei.Chen 2017-12-19 18:48:39
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章详情
  */

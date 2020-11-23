@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2018/12/25 0025 10:23
  */

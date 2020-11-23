@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * SpringContext管理类.
- * @author zhanghang
+ * @author Wujun
  * @date 2019/06/17
  */
 @Component

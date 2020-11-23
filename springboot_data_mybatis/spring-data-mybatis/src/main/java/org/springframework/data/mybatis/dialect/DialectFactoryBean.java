@@ -14,7 +14,7 @@ import java.sql.SQLException;
 /**
  * Dialect Factory Bean.
  * 
- * @author Jarvis Song
+ * @author Wujun
  */
 @Slf4j
 public class DialectFactoryBean implements FactoryBean<Dialect>, InitializingBean {

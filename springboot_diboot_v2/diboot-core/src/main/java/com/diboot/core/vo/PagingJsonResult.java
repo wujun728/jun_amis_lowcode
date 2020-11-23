@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * JSON返回结果
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/01/01
  */

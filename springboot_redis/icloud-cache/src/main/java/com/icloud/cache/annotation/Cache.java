@@ -16,7 +16,7 @@ import com.icloud.cache.parser.impl.DefaultResultParser;
  * <p/>
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月4日
  * @since 1.7
@@ -30,7 +30,7 @@ public @interface Cache {
      * 缓存key menu_{0.id}{1}_type
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public String key() default "";
@@ -39,7 +39,7 @@ public @interface Cache {
      * 作用域
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public CacheScope scope() default CacheScope.application;
@@ -48,7 +48,7 @@ public @interface Cache {
      * 过期时间
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public int expire() default 720;
@@ -57,7 +57,7 @@ public @interface Cache {
      * 描述
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月3日
      */
     public String desc() default "";
@@ -66,7 +66,7 @@ public @interface Cache {
      * 返回类型
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月4日
      */
     public Class[] result() default Object.class;

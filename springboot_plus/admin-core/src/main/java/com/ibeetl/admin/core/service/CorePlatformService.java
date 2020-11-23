@@ -39,7 +39,7 @@ import com.ibeetl.admin.core.util.enums.DelFlagEnum;
 
 /**
  * 系统平台功能访问入口，所有方法应该支持缓存或者快速访问
- * @author xiandafu
+ * @author Wujun
  */
 @Service
 public class CorePlatformService {

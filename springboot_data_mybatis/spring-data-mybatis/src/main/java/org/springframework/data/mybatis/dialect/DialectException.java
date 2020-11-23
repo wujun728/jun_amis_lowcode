@@ -3,7 +3,7 @@ package org.springframework.data.mybatis.dialect;
 import org.springframework.dao.UncategorizedDataAccessException;
 
 /**
- * @author Jarvis Song
+ * @author Wujun
  */
 public class DialectException extends UncategorizedDataAccessException {
 	/**

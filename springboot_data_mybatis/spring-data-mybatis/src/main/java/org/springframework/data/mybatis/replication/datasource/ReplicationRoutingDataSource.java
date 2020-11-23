@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * replication routing datasource.
  *
- * @author JARVIS SONG
+ * @author Wujun
  */
 @Slf4j
 public class ReplicationRoutingDataSource extends AbstractRoutingDataSource {

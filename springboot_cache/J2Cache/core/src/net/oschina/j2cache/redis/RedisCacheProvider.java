@@ -29,8 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Redis 缓存管理，实现对多种 Redis 运行模式的支持和自动适配，实现连接池管理等
  *
- * @author Winter Lau (javayou@gmail.com)
- * @author wendal
+ * @author Wujun
+ * @author Wujun
  */
 public class RedisCacheProvider implements CacheProvider {
 

@@ -25,7 +25,7 @@ import java.util.List;
  * 多媒体信息关联 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 @Component

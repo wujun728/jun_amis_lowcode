@@ -30,7 +30,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 字符串处理及转换工具类
  * 
- * @author Guoqing
+ * @author Wujun
  */
 public class StringUtil {
 	private static Pattern mobliePattern = Pattern
@@ -405,7 +405,7 @@ public class StringUtil {
 	/**
 	 * 判断是否是空字符串 null和"" 都返回 true
 	 * 
-	 * @author Robin Chang
+	 * @author Wujun
 	 * @param s
 	 * @return
 	 */
@@ -427,7 +427,7 @@ public class StringUtil {
 	 * @param src
 	 *            输入字符串
 	 * @return 分隔后的list
-	 * @author Robin
+	 * @author Wujun
 	 */
 	public static List<String> splitToList(String split, String src) {
 		// 默认,
@@ -718,7 +718,7 @@ public class StringUtil {
 	 * 过滤用户输入的URL地址（防治用户广告） 目前只针对以http或www开头的URL地址
 	 * 本方法调用的正则表达式，不建议用在对性能严格的地方例如:循环及list页面等
 	 * 
-	 * @author fengliang
+	 * @author Wujun
 	 * @param str
 	 *            需要处理的字符串
 	 * @return 返回处理后的字符串
@@ -733,7 +733,7 @@ public class StringUtil {
 	/**
 	 * 随即生成指定位数的含数字验证码字符串
 	 * 
-	 * @author Peltason
+	 * @author Wujun
 	 * @date 2007-5-9
 	 * @param bit
 	 *            指定生成验证码位数
@@ -750,7 +750,7 @@ public class StringUtil {
 	/**
 	 * 随即生成指定位数的含验证码字符串
 	 * 
-	 * @author Peltason
+	 * @author Wujun
 	 * 
 	 * @date 2007-5-9
 	 * @param bit
@@ -778,7 +778,7 @@ public class StringUtil {
 	/**
 	 * Wap页面的非法字符检查
 	 * 
-	 * @author hugh115
+	 * @author Wujun
 	 * @date 2007-06-29
 	 * @param str
 	 * @return
@@ -822,7 +822,7 @@ public class StringUtil {
 	/**
 	 * 页面中去除字符串中的空格、回车、换行符、制表符
 	 * 
-	 * @author shazao
+	 * @author Wujun
 	 * @date 2007-08-17
 	 * @param str
 	 * @return
@@ -839,7 +839,7 @@ public class StringUtil {
 	/**
 	 * 全角生成半角
 	 * 
-	 * @author bailong
+	 * @author Wujun
 	 * @date 2007-08-29
 	 * @param str
 	 * @return
@@ -1270,7 +1270,7 @@ public class StringUtil {
 	/**
 	 * *************************************************************************
 	 * 
-	 * @author 李锋 2007.4.18
+	 * @author Wujun
 	 * @param 传入
 	 *            &#31119;test&#29031;&#27004;&#65288;&#21271;&#22823;&#38376;&#
 	 *            24635 ;&#24215;&#65289;&#31119;
@@ -1301,7 +1301,7 @@ public class StringUtil {
 	/**
 	 * yahoo首页中切割字符串.
 	 * 
-	 * @author yxg
+	 * @author Wujun
 	 * @date 2007-09-17
 	 * @param str
 	 * @return
@@ -1321,7 +1321,7 @@ public class StringUtil {
 	 * new ArrayList<Integer>(); 调用方法：StringUtil.listTtoString(intList);
 	 * 效率：list中4条信息，1000000次调用时间为850ms左右
 	 * 
-	 * @author fengliang
+	 * @author Wujun
 	 * @serialData 2008-01-09
 	 * @param <T>
 	 *            泛型
@@ -1348,7 +1348,7 @@ public class StringUtil {
 	/**
 	 * 把整形数组转换成以“,”相隔的字符串
 	 * 
-	 * @author fengliang
+	 * @author Wujun
 	 * @serialData 2008-01-08
 	 * @param a
 	 *            数组a
@@ -1372,7 +1372,7 @@ public class StringUtil {
 	/**
 	 * 判断文字内容重复
 	 * 
-	 * @author 沙枣
+	 * @author Wujun
 	 * @Date 2008-04-17
 	 */
 	public static boolean isContentRepeat(String content) {
@@ -1462,7 +1462,7 @@ public class StringUtil {
 	/**
 	 * 全角字符变半角字符
 	 * 
-	 * @author shazao
+	 * @author Wujun
 	 * @date 2008-04-03
 	 * @param str
 	 * @return
@@ -1488,7 +1488,7 @@ public class StringUtil {
 	/**
 	 * 全角括号转为半角
 	 * 
-	 * @author shazao
+	 * @author Wujun
 	 * @date 2007-11-29
 	 * @param str
 	 * @return
@@ -1514,7 +1514,7 @@ public class StringUtil {
 	 *            重复参数名的参数值之间的连接符，连接后的字符串作为该参数的参数值，可为null
 	 *            null：不允许重复参数名出现，则靠后的参数值会覆盖掉靠前的参数值。
 	 * @return map
-	 * @author sky
+	 * @author Wujun
 	 */
 	@SuppressWarnings("unchecked")
 	public static Map<String, String> parseQuery(String query, char split1,

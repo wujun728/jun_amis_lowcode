@@ -26,7 +26,7 @@ import java.util.List;
 import static com.demo.weixin.constants.WeixinUrlConstants.*;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 企业微信客户端
  * @date 2017/7/28
  * @since 1.0

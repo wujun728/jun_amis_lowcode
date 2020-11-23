@@ -2,7 +2,7 @@ package com.lance.quartz.common.exception;
 
 /**
  * 自定义针对service异常
- * @author lance
+ * @author Wujun
  * 2015年5月27日 下午5:09:01
  */
 public class ServiceException extends RuntimeException {

@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.api.annotation;
 /**
  * Configure parameters by annotation
  *
- * @author <a href="mailto:scienjus@gmail.com">ScienJus</a>
+ * @author Wujun
  */
 public @interface SofaParameter {
 

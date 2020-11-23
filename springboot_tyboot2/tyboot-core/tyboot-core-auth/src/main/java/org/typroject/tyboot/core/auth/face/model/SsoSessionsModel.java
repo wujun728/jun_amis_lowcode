@@ -11,7 +11,7 @@ import java.util.Date;
  * 登录SESSION
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @EqualsAndHashCode(callSuper = true)

@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 
 /** 
  * @Description xss参数防注入
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 24, 2017 7:42:45 PM  
  */
 @WebFilter(urlPatterns = "/*", filterName = "XSSCheck", initParams = { @WebInitParam(name = "securityconfig", value = "/*") })

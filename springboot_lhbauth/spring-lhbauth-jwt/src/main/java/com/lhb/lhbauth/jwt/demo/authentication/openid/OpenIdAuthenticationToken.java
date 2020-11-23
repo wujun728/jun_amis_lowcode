@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import java.util.Collection;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/8 0008 14:40
  */

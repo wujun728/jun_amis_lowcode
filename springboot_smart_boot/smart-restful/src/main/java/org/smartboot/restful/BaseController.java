@@ -23,7 +23,7 @@ import com.alibaba.fastjson.JSONArray;
 /**
  * smartboot Controller抽象类
  * 
- * @author Seer
+ * @author Wujun
  * @version BaseController.java, v 0.1 2015年11月5日 上午11:47:40 Seer Exp.
  */
 public abstract class BaseController {

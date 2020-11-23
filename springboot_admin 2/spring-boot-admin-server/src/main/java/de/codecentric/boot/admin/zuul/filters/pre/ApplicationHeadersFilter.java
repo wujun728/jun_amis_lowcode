@@ -32,7 +32,7 @@ import de.codecentric.boot.admin.zuul.ApplicationRouteLocator.ApplicationRoute;
  * This filter adds headers to the zuulRequest specific for the application using a
  * {@link HttpHeadersProvider}.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class ApplicationHeadersFilter extends ZuulFilter {
 

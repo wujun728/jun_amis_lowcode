@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  *  使用@Value注解注入,1.测试器对hibernate validator是否支持；2.对SpEL是否支持；3.对复杂封装类型是否支持
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/01
  */
 @Component

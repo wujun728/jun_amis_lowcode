@@ -18,7 +18,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @Description 生成主键：在项目启动时，将库里的主键id全部查询出来，放到本地内存中(集合)。 <br/>
  * 主键实例：2017 0001 0001 0000 001 <br/>
  * 1-4位：机器码(应用服务器) 5-8位：表代码code 9-19位：增长id
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 1:59:40 PM  
  */
 @Component

@@ -39,7 +39,7 @@ import java.util.Map;
 /**
  * 动态数据源AOP织入
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 public class DynamicDataSourceAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {

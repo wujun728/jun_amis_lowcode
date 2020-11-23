@@ -38,7 +38,7 @@ import com.alipay.sofa.runtime.api.client.ClientFactory;
  * }
  * </pre>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ClientFactoryAware {
 

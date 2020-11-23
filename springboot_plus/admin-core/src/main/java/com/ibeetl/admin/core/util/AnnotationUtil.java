@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * 描述: 获取注解的值
  *
- * @author : xiandafu
+ * @author Wujun
  */
 public class AnnotationUtil {
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 价格相关处理顶级接口
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface ProductPrice {

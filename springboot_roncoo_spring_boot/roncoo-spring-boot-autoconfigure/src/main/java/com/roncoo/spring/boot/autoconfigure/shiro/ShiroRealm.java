@@ -13,7 +13,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 /**
  * 需要重新定义这个bean
  * 
- * @author wujing
+ * @author Wujun
  */
 public class ShiroRealm extends AuthorizingRealm {
 

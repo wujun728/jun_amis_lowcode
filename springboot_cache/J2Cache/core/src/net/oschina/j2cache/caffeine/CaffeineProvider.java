@@ -32,7 +32,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Caffeine cache provider
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class CaffeineProvider implements CacheProvider {
 

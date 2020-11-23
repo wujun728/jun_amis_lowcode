@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * 基础CRUD的父类Mapper
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2018/12/22
  */

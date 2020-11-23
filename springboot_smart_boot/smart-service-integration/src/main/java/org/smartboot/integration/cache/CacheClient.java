@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 缓存服务客户端接口
  * 
- * @author Seer
+ * @author Wujun
  * @version v0.1 2015年11月06日 下午1:19 Seer Exp.
  */
 public interface CacheClient {

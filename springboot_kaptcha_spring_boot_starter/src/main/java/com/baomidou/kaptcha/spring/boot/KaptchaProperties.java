@@ -22,7 +22,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 /**
  * 验证码组件参数
  *
- * @author TaoYu
+ * @author Wujun
  */
 @ConfigurationProperties(prefix = "kaptcha")
 @Data

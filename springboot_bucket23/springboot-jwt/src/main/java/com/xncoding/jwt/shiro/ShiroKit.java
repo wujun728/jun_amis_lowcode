@@ -25,7 +25,7 @@ import org.apache.shiro.subject.Subject;
 /**
  * shiro工具类
  *
- * @author dafei, Chill Zhuang
+ * @author Wujun
  */
 public class ShiroKit {
 

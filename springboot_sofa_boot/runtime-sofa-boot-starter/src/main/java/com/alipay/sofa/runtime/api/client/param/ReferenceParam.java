@@ -20,7 +20,7 @@ package com.alipay.sofa.runtime.api.client.param;
  * Parameter class used when using {@link com.alipay.sofa.runtime.api.client.ReferenceClient} to create a SOFA
  * reference.
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ReferenceParam<T> {
 

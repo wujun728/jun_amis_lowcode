@@ -7,7 +7,7 @@ import java.lang.reflect.Type;
  * <p/>
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月6日
  * @since 1.7

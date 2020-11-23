@@ -30,7 +30,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Notifier sending emails.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class MailNotifier extends AbstractStatusChangeNotifier {
 	private static final String DEFAULT_SUBJECT = "#{application.name} (#{application.id}) is #{to.status}";

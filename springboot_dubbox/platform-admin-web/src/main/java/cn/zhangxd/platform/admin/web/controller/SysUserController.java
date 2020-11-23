@@ -31,7 +31,7 @@ import javax.validation.Valid;
 /**
  * The type Sys user controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Validated
 @RestController

@@ -15,7 +15,7 @@ import java.net.HttpURLConnection;
 /**
  * 授权服务器工具类.
  *
- * @author <a href="https://echocow.cn">EchoCow</a>
+ * @author Wujun
  * @date 2020/1/6 下午8:44
  */
 @SuppressWarnings("all")

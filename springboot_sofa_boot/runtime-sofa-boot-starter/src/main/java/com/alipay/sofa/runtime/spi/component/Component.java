@@ -42,7 +42,7 @@ import com.alipay.sofa.runtime.api.ServiceRuntimeException;
  *                   [ACTIVATED]
  * </pre>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface Component {
     /**

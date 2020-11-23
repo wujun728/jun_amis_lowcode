@@ -19,7 +19,7 @@ import org.springside.modules.utils.base.MoreValidate;
  * 
  * 3. 随机字符串 (via Common Lang RandomStringUtils)
  * 
- * @author calvin
+ * @author Wujun
  */
 public class RandomUtil {
 

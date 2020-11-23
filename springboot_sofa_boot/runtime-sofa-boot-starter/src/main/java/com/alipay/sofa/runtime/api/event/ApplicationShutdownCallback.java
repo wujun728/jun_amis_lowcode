@@ -17,8 +17,8 @@
 package com.alipay.sofa.runtime.api.event;
 
 /**
- * @author qilong.zql
- * @author xuanbei
+ * @author Wujun
+ * @author Wujun
  * @since 2.5.0
  */
 public interface ApplicationShutdownCallback {

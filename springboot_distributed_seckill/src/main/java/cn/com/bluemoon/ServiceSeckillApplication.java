@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
 * <p>Title: ServiceSeckillApplication</p>  
 * <p>Description: seckill service服务启动类</p>  
-* @author Guoqing  
+* @author Wujun
 * @date 2018年7月2日
  */
 @Configuration

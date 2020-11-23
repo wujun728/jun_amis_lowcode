@@ -18,7 +18,7 @@ package com.baomidou.lock;
 /**
  * 分布式锁核心处理器
  *
- * @author zengzh TaoYu
+ * @author Wujun
  * @see RedisTemplateLockExecutor
  * @since 1.0.0
  */

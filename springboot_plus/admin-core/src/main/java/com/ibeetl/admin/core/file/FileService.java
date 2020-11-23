@@ -4,7 +4,7 @@ import java.io.OutputStream;
 import java.util.List;
 /**
  * 文件持久化，默认为文件系统，可以扩展到fastfds等
- * @author xiandafu
+ * @author Wujun
  *
  */
 public interface FileService {

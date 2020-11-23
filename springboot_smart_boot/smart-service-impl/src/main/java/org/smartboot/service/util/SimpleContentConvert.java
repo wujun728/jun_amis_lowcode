@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 /**
  * 简化版的内容转码器
  * 
- * @author seer
+ * @author Wujun
  * @version SimpleContentConvert.java, v 0.1 2017年1月4日 下午8:46:19 Seer Exp.
  */
 public class SimpleContentConvert implements Convert<JSONObject, String> {

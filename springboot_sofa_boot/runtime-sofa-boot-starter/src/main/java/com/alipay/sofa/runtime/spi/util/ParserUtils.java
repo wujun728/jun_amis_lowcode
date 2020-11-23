@@ -26,7 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 
 /**
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 public class ParserUtils {
@@ -66,7 +66,7 @@ public class ParserUtils {
 
     /**
      *
-     * @author xi.hux@alipay.com
+     * @author Wujun
      * @since 2.6.0
      */
     public interface AttributeCallback {

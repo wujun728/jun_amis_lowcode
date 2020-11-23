@@ -21,7 +21,7 @@ import org.junit.runner.Runner;
 import java.lang.annotation.*;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.0
  */
 @Retention(RetentionPolicy.RUNTIME)

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 汉字转拼音工具类
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class PinyinUtil {
 

@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  *
- * @author 程序猿DD
+ * @author Wujun
  * @version 1.0.0
  * @blog http://blog.didispace.com
  *

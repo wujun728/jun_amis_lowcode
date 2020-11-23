@@ -21,7 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * <p/>
  * Replace security.xml
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Configuration
 @EnableWebSecurity

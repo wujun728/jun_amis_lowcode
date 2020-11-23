@@ -6,7 +6,7 @@ import org.supercall.mybatis.IDialect;
 /**
  * Oracle 数据库分页语句组装实现
  *
- * @author ArchX[archx@foxmail.com]
+ * @author Wujun
  */
 public class OracleDialect implements IDialect {
 

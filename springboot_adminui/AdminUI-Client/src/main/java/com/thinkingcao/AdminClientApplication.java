@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * <pre>
- * @author cao_wencao
+ * @author Wujun
  * @date 2018年11月22日 上午10:44:36
  * </pre>
  */
@@ -14,7 +14,7 @@ public class AdminClientApplication {
 
 	/**
 	 * <pre>  
-	 * @author cao_wencao
+	 * @author Wujun
 	 * @param args
 	 * </pre>  
 	 */

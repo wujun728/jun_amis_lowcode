@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 2016/3/12
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class UserOverviewDto implements Serializable {
     private static final long serialVersionUID = 2023379587030489248L;

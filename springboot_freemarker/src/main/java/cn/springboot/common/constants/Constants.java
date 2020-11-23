@@ -2,7 +2,7 @@ package cn.springboot.common.constants;
 
 /** 
  * @Description 常量类
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:42:34 AM  
  */
 public class Constants {

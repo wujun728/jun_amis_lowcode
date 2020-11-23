@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.transaction.BeforeTransaction;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

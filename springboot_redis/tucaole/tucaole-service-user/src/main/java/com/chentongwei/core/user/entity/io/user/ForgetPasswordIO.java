@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-12-05 18:48:50
+ * @author Wujun
  * @Project tucaole
  * @Description: 忘记密码
  */

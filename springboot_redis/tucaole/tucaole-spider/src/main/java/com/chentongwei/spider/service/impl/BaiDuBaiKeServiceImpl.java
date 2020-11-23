@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-10-25 11:26:06
+ * @author Wujun
  * @Project tucaole
  * @Description: 百度百科实现
  */

@@ -39,8 +39,8 @@ import static com.alipay.sofa.infra.constants.SofaBootInfraConstants.SOFA_BOOT_V
  * {@link org.springframework.core.io.support.PropertiesLoaderSupport#loadProperties(java.util.Properties)}
 
  *
- * @author yangguanchao
- * @author qilong.zql
+ * @author Wujun
+ * @author Wujun
  * @since 2018/03/26
  */
 @Endpoint(id = "versions")

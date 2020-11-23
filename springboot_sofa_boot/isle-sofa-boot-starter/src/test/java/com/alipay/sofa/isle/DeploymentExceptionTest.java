@@ -37,7 +37,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
- * @author xuanbei 18/5/10
+ * @author Wujun
  */
 public class DeploymentExceptionTest {
     @Test(expected = DeploymentException.class)

@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 /**
  * 数据源配置
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017/5/20 21:58
  */
 @Configuration

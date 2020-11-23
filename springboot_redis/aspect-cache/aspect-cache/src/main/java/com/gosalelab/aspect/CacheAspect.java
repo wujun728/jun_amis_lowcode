@@ -24,7 +24,7 @@ import java.lang.reflect.Type;
 /**
  * use cache annotation
  *
- * @author silwind
+ * @author Wujun
  */
 @Component
 @Aspect

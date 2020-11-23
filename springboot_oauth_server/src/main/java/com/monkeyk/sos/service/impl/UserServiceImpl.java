@@ -26,7 +26,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {

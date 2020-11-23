@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * 数据库密码测试
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/8/27 16:15
  */
 public class PasswordTest extends SpringBootDemoEmailApplicationTests {

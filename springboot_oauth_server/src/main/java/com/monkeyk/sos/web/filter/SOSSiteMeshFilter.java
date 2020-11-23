@@ -10,7 +10,7 @@ import org.sitemesh.config.ConfigurableSiteMeshFilter;
  * <p>
  * Sitemesh
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class SOSSiteMeshFilter extends ConfigurableSiteMeshFilter {
 

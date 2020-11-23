@@ -5,7 +5,7 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * 用来标准一个查询类
- * @author lijiazhi
+ * @author Wujun
  *
  */
 @Retention(RetentionPolicy.RUNTIME)

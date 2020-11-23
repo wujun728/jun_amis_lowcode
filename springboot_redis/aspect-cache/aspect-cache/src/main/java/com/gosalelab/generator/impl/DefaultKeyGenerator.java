@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Component("defaultKeyGenerator")
 public class DefaultKeyGenerator implements KeyGenerator {

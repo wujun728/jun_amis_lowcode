@@ -1,7 +1,7 @@
 package com.chentongwei.common.enums.status;
 
 /**
- * @author TongWei.Chen 2017-09-28 13:29:53
+ * @author Wujun
  * @Project tucaole
  * @Description: 是否删除状态
  */

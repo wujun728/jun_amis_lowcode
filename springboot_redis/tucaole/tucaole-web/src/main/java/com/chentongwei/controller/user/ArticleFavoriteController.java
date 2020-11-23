@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 /**
- * @author TongWei.Chen 2017-12-17 14:42:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 收藏夹接口
  **/

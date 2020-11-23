@@ -10,7 +10,7 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 /**
  * WebSocketConfig
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/3/22
  */

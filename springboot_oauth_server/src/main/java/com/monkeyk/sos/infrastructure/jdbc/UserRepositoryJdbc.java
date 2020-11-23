@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 /**
  * 2015/11/16
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Repository("userRepositoryJdbc")
 public class UserRepositoryJdbc implements UserRepository {

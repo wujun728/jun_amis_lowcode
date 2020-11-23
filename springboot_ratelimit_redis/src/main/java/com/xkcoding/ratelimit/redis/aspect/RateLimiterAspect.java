@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
  * 限流切面
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/30 10:30
  */
 @Slf4j

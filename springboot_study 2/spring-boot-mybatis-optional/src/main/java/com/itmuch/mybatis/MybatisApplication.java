@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import java.util.stream.Stream;
 
 /**
- * @author itmuch.com
+ * @author Wujun
  */
 @SpringBootApplication
 @MapperScan("com.itmuch.mybatis.mapper")

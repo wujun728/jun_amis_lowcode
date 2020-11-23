@@ -5,7 +5,7 @@ import com.icloud.cache.entity.CacheBean;
  * 缓存API
  * 解决问题：
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @version 1.0
  * @date 2018年5月4日
  * @since 1.7
@@ -17,7 +17,7 @@ public interface CacheAPI {
      *
      * @param key
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public String get(String key);
@@ -28,7 +28,7 @@ public interface CacheAPI {
      * @param key
      * @param value
      * @param expireMin
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public void set(String key, Object value, int expireMin);
@@ -40,7 +40,7 @@ public interface CacheAPI {
      * @param value
      * @param expireMin
      * @param desc
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public void set(String key, Object value, int expireMin, String desc);
@@ -50,7 +50,7 @@ public interface CacheAPI {
      *
      * @param key
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public Long remove(String key);
@@ -60,7 +60,7 @@ public interface CacheAPI {
      *
      * @param keys
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public Long remove(String... keys);
@@ -70,7 +70,7 @@ public interface CacheAPI {
      *
      * @param pre
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public Long removeByPre(String pre);
@@ -80,7 +80,7 @@ public interface CacheAPI {
      *
      * @param pre
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public List<CacheBean> getCacheBeanByPre(String pre);
@@ -89,7 +89,7 @@ public interface CacheAPI {
      * 获取所有缓存对象信息
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public List<CacheBean> listAll();
@@ -98,7 +98,7 @@ public interface CacheAPI {
      * 是否启用缓存
      *
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public boolean isEnabled();
@@ -108,7 +108,7 @@ public interface CacheAPI {
      *
      * @param key
      * @return
-     * @author Li.shangzhi
+     * @author Wujun
      * @date 2018年5月12日
      */
     public String addSys(String key);

@@ -17,7 +17,7 @@
 package com.alipay.sofa.isle.scan;
 
 /**
- * @author xuanbei
+ * @author Wujun
  * @since 2.4.4
  */
 public interface SampleService {

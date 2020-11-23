@@ -22,7 +22,7 @@ import org.junit.Test;
 import java.util.HashMap;
 
 /**
- * @author xuanbei 18/5/15
+ * @author Wujun
  */
 public class BindingTypeTest {
     @Test

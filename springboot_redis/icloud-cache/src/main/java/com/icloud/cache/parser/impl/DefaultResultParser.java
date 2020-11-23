@@ -10,7 +10,7 @@ import com.icloud.cache.parser.ICacheResultParser;
 /**
  * 默认缓存结果解析类
  *
- * @author Li.shangzhi
+ * @author Wujun
  * @description
  * @date 2018年5月18日
  * @since 1.7

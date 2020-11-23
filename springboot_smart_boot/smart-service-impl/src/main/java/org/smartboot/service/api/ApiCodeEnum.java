@@ -3,7 +3,7 @@ package org.smartboot.service.api;
 /**
  * 调用api的返回码
  * 
- * @author Seer
+ * @author Wujun
  * @version ApiCodeEnum.java, v 0.1 2016年2月10日 下午3:03:30 Seer Exp. 
  */
 public enum ApiCodeEnum {

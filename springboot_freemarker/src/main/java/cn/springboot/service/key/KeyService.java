@@ -6,7 +6,7 @@ import cn.springboot.config.db.table.Key;
 
 /** 
  * @Description 主键生成
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 1:45:27 PM  
  */
 public interface KeyService {

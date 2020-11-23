@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 /**
  * JVM Service and Reference Binding
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @version $Id: JVMBinding.java,v 0.1 2009-9-8 22:03:49 xi.hux Exp $
  */
 public class JvmBinding extends AbstractBinding {

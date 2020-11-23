@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * The type My authentication entry point.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class MyAuthenticationEntryPoint implements AuthenticationEntryPoint {
 

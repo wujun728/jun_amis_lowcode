@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Description: 主要是 替换 ConsulClient 为 JbootConsulClient
  * @Package io.jboot.core.rpc.motan.registry

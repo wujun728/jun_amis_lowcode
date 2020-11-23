@@ -18,7 +18,7 @@ package cn.kiwipeach.demo.service;
 /**
  * logback服务类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  * @create 2018/07/05
  */
 public interface LogbackService {

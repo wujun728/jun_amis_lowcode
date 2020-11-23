@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * 捕获系统异常
- * @author zengjintao
+ * @author Wujun
  * @version 1.0
  * @create_at 2018/11/2513:28
  */

@@ -5,7 +5,7 @@ import diboot.core.test.binder.entity.User;
 
 /**
  * 员工Mapper
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version 2018/12/22
  * Copyright © www.dibo.ltd
  */

@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
  * Represents a certain status a certain time.
  *
- * @author Johannes Stelzer
+ * @author Wujun
  */
 public class StatusInfo implements Serializable {
 	private static final long serialVersionUID = 2L;

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * Mysql属性配置文件
- * @author Administrator
+ * @author Wujun
  *
  */
 @Component

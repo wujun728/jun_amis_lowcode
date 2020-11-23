@@ -21,7 +21,7 @@ import com.alipay.sofa.common.xmap.spring.XNodeSpring;
 import com.alipay.sofa.runtime.integration.extension.bean.SimpleSpringBean;
 
 /**
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 @XObject("simpleSpring")

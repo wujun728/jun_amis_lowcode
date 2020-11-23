@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * Redis配置
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Configuration
 public class RedisConfig {

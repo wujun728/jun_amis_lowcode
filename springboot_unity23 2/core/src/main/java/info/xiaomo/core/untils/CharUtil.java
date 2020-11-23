@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * <p>Title:字符编码工具类 </p>
  *
- * @author : xiaomo
+ * @author Wujun
  * @version 1.0
  */
 public class CharUtil {

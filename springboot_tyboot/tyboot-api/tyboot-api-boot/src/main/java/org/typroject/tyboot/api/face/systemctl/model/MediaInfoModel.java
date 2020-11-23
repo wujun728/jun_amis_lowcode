@@ -10,7 +10,7 @@ import org.typroject.tyboot.core.rdbms.model.BaseModel;
  * 多媒体信息关联 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-12-04
  */
 @EqualsAndHashCode(callSuper = true)

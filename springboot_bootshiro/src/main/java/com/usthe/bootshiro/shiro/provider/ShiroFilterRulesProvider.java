@@ -7,7 +7,7 @@ import com.usthe.bootshiro.shiro.rule.RolePermRule;
 import java.util.List;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description 动态过滤规则提供者接口
  * @Date 11:00 2018/3/1
  */

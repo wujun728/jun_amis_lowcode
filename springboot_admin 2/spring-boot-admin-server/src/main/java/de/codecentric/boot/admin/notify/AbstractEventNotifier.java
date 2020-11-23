@@ -23,7 +23,7 @@ import de.codecentric.boot.admin.event.ClientApplicationEvent;
 /**
  * Abstract Notifier which allows disabling and filtering of events.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public abstract class AbstractEventNotifier implements Notifier {
 

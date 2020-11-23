@@ -129,7 +129,7 @@ import java.util.concurrent.TimeUnit;
  * or internal resources have been exhausted.
  *
  * @since 1.7
- * @author Doug Lea
+ * @author Wujun
  */
 public class ForkJoinPool extends AbstractExecutorService {
 

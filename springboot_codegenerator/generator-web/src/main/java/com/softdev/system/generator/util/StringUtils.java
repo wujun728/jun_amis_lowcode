@@ -3,7 +3,7 @@ package com.softdev.system.generator.util;
 /**
  * string tool
  *
- * @author xuxueli 2018-05-02 20:43:25
+ * @author Wujun
  */
 public class StringUtils {
 

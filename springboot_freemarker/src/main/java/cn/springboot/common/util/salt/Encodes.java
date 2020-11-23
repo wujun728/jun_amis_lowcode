@@ -15,7 +15,7 @@ import org.apache.tomcat.util.codec.binary.Base64;
  * 2.自制的base62 编码 <br>
  * 3.Commons-Lang的xml/html escape <br>
  * 4.JDK提供的URLEncoder
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:37:43 AM  
  */
 public class Encodes {

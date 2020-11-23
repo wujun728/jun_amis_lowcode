@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * 这里相当于把Commonservice接口发布在了路径/services/CommonService下
  * wsdl文档路径为http://localhost:8080/services/CommonService?wsdl
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/6/15
  */

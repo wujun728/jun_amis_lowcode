@@ -20,7 +20,7 @@ import io.jboot.Jboot;
 import io.jboot.component.redis.JbootRedis;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Title: 分布式任务
  * @Description: 在分布式应用中，处理分布式应用，基于redis。

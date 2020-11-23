@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * Token 帮助类
  *
- * @author : xiaomo
+ * @author Wujun
  */
 public class TokenUtil {
 

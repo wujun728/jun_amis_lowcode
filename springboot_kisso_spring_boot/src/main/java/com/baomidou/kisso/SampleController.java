@@ -15,7 +15,7 @@ import com.baomidou.kisso.security.token.SSOToken;
  * KISSO 演示
  * </p>
  *
- * @author 青苗
+ * @author Wujun
  * @since 2017-08-08
  */
 @Controller

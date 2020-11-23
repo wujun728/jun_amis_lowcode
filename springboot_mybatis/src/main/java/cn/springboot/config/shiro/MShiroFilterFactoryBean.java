@@ -19,7 +19,7 @@ import java.util.Set;
 
 /** 
  * @Description 继承 ShiroFilterFactoryBean 处理拦截资源文件问题
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 10:32:28 AM  
  */
 public class MShiroFilterFactoryBean extends ShiroFilterFactoryBean {

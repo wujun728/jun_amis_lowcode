@@ -3,7 +3,7 @@ package com.chentongwei.cache.redis;
 import java.util.Set;
 
 /**
- * @author TongWei.Chen 2017-5-30 10:33:51
+ * @author Wujun
  * @Project tucaole
  * @Description: Redis的zset类型接口
  */

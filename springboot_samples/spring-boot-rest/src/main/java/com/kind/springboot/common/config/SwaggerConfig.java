@@ -14,7 +14,7 @@ import java.sql.Timestamp;
  * Function:swagger-ui的配置. <br/>
  * Date: 2016年8月11日 下午1:11:38 <br/>
  *
- * @author weiguo21
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

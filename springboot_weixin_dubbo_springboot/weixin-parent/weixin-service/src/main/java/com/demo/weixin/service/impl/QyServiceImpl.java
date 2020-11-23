@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 企业号服务实现
  * @date 2017/7/25
  * @since 1.0

@@ -21,7 +21,7 @@ package com.alipay.sofa.isle.deployment;
  *
  * This class is thread safe.
  *
- * @author linfengqi  2011-3-26
+ * @author Wujun
  */
 public class DeploymentException extends Exception {
     private static final long serialVersionUID = -6809659761040724153L;

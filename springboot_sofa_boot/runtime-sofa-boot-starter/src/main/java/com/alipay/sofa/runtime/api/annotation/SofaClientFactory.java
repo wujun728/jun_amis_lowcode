@@ -55,7 +55,7 @@ import java.lang.annotation.Target;
  *
  * </p>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

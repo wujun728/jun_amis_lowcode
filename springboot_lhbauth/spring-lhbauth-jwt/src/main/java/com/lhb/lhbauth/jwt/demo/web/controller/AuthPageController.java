@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 处理登录和授权的控制器
  * @date 2018/12/26 0026 17:31
  */

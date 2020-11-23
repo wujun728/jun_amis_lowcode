@@ -22,7 +22,7 @@ import java.util.Map;
 
 /**
  * 空的缓存Provider
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class NullCache implements Level1Cache, Level2Cache {
 

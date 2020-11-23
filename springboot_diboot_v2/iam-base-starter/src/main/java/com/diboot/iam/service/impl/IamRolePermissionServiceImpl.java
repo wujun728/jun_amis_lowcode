@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
 * 角色权限关联相关Service实现
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-03
 */

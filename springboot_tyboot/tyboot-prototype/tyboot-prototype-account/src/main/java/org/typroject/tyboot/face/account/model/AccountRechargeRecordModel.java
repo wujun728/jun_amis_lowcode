@@ -12,7 +12,7 @@ import java.util.Date;
  * 充值记录表，只记录交易成功的充值信息 model
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 @Data

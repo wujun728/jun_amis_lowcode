@@ -19,7 +19,7 @@ package io.jboot.core.rpc.zbus;
 import io.zbus.rpc.bootstrap.mq.ServiceBootstrap;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.core.rpc.zbus
  */

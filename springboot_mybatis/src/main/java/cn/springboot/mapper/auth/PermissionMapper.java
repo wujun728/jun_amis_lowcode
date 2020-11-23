@@ -9,7 +9,7 @@ import cn.springboot.model.auth.Permission;
 
 /** 
  * @Description 菜单Mapper
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:12:27 AM  
  */
 @Mapper

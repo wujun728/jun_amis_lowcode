@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * The type Dashboard controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @Validated
 @RestController

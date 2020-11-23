@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * 多数据源的配置
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017/6/23 23:05
  */
 @Component

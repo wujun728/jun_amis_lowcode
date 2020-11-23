@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
- * @author TongWei.Chen 2017-7-17 16:54:05
+ * @author Wujun
  * @Project tucaole
  * @Description: ES的基本属性配置
  */

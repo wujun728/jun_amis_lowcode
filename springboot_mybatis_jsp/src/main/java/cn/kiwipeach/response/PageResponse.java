@@ -6,7 +6,7 @@ import java.util.List;
  * Create Date: 2017/11/06
  * Description: 分页信息返回实体类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class PageResponse<T> {
     /***

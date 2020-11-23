@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * 读锁操作服务
- * @author TanRq
+ * @author Wujun
  *
  */
 public class ReadLockServiceImpl implements LockService {

@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TongWei.Chen 2017-12-22 09:58:37
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章评论Biz
  */

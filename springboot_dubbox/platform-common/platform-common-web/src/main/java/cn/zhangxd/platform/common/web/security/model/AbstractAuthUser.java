@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 /**
  * Security User
  *
- * @author zhangxd
+ * @author Wujun
  */
 public abstract class AbstractAuthUser implements UserDetails {
 

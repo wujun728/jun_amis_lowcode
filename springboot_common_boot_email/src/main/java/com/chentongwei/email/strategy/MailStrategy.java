@@ -5,7 +5,7 @@ import com.chentongwei.email.entity.Mail;
 /**
  * @Description: 发送邮件策略接口
  *
- * @author TongWei.Chen 2018-06-15 16:45:56
+ * @author Wujun
  * @Project common-boot-email
  */
 public interface MailStrategy {

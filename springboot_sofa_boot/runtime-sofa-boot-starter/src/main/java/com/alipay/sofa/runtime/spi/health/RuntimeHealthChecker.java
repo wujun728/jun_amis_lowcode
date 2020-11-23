@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.spi.health;
 /**
  * Check whether runtime is healthy.
  *
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 public interface RuntimeHealthChecker {

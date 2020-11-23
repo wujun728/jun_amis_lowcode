@@ -13,7 +13,7 @@ import static org.junit.Assert.assertNull;
 /**
  * 2019/7/6
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class PasswordInlineAccessTokenInvokerTest extends AbstractInlineAccessTokenInvokerTest {
 

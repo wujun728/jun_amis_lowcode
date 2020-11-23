@@ -32,7 +32,7 @@ import static org.junit.Assert.assertFalse;
 /**
  * SOFABootEnvUtils Tester.
  *
- * @author <guanchao.ygc>
+ * @author Wujun
  * @version 1.0
  * @since <pre>2.5.0</pre>
  */

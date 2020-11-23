@@ -10,7 +10,7 @@ import com.lance.entity.UserEntity;
 
 /**
  * 管理当前当前登录对象
- * @author lance
+ * @author Wujun
  * 2014-06-14
  */
 public class CurrentUserUtils {

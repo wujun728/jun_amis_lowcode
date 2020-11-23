@@ -38,7 +38,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * <p>
  * <p>
  * <p/>
- * @author guanchaoyang
+ * @author Wujun
  * @since 2.3.0
  */
 @RunWith(SpringRunner.class)

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @author zhaodui
+ * @author Wujun
  */
 @Slf4j
 @RestController

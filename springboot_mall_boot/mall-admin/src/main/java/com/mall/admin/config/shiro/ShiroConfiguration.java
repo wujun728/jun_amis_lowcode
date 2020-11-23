@@ -18,7 +18,7 @@ import javax.servlet.Filter;
 
 /**
  * shiro配置
- * @author taoge
+ * @author Wujun
  * @version 1.0
  * @create_at 2018年11月3日下午9:07:49
  */@Configuration

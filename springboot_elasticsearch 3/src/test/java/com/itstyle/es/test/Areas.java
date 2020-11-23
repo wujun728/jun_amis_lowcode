@@ -112,7 +112,7 @@ public class Areas {
 	}
 	/**
 	 * 返回List
-	 * @Author  小柒2012
+	 * @author Wujun
 	 * @return  List<Area>
 	 */
 	public List<Area> readSceneList(){

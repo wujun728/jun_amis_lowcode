@@ -9,7 +9,7 @@ import cn.springboot.model.auth.Role;
 
 /** 
  * @Description 角色Mapper
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:12:42 AM  
  */
 @Mapper

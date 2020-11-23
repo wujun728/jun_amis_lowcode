@@ -3,7 +3,7 @@ package com.zh.springbootthymeleaf.model;
 import lombok.Data;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/5/29
  */
 @Data

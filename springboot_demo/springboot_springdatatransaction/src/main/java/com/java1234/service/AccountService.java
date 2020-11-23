@@ -2,7 +2,7 @@ package com.java1234.service;
 
 /**
  * 账户Service接口
- * @author Administrator
+ * @author Wujun
  *
  */
 public interface AccountService {

@@ -7,7 +7,7 @@ import org.springframework.social.connect.ConnectionValues;
 import org.springframework.social.connect.UserProfile;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/3 0003 10:21
  */

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Objects;
 
 /**
- * @author TongWei.Chen 2017-9-17 16:58:13
+ * @author Wujun
  * @Project tucaole
  * @Description: AOP拦截Service层，记录慢日志。
  */

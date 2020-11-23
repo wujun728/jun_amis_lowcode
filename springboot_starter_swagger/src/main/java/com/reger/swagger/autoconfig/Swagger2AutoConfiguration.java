@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author lei
+ * @author Wujun
  * @version 1.0.0
  */
 

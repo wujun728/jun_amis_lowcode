@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author blueriver
+ * @author Wujun
  * @description 创建菜单
  * @date 2017/7/31
  * @since 1.0

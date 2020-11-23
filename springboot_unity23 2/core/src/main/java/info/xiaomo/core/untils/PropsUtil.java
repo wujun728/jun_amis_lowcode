@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 public class PropsUtil {
 

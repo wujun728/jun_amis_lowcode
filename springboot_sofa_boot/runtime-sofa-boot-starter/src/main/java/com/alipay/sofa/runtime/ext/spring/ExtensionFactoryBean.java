@@ -28,9 +28,9 @@ import org.w3c.dom.Element;
 
 /**
  *
- * @author xi.hux@alipay.com
- * @author yangyanzhao@alipay.com
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class ExtensionFactoryBean extends AbstractExtFactoryBean {

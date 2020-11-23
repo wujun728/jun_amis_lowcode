@@ -3,7 +3,7 @@ package org.springframework.data.mybatis.replication.exception;
 /**
  * replication exception.
  *
- * @author JARVIS SONG
+ * @author Wujun
  */
 public class ReplicationException extends RuntimeException {
 

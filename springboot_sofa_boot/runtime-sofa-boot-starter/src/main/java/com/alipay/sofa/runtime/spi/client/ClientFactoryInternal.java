@@ -21,7 +21,7 @@ import com.alipay.sofa.runtime.api.client.ClientFactory;
 /**
  * Internal Client Factory, you can register client implementation
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ClientFactoryInternal extends ClientFactory {
     /**

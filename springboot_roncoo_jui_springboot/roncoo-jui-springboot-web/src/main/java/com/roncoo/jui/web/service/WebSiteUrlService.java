@@ -18,7 +18,7 @@ import com.roncoo.jui.web.bean.vo.WebSiteUrlVO;
 /**
  * 网址汇总地址
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-11-22
  */
 @Component

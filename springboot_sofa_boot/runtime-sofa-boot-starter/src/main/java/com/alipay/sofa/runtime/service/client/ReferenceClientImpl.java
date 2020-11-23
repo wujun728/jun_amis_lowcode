@@ -41,7 +41,7 @@ import java.util.Collection;
 /**
  * Reference Client Implementation，you can reference a service by this class
  *
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ReferenceClientImpl implements ReferenceClient {
     private SofaRuntimeContext      sofaRuntimeContext;

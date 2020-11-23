@@ -19,7 +19,7 @@ import java.io.IOException;
 
 /**
  * J2Cache 的缓存入口
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class J2Cache {
 

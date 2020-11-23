@@ -15,7 +15,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 /**
  * 这里是批处理公共配置类
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/5
  */

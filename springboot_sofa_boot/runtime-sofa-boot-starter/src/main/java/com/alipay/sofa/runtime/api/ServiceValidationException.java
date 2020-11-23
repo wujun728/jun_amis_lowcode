@@ -19,7 +19,7 @@ package com.alipay.sofa.runtime.api;
 /**
  * service validation exception
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public class ServiceValidationException extends RuntimeException {
 

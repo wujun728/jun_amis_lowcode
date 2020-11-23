@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * https://gitee.com/baomidou/kisso
  * </p>
  *
- * @author 青苗
+ * @author Wujun
  * @since 2017-08-08
  */
 @SpringBootApplication

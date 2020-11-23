@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.Future;
 
 /**
- * @author : xiaomo
+ * @author Wujun
  */
 @Component
 public class AsyncTask {

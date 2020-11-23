@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * The type Authentication controller.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @RestController
 @RequestMapping("/auth")

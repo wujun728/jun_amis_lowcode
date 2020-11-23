@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 数据源配置缓存
  * </p>
  *
- * @author yangkai.shen
+ * @author Wujun
  * @date Created in 2019/9/4 17:13
  */
 public enum DatasourceConfigCache {

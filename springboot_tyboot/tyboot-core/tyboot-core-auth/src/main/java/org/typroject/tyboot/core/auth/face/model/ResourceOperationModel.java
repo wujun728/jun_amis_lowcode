@@ -9,7 +9,7 @@ import org.typroject.tyboot.core.rdbms.model.BaseModel;
  * 资源操作表
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-08-18
  */
 @EqualsAndHashCode(callSuper = true)

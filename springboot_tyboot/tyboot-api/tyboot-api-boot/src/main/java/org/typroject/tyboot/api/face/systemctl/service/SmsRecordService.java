@@ -31,7 +31,7 @@ import java.util.Map;
  * 验证码发送记录 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2017-09-09
  */
 @Component

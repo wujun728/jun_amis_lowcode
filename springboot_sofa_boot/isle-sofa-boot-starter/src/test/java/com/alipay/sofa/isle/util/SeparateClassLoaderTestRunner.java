@@ -26,8 +26,8 @@ import java.net.URLClassLoader;
 
 /**
  *
- * @author xuanbei
- * @author ruoshan
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class SeparateClassLoaderTestRunner extends SpringJUnit4ClassRunner {

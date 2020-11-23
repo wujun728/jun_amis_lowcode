@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.klock.handler.KlockTimeoutExceptio
 import org.springframework.boot.autoconfigure.klock.handler.release.ReleaseTimeoutHandler;
 
 /**
- * @author wanglaomo
+ * @author Wujun
  * @since 2019/4/15
  **/
 public enum ReleaseTimeoutStrategy implements ReleaseTimeoutHandler {

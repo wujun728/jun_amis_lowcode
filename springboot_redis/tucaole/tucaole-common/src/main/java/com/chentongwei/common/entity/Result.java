@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author TongWei.Chen 2017-9-17 16:58:55
+ * @author Wujun
  * @Project tucaole
  * @Description: 统一返回给客户端的结果对象
  */

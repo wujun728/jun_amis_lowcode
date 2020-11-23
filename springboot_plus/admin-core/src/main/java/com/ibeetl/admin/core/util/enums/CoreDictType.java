@@ -1,7 +1,7 @@
 package com.ibeetl.admin.core.util.enums;
 
 /**
- * @author : xiandafu
+ * @author Wujun
  */
 public class CoreDictType {
     

@@ -7,7 +7,7 @@ import cn.springboot.model.auth.RolePermission;
 
 /** 
  * @Description 角色与菜单关系Mapper
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:13:04 AM  
  */
 @Mapper

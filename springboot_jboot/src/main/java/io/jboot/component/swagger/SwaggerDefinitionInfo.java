@@ -20,7 +20,7 @@ import com.google.common.collect.Maps;
 import java.util.Map;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  * @Package io.jboot.component.swagger
  */

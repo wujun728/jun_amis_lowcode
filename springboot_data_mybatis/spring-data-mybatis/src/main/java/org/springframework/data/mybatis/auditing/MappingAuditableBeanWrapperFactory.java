@@ -45,8 +45,8 @@ import org.springframework.util.ConcurrentReferenceHashMap;
  * using mapping information obtained from a {@link MappingContext} to detect auditing
  * configuration and eventually invoking setting the auditing values.
  *
- * @author Oliver Gierke
- * @author Christoph Strobl
+ * @author Wujun
+ * @author Wujun
  * @since 1.8
  */
 public class MappingAuditableBeanWrapperFactory
@@ -103,7 +103,7 @@ public class MappingAuditableBeanWrapperFactory
 	/**
 	 * Captures {@link PersistentProperty} instances equipped with auditing annotations.
 	 *
-	 * @author Oliver Gierke
+	 * @author Wujun
 	 * @since 1.8
 	 */
 	static class MappingAuditingMetadata {
@@ -166,7 +166,7 @@ public class MappingAuditableBeanWrapperFactory
 	 * {@link AuditableBeanWrapper} using {@link MappingAuditingMetadata} and a
 	 * {@link PersistentPropertyAccessor} to set values on auditing properties.
 	 *
-	 * @author Oliver Gierke
+	 * @author Wujun
 	 * @since 1.8
 	 */
 	static class MappingMetadataAuditableBeanWrapper<T>

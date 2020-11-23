@@ -20,7 +20,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 /**
- * @author xuanbei
+ * @author Wujun
  * @since 2.4.4
  */
 public class SampleBeanPostProcessor implements BeanPostProcessor {

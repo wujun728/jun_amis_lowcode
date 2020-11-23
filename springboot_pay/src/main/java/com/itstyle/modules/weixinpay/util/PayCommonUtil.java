@@ -10,7 +10,7 @@ import java.util.SortedMap;
 public class PayCommonUtil {
 	/**
 	 * 是否签名正确,规则是:按参数名称a-z排序,遇到空值的参数不参加签名。 
-	 * @Author  科帮网
+	 * @author Wujun
 	 * @param characterEncoding
 	 * @param packageParams
 	 * @param API_KEY
@@ -41,7 +41,7 @@ public class PayCommonUtil {
     }  
     /**
      * sign签名
-     * @Author  科帮网
+     * @author Wujun
      * @param characterEncoding
      * @param packageParams
      * @param API_KEY
@@ -71,7 +71,7 @@ public class PayCommonUtil {
   
    /**
     * 将请求参数转换为xml格式的string
-    * @Author  科帮网
+    * @author Wujun
     * @param parameters
     * @return  String
     * @Date	2017年7月31日
@@ -101,7 +101,7 @@ public class PayCommonUtil {
   
    /**
     * 取出一个指定长度大小的随机正整数. 
-    * @Author  科帮网
+    * @author Wujun
     * @param length
     * @return  int
     * @Date	2017年7月31日

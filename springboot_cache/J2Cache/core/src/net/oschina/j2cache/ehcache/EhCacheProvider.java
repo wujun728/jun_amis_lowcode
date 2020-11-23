@@ -34,8 +34,8 @@ import net.sf.ehcache.CacheManager;
 /**
  * EhCache 2.x 缓存管理器的封装，用来管理多个缓存区域
  *
- * @author Winter Lau (javayou@gmail.com)
- * @author wendal
+ * @author Wujun
+ * @author Wujun
  */
 public class EhCacheProvider implements CacheProvider {
 

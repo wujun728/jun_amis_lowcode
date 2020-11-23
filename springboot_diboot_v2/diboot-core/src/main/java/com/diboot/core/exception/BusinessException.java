@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 通用的业务异常类 BusinessException
  * (json形式返回值同JsonResult，便于前端统一处理)
- * @author : wee
+ * @author Wujun
  * @version : v2.0
  * @Date 2019-07-11  11:10
  */

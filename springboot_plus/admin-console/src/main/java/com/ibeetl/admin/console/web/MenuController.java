@@ -29,7 +29,7 @@ import com.ibeetl.admin.core.util.ConvertUtil;
 import com.ibeetl.admin.core.web.JsonResult;
 
 /**
- * @author lijiazhi
+ * @author Wujun
  */
 @Controller
 public class MenuController {

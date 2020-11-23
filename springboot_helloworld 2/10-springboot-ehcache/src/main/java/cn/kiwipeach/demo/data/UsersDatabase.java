@@ -23,7 +23,7 @@ import java.util.Set;
 /**
  * 描述：模拟内存数据库
  *
- * @author kiwipeach
+ * @author Wujun
  * @create 2019-03-30
  */
 public class UsersDatabase {

@@ -20,7 +20,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 @SpringBootApplication

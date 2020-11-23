@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * 缺点是有误伤概率和不能删除元素
  * 为了降低误伤概率guava的bloomfilter可以通过降低误判概率来实现
  * 还可以配合白名单来避免误伤
- * @author zhanghang
+ * @author Wujun
  * @date 2019/7/1
  */
 @Slf4j

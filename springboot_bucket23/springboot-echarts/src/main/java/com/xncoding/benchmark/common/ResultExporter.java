@@ -15,7 +15,7 @@ import static com.xncoding.echarts.common.util.ExportPngUtil.postOption;
 /**
  * 将基准测试结果导出图片
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/2/24
  */

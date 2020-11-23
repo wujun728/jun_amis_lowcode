@@ -6,7 +6,7 @@ import java.util.Random;
 
 /**
  * 工具类
- * @author TanRq
+ * @author Wujun
  *
  */
 public class LockUtil {

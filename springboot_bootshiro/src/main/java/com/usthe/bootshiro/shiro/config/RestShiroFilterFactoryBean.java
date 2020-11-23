@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanInitializationException;
 
 /* *
- * @Author tomsun28
+ * @author Wujun
  * @Description rest支持的shiroFilterFactoryBean
  * @Date 21:35 2018/4/20
  */

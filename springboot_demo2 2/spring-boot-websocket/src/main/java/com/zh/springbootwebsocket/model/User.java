@@ -3,7 +3,7 @@ package com.zh.springbootwebsocket.model;
 import lombok.Data;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/21
  */
 @Data

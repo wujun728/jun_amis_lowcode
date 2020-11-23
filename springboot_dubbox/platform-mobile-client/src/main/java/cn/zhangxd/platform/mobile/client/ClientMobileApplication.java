@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * The type Client mobile application.
  *
- * @author zhangxd
+ * @author Wujun
  */
 @RestController
 @SpringBootApplication

@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class SOSUserDetails implements UserDetails {
 

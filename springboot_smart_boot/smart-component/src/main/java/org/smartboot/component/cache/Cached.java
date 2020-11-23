@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 /**
  * 缓存
- * @author Seer
+ * @author Wujun
  * @version v0.1 2015年11月06日 下午1:46 Seer Exp.
  */
 @Documented

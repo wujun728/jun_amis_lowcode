@@ -36,7 +36,7 @@ import com.alipay.sofa.runtime.spring.factory.ReferenceFactoryBean;
 import com.alipay.sofa.runtime.spring.factory.ServiceFactoryBean;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.3.1
  */
 public class IntegrationTest extends AbstractTestBase {

@@ -8,7 +8,7 @@ import org.typroject.tyboot.face.account.orm.entity.AccountSerial;
   * 虚拟账户金额变更记录表，所有针对账户金额的变动操作都要记录到此表中， Mapper 接口
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 public interface AccountSerialMapper extends BaseMapper<AccountSerial> {

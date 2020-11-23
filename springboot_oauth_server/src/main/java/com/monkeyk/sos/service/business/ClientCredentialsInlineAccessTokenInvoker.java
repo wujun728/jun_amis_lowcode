@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.provider.client.ClientCredentialsToke
  * <p>
  * grant_type = client_credentials
  *
- * @author Shengzhao Li
+ * @author Wujun
  * @since 2.0.1
  */
 public class ClientCredentialsInlineAccessTokenInvoker extends InlineAccessTokenInvoker {

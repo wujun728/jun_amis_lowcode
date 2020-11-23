@@ -13,7 +13,7 @@ import org.springframework.cache.Cache.ValueWrapper;
 /**
  * springCache对原生shiroCache的包装
  *
- * @author TaoYu
+ * @author Wujun
  */
 @SuppressWarnings("unchecked")
 public class SpringCache<K, V> implements Cache<K, V> {

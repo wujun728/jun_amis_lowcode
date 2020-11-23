@@ -21,7 +21,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public abstract class ServiceProxy implements MethodInterceptor {
     private ClassLoader serviceClassLoader;

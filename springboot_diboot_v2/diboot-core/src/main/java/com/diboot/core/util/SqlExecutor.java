@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * 原生SQL执行类
- * @author mazc@dibo.ltd
+ * @author Wujun
  * @version v2.0
  * @date 2019/1/31
  */

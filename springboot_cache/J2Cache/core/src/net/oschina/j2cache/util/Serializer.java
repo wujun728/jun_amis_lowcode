@@ -20,7 +20,7 @@ import java.io.IOException;
 /**
  * 对象序列化接口
  *
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public interface Serializer {
 

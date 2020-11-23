@@ -31,8 +31,8 @@ import java.util.List;
 
 /**
  *
- * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
- * @author xi.hux@alipay.com
+ * @author Wujun
+ * @author Wujun
  * @since 2.6.0
  */
 public class XAnnotatedList extends XAnnotatedMember {
@@ -169,7 +169,7 @@ public class XAnnotatedList extends XAnnotatedMember {
 /**
  * <code>Element</code><code>NodeVisitor</code>
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class ElementVisitor extends DOMHelper.NodeVisitor {
@@ -187,7 +187,7 @@ class ElementVisitor extends DOMHelper.NodeVisitor {
 /**
  * <code>ElementValue</code><code>NodeVisitor</code>
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class ElementValueVisitor extends DOMHelper.NodeVisitor {
@@ -209,7 +209,7 @@ class ElementValueVisitor extends DOMHelper.NodeVisitor {
 
 /**
  *
- * @author xi.hux@alipay.com
+ * @author Wujun
  * @since 2.6.0
  */
 class AttributeValueVisitor extends DOMHelper.NodeVisitor {

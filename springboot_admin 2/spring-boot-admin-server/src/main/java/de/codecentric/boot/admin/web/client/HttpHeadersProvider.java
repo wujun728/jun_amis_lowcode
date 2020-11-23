@@ -23,7 +23,7 @@ import de.codecentric.boot.admin.model.Application;
  * Is responsible to provide the {@link HttpHeaders} used to interact with the given
  * {@link Application}.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public interface HttpHeadersProvider {
 

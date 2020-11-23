@@ -10,7 +10,7 @@ import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.stereotype.Component;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 自定义注册处理
  * @date 2019/1/3 0003 11:24
  */

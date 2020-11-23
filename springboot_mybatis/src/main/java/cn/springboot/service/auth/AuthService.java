@@ -7,7 +7,7 @@ import java.util.List;
 
 /** 
  * @Description 组装权限接口
- * @author 王鑫 
+ * @author Wujun
  * @date Apr 12, 2017 9:14:26 AM  
  */
 public interface AuthService {

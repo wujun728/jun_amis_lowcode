@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * druid属性
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author Wujun
  * @version 1.0
  * @website https://www.zhyd.me
  * @date 2018/5/17 11:13

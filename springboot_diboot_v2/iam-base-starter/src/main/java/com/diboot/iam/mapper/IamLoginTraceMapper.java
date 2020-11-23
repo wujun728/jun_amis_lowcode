@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
 * 登录记录Mapper
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-17
 */

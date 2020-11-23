@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class User extends AbstractDomain {
 

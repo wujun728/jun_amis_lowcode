@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-18 17:34:58
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章点赞DAO
  */

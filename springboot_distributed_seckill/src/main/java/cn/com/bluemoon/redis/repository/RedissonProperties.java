@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * redisson配置类
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月23日 下午3:01:39
  *
  */
 /**
- * @author Guoqing.Lee
+ * @author Wujun
  * @date 2019年1月24日 上午11:33:48
  * 
  */

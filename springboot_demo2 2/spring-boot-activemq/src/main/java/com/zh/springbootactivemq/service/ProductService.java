@@ -5,7 +5,7 @@ import com.zh.springbootactivemq.model.User;
 import javax.jms.JMSException;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/6/11
  */
 public interface ProductService {

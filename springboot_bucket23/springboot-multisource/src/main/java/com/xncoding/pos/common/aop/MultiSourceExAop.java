@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 /**
  * 多数据源切换的aop
  *
- * @author xiongneng
+ * @author Wujun
  * @since 2017年3月5日 上午10:22:16
  */
 @Aspect

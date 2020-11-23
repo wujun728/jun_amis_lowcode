@@ -20,8 +20,8 @@ import de.codecentric.boot.admin.client.config.AdminClientProperties;
  * Default implementation for creating the {@link Application} instance which gets registered at the
  * admin server.
  *
- * @author Johannes Edmeier
- * @author Rene Felgenträger
+ * @author Wujun
+ * @author Wujun
  */
 public class DefaultApplicationFactory implements ApplicationFactory {
 

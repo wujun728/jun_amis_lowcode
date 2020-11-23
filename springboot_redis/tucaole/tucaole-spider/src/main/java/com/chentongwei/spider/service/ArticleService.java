@@ -5,7 +5,7 @@ import com.chentongwei.spider.entity.Article;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-10-25 10:51:27
+ * @author Wujun
  * @Project tucaole
  * @Description: csdn文章
  */

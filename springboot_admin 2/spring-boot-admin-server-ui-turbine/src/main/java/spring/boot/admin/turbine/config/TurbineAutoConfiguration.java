@@ -36,7 +36,7 @@ import spring.boot.admin.turbine.zuul.filters.TurbineRouteLocator;
 /**
  * Configures all necessary components for the Turbine view.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 @Configuration
 @EnableConfigurationProperties(TurbineProperties.class)

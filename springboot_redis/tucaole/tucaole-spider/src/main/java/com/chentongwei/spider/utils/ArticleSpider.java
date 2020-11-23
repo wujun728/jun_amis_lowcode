@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-09-27 18:44:15
+ * @author Wujun
  * @Project tucaole
  * @Description: 文章抓取工具类
  */

@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * AsyncExceptionHandler
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/1/25
  */

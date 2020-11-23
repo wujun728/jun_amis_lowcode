@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 常量列表
  *
- * @author XiongNeng
+ * @author Wujun
  * @version 1.0
  * @since 2018/01/07
  */

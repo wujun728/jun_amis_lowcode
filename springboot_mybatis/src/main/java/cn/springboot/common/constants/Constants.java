@@ -1,7 +1,7 @@
 package cn.springboot.common.constants;
 
 /**
- * @author Vincent.wang
+ * @author Wujun
  *
  */
 public class Constants {

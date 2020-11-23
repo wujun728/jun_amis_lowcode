@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 管理定时任务
- * @author Administrator
+ * @author Wujun
  */
 public class TaskInfo implements Serializable{
 	private static final long serialVersionUID = -8054692082716173379L;

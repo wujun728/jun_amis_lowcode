@@ -2,7 +2,7 @@ import io.jboot.Jboot;
 import org.junit.Test;
 
 /**
- * @author Michael Yang 杨福海 （fuhai999@gmail.com）
+ * @author Wujun
  * @version V1.0
  */
 public class CacheTest {

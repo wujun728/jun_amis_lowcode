@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.Date;
 
 /**
- * @author TongWei.Chen 2017-12-16 13:20:00
+ * @author Wujun
  * @Project tucaole
  * @Description: 文件（图片）上传Biz
  **/

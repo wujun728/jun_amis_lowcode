@@ -13,7 +13,7 @@ import lombok.Data;
  * <p>本类由Code-Builder自动生成</p>
  * <p>表名: kl_user_balance_info - 用户账户信息表 - 数据实体</p>
  *
- * @author Code-Builder
+ * @author Wujun
  * @since 恒宇少年
  * ===============================
  * Created with Code-Builder.

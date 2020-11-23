@@ -3,7 +3,7 @@ package cn.zhangxd.platform.mobile.client.constant;
 /**
  * 返回 code 常量
  *
- * @author zhangxd
+ * @author Wujun
  */
 public final class ReturnCode {
 

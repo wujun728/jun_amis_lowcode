@@ -33,7 +33,7 @@ public class JasonConfig {
 	}
 	/**
 	 * layui 前端要求后台返回的数据格式
-	 * @author xiandafu
+	 * @author Wujun
 	 *
 	 */
 	public static class CustomJsonResultSerializer extends JsonSerializer<JsonResult> {

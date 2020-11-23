@@ -9,7 +9,7 @@ import org.apache.commons.lang3.time.FastDateFormat;
  * 
  * From Log4j2 DatePatternConverter，进行了优化，根据输出格式是否毫秒级，决定缓存在秒级还是毫秒级.
  * 
- * @author calvin
+ * @author Wujun
  */
 public class CachingDateFormatter {
 	private FastDateFormat fastDateFormat;

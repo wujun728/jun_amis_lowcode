@@ -28,7 +28,7 @@ import org.mybatis.spring.SqlSessionTemplate;
  *
  * @param <T> Domain Class
  * @param <ID> Primary key type
- * @author JARVIS SONG
+ * @author Wujun
  */
 @Repository
 @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)

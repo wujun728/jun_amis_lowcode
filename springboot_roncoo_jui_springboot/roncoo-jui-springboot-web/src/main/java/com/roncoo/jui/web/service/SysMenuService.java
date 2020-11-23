@@ -22,7 +22,7 @@ import com.xiaoleilu.hutool.util.CollectionUtil;
 /**
  * 菜单信息
  *
- * @author wujing
+ * @author Wujun
  * @since 2017-10-25
  */
 @Component

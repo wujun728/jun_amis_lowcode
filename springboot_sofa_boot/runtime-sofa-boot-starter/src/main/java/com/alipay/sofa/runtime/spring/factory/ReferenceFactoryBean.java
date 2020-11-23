@@ -27,7 +27,7 @@ import com.alipay.sofa.runtime.spi.service.BindingConverterContext;
 import org.springframework.util.Assert;
 
 /**
- * @author xuanbei 18/3/1
+ * @author Wujun
  */
 public class ReferenceFactoryBean extends AbstractContractFactoryBean {
     protected Object  proxy;

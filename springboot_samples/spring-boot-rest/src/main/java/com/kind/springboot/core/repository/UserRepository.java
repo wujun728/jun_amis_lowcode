@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Function:用户数据访问. <br/>
  * Date:     2016年8月11日 下午12:51:16 <br/>
  *
- * @author weiguo.liu
+ * @author Wujun
  * @see
  * @since JDK 1.7
  */

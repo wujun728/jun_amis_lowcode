@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-12-12 19:02:20
+ * @author Wujun
  * @Project tucaole
  * @Description: 吐槽文章DAO
  */

@@ -25,7 +25,7 @@ import java.util.Collection;
 /**
  * Component Manager
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ComponentManager {
     /**

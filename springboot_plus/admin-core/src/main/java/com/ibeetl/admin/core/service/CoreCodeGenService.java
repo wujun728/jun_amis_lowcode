@@ -26,7 +26,7 @@ import com.ibeetl.admin.core.gen.model.Entity;
 /**
  * 代码生成，用于根据表或者视图生成entity，mapper，service，conroller
  * 未来可以生成swagger api，界面
- * @author xiandafu
+ * @author Wujun
  */
 @Service
 public class CoreCodeGenService {

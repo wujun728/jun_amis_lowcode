@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.Charset;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description 重写OAuth2Template
  * @date 2019/1/3 0003 10:13
  */

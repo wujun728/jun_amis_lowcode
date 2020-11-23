@@ -22,7 +22,7 @@ import com.alipay.sofa.runtime.spi.client.ClientFactoryInternal;
 import com.alipay.sofa.runtime.spi.health.RuntimeHealthChecker;
 
 /**
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface SofaRuntimeManager {
     /**

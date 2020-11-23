@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author TongWei.Chen 2017-12-03 15:18:00
+ * @author Wujun
  * @Project tucaole
  * @Description: QQ 互联
  **/

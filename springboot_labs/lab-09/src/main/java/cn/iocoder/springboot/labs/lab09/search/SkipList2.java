@@ -9,7 +9,7 @@ import java.util.Random;
  *
  * 目前，网络上找到的 Java 跳表实现，主要是 https://sylvanassun.github.io/2017/12/31/2017-12-31-skip_list/ 这种。实现方式略有差别。
  *
- * @author yunai
+ * @author Wujun
  */
 @SuppressWarnings("Duplicates")
 public class SkipList2 {

@@ -6,7 +6,7 @@ import cn.kiwipeach.enums.ResponseCodeEnum;
  * Create Date: 2017/11/06
  * Description: 控制器统一返回实体类
  *
- * @author kiwipeach [1099501218@qq.com]
+ * @author Wujun
  */
 public class DataResponse<T> {
     private boolean isSuccess;

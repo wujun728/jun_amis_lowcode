@@ -32,7 +32,7 @@ import java.util.*;
  *
  * <p>Jedis 接口设计真操蛋</p>
  *
- * @author Winter Lau (javayou@gmail.com)
+ * @author Wujun
  */
 class RedisClient implements Closeable, AutoCloseable {
 

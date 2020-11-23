@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * JThink@JThink
  *
- * @author JThink
+ * @author Wujun
  * @version 0.0.1
  * @desc
  * @date 2016-12-15 15:09:15

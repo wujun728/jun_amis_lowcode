@@ -32,7 +32,7 @@ import java.util.Set;
 
 
 /**
- * @author Vincent.wang
+ * @author Wujun
  *
  */
 public class AuthorizingRealmImpl extends AuthorizingRealm {

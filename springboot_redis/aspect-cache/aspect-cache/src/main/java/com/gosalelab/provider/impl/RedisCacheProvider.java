@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPool;
 import java.lang.reflect.Type;
 
 /**
- * @author silwind
+ * @author Wujun
  */
 @Component("redisCacheProvider")
 @ConditionalOnProperty(prefix = CacheConstants.ASPECT_CACHE_PREFIX, name = "provider", havingValue = CacheConstants.CACHE_REDIS_NAME)

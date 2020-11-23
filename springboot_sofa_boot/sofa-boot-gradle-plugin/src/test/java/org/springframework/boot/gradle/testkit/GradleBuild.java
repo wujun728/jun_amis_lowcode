@@ -50,8 +50,8 @@ import java.util.regex.Pattern;
 /**
  * A {@link TestRule} for running a Gradle build using {@link GradleRunner}.
  *
- * @author Andy Wilkinson
- * @author khotyn Delete Kotlin related code.
+ * @author Wujun
+ * @author Wujun
  */
 public class GradleBuild implements TestRule {
 

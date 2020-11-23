@@ -5,7 +5,7 @@ import com.zh.springbootmybatis.model.User;
 import java.util.List;
 
 /**
- * @author zhanghang
+ * @author Wujun
  * @date 2019/5/31
  */
 public interface UserService {

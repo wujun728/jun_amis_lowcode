@@ -30,7 +30,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * @author qilong.zql
+ * @author Wujun
  * @since 2.5.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)

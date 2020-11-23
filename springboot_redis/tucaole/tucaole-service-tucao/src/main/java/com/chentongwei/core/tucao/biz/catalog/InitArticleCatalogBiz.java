@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author TongWei.Chen 2017-9-28 18:00:05
+ * @author Wujun
  * @Project tucaole
  * @Description: 容器启动时执行的Service。负责将一些data缓存到redis
  */

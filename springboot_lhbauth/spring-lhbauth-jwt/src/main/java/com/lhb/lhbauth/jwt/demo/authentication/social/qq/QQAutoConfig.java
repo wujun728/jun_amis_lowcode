@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.social.connect.ConnectionFactory;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/3 0003 11:01
  */

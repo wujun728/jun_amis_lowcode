@@ -29,7 +29,7 @@ import de.codecentric.boot.admin.event.ClientApplicationStatusChangedEvent;
 /**
  * Notifier that reminds certain statuses to send reminder notification using a delegate.
  *
- * @author Johannes Edmeier
+ * @author Wujun
  */
 public class RemindingNotifier extends AbstractEventNotifier {
 	private final ConcurrentHashMap<String, Reminder> reminders = new ConcurrentHashMap<>();

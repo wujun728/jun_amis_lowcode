@@ -26,7 +26,7 @@ import java.util.Properties;
 /**
  * J2Cache Hibernate RegionFactory implementations.
  *
- * @author winterlau
+ * @author Wujun
  */
 public class J2CacheRegionFactory implements RegionFactory {
 

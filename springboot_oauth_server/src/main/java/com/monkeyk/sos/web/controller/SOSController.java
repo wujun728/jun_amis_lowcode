@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * <p>
  * starup
  *
- * @author Shengzhao Li
+ * @author Wujun
  */
 @Controller
 public class SOSController {

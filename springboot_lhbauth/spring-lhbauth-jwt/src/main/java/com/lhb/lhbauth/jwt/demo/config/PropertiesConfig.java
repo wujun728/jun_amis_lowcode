@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @descriptions
  * @date 2018/11/22 0022 11:54
  */

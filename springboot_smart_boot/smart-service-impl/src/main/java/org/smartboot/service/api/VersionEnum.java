@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 定义rest api的各正式版本
  * 
- * @author Seer
+ * @author Wujun
  * @version VersionEnum.java, v 0.1 2016年2月10日 下午2:33:38 Seer Exp.
  */
 public enum VersionEnum {

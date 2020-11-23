@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 
 /** 
  * @Description 时间与日期的工具类
- * @author 王鑫 
+ * @author Wujun
  * @date Mar 16, 2017 5:20:10 PM  
  */
 public class DateUtil {

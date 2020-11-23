@@ -8,7 +8,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 基础控制层
  *
- * @author zhaodui
+ * @author Wujun
  */
 public abstract class BaseController {
     @Autowired

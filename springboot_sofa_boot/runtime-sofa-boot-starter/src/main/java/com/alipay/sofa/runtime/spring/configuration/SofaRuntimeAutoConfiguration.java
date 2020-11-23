@@ -37,7 +37,7 @@ import com.alipay.sofa.runtime.spring.health.SofaComponentHealthChecker;
 import com.alipay.sofa.runtime.spring.health.SofaComponentHealthIndicator;
 
 /**
- * @author xuanbei 18/3/17
+ * @author Wujun
  */
 @Configuration
 @EnableConfigurationProperties(SofaRuntimeConfigurationProperties.class)

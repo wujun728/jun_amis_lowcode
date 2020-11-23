@@ -38,11 +38,11 @@ import java.util.jar.JarFile;
 /**
  * Gradle plugin for SOFA Boot. (Origin from {@link SpringBootPlugin})
  *
- * @author Phillip Webb
- * @author Dave Syer
- * @author Andy Wilkinson
- * @author Danny Hyun
- * @author khotyn
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
+ * @author Wujun
  */
 public class SofaBootPlugin implements Plugin<Project> {
 

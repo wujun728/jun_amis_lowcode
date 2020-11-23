@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 
 /**
  * 描述:用于辅助序列化beetlsql 的TailBean
- * @author : xiandafu
+ * @author Wujun
  */
 
 public class BaseEntity extends TailBean implements java.io.Serializable {

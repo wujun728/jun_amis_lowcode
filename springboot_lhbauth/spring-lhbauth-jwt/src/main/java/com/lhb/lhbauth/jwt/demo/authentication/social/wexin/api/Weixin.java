@@ -3,7 +3,7 @@ package com.lhb.lhbauth.jwt.demo.authentication.social.wexin.api;
 import com.lhb.lhbauth.jwt.demo.authentication.social.wexin.model.WeixinUserInfo;
 
 /**
- * @author lvhaibao
+ * @author Wujun
  * @description
  * @date 2019/1/4 0004 9:49
  */

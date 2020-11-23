@@ -23,7 +23,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author xuanbei 18/5/18
+ * @author Wujun
  */
 public class ComponentToStringTest {
     @Test

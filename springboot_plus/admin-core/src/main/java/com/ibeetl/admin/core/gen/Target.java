@@ -4,7 +4,7 @@ import org.beetl.core.GroupTemplate;
 
 /**
  * 描述如何输出代码，有打印后台，页面输出，或者直接生成到项目里
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public interface Target {

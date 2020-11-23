@@ -11,7 +11,7 @@ import java.util.Objects;
 /**
  * HashMap对象的一个扩展.
  *
- * @author zhangxd
+ * @author Wujun
  */
 public class BaseDto extends HashMap<String, Object> implements Dto {
 

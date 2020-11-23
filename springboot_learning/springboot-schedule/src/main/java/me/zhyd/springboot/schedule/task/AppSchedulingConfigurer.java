@@ -21,7 +21,7 @@ public class AppSchedulingConfigurer implements ApplicationListener<ContextRefre
     /**
      * 在11月7号晚上22点的7分到8分之间每隔半分钟（30秒）执行一次任务
      *
-     * @author zhangyd
+     * @author Wujun
      */
     @Scheduled(cron = "0/30 7-8 22 7 11 ? ")
     public void doJobByCron() throws InterruptedException {
@@ -35,7 +35,7 @@ public class AppSchedulingConfigurer implements ApplicationListener<ContextRefre
     /**
      * 上次任务执行完的3秒后再次执行
      *
-     * @author zhangyd
+     * @author Wujun
      */
     @Scheduled(fixedDelay = 3000)
     public void doJobByFixedDelay() throws InterruptedException {
@@ -49,7 +49,7 @@ public class AppSchedulingConfigurer implements ApplicationListener<ContextRefre
     /**
      * 固定每3秒执行一次
      *
-     * @author zhangyd
+     * @author Wujun
      */
     @Scheduled(fixedRate = 3000)
     public void doJobByFixedRate() throws InterruptedException {
@@ -63,7 +63,7 @@ public class AppSchedulingConfigurer implements ApplicationListener<ContextRefre
     /**
      * 第一次延迟5秒后执行，之后按fixedRate的规则每3秒执行一次
      *
-     * @author zhangyd
+     * @author Wujun
      */
     @Scheduled(initialDelay = 5000, fixedRate = 3000)
     public void doJobByInitialDelay() throws InterruptedException {

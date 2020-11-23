@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.provider.AuthorizationRequest;
 import org.springframework.security.oauth2.provider.approval.TokenStoreUserApprovalHandler;
 
 /**
- * @author Shengzhao Li
+ * @author Wujun
  */
 public class OauthUserApprovalHandler extends TokenStoreUserApprovalHandler {
 

@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
 * 权限 Entity定义
-* @author mazc@dibo.ltd
+* @author Wujun
 * @version 2.0
 * @date 2019-12-03
 */

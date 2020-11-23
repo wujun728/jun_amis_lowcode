@@ -26,7 +26,7 @@ import java.lang.reflect.Proxy;
 /**
  * 获取对mybatis-plus的支持
  *
- * @author TaoYu
+ * @author Wujun
  * @since 2.3.0
  */
 @Slf4j

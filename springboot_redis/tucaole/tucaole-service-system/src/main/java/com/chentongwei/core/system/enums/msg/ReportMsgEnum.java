@@ -3,7 +3,7 @@ package com.chentongwei.core.system.enums.msg;
 import com.chentongwei.common.enums.IBaseEnum;
 
 /**
- * @author TongWei.Chen 2017-12-16 18:59:33
+ * @author Wujun
  * @Project tucaole
  * @Description: 举报模块常量枚举
  */

@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * Created on 2018/1/19.
  *
- * @author zlf
+ * @author Wujun
  * @since 1.0
  */
 @Configuration

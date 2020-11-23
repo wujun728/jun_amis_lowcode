@@ -2,7 +2,7 @@ package com.ibeetl.admin.core.web.query;
 
 /**
  * 查询选项
- * @author lijiazhi
+ * @author Wujun
  *
  */
 public class QueryItem {

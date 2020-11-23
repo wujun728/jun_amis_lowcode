@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
 /**
  * Core Interceptor of Dynamic Datasource
  *
- * @author TaoYu
+ * @author Wujun
  * @since 1.2.0
  */
 public class DynamicDataSourceAnnotationInterceptor implements MethodInterceptor {

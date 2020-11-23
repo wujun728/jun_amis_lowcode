@@ -24,7 +24,7 @@ package com.alipay.sofa.runtime.api.client;
  * <li>Implement the {@link com.alipay.sofa.runtime.api.aware.ClientFactoryAware} interface.</li>
  * </ol>
  *
- * @author xuanbei 18/2/28
+ * @author Wujun
  */
 public interface ClientFactory {
 

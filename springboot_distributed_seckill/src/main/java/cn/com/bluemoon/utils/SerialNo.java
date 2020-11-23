@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 
 /**
- * @author Administrator
+ * @author Wujun
  *
  *         取序列号类
  */

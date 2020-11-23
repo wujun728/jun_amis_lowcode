@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 评论表
  *
- * @author TongWei.Chen 2017-12-22 09:35
+ * @author Wujun
  */
 @Data
 public class ArticleComment implements Serializable {

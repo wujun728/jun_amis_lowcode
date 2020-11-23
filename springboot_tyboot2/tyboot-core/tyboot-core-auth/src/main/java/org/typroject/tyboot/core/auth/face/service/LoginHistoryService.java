@@ -16,7 +16,7 @@ import java.util.List;
  * 用户登录记录 服务实现类
  * </p>
  *
- * @author magintursh
+ * @author Wujun
  * @since 2017-07-06
  */
 @Service

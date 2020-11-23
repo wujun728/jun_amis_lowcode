@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 /**
  * 缓存测试入口
- * @author Winter Lau(javayou@gmail.com)
+ * @author Wujun
  */
 public class J2CacheCmd {
 

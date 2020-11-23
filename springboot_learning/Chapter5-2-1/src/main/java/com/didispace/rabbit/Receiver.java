@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * @author 翟永超
+ * @author Wujun
  * @create 2016/9/25.
  * @blog http://blog.didispace.com
  */

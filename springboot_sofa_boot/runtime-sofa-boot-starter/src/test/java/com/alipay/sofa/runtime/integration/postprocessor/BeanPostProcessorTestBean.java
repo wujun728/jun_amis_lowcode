@@ -20,7 +20,7 @@ import com.alipay.sofa.runtime.api.event.ApplicationShutdownCallback;
 
 /**
  *
- * @author ruoshan
+ * @author Wujun
  * @since 2.6.0
  */
 public class BeanPostProcessorTestBean implements ApplicationShutdownCallback {

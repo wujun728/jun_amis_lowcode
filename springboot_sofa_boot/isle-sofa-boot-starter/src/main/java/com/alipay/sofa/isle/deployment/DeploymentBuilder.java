@@ -25,7 +25,7 @@ import java.util.Properties;
 /**
  * SOFABoot Module deployment creator
  *
- * @author yangyanzhao
+ * @author Wujun
  * @version $Id: DeploymentBuilder.java, v 0.1 2012-1-11 07:40:11 yangyanzhao Exp $
  */
 public class DeploymentBuilder {

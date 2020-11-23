@@ -22,7 +22,7 @@ import java.util.List;
  * 虚拟账户金额变更记录表，所有针对账户金额的变动操作都要记录到此表中， 服务类
  * </p>
  *
- * @author 子杨
+ * @author Wujun
  * @since 2018-01-23
  */
 @Component
