@@ -1,22 +1,14 @@
 补充TODO待办清单
  
 springboot     *****
-springboot_2.0_learning   干掉
-springboot_2.0_oauth2   挪走到 springboot_oauth2
-springboot_223.0_learning  干掉
-springboot_activiti   调整
-springboot_activiti2   干掉
-springboot_actuator 
-springboot_admin 
-springboot_admin 2   挪走，到springcloud
-springboot_admin 3   挪走到jedp_boot
-springboot_adminui   干掉
-springboot_all   合并到springboot
-springboot_api_boot2      合并到springboot
-springboot_api_project   干掉
-springboot_api_project_seed   干掉
-springboot_api_project23   干掉
-springboot_async   调整
+
+  <parent>
+    <groupId>com.jun.plugin</groupId>
+	<artifactId>jun_springboot</artifactId>
+	<version>1.0</version>
+  </parent>
+ com.jun.plugin
+           
 springboot_batch  调整
 springboot_bboot    干掉
 springboot_blogtemplatewithbootstrap   挪走到jun_frontend
