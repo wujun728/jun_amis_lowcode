@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zengtengpeng</groupId>
-    <artifactId>redisson-spring-boot-starter</artifactId>
+    <artifactId>springboot_redisson</artifactId>
     <version>1.0.6</version>
     <description>redisson-spring-boot-starter</description>
     <parent>

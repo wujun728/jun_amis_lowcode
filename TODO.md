@@ -1,7 +1,5 @@
 补充TODO待办清单
-
-mybatisplus-spring-boot    干掉
-redis-project    干掉，合并到springboot_redis
+ 
 springboot     *****
 springboot_2.0_learning   干掉
 springboot_2.0_oauth2   挪走到 springboot_oauth2
