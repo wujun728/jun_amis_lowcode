@@ -141,6 +141,6 @@ HTTPS、Flyway(`数据库初始化`)。
 
 #### 已办&待办列表
 - [ ] spring_boot_demo_urule（集成  urule 实现规则引擎）
-- [ ] spring_boot_demo_activiti（集成 Activiti 实现流程控制引擎）
+- [x] spring_boot_demo_activiti（集成 Activiti 实现流程控制引擎）
 - [x] ~~spring_boot_demo_async（Spring boot 实现异步调用）~~
 
