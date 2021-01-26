@@ -1,5 +1,0 @@
-include 'bboot-starter'
-include 'bboot-starter-jetty'
-include 'bboot-starter-jetty8'
-include 'bboot-starter-tomcat'
-include 'bboot-starter-undertow'
