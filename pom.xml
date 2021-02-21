@@ -93,8 +93,8 @@
 	<module>spring_velocity</module>
 	<module>spring_webim</module>
 	<module>spring_websocket</module>
-<!--     <module>springboot_helloworld</module> -->
-    <!-- 
+	<!-- -->    
+	<module>springboot_helloworld</module>  
     <module>springboot_properties</module>
     <module>springboot_actuator</module>
     <module>springboot_admin</module>
@@ -155,7 +155,7 @@
     <module>springboot_elasticsearch_rest_high_level_client</module>
     <module>springboot_https</module>
     <module>springboot_flyway</module>
-     -->
+    <!--  -->
   </modules> 
 
   <name>jun_springboot</name>
