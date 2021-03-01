@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jun.plugin</groupId>
-	<artifactId>jun_spring_plugin</artifactId>
+	<artifactId>jun_ssm</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
@@ -15,7 +15,8 @@
 	</properties>
 
 	<modules>
-		<module>spring_websocket</module> 
+		<module>jun_ssm_admin</module>
+		<module>jun_ssm_frontend</module>
 	</modules>
 
 	<dependencies>
