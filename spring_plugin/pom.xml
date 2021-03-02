@@ -15,7 +15,7 @@
 	</properties>
 
 	<modules>
-		<module>spring_websocket</module> 
+		<module>spring_websocket1</module> 
 	</modules>
 
 	<dependencies>
