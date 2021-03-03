@@ -12,7 +12,7 @@
   <dependencies>
   		 <dependency>
 			<groupId>com.jun.plugin</groupId>
-			<artifactId>jun_blog_admin</artifactId>
+			<artifactId>jun_ssm_admin</artifactId>
   			<version>1.0</version>
 		</dependency>
   		<!-- 添加Servlet支持 -->
