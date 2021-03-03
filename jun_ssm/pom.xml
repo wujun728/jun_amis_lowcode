@@ -16,7 +16,7 @@
 
 	<modules>
 		<module>jun_ssm_admin</module>
-		<module>jun_ssm_frontend</module>
+		<module>jun_ssm_common</module> 
 	</modules>
 
 	<dependencies>
