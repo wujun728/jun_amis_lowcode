@@ -18,7 +18,8 @@
 
 	<modules>
 		<module>jun_ssm_admin</module>
-		<module>jun_ssm_common</module> 
+		<module>jun_ssm_captcha</module> 
+		<module>jun_ssm_common</module>
 		<module>jun_ssm_web</module> 
 		
 	</modules>
@@ -54,7 +55,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

@@ -10,9 +10,19 @@
   <url>http://maven.apache.org</url>
   
   <dependencies>
-  		 <dependency>
+  		<dependency>
 			<groupId>com.jun.plugin</groupId>
 			<artifactId>jun_ssm_admin</artifactId>
+  			<version>1.0</version>
+		</dependency>
+  		<dependency>
+			<groupId>com.jun.plugin</groupId>
+			<artifactId>jun_ssm_common</artifactId>
+  			<version>1.0</version>
+		</dependency>
+  		<dependency>
+			<groupId>com.jun.plugin</groupId>
+			<artifactId>jun_ssm_captcha</artifactId>
   			<version>1.0</version>
 		</dependency>
   		<!-- 添加Servlet支持 -->
