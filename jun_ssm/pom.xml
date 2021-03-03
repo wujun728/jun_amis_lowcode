@@ -17,6 +17,8 @@
 	<modules>
 		<module>jun_ssm_admin</module>
 		<module>jun_ssm_common</module> 
+		<module>jun_ssm_web</module> 
+		
 	</modules>
 
 	<dependencies>
