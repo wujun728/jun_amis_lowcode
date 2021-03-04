@@ -19,6 +19,7 @@
 	<modules>
 		<module>jun_ssm_admin</module>
 		<module>jun_ssm_captcha</module> 
+		<module>jun_ssm_email</module> 
 		<module>jun_ssm_common</module>
 		<module>jun_ssm_web</module> 
 		
