@@ -5,8 +5,6 @@
 
 
 
-
-
 #### jun_spring  项目module组件功能列表
 - 【spring_helloworld】springboot 的一个 helloworld  
 - 【spring_properties】springboot 读取配置文件中的内容  
