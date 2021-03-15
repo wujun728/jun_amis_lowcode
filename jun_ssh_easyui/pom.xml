@@ -306,7 +306,7 @@
   
   
   <build>
-  	<finalName>jedp_mis</finalName>
+  	<finalName>jun_mis</finalName>
 	<plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
