@@ -27,6 +27,7 @@
 		<module>jun_ssm_mis</module>
 		<!-- 通用工具类 -->
 		<module>jun_ssm_common</module>
+		<module>jun_ssm_biz</module>
 		<!-- 博客后台前端页面 easyui -->
 		<module>jun_ssm_web</module>
 
