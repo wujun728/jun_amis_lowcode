@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Dao路径.TTestcaseDao">
+
+    <resultMap id="TTestcase" type="Model路径.TTestcase" >
+        <result column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="addtime" property="addtime" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        `user_id`,
+        `username`,
+        `addtime`
+    </sql>
+
+    <insert id="insert" parameterType="java.util.Map" >
+        INSERT INTO t_testcase (
+            `user_id`,
+            `username`,
+            `addtime`
+        )
+        VALUES(
+            #{tTestcase.userId},
+            #{tTestcase.username},
+            #{tTestcase.addtime}
+        )
+    </insert>
+
+    <delete id="delete" parameterType="java.util.Map" >
+        DELETE FROM t_testcase
+        WHERE `id` = #{id}
+    </delete>
+
+    <update id="update" parameterType="java.util.Map" >
+        UPDATE t_testcase
+        SET
+            user_id = #{tTestcase.userId},
+            username = #{tTestcase.username},
+            addtime = #{tTestcase.addtime},
+            UpdateTime = NOW()
+        WHERE `id` = #{tTestcase.id}
+    </update>
+
+
+    <select id="load" parameterType="java.util.Map" resultMap="TTestcase">
+        SELECT <include refid="Base_Column_List" />
+        FROM t_testcase
+        WHERE `id` = #{id}
+    </select>
+
+    <select id="pageList" parameterType="java.util.Map" resultMap="TTestcase">
+        SELECT <include refid="Base_Column_List" />
+        FROM t_testcase
+        LIMIT #{offset}, #{pagesize}
+    </select>
+
+    <select id="pageListCount" parameterType="java.util.Map" resultType="int">
+        SELECT count(1)
+        FROM t_testcase
+    </select>
+
+</mapper>
