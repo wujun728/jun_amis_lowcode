@@ -10,7 +10,8 @@
   <modules>
   	<module>jun_ssh_easyui</module>
 	<module>jun_ssm</module>
-	<module>spring_plugin</module> 
+	<module>jun_ssm_jwt</module>
+	<module>jun_spring_plugin</module> 
   </modules> 
 
   <name>jun_springboot</name>

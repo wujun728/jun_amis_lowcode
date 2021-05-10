@@ -16,6 +16,74 @@ TODO：
 4、整ssm_jwt的api跟rbac跟表结构
 
 
+spring_activemq\    干掉，放到mq里面
+spring_atomikos\    调整
+spring_autowired\    干掉，合并到spring_demos
+spring_camel\    调整
+spring_cas\    调整
+spring_cors\ 调整
+spring_demo\      调整
+spring_disruptor\    干掉
+spring_distributed_config\ 调整
+spring_distributed_fastdfs\ 调整
+spring_distributed_lock\ 调整
+spring_distributed_multidatasource\ 调整
+spring_distributed_netty\ 调整
+spring_distributed_oss_qiniu\ 调整
+spring_distributed_rpc\ 调整
+spring_distributed_session\ 调整
+spring_distributed_transaction_tcc\   新增seata
+spring_drools\ 调整
+spring_dubbo\    调整
+spring_dynamic_job\   干掉，合并到spring_quartz
+spring_elasticsearch\ 调整
+spring_email\    合并到jun_excel
+spring_excel\   合并到jun_email
+spring_generator\ 干掉
+spring_hibernate\ 调整一下
+spring_jasperreport\ 干掉，新增jimureport
+spring_jpa\ 调整一下
+spring_jqgrid\   干掉，迁移到spring_demo里面
+spring_jsonp\   干掉，迁移到cors里面
+spring_jsoup\   干掉，迁移到spring_webmagic里面
+spring_jwt\    调整
+spring_kafka\   干掉，新增spring_mq
+spring_lucene\ 调整
+spring_mina\   干掉，迁移到netty里面
+spring_mongodb\ 调整
+spring_mybatis\ 调整，并新增mybatisplus
+spring_netty\ 调整
+spring_nutch\ 干掉
+spring_oauth\   调整
+spring_plupload\ 调整
+spring_quartz\ 调整
+spring_rabbitmq\   干掉，迁移到mq里面
+spring_redis\   调整
+spring_s2sh\    干掉，迁移到ssh
+spring_session\   调整
+spring_shiro_redis\     调整
+spring_simplessh14\   干掉，迁移到ssh里面
+spring_solr\   调整
+spring_spider\    干掉，迁移到spring_webmagic
+spring_springbatch\   干掉，迁移到quartz里面
+spring_springjdbc\ 调整
+spring_springmvc\ 调整
+spring_ssh\   调整
+spring_ssm_dubbo\ 干掉，迁移到spring_ssml里面
+spring_ssm_freemarker\ 干掉，迁移到spring_ssml里面
+spring_ssm_layui\ 干掉，迁移到spring_ssml里面
+spring_ssm2\ 干掉，迁移到spring_ssml里面
+spring_sso\   干掉，迁移到oauth里面
+spring_struts2\ 干掉，可以直接干掉，迁移到ssh里面
+spring_swagger\    调整
+spring_task\   干掉，迁移到quartz里面
+spring_thymeleaf\    调整
+spring_validator\ 干掉，新增spring_hibernate_validator
+spring_velocity\   调整
+spring_websocket\
+
+
+
 doc\
 SpringRainV3.1.0\ 合并到下面的ssm里面
 SpringWind\   合并到下面的ssm里面

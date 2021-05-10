@@ -14,8 +14,6 @@
 			<artifactId>jun_ssm_common</artifactId>
   			<version>1.0</version>
 		</dependency>
-		
-		
   <!-- 添加Servlet支持 -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
