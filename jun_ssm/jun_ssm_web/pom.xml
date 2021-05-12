@@ -258,7 +258,7 @@
   
   
   <build>
-    <finalName>jun_blog</finalName>
+    <finalName>jun_ssm_blog</finalName>
     <plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -277,7 +277,7 @@
 	              <port>8090</port>
 	              <uriEncoding>UTF-8</uriEncoding>
 	            </configuration>
-         </plugin>
+         	</plugin>
 		</plugins> 
   </build>
 	 
