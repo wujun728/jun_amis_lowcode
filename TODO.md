@@ -1,26 +1,13 @@
 补充TODO待办清单
 
-doc\
-SpringRainV3.1.0\ 合并到下面的ssm里面
-SpringWind\   合并到下面的ssm里面
-sshe\    合并到下面的ssm里面
+ 
 jun_ssh_easyui\ 将前端的easyui调整为html+js放到nginx里面，保留
-jun_ssm\
-jun_ssm_admin\
-jun_ssm_biz\
-jun_ssm_captcha\
-jun_ssm_common\
-jun_ssm_email\
-jun_ssm_mis\
-jun_ssm_web\
- 
+ 
 jun_ssm_jwt\ 新增
 jun_ssm_wechatservice,
 jun_ssm_bizservice,
 jun_ssm_apiservice,
-jun_ssm_easyui,
-jun_ssm_bootstrap,
-jun_ssm_layadmin
+ 
 
  
 TODO
