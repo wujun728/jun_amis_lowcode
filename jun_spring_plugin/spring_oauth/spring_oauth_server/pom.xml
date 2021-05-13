@@ -93,7 +93,7 @@
                 </configuration>
 
                 <executions>
-                    <execution>
+                    <!-- <execution>
                         <id>init db</id>
                         <phase>initialize</phase>
                         <goals>
@@ -108,7 +108,7 @@
                             </srcFiles>
                             <onError>continue</onError>
                         </configuration>
-                    </execution>
+                    </execution> -->
                 </executions>
             </plugin>
             <plugin>

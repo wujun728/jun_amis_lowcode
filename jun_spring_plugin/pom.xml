@@ -40,7 +40,6 @@
 			<module>spring_excel</module>
 			<module>spring_generator</module>
 			<module>spring_hibernate</module>
-			<module>spring_ja<module>sperreport</module>
 			<module>spring_jpa</module>
 			<module>spring_jqgrid</module>
 			<module>spring_jsonp</module>
@@ -63,10 +62,6 @@
 			<module>spring_shiro_redis</module>
 			<module>spring_simplessh14</module>
 			<module>spring_solr</module>
-			<module>spring_<module>spider</module>
-			<module>spring_<module>springbatch</module>
-			<module>spring_<module>springjdbc</module>
-			<module>spring_<module>springmvc</module>
 			<module>spring_ssh</module>
 			<module>spring_ssm_dubbo</module>
 			<module>spring_ssm_freemarker</module>
