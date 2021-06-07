@@ -1,0 +1,13 @@
+
+@if(isNotEmpty(js)){
+       @if(strutil.startWith(js,"/")){
+           @item = ctxPath + js;
+       @}
+       <script src="${item}"></script>
+@}
+
+
+
+
+
+

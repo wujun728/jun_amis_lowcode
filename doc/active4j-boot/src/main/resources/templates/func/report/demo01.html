@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @include("/include/_header.html", {'title':'JIMU报表示例'}){}
+  <style type="text/css">
+  .report-iframe {
+  	width: 100%;
+  	height:100%;
+  	position: absolute;
+  	bottom: 0;
+  	top:135px;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header">查询</div>
+          <div class="layui-card-body">
+          <div class="layui-form">
+            <div class="test-table-reload-btn" style="margin-bottom: 10px;">
+              	操作：
+              <div class="layui-inline">
+                <input class="layui-input" name="name" id="name" autocomplete="off">
+              </div>
+              <button id="btnSearch" class="layui-btn">搜索</button>
+              <button id="btnReset" class="layui-btn">重置</button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+ <!-- 主体内容 -->
+ <iframe id="iframeSrc" src="${ctxPath}/home" frameborder="0" class="report-iframe"></iframe>
+ <script type="text/javascript">
+ layui.config({
+     base: CXL.ctxPath + '/layuiadmin/' //静态资源所在路径
+  }).extend({
+    index: 'lib/index' //主入口模块
+  }).use(['form'], function(){
+	  var $ = layui.$;
+	    
+	  $("#btnSearch").click(function(){
+		 var name = $("#name").val();
+		 
+		 $("#iframeSrc").attr("src", "${ctxPath}/jmreport/view/542922856383406080");
+		  
+	  })
+  })
+ 
+ 
+ 
+ </script>       	
+        	
+        	
+</body>
+</html>

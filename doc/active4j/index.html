@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>active4j-åŸºäºjavaé€šç”¨å¿«é€Ÿå¼€å‘æ¡†æ¶</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="keywords" content="active4jé€šç”¨å¿«é€Ÿå¼€å‘æ¡†æ¶|springboot|æ±Ÿè‹ä¼—ç¦¾|æ±Ÿè‹äº‘æ½®">
+	<meta name="description" content="active4jé€šç”¨å¿«é€Ÿå¼€å‘æ¡†æ¶ï¼Œæ˜¯åŸºäºSpring Bootæ•´åˆå¼€æºæ¡†æ¶ï¼Œä»¥Spring Frameworkä¸ºæ ¸å¿ƒå®¹å™¨ï¼ŒSpring MVCä¸ºæ¨¡å‹è§†å›¾æ§åˆ¶å™¨ï¼ŒMybatisä¸ºæ•°æ®è®¿é—®å±‚ï¼Œ Shiroä¸ºæƒé™æˆæƒå±‚ï¼ŒRediså¯¹å¸¸ç”¨æ•°æ®è¿›è¡Œç¼“å­˜çš„å¼€å‘å¹³å°">
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+  	
+  	<link rel="stylesheet" href="layui.css" tppabs="http://www.active4j.com/layui/css/layui.css" media="all">
+  	<link rel="stylesheet" href="global.css" tppabs="http://www.active4j.com/static/css/global.css" media="all">
+  	<link rel="stylesheet" href="style.css" tppabs="http://www.active4j.com/static/css/style.css" media="all">
+  	<style type="text/css">
+	.btn28 {
+   		width: 28%;
+	}
+	.ic {
+   		margin: 0 10px;
+	}
+	.img-responsive {
+	  display: inline-block;
+	  height: auto;
+	  max-width: 90%;
+	}
+	
+	</style>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "hm.js-b758444607141baddf41d6889529035e"/*tpa=https://hm.baidu.com/hm.js?b758444607141baddf41d6889529035e*/;
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+  </head>
+<body class="site-home" id="LAY_home" style="background-color: #eee;">
+  
+<div class="layui-header header header-index" winter1="">
+  <div class="layui-main">
+    <a class="logo" href="index.htm" tppabs="http://www.active4j.com/">
+      <img src="logo.png" tppabs="http://www.active4j.com/static/images/logo.png" alt="active4j" class="img-responsive">
+    </a>
+    <ul class="layui-nav" lay-filter="">
+      <li class="layui-nav-item"><a href="index.html" tppabs="http://www.active4j.com/index.html">é¦–é¡µ</a></li>
+      <li class="layui-nav-item">
+      	<a href="javascript:;"><span class="layui-badge-dot" style="left:0; right: auto; margin: -4px 0 0 5px;"></span>æ¼”ç¤º</a>
+        	<dl class="layui-nav-child"> <!-- äºŒçº§èœå• -->
+      			<dd><a href="javascript:if(confirm('http://www.active4j.com/jsp/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/jsp/'" tppabs="http://www.active4j.com:9002/jsp" target="_blank">jspç‰ˆ</a></dd>
+      			<dd><a href="javascript:if(confirm('http://www.active4j.com/boot/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/boot/'" tppabs="http://www.active4j.com:9001/boot" target="_blank">bootå•ä½“ç‰ˆ</a></dd>
+      			<dd><a href="javascript:if(confirm('http://www.active4j.com/demo/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/demo/'" tppabs="http://www.active4j.com:9003/demo" target="_blank">å‰åç«¯åˆ†ç¦»ç‰ˆ</a></dd>
+    		</dl>
+  	  </li>
+  	  <li class="layui-nav-item"><a href="doc.html" tppabs="http://www.active4j.com/doc.html">æ–‡æ¡£</a></li>
+      <li class="layui-nav-item"><a href="changelog.html" tppabs="http://www.active4j.com/changelog.html">æ›´æ–°</a></li>
+	</ul>
+  </div>
+</div>
+
+<div class="site-banner">
+  <div class="site-banner-bg">
+  </div>
+  <div class="site-banner-main">
+    <div class="site-zfj site-zfj-anim">
+      <i class="layui-icon layui-icon-diamond" style="color: #fff; color: rgba(255,255,255,.7);"></i>
+      
+    </div>
+    <div class="layui-anim site-desc site-desc-anim">
+      <p class="web-font-desc">åŸºäºspringboot2å¿«é€Ÿé€šç”¨å¼€å‘æ¡†æ¶</p>
+      <cite>é‡‡ç”¨æœ€å‰æ²¿å¼€å‘æŠ€æœ¯æ„å»ºç³»ç»Ÿå¹³å°, æŒç»­æ›´æ–°ï¼Œå¤§é‡æŠ€æœ¯ç»éªŒç§¯ç´¯, æ´»è·ƒç¤¾åŒºæŠ€æœ¯åˆ†äº«</cite>
+    </div>
+    <div class="site-download">
+      <a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" class="layui-inline ic" target="_blank">
+        <cite class="layui-icon">î˜</cite>
+        ç«‹å³ä¸‹è½½
+      </a>
+	  <a href="javascript:if(confirm('http://www.active4j.com/oa/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/oa/'" tppabs="http://www.active4j.com:9005/oa" class="layui-inline ic" target="_blank">
+		<cite class="layui-icon">&#xe857;</cite>
+        åœ¨çº¿æ¼”ç¤º
+      </a>
+    </div>
+    <div class="site-version">
+      <span><a href="changelog.html" tppabs="http://www.active4j.com/changelog.html" rel="nofollow">æ›´æ–°æ—¥å¿—</a></span>
+    </div>
+    <div class="site-banner-other">
+      <a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" target="_blank" class="site-star">
+        <i class="layui-icon">î™˜</i>
+        Star <cite id="getStars">20268</cite> 
+      </a>
+      <a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" target="_blank" rel="nofollow" class="site-fork">
+        <i class="layui-icon">î˜®</i>
+        Fork 
+      </a>
+      <a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" target="_blank" rel="nofollow" class="site-fork">
+      	  ç äº‘
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="layui-main alone-items main-product">
+  <fieldset class="layui-elem-field layui-field-title">
+    <legend>åˆå¿ƒ</legend>
+  </fieldset>
+  <div class="layui-row layui-col-space25">
+        <div class="layui-col-sm6 layui-col-md3">
+          <div class="content">
+            <div><img src="Big_icon1.png" tppabs="http://www.active4j.com/static/images/Big_icon1.png"></div>
+            <div>
+              <p class="label">æºç å¼€æº</p>
+              <p style="margin-bottom: 50px;">ä»£ç å…¨éƒ¨å¼€æºï¼Œæ³¨é‡Šè¯¦å°½æ˜“æ‡‚ï¼Œä¸ç•™åé—¨ï¼Œå€¾æƒ…è´¡çŒ®</p>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-sm6 layui-col-md3 ">
+          <div class="content">
+            <div><img src="Big_icon2.png" tppabs="http://www.active4j.com/static/images/Big_icon2.png"></div>
+            <div>
+              <p class="label">æŒç»­ç»´æŠ¤</p>
+              <p style="margin-bottom: 50px;">æŒç»­æ›´æ–°é›†æˆï¼ŒåŠæ—¶å‘å¸ƒï¼Œç¤¾åŒºæ´»è·ƒæŠ€æœ¯åˆ†äº«ï¼Œå…±åŒç»´æŠ¤</p>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-sm6 layui-col-md3 ">
+          <div class="content">
+            <div><img src="Big_icon3.png" tppabs="http://www.active4j.com/static/images/Big_icon3.png"></div>
+            <div>
+              <p class="label">åŠŸèƒ½å®Œå–„</p>
+              <p style="margin-bottom: 50px;">åŒ…å«ç³»ç»Ÿç®¡ç†ç­‰å¸¸ç”¨åŠŸèƒ½ï¼Œé›†æˆå¸¸ç”¨ç»„ä»¶ï¼Œå‰ç«¯ç»„ä»¶ä¸°å¯Œ</p>
+            </div>
+          </div>
+        </div>
+        <div class="layui-col-sm6 layui-col-md3 ">
+          <div class="content">
+            <div><img src="Big_icon4.png" tppabs="http://www.active4j.com/static/images/Big_icon4.png"></div>
+            <div>
+              <p class="label">ä¸Šæ‰‹å®¹æ˜“</p>
+              <p style="margin-bottom: 50px;">é‡‡ç”¨ä¸»æµæŠ€æœ¯ï¼Œæ–‡æ¡£è¯¦ç»†ï¼Œæ¡†æ¶æ˜“ä¸Šæ‰‹ï¼Œä»¥ä¾¿å¿«é€Ÿå¼€å‘æ–°é¡¹ç›®</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+  
+
+<div class="layui-main alone-items">
+  <fieldset class="layui-elem-field layui-field-title">
+    <legend>ç‰ˆæœ¬</legend>
+  </fieldset>
+  <div class="layui-row layui-col-space20">
+    <div class="layui-col-md4 layui-col-sm6">
+      <div class="alone-version-desc layui-text">
+        <h2>active4j-jspç‰ˆ</h2>
+        <p>
+          <span class="alone-badge">
+           	 åŸºäºspringboot2æ„å»º
+          </span>
+        </p>
+        
+        <ul>
+          <li style="color: #FF5722;">åŸºäºSpringMVC+Spring+mybatis</li>
+          <li style="color: #FF5722;">å‰ç«¯jspé¡µé¢ï¼Œä¾¿äºä»¥springbootæ”¹é€ ä¼ ç»Ÿé¡¹ç›®</li>
+          <li>Bootstrapä½œä¸ºå‰ç«¯UIæ¡†æ¶</li>
+          <li>Apache Shiroä¸ºæƒé™æˆæƒå±‚</li>
+          <li>rediså¯¹å¸¸ç”¨æ•°æ®è¿›è¡Œç¼“å­˜</li>
+          <li>jstlæ ‡ç­¾åº“è¿›è¡Œç»„ä»¶å°è£…</li>
+        </ul>
+        
+        <div class="layui-btn-container">
+        	<a href="javascript:if(confirm('http://www.active4j.com/jsp/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/jsp/'" tppabs="http://www.active4j.com:9002/jsp" target="_blank" class="layui-btn btn28">æ¼”ç¤º</a>
+        	<a href="javascript:if(confirm('https://gitee.com/active4j/active4j-jsp  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j-jsp'" tppabs="https://gitee.com/active4j/active4j-jsp" target="_blank" class="layui-btn layui-btn-normal btn28">ç äº‘</a>
+        	<a href="javascript:if(confirm('https://github.com/yunchaoyun/active4j-jsp  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/yunchaoyun/active4j-jsp'" tppabs="https://github.com/yunchaoyun/active4j-jsp" target="_blank" class="layui-btn layui-btn-warm btn28">github</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="layui-col-md4 layui-col-sm6">
+      <div class="alone-version-desc layui-text">
+        <h2>spring-bootç‰ˆ</h2>
+        <p>
+          <span class="alone-badge">
+         	  åŸºäºspringboot2æ„å»ºå•ä½“
+          </span>
+        </p>
+        <ul>
+          <li style="color: #FF5722;">åŸºäºSpringMVC+Spring+mybatis</li>
+          <li style="color: #FF5722;">ä½¿ç”¨beetlä½œä¸ºæ¨¡ç‰ˆå¼•æ“</li>
+          <li style="color: #FF5722;">ä½¿ç”¨layuiä½œä¸ºå‰ç«¯UIæ¡†æ¶</li>
+          <li>Apache Shiroä¸ºæƒé™æˆæƒå±‚</li>
+          <li>rediså¯¹å¸¸ç”¨æ•°æ®è¿›è¡Œç¼“å­˜</li>
+          <li>é›†æˆactivemqæ¶ˆæ¯é˜Ÿåˆ—</li>
+          <li>æä¾›äº†ç³»ç»Ÿå¸¸ç”¨åŠŸèƒ½è¿›è¡Œå°è£…</li>
+        </ul>
+        <div class="layui-btn-container">
+        	<a href="javascript:if(confirm('http://www.active4j.com/boot/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/boot/'" tppabs="http://www.active4j.com:9001/boot" target="_blank" class="layui-btn btn28">æ¼”ç¤º</a>
+        	<a href="javascript:if(confirm('https://gitee.com/active4j/active4j-boot  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j-boot'" tppabs="https://gitee.com/active4j/active4j-boot" target="_blank" class="layui-btn layui-btn-normal btn28">ç äº‘</a>
+        	<a href="javascript:if(confirm('https://github.com/yunchaoyun/active4j-boot  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/yunchaoyun/active4j-boot'" tppabs="https://github.com/yunchaoyun/active4j-boot" target="_blank" class="layui-btn layui-btn-warm btn28">github</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="layui-col-md4 layui-col-sm12">
+      <div class="alone-version-desc layui-text">
+        <h2>active4jå‰åç«¯åˆ†ç¦»ç‰ˆ</h2>
+        <p>
+          <span class="alone-badge">
+          	åŸºäºspringboot2æ„å»ºå‰åç«¯åˆ†ç¦»
+          </span>
+        </p>
+        <i class="layui-badge" style="position: absolute; right: 30px; top: 30px;">hot</i>
+        <ul>
+          <li style="color: #FF5722;">åŸºäºSpringMVC+Spring+mybatis</li>
+          <li style="color: #FF5722;">ä½¿ç”¨layuiä½œä¸ºå‰åç«¯åˆ†ç¦»çš„UIæ¡†æ¶</li>
+          <li style="color: #FF5722;">åŸºäºJWTé‰´æƒæœºåˆ¶</li>
+          <li>Apache Shiroä¸ºæƒé™æˆæƒå±‚</li>
+          <li>rediså¯¹å¸¸ç”¨æ•°æ®è¿›è¡Œç¼“å­˜</li>
+          <li>é›†æˆactivemqæ¶ˆæ¯é˜Ÿåˆ—</li>
+          <li>é›†æˆswagger2æ–‡æ¡£æ¡†æ¶</li>
+          <li>æä¾›äº†ç³»ç»Ÿå¸¸ç”¨åŠŸèƒ½è¿›è¡Œå°è£…</li>
+        </ul>
+        <div class="layui-btn-container">
+        	<a href="javascript:if(confirm('http://www.active4j.com/demo/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/demo/'" tppabs="http://www.active4j.com:9003/demo" target="_blank" class="layui-btn btn28">æ¼”ç¤º</a>
+        	<a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" target="_blank" class="layui-btn layui-btn-normal btn28">ç äº‘</a>
+        	<a href="javascript:if(confirm('https://github.com/yunchaoyun/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/yunchaoyun/active4j'" tppabs="https://github.com/yunchaoyun/active4j" target="_blank" class="layui-btn layui-btn-warm btn28">github</a>
+        </div>
+      </div>
+    </div>
+
+	<div class="layui-col-md4 layui-col-sm12">
+      <div class="alone-version-desc layui-text">
+        <h2>active4j-flowå·¥ä½œæµç‰ˆ</h2>
+        <p>
+          <span class="alone-badge">
+          	åŸºäºspringboot2+activiti7æ„å»º
+          </span>
+        </p>
+        <ul>
+          <li style="color: #FF5722;">åŸºäºSpringMVC+Spring+mybatis</li>
+          <li style="color: #FF5722;">åŸºäºactiviti7æµç¨‹å¼•æ“</li>
+          <li style="color: #FF5722;">å‰ç«¯é¡µé¢ä¸ºjsp+bootstrap</li>
+		  <li>Apache Shiroä¸ºæƒé™æˆæƒå±‚</li>
+          <li>é›†æˆåœ¨çº¿æµç¨‹è®¾è®¡å™¨</li>
+          <li>é›†æˆåœ¨çº¿è¡¨å•è®¾è®¡</li>
+          <li>é›†æˆæµç¨‹ç®¡ç†å¸¸ç”¨åŠŸèƒ½</li>
+        </ul>
+        <div class="layui-btn-container">
+        	<a href="javascript:if(confirm('http://www.active4j.com/flow/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ·şÎñÆ÷±¨¸æ¸ÃÎÄ¼şÎ´ÕÒµ½¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.active4j.com/flow/'" tppabs="http://www.active4j.com:9006/flow" target="_blank" class="layui-btn btn28">æ¼”ç¤º</a>
+        	<a href="javascript:if(confirm('https://gitee.com/active4j/active4j-flow  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j-flow'" tppabs="https://gitee.com/active4j/active4j-flow" target="_blank" class="layui-btn layui-btn-normal btn28">ç äº‘</a>
+        	<a href="javascript:if(confirm('https://github.com/yunchaoyun/active4j-flow  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/yunchaoyun/active4j-flow'" tppabs="https://github.com/yunchaoyun/active4j-flow" target="_blank" class="layui-btn layui-btn-warm btn28">github</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class="layui-main alone-items layui-hide-xs" style="margin-top: 100px;">
+  <fieldset class="layui-elem-field layui-field-title">
+    <legend>é¡µé¢</legend>
+  </fieldset>
+</div>
+
+<div class="alone-preview layui-hide-xs">
+  <div class="alone-preview-title">
+    <span class="layui-show">active4j-jspç‰ˆ</span>
+    <span>active4j-bootç‰ˆ</span>
+    <span>active4jå‰åç«¯åˆ†ç¦»</span>
+  </div>
+  <div class="layui-main">
+    <div class="layui-carousel" id="LAY_preview" lay-filter="preview">
+      <div carousel-item>
+        <div>
+          <a href="" target="_blank">
+            <img src="jspdemo.png" tppabs="https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/jspdemo.png" alt="active4j-jspç‰ˆ">
+          </a>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="boot-15.png" tppabs="https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/boot-15.png" alt="active4j-bootç‰ˆ">
+          </a>
+        </div>
+        <div>
+          <a href="" target="_blank">
+            <img src="boot-10.png" tppabs="https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/boot-10.png" alt="active4jå‰åç«¯åˆ†ç¦»ç‰ˆ">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layui-footer footer footer-index">
+  <div class="layui-main">
+    <p>Â© 2020 <a href="index.htm" tppabs="http://www.active4j.com/">active4j.com</a> MIT license</p>
+    <p>
+      <a href="javascript:if(confirm('http://www.yunchaoyun.com/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='http://www.yunchaoyun.com/'" tppabs="http://www.yunchaoyun.com/" target="_blank">çŸ­ä¿¡</a>
+      <a href="javascript:if(confirm('https://github.com/yunchaoyun/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://github.com/yunchaoyun/active4j'" tppabs="https://github.com/yunchaoyun/active4j" target="_blank" rel="nofollow">GitHub</a>
+      <a href="javascript:if(confirm('https://gitee.com/active4j/active4j  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://gitee.com/active4j/active4j'" tppabs="https://gitee.com/active4j/active4j" target="_blank" rel="nofollow">ç äº‘</a>
+      <a href="about.html" tppabs="http://www.active4j.com/about.html" class="layui-hide-xs">æˆ‘ä»¬</a>
+      <a href="javascript:if(confirm('https://beian.miit.gov.cn/  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://beian.miit.gov.cn/'" tppabs="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">è‹ICPå¤‡15032382å·-1</a>
+    </p>
+    <div class="site-union">
+      <p class="site-union-desc">
+        <span>
+          æ‰«æä¸‹æ”¾çš„äºŒç»´ç å…³æ³¨æˆ‘ä»¬ï¼ŒåŠ å…¥æˆ‘ä»¬
+        </span>
+      </p>
+      <p>    
+        <a href="javascript:if(confirm('https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/active4j-wx.jpg  \n\n¸ÃÎÄ¼şÎŞ·¨ÓÃ Teleport Ultra ÏÂÔØ, ÒòÎª ËüÊÇÒ»¸öÓò»òÂ·¾¶Íâ²¿±»ÉèÖÃÎªËüµÄÆôÊ¼µØÖ·µÄµØÖ·¡£  \n\nÄãÏëÔÚ·şÎñÆ÷ÉÏ´ò¿ªËü?'))window.location='https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/active4j-wx.jpg'" tppabs="https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/active4j-wx.jpg" target="_blank" rel="nofollow" sponsor="active4j">
+          <img src="active4j-wx.jpg" tppabs="https://zh-active4j-1251505225.cos.ap-shanghai.myqcloud.com/active4jboot/active4j-wx.jpg">
+        </a>    
+      </p>
+    </div>
+  </div>
+</div>
+<!-- è®©IE8/9æ”¯æŒåª’ä½“æŸ¥è¯¢ï¼Œä»è€Œå…¼å®¹æ …æ ¼ -->
+<!--[if lt IE 9]>
+  <script src="html5.min.js" tppabs="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="respond.min.js" tppabs="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]--> 
+<script src="layui.js" tppabs="http://www.active4j.com/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+layui.use(['element', 'carousel'], function(){
+	var element = layui.element;
+	var carousel = layui.carousel;
+	var $ = layui.$;
+	
+	//è½®æ’­å®ä¾‹
+	  carousel.render({
+	    elem: '#LAY_preview'
+	    ,width: '100%'
+	    ,height: '619px'
+	    ,interval:3000
+	    ,anim: 'fade'
+	    ,indicator: 'outside'
+	  });
+	  
+	  carousel.on('change(preview)', function(obj){
+	    $(".alone-preview-title span").removeClass("layui-show");
+	    $(".alone-preview-title").children('span').eq(obj.index).addClass('layui-show');
+	  });  
+});
+</script>
+</body>
+</html>

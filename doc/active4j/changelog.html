@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    <title>active4j-基于java通用快速开发框架</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="keywords" content="active4j通用快速开发框架|springboot|江苏众禾|江苏云潮">
+	<meta name="description" content="active4j通用快速开发框架，是基于Spring Boot整合开源框架，以Spring Framework为核心容器，Spring MVC为模型视图控制器，Mybatis为数据访问层， Shiro为权限授权层，Redis对常用数据进行缓存的开发平台">
+    <meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"  content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="layui.css" tppabs="http://www.active4j.com/layui/css/layui.css" media="all">
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="page.css" tppabs="http://www.active4j.com/static/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    <script src="vue.js" tppabs="http://www.active4j.com/static/js/vue.js"></script>
+
+    
+
+    <script>
+      Vue.config.productionTip = false
+      window.PAGE_TYPE = "guide"
+    </script>
+
+    <!-- ga -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46852172-3', 'http://www.active4j.com/cn.vuejs.org');
+      ga('send', 'pageview');
+    </script>
+    
+    <style type="text/css">
+	.nopath {
+   		pointer-events: none;
+	}
+	
+</style>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "hm.js-b758444607141baddf41d6889529035e"/*tpa=https://hm.baidu.com/hm.js?b758444607141baddf41d6889529035e*/;
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="index.htm" tppabs="http://www.active4j.com/"></a>
+    </div>
+    <div id="header">
+    <a class="logo" href="index.htm" tppabs="http://www.active4j.com/">
+      <img src="logo2.png" tppabs="http://www.active4j.com/static/images/logo2.png" alt="active4j">
+    </a>
+  <ul id="nav">
+    <li>
+</li>
+
+<li>
+  <a href="index.html" tppabs="http://www.active4j.com/index.html" class="nav-link">首页</a>
+</li>
+<li class="nav-dropdown-container resources">
+  <a href="#" class="nav-link">演示</a><span class="arrow"></span>
+  <ul class="nav-dropdown">
+    <li><a href="" class="nav-link">jsp版</a></li>
+    <li><a href="" class="nav-link">boot单体版</a></li>
+    <li><a href="" class="nav-link">前后端分离版</a></li>
+  </ul>
+</li>
+<li>
+  <a href="doc.html" tppabs="http://www.active4j.com/doc.html" class="nav-link">文档</a>
+</li>
+<li>
+  <a href="changelog.html" tppabs="http://www.active4j.com/changelog.html" class="nav-link">更新</a>
+</li>
+
+  </ul>
+</div>
+
+<div id="main" class="fix-sidebar">
+        
+  
+
+<div class="sidebar">
+  <div class="sidebar-inner">
+    
+    <div class="list" id="docMenu">
+      
+  
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="content guide with-sidebar index-guide" id="docContent">
+  
+  
+	<h1 align="center">Active4j 更新日志</h1>
+</div>
+      </div>
+      <script src="smooth-scroll.min.js" tppabs="http://www.active4j.com/static/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="css.escape.js" tppabs="http://www.active4j.com/static/js/css.escape.js"></script>
+    <script src="common.js" tppabs="http://www.active4j.com/static/js/common.js"></script>
+
+    <script src="layui.js" tppabs="http://www.active4j.com/layui/layui.js"></script>
+    <script>
+  layui.config({
+    base: 'dist/' 
+  }).use(['changeLog','view','setter'], function() {
+	 var $ = layui.$;
+	 var layer = layui.layer;
+	 var setter = layui.setter;
+	 
+	$.post(setter.baseUrl + '/cms/index/getDocMenu', {category:1}, function(res) {
+	 	if(res.success) {
+			$("#docMenu").html();
+			$("#docMenu").html(res.data);
+		}
+	 });
+	 
+	  
+  }); 
+</script>
+  </body>
+</html>
