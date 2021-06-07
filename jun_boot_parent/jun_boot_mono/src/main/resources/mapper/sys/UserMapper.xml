@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jun.plugin.modules.sys.mapper.UserMapper">
+	<resultMap id="BaseResultMap" type="com.jun.plugin.modules.sys.model.SysUser">
+		<id column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="salt" property="salt" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="sex" property="sex" jdbcType="INTEGER" />
+		<result column="age" property="age" jdbcType="INTEGER" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="last_login_time" property="lastLoginTime"
+			jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		user_id, username, password, salt, email, phone, sex, age, status,
+		create_time, update_time, last_login_time
+	</sql>
+
+	<update id="updateStatusBatch" parameterType="map">
+		UPDATE
+			sys_user
+		SET
+			status=#{status}, update_time=now()
+		where
+			user_id in
+		<foreach collection="userIds" item="item" index="index" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</update>
+
+	<select id="listAllUsersByRoleIds" resultMap="BaseResultMap">
+		SELECT
+			a.user_id, a.username, a.password, a.salt, a.email, a.phone, a.sex,
+			a.age, a.status, a.create_time, a.update_time, a.last_login_time
+		FROM
+			sys_user a
+		INNER JOIN
+			sys_user_role b ON a.user_id = b.user_id
+		WHERE
+			b.role_id IN
+		<foreach collection="array" item="item" index="index" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</select>
+
+</mapper>

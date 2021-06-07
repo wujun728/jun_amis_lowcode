@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('用户授权')" />
+</head>
+<body>
+	<section class="content">
+		<input class="hidden" name="userId" id="userId" th:value="${userId}">
+		<table id="assignRoleTable"></table>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		var userIdChecked = $("#userId").val();
+		var roleColumns = [ {
+			checkbox : true
+		}, {
+			field : 'roleId',
+			title : '角色ID',
+			align : "center"
+		}, {
+			field : 'name',
+			title : '角色名称',
+			align : "center"
+		}, {
+			field : 'description',
+			title : '角色描述',
+			align : "center"
+		}, {
+			field : 'status',
+			title : '角色状态',
+			align : "center",
+			formatter : function(value, row, index) {
+				return row.status == '1' ? "有效" : "删除";
+			}
+		} ];
+		var roleOptions = {
+			id : "#assignRoleTable",
+			url : "/user/assign/role/list",
+			columns : roleColumns,
+			pagination : false,
+			queryParams : queryRoleParams,
+			onLoadSuccess : function() { //加载成功时执行
+				$.table.checkTableBy("#assignRoleTable", {
+					field : "roleId",
+					values : selectRoleIds
+				});
+			},
+			responseHandler : handleRoleData,
+		}
+		$.table.initTable(roleOptions);
+		/*查询角色参数*/
+		function queryRoleParams(params) {
+			var temp = {
+				userId : userIdChecked
+			};
+			return temp;
+		}
+		/*处理角色数据*/
+		function handleRoleData(res) {
+			selectRoleIds = res.hasRoles;
+			return res.rows;
+		}
+		/*分配角色保存*/
+		function submitHandler() {
+			var checkedRows = $.table.selectMutiData("#assignRoleTable");
+			var roleIdStr = "";
+			if (checkedRows) {
+				$.each(checkedRows, function(i, item) {
+					roleIdStr += (item.roleId + ",");
+				})
+				roleIdStr = roleIdStr.substring(0, roleIdStr.length - 1);
+			}
+			$.common.postAjax('/user/assign/role', {
+				userId : userIdChecked,
+				roleIdStr : roleIdStr
+			}, function(data) {
+				if (data.status == 200) {
+					parent.layer.closeAll('iframe'); // 关闭当前frame
+                	parent.$.table.refreshTable();
+                	parent.toastr.success(data.msg);
+				} else {
+					parent.toastr.error(data.msg)
+				}
+			})
+		}
+	</script>
+</body>
+</html>

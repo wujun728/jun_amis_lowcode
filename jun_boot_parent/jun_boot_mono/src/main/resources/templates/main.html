@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('首页数据')" />
+</head>
+<body class="gray-bg">
+	<section class="content">
+		<div class="row">
+			<div class="col-lg-3 col-xs-6">
+				<div class="small-box  bg-yellow">
+					<div class="inner">
+						<h3>0.00</h3>
+						<p>今日收款</p>
+					</div>
+					<div class="icon">
+						<i class="fa fa-jpy"></i>
+					</div>
+					<a href="#" class="small-box-footer">详细信息 <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-3 col-xs-6">
+				<div class="small-box bg-aqua">
+					<div class="inner">
+						<h3>0</h3>
+						<p>今日订单数</p>
+					</div>
+					<div class="icon">
+						<i class="fa fa-cart-plus"></i>
+					</div>
+					<a href="#" class="small-box-footer">详细信息 <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-3 col-xs-6">
+				<div class="small-box bg-red">
+					<div class="inner">
+						<h3>0.00</h3>
+						<p>累计收款</p>
+					</div>
+					<div class="icon">
+						<i class="fa fa-btc"></i>
+					</div>
+					<a href="#" class="small-box-footer">详细信息 <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-3 col-xs-6">
+				<div class="small-box bg-green">
+					<div class="inner">
+						<h3>0</h3>
+						<p>累计订单数</p>
+					</div>
+					<div class="icon">
+						<i class="fa fa-car"></i>
+					</div>
+					<a href="#" class="small-box-footer">详细信息 <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<div class="clearfix visible-sm-block"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"></h3>
+						<div class="box-tools pull-right">
+							<button class="btn btn-box-tool" data-widget="collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<button class="btn btn-box-tool" data-widget="remove">
+								<i class="fa fa-times"></i>
+							</button>
+						</div>
+					</div>
+					<div class="box-body">
+						<div class="col-md-12">
+							<div class="col-md-6">
+								<div id="pieChart" style="height: 400px;"></div>
+							</div>
+							<div class="col-md-6">
+								<div id="histogramChart" style="height: 400px;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="box box-info">
+					<div class="box-header with-border">
+						<h3 class="box-title"></h3>
+						<div class="box-tools pull-right">
+							<button class="btn btn-box-tool" data-widget="collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<button class="btn btn-box-tool" data-widget="remove">
+								<i class="fa fa-times"></i>
+							</button>
+						</div>
+					</div>
+					<div class="box-body">
+						<div class="col-md-12">
+							<div id="lineChart" style="height: 400px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script th:src="@{/plugins/echarts/echarts.min.js}"></script>
+	<script>
+	$(function(){
+		$.modal.loading("正在处理中，请稍后...");
+		var pieChart = echarts.init(document.getElementById('pieChart'));
+		var pieOption = {
+			title: {
+				text: '饼状图实例'
+			},
+			series : [ {
+				name : '访问来源',
+				type : 'pie', // 设置图表类型为饼图
+				radius : '55%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+				data : [ // 数据数组，name 为数据项名称，value 为数据项值
+				{
+					value : 235,
+					name : '视频广告'
+				}, {
+					value : 274,
+					name : '联盟广告'
+				}, {
+					value : 310,
+					name : '邮件营销'
+				}, {
+					value : 335,
+					name : '直接访问'
+				}, {
+					value : 400,
+					name : '搜索引擎'
+				} ]
+			} ]
+		};
+		pieChart.setOption(pieOption);
+		// ajax 异步调用接口
+		/* $.ajax({
+			type : 'get',
+			url : 'https://www.runoob.com/static/js/echarts_test_data.json',
+			async : true,
+			jsonp : 'jsoncallback',
+			success : function(data) {
+				pieChart.setOption({
+					series : [ {
+						name : '访问来源',
+						type : 'pie', // 设置图表类型为饼图
+						radius : '55%', // 饼图的半径，外半径为可视区尺寸（容器高宽中较小一项）的 55% 长度。
+						data : data.data_pie
+					} ]
+				})
+			}
+		}) */
+		var histogramChart = echarts.init(document.getElementById('histogramChart'));
+		var histogramOption = {
+			title : {
+				text : '柱状图实例'
+			},
+			xAxis : {
+				data : [ "衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子" ]
+			},
+			yAxis : {},
+			series : [ {
+				name : '销量',
+				type : 'bar',
+				data : [ 5, 20, 36, 10, 10, 20 ]
+			} ]
+		};
+		histogramChart.setOption(histogramOption);
+		var lineChart = echarts.init(document.getElementById('lineChart'));
+		var lineOption = {
+			xAxis : {
+				type : 'category',
+				data : [ "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月" ],
+			},
+			yAxis : {
+				type : 'value'
+			},
+			series : [ {
+				data : [ 30.05, 35, 36, 42, 50, 61, 72, 76, 78, 80, 82, 83 ],
+				type : 'line'
+			} ]
+		};
+		lineChart.setOption(lineOption);
+		$.modal.closeLoading();
+	});
+	</script>
+</body>
+</html>

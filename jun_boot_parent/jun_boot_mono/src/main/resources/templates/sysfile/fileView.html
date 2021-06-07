@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('文件在线预览')" />
+    <link th:href="@{/plugins/magnify/jquery.magnify.css}" rel="stylesheet">
+</head>
+<body style="margin:0;background:#ececec;">
+<input type="hidden" th:value="${extName}" id="extName">
+<input type="hidden" th:value="${fileUrl}" id="fileUrl">
+<div style="font-size:13px;position:absolute;bottom:8px;left:10px;z-index:100000;">
+	<a href="${ctxStatic}/sys/comm/download?fileId=${fileUrl?keep_after_last("fileUploadView?fileId=")}" style="color:#111;">下载文件到本地硬盘</a> &nbsp;
+</div>
+<th:block th:include="include :: footer" />
+<script th:src="@{/plugins/magnify/jquery.magnify.min.js}"></script>
+<script th:src="@{/plugins/pdf/pdfobject.min.js}"></script>
+<script th:src="@{/plugins/video/video.js}"></script>
+<script>
+    var extName = $("#extName").val();
+    var fileUrl = $("#fileUrl").val();
+    if(!startWith(fileUrl,"http://") || startWith(fileUrl,"https://")) {
+        if(startWith(fileUrl,"/")){
+            fileUrl = fileUrl.split("/")[1];
+        }else{
+            fileUrl = fileUrl;
+        }
+    }
+    if (extName == '.pdf'){
+        if (PDFObject.supportsPDFs){
+            document.write('<div id="pdfViewer" class="box"></div>');
+            PDFObject.embed(fileUrl, "#pdfViewer" );
+        }else{
+            document.write('<div class="box" style="display:flex;align-items:center"><div style="flex:1;display:flex;justify-content:center">该文件不支持在线预览</div></div>');
+        }
+    }else if (extName == '.doc' || extName == '.xls' || extName == '.ppt' || extName == '.xlsx'){
+        document.write('<iframe id="mainFrame" name="mainFrame" class="box" style="border:0;"></iframe>');
+        $('#mainFrame').attr('src', 'https://view.officeapps.live.com/op/view.aspx?src=' + encodeURIComponent(fileUrl));
+    }else if (extName == '.txt' || extName == '.html'){
+        document.write('<iframe id="mainFrame" name="mainFrame" class="box" style="border:0;background:#fff;"></iframe>');
+        $('#mainFrame').attr('src', (fileUrl));
+    }else if (extName == '.img' || extName == '.png' || extName == ".jpg"){
+        document.write('<div class="box" style="display:flex;align-items:center"><div style="flex:1;display:flex;justify-content:center"><a href="'+fileUrl+'"></a></div></div>');
+        $('.box a').magnify({
+        	headToolbar: [],
+        	footToolbar: ['zoomIn', 'zoomOut', 'fullscreen', 'actualSize', 'rotateLeft', 'rotateRight'],
+            title: false,
+            initMaximized: true
+        }).click();
+    }else if (extName == '.mp3' || extName == '.mp4' || extName == '.wav'){
+    	document.write('<div id="video" class="box"></div>');
+    	new Player({
+    	    id: 'video',
+    	    url: fileUrl,
+    	    width: 600,
+    	    height: 337.5,
+    	    playbackRate: [0.5, 1, 1.5, 2],
+    	    pip: true,
+    	    lang: 'zh-cn'
+    	});  
+    }else{
+        document.write('<div class="box" style="display:flex;align-items:center"><div style="flex:1;display:flex;justify-content:center">该文件不支持在线预览</div></div>');
+    }
+    $(function(){
+        var win = window;
+        if (parent.$ && window.name != ''){
+            var iframe = parent.$('.layui-layer iframe[name='+window.name+']');
+            if (iframe && iframe.length >= 1){ win = iframe[0].contentWindow; }
+        }
+        var box = $('.box, .magnify-modal'), boxResize = function(){
+            box.height(win.innerHeight - 30).width(win.innerWidth);
+        };
+        $(window).resize(function(){
+            boxResize();
+            setTimeout(function(){
+                boxResize();
+            }, 500);
+        });
+        boxResize();
+    });
+
+    function startWith(value, start) {
+        var reg = new RegExp("^" + start);
+        return reg.test(value)
+    }
+</script>
+</body>
+</html>

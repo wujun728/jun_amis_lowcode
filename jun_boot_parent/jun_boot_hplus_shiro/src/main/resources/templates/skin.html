@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<th:block th:include="include :: header('切换主题')" />
+    <style type="text/css">
+		.list-unstyled{margin:10px;}
+		.full-opacity-hover{opacity:1;filter:alpha(opacity=1);border:1px solid #fff}
+		.full-opacity-hover:hover{border:1px solid #f00;}
+	</style>
+</head>
+<body class="gray-bg">
+<ul class="list-unstyled clearfix">
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin='skin-blue' style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style='display:block; width: 20%; float: left; height: 13px; background: #367fa9;'></span>
+			<span style='display:block; width: 80%; float: left; height: 13px; background: #367fa9;'></span>
+			<span style='display:block; width: 20%; float: left; height: 30px; background: #222d32;'></span>
+			<span style='display:block; width: 80%; float: left; height: 30px; background: #f4f5f7;'></span>
+		</a>
+		<p class="text-center">蓝</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-black" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style='display:block; width: 20%; float: left; height: 13px; background: #fefefe;'></span>
+			<span style='display:block; width: 80%; float: left; height: 13px; background: #fefefe;'></span>
+			<span style='display:block; width: 20%; float: left; height: 30px; background: #222;'></span>
+			<span style='display:block; width: 80%; float: left; height: 30px; background: #f4f5f7;'></span>
+		</a>
+		<p class="text-center">黑</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-purple" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-purple-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-purple'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #222d32"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">紫</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-green" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-green-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-green'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #222d32"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">绿</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-red" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-red-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-red'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #222d32"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">红</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-yellow" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-yellow-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-yellow'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #222d32"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">黄</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-blue-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px; background: #367fa9"></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-light-blue'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">蓝灰</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-black-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px; background: #fefefe"></span>
+			<span style="width: 80%; float: left; height: 13px; background: #fefefe"></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">黑灰</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-purple-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-purple-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-purple'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">紫灰</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-green-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-green-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-green'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">绿灰</p>
+	</li>
+	
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-red-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-red-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-red'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">红灰</p>
+	</li>
+	<li style="float:left; width: 33.33333%; padding: 5px;">
+		<a href="javascript:" data-skin="skin-yellow-light" style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)" class="clearfix full-opacity-hover">
+			<span style="width: 20%; float: left; height: 13px;" class='bg-yellow-active'></span>
+			<span style="width: 80%; float: left; height: 13px;" class='bg-yellow'></span>
+			<span style="width: 20%; float: left; height: 30px; background: #f9fafc"></span>
+			<span style="width: 80%; float: left; height: 30px; background: #f4f5f7"></span>
+		</a>
+		<p class="text-center">黄灰</p>
+	</li>
+</ul>
+<th:block th:include="include :: footer" />
+<script type="text/javascript">
+	//皮肤样式列表
+	var skins = [
+	    "skin-blue",
+	    "skin-black",
+	    "skin-red",
+	    "skin-yellow",
+	    "skin-purple",
+	    "skin-green",
+	    "skin-blue-light",
+	    "skin-black-light",
+	    "skin-red-light",
+	    "skin-yellow-light",
+	    "skin-purple-light",
+	    "skin-green-light"
+	];
+	
+	$("[data-skin]").on('click',
+		function(e) {
+		    var skin = $(this).data('skin');
+		    $.each(skins, function (i) {
+		    	parent.$("body").removeClass(skins[i]);
+	        });
+		    parent.$("body").addClass(skin);
+		    store('skin', skin);
+	        return false;
+		}
+	);
+	
+    function store(name, val) {
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem(name, val);
+        } else {
+            window.alert('Please use a modern browser to properly view this template!');
+        }
+    }
+
+    function get(name) {
+        if (typeof (Storage) !== "undefined") {
+            return localStorage.getItem(name);
+        } else {
+            window.alert('Please use a modern browser to properly view this template!');
+        }
+    }
+</script>
+</body>
+</html>

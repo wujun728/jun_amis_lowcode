@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('日志列表')" />
+</head>
+<body class="gray-bg">
+<section class="content">
+	<div class="box box-default">
+		<div class="box-body">
+		    <form id="formSearch">
+				<div class="select-list">
+					<ul>
+						<li>
+							任务名称：<input type="text" name="jobNameSearch" id="jobNameSearch" placeholder="请输入任务名称"/>
+						</li>
+						<li>
+							任务状态: <select id="status">
+								<option value="">请选择</option>
+								<option value="0">成功</option>
+								<option value="1">失败</option>
+							</select>
+						</li>
+						<li>
+							<a class="btn btn-primary btn-rounded btn-sm" id="btn_query"><i class="fa fa-search"></i>&nbsp;搜索</a>
+							<a class="btn btn-warning btn-rounded btn-sm" id="btn_reset"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+						</li>
+					</ul>
+				</div>
+			</form>
+	    </div>
+    </div>
+    <div class="jax-box-table">
+        <div id="toolbar">
+            <shiro:hasPermission name="sysJob:batchDelete">
+                <button id="btn_batch_delete" type="button" class="btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+                </button>
+            </shiro:hasPermission>
+            <a onclick="openJobTab()" type="button" class="btn btn-info btn-sm">
+                <span class="fa fa-reply" aria-hidden="true"></span>返回任务
+            </a>
+        </div>
+        <table id="table"></table>
+    </div>
+</section>
+<th:block th:include="include :: footer" />
+<script>
+    var columns=[
+        {checkbox: true },
+        {
+            field: 'jobName',
+            title: '任务名称',
+            align : "center"
+        }, {
+            field: 'jobGroup',
+            title: '任务分组',
+            align : "center"
+        },
+        {
+            field: 'invokeTarget',
+            title: '调用目标字符串',
+            align : "center"
+        },
+        {
+            field: 'jobMessage',
+            title: '日志信息',
+            align : "center"
+        },
+        {
+            field: 'status',
+            title: '任务状态',
+            align : "center",
+            formatter : function(value, row, index) {
+            	if (row.status == 1) {
+					return '失败';
+				} else {
+					return '成功';
+				}
+            }
+        },
+        {
+            field: 'createTime',
+            title: '创建时间',
+            align : "center"
+        },
+        {
+            field : 'operation',
+            title : '操作',
+            align : "center",
+            formatter : function(value, row, index) {
+                return '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="jobloginfo('+row.jobLogId+')"><i class="fa fa-edit"></i>详情</a> ';
+            }
+        }
+    ];
+    var options={
+        id:"#table",
+        url: '/sysjob/jobloglist',
+        columns: columns,
+        queryParams: queryParams
+    }
+    $.table.initTable(options);
+    //查询参数
+    function queryParams(params) {
+        var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
+            limit : params.limit, //页面大小
+            offset : params.offset, //页码
+            jobName: $("#jobNameSearch").val(),
+            status: $("#status").val()
+        };
+        return temp;
+    }
+    /*搜索*/
+    $("#btn_query").click(function(){
+    	$.table.refreshTable();
+    });
+    /*重置*/
+	$("#btn_reset").click(function() {
+		$.common.clearForm("formSearch");
+		$.table.refreshTable();
+	});
+  	//批量删除
+    $("#btn_batch_delete").click(function(){
+        var checkedRows= $.table.selectMutiData("#table");
+        if(checkedRows!=false){
+        	$.modal.confirm("确定删除选中的"+checkedRows.length+"条记录？",function () {
+                var jobLogIdStr="";
+                $.each(checkedRows, function (i, item) {
+                	jobLogIdStr+=(item.jobLogId+",");
+                })
+                jobLogIdStr=jobLogIdStr.substring(0,jobLogIdStr.length-1);
+                $.common.postAjax("/sysjob/logBatchDelete",{"jobLogIdStr":jobLogIdStr},function(data){
+                    if(data.status==200){
+                    	toastr.success("删除成功");
+                    	$.table.refreshTable("#table", true);
+                    }
+                })
+            })
+        }
+    });
+  	
+  	function jobloginfo(jobLogId){
+  		$.modal.dialog_detail("日志详情", "/sysjob/jobloginfo?jobLogId="+jobLogId);
+  	}
+  	
+	function openJobTab() {
+		createMenuItem("/sysJob", "定时任务");
+	}
+</script>
+</body>
+</html>

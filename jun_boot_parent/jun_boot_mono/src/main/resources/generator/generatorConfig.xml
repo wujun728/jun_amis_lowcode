@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!-- 选择pom.xml文件，击右键先择Run AS -> Maven Build… -> 在Goals框中输入：mybatis-generator:generate -->
+	<!-- 生成的文件与 generatorConfig.xml 在同一文件夹下的autocode内 -->
+	<context id="Mysql" targetRuntime="MyBatis3Simple"
+		defaultModelType="flat">
+		<property name="beginningDelimiter" value="`" />
+		<property name="endingDelimiter" value="`" />
+
+		<!-- 通用Mapper公共接口 -->
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="com.jun.plugin.common.mapper.MyMapper" />
+			<!-- 是否区分大小写，默认值 false -->
+			<property name="caseSensitive" value="true" />
+		</plugin>
+
+		<!--覆盖生成XML文件 -->
+		<plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
+
+		<commentGenerator>
+			<!-- suppressAllComments:阻止生成注释，默认为false -->
+			<property name="suppressAllComments" value="false" />
+			<!-- suppressDate:阻止生成的注释包含时间戳，默认为false -->
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/db_boot?useUnicode=true&amp;useSSL=true&amp;serverTimezone=GMT%2B8"
+			userId="root" password="">
+			<property name="nullCatalogMeansCurrent" value="true" />
+		</jdbcConnection>
+
+		<!-- 对应生成的pojo所在包 -->
+		<javaModelGenerator targetPackage="autocode.modal" targetProject="src/main/resources/generator" />
+
+		<!-- 对应生成的mapper所在目录 -->
+		<sqlMapGenerator targetPackage="autocodecode.mapper" targetProject="src/main/resources/generator" />
+
+		<!-- 对应生成的mapper接口所在包 -->
+		<javaClientGenerator targetPackage="autocode.mapper" targetProject="src/main/resources/generator" type="XMLMAPPER" />
+
+		<table tableName="sys_file" domainObjectName="SysFile">
+
+		</table>
+	</context>
+</generatorConfiguration>

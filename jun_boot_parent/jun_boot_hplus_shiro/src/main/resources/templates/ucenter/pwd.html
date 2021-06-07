@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('修改密码')" />
+</head>
+<body>
+	<section class="content">
+		<form class="form-horizontal" method="post" id="pwdFrom">
+			<div class="box-body">
+				<div class="form-group">
+					<label for="oldPassword" class="col-sm-2 control-label">旧密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="oldPassword"  name="oldPassword" placeholder="请输入旧密码" require="必填项" nochinese="密码不能包括中文">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="newPassword" class="col-sm-2 control-label">新密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="newPassword"  name="newPassword" placeholder="请输入新密码" require="必填项" nochinese="密码不能包括中文">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="confirmNewPassword" class="col-sm-2 control-label">重复密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="confirmNewPassword"  name="confirmNewPassword" placeholder="请重复输入新密码" require="必填项" nochinese="密码不能包括中文">
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		function submitHandler() {
+			if (doValidForm(pwdFrom)) {
+				var formData = $("#pwdFrom").serialize();
+				$.ajax({
+					url : '/user/changePassword',
+					type : 'POST',
+					dataType : "json",
+					data : formData,
+					success : function(data) {
+						if (data.status == 200) {
+							parent.layer.closeAll('iframe'); // 关闭当前frame
+							parent.layer.msg(data.msg, {icon : 1});
+						} else {
+							layer.msg(data.msg, {
+								icon : 2
+							});
+						}
+					}
+				});
+			}
+		}
+	</script>
+</body>
+</html>

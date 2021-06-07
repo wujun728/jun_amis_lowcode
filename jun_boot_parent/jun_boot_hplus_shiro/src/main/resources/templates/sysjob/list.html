@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('任务列表')" />
+</head>
+<body class="gray-bg">
+<section class="content">
+	<div class="box box-default" style="margin-bottom: 10px;">
+		<div class="box-body">
+			<div class="col-sm-12 search-collapse">
+				<form id="formSearch">
+					<div class="select-list">
+						<ul>
+							<li>
+								任务名称：<input type="text" name="jobNameSearch" id="jobNameSearch" placeholder="请输入任务名称"/>
+							</li>
+							<li>
+								<a class="btn btn-primary btn-rounded btn-sm" id="btn_query"><i class="fa fa-search"></i>&nbsp;搜索</a>
+								<a class="btn btn-warning btn-rounded btn-sm" id="btn_reset"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    <div class="jax-box-table">
+        <div id="toolbar">
+            <shiro:hasPermission name="sysJob:add">
+                <button id="btn_add" type="button" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+                </button>
+            </shiro:hasPermission>
+            <shiro:hasPermission name="sysJob:batchDelete">
+                <button id="btn_batch_delete" type="button" class="btn btn-danger btn-sm">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+                </button>
+            </shiro:hasPermission>
+            <a onclick="openJobLogTab()" type="button" class="btn btn-info btn-sm">
+                <span class="fa fa-share" aria-hidden="true"></span>查看日志
+            </a>
+        </div>
+        <table id="table"></table>
+    </div>
+</section>
+<th:block th:include="include :: footer" />
+<script>
+	var runFlag="[[${@perms.hasPerm('sysJob:runSysJob')}]]";
+    var editFlag = "[[${@perms.hasPerm('sysJob:editSysJob')}]]";
+    var deleteFlag = "[[${@perms.hasPerm('sysJob:deleteSysJob')}]]";
+    var columns=[
+        {checkbox: true },
+        {
+            field: 'jobName',
+            title: '任务名称',
+            align : "center"
+        }, {
+            field: 'jobGroup',
+            title: '任务分组',
+            align : "center"
+        },
+        {
+            field: 'invokeTarget',
+            title: '调用目标字符串',
+            align : "center"
+        },
+        {
+            field: 'cronExpression',
+            title: '执行表达式',
+            align : "center"
+        },
+        {
+            field: 'status',
+            title: '任务状态',
+            align : "center",
+            formatter : function(value, row, index) {
+            	if (row.status == 1) {
+					return '<i class="fa fa-toggle-off text-info fa-2x" onclick="start(\''+ row.jobId + '\', \''+ row.jobGroup +'\')"></i>';
+				} else {
+					return '<i class="fa fa-toggle-on text-info fa-2x" onclick="stop(\''+ row.jobId + '\', \'' + row.jobGroup +'\')"></i>';
+				}
+            }
+        },
+        {
+            field: 'createTime',
+            title: '创建时间',
+            align : "center"
+        },
+        {
+            field : 'operation',
+            title : '操作',
+            align : "center",
+            formatter : function(value, row, index) {
+                var run = runFlag=="true"  ?  '<a class="btn btn-info btn-xs cursor-pointer" href="javascript:;" onclick="runTask(\''+ row.jobId + '\',\'' + row.jobGroup+ '\')"><i class="fa fa-play-circle-o"></i>执行</a> ' : '';
+                var edit = editFlag=="true"  ?  '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="editSysJob('+row.jobId+')"><i class="fa fa-edit"></i>编辑</a> ' : '';
+                var del = deleteFlag=="true"  ?  '<a class="btn btn-danger btn-xs cursor-pointer" href="javascript:;" onclick="deleteSysJob('+row.jobId+')"><i class="fa fa-remove"></i>删除</a> ' : '';
+                return run + edit + del;
+            }
+        }
+    ];
+    var options={
+        id:"#table",
+        url: '/sysjob/list',
+        columns: columns,
+        queryParams: queryParams
+    }
+    $.table.initTable(options);
+  	//查询参数
+    function queryParams(params) {
+        var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
+            limit : params.limit, //页面大小
+            offset : params.offset, //页码
+            jobName: $("#jobNameSearch").val()
+        };
+        return temp;
+    }
+    /*搜索*/
+    $("#btn_query").click(function(){
+    	$.table.refreshTable();
+    });
+    /*重置*/
+	$("#btn_reset").click(function() {
+		$.common.clearForm("formSearch");
+		$.table.refreshTable();
+	});
+    /*新增*/
+    $("#btn_add").click(function(){
+    	$.modal.dialog_open("新建任务", "/sysjob/add");
+    });
+    /*编辑*/
+    function editSysJob(jobId) {
+    	$.modal.dialog_open("编辑任务", "/sysjob/editSysJob?&jobId=" + jobId);
+    }
+    /*删除*/
+    function deleteSysJob(jobId) {
+    	$.modal.confirm("确定删除该任务吗？",function () {
+        	$.common.postAjax("/sysjob/deleteSysJob", {"jobId": jobId}, function (data) {
+        		if(data.status==200){
+                	$.table.refreshTable();
+					toastr.success(data.msg);
+				} else {
+					toastr.error(data.msg);
+				}
+            })
+        })
+    }
+  	//批量删除
+    $("#btn_batch_delete").click(function(){
+        var checkedRows= $.table.selectMutiData("#table");
+        if(checkedRows!=false){
+        	$.modal.confirm("确定删除选中的"+checkedRows.length+"条记录？",function () {
+                var jobIdStr="";
+                $.each(checkedRows, function (i, item) {
+                	jobIdStr+=(item.jobId+",");
+                })
+                jobIdStr=jobIdStr.substring(0,jobIdStr.length-1);
+                $.common.postAjax("/sysjob/batchDelete",{"jobIdStr":jobIdStr},function(data){
+                    if(data.status==200){
+                    	$.table.refreshTable();
+    					toastr.success(data.msg);
+    				} else {
+    					toastr.error(data.msg);
+    				}
+                })
+            })
+        }
+    });
+ 	// 运行任务
+	function runTask(jobId, jobGroup){
+		$.common.postAjax("/sysjob/runSysJob",{"jobId": jobId, "jobGroup": jobGroup},function(data){
+        	if(data.status==200){
+        		toastr.success(data.msg);
+        	}else{
+        		toastr.error(data.msg);
+        	}
+    	});
+	}
+	
+	/* 调度任务-停用 */
+	function stop(jobId, jobGroup) {
+		$.modal.confirm('确认要停用任务吗？',function () {
+			$.common.postAjax("/sysjob/changeStatus", {"jobId": jobId, "jobGroup": jobGroup, "status": 1 }, function (data) {
+                if (data.status == 200) {
+                	$.table.refreshTable();
+                	toastr.success(data.msg);
+            	}else{
+            		toastr.error(data.msg);
+            	}
+            })
+        })
+	}
+
+	/* 调度任务-启用 */
+	function start(jobId, jobGroup) {
+		$.modal.confirm('确认要启动任务吗？',function () {
+			$.common.postAjax("/sysjob/changeStatus", {"jobId": jobId, "jobGroup": jobGroup, "status": 0 }, function (data) {
+				if (data.status == 200) {
+                	$.table.refreshTable();
+                	toastr.success(data.msg);
+            	}else{
+            		toastr.error(data.msg);
+            	}
+            })
+        })
+	}
+	
+	function openJobLogTab() {
+		createMenuItem("/sysJobLog", "任务日志");
+	}
+</script>
+</body>
+</html>

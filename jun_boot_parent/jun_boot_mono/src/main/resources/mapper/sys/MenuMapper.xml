@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jun.plugin.modules.sys.mapper.MenuMapper">
+	<resultMap id="BaseResultMap" type="com.jun.plugin.modules.sys.model.SysMenu">
+		<id column="menu_id" property="menuId" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="description" property="description" jdbcType="VARCHAR" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+		<result column="perms" property="perms" jdbcType="VARCHAR" />
+		<result column="parent_id" property="parentId" jdbcType="INTEGER" />
+		<result column="type" property="type" jdbcType="INTEGER" />
+		<result column="order_num" property="orderNum" jdbcType="INTEGER" />
+		<result column="icon" property="icon" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="INTEGER" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		menu_id, name, description, url, perms, parent_id, type, order_num, icon, status, create_time, update_time
+	</sql>
+
+	<select id="listPermsByUserId" resultType="java.lang.String">
+		SELECT
+			DISTINCT p.perms
+		FROM
+			sys_menu p
+		LEFT JOIN
+			sys_role_menu rp ON p.menu_id = rp.menu_id
+		LEFT JOIN
+			sys_user_role ur ON rp.role_id = ur.role_id
+		WHERE
+			ur.user_id = #{userId} AND p.perms is not null AND p.perms!='' AND p.status=1
+	</select>
+
+	<select id="listMenusByRoleId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		SELECT
+			a.menu_id, b.name, b.parent_id
+		FROM
+			sys_role_menu a
+		LEFT JOIN
+			sys_menu b ON a.menu_id = b.menu_id
+		WHERE
+			a.role_id = #{roleId} AND b.status=1
+	</select>
+
+	<select id="listMenuByUserId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+		SELECT
+			DISTINCT p.menu_id, p.name, p.description, p.url, p.parent_id, p.icon, p.order_num
+		FROM
+			sys_menu p
+		LEFT JOIN
+			sys_role_menu rp ON p.menu_id = rp.menu_id
+		LEFT JOIN
+			sys_user_role ur on rp.role_id = ur.role_id
+		WHERE
+			ur.user_id = #{userId} AND p.type in(0,1) AND p.status=1
+		ORDER BY
+			p.order_num
+	</select>
+
+	<select id="countMenuByParentId" resultType="integer">
+		SELECT count(1) FROM sys_menu WHERE parent_id=#{menuId}
+	</select>
+
+</mapper>

@@ -1,0 +1,49 @@
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 9999
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    max-threads: 10
+    # Tomcat启动初始化的线程数，默认值25
+    min-spare-threads: 2
+
+# Spring配置
+spring:
+  profiles: 
+    active: druid
+  # 文件上传
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+  servlet:
+     multipart:
+       # 单个文件大小
+       max-file-size:  10MB
+       # 设置总上传的文件大小
+       max-request-size:  20MB
+  
+# MyBatis配置
+mybatis:
+    # 搜索指定包别名
+    typeAliasesPackage: com.github.wujun728.**.domain
+    # 配置mapper的扫描，找到所有的mapper.xml映射文件
+    mapperLocations: classpath*:mapper/**/*Mapper.xml
+    # 加载全局的配置文件
+    configLocation: classpath:mybatis/mybatis-config.xml
+
+# PageHelper分页插件
+pagehelper: 
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

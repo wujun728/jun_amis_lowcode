@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('菜单列表')" />
+</head>
+<body class="gray-bg">
+<section class="content">
+    <div class="jax-box-table">
+        <div id="toolbar" class="btn-group grid-table-toolbar">
+            <shiro:hasPermission name="menu:add">
+	            <button id="btn_add" type="button" class="btn btn-primary btn-sm">
+	                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+	            </button>
+            </shiro:hasPermission>
+        </div>
+        <!--<table id="table"></table>-->
+        <table id="menuTable" data-mobile-responsive="true" data-click-to-select="true">
+            <thead>
+            <tr>
+                <th data-field="selectItem" data-checkbox="true"></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</section>
+<th:block th:include="include :: footer" />
+<script>
+    var editFlag = "[[${@perms.hasPerm('menu:edit')}]]";
+    var deleteFlag = "[[${@perms.hasPerm('menu:delete')}]]";
+    var Menu = {
+        id: "menuTable",
+        table: null,
+        layerIndex: -1
+    };
+    /**
+     * 初始化表格的列
+     */
+    Menu.initColumn = function () {
+        var columns = [
+            {
+                field: 'selectItem',
+                radio: true
+            },
+            {
+                title: '菜单名称',
+                field: 'name',
+                align: 'left',
+            },
+            {title: '菜单URL',
+                field: 'url',
+                align: 'left',
+            },
+            {title: '权限标识',
+                field: 'perms',
+                align: 'center',
+            },
+            {
+                title: '类型',
+                field: 'type',
+                align: 'center',
+                width: '60px',
+                formatter:function(row,index){
+                    switch (row.type){
+                        case 0 : return '<span class="label label-primary">目录</span>';
+                        case 1 : return '<span class="label label-success">菜单</span>';
+                        case 2 : return '<span class="label label-warning">按钮</span>';
+                    }
+                }
+            },
+            {
+                title: '图标',
+                field: 'icon',
+                align: 'center',
+                width: '60px',
+                formatter:function(row,index){
+                    if(row.type!=2){
+                        return '<i class="'+row.icon+' fa-lg"></i>';
+                    }else{
+                        return "";
+                    }
+                }
+            },
+            {
+                title: '排序',
+                field: 'orderNum',
+                align: 'center',
+                width: '60px'
+            },
+            {
+                title: '权限描述',
+                field: 'description',
+                align: 'left',
+            },
+            {
+                field : 'operation',
+                title : '操作',
+                align : "center",
+                formatter : function(row, index) {
+                    var edit = editFlag=="true"  ?  '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="editMenu('+row.menuId+')"><i class="fa fa-edit"></i>编辑</a> ' : '';
+                    var del = deleteFlag=="true"  ?  '<a class="btn btn-danger btn-xs cursor-pointer" href="javascript:;" onclick="deleteMenu('+row.menuId+')"><i class="fa fa-remove"></i>删除</a> ' : '';
+                    
+                    return edit + del;
+                }
+            }]
+        return columns;
+    };
+    
+    /*加载权限列表*/
+    var colunms = Menu.initColumn();
+    var table = new TreeTable(Menu.id, "/menu/list", colunms,"menuId");
+    table.setExpandColumn(1);
+    table.setIdField("menuId");
+    table.setCodeField("menuId");
+    table.setParentCodeField("parentId");
+    table.setExpandAll(true);
+    table.setStriped(false);
+    table.init();
+    Menu.table = table;
+    /*编辑权限*/
+    function editMenu(menuId) {
+    	$.modal.dialog_openFull("编辑菜单", "/menu/edit?menuId="+menuId);
+    }
+    /*删除权限*/
+    function deleteMenu(menuId) {
+        $.modal.confirm("确认删除该权限？",function () {
+        	$.common.postAjax('/menu/delete',{"menuId":menuId},function (data) {
+                if(data.status==200){
+                    Menu.table.refresh();
+                    toastr.success(data.msg);
+                } else {
+                    toastr.error(data.msg);
+                }
+            });
+        })
+    }
+    $("#btn_add").on("click",function () {
+        var selections = $('#menuTable').bootstrapTreeTable('getSelections',{id:"menuId"});
+    	var menuId = 0;
+        if(selections.length==0){
+        	menuId = 0;
+        }else{
+        	menuId = selections[0].menuId;
+        }
+        $.modal.dialog_openFull("新增菜单", "/menu/add?menuId=" + menuId);
+    })
+</script>
+</body>
+</html>

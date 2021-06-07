@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('角色详情')" />
+</head>
+<body>
+	<section class="content">
+	    <form class="form-horizontal" id="roleDetailForm">
+	        <input class="hidden" name="roleId" th:value="${role.roleId}">
+	        <div class="box-body">
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">角色名称 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" th:value="${role.name}" class="form-control" name="name" require="必填项"  placeholder="">
+	                </div>
+	            </div>
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">角色描述 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" th:value="${role.description}" class="form-control" name="description" placeholder="">
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+    </section>
+    <th:block th:include="include :: footer" />
+    <script>
+        function submitHandler() {
+        	if(doValidForm(roleDetailForm)){
+                $.common.postAjax("/role/edit",$("#roleDetailForm").serialize(),function (data) {
+                    if(data.status==200){
+                    	parent.layer.closeAll('iframe'); // 关闭当前frame
+						parent.$.table.refreshTable();
+						parent.toastr.success(data.msg);
+					} else {
+						parent.toastr.error(data.msg);
+					}
+                })
+            }
+        }
+    </script>
+</body>
+</html>

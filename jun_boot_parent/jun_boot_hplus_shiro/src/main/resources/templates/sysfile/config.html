@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('存储配置')" />
+</head>
+<body>
+	<section class="content">
+		<form id="storageForm" class="form-horizontal">
+			<div class="box-body">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">存储类型：</label>
+					<div class="col-sm-8">
+						<label class="radio-inline pr-5">
+							<input type="radio" th:field="*{storageConfig.type}" name="type" value="0">本地
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" th:field="*{storageConfig.type}" name="type" value="1">七牛云
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" th:field="*{storageConfig.type}" name="type" value="2">阿里云
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" th:field="*{storageConfig.type}" name="type" value="3">腾讯云
+						</label>
+					</div>
+				</div>
+				<div id="local-form" th:class="${storageConfig.type==0?'':'display-none'}">
+					<div class="form-group">
+						<div class="col-sm-3  control-label">文件服务器域名：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.localDomain}" name="localDomain" placeholder="本地文件服务器域名" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">文件存储路径：</div>
+						<div class="col-sm-8">
+							<p>文件将保存在用户目录workDir的file下[[${workDir}]]file</p>
+						</div>
+					</div>
+				</div>
+				<div id="qiniu-form" th:class="${storageConfig.type==1?'':'display-none'}">
+					<div class="form-group">
+						<label class="col-sm-3  control-label">文件服务器域名：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qiniuDomain}" name="qiniuDomain" placeholder="七牛云绑定的域名">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3  control-label">路径前缀：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qiniuPrefix}" name="qiniuPrefix" placeholder="不设置默认为空">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3  control-label">AccessKey：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qiniuAccessKey}" name="qiniuAccessKey" placeholder="七牛云AccessKey">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3  control-label">SecretKey：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qiniuSecretKey}" name="qiniuSecretKey" placeholder="七牛云SecretKey">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3  control-label">BucketName：</label>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qiniuBucketName}" name="qiniuBucketName" placeholder="七牛云BucketName">
+						</div>
+					</div>
+				</div>
+				<div id="ali-form"
+					th:class="${storageConfig.type==2?'':'display-none'}">
+					<div class="form-group">
+						<div class="col-sm-3  control-label">文件服务器域名：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunDomain}" name="aliyunDomain" placeholder="阿里云绑定的域名" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">路径前缀：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunPrefix}" name="aliyunPrefix"  placeholder="不设置默认为空" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">EndPoint：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunEndPoint}" name="aliyunEndPoint" placeholder="阿里云EndPoint" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">AccessKeyId：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunAccessKeyId}" name="aliyunAccessKeyId" placeholder="阿里云AccessKeyId" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">AccessKeySecret：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunAccessKeySecret}" name="aliyunAccessKeySecret" placeholder="阿里云AccessKeySecret" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">BucketName：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.aliyunBucketName}" name="aliyunBucketName" placeholder="阿里云BucketName" />
+						</div>
+					</div>
+				</div>
+				<div id="qcloud-form"
+					th:class="${storageConfig.type==3?'':'display-none'}">
+					<div class="form-group">
+						<div class="col-sm-3  control-label">文件服务器域名：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudDomain}" name="qcloudDomain" placeholder="腾讯云绑定的域名" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">路径前缀：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudPrefix}" name="qcloudPrefix" placeholder="不设置默认为空" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">SecretId：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudSecretId}" name="qcloudSecretId" placeholder="腾讯云SecretId" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">SecretKey：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudSecretKey}" name="qcloudSecretKey" placeholder="腾讯云SecretKey" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">BucketName：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudBucketName}" name="qcloudBucketName" placeholder="腾讯云BucketName" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-3  control-label">Bucket所属地区：</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" th:value="${storageConfig.qcloudRegion}" name="qcloudRegion" placeholder="如：sh（可选值 ，华南：gz 华北：tj 华东：sh）" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		$("input[name=type]").on('change', function() {
+			$("#storageForm").find("input").each(function(){
+				$(this).removeAttr("require");
+			})
+			var ossType = $(this).val();
+			if (ossType === "0") {
+				$("#local-form").show();
+				$("#qiniu-form").hide();
+				$("#ali-form").hide();
+				$("#qcloud-form").hide();
+			} else if (ossType === "1") {
+				$("#local-form").hide();
+				$("#qiniu-form").show();
+				$("#ali-form").hide();
+				$("#qcloud-form").hide();
+			} else if (ossType === "2") {
+				$("#local-form").hide();
+				$("#qiniu-form").hide();
+				$("#ali-form").show();
+				$("#qcloud-form").hide();
+			} else if (ossType === "3") {
+				$("#local-form").hide();
+				$("#qiniu-form").hide();
+				$("#ali-form").hide();
+				$("#qcloud-form").show();
+			}
+		});
+
+		function submitHandler() {
+			// 设置表单验证
+			var ossType = $('input[name="type"]:checked').val();
+			if (ossType == 0) {
+				$("#local-form").find("input").each(function(){
+					$(this).attr("require", "必填项");
+				})
+			} else if (ossType == 1) {
+				$("#qiniu-form").find("input").each(function(){
+					if ($(this).attr("name") != "qiniuPrefix") {
+						$(this).attr("require", "必填项");
+					}
+				})
+			} else if (ossType == 2) {
+				$("#ali-form").find("input").each(function(){
+					if ($(this).attr("name") != "aliyunPrefix") {
+						$(this).attr("require", "必填项");
+					}
+				})
+			} else if (ossType == 3) {
+				$("#qcloud-form").find("input").each(function(){
+					if ($(this).attr("name") != "qcloudPrefix") {
+						$(this).attr("require", "必填项");
+					}
+				})
+			}
+			if (!doValidForm(storageForm)) {
+                return;
+            }
+			$.common.postAjax("/config/saveStorage", $("#storageForm").serialize(), function(data) {
+				if (data.status === 200) {
+					parent.layer.closeAll('iframe'); // 关闭当前frame
+					parent.toastr.success(data.msg);
+				} else {
+					parent.toastr.error(data.msg);
+				}
+			})
+		}
+	</script>
+</body>
+</html>

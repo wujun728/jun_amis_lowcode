@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('菜单详情')" />
+</head>
+<body>
+	<section class="content">
+	    <form class="form-horizontal" id="menuDetailForm">
+	        <input class="hidden" name="menuId" th:value="${menu.menuId}">
+	        <div class="box-body">
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">类型 :</label>
+	                <div class="col-sm-8">
+	                    <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="0" disabled="disabled"> 目录</label>
+	                    <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="1" disabled="disabled"> 菜单</label>
+	                    <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="2" disabled="disabled"> 按钮</label>
+	                </div>
+	            </div>
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">资源名称 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control" th:value="${menu.name}" name="name" require="必填项"  placeholder="">
+	                </div>
+	            </div>
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">上级资源 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control cursor-pointer" id="detailParentMenu" th:value="${parentName}" onclick="showMenu()" readonly="readonly">
+	                </div>
+	            </div>
+	            <div th:if="${menu.type} != 0" class="form-group">
+	                <label class="col-sm-3 control-label">资源url :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control" th:value="${menu.url}"  name="url" require="必填项" placeholder="">
+	                </div>
+	            </div>
+	            <div th:if="${menu.type} != 0" class="form-group">
+	                <label class="col-sm-3 control-label">资源标识 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control" th:value="${menu.perms}"  name="perms" require="必填项" placeholder="">
+	                </div>
+	            </div>
+	            <div th:if="${menu.type} != 2"  class="form-group">
+	                <label class="col-sm-3 control-label">排序 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control" th:value="${menu.orderNum}"   name="orderNum" require="必填项" max="3" plusinteger="" placeholder="">
+	                </div>
+	            </div>
+	            <div th:if="${menu.type} == 2"  class="form-group hidden">
+	                <label class="col-sm-3 control-label">排序 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control hidden" value="0"   name="orderNum" placeholder="">
+	                </div>
+	            </div>
+	            <div th:if="${menu.type} != 2"  class="form-group">
+	                <label class="col-sm-3 control-label">图标 :</label>
+	                <div class="col-sm-8">
+	                	<span class="form-control">当前图标为：<i id="iconShow" th:class="${menu.icon}"></i>  
+				            <a href="javascript:void(0);" onclick="selectIcon(2)" class="pull-right">
+								 点击选取图标
+							</a>
+						</span>
+	                    <input type="hidden" class="form-control" th:value="${menu.icon}" id="detailParentIcon" name="icon">
+	                </div>
+	            </div>
+	            <div class="form-group">
+	                <label class="col-sm-3 control-label">描述 :</label>
+	                <div class="col-sm-8">
+	                    <input type="text" class="form-control" th:value="${menu.description}"  name="description" id="description" placeholder="">
+	                </div>
+	            </div>
+	            <input type="hidden" class="form-control" id="detailParentId" name="parentId" th:value="${menu.parentId}" >
+	        </div>
+	    </form>
+	    <div id="menuLayer" style="display: none;padding-left: 20px;">
+	        <ul id="menuTree" class="ztree"></ul>
+	    </div>
+    </section>
+    <th:block th:include="include :: footer" />
+    <script>
+        var detailMenuType = "[[${menu.type}]]";
+        var detailMenuCheckedType = "[[${checkType}]]";/*详情中选中的上级的菜单类型*/
+        /*选择上级菜单树*/
+	    function showMenu(){
+	        var ztree;
+	        //树-初始化设置
+	        var treeSetting = {
+	            data: {
+	                simpleData: {
+	                    enable: true,
+	                    idKey: "menuId",
+	                    pIdKey: "parentId"
+	                }
+	            }
+	        };
+	        $.common.postAjax('/menu/list',{flag:"2"},function (data) {
+	            var topMenu = {
+	                name:"顶层菜单",
+	                menuId:0,
+	                parentId:"",
+	                type:0
+	            }
+	            data.unshift(topMenu);
+	            $.each(data,function (i, item) {
+	                item.open=true;
+	            })
+	            ztree=$.fn.zTree.init($("#menuTree"), treeSetting, data);
+	            layer.open({
+	                type: 1,
+	                offset: '50px',
+	                title: "选择菜单",
+	                area: ['300px', '450px'],
+	                shade: 0.3,
+	                shadeClose: false,
+	                content: jQuery("#menuLayer"),
+	                btn: ['确定', '取消'],
+	                btn1: function (index) {
+	                    var node = ztree.getSelectedNodes();
+	                    if(node.length==0){
+	                    	toastr.error("请选择一个菜单！",function(){});
+	                        return;
+	                    }
+	                    detailMenuCheckedType=node[0].type;
+                        //选择上级菜单
+                        $("#detailParentId").val(node[0].menuId);
+                        $("#detailParentMenu").val(node[0].name);
+	                    layer.close(index);
+	                }
+	            });
+	        });
+	    }
+	    function selectIcon(type){
+	    	var layerIndex = parent.layer.getFrameIndex(window.name);
+	    	parent.layer.open({
+	    		type : 2,
+	    		title : '选取图标',
+	    		closeBtn : 1,
+	    		anim: -1,
+	    		isOutAnim: false,
+	    		shadeClose : true,
+	    		shade : 0.3,
+	    		area : ['95%', '90%'],
+	    		content : '/toicon',
+	    		btn : [ '确定', '取消' ],
+	    		yes : function(index, layero) {
+	    			var iframeWin = layero.find('iframe')[0];
+	    			iframeWin.contentWindow.submitHandler(index,layero);
+	    		},
+	    		success: function(layero, index){
+	    			var body = parent.layer.getChildFrame('body', index);
+	    			body.find("#sid").attr("iconType", type + "," + layerIndex);
+	    		}
+	    	});
+	    }
+        function submitHandler() {
+            if(doValidForm(menuDetailForm)){
+                if(detailMenuCheckedType!=null){
+                    if((detailMenuType=="0"||detailMenuType=="1")&&detailMenuCheckedType!=0){
+                    	toastr.error("上级资源只能是目录类型！",function(){})
+                        return;
+                    }else if(detailMenuType=="2"&&detailMenuCheckedType!=1){
+                    	toastr.error("上级资源只能是菜单类型！",function(){})
+                        return;
+                    }
+                }
+                $.common.postAjax("/menu/edit",$("#menuDetailForm").serialize(),function (data) {
+                	if(data.status==200){
+                		parent.layer.closeAll('iframe'); // 关闭当前frame
+                    	parent.Menu.table.refresh();
+                        parent.toastr.success(data.msg);
+					} else {
+						parent.toastr.error(data.msg);
+					}
+                })
+            }
+        }
+    </script>
+</body>
+</html>

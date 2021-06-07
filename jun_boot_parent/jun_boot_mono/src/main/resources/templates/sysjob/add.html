@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<th:block th:include="include :: header('任务添加')" />
+</head>
+<body>
+	<section class="content">
+		<form class="form-horizontal" id="sysJobForm" method='post' th:action="@{/sysJob/add}">
+			<div class="box-body">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">任务名称 :</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="jobName" id="jobName" require="必填项" placeholder="请输入任务名称">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">任务分组 :</label>
+					<div class="col-sm-8">
+						<select name="jobGroup" class="form-control">
+							<option value="DEFAULT">默认</option>
+							<option value="SYSTEM">系统</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">调用字符串 :</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="invokeTarget" id="invokeTarget" require="必填项" placeholder="请输入调用目标">
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i>Bean调用示例：jobTaskTest.jobNoParams()
+						</span> 
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i>Class类调用示例：com.jun.plugin.modules.job.task.cancelOrder.cancel('取消操作')
+						</span>
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i> 参数说明：支持字符串，布尔类型，长整型，浮点型，整型
+						</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">cron表达式 :</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="cronExpression" id="cronExpression" require="必填项" placeholder="请输入cron表达式">
+						<a href="javascript:void(0);" onclick="openCron()">
+							<i class="fa fa-star"></i>查看cron表达式<i class="fa fa-star"></i>
+						</a>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">执行策略 :</label>
+					<div class="col-sm-8">
+						<label class="radio-inline pr-5">
+							<input type="radio" name="misfirePolicy" value="0" checked="checked"> 立刻执行
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" name="misfirePolicy" value="1"> 执行一次
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" name="misfirePolicy" value="2"> 放弃执行
+						</label> 
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i> 立刻执行：重做错过的所有频率周期后
+						</span>
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i> 执行一次：以当前时间为触发频率立刻触发一次执行
+						</span> 
+						<span class="help-block m-b-none">
+							<i class="fa fa-info-circle"></i> 放弃执行：不触发立即执行
+						</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">并发执行 :</label>
+					<div class="col-sm-8">
+						<label class="radio-inline pr-5">
+							<input type="radio" name="concurrent" value="0"> 允许
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" name="concurrent" value="1" checked="checked"> 禁止
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">运行状态 :</label>
+					<div class="col-sm-8">
+						<label class="radio-inline pr-5">
+							<input type="radio" name="status" value="0"> 正常
+						</label>
+						<label class="radio-inline pr-5">
+							<input type="radio" name="status" value="1" checked="checked"> 暂停
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-3 control-label">备注描述 :</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="remark" id="remark" require="必填项" placeholder="请输入备注">
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+	/* 查看cron表达式 */
+	function openCron(){
+		parent.layer.open({
+			type : 2,
+			title : 'cron表达式',
+			closeBtn : 1,
+			anim: -1,
+			isOutAnim: false,
+			shadeClose : true,
+			shade : 0.3,
+			area : ['100%', '100%'],
+			btn : ['取消'],
+			content : '/tocron',
+			success: function(layero, index){
+			}
+		});
+	}
+	function submitHandler() {
+		if(doValidForm(sysJobForm)){
+	        $.common.postAjax("/sysjob/addSysJob",$("#sysJobForm").serialize(),function (data) {
+	            if(data.status==200){
+	            	parent.layer.closeAll('iframe'); // 关闭当前frame
+					parent.$.table.refreshTable();
+					parent.toastr.success(data.msg);
+				} else {
+					parent.toastr.error(data.msg);
+				}
+	        })
+	    }
+	}
+	</script>
+</body>
+</html>
