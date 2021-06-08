@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<title></title>
+	<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+</head>
+
+<body>
+	<section class="content no-pad-top">
+		<div class="box box-widget">
+			<div class="box-body">
+					<!-- <blockquote class="bg-gray-light blockquote-success">
+							注意 : 提供无bootstrap-table 和jqGrid插件的版本,这个不随时更新，需要的同学跟我要就可以~							
+							<small>下载地址<a href="../../dist/js/lanai-ui-nodata.min.js">点击这里</a></small></blockquote> -->
+				<h3>
+					默认表格
+				</h3>
+				<div class="row">
+					<div class="col-sm-12">
+						<table class="table table-bordered table-striped table-hover text-center">
+							<thead>
+								<tr>
+									<th style="width: 60px">编号</th>
+									<th>说明</th>
+									<th>工具栏</th>
+									<th style="text-align:left">任务</th>
+									<th>进度</th>
+									<th style="width: 60px">完成量</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1.</td>
+									<td style="text-align: left">文字+图标+圆角</td>			
+									<td>									
+										<a class="btn btn-primary btn-xs btn-in-td" href="#"><i class="fa fa-arrows"></i>拖拽</a>
+										<a class="btn btn-danger btn-xs btn-in-td" href="#"><i class="fa fa-trash"></i>删除</a>
+										<a class="btn btn-default btn-xs btn-in-td" href="#"><i class="fa fa-print"></i>打印</a>
+										<a class="btn btn-info btn-xs btn-in-td" href="#"><i class="fa fa-info"></i>信息</a>
+						
+									</td>
+									<td style="text-align:left">更新软件</td>
+									<td>
+										<div class="progress progress-xs">
+											<div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+										</div>
+									</td>
+									<td><span class="badge bg-red">55%</span></td>
+								</tr>
+								<tr>
+									<td>2.</td>
+									<td style="text-align: left">文字+图标+直角</td>	
+									<td><a class="btn btn-primary btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-arrows"></i>拖拽</a>
+										<a class="btn btn-danger btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-trash"></i>删除</a>
+										<a class="btn btn-default btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-print"></i>打印</a>
+										<a class="btn btn-info btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-info"></i>信息</a></td>
+									<td style="text-align:left">清理数据库缓存</td>
+									<td>
+										<div class="progress progress-xs">
+											<div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
+										</div>
+									</td>
+									<td><span class="badge bg-yellow">70%</span></td>
+								</tr>
+								<tr>
+										<td>5.</td>
+										<td style="text-align: left">按钮组</td>
+										<td>
+											<div class="btn-group">
+											<a class="btn btn-primary btn-xs btn-in-td" href="#"><i class="fa fa-arrows"></i>拖拽</a>
+											<a class="btn btn-danger btn-xs btn-in-td" href="#"><i class="fa fa-trash"></i>删除</a>
+											<a class="btn btn-default btn-xs btn-in-td" href="#"><i class="fa fa-print"></i>打印</a>
+											<a class="btn btn-info btn-xs btn-in-td" href="#"><i class="fa fa-info"></i>信息</a></div></td>
+										<td style="text-align:left">安装新版本</td>
+										<td>
+											<div class="progress progress-xs progress-striped">
+												<div class="progress-bar progress-bar-danger" style="width: 60%"></div>
+											</div>
+										</td>
+										<td><span class="badge bg-danger">60%</span></td>
+									</tr>
+								<tr>
+									<td>3.</td>
+									<td style="text-align: left">图标+圆角</td>
+									<td><a class="btn btn-primary btn-xs btn-in-td" href="#"><i class="fa fa-arrows"></i></a>
+										<a class="btn btn-danger btn-xs btn-in-td" href="#"><i class="fa fa-trash"></i></a>
+										<a class="btn btn-default btn-xs btn-in-td" href="#"><i class="fa fa-print"></i></a>
+										<a class="btn btn-info btn-xs btn-in-td" href="#"><i class="fa fa-info"></i></a></td>
+									<td style="text-align:left">测试运行环境</td>
+									<td>
+										<div class="progress progress-xs progress-striped active">
+											<div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+										</div>
+									</td>
+									<td><span class="badge bg-light-blue">30%</span></td>
+								</tr>
+								<tr>
+									<td>4.</td>
+									<td style="text-align: left">图标+直角</td>
+									<td><a class="btn btn-primary btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-arrows"></i></a>
+										<a class="btn btn-danger btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-trash"></i></a>
+										<a class="btn btn-default btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-print"></i></a>
+										<a class="btn btn-info btn-xs btn-in-td btn-flat" href="#"><i class="fa fa-info"></i></a></td>
+									<td style="text-align:left">发现Bug并修复</td>
+									<td>
+										<div class="progress progress-xs progress-striped active">
+											<div class="progress-bar progress-bar-success" style="width: 90%"></div>
+										</div>
+									</td>
+									<td><span class="badge bg-green">90%</span></td>
+								</tr>								
+							</tbody>
+						</table>
+						<blockquote class="bg-gray-light blockquote-danger">
+							<small>若使用 webdiyer 作为分页工具的话，可以使用<code>.Pager</code>样式</small>
+						</blockquote>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<button type="button" class="btn btn-primary"
+							value="table-bordered">取消边框<br /><code>.table-bordered</code></button>
+						<button type="button" class="btn btn-default"
+							value="table-condensed">宽高自适应<br /><code>.table-condensed</code></button>
+						<button type="button" class="btn btn-success"
+							value="table-striped">取消隔行变色<br /><code>.table-striped</code></button>
+						<button type="button" class="btn btn-info"
+							value="table-hover">取消鼠标浮动变色<br /><code>.table-hover</code></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="../../dist/js/jquery.min.js"></script>
+	<script src="../../dist/js/lanai-ui.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$(".btn").click(function () {
+				var that = this;
+				$(".table").toggleClass($(that).val());
+			})
+		});
+	</script>
+</body>
+
+</html>

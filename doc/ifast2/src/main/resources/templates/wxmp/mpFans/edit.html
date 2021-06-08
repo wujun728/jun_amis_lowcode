@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+							<input id="id" name="id" th:value="${mpFans.id}" type="hidden">
+							
+							<div class="form-group">
+								<label class="col-sm-3 control-label">头像：</label>
+								<div class="col-sm-8">
+								<img id="imgLogo" alt="用户头像" src="" th:src="${mpFans.headimgurl}" style="width:100px;display:block;">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">昵称：</label>
+								<div class="col-sm-8">
+									<input id="nickname" name="nickname"
+										th:value="${mpFans.nickname}" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">性别：</label>
+								<div class="col-sm-8">
+								    <label class="radio-inline" for="sex1"> 
+                                        <input type="radio" value="1" th:checked="${mpFans.sex == 1}" id="sex1" name="sex">男 
+                                    </label> 
+                                     <label class="radio-inline" for="sex2"> 
+                                        <input type="radio" value="2" th:checked="${mpFans.sex == 2}" id="sex2" name="sex">女
+                                     </label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">公众号ID：</label>
+								<div class="col-sm-8">
+									<input id="mpId" name="mpId" th:value="${mpFans.mpId}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">关注状态：</label>
+								<div class="col-sm-8">
+								    <label class="radio-inline" for="subscribe1"> 
+                                        <input type="radio" value="1" th:checked="${mpFans.subscribe == 1}" id="subscribe1" name="subscribe">已关注 
+                                     </label> 
+                                     <label class="radio-inline" for="subscribe0"> 
+                                        <input type="radio" value="0" th:checked="${mpFans.subscribe == 0}" id="subscribe0" name="subscribe">未关注
+                                     </label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">关注时间：</label>
+								<div class="col-sm-8">
+									<input id="subscribeTime" name="subscribeTime" th:value="${mpFans.subscribeTime} eq null ? '' : ${#dates.format(mpFans.subscribeTime, 'yyyy-MM-dd HH:mm:ss')}" class="form-control" type="text" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">关注来源：</label>
+								<div class="col-sm-8">
+									<input id="subscribeKey" name="subscribeKey"
+										th:value="${mpFans.subscribeKey}" class="form-control"
+										type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">unionid：</label>
+								<div class="col-sm-8">
+									<input id="unionid" name="unionid" th:value="${mpFans.unionid}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+                                <label class="col-sm-3 control-label">openid：</label>
+                                <div class="col-sm-8">
+                                    <input id="openid" name="openid" th:value="${mpFans.openid}"
+                                        class="form-control" type="text">
+                                </div>
+                            </div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">省：</label>
+								<div class="col-sm-8">
+									<input id="province" name="province"
+										th:value="${mpFans.province}" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">市：</label>
+								<div class="col-sm-8">
+									<input id="city" name="city" th:value="${mpFans.city}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">区：</label>
+								<div class="col-sm-8">
+									<input id="country" name="country" th:value="${mpFans.country}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">语言：</label>
+								<div class="col-sm-8">
+									<input id="language" name="language"
+										th:value="${mpFans.language}" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">分组ID：</label>
+								<div class="col-sm-8">
+									<input id="groupid" name="groupid" th:value="${mpFans.groupid}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">标签列表：</label>
+								<div class="col-sm-8">
+									<input id="tagidList" name="tagidList"
+										th:value="${mpFans.tagidList}" class="form-control"
+										type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">用户状态：</label>
+								<div class="col-sm-8">
+								    <label class="radio-inline" for="status1"> 
+                                        <input type="radio" value="1" th:checked="${mpFans.status == 1}" id="status1" name="status">已关注 
+                                     </label> 
+                                     <label class="radio-inline" for="status0"> 
+                                        <input type="radio" value="0" th:checked="${mpFans.status == 0}" id="status0" name="status">未关注
+                                     </label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">备注：</label>
+								<div class="col-sm-8">
+									<input id="remark" name="remark" th:value="${mpFans.remark}"
+										class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/wxmp/mpFans/edit.js">
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<head th:fragment="header">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <meta name="keywords" content="hope-fast后台管理 低调小熊猫（https://github.com/java-aodeng）">
+    <meta name="description" content="hope-fast后台管理 低调小熊猫（https://github.com/java-aodeng）">
+    <!--全局css-->
+    <link th:href="@{/favicon.ico}" rel="shortcut icon"/>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/animate.css}" rel="stylesheet"/>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/plugins/blueimp/css/blueimp-gallery.min.css}" rel="stylesheet"/>
+    <!-- 全局css第三方插件 -->
+    <link th:href="@{/plugins/jquery-ztree/3.5/css/metro/zTreeStyle.css}" rel="stylesheet"/>
+    <link th:href="@{/plugins/bootstrap-treetable/bootstrap-treetable.css}" rel="stylesheet"/>
+    <link th:href="@{https://cdn.bootcss.com/zTree.v3/3.5.29/css/metroStyle/metroStyle.min.css}" rel="stylesheet">
+    <!-- 全局js -->
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js?v=3.3.6}"></script>
+    <script th:src="@{/js/plugins/layer/layer.min.js}"></script>
+    <script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+    <script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+    <!-- 自定义js -->
+    <script th:src="@{/js/content.js}"></script>
+    <script th:src="@{/js/contabs.js}" type="text/javascript"></script>
+    <!-- jquery-validate 表单验证插件 -->
+    <script th:src="@{/js/plugins/validate/jquery.validate.min.js}"></script>
+    <script th:src="@{/js/plugins/validate/messages_zh.min.js}"></script>
+    <!-- 欢迎信息 -->
+    <script th:src="@{/js/welcome.js}"></script>
+    <!-- 全局js第三方插件 -->
+    <script th:src="@{/js/plugins/pace/pace.min.js}"></script>
+    <script th:src="@{/js/plugins/layui/layui.js}"></script>
+    <script th:src="@{/plugins/jquery-ztree/3.5/js/jquery.ztree.all-3.5.js}"></script>
+    <script th:src="@{/plugins/bootstrap-treetable/bootstrap-treetable.js}"></script>
+    <script th:src="@{/plugins/fullscreen/jquery.fullscreen.js}"></script>
+    <script th:src="@{/js/plugins/layer/layer.min.js}"></script>
+    <!-- blueimp gallery -->
+    <script th:src="@{/js/plugins/blueimp/jquery.blueimp-gallery.min.js}"></script>
+    <!-- layerDate plugin javascript -->
+    <script th:src="@{/js/plugins/layer/laydate/laydate.js}"></script>
+    <!-- 遮罩层 -->
+    <script th:src="@{/js/plugins/blockUI/jquery.blockUI.js}"></script>
+    <script th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>
+    <!-- Bootstrap table -->
+    <script th:src="@{/js/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+    <script th:src="@{/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js}"></script>
+    <script th:src="@{/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js}"></script>
+    <script th:src="@{/js/plugins/bootstrap-table/extensions/toolbar/bootstrap-table-toolbar.min.js}"></script>
+
+    <!-- 自定义封装的部分 -->
+    <link th:href="@{/js/hope/css/hope.css}" rel="stylesheet"/>
+    <script th:src="@{/js/hope/js/common.js}"></script>
+    <script th:src="@{/js/hope/js/hope.js}"></script>
+    <script th:src="@{/js/hplus.js?v=4.1.0}"></script>
+    <script th:src="@{/js/hope/validate/jquery.validate.extend.js}"></script>
+    <!--ctx 可自定义-->
+    <script th:inline="javascript"> var ctx = [[@{/}]]; </script>
+    <!-- 引入vue插件 -->
+    <!-- 引入样式 -->
+    <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+    <!-- 引入组件库 -->
+    <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+    <!-- import Vue before Element -->
+    <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+    <!-- 生成二维码插件 -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js"></script>
+    <!-- 二维码下载插件 -->
+    <script th:src="@{/js/plugins/jszip/jszip.min.js}"></script>
+</head>

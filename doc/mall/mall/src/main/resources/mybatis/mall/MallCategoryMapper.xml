@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallCategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallCategory">
+        <id column="category_id" property="categoryId" />
+        <result column="parent_id" property="parentId" />
+        <result column="ancestors" property="ancestors" />
+        <result column="name" property="name" />
+        <result column="descripte" property="descripte" />
+        <result column="pic_url" property="picUrl" />
+        <result column="status" property="status" />
+        <result column="sort_order" property="sortOrder" />
+        <result column="deleted" property="deleted" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+    
+    <select id="selectCategoryList" parameterType="MallCategory" resultMap="BaseResultMap">
+        select d.category_id, d.parent_id, d.ancestors, d.name, d.descripte, d.pic_url, 
+        	   d.status, d.sort_order, d.deleted, d.create_time
+       	from 
+       		mall_category d
+        where 
+        	d.deleted = '0'
+        <if test="parentId != null and parentId != 0">
+			AND parent_id = #{parentId}
+		</if>
+		<if test="name != null and name != ''">
+			AND name like concat('%', #{name}, '%')
+		</if>
+		<if test="status != null and status != ''">
+			AND status = #{status}
+		</if>
+		order by d.parent_id, d.sort_order
+    </select>
+    
+    <select id="selectCategoryIdByPid" resultType="java.lang.Long">
+        select category_id
+       	from 
+       		mall_category 
+        where 
+        	deleted = '0'
+        and
+        	parent_id = #{parentId}
+    </select>
+
+</mapper>

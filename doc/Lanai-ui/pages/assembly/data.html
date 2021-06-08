@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<title></title>
+		<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="content no-padding">
+			<div class="box box-widget no-shadow">
+				<div class="box-body">
+					<blockquote class="bg-gray-light blockquote-info">
+						此数据参考Bootstrap-table 脚本及样式还未做深入细化，只是引入了其脚本，后续可能继续做调整
+					</blockquote>	
+					
+					<div id="toolbar" class="btn-group">
+		                <button type="button" class="btn btn-default" id="btn_add">
+		                    <span class="fa fa-plus" aria-hidden="true"></span>
+		                </button>
+		            </div>
+					<table id="tb_users"></table>					
+					
+									
+					
+				</div>
+				<div class="box-footer">
+					<button type="button" class="btn btn-default" id="btn_selectRow">获取选中行</button>
+					<p id="msg" class="text-red"></p>
+				</div>
+			</div>
+			</section>
+	</body>
+	<script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/lanai-ui.min.js"></script>
+    <script type="text/javascript">
+    	//bootstrap-table
+    	$(function () {
+
+    //1.初始化Table
+    var oTable = new TableInit();
+    oTable.Init();
+
+    //2.初始化Button的点击事件
+    var oButtonInit = new ButtonInit();
+    oButtonInit.Init();
+    
+    //3.toolbar
+	$("#btn_add").click(function(){
+		toastr.info("按钮事件相应");
+	})
+});
+
+
+var TableInit = function () {
+	var dataJson=[
+        {
+            "Name": "路飞",
+			"favour": "吃肉",
+			"Desc": "将要成为海贼王的男人"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "山治",
+			"favour": "美食&美女",
+			"Desc": ""
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        }
+    ]
+
+    var oTableInit = new Object();
+    //初始化Table
+    oTableInit.Init = function () {
+        $('#tb_users').bootstrapTable({
+            //url: '/Home/GetDepartment',         //请求后台的URL（*）
+            data:dataJson,
+            method: 'get',                      //请求方式（*）
+            toolbar: '#toolbar',                //工具按钮用哪个容器
+            striped: true,                      //是否显示行间隔色
+            cache: false,                       //是否使用缓存，默认为true，所以一般情况下需要设置一下这个属性（*）
+            pagination: true,                   //是否显示分页（*）
+            sortable: true,                     //是否启用排序
+            sortOrder: "asc",                   //排序方式
+            queryParams: oTableInit.queryParams,//传递参数（*）
+            sidePagination: "client",           //分页方式：client客户端分页，server服务端分页（*）
+            pageNumber:1,                       //初始化加载第一页，默认第一页
+            pageSize: 10,                       //每页的记录行数（*）
+            pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
+            search: true,                       //是否显示表格搜索，此搜索是客户端搜索，不会进服务端，所以，个人感觉意义不大
+            strictSearch: false,
+            showColumns: true,                  //是否显示所有的列
+            showRefresh: true,     //是否显示刷新按钮
+            showFullscreen:false,
+            minimumCountColumns: 2,             //最少允许的列数
+            clickToSelect: true,                //是否启用点击选中行
+//          height: 500,                        //行高，如果没有设置height属性，表格自动根据记录条数觉得表格高度
+            uniqueId: "Name",                     //每一行的唯一标识，一般为主键列
+            showToggle:true,                    //是否显示详细视图和列表视图的切换按钮
+            cardView: false,                    //是否显示详细视图
+            detailView: false,                   //是否显示父子表
+            columns: [{
+                checkbox: true
+            }, {
+                field: 'Name',
+                title: '姓名'
+            }, {
+                field: 'favour',
+                title: '兴趣爱好'
+            }, {
+                field: 'Desc',
+                title: '描述'
+            }]
+        });
+    };
+
+    //得到查询的参数
+    oTableInit.queryParams = function (params) {
+        var temp = {   //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+            limit: params.limit,   //页面大小
+            offset: params.offset,  //页码
+            Name:  params.search
+        };
+        return temp;
+    };
+    return oTableInit;
+};
+
+
+var ButtonInit = function () {
+    var oInit = new Object();
+    var postdata = {};
+
+    oInit.Init = function () {
+        //初始化页面上面的按钮事件
+        $("#btn_selectRow").click(function(){
+        	var rows=$("#tb_users").bootstrapTable('getSelections');
+        	if(rows.length<1){
+        		toastr.info("请至少选定一行")
+        		return;
+        	}
+        	
+        	$.each(rows,function(i,el){
+        		console.log(el);
+        		$("#msg").html($("#msg").html()+JSON.stringify(el)+"<br/>")	
+        	})       	        	
+        });
+    };
+
+    return oInit;
+};
+</script>
+</html>

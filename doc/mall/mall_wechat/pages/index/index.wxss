@@ -1,0 +1,156 @@
+/* 搜索框组件 */
+@import "components/search/search.wxss";
+
+/* banner组件 */
+@import "components/banner/banner.wxss";
+
+/* 猜您喜欢 */
+
+.title-hrbg {
+  position: relative;
+  z-index: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  color: #888;
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.title-hrbg .cont {
+  background: #f7f7f7;
+  padding: 1rem 0.6rem;
+  font-size: 28rpx;
+  z-index: 10;
+}
+
+.title-hrbg .cont .icon-huo {
+  padding-right: 10rpx;
+}
+
+.title-hrbg .hr {
+  background: #ddd;
+  height: 1rpx;
+  border: 0;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  margin-top: 1px;
+  z-index: -1;
+}
+
+.morelist {
+  margin: 10px auto;
+  text-align: center;
+  height: 70rpx;
+  width: 450rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+  border: 1px solid #999;
+  font-size: 30rpx;
+}
+
+.a-section {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.a-section .h {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+}
+
+.a-section .h .txt {
+  padding-right: 30rpx;
+  background-size: 16.656rpx 27rpx;
+  display: inline-block;
+  height: 36rpx;
+  font-size: 32rpx;
+  line-height: 36rpx;
+}
+
+.a-coupon .item {
+  position: relative;
+  height: 290rpx;
+  width: 700rpx;
+  background: linear-gradient(to right, #cfa568, #e3bf79);
+  margin-bottom: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 52rpx;
+}
+
+.a-coupon .tag {
+  height: 32rpx;
+  background: #a48143;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  position: absolute;
+  left: 38rpx;
+  color: #fff;
+  top: 25rpx;
+  font-size: 25rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+
+.a-coupon .content {
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+  display: flex;
+  margin-right: 40rpx;
+  flex-direction: row;
+}
+
+.a-coupon .content .left {
+  flex: 0.8;
+}
+
+.a-coupon .discount {
+  font-size: 60rpx;
+  color: #b4282d;
+}
+
+.content .right {
+  width: 400rpx;
+}
+
+.a-coupon .name {
+  font-size: 50rpx;
+  color: #fff;
+  margin-top: 10rpx;
+}
+
+.a-coupon .time {
+  font-size: 25rpx;
+  color: #fff;
+  line-height: 30rpx;
+}
+
+.a-coupon .condition {
+  position: absolute;
+  width: 89%;
+  bottom: 0;
+  left: 0;
+  height: 78rpx;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 24rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.a-coupon .condition .txt {
+  height: 82rpx;
+  flex: 1;
+  overflow: hidden;
+  font-size: 31rpx;
+  color: #fff;
+}

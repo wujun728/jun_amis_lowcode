@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<title></title>
+		<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="content no-padding">
+			<div class="box box-widget no-shadow">
+				<div class="box-body">					
+					<blockquote class="bg-gray-light blockquote-info">
+						信息提醒请参考toastr文档，无需引入其脚本及样式
+					</blockquote>
+					<h3>信息提醒</h3>
+					<button class="btn btn-default" value="info"><i class="fa fa-info-circle"></i> 信息提醒(带标题)</button>
+					<button class="btn btn-warning" value="warning"><i class="fa fa-bell-o"></i> 警示信息</button>
+					<button class="btn btn-success" value="success"><i class="fa fa-hand-grab-o"></i> 成功提醒</button>
+					<button class="btn btn-danger" value="error"><i class="fa fa-exclamation-circle"></i> 错误提醒</button>
+					
+					<h3>固定提醒</h3>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="alert alert-danger alert-dismissible">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				                <h4><i class="icon fa fa-ban"></i> 提示信息</h4>
+				                	提示信息带标题，带关闭按钮
+				            </div>
+						</div>
+						<div class="col-sm-3">
+							<div class="alert alert-warning alert-dismissible">				                
+				                <h4><i class="icon fa fa-warning"></i> 提示信息!</h4>
+				                 	提示信息带标题，无关闭按钮
+				            </div>
+						</div>						
+						<div class="col-sm-3">
+							<div class="alert alert-info alert-dismissible">
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				               	 提示信息无标题，带关闭按钮
+				            </div>
+						</div>
+						<div class="col-sm-3">
+							<div class="alert alert-success alert-dismissible">
+				                	啥都没有就个提示框
+				            </div>
+						</div>
+					</div>
+					<h3>带图标的提醒</h3>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="alert alert-danger alert-social alert-dismissible">
+								<span class="seq">1</span>
+				                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+				                	提示信息，带关闭按钮
+				            </div>
+				            <div class="alert alert-success alert-social alert-dismissible">
+								<span class="seq">2</span>
+				                	提示信息
+				            </div>
+						</div>
+					</div>
+					<h3>模态窗体</h3>
+					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+		                Launch Default Modal
+		            </button>
+		            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-info">
+		                Launch Info Modal
+		            </button>
+		            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger">
+		                Launch Danger Modal
+		            </button>
+		            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-warning">
+		                Launch Warning Modal
+		            </button>
+		            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-success">
+		                Launch Success Modal
+		            </button>
+				</div>
+			</div>
+			        <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Default Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal-primary fade" id="modal-primary">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Primary Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal-info fade" id="modal-info">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Info Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal-warning fade" id="modal-warning">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Warning Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal-success fade" id="modal-success">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Success Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal-danger fade" id="modal-danger">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Danger Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-outline">Save changes</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+		</section>
+		<script src="../../dist/js/jquery.min.js"></script>
+    	<script src="../../dist/js/lanai-ui.min.js"></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$(".btn").click(function(){    	
+    				toastr.options = {
+							  "closeButton": true,							  
+							  "progressBar": false
+							}
+    				//到lanai.js里去找配置并修改
+    				switch($(this).val())
+    				{
+    					case "info":
+    					toastr.options = {
+							  "closeButton": true,							  
+							  "progressBar": true
+							}
+    						toastr.info("你好，我是提醒信息","提醒");
+    						break;
+    					case "warning":
+    					toastr.options = {
+							  "closeButton": false
+							}
+    						toastr.warning("该操作可能对其他功能产生影响");
+    						break;
+    					case "success":
+    						toastr.success("操作成功！");
+    						break;
+    					case "error":
+    						toastr.error("操作有错误发生");
+    						break;
+    				}
+    			})
+    		})
+    	</script>
+	</body>
+</html>

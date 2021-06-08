@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallRegionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallRegion">
+        <id column="id" property="id" />
+        <result column="pid" property="pid" />
+        <result column="shortname" property="shortname" />
+        <result column="name" property="name" />
+        <result column="merger_name" property="mergerName" />
+        <result column="level" property="level" />
+        <result column="pinyin" property="pinyin" />
+        <result column="code" property="code" />
+        <result column="zip_code" property="zipCode" />
+        <result column="first" property="first" />
+        <result column="lng" property="lng" />
+        <result column="lat" property="lat" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,118 @@
+ifast:
+  projectName: ifast
+  projectRootURL: http://127.0.0.1:8088/
+  demoMode: true
+  jwt:
+    userPrimaryKey: userId
+    expireTokenKeyPrefix: ifast:expireToken
+    expireTime: 7200000
+    refreshTokenExpire: 86400000
+  swagger:
+    title: ifast接口文档
+    description: 开发人员太懒，没有写描述
+    contactName: Aron
+    contactEmail: izenglong@163.com
+    contactUrl: http://ifast.site/doc.html
+    basePackage: com.ifast
+    termsOfServiceUrl: ${ifast.projectRootURL}/docs.html
+  shiro:
+    jsessionidKey: SESSION
+    sessionKeyPrefix: ifast:session
+  oss:
+    local: # 配置 localPath 启用本地上传（默认方式）
+      localPath: upload
+      rootURL: http://localhost:8088/upload
+    aliyun: # 配置 accessKeySecret 启用阿里云OSS
+      accessKeyId:
+#       accessKeySecret:
+      bucketName:
+      # endpoint以深圳为例，其它region请按实际情况填写
+      endpoint: http://oss-cn-shenzhen.aliyuncs.com
+    qiniu: # 配置 accessKey 启用七牛云OSS
+#       accessKey: 8-HMj9EgGNIP-xuOCpSzTn-OMyGOFtR3TxLdn4Uu
+      secretKey: SjpGg3V6PsMdJgn42PeEd5Ik-6aNyuwdqV5CPM6A
+      bucket: ifast
+      accessURL: http://p6r7ke2jc.bkt.clouddn.com/
+  sms:
+    cacheKey: ifast:cache
+    cacheKeyPrefix: sms
+    codeExpireTime: 900000
+    scenes: # 短信内容清单
+      validCode: 验证码{code}，您正在进行身份验证，打死也不要告诉别人哦！
+    zt: # 配置 uname 启用上海助通短信平台
+      uname: UNAME
+      passwd: PASSWD
+      productId: PRODUCT_ID
+    # 配置accessKeyId和accessKeySecret，添加配置表项sys_config.sms_aliyun_validCode
+    aliyun: # 配置 accessKeySecret 启用上海助通短信平台
+      accessKeyId:
+      accessKeySecret:
+      scenes:
+        # 配置格式为包含SignName和TemplateCode的json字符串：sys_config.sms_aliyun_validCode = {SignName, TemplateCode}
+        validCode: sms_aliyun_validCode
+logging:
+  file: /opt/logs/${spring.application.name}-${server.port}.log
+  level:
+    root: info
+    com.ifast: debug
+    io.lettuce: warn
+    druid.sql: info
+    springfox.documentation: error
+    org.springframework.web.servlet.mvc.method.annotation: error
+    org.springframework.context.support: error
+spring:
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+#     driverClassName: com.mysql.jdbc.Driver
+    driverClassName: org.postgresql.Driver
+#     url: jdbc:mysql://127.0.0.1:3306/ifast-new2?useUnicode=true&useSSL=false
+    url: jdbc:postgresql://127.0.0.1:5432/ifast
+    # 推荐utf8mb4编码以便支持表情字符，sys_log记录系统数据变动需要支持utf8mb4
+#     connectionInitSqls: SET NAMES utf8mb4;
+    username: postgres
+    password: postgres
+    initialSize: 1
+    minIdle: 3
+    maxActive: 20
+    # 配置获取连接等待超时的时间
+    maxWait: 60000
+    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最小生存的时间，单位是毫秒
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    # 合并多个DruidDataSource的监控数据
+    #useGlobalDataSourceStat: true
+    
+#邮件配置
+#  stmp: 
+#    host: smtp.163.com
+#    port: 25
+#    account: 18291548738@163.com
+#    password: zyl163com
+#  mail: 
+#    smtp: 
+#      auth: true
+#      timeout: 25000
+    
+#    
+#  mail:
+#    protocol: smtp #smtp是邮件发送协议，pop3和imap是邮件接收协议。因为我们要发送邮件，因此是smtp
+#    host: smtp.163.com #邮件发送服务器的主机，这里采用的是126邮箱来发送邮件
+#    port: 25 #邮件发送服务器的端口
+#    auth: true #一般情况下，发送邮件都是要进行验证
+#    username: 18291548738@163.com #邮件发送服务器的用户名
+#    password: zyl163com #密码
+#    timeout: 25000
+#    templateLoaderPath: classpath:/freemarker

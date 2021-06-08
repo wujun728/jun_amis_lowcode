@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('用户详情')" />
+</head>
+<body>
+	<section class="content">
+		<form class="form-horizontal" id="userDetailForm">
+		    <input class="hidden" name="userId" th:value="${user.userId}">
+		    <div class="box-body">
+		        <div class="form-group">
+		            <label  class="col-sm-3 control-label">用户名 :</label>
+		            <div class="col-sm-8">
+		                <input  name="username" class="form-control" readonly="readonly" min="3" require="必填项"  placeholder="" th:value="${user.username}">
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label  class="col-sm-3 control-label">邮箱 :</label>
+		            <div class="col-sm-8">
+		                <input name="email" class="form-control" placeholder="" th:value="${user.email}">
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label  class="col-sm-3 control-label">电话 :</label>
+		
+		            <div class="col-sm-8">
+		                <input name="phone" class="form-control" placeholder="" th:value="${user.phone}">
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label  class="col-sm-3 control-label">性别 :</label>
+		            <div class="col-sm-8">
+		                <select name="sex" class="form-control" require="必填项">
+		                    <option th:selected="${user.sex==1}" value="1">男</option>
+		                    <option th:selected="${user.sex==2}" value="2">女</option>
+		                </select>
+		            </div>
+		        </div>
+		        <div class="form-group">
+		            <label  class="col-sm-3 control-label">年龄 :</label>
+		            <div class="col-sm-8">
+		                <input name="age" class="form-control" placeholder="" th:value="${user.age}">
+		            </div>
+		        </div>
+		    </div>
+		</form>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		function submitHandler() {
+            if (doValidForm(userDetailForm)) {
+                $.common.postAjax("/user/edit",$("#userDetailForm").serialize(),function (data) {
+                    if (data.status == 200) {
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+                    	parent.$.table.refreshTable();
+                    	parent.toastr.success(data.msg);
+                    } else {
+                    	parent.toastr.error(data.msg);
+                    }
+                })
+            }
+    	}
+	</script>
+</body>
+</html>

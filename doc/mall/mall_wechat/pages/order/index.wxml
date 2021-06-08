@@ -1,0 +1,96 @@
+<view class="container m-b5">
+  <view class="goods-detail-box">
+    <view class="header f-28 col-3">
+      <view catchtap="bindHeaderTap" class="{{dataType==='all'?'active':''}}" data-type="all">全部</view>
+      <view bindtap="bindHeaderTap" class="{{dataType==='payment'?'active':''}}" data-type="payment">待付款</view>
+      <view bindtap="bindHeaderTap" class="{{dataType==='delivery'?'active':''}}" data-type="delivery">待发货</view>
+      <view bindtap="bindHeaderTap" class="{{dataType==='received'?'active':''}}" data-type="received">待收货</view>
+      <view bindtap="bindHeaderTap" class="{{dataType==='received'?'active':''}}" data-type="completed">待评价</view>
+    </view>
+    <scroll-view scroll-y="{{true}}">
+      <view class="wrapper">
+        <view wx:if="{{list.length}}">
+          <view class="m-top20 " wx:for="{{list}}" wx:key="this">
+            <view class="order-box b-f">
+              <view class="order-header dis-flex">
+                <view class="flex-box t-l">
+                  <text class="title">商品列表</text>
+                </view>
+                <view class="flex-box t-r" wx:if="{{item.orderStatus == 1}}">
+                  <text class="cont" wx:if="{{item.payStatus == 0}}">待付款</text>
+                  <text class="cont" wx:if="{{item.payStatus == 1 && item.shipStatus == 0}}">待发货</text>
+                  <text class="cont" wx:if="{{item.payStatus == 1 && item.shipStatus == 1}}">待收货</text>
+                </view>
+                <view class="flex-box t-r" wx:if="{{item.orderStatus == 2}}">
+                  <text class="cont">已完成</text>
+                </view>
+                <view class="flex-box t-r" wx:if="{{item.orderStatus == 0}}">
+                  <text class="cont">已取消</text>
+                </view>
+              </view>
+            </view>
+            <view class="order-box b-f">
+              <view class="order-cont dis-flex">
+                <view class="order-num order-time">
+                  <view><text>订单号：{{item.orderSn}}</text></view>
+                  <view><text>时间：{{item.createTime}}</text></view>
+                </view>
+              </view>
+            </view>
+            <view class="order-box order-img_list">
+              <view class="order-shop">
+                <view bindtap="detail" class="order-list-box dis-flex" data-id="{{item.orderId}}">
+                  <view class="left">
+                    <view class="dis-flex">
+                      <view class="order-shop-left" wx:for="{{item.goods}}" wx:key="goods">
+                        <image src="{{item.picUrl}}"></image>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="right p-r">
+                    <text class="goods-number">共{{item.goods.length}}件</text>
+                    <text class="iconfont icon-xiangyoujiantou user-orderJtou"></text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="order-box b-f">
+              <view class="order-btn dis-flex">
+                <view class="order-left">
+                  <view class="text">
+                    <text>合计：</text>
+                    <text class="col-m">￥{{item.orderPrice}}</text>
+                  </view>
+                </view>
+                <view class="order-right">
+                  <view class="dis-flex" wx:if="{{item.orderStatus == 1}}">
+                    <view class="flex-box" wx:if="{{item.payStatus == 0}}">
+                      <view bindtap="cancelOrder" class="btn-default" data-id="{{item.orderId}}">取消</view>
+                    </view>
+                    <view wx:if="{{item.payStatus == 0}}">
+                      <view bindtap="payOrder" class="btn-main" data-id="{{item.orderId}}">付款</view>
+                    </view>
+                    <view class="flex-box" wx:if="{{item.shipStatus == 1 && item.payStatus == 1}}">
+                      <view bindtap="receipt" class="btn-main" data-id="{{item.orderId}}">确认收货</view>
+                    </view>
+                  </view>
+                  <view class="dis-flex" wx:if="{{item.orderStatus == 0}}">
+                    <view class="flex-box">
+                      <view class="btn-default">订单已取消</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:else>
+          <view class="yoshop-notcont">
+            <text class="iconfont icon-ziyuan"></text>
+            <text class="cont">亲，您还没有订单信息哦！</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

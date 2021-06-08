@@ -1,0 +1,141 @@
+page, .container {
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.post-comment {
+  height: auto;
+  overflow: hidden;
+  padding: 0px 10px;
+  background: #fff;
+}
+
+.post-comment .goods {
+  display: flex;
+  align-items: center;
+  height: 199rpx;
+  margin-left: 31.25rpx;
+}
+
+.post-comment .goods .img {
+  height: 145.83rpx;
+  width: 145.83rpx;
+  background: #f4f4f4;
+}
+
+.post-comment .goods .img image {
+  height: 145.83rpx;
+  width: 145.83rpx;
+}
+
+.post-comment .goods .info {
+  height: 145.83rpx;
+  flex: 1;
+  padding-left: 20rpx;
+}
+
+.post-comment .goods .name {
+  margin-top: 30rpx;
+  display: block;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.post-comment .goods .attr {
+  margin-top: 30rpx;
+  display: block;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.post-comment .goods .number {
+  display: block;
+  height: 37rpx;
+  line-height: 37rpx;
+  color: #666;
+  font-size: 25rpx;
+}
+
+.post-comment .goods .status {
+  width: 105rpx;
+  color: #b4282d;
+  font-size: 25rpx;
+}
+
+.post-comment .rater {
+  display: flex;
+  flex-direction: row;
+  height: 55rpx;
+}
+
+.post-comment .rater .rater-title {
+  font-size: 29rpx;
+  padding-right: 10rpx;
+}
+
+.post-comment .rater image {
+  padding-left: 5rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.post-comment .rater .rater-desc {
+  font-size: 29rpx;
+  padding-left: 10rpx;
+}
+
+.post-comment .input-box {
+  height: 337.5rpx;
+  width: 690rpx;
+  position: relative;
+  background: #fff;
+}
+
+.post-comment .input-box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #fff;
+  font-size: 29rpx;
+  border: 5px solid #f4f4f4;
+  height: 300rpx;
+  width: 650rpx;
+  padding: 20rpx;
+}
+
+.post-comment .input-box .count {
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  display: block;
+  height: 30rpx;
+  width: 50rpx;
+  font-size: 29rpx;
+  color: #999;
+}
+
+.post-comment .btns {
+  height: 108rpx;
+}
+
+.post-comment .close {
+  float: left;
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: left;
+  color: #666;
+  padding: 0 30rpx;
+}
+
+.post-comment .post {
+  float: right;
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: right;
+  padding: 0 30rpx;
+}

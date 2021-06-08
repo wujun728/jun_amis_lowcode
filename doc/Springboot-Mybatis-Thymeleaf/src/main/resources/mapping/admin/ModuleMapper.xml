@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanyu.admin.mapper.ModuleMapper" >
+
+  <resultMap id="ModuleResultMap" type="com.lanyu.common.model.Module" >
+    <id column="mcode" property="mcode" jdbcType="VARCHAR" />
+    <result column="mname" property="mname" jdbcType="VARCHAR" />
+    <result column="micon" property="micon" jdbcType="VARCHAR" />
+    <result column="murl" property="murl" jdbcType="VARCHAR" />
+    <result column="explains" property="explains" jdbcType="VARCHAR" />
+    <result column="parent" property="parent" jdbcType="VARCHAR" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectModuleList" resultMap="ModuleResultMap" parameterType="java.util.HashMap" >
+    SELECT mcode,mname,micon,murl,explains,parent,sort FROM sys_module
+    <where>
+      <if test="searchText!=null">
+        (mcode like #{searchText} or mname like #{searchText})
+      </if>
+      <if test="parent==null">
+        AND parent is null
+      </if>
+      <if test="parent!=null">
+        AND parent=#{parent}
+      </if>
+    </where>
+      ORDER BY sort
+  </select>
+
+  <insert id="insert" parameterType="com.lanyu.common.model.Module" >
+    insert into sys_module (mcode, mname, micon,murl,explains,parent,sort)
+    values (#{mcode,jdbcType=VARCHAR}, #{mname,jdbcType=VARCHAR},
+      #{micon,jdbcType=VARCHAR},#{murl,jdbcType=VARCHAR},
+      #{explains,jdbcType=VARCHAR},#{parent,jdbcType=VARCHAR},#{sort,jdbcType=INTEGER}
+      )
+  </insert>
+
+  <update id="updateByKeySelective" parameterType="com.lanyu.common.model.User" >
+    update sys_module
+    <set >
+      <if test="mname != null" >
+        mname = #{mname,jdbcType=VARCHAR},
+      </if>
+      <if test="micon != null and micon != ''" >
+        micon = #{micon,jdbcType=VARCHAR},
+      </if>
+      <if test="murl != null and murl != ''" >
+        murl = #{murl,jdbcType=VARCHAR},
+      </if>
+      <if test="explains != null" >
+        explains = #{explains,jdbcType=VARCHAR},
+      </if>
+      <if test="parent != null and parent != ''" >
+        parent = #{parent,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null" >
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+    </set>
+    where mcode = #{mcode,jdbcType=VARCHAR}
+  </update>
+
+  <delete id="deleteByKey" parameterType="java.lang.String" >
+    delete from sys_module
+    where mcode = #{mocde,jdbcType=VARCHAR}
+  </delete>
+<!--查询角色所有权限-->
+  <select id="selectRoleModule" parameterType="java.lang.String"  resultType="java.util.HashMap">
+   SELECT m.mcode as id,m.mname as name,m.micon as icon,m.parent as pId,
+    case ISNULL(r.mcode) when 1 then false else true end as checked,true as open
+    FROM sys_module m
+    LEFT JOIN sys_role_module r on m.mcode=r.mcode and r.rcode=#{rcode}
+    ORDER BY  m.sort
+  </select>
+</mapper>

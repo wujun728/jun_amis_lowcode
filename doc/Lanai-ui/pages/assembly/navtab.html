@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航条控制</title>
+    <link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="content">
+            <blockquote class="bg-gray-light blockquote-success">以下均以“栅格”标签做参照
+                </blockquote>
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnCloseSelf">关闭当前标签</button>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control bg-black" rows="2">
+//执行脚本命令关闭自身 
+window.parent.$.addtabs.closeself();</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnClose">关闭指定标签</button>
+            </div>
+            <div class="form-group">
+            <textarea class="form-control bg-black" rows="3">
+//执行脚本命令关闭指定标签，若不存在，则无操作 
+//window.parent.$.addtabs.close({'id':'菜单data-addtab的值'});
+window.parent.$.addtabs.close({id:'grid'});</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnCloseTo">关闭当前并激活指定标签</button>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control bg-black" rows="3">
+//执行脚本命令关闭当前标签，并打开或跳转指定标签 
+window.parent.$.addtabs.closeTo('grid');</textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" id="btnCloseAll">关闭所有</button>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control bg-black" rows="3">
+//执行脚本命令关闭所有标签[home除外]
+window.parent.$.addtabs.closeAll("#MasterTabs");</textarea>
+            </div>
+    </section>
+    
+<script src="../../dist/js/jquery.min.js"></script>
+<script src="../../dist/js/lanai-ui.min.js"></script>
+<script>
+    $(function(){
+        $("#btnCloseSelf").click(function(){
+            window.parent.$.addtabs.closeself();
+        })
+
+        $("#btnClose").click(function(){
+            window.parent.$.addtabs.close( { 'id': 'grid' } );
+        })
+
+        $("#btnCloseTo").click(function(){
+            window.parent.$.addtabs.closeTo('grid');
+        })
+
+        $("#btnCloseAll").click(function(){
+            window.parent.$.addtabs.closeAll("#MasterTabs");
+        })
+    })
+</script>
+</body>
+</html>

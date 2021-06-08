@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/include :: header"></head>
+<body class="gray-bg">
+    <div class="row" th:object="${orderDTO}">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <dl class="dl-horizontal">
+                                    <dt>报修详情</dt>
+                                    <dd></span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <dl class="dl-horizontal">
+                                    <dt>报修单号：</dt>
+                                    <dd th:text="*{orderId}"></dd>
+                                    <dt>报修人：</dt>
+                                    <dd th:text="*{initiatorUserName}"></dd>
+                                    <dt>报修设备： </dt>
+                                    <dd th:text="*{equipmentName}"></dd>
+                                    <dt>故障描述：</dt>
+                                    <dd th:text="*{description}"></dd>
+                                    <dt>语音：</dt>
+                                    <dd class="project-people" th:each="voice : ${orderDTO.repairsVoiceList}">
+                                        <a href="project_detail.html">
+                                            <audio controls="controls" th:src="${voice.filepath}"></audio>
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-7" id="cluster_info">
+                                <dl class="dl-horizontal">
+                                    <dt>报修时间：</dt>
+                                    <dd th:text="${#dates.format(orderDTO.createTime, 'yyyy-MM-dd HH:mm')}"></dd>
+                                    <dt>设备编号：</dt>
+                                    <dd th:text="*{equipmentNo}"></dd>
+                                    <dt>图片：</dt>
+                                    <dd class="project-people" th:each="Image : ${orderDTO.repairsPictureList}">
+                                        <img id="imagetest" alt="image" style="width: 100px; height: 100px;" class="img-polaroid" th:src="${Image.filepath}">
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <dl class="dl-horizontal">
+                                    <dt>维修详情</dt>
+                                    <dd></span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <dl class="dl-horizontal">
+                                    <dt>维修人：</dt>
+                                    <dd th:text="*{serviceUserName}"></dd>
+                                    <dt>维修反馈：</dt>
+                                    <dd th:text="*{serviceDescription}"></dd>
+                                    <dt>语音：</dt>
+                                    <dd class="project-people" th:each="voice : ${orderDTO.serviceVoiceList}">
+                                        <a href="project_detail.html">
+                                            <audio controls="controls" th:src="${voice.filepath}"></audio>
+                                        </a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-7" id="cluster_info2">
+                                <dl class="dl-horizontal">
+                                    <dt>维修时间： </dt>
+                                    <dd th:text="${#dates.format(orderDTO.serviceTime, 'yyyy-MM-dd HH:mm')}"></dd>
+                                    <dt>图片：</dt>
+                                    <dd class="project-people" th:each="Image : ${orderDTO.servicePictureList}">
+                                        <img alt="image" style="width: 100px; height: 100px;" class="img-polaroid" th:src="${Image.filepath}">
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="row m-t-sm">
+                            <div class="col-sm-12">
+                                <div class="panel blank-panel">
+                                    <div class="panel-heading">
+                                        <div class="panel-options">
+                                            <ul class="nav nav-tabs">
+                                                <li><a id="test" href="project_detail.html#tab-1" data-toggle="tab">流转信息</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-body">
+
+                                        <div class="tab-content">
+                                            <div class="tab-pane" id="tab-1">
+
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>操作人</th>
+                                                            <th>操作内容</th>
+                                                            <th>操作时间</th>
+                                                            <th>报修单状态</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr th:each="Processes : ${orderDTO.repairsOrderProcessesList}">
+                                                            <td th:text="${Processes.processUserName}">
+                                                            </td>
+                                                            <td>
+                                                                <!--前端显示对应状态：0=待分配,1=已指派,2=已受理,3=维修中,4=待确认,5=已确认,6=已退回,7=已评价,8=待分配-->
+                                                                <div th:if="${Processes.processStatus}==0">报修</div>
+                                                                <div th:if="${Processes.processStatus}==1">指派</div>
+                                                                <div th:if="${Processes.processStatus}==2">受理</div>
+                                                                <div th:if="${Processes.processStatus}==3">维修</div>
+                                                                <div th:if="${Processes.processStatus}==4">提交维修信息</div>
+                                                                <div th:if="${Processes.processStatus}==5">确认</div>
+                                                                <div th:if="${Processes.processStatus}==6">退回</div>
+                                                                <div th:if="${Processes.processStatus}==7">评价</div>
+                                                                <div th:if="${Processes.processStatus}==8">分配</div>
+                                                            </td>
+                                                            <td th:text="${#dates.format(Processes.createTime, 'yyyy-MM-dd HH:mm')}">
+                                                            </td>
+                                                            <td>
+                                                                <!--前端显示对应状态：0=待分配,1=已指派,2=已受理,3=维修中,4=待确认,5=已确认,6=已退回,7=已评价,8=待分配-->
+                                                                <div th:if="${Processes.processStatus}==0"><span class="label label-primary"><i class="fa fa-check"></i>待分配</span></div>
+                                                                <div th:if="${Processes.processStatus}==1"><span class="label label-primary"><i class="fa fa-check"></i>已指派</span></div>
+                                                                <div th:if="${Processes.processStatus}==2"><span class="label label-primary"><i class="fa fa-check"></i>已受理</span></div>
+                                                                <div th:if="${Processes.processStatus}==3"><span class="label label-primary"><i class="fa fa-check"></i>维修中</span></div>
+                                                                <div th:if="${Processes.processStatus}==4"><span class="label label-primary"><i class="fa fa-check"></i>待确认</span></div>
+                                                                <div th:if="${Processes.processStatus}==5"><span class="label label-primary"><i class="fa fa-check"></i>已确认</span></div>
+                                                                <div th:if="${Processes.processStatus}==6"><span class="label label-primary"><i class="fa fa-check"></i>已退回</span></div>
+                                                                <div th:if="${Processes.processStatus}==7"><span class="label label-primary"><i class="fa fa-check"></i>已评价</span></div>
+                                                                <div th:if="${Processes.processStatus}==8"><span class="label label-primary"><i class="fa fa-check"></i>待分配</span></div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //窗体加载事件
+            $('#test').trigger('click');
+        });
+    </script>
+</body>
+</html>

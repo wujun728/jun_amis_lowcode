@@ -1,0 +1,28 @@
+<view class="container">
+  <scroll-view class="coupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+
+    <view class="item" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+      <view class="tag">{{item.rangeRelationName}}</view>
+      <view class="content">
+        <view class="left">
+          <view class="discount">{{item.discount}}元</view>
+        </view>
+        <view class="right">
+          <view class="name">满{{item.conditionNum}}元使用</view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="time" wx:if="{{item.timeType == 1}}">有效期：自领取之日起{{item.days}}天内有效</view>
+        <view class="time" wx:else> 有效期：{{item.startTime}} - {{item.endTime}}</view>
+      </view>
+      <view class="condition">
+        <button type="warn" bindtap="getCoupon" data-index="{{item.couponId}}" class="txt">立即领取</button> 
+      </view>
+    </view>
+
+    <view class="page" wx:if="{{showPage}}">
+      <view class="prev {{ page <= 1 ? 'disabled' : ''}}" bindtap="prevPage">上一页</view>
+      <view class="next {{ (count / limit) < page ? 'disabled' : ''}}" bindtap="nextPage">下一页</view>
+    </view>
+  </scroll-view>
+</view>

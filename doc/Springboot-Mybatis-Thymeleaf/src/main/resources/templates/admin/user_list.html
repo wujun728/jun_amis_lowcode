@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="后台bootstrap框架,bootstrap tabe表格">
+		<meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+		<title>用户列表</title>
+
+		<link href="../../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+		<link href="../../static/css/font-awesome.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+		<link href="../../static/css/plugins/bootstrap-table/bootstrap-table.min.css" th:href="@{/css/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet">
+		<link href="../../static/css/animate.css" th:href="@{/css/animate.css}" rel="stylesheet">
+		<link href="../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+		<link href="../../static/css/plugins/datapicker/datepicker3.css" th:href="@{/css/plugins/datapicker/datepicker3.css}" rel="stylesheet">
+		<link href="../../static/css/plugins/multiselect/bootstrap-multiselect.css" th:href="@{/css/plugins/multiselect/bootstrap-multiselect.css}" rel="stylesheet">
+	</head>
+
+	<body class="gray-bg">
+		<div class="container-fluid">
+			<!--<div class="ibox">-->
+				<div class="ibox-content padding-s-0">
+					<div class="ibox float-e-margins">
+						<div class="example">
+							<div class="btn-group hidden-xs" id="userListTableToolbar" role="group">
+
+								<button  type="button" shiro:hasRole="admin" class="btn btn-outline btn-default" onclick="addUserModal();">
+                                	<i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+                            	</button>
+								<button type="button" shiro:hasRole="admin" class="btn btn-outline btn-default" title="重置密码" onclick="batchevent('resetPw');">
+									<i class="glyphicon glyphicon-retweet" aria-hidden="true"></i>
+								</button>
+								<button type="button" class="btn btn-outline btn-default" onclick="batchevent('deleteUser');">
+                                <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+                            </button>
+							</div>
+							<table id="userListTable" ></table>
+						</div>
+					</div>
+					<!-- End Example Events -->
+				</div>
+			</div>
+
+		<!-- 添加修改用户信息模态框（Modal） -->
+		<div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							添加
+						</h4>
+					</div>
+					<div class="modal-body">
+						<form id="eidtUserForm" class="form-horizontal" role="form">
+							<input id="user_id" name="user_id" type="hidden">
+							<div class="form-group">
+								<label for="nickname" class="col-sm-2 control-label">昵称</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="nickname" name="user_name" placeholder="请输入昵称">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="phone" class="col-sm-2 control-label">电话</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="phone" name="phone" placeholder="请输电话">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-sm-2 control-label">邮箱</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="email" name="email" placeholder="请输邮箱">
+								</div>
+							</div>
+							<div class="form-group" id="data_1">
+								<label for="birthday" class="col-sm-2 control-label">生日</label>
+								<div class="col-sm-10">
+									<div class="input-group date">
+										<input type="text" class="form-control" id="birthday" name="birthday"  value="2000-01-01">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">性别</label>
+								<div class="col-sm-10">
+									<label class="radio-inline">
+										<input type="radio" name="sex" id="optionsRadios3"  value="1" checked> 男
+									</label>
+									<label class="radio-inline">
+										<input type="radio" name="sex" id="optionsRadios4"  value="2"> 女
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="submitUserInfo();">提交</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+
+		<!-- 修改用户角色模态框（Modal） -->
+		<div class="modal fade" id="roleModal" tabindex="-2" role="dialog" aria-labelledby="editRoleLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="editRoleLabel">
+							编辑角色
+						</h4>
+					</div>
+					<div class="modal-body row">
+						<div class="col-lg-5">
+							<h4>已有角色</h4>
+							<select name="from[]" id="multiselectleft" class="form-control has-success" size="10" multiple="multiple">
+							</select>
+						</div>
+
+						<div class="col-lg-2" style="margin-top: 50px;">
+							<button type="button" id="multiselectleft_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+							<button type="button" id="multiselectleft_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+							<button type="button" id="multiselectleft_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+							<button type="button" id="multiselectleft_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+						</div>
+						<div class="col-lg-5">
+							<h4>未授予角色</h4>
+							<select name="to[]" id="multiselectleft_to" class="form-control" size="10" multiple="multiple"></select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onclick="submitRole();">提交</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+
+		<!-- 全局js -->
+		<script src="../../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+		<script src="../../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+		<script src="../../static/js/plugins/layer/layer.min.js" th:src="@{/js/plugins/layer/layer.min.js}"></script>
+		<!-- 自定义js -->
+		<script src="../../static/js/content.js" th:src="@{/js/content.js}"></script>
+
+		<!-- Bootstrap table -->
+		<script src="../../static/js/plugins/bootstrap-table/bootstrap-table.min.js" th:src="@{/js/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+		<script src="../../static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js" th:src="@{/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js}"></script>
+		<script src="../../static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" th:src="@{/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js}"></script>
+		<script src="../../static/js/plugins/bootstrap-table/bootstrap-table-export.min.js" th:src="@{/js/plugins/bootstrap-table/bootstrap-table-export.min.js}"></script>
+		<script src="../../static/js/plugins/bootstrap-table/tableExport.min.js" th:src="@{/js/plugins/bootstrap-table/tableExport.min.js}"></script>
+		<!--左右多选多-->
+		<script src="../../static/js/plugins/multiselect/multiselect.js" th:src="@{/js/plugins/multiselect/multiselect.js}"></script>
+		<!--日期选择框-->
+		<script src="../../static/js/plugins/datapicker/bootstrap-datepicker.js" th:src="@{/js/plugins/datapicker/bootstrap-datepicker.js}"></script>
+
+		<!-- Peity -->
+		<script type="text/javascript">
+			var userid;
+			$(function() {
+				$('#userListTable').bootstrapTable({
+					//url: "/js/demo/bootstrap_table_test.json",
+					url: "/user/selectUsers",					//数据源
+                    cache: false,
+					search: true,                 	//是否显示搜索框
+					searchAlign: "left",			//指定搜索框水平方向位置
+					trimOnSearch: true,      	//搜索内容是否自动去除前后空格
+					searchOnEnterKey: true,	//设置为 true时，按回车触发搜索方法，否则自动触发搜索方法
+                    icons: {
+                        refresh: 'glyphicon-repeat',
+                        columns: 'glyphicon-list',
+                        export: 'glyphicon-export'
+                    },
+                    iconSize: 'outline',
+					showExport: true,                     //是否显示导出按钮
+					exportTypes:['csv', 'txt', 'sql', 'doc', 'excel', 'xlsx', 'pdf'],  			//导出文件类型
+					exportDataType: "all",             //basic当前页', 'all所有, 'selected'.
+					exportOptions: {
+						ignoreColumn: [0,1],  //忽略某一列的索引
+						fileName: '用户信息报表',  //文件名称设置
+						worksheetName: 'sheet1',  //表格工作区名称
+						tableName: '用户信息报表',
+						excelstyles: ['background-color', 'color', 'font-size', 'font-weight']
+					},
+					queryParams :queryFun, 		//查询函数
+					pagination: true,             			//显示分页栏
+					showRefresh: true,        		 //显示刷新按钮
+					showColumns: true,         		//是否显示内容列下拉框
+					striped: true,                		//设置为 true 会有隔行变色效果
+					sortName: "user_id",				//定义排序字段
+					sortOrder: "asc",           		//定义排序方式，'asc' 或者 'desc'
+					silentSort: false,          		 	//设置为 false 将在点击分页按钮时，自动记住排序项
+					maintainSelected: true,  		//设置为 true 在点击分页按钮或搜索按钮时，将记住checkbox的选择项
+					toolbar: '#userListTableToolbar',          //工具栏id
+					sidePagination: "server",                               //设置在哪里进行分页，可选值为 'client' 或者 'server'，默认'client'
+					pageNumber: 1,                                             //如果设置了分页，首页页码
+					pageSize: 20,												//每页每页显示行数
+					pageList: [20, 50, 100,200,'All'],					//设置可供选择的页面数据条数,数据行数大于20小于50时只会显示20，50两项，其他同理
+					showFullscreen: true,                                    //是否显示全屏按钮
+					responseHandler: function(data) {                  //如果后台返回的数据格式与bootstrapTable的数据格式不同在这里调整
+						return {
+							"page": data.pages,
+							"total": data.total,
+							"rows": data.list
+						};
+					},
+                    uniqueId: "user_id",
+					columns: [
+						{field: 'checkStatus',checkbox: true},  //给多选框赋一个field值为“checkStatus”用于更改选择状
+						{field:'user_id',title:'用户编号'},
+						{field:'user_name',title:'名称',sortable:'true'},
+						{field:'phone',title:'电话',sortable:'true'},
+						{field:'email',title:'邮箱' ,sortable:'true'},
+						{field:'sex',title:'性别',sortable:'true',formatter:function(value,row,index){if(value==2) return '女'; else return '男';}},
+						{field:'birthday',title:'生日',sortable:'true'},
+						{field:'qqpid',title:'qq标识'},
+						{field:'wxpid',title:'微信'},
+						{field:'statu',title:'状态',sortable:'true',formatter:function(value,row,index){if(value) return '正常'; else return '冻结';}},
+						{title:'操作',formatter:function (value,row,index) {
+								return ['<a title="编辑" onclick="editUserModal('+row.user_id+')" style="margin-right: 15px;"><i class="glyphicon glyphicon-pencil"></i></a>',
+											'<a title="角色" onclick="editRoleModal('+row.user_id+')" style="color: green;"><i class="glyphicon glyphicon-user"></i></a>'
+										].join('');
+						}}
+					]
+				});
+
+                //点击行选中效果
+                $('#userListTable').on("click-row.bs.table",function (field, row, $element) {
+                    $("#userListTable tr").removeClass("success");
+                    $element.addClass("success");
+                });
+				//注册日期控件
+                $('#data_1 .input-group.date').datepicker({
+                    todayBtn: "linked",
+                    keyboardNavigation: false,
+                    forceParse: false,
+                    calendarWeeks: true,
+                    autoclose: true
+                });
+
+            });
+
+			//自定义查询提交内容
+			function queryFun(params) {
+				return params;
+			}
+			//打开添加弹层
+			function addUserModal(){
+				document.getElementById("eidtUserForm").reset();
+                $("#myModalLabel").text("添加");
+				$('#editUserModal').modal('show');
+			}
+			//打开编辑弹层
+            function editUserModal(id) {
+                var select = $('#userListTable').bootstrapTable('getRowByUniqueId', id);
+                $("#eidtUserForm").populateForm(select);
+                $("#myModalLabel").text("编辑");
+                $('#editUserModal').modal('show');
+            }
+            //提交用户信息
+            function submitUserInfo(){
+				var enect = $("#myModalLabel").text();
+				var url = "/user/addUser";
+				if(enect=="编辑"){
+                    url = "/user/editUser";
+				}
+				//layer.open({content:JSON.stringify(userinfo)});
+                $.ajax({
+                    type: "POST",dataType: "JSON",
+                    url:url,
+                    data: $("#eidtUserForm").serialize(),
+                    async : false,
+                    success: function(data){
+                        if(data.code==200){
+                            $("#editUserModal").modal("hide");
+                            layer.msg(data.msg,{icon:6,time:1000});
+                            $("#userListTable").bootstrapTable("refresh");
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    }
+                });
+			}
+            //打开编辑角色弹层
+			function editRoleModal(uid){
+                userid=uid;
+                $("#multiselectleft").empty();
+                $("#multiselectleft_to").empty();
+                $.ajax({
+                    type: "POST",dataType: "JSON",
+                    url:"/role/getMultselectRoles",
+                    data: {uid:uid},
+                    async : false,
+                    success: function(data){
+                        if(data.code==200){
+                            var options=data.data;
+                            var selectleft = '';
+                            var selectright = '';
+                            //<option value="3" data-position="3">Item 3</option>
+							for(var i=0;i<options.length;i++){
+								if(options[i].chick){
+                                    selectright+='<option value="'+options[i].rcode+'" data-position="'+options[i].rcode+'">'+options[i].rname+'</option>';
+								}else{
+                                    selectleft+='<option value="'+options[i].rcode+'" data-position="'+options[i].rcode+'">'+options[i].rname+'</option>';
+								}
+							}
+							$("#multiselectleft").append(selectleft);
+							$("#multiselectleft_to").append(selectright);
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    }
+                });
+                $('#multiselectleft').multiselect();
+                $("#roleModal").modal("show");
+			}
+			//提交授予角色
+			function submitRole() {
+                var array = new Array();  //定义数组
+                $("#multiselectleft option").each(function(){  //遍历所有option
+                    var txt = $(this).val();   //获取option值
+                    if(txt!=''){
+                        array.push({rcode:txt,uid:userid});  //添加到数组中
+                    }
+                });
+                var param = {multselect:JSON.stringify(array),uid:userid};
+                $.ajax({
+                    type: "POST",dataType: "JSON",
+                    url:"/role/editUserRoles",
+                    data: param,
+                    async : false,
+                    success: function(data){
+                        if(data.code==200){
+                            $("#roleModal").modal("hide");
+                            layer.msg(data.msg,{icon:6,time:1000});
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    }
+                });
+            }
+            //重置密码或删除用户
+            function batchevent(event){
+                var selectrows = $("#userListTable").bootstrapTable("getSelections");
+                if(selectrows.length==0){
+                    layer.alert("请选择要操作的数据！",{icon: 3});return;
+                }
+                var uidstr=',';
+                var unamestr=',';
+                for(var i=0;i<selectrows.length;i++){
+                    uidstr+=','+selectrows[i].user_id;
+                    unamestr+=','+selectrows[i].user_name;
+                }
+                uidstr=uidstr.replace(",,","");
+                unamestr=unamestr.replace(",,","");
+                $.ajax({
+                    type: "POST",dataType: "JSON",
+                    url:"/user/"+event,
+                    data: {uidstr:uidstr,unamestr:unamestr},
+                    async : false,
+                    success: function(data){
+                        if(data.code==200){
+                            $("#roleModal").modal("hide");
+                            layer.msg(data.msg,{icon:6,time:1000});
+                            $("#userListTable").bootstrapTable("refresh");
+                        }else{
+                            layer.msg(data.msg,{icon:5,time:1000});
+                        }
+                    }
+                });
+            }
+		</script>
+	</body>
+
+</html>

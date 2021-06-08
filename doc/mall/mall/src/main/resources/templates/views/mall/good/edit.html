@@ -1,0 +1,1065 @@
+<#include "/common/layout.html"> 
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="box box-default color-palette-box">
+				<div class="box-header with-border">
+	              <h3 class="box-title"></h3>
+	            </div>
+				<form class="form-horizontal" method="post" action="/mall/good/doEdit" id="goodEditFrom" >
+				 <input type="hidden" value="${good.goodsId}" name="goodsId" id="goodsId"/>
+				 <div class="box-body">
+					<div class="form-group">
+						<label for="uname" class="col-sm-2 col-md-1 control-label">商品编号</label>
+						<div class="col-sm-10 col-md-11">
+							<input type="text" id="goodSn" name="goodSn" value="${good.goodSn}" class="form-control" placeholder="请输入商品编号" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="uname" class="col-sm-2 col-md-1 control-label">商品名称</label>
+						<div class="col-sm-10 col-md-11">
+							<input type="text" id="goodName" name="goodName" value="${good.goodName}" class="form-control" placeholder="请输入商品名称" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">商品类目</label>
+						<div class="col-sm-10 col-md-11">
+							<select id="categoryId" name="categoryId" class="form-control select2" style="width:90%;" required>
+								<option value="" selected="selected">--请选择类目（必选）--</option>
+								<#list categoryMapList?keys as key>
+									<optgroup label="${categoryMapList[key][0].name}">
+										<#list categoryMapList[key] as categorys>
+											<#if categorys_index gt 0 >
+						 						<option value="${categorys.categoryId}" ${(good.categoryId?? && categorys.categoryId == good.categoryId)?string('selected="selected"','')}>${categorys.name}</option>
+						 					</#if>
+						 				</#list>
+							    	</optgroup>
+								</#list>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 col-md-1 control-label">商品单位</label>
+						<div class="col-sm-10 col-md-11">
+							<input type="text" class="form-control" id="unit" name="unit" value="${good.unit}" placeholder="请输入商品单位（例如：盒/个/件）" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 col-md-1 control-label">keyword</label>
+						<div class="col-sm-10 col-md-11">
+							<input type="text" class="form-control" id="keywords" name="keywords" value="${good.keywords}" placeholder="请输入关键字描述" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password2" class="col-sm-2 col-md-1 control-label">商品简介</label>
+						<div class="col-sm-10 col-md-11">
+							<textarea id="brief" name="brief" class="form-control" placeholder="请输入300字以内字符..." required> ${good.brief} </textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="uname" class="col-sm-2 col-md-1 control-label">商品图片</label>
+						<div class="col-sm-10 col-md-11">
+							<button type="button"  class="upload-file1 btn btn-w-m btn-info"><i class="fa fa-cloud-download"></i>&nbsp;选择图片</button>
+					        <div class="uploader-list1 clearfix">
+					        	<div class="file-item">
+							    	<img src="${good.picUrl}">
+							    	<input type="hidden" name="picUrl" value="${good.picUrl}">
+							    	<i class="fa fa-remove file-item-delete"></i>
+								</div>
+					        </div>
+					        <span class="help-block m-b-none"><i class="fa fa-info-circle"></i>尺寸750x750像素以上，大小2M以下（1张）</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password2" class="col-sm-2 col-md-1 control-label">宣传画廊</label>
+						<div class="col-sm-10 col-md-11">
+							<button type="button"  class="upload-file btn btn-w-m btn-info"><i class="fa fa-cloud-download"></i>&nbsp;选择图片</button>
+					        <div class="uploader-list clearfix">
+					        	<#list pictureList as item>
+							        <div class="file-item">
+								    	<img src="${item}">
+								    	<input type="hidden" name="gallery" value="${item}">
+								    	<i class="fa fa-remove file-item-delete"></i>
+									</div>
+								</#list>
+					        </div>
+					        <span class="help-block m-b-none"><i class="fa fa-info-circle"></i>尺寸750x750像素以上，大小2M以下（3张）</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">规格/库存</label>
+						<div class="col-sm-10 col-md-11">
+							<label class="radio-box"> 
+								<input name="specType" type="radio" class="minimal" ${(good.specType?? && good.specType == 1)?string('checked','')} value="1" required> 单一规格
+							</label> 
+							<label> 
+								<input name="specType" type="radio"class="minimal" ${(good.specType?? && good.specType == 0)?string('checked','')} value="0" required> 多种规格
+							</label>
+							<div id="secification-single" style="margin:10px 0px; ${(good.specType?? && good.specType == 1)?string('','display:none')}" >
+		                    	<table class="table table-bordered" id="pdPublish_skuDetailTable_single">
+				                	<thead>
+										<tr style="background-color: #f7f7fa">
+											<th style="width:80px">商品规格</th>
+											<th>商品编码</th>
+											<th>销售价</th>
+											<th>划线价</th>
+											<th>库存</th>
+											<th>重量（kg）</th>
+										</tr>
+									</thead>
+									<tbody id="pdPublish_skuDetailTableBody_single">
+										<tr class="A0">
+								    		<td style="width:80px;" id="${specTypeDetail.skudetailId}">标准版 </td>
+											<td>
+												<input type="text" value="${specTypeDetail.businessCode}" class="form-control" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">
+											</td>
+									    	<td>
+												<input type="text" value="${specTypeDetail.goodPrice}" class="form-control" placeholder="请输入价格" onkeyup="pdPublish_assign(this)">
+											</td>
+									    	<td>
+												<input type="text" value="${specTypeDetail.linePrice}" class="form-control" placeholder="请输入价格" onkeyup="pdPublish_assign(this)">
+											</td>
+											<td >
+												<input type="text" value="${specTypeDetail.number}" class="form-control" placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">
+											</td>
+											<td >
+												<input type="text" value="${specTypeDetail.goodWeight}" class="form-control" placeholder="请输入重量" onkeyup="pdPublish_assign(this)">
+											</td>
+								    	</tr>
+								    </tbody>
+			                    </table>
+		                    </div>
+		                   	<div id="secification-many" style="margin:10px 0px; ${(good.specType?? && good.specType == 0)?string('','display:none')}" >
+				                <div id="pdPublish_skuDivId">
+				                	<#list skuMap?keys as skus>
+										<div class="attrBox skuClassDiv" style="border: 1px solid #ccc; margin-bottom: 15px;">
+											<div class="attr_name" style="position: relative; margin: 10px">
+												<input value="${skus}" class="form-control  td_input skuTypeName check-product-border" type="text" maxlength="10" placeholder="属性名（必填，如颜色）" style="width:200px;"> 
+												<a class="btn m-btn btn-sm reduce_td" title="删除属性" style="position: absolute; top: -23px; right: -25px"> 
+													<i class="fa fa-times-circle fa-2x skuRemove" onclick="pdPublish_delSku(this)"></i>
+												</a>
+											</div>
+											<div class="attr_name_sub" style="margin-left: 10px; margin-bottom: 10px">
+												<#list skuMap[skus] as categorys>
+													<span style="width:160px;display:inline-block;background-color:#f7f8fa;margin:0 12px 12px 0" class="skuTypeValueSpan">     
+														<div style="float:left;">        
+													 		<input value="${categorys.skuvalue}" id="${categorys.keyclassType}" type="text" style="width:135px; border:none; float:left;background-color:transparent" class="form-control skuTypeValue valid" placeholder="属性值(回车生效)" maxlength="50" onkeyup="pdPublish_skuTypeValueOnkeyup(event,this)" disabled="disabled" aria-invalid="false">         
+													 		<span style="width:25px;float:right;cursor:pointer;">              
+													 			<span style="width:25px;line-height:34px;" onclick="pdPublish_delSkuTypeValue(this)">                   
+													 				<i class="fa fa-times-circle fa-lg skuTypeValueRemove"></i>             
+													 			</span>         
+													 		</span>     
+													 	</div>
+												 	</span>
+											 	</#list>
+												<span class="pdPublish_skuTypeValueAddLa" onclick="pdPublish_skuTypeValueAdd(this)" style="width:36px; height:34px; line-height:3px; display:inline-block; margin:0px 12px 12px 0px;">     			
+												 	<div style="float:left;">                 
+												 		<a class="btn btn-sm" title="添加规格值" id="">                    	
+												 			<i class="fa fa-plus-circle fa-2x"></i>                 	
+												 		</a>                
+												 	</div>           
+												</span>
+											</div>
+										</div>
+									</#list>
+									<div style="margin-bottom:10px">
+				                        <span onclick="pdPublish_skuAdd(this)" id="pdPublish_skuAddSpan">
+				                        	<a class="btn btn-info"><i class="fa fa-plus"></i> 添加规格</a>
+			                            </span>
+				                    </div>
+				                </div>
+				                <table class="table table-bordered" id="pdPublish_skuDetailTable">
+				                	<thead>
+										<tr style="background-color: #f7f7fa">
+											<th style="width:150px">商品规格</th>
+											<th>商品编码</th>
+											<th>销售价</th>
+											<th>划线价</th>
+											<th>库存</th>
+											<th>重量（kg）</th>
+										</tr>
+									</thead>
+									<tbody id="pdPublish_skuDetailTableBody">
+										<#list skuDetailList as skudetails>
+											<tr  class="${skudetails.valueclassType}">
+									    		<td id="${skudetails.skudetailId}">${skudetails.skudetails}</td>
+												<td>
+													<input type="text" value="${skudetails.businessCode}" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">
+												</td>
+										    	<td>
+													<input type="text" value="${skudetails.goodPrice}" class="form-control  skuGoodSalePrice" placeholder="请输入价格" onkeyup="pdPublish_assign(this)">
+												</td>
+										    	<td>
+													<input type="text" value="${skudetails.linePrice}" class="form-control  skuDetailLinePrice" placeholder="请输入价格" onkeyup="pdPublish_assign(this)">
+												</td>
+												<td >
+													<input type="text" value="${skudetails.number}" class="form-control  skuDetailStock" placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">
+												</td>
+												<td >
+													<input type="text" value="${skudetails.goodWeight}" class="form-control  skuDetailWeight" placeholder="请输入重量"  onkeyup="pdPublish_assign(this)">
+												</td>
+									    	</tr>
+								    	</#list>
+								    </tbody>
+			                    </table>
+					        </div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">商品详情</label>
+						<div class="col-sm-10 col-md-11">
+							<input id="detail" name="detail" type="hidden" value="${(good.detail)?html}">
+			    			<div id="editor" class="summernote"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">是否新品</label>
+						<div class="col-sm-10 col-md-11">
+							<label class="radio-box"> 
+								<input name="isNew" type="radio" class="minimal" ${(good.isNew?? && good.isNew == 1 )?string('checked','')} value="1" required> 新品
+							</label> 
+							<label> 
+								<input name="isNew" type="radio"class="minimal" ${(good.isNew?? && good.isNew == 0 )?string('checked','')} value="0" required> 非新品
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">是否热卖</label>
+						<div class="col-sm-10 col-md-11">
+							<label class="radio-box"> 
+								<input name="isHot" type="radio" class="minimal" ${(good.isHot?? && good.isHot == 1 )?string('checked','')} value="1" required> 热卖
+							</label> 
+							<label> 
+								<input name="isHot" type="radio"class="minimal" ${(good.isHot?? && good.isHot == 0 )?string('checked','')} value="0" required> 普通
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 col-md-1 control-label">是否在售</label>
+						<div class="col-sm-10 col-md-11">
+							<label class="radio-box"> 
+								<input name="isShelf" type="radio" class="minimal" ${(good.isShelf?? && good.isShelf == 1 )?string('checked','')} value="1" required> 在售
+							</label> 
+							<label> 
+								<input name="isShelf" type="radio"class="minimal" ${(good.isShelf?? && good.isShelf == 0 )?string('checked','')} value="0" required> 未售
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 col-md-1 control-label">商品顺序</label>
+						<div class="col-sm-10 col-md-11">
+							<input id="sortOrder" name="sortOrder" value="${good.sortOrder}" class="form-control" type="text" placeholder="请输入顺序" required>
+							<span class="help-block m-b-none"><i class="fa fa-info-circle"></i>数字越小越靠前 </span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-1 control-label">&nbsp;</label>
+						<div class="col-sm-10 col-md-11 col-sm-offset-5">
+							<button type="button" class="btn btn-primary" onclick="submitHandler()"><i class="fa fa-save"></i>保存</button>
+							<a class="btn btn-default" href="javascript:;" onclick="toProductList()"><i class="fa fa-close"></i>取消</a>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+<#include "/common/filelibrary.html">
+<script type="text/javascript">
+	//切换规格方式
+	$('input:radio[name="specType"]').on('ifChecked', function (e) {
+	     if (e.currentTarget.value === '1'){
+	  		$("#secification-single").show();
+	  		$("#secification-many").hide();
+	     }else{
+	    	$("#secification-single").hide();
+	   		$("#secification-many").show();
+	     }
+	});
+	//选择图片
+	$('.upload-file').selectImages({
+	    name: 'gallery'
+		, imagesList: '.uploader-list'
+	    , multiple: true
+	    , limitNum: 3
+	});
+	// 图片列表拖动
+	$('.uploader-list').DDSort({
+	    target: '.file-item',
+	    delay: 100, // 延时处理，默认为 50 ms，防止手抖点击 A 链接无效
+	    floatStyle: {
+	        'border': '1px solid #ccc',
+	        'background-color': '#fff'
+	    }
+	});
+	// 选择图片
+	$('.upload-file1').selectImages({
+	    name: 'picUrl'
+	    , imagesList: '.uploader-list1'
+	    , multiple: false
+	    , limitNum: 1
+	});
+	document.emojiSource = '/plugins/summernote/tam-emoji/img';
+	var MyphotoButton = function (context) {
+	    var ui = $.summernote.ui;
+	    var button = ui.button({
+	        contents: '<i class="note-icon-picture"/>',  //按钮样式
+	        tooltip: '插入图片',
+	    	callback:function(e){
+	    		e.addClass("upload-editor");
+	    	}
+	    });
+	    return button.render();    //按钮渲染
+	}
+	//富文本编辑器
+	$('.summernote').summernote({
+	  	toolbar: [
+		    ['style', ['emoji','style','bold', 'italic', 'underline', 'clear']],
+		    ['font', ['strikethrough', 'superscript', 'subscript']],
+		    ['fontname', ['fontsize','height','fontname']],
+		    ['color', ['color']],
+		    ['para', ['ul', 'ol', 'paragraph']],
+		    ['table', ['table','hr']],
+		    ['insert', ['myphoto', 'link', 'video']], //'picture', 
+		    ['view', ['fullscreen', 'codeview', 'help']],
+		],
+		popover: {
+		  	image: [
+		    	['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+		    	['float', ['floatLeft', 'floatRight', 'floatNone']],
+		    	['remove', ['removeMedia']]
+		  	],
+		},
+		buttons: {
+	        myphoto: MyphotoButton  //自已定义的按钮函数
+	    },
+		placeholder: '请输入描述内容...',
+		minHeight: 500,
+		maxHeight: null,
+		lang : 'zh-CN',
+		dialogsInBody: true,
+		dialogsFade: true,
+		followingToolbar: false,
+	});
+	//显示富文本内容
+	var content = $("#detail").val();
+    $('#editor').summernote('code', content);
+	// 图片库选择图片
+	$('.upload-editor').selectImages({
+	    imagesList: '.upload-editor'
+	    , multiple: true
+	    , done: function(data){
+	    	for(var i = 0; i < data.length; i++){
+	    		$('.summernote').summernote('editor.insertImage', data[i].fileUrl,  data[i].fileName);
+	    	}
+	    }
+	});
+	//生成SKU表格头部
+	var pdPublish_skuDetailTableThead =''
+		pdPublish_skuDetailTableThead += ' <thead>'
+		pdPublish_skuDetailTableThead += '     <tr style="background-color: #f7f7fa">'
+    	pdPublish_skuDetailTableThead += '          <th style="width:150px">商品规格</th>'
+    	pdPublish_skuDetailTableThead += '          <th>商家编码</th>'
+    	pdPublish_skuDetailTableThead += '          <th>销售价</th>'
+    	pdPublish_skuDetailTableThead += '          <th>划线价</th>'
+    	pdPublish_skuDetailTableThead += '          <th>库存</th>'
+    	pdPublish_skuDetailTableThead += '          <th>重量（kg）</th>'
+    	pdPublish_skuDetailTableThead += '     </tr>'
+    	pdPublish_skuDetailTableThead += '</thead>';
+	//enter键触发
+	function pdPublish_skuTypeValueOnkeyup(e, ele) {
+		event = e || window.event || arguments.callee.caller.arguments[0];
+		var skuTypeValueList1 = [];
+		var skuTypeValueList2 = [];
+		var skuTypeValueList3 = [];
+		var classTypeValueList1 = [];
+		var classTypeValueList2 = [];
+		var classTypeValueList3 = [];
+		if (event.keyCode == 13) {
+			if ($.trim($(ele).val())) {
+				var thisVal = $(ele).val();
+				//skuClassDiv 用来统计有效的sku
+				$(ele).attr('disabled', true); //设置该标签为禁止状态
+				$(ele).parents(".attr_name_sub").find(".pdPublish_skuTypeValueAddLa").show();
+				if (!$(ele).parents(".attrBox").hasClass('skuClassDiv')) {
+    				$(ele).parents(".attrBox").addClass('skuClassDiv');
+					//获取每一列的有效值
+					$(".skuClassDiv").find(".skuTypeName").each(function(index, el) {
+						if (index == 0) {
+							$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+								if ($.trim($(e).val()) && $(e).attr('disabled')) {
+									skuTypeValueList1.push($(e).val());
+									$(e).attr("id",'A0'+index);
+								}
+							});
+						} else if (index == 1) {
+							$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+								if ($.trim($(e).val()) && $(e).attr('disabled')) {
+									skuTypeValueList2.push($(e).val());
+									$(e).attr("id",'B0'+index);
+								}
+							});
+						} else if (index == 2) {
+							$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+								if ($.trim($(e).val()) && $(e).attr('disabled')) {
+									skuTypeValueList3.push($(e).val());
+									$(e).attr("id",'C0'+index);
+								}
+							});
+						}
+
+					});
+					var sli = '';
+					var skuTypeExist = true;
+					sli += '<tbody id="pdPublish_skuDetailTableBody">'
+					if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0 && skuTypeValueList3.length > 0) {
+						for (var i = 0; i < skuTypeValueList1.length; i++) {
+							for (var j = 0; j < skuTypeValueList2.length; j++) {
+								for (var k = 0; k < skuTypeValueList3.length; k++) {
+									sli += '<tr class="A0' + i + ' B0' + j + '  C0' + k + '">'
+									sli += '   <td>' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '*' + skuTypeValueList3[k] + '</td>'
+									sli += '   <td>'
+									sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+									sli += '   </td>'
+									sli += '   <td>'
+									sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+									sli += '   </td>'
+									sli += '   <td>'
+									sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+									sli += '   </td>'
+									sli += '   <td >'
+									sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+									sli += '   </td>'
+									sli += '   <td >'
+									sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+									sli += '   </td>'
+									sli += '</tr>'
+								}
+							}
+						}
+					} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0 && skuTypeValueList3.length == 0) {
+						for (var i = 0; i < skuTypeValueList1.length; i++) {
+							for (var j = 0; j < skuTypeValueList2.length; j++) {
+								sli += '<tr class="A0' + i + ' B0' + j + '">'
+								sli += '   <td>' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '</td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '</tr>'
+							}
+						}
+					} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length == 0 && skuTypeValueList3.length == 0) {
+						for (var i = 0; i < skuTypeValueList1.length; i++) {
+							sli += '<tr  class="A0' + i + '">'
+							sli += '   <td>' + skuTypeValueList1[i] + '</td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td >'
+							sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td >'
+							sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '</tr>'
+						}
+					} else {
+						skuTypeExist = false;
+					}
+					if (skuTypeExist) {
+						sli += '</tbody>'
+						$("#pdPublish_skuDetailTable").html(pdPublish_skuDetailTableThead + sli);
+					}
+    			}else{
+    				var skuTypeValueIsFirst = true;
+    				var thisPrevlength = $(ele).parents(".attrBox").prevAll(".skuClassDiv").length;
+    				$(ele).parents(".attrBox").siblings(".skuClassDiv").find(".skuTypeName").each(function(index, el) {
+    					if (index == 0) {
+    						$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+    							if ($.trim($(e).val()) && $(e).attr('disabled')) {
+    								skuTypeValueList1.push($(e).val());
+    								classTypeValueList1.push($(e).attr('id'));
+    								skuTypeValueIsFirst = false;
+    							}
+    						});
+    					} else if (index == 1) {
+    						$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+    							if ($.trim($(e).val()) && $(e).attr('disabled')) {
+    								skuTypeValueList2.push($(e).val());
+    								classTypeValueList2.push($(e).attr('id'));
+    								skuTypeValueIsFirst = false;
+    							}
+    						});
+    					}
+    				});
+    				if (thisPrevlength == 0) {
+						var classIndex = $(ele).parents(".skuTypeValueSpan").siblings().length-1;
+						var valueclassType = 'A0'+ classIndex;
+						$(ele).attr("id",valueclassType);
+						if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0) {
+							for (var i = 0; i < skuTypeValueList1.length; i++) {
+								for (var j = 0; j < skuTypeValueList2.length; j++) {
+									sli += '<tr class="' + valueclassType + ' ' + classTypeValueList1[i] + ' ' + classTypeValueList2[j] + '">'
+									sli += '   <td>' + thisVal + '*' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '</td>'
+									sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+									sli += '</tr>'
+								}
+							}
+
+						} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length == 0) {
+							for (var i = 0; i < skuTypeValueList1.length; i++) {
+								sli += '<tr class="' + valueclassType + ' ' + classTypeValueList1[i] + '">'
+								sli += '   <td>' + thisVal + '*' + skuTypeValueList1[i] + '</td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '</tr>'
+							}
+						} else if (skuTypeValueList1.length == 0 && skuTypeValueList2.length == 0) {
+							sli += '<tr class="' + valueclassType + '">'
+							sli += '   <td>' + thisVal + '</td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td>'
+							sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td >'
+							sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '   <td >'
+							sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+							sli += '   </td>'
+							sli += '</tr>'
+						}
+					} else if (thisPrevlength == 1) {
+						var classIndex = $(ele).parents(".skuTypeValueSpan").siblings().length-1;
+						var valueclassType = 'B0'+ classIndex;
+						$(ele).attr("id",valueclassType);
+						if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0) {
+							for (var i = 0; i < skuTypeValueList1.length; i++) {
+								for (var j = 0; j < skuTypeValueList2.length; j++) {
+									sli += '<tr class="' + classTypeValueList1[i] + ' ' + valueclassType + ' ' + classTypeValueList2[j] + '">'
+									sli += '   <td>' + skuTypeValueList1[i] + '*' + thisVal + '*' + skuTypeValueList2[j] + '</td>'
+									sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+									sli += '</tr>'
+								}
+							}
+						} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length == 0) {
+							for (var i = 0; i < skuTypeValueList1.length; i++) {
+								sli += '<tr class="' + classTypeValueList1[i] + ' ' + valueclassType+'">'
+								sli += '   <td>' + skuTypeValueList1[i] + '*' + thisVal + '</td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td>'
+								sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '   <td >'
+								sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+								sli += '   </td>'
+								sli += '</tr>'
+							}
+						}
+					} else if (thisPrevlength == 2) {
+						var classIndex = $(ele).parents(".skuTypeValueSpan").siblings().length-1;
+						var valueclassType = 'C0'+ classIndex;
+						$(ele).attr("id",valueclassType);
+						if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0) {
+							for (var i = 0; i < skuTypeValueList1.length; i++) {
+								for (var j = 0; j < skuTypeValueList2.length; j++) {
+									sli += '<tr class="' + classTypeValueList1[i] + ' ' + classTypeValueList2[j] + ' ' + valueclassType + '">'
+									sli += '   <td>' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '*' + thisVal + '</td>'
+									sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td>'
+										sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+										sli += '   <td >'
+										sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+										sli += '   </td>'
+									sli += '</tr>'
+								}
+							}
+						}
+					}
+					$("#pdPublish_skuDetailTableBody").html($("#pdPublish_skuDetailTableBody").html() + sli);
+    			}
+			}
+		}
+	}
+	//生成skuDetail表格
+	function pdPublish_skuDetailTableGenerate() {
+		$("#pdPublish_skuDetailTable").html("");
+		var skuTypeValueList1 = [];
+		var skuTypeValueList2 = [];
+		var skuTypeValueList3 = [];
+		$(".skuClassDiv").find(".attr_name").each(function(index, el) {
+			if (index == 0) {
+				$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+					if ($.trim($(e).val()) && $(e).attr('disabled')) {
+						skuTypeValueList1.push($(e).val());
+						$(e).attr("id",'A0'+index);
+					}
+				});
+			} else if (index == 1) {
+				$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+					if ($.trim($(e).val()) && $(e).attr('disabled')) {
+						skuTypeValueList2.push($(e).val());
+						$(e).attr("id",'B0'+index);
+					}
+				});
+			} else if (index == 2) {
+				$(el).closest(".attrBox").find(".skuTypeValue").each(function(index, e) {
+					if ($.trim($(e).val()) && $(e).attr('disabled')) {
+						skuTypeValueList3.push($(e).val());
+						$(e).attr("id",'C0'+index);
+					}
+				});
+			}
+		});
+		var sli = '';
+		var skuTypeExist = true;
+		sli += '<tbody id="pdPublish_skuDetailTableBody">'
+		if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0 && skuTypeValueList3.length > 0) {
+			for (var i = 0; i < skuTypeValueList1.length; i++) {
+				for (var j = 0; j < skuTypeValueList2.length; j++) {
+					for (var k = 0; k < skuTypeValueList3.length; k++) {
+						sli += '<tr  class="A0' + i + ' B0' + j + '  C0' + k + '">'
+						sli += '   <td>' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '*' + skuTypeValueList3[k] + '</td>'
+						sli += '   <td>'
+						sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+						sli += '   </td>'
+						sli += '   <td>'
+						sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+						sli += '   </td>'
+						sli += '   <td>'
+						sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+						sli += '   </td>'
+						sli += '   <td >'
+						sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+						sli += '   </td>'
+						sli += '   <td >'
+						sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+						sli += '   </td>'
+						sli += '</tr>'
+					}
+				}
+			}
+		} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length > 0 && skuTypeValueList3.length == 0) {
+			for (var i = 0; i < skuTypeValueList1.length; i++) {
+				for (var j = 0; j < skuTypeValueList2.length; j++) {
+					sli += '<tr  class="A0' + i + ' B0' + j + '">'
+					sli += '   <td>' + skuTypeValueList1[i] + '*' + skuTypeValueList2[j] + '</td>'
+					sli += '   <td>'
+					sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+					sli += '   </td>'
+					sli += '   <td>'
+					sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+					sli += '   </td>'
+					sli += '   <td>'
+					sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+					sli += '   </td>'
+					sli += '   <td >'
+					sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+					sli += '   </td>'
+					sli += '   <td >'
+					sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+					sli += '   </td>'
+					sli += '</tr>'
+				}
+			}
+		} else if (skuTypeValueList1.length > 0 && skuTypeValueList2.length == 0 && skuTypeValueList3.length == 0) {
+			for (var i = 0; i < skuTypeValueList1.length; i++) {
+				sli += '<tr class="A0' + i + '">'
+				sli += '   <td>' + skuTypeValueList1[i] + '</td>'
+				sli += '   <td>'
+				sli += '       <input type="text" class="form-control  skuDetailCode" maxlength="30" placeholder="请输入编码" onkeyup="pdPublish_assign(this)">'
+				sli += '   </td>'
+				sli += '   <td>'
+				sli += '       <input type="text" class="form-control  skuDetailGoodPrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+				sli += '   </td>'
+				sli += '   <td>'
+				sli += '       <input type="text" class="form-control  skuDetailLinePrice " placeholder="请输入价格" onkeyup="pdPublish_assign(this)">'
+				sli += '   </td>'
+				sli += '   <td >'
+				sli += '       <input type="text" class="form-control  skuDetailStock " placeholder="请输入库存"  maxlength="8" onkeyup="pdPublish_assign(this)">'
+				sli += '   </td>'
+				sli += '   <td >'
+				sli += '       <input type="text" class="form-control  skuDetailWeight " placeholder="请输入重量" onkeyup="pdPublish_assign(this)">'
+				sli += '   </td>'
+				sli += '</tr>'
+			}
+		} else {
+			skuTypeExist = false;
+		}
+		if (skuTypeExist) {
+			sli += '</tbody>'
+			$("#pdPublish_skuDetailTable").html(pdPublish_skuDetailTableThead + sli);
+		}
+	}
+  	//赋值 .html()函数获取不到input新输入的值 需要赋值
+    function pdPublish_assign(ele) {
+    	$(ele).attr("value", $(ele).val());
+    }
+    //增加sku值
+    function pdPublish_skuTypeValueAdd(e) {
+    	//校验sku名是否填写
+    	var sku = $(e).parents('.attrBox').find(".skuTypeName").val();
+    	if(!sku.trim()){
+    		$.modal.msgWarning("请先输入规格名！");
+    		return false;
+    	}
+    	var sli = '';
+    	sli += '<span style="width:160px;display:inline-block;background-color:#f7f8fa;margin:0 12px 12px 0" class="skuTypeValueSpan">'
+    	sli += '     <div style="float:left;">'
+    	sli += '         <input type="text" style="width:135px; border:none; float:left;background-color:transparent;" class="form-control skuTypeValue" placeholder="属性值（回车生效）" maxlength="50" onkeyup="pdPublish_skuTypeValueOnkeyup(event,this)">'
+    	sli += '         <span style="width:25px;float:right;cursor:pointer;" >'
+    	sli += '              <span style="width:25px;line-height:34px;" onclick="pdPublish_delSkuTypeValue(this)">'
+    	sli += '                   <i class="fa fa-times-circle fa-lg skuTypeValueRemove"></i>'
+    	sli += '              </span>'
+    	sli += '         </span>'
+    	sli += '     </div>'
+    	sli += '</span>'
+    	$(e).before(sli);
+    	$(e).hide();
+    }
+    //增加sku(最多3个)
+    function pdPublish_skuAdd(e) {
+    	var length = $(".attrBox").length;
+    	var sli = '';
+    	sli += '<div class="attrBox" style="border:1px solid #ccc;margin-bottom:15px;">'
+    	sli += '     <div class="attr_name" style="position:relative;margin:10px">'
+    	sli += '        <input class="form-control skuTypeName" type="text"  maxlength="10" placeholder="属性名（必填，如颜色）" style="width:200px;">'
+    	sli += '        <a class="btn m-btn btn-sm" title="删除属性" id="" style="position:absolute;top: -23px;right:-25px">'
+    	sli += '             <i class="fa fa-times-circle fa-2x skuRemove" onclick="pdPublish_delSku(this)"></i>'
+    	sli += '         </a>'
+    	sli += '      </div>'
+    	sli += '     <div class="attr_name_sub" style="margin-left:10px;margin-bottom:10px">'
+    	sli += '            <span class="pdPublish_skuTypeValueAddLa" onclick="pdPublish_skuTypeValueAdd(this)"  style="width:36px; height:34px;line-height:3px;display:inline-block;margin:0 12px 12px 0">'
+    	sli += '     			<div style="float:left;">'
+    	sli += '                 	<a class="btn btn-sm" title="添加规格值" id="">'
+    	sli += '                    	<i class="fa fa-plus-circle fa-2x"></i>'
+    	sli += '                 	</a>'
+    	sli += '                </div>'
+    	sli += '           </span>'
+    	sli += '     </div>'
+    	sli += '</div>'
+    	if (length < 2) {
+    		$(e).parent('div').before(sli); 
+    	} else if (length == 2) {
+    		$(e).parent('div').before(sli);
+    		$("#pdPublish_skuAddSpan").hide(); //数量达到3隐藏添加按钮
+    	} else {
+    		toastr.error("最多只能设置三个属性");
+    	}
+    }
+  	//删除sku
+    function pdPublish_delSku(ele) {
+    	//增加一个sku，属性输入框只有一个值且不是disabled，不需要重新生成表格
+    	if ($(ele).parents(".attrBox").hasClass('skuClassDiv')) {
+    		$(ele).parents('.attrBox').remove();
+    		pdPublish_skuDetailTableGenerate();
+    	} else {
+    		$(ele).parents('.attrBox').remove();
+    	}
+    	$("#pdPublish_skuAddSpan").show();
+    }
+  	//删除sku值
+    function pdPublish_delSkuTypeValue(ele) {
+  		//定位到指定的属性值标签
+    	var id = $(ele).parents('.skuTypeValueSpan').find("input").attr("id");
+    	$(ele).parents(".attr_name_sub").find(".pdPublish_skuTypeValueAddLa").show();
+    	var length = $(ele).parents('.attr_name_sub').find('input').length;
+    	//sku只有一个值时
+    	if (length == 1) {
+    		$(ele).parents('.attrBox').remove();
+    	}
+    	//有两个属性值，其中一个是disabled，另一个不是disabled，删掉disabled那个属性时
+    	if (!$(ele).parents('.skuTypeValueSpan').siblings().find('input').attr('disabled')) {
+    		$(ele).parents('.attrBox').removeClass('skuClassDiv');
+    		if($(ele).parents('.attrBox').length < 3){
+    			$("#pdPublish_skuAddSpan").show();
+    		}
+    	}
+    	$(ele).parents('.skuTypeValueSpan').remove();
+    	//包含该属性值标签的行全部删除
+    	$("#pdPublish_skuDetailTable").find("."+id).remove();
+    	if (!$.trim($("#pdPublish_skuDetailTableBody").html())) {
+    		pdPublish_skuDetailTableGenerate();
+    	}
+    }
+	function submitHandler() {
+		var flag = true
+		var goods = new Object();
+		goods.goodsId = $("#goodsId").val();
+		goods.goodSn = $("#goodSn").val();
+		goods.goodName = $("#goodName").val() ;
+		goods.categoryId = $('#categoryId').val();
+		if($.common.isEmpty(goods.categoryId)){
+			$('#categoryId').parent().after('<span style="color:#ef392b;"><i class="fa fa-times-circle"></i>请选择商品分类</span>');
+			flag = false;
+		}
+		var imgData = [];
+		$("input[name=gallery]").each(
+			function(){  
+				imgData.push($(this).val());
+			}  
+		)
+		goods.gallery = JSON.stringify(imgData);
+		goods.keywords = $("#keywords").val();
+		goods.brief = $("#brief").val();
+		goods.sortOrder = $("#sortOrder").val();
+		goods.picUrl =  $("input[name=picUrl]").val();
+		goods.specType = $("input[name=specType]:checked").val();
+		goods.isShelf = $("input[name=isShelf]:checked").val();
+		goods.isNew = $("input[name=isNew]:checked").val();
+		goods.isHot = $("input[name=isHot]:checked").val();
+		goods.unit = $("#unit").val();
+		goods.detail = $('.summernote').summernote('code');
+		var goodSkus=[];
+		var goodSkuDetails=[];
+		if($("input[name=specType]:checked").val() == 1){
+			var skuObject=new Object();
+			skuObject.skukey="规格";
+			skuObject.skuvalue="标准版";
+			skuObject.keyclassType="A0";
+			goodSkus.push(skuObject);
+			$("#pdPublish_skuDetailTableBody_single").find("tr").each(function(index, ele) {
+				var tdArr = $(ele).children();  
+				if($.common.isEmpty(tdArr.eq(2).find("input").val())){
+					tdArr.eq(2).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(3).find("input").val())){
+					tdArr.eq(3).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(4).find("input").val())){
+					tdArr.eq(4).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(5).find("input").val())){
+					tdArr.eq(5).find("input").addClass("error");
+					flag = false;
+				}
+				var skudetailObject=new Object();
+				skudetailObject.valueclassType= $(ele).attr("class"); 
+				skudetailObject.skudetails= tdArr.eq(0).text().trim();
+				skudetailObject.skudetailId= tdArr.eq(0).attr("id");
+				skudetailObject.businessCode= tdArr.eq(1).find("input").val();
+				skudetailObject.goodPrice= tdArr.eq(2).find("input").val();
+				skudetailObject.linePrice= tdArr.eq(3).find("input").val();
+				skudetailObject.number= tdArr.eq(4).find("input").val();
+				skudetailObject.goodWeight= tdArr.eq(5).find("input").val();
+				goodSkuDetails.push(skudetailObject);
+			});
+		}else{
+			//循环遍历取出sku属性类
+			$("#pdPublish_skuDivId").find(".attrBox").each(function(index, ele) {
+				if (index == 0) {
+					$(ele).find(".skuTypeName").each(function(inde, el) {
+						var skuTypeName = $(el).val();
+						if (!$.trim(skuTypeName)) {
+							$(el).css("border", "1px solid #f4516c");
+							return false;
+						}
+						$(el).parents('.skuClassDiv').find(".skuTypeValue").each(function(ind, element) {
+							if ($(element).attr('disabled') && $.trim($(element).val())) {
+								var skuObject=new Object();
+								skuObject.skukey=skuTypeName;
+								skuObject.skuvalue=$(element).val();
+								skuObject.keyclassType=$(element).attr("id");
+								goodSkus.push(skuObject);
+							}
+						});
+					});
+				} else if (index == 1) {
+					$(ele).find(".skuTypeName").each(function(inde, el) {
+						var skuTypeName = $(el).val();
+						if (!$.trim(skuTypeName)) {
+							$(el).css("border", "1px solid #f4516c");
+							return false;
+						}
+						$(el).parents('.skuClassDiv').find(".skuTypeValue").each(function(ind, element) {
+							if ($(element).attr('disabled') && $.trim($(element).val())) {
+								var skuObject=new Object();
+								skuObject.skukey=skuTypeName;
+								skuObject.skuvalue=$(element).val();
+								skuObject.keyclassType=$(element).attr("id");
+								goodSkus.push(skuObject);
+							}
+						});
+					});
+				} else if (index == 2) {
+					$(ele).find(".skuTypeName").each(function(inde, el) {
+						var skuTypeName = $(el).val();
+						if (!$.trim(skuTypeName)) {
+							$(el).css("border", "1px solid #f4516c");
+							return false;
+						}
+						$(el).parents('.skuClassDiv').find(".skuTypeValue").each(function(ind, element) {
+							if ($(element).attr('disabled') && $.trim($(element).val())) {
+								var skuObject=new Object();
+								skuObject.skukey=skuTypeName;
+								skuObject.skuvalue=$(element).val();
+								skuObject.keyclassType=$(element).attr("id");
+								goodSkus.push(skuObject);
+							}
+						});
+					});
+				}
+			});
+			$("#pdPublish_skuDetailTableBody").find("tr").each(function(index, ele) {
+				var tdArr = $(ele).children();  
+				var skudetailObject=new Object();
+				if($.common.isEmpty(tdArr.eq(2).find("input").val())){
+					tdArr.eq(2).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(3).find("input").val())){
+					tdArr.eq(3).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(4).find("input").val())){
+					tdArr.eq(4).find("input").addClass("error");
+					flag = false;
+				}
+				if($.common.isEmpty(tdArr.eq(5).find("input").val())){
+					tdArr.eq(5).find("input").addClass("error");
+					flag = false;
+				}
+				skudetailObject.valueclassType= $(ele).attr("class"); 
+				skudetailObject.skudetails= tdArr.eq(0).text().trim();
+				skudetailObject.skudetailId= tdArr.eq(0).attr("id");
+				skudetailObject.businessCode= tdArr.eq(1).find("input").val();
+				skudetailObject.goodPrice= tdArr.eq(2).find("input").val();
+				skudetailObject.linePrice= tdArr.eq(3).find("input").val();
+				skudetailObject.number= tdArr.eq(4).find("input").val();
+				skudetailObject.goodWeight= tdArr.eq(5).find("input").val();
+				goodSkuDetails.push(skudetailObject);
+			});
+		}
+		var data = {"goods":goods, "goodSkus": goodSkus, "goodSkudetails":goodSkuDetails};
+		form_data = JSON.stringify(data);//把对象转换成json
+		if ($("#goodEditFrom").validate().form() && flag) {
+			$.ajax({  
+				url: $("#goodEditFrom").attr('action'),  
+				type: 'POST',  
+				data: form_data,  
+				dataType:'json',
+				contentType: "application/json;charset=utf-8",
+				beforeSend: function () {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success: function (data) {
+				$.modal.closeLoading();
+					if(!(data instanceof Object)){
+						data = JSON.parse(data);
+					}
+					if (data.code == 200) {
+						if(data.msg){
+							parent.layer.msg(data.msg, {icon : 1});
+						}else{
+							parent.layer.msg('提交成功', {icon : 1});
+						}
+						var topWindow = $(window.parent.document);
+	    	            var currentId = $('.page-tabs-content', topWindow).find('.active').attr('data-panel');
+	    	            var $contentWindow = $('.J_iframe[data-id="' + currentId + '"]', topWindow)[0].contentWindow;
+    	        		$contentWindow.data_oTable.draw(false);
+    	        		closeItem();
+					} else {
+						parent.layer.msg(data.msg, {icon : 2 });
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}else{
+			$("html,body").animate({scrollTop:0},1000);
+			$.modal.msg("输入数据错误","warning");
+		}
+	}
+	
+	function toProductList() {
+		closeItem();
+	}
+</script>

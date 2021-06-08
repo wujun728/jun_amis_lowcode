@@ -1,0 +1,78 @@
+<!-- 通用CSS -->
+<head th:fragment=header(title)>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title th:text="${title}"></title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link th:href="@{/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+	<link th:href="@{/plugins/font-awesome/font-awesome.min.css}" rel="stylesheet" />
+	<link th:href="@{/adminlte/css/AdminLTE.min.css}" rel="stylesheet" />
+	<link th:href="@{/adminlte/css/skins/all-skins.min.css}" rel="stylesheet" />
+	<link th:href="@{/plugins/validate/validate.css}" rel="stylesheet" />
+	<link th:href="@{/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet"/>
+	<link th:href="@{/plugins/treegrid/jquery.treegrid.css}" rel="stylesheet"/>
+	<link th:href="@{/plugins/ztree/css/ztree-bootstrap.css}" rel="stylesheet"/>
+	<link th:href="@{/plugins/toastr/toastr.min.css}" rel="stylesheet"/>
+	<link th:href="@{/plugins//photoswipe/default-skin/default-skin.css}" rel="stylesheet"/>
+	<link th:href="@{/plugins/photoswipe/photoswipe.css}" rel="stylesheet"/>
+	<link th:href="@{/common/css/common.css}" rel="stylesheet"/>
+</head>
+
+<!-- 通用JS -->
+<div th:fragment="footer">
+	<a id="scroll-up" href="#" class="btn btn-sm display"><i class="fa fa-angle-double-up"></i></a>
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar">
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<button class="pswp__button pswp__button--share" title="Share"></button>
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+							<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip"></div> 
+				</div>
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+	<script th:src="@{/plugins/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/adminlte/js/adminlte.min.js}"></script>
+	<script th:src="@{/plugins/layer/layer.min.js}"></script>
+	<script th:src="@{/plugins/blockUI/jquery.blockUI.js}"></script>
+	<script th:src="@{/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+	<script th:src="@{/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js}"></script>
+	<script th:src="@{/plugins/treegrid/jquery.treegrid.min.js}"></script>
+	<script th:src="@{/plugins/treegrid/jquery.treegrid.extension.js}"></script>
+	<script th:src="@{/plugins/treegrid/tree.table.js}"></script>
+	<script th:src="@{/plugins/ztree/js/jquery.ztree.core.js}"></script>
+	<script th:src="@{/plugins/ztree/js/jquery.ztree.excheck.js}"></script>
+	<script th:src="@{/plugins/ztree/js/jquery.ztree.exedit.js}"></script>
+	<script th:src="@{/plugins/validate/validate.js}"></script>
+	<script th:src="@{/plugins/toastr/toastr.min.js}"></script>
+	<script th:src="@{/plugins/photoswipe/photoswipe-ui-default.min.js}"></script>
+	<script th:src="@{/plugins/photoswipe/photoswipe.min.js}"></script>
+	<script th:src="@{/common/js/common.js}"></script>
+	<script th:src="@{/common/js/core.js}"></script>
+</div>

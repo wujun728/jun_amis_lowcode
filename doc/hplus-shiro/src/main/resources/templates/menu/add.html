@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('添加菜单')" />
+</head>
+<body>
+	<section class="content">
+		<form class="form-horizontal" id="menuForm">
+            <div class="box-body">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">类型 :</label>
+                    <div class="col-sm-8">
+                        <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="0" id="type-category"> 目录</label>
+                        <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="1" checked="checked" id="type-menu"> 菜单</label>
+                        <label class="radio-inline pr-5"><input type="radio" th:field="*{menu.type}" name="type" value="2" id="type-btn"> 按钮</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">资源名称 :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="name" id="name" require="必填项"  placeholder="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">上级资源 :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control cursor-pointer" th:value="${menu.name}" id="parentMenu" value="顶层菜单" onclick="showMenu()" readonly="readonly">
+                    </div>
+                </div>
+                <div class="form-group menuFlag btnFlag">
+                    <label class="col-sm-3 control-label">资源url :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control menuFlag btnFlag"  name="url" id="url" require="必填项" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group menuFlag btnFlag">
+                    <label class="col-sm-3 control-label">权限标识 :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control menuFlag btnFlag"  name="perms" id="perms" require="必填项" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group menuFlag catalogFlag">
+                    <label class="col-sm-3 control-label">排序 :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control menuFlag catalogFlag"  name="orderNum" id="orderNum" require="必填项" max="3" plusinteger="" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group menuFlag catalogFlag">
+                    <label class="col-sm-3 control-label">图标 :</label>
+                    <div class="col-sm-8">
+                    	<span class="form-control">当前图标为：<i id="iconShow" class="fa fa-circle-o"></i>  
+				            <a href="javascript:void(0);" onclick="selectIcon(1)" class="pull-right">
+								 点击选取图标
+							</a>
+						</span>
+                        <input type="hidden" class="form-control menuFlag catalogFlag"  name="icon"  id="icon" value="fa fa-circle-o">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">描述 :</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control"  name="description" id="description" placeholder="">
+                    </div>
+                </div>
+                <input type="hidden" class="form-control" id="parentId" name="parentId" th:value="${menu.menuId}">
+            </div>
+        </form>
+		<div id="menuLayer" style="display: none; padding-left: 20px;">
+			<ul id="menuTree" class="ztree"></ul>
+		</div>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		var menuCheckedType = "[[${checkedType}]]";
+		var menuType = "[[${menu.type}]]";
+		if (menuType == "0") {
+			$(".btnFlag").hide();
+			$(".menuFlag").hide();
+			$(".catalogFlag").show();
+		}
+		if (menuType == "1") {
+			$(".menuFlag").show();
+		}
+		if (menuType == "2") {
+			$(".catalogFlag").hide();
+			$(".menuFlag").hide();
+			$(".btnFlag").show();
+		}
+		/*类型选择事件*/
+		$('input:radio[name="type"]').on("click", function() {
+			initMenuForm();
+			$.common.clearError("#menuForm");
+			menuType = $('input:radio[name="type"]:checked').val();
+			if (menuType == "0") {
+				$(".btnFlag").hide();
+				$(".menuFlag").hide();
+				$(".catalogFlag").show();
+			}
+			if (menuType == "1") {
+				$(".menuFlag").show();
+			}
+			if (menuType == "2") {
+				$(".catalogFlag").hide();
+				$(".menuFlag").hide();
+				$(".btnFlag").show();
+			}
+		})
+		function initMenuForm() {
+			$("#name").val("");
+			$("#url").val("");
+			$("#perms").val("");
+			$("#orderNum").val("");
+			$("#icon").val("");
+			$("#description").val("");
+		}
+		/*选择上级菜单树*/
+		function showMenu() {
+			var ztree;
+			//树-初始化设置
+			var treeSetting = {
+				data : {
+					simpleData : {
+						enable : true,
+						idKey : "menuId",
+						pIdKey : "parentId"
+					}
+				}
+			};
+			$.common.postAjax('/menu/list', {
+				flag : "2"
+			}, function(data) {
+				var topMenu = {
+					name : "顶层菜单",
+					menuId : 0,
+					parentId : "",
+					type : 0
+				}
+				data.unshift(topMenu);
+				$.each(data, function(i, item) {
+					item.open = true;
+				})
+				ztree = $.fn.zTree.init($("#menuTree"), treeSetting, data);
+				layer.open({
+					type : 1,
+					offset : '50px',
+					title : "选择菜单",
+					area : [ '300px', '450px' ],
+					shade : 0.3,
+					shadeClose : false,
+					content : jQuery("#menuLayer"),
+					btn : [ '确定', '取消' ],
+					btn1 : function(index) {
+						var node = ztree.getSelectedNodes();
+						if (node.length == 0) {
+							toastr.error("请选择一个菜单！", function() {
+							});
+							return;
+						}
+						menuCheckedType = node[0].type;
+						//选择上级菜单
+						$("#parentId").val(node[0].menuId);
+						$("#parentMenu").val(node[0].name);
+						layer.close(index);
+					}
+				});
+			});
+		}
+
+		/* 选取图标 */
+		function selectIcon(type) {
+			var layerIndex = parent.layer.getFrameIndex(window.name);
+			parent.layer
+					.open({
+						type : 2,
+						title : '选取图标',
+						closeBtn : 1,
+						anim : -1,
+						isOutAnim : false,
+						shadeClose : true,
+						shade : 0.3,
+						area : [ '95%', '90%' ],
+						content : '/toicon',
+						btn : [ '确定', '取消' ],
+						yes : function(index, layero) {
+							var iframeWin = layero.find('iframe')[0];
+							iframeWin.contentWindow
+									.submitHandler(index, layero);
+						},
+						success : function(layero, index) {
+							var body = parent.layer
+									.getChildFrame('body', index);
+							body.find("#sid").attr("iconType",
+									type + "," + layerIndex);
+						}
+					});
+		}
+		//保存数据
+		function submitHandler() {
+			if ((menuType == "0" || menuType == "1") && menuCheckedType != 0) {
+				toastr.error("上级资源只能是目录类型！", function() {
+				})
+				return;
+			} else if (menuType == "2" && menuCheckedType != 1) {
+				toastr.error("上级资源只能是菜单类型！", function() {
+				})
+				return;
+			}
+			if (doValidForm(menuForm)) {
+				if (menuType == "2") {
+					$("#orderNum").val(0);
+				}
+				$.common.postAjax("/menu/doAdd", $("#menuForm").serialize(),
+						function(data) {
+							if (data.status == 200) {
+								parent.layer.closeAll('iframe'); // 关闭当前frame
+								parent.Menu.table.refresh();
+								parent.toastr.success(data.msg);
+							} else {
+								parent.toastr.error(data.msg);
+							}
+						});
+			}
+		}
+	</script>
+</body>
+</html>

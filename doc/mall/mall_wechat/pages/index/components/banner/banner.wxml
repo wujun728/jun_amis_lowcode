@@ -1,0 +1,12 @@
+<!-- banner轮播 -->
+<view class="diy-banner">
+  <swiper autoplay="{{autoplay}}" class="banner-box swiper-box" duration="{{duration}}" circular="{{true}}" indicator-dots="{{indicatorDots}}" interval="{{interval}}" indicator-active-color="#000" bindchange="bindChange">
+    <navigator wx:for-item="banner" url="/{{banner.linkUrl}}" wx:for="{{items}}" wx:key="this">
+      <swiper-item item-id="{{index}}">
+        <image class="slide-image" src="{{banner.adUrl}}" data-id="{{index}}"></image>
+      </swiper-item>
+    </navigator>
+  </swiper>
+  <!-- 顶部置灰 -->
+  <!-- <view class="linear"></view>  -->
+</view>

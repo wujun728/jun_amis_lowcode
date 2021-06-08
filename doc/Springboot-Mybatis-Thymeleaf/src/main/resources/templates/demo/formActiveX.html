@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>表单常用控件</title>
+    <meta name="keywords" content="后台bootstrap框架,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link rel="shortcut icon" href="favicon.ico">
+	<link href="../../static/css/bootstrap.min.css?v=3.3.6" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="../../static/css/plugins/multiselect/bootstrap-multiselect.css" th:href="@{/css/plugins/multiselect/bootstrap-multiselect.css}" rel="stylesheet">
+    <link href="../../static/css/font-awesome.css" th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <link href="../../static/css/animate.css" th:href="@{/css/animate.css}" rel="stylesheet">
+    <link href="../../static/css/style.css?v=4.1.0" th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox float-e-margins">
+        	<div class="ibox-title">
+        		 <h5>基本multselect</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-wrench"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#" onclick="getSelect();">测试获取的数据</a>
+                        </li>
+                        <li><a href="#">选项2</a>
+                        </li>
+                    </ul>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+        	</div>
+        	<div class="ibox-content">
+    			<div class="row row-lg">
+	            	<div class="col-sm-6">
+		            	<div class="col-lg-5">
+		            		<select name="from[]" id="multiselect1" class="form-control" size="8" multiple="multiple">
+			                    <option value="1" data-position="1">Item 1</option>
+			                    <option value="5" data-position="5">Item 5</option>
+			                    <option value="2" data-position="2">Item 2</option>
+			                    <option value="4" data-position="4">Item 4</option>
+			                    <option value="3" data-position="3">Item 3</option>
+			                </select>
+		            	</div>
+		                <div class="col-lg-2">
+			                <button type="button" id="multiselect1_rightAll" class="btn btn-block"><i class="glyphicon glyphicon-forward"></i></button>
+			                <button type="button" id="multiselect1_rightSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-right"></i></button>
+			                <button type="button" id="multiselect1_leftSelected" class="btn btn-block"><i class="glyphicon glyphicon-chevron-left"></i></button>
+			                <button type="button" id="multiselect1_leftAll" class="btn btn-block"><i class="glyphicon glyphicon-backward"></i></button>
+			            </div>
+			            <div class="col-lg-5">
+			                <select name="to[]" id="multiselect1_to" class="form-control" size="8" multiple="multiple"></select>
+			            </div>
+		            </div>
+	        	</div>
+    		</div>
+        	
+		</div>
+	</div>
+      
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body" id="selectText">
+					在这里添加一些文本
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
+    <!-- 全局js -->
+    <script src="../../static/js/jquery.min.js?v=2.1.4" th:src="@{/js/jquery.min.js}"></script>
+    <script src="../../static/js/bootstrap.min.js?v=3.3.6" th:src="@{/js/bootstrap.min.js}"></script>
+    <!-- Peity -->
+    <script src="../../static/js/plugins/peity/jquery.peity.min.js" th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+    <!-- 自定义js -->
+    <script src="../../static/js/content.js?v=1.0.0" th:src="@{/js/content.js}"></script>
+    <!-- multselect -->
+    <script src="../../static/js/plugins/multiselect/multiselect.js" th:src="@{/js/plugins/multiselect/multiselect.js}"></script>
+
+    <script>
+         $(document).ready(function() {$('#multiselect1').multiselect();});
+         
+         function getSelect(){
+         	 var array = new Array();  //定义数组   
+		     $("#multiselect1_to option").each(function(){  //遍历所有option  
+		          var txt = $(this).val();   //获取option值   
+		          if(txt!=''){  
+		               array.push(txt);  //添加到数组中  
+		          }  
+		     });
+		     $("#selectText").text(JSON.stringify(array));
+		     $("#myModal").modal("show");
+         }
+    </script>
+
+</body>
+
+</html>

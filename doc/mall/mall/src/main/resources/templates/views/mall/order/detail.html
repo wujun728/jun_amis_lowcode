@@ -1,0 +1,308 @@
+<#include "/common/layout.html">
+<@body>
+<div class="wrapper">
+	<section class="invoice">
+        <div class="row">
+        	<div id="orderDetailPrint">
+				<div class="col-xs-12">
+				  	<h4 class="page-header">
+				    	<i class="fa fa-list-ul"></i> 订单信息
+					</h4>
+				</div>
+		        <div class="invoice-info">
+		          <div class="col-sm-12 invoice-col">
+		          	<div id="ec_system_box" style="padding: 15px;margin-right: auto;margin-left: auto;padding-left: 30px;padding-right: 30px;">
+					  <div class="progressBar no-print">
+						  <div>
+							<span id="activity-progress"></span>
+						  </div>
+						  <ul>
+						    <li class="p_li">
+						        <div>下单</div>
+						      	<span class="span_checked">1</span>
+						    </li>
+						    <li class="p_li">
+						        <div>付款</div>
+						      	<span id="p_li2">2</span>
+						    </li>
+						    <li class="p_li">
+						        <div>发货</div>
+						      	<span id="p_li3">3</span>
+						    </li>
+						    <li class="p_li">
+						        <div>收货</div>
+						      	<span id="p_li4">4</span>
+						    </li>
+						    <li class="p_li">
+						        <div>完成</div>
+						      	<span id="p_li5">5</span>
+						    </li>
+						</div>
+						<p>订单编号：${mallOrder.orderSn}</p>
+						<p>下单时间：${mallOrder.createTime?string('yyyy-MM-dd HH:mm:ss')}</p>
+						<p>订单状态：<#if mallOrder.orderStatus =='0'>已取消  <#elseif mallOrder.orderStatus =='1'>正常<#else>已完成</#if></p>
+						<p>支付状态：<#if mallOrder.payStatus =='0'>未支付 <#else>已支付</#if></p>
+						<p>送货方式：送货上门</p>
+						<p>配送状态：<#if mallOrder.shipStatus =='0'>未发货  <#elseif mallOrder.shipStatus =='1'>已发货<#else>已收货</#if>
+							&nbsp;&nbsp;<a href="javascript:void(0);" onclick="expressTrack('${mallOrder.shipChannel}', '${mallOrder.shipSn}');">查看物流信息</a>
+						</p>
+		            </div>
+		          </div>
+		        </div>
+				<div class="col-xs-12">
+				  	<h4 class="page-header">
+				    	<i class="fa fa-list-alt"></i> 商品信息
+				  	</h4>
+				</div>
+				<div class="col-xs-12 table-responsive">
+					<div style="padding: 15px;margin-right: auto;margin-left: auto;padding-left: 30px;padding-right: 30px;">
+					  <table class="table table-bordered table-hover">
+					    <thead>
+					      	<tr style="background-color: #f7f7fa">
+								<th>商品名称</th>
+								<th>商品编号</th>
+								<th>货品规格</th>
+								<th>货品价格</th>
+								<th>货品数量</th>
+								<th>货品图片</th>
+					      	</tr>
+					    </thead>
+					    <tbody>
+					    	<#list orderDetailLit as item>
+								<tr>
+									<td>${item.goodsName}</td>
+									<td>${item.goodsSn}</td>
+									<td>${item.specifications}</td>
+									<td>${item.goodPrice}</td>
+									<td>${item.number}</td>
+									<td><img src="${item.picUrl}" class="img-fluid img-xs"></td>
+								</tr>
+					      	</#list>
+					    </tbody>
+					  </table>
+					  <div class="col-xs-12 row">
+						<p class="text-muted well-sm no-shadow" style="margin-top: 10px;">
+							商品总价：<span style="color:red;font-weight:bold;font-size:18px;">￥  ${mallOrder.totalPrice} 元 </span>&nbsp;&nbsp;&nbsp; 
+							所需运费：<span style="color:red;font-weight:bold;font-size:18px;">￥  ${mallOrder.shipPrice} 元</span>&nbsp;&nbsp;&nbsp;   
+							优惠减免：<span style="color:red;font-weight:bold;font-size:18px;">￥  ${mallOrder.couponPrice}  元</span>
+						</p>
+						<p class="text-muted well-sm no-shadow" style="margin-top: 10px;">实付金额：<span style="color:red;font-weight:bold;font-size:18px;">￥  ${mallOrder.orderPrice} 元  </span>（实际费用 = 商品总价+所需运费-优惠减免）</p>
+						<p class="text-muted well-sm no-shadow" style="margin-top: 10px;">支付方式：微信支付</p>
+					  </div>
+					</div>
+				 </div>
+				<div class="col-xs-12">
+				  <h4 class="page-header">
+				    <i class="fa fa-truck"></i> 交付信息
+				  </h4>
+				</div>
+		        <div class="col-xs-12">
+		        	<div style="padding: 15px;margin-right: auto;margin-left: auto;padding-left: 30px;padding-right: 30px;">
+						<p>收货信息：${mallOrder.consignee}<span>&nbsp;&nbsp;</span>${mallOrder.mobile}<span>&nbsp;&nbsp;</span>${mallOrder.address}</p>
+						<p>买家备注:${mallOrder.message}</p>
+		        	</div>
+		        </div>
+	        </div>
+	        <div class="no-print">
+	          <div class="col-xs-12" style="text-align: center;">
+	          	<#if shiro.hasPermission("editOrder")>
+		          	<#if mallOrder.orderStatus =='1' && mallOrder.payStatus == '1' && mallOrder.shipStatus == '0'>
+		            	<button id="deliverGoods" class="btn btn-info"><i class="fa fa-print"></i> 发货</button>
+		            </#if>
+	            </#if>
+	            <a href="javascript:void(0);" class="btn btn-default" onclick="cancel();"><i class="fa fa-close"></i> 取消</a>
+	            <button id="printButton" class="btn btn-default"><i class="fa fa-print"></i> 打印</button>
+	          </div>
+	        </div>
+        </div>
+	</section>
+	<div class="clearfix"></div>
+</div>
+<div class="modal fade" id="deliver_goods" role="dialog"  aria-hidden="true">
+	<div class="modal-dialog modal-dialog-center" style="min-width:700px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" >发货</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" method="post" action="/mall/good/doAdd" id="deliverGoodFrom">
+					<input id="orderId" name="orderId" type="hidden" value="${mallOrder.orderId}">
+					<div class="form-group">
+						<label class="col-sm-2 control-label">物流公司</label>
+						<div class="col-sm-10">
+							<select id="deliverCompany" name="deliverCompany" class="form-control select2" style="width: 90%;" data-placeholder="--请选择--" required>
+					         	<option></option>
+				     		</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">快递单号</label>
+						<div class="col-sm-10">
+							<input type="text" id="deliverCode" name="deliverCode" class="form-control" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label">卖家备注</label>
+						<div class="col-sm-10">
+							<input type="text" id="salerMessage" name="salerMessage" class="form-control" required>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<#if shiro.hasPermission("editOrder")>
+			 		<button type="button" class="btn btn-primary" id="saveCity" onclick="sendOutGood()">确认发货</button>
+			 	</#if>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消发货</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="express_track" role="dialog"  aria-hidden="true">
+	<div class="modal-dialog modal-dialog-center" style="min-width:700px;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" >物流信息&nbsp;&nbsp;&nbsp;<span id="logisticCode" style="font-size:10px;font-weight:sold;"></span></h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+		            <div class="col-md-12">
+		              	<ul class="timeline" id="trackDetail"></ul>
+	           		</div>
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+</@body>
+
+<script type="text/javascript">
+	(function(){
+		<#if mallOrder.payStatus =='1'>
+			$('#activity-progress').css('width', '25%');
+			$("#p_li2").addClass("span_checked");
+		</#if>
+		<#if mallOrder.shipStatus =='1'>
+			$('#activity-progress').css('width', '50%');
+			$("#p_li2").addClass("span_checked");
+			$("#p_li3").addClass("span_checked");
+		</#if>
+		<#if mallOrder.shipStatus =='2'>
+			$('#activity-progress').css('width', '75%');
+			$("#p_li2").addClass("span_checked");
+			$("#p_li3").addClass("span_checked");
+			$("#p_li4").addClass("span_checked");
+		</#if>
+		<#if mallOrder.orderStatus =='2'>
+			$('#activity-progress').css('width', '100%');
+			$("#p_li2").addClass("span_checked");
+			$("#p_li3").addClass("span_checked");
+			$("#p_li4").addClass("span_checked");
+			$("#p_li5").addClass("span_checked");
+		</#if>
+	})();
+	$("#printButton").on('click', function() {
+		$("#orderDetailPrint").jqprint({
+			debug: false,
+          	importCSS: true,
+          	printContainer: true,
+          	operaSupport: false
+		});
+	})
+	$("#deliverGoods").on('click', function() {
+		$("#deliverGoodFrom")[0].reset();
+		$("#deliverCode").removeClass("error");//清除验证标签
+		$("#salerMessage").removeClass("error");//清除验证标签
+		$("#deliverCode-error").remove();//清除验证标签
+		$("#salerMessage-error").remove();//清除验证标签
+		$.post('/mall/region/deliverCompany?_dc='+new Date().getTime(),{},function(response){
+			if(response.code==200){
+				$("#deliverCompany").empty();
+				$("#deliverCompany").select2({
+					data:response.data
+				});
+			}
+		});
+		$("#deliver_goods").modal("show");
+	})
+	$("#actionButton").find('button').on('click', function() {
+		$("#orderDetailPrint").jqprint({
+			debug: false,
+          	importCSS: true,
+          	printContainer: true,
+          	operaSupport: false
+		});
+	})
+	function sendOutGood() {
+	    if ($("#deliverGoodFrom").validate().form()) {
+	    	var shipChannel =$("#deliverCompany").val() + "-" + $("#deliverCompany").select2('data')[0].text;
+	    	var formData = {"orderId": $("#orderId").val(), "shipChannel": shipChannel, "shipSn":$("#deliverCode").val()};
+	        $.post('/mall/order/deliver',formData,function(data){
+	        	if (data.code == 200) {
+					if(data.msg){
+						parent.layer.msg(data.msg, {icon : 1});
+					}else{
+						parent.layer.msg('提交成功', {icon : 1});
+					}
+					$("#deliver_goods").modal("hide");
+					window.location.reload();
+				} else {
+					layer.msg(data.msg, {icon : 2 });
+				}
+			});
+	    }
+	}
+	function expressTrack(shipChannel, shipSn) {
+		if($.common.isEmpty(shipChannel) || $.common.isEmpty(shipSn)){
+			var htmls = '';
+			htmls += '<li>'
+   			htmls += '	<i class="fa fa-truck bg-maroon"></i>'
+  			htmls += '	<div class="timeline-item">'
+   			htmls += '		<h3 class="timeline-header no-border">暂无物流信息...</h3>'
+   			htmls += '	</div>'
+   			htmls += '</li>'
+   			$("#trackDetail").html(htmls);
+		}else{
+			var shipChannelCode = shipChannel.split("-");
+	        $.post('/mall/order/expressTrack',{'shipChannel': shipChannelCode[0], 'shipSn': shipSn},function(result){
+	        	if (result.code == 200) {
+	        		var datajson =JSON.parse( result.data);
+	        		$("#logisticCode").html("快递单号：" + datajson.LogisticCode);
+	        		var htmls = '';
+	        		if(datajson.Traces == 0){
+	        			htmls += '<li>'
+	        			htmls += '	<i class="fa fa-truck bg-maroon"></i>'
+	        			htmls += '	<div class="timeline-item">'
+	        			htmls += '		<h3 class="timeline-header no-border">暂无物流信息...</h3>'
+	        			htmls += '	</div>'
+	        			htmls += '</li>'
+	        		}else{
+	        			for (var i = 0; i < datajson.Traces.length; i++) {
+							var acceptTime = datajson.Traces[i].AcceptTime;
+							var acceptStation = datajson.Traces[i].AcceptStation;
+							htmls += '<li>'
+		        			htmls += '	<i class="fa fa-truck bg-green"></i>'
+		        			htmls += '	<div class="timeline-item">'
+		        			htmls += '		<span class="time"><i class="fa fa-clock-o"></i> '+ acceptTime +'</span>'
+		        			htmls += '		<h5 class="timeline-header no-border">'+ acceptStation +'</h5>'
+		        			htmls += '	</div>'
+		        			htmls += '</li>'
+						}
+	        		}
+	        		$("#trackDetail").html(htmls);
+				} else {
+					layer.msg(data.msg, {icon : 2 });
+				}
+			});
+		}
+		$("#express_track").modal("show");
+	}
+	function cancel(){
+		window.location.href = "/mall/order/list?_iDisplayStart=" + GetQueryValue("_iDisplayStart");;
+	}
+</script>

@@ -1,0 +1,19 @@
+server:
+  port: 8522
+spring:
+  application:
+    name: spring-cloud-consul-consumer
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${name}	# 注册到consul的服务名称
+#ribbon 负载均衡策略配置, service-producer为注册的服务名
+service-producer:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+#开启熔断器
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,113 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<form role="form" class="form-horizontal" method="post" action="/mall/category/doEdit" id="editCategoryForm">
+		<div class="box-body">
+			<input type="hidden" value="${(category.categoryId)}" name="categoryId" />
+			<div class="form-group">
+				<label for="parentId" class="col-sm-2 control-label">上级类目</label>
+				<div class="col-sm-10">
+					<select id="parentId" name="parentId" class="form-control select2" style="width: 90%;" data-placeholder="--请选择类目--">
+						<option></option>
+						<option value="0" ${(category.parentId?? && category.parentId == 0)?string('selected="selected"','')}>顶级类目</option>
+						<#list categoryList as categorys>
+						<option value="${categorys.categoryId}" ${(category.parentId?? && categorys.categoryId == category.parentId)?string('selected="selected"','')} >${categorys.name}</option>
+						</#list>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="name" class="col-sm-2 control-label">类目名称</label>
+				<div class="col-sm-10">
+					<input type="text" id="name" name="name" class="form-control" placeholder="请输入类目名称" value="${(category.name)}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="descripte" class="col-sm-2 control-label">类目描述</label>
+				<div class="col-sm-10">
+					<input type="text" id="descripte" name="descripte" class="form-control" placeholder="请输入类目描述" value="${(category.descripte)}" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="status" class="col-sm-2 control-label">类目状态</label>
+				<div class="col-sm-10">
+					<label class="radio-box"><input type="radio" name="status" value="1" ${(category.status?? && category.status== 1)?string('checked','')} class="form-control minimal"> 正常</label>
+					<label class="radio-box"><input type="radio" name="status" value="0" ${(category.status?? && category.status== 0)?string('checked','')} class="form-control minimal"> 停用</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">类目图片</label>
+				<div class="col-sm-10">
+					<button type="button" class="upload-file btn btn-w-m btn-info">
+						<i class="fa fa-cloud-download"></i>&nbsp;选择图片
+					</button>
+					<div class="uploader-list clearfix">
+						<div class="file-item">
+							<img src="${category.picUrl}"> <input type="hidden" name="picUrl" value="${category.picUrl}">
+							<i class="fa fa-remove file-item-delete"></i>
+						</div>
+					</div>
+					<span class="help-block m-b-none">
+						<i class="fa fa-info-circle"></i>尺寸750x750像素以上，大小2M以下（1张）
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="sortOrder" class="col-sm-2 control-label">类目排序</label>
+				<div class="col-sm-10">
+					<input type="text" id="sortOrder" name="sortOrder" class="form-control" placeholder="请输入类目排序" value="${(category.sortOrder)}" required>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</@body>
+<#include "/common/filelibrary.html">
+<script type="text/javascript">
+	//选择图片
+	$('.upload-file').selectImages({
+		name : 'picUrl',
+		imagesList : '.uploader-list',
+		multiple : false,
+		limitNum : 1
+	});
+
+	function submitHandler() {
+		if ($("#editCategoryForm").validate().form()) {
+			var formData = $("#editCategoryForm").serialize();
+			var index = layer.load(3); // 换了种风格
+			$.ajax({
+				url : $("#editCategoryForm").attr('action'),
+				type : 'POST',
+				dataType : "json",
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					layer.close(index);
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+						window.parent.dataTable.draw(false);
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

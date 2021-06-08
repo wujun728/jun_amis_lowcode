@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ifast.sys.base.dao.UserRoleDao">
+
+	<select id="findListByUserId" resultType="com.ifast.sys.base.domain.RoleDO">
+		select * from sys_role r
+		left join sys_user_role ur on r.id = ur.role_id
+		left join sys_user u on ur.user_id = u.id
+		where
+		u.id = #{userId}
+	</select>
+
+	<select id="listRoleId" resultType="long">
+		select role_id as roleId from
+		sys_user_role where
+		user_id=#{userId}
+	</select>
+
+	<delete id="removeByUserId">
+		delete from sys_user_role where user_id=#{userId}
+	</delete>
+
+	<delete id="batchRemoveByUserId">
+		delete from sys_user_role where user_id in
+		<foreach item="id" collection="array" open="(" separator=","
+			close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+	<insert id="batchSave">
+		INSERT INTO sys_user_role(user_id, role_id) values
+		<foreach item="item" index="index" collection="list"
+			separator=",">
+			(#{item.userId},#{item.roleId})
+		</foreach>
+	</insert>
+</mapper>

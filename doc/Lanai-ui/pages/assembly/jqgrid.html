@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<title></title>
+		<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="content no-padding">
+			<div class="box box-widget no-shadow">
+				<div class="box-body">
+					
+					<blockquote class="bg-gray-light blockquote-info">
+						引入 jqgrid-5.3.1 脚本做了部分修改，样式也调整一部分，有兴趣的可以看看
+					</blockquote>
+					<div class="jqGrid_wrapper">
+					    <table id="jqGridList"></table>
+					    <div id="jqGridPager"></div>
+					</div>
+						
+				</div>
+				<div class="box-footer">
+					<button type="button" class="btn btn-default" id="btn_selectRow">获取选中行</button>
+					<p id="msg" class="text-red"></p>
+				</div>
+			</div>		
+		</section>
+	</body>
+	<script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/lanai-ui.min.js"></script>
+    <script type="text/javascript">
+//jqGrid
+$(function(){
+	var dataJson=[
+        {
+            "Name": "路飞",
+			"favour": "吃肉",
+			"Desc": "将要成为海贼王的男人"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "山治",
+			"favour": "美食&美女",
+			"Desc": ""
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        },
+        {
+           "Name": "娜美",
+			"favour": "钱",
+			"Desc": "爱钱如命"
+        }
+    ]
+
+	console.log(dataJson);
+	var jqGrid = $("#jqGridList");
+	
+        jqGrid.jqGrid({
+            //url: "/User/GetList",
+            data:dataJson,
+            //mtype: "GET",
+            datatype : "local",//datatype: "json",
+            colNames: ['姓名', '爱好','备注'],
+            colModel: [
+                { name: 'Name', index: 'Name', width: 60},
+                { name: 'favour', index: 'favour', width: 160 },
+                { name: 'Desc', index: 'Desc', width: 560  }
+            ],
+            viewrecords: true,
+            multiselect: true,
+            rownumbers: true,
+            autowidth: true,
+            height: "100%",
+            rowNum: 10,
+            rownumbers: false, // 显示行号
+            rownumWidth: 35, // the width of the row numbers columns
+            pager: "#jqGridPager",//分页控件的id
+            subGrid: false//是否启用子表格
+        });
+        
+        $("#btn_selectRow").on('click',function(){
+        	var indexids = $("#jqGridList").jqGrid('getGridParam', 'selarrrow');
+        	if(indexids.length<1)
+        	{
+        		toastr.info("请先选择一行");
+        	}
+        	else
+        	{
+        		$.each(indexids,function(i,el){
+        			var ret = $("#jqGridList").jqGrid('getRowData', el);
+				    $("#msg").html($("#msg").html()+JSON.stringify(ret)+"<br/>");
+        		})
+        	}
+        })
+})
+    </script>
+</html>

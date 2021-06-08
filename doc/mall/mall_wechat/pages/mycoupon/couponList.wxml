@@ -1,0 +1,42 @@
+<view class="container">
+
+  <view class="h">
+    <view class="item {{ status == 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">
+      <view class="txt">未使用</view>
+    </view>
+    <view class="item {{ status == 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">
+      <view class="txt">已使用</view>
+    </view>
+    <view class="item {{ status == 2 ? 'active' : ''}}" bindtap="switchTab" data-index="2">
+      <view class="txt">已过期</view>
+    </view>
+  </view>
+
+  <view class="b">
+    <scroll-view class="coupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+
+      <view class="item {{ status == 0 ? 'active' : ''}}" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <view class="tag">{{item.rangeRelationName}}</view>
+        <view class="content">
+          <view class="left">
+            <view class="discount">{{item.discount}}元</view>
+          </view>
+          <view class="right">
+            <view class="name">满{{item.conditionNum}}元使用</view>
+          </view>
+        </view>
+        <view class="content">
+          <view class="time"> 有效期：{{item.startTime}} - {{item.endTime}}</view>
+        </view>
+        <view class="condition">
+          <text class="txt">{{item.rangeRelationName}}</text>
+        </view>
+      </view>
+
+      <view class="page" wx:if="{{showPage}}">
+        <view class="prev {{ page <= 1 ? 'disabled' : ''}}" bindtap="prevPage">上一页</view>
+        <view class="next {{ (count / limit) < page ? 'disabled' : ''}}" bindtap="nextPage">下一页</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

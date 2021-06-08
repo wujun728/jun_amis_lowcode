@@ -1,0 +1,40 @@
+[
+    {
+        "addtab": "",
+        "target":"",
+        "title":"布局",
+        "url":"#",
+        "icon":"fa-columns",
+        "children":[
+            { 
+                "addtab": "grid",
+                "target":"#MasterTabs",
+                "title":"栅格",
+                "url":"pages/layouts/grid.html",
+                "icon":"",
+                "children":[]
+            }
+        ]
+    }, {
+        "addtab": "",
+        "target":"",
+        "title":"基本元素",
+        "url":"",
+        "icon":"fa-fonticons",
+        "children":[]
+    }, {
+        "addtab": "",
+        "target":"",
+        "title":"组件",
+        "url":"",
+        "icon":"fa-laptop",
+        "children":[]
+    }, {
+        "addtab": "",
+        "target":"",
+        "title":"页面",
+        "url":"",
+        "icon":"fa-folder",
+        "children":[]
+    }
+]

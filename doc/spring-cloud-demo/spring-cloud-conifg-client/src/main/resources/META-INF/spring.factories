@@ -1,0 +1,1 @@
+org.springframework.cloud.bootstrap.BootstrapConfiguration=com.louis.spring.cloud.config.client.RetryConfiguration

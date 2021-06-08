@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<title></title>
+		<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="content">
+				<blockquote class="bg-gray-light blockquote-info">
+						本脚本采用fyAlert.js 仅对适用此框架的部分做了改动，若有单独引用需求请联系作者索要源码包
+					</blockquote>
+			<h2 class="title">参数配置</h2>
+	<pre class="pre-box">    title    :'提示', //标题
+    icon     : '',
+    content  : '',    //内容
+    skin     : '',    //皮肤
+    position : 'fixed',//定位方式
+    closeBtn : true,   //是否显示关闭按钮
+    type     : 1,      //type=2 为iframe
+    drag     : false,   //是否开启拖动
+    time     : 2000,   //当无头或无底部按钮时自动关闭时间
+    shadow   : [0.3,'#000'], //遮罩
+    shadowClose : true,  //是否点击遮罩关闭
+    animateType : 0, // 0为默认动画 1为底部弹出 2为顶部弹出 3为左部弹出 4为右部弹出
+    aniExtend: '',   //例 css动画名 opacity
+    area     : ['auto','auto'], //设置宽高
+    minmax   : false,
+    direction: ['center','center'], //方向 key1:right left center  key2: top bottom center
+    btns     : {                   //按钮组
+       /* '确定' : function(){},*/
+    },
+    success  : function(){},  //弹出后回调
+    end      : function(){}   //关闭后回调
+	</pre>
+
+    <div id="contentText" style="display: none">商量的国剧盛典路径规划落实到哪个好老师大家回顾历史大家</div>
+    <h2 class="title">信息提示弹出层（图标）</h2>
+	<button class="btn btn-default" onclick="demo1()">成功弹框</button>
+	<button class="btn btn-default" onclick="demo2()">警告弹框</button>
+	<button class="btn btn-default" onclick="demo3()">失败弹框</button>
+	<button class="btn btn-default" onclick="demo4()">加载1弹框</button>
+	<button class="btn btn-default" onclick="demo5()">加载2弹框</button>
+
+	<h2 class="title">内容提示弹出层</h2>
+	<button class="btn btn-default" onclick="content1()">文本提示框</button>
+	<button class="btn btn-default" onclick="content2()">DOM提示框</button>
+	<button class="btn btn-default" onclick="content3()">IFRAME提示框</button>
+
+	 <h2 class="title">方向弹出层</h2>
+	<button class="btn btn-default" onclick="bottomFun()">贴底部下弹出层</button>
+	<button class="btn btn-default" onclick="topFun()">贴顶部上弹出层</button>
+	<button class="btn btn-default" onclick="leftFun()">贴左部左弹出层</button>
+	<button class="btn btn-default" onclick="rightFun()">贴右部右弹出层</button>
+
+	<h2 class="title">其他参数弹出层</h2>
+	<button class="btn btn-default" onclick="drag()">可拖动弹出层</button>
+	<button class="btn btn-default" onclick="aniExtend()">自定义弹出动画</button>
+	<button class="btn btn-default" onclick="minmaxScreen()">开启全屏按钮</button>
+	<button class="btn btn-default" onclick="skin()">开启其他风格</button>
+	<button class="btn btn-default" onclick="addMesk()">层上层弹框</button>
+
+		</section>
+		<script src="../../dist/js/jquery.min.js"></script>
+        <script src="../../dist/js/lanai-ui.min.js"></script>
+		<script type="text/javascript">
+
+			//信息提示弹出层（图标）
+			function demo1(){ fyAlert.msg("下方弹出弹框",{icon:1,animateType:1} )};
+			function demo2(){ fyAlert.msg("上方弹出弹框",{icon:2,animateType:2} )};
+			function demo3(){ fyAlert.msg("左方弹出弹框",{icon:3,animateType:3} )};
+			function demo4(){ fyAlert.msg("右方弹出弹框",{icon:4,animateType:4} )};
+			function demo5(){ fyAlert.msg("右方弹出弹框",{icon:5,animateType:4} )};
+			
+			
+			//内容提示弹出层
+			function content1(){ 
+				fyAlert.alert({
+					title:'文本提示框',
+					content: '您觉得这个这个弹框动画怎么样',
+					btns    : {                  //按钮组
+						'很好' : function(obj){
+							obj.destory();   //在页面上
+							demo1();
+						},
+						'不好' : function(obj){
+							obj.destory(); //销毁
+							demo1();
+						}
+					},
+				}) 
+			}
+			function content2(){ 
+				fyAlert.alert({
+					title:'DOM提示框',
+					// area : ['250px','auto'],
+					content: $("#contentText"),
+					btns    : {                  //按钮组
+					'很好' : function(obj){
+						obj.destory();   //在页面上
+						demo1();
+					},
+					'不好' : function(obj){
+						obj.destory(); //销毁
+						demo1();
+					}
+				},
+				}) 
+			}
+			function content3(){ 
+				fyAlert.alert({
+					type:2,
+					title:'文本提示框',
+					animateType : 1,
+					area : ['380px','90%'],
+					content: 'https://www.baidu.com',
+					btns    : {                  //按钮组
+					'很好' : function(obj){
+						obj.destory();   //在页面上
+						demo1();
+					},
+					'不好' : function(obj){
+						obj.destory(); //销毁
+						demo1();
+					}
+				},
+				}) 
+			}
+			
+			
+			//方向弹出层
+			function bottomFun(){ 
+				fyAlert.alert({
+					type:2,
+					minmax:true,
+					animateType : 1,
+					direction:['center','bottom'],
+					area : ['100%','50%'],
+					content: 'https://www.baidu.com',
+				}) 
+			}
+			function topFun(){ 
+				fyAlert.alert({
+					type:2,
+					minmax:true,
+					animateType : 2,
+					direction:['center','top'],
+					area : ['100%','50%'],
+					content: 'https://www.baidu.com',
+				}) 
+			}
+			function leftFun(){ 
+				fyAlert.alert({
+					type:2,
+					minmax:true,
+					animateType : 3,
+					direction:['left','top'],
+					area : ['400px','100%'],
+					content: 'https://www.baidu.com',
+				}) 
+			}
+			function rightFun(){ 
+				fyAlert.alert({
+					type:2,
+					minmax:true,
+					animateType : 4,
+					direction:['right','top'],
+					area : ['400px','100%'],
+					content: 'https://www.baidu.com',
+				}) 
+			}
+			
+			
+			//可拖动弹出层
+			function drag(){ 
+				fyAlert.alert({
+					title   : "点击拖动",
+					drag    : true,
+					content : '您如何看待开发人员',
+					btns    : {                  //按钮组
+						'确定' : function(obj){
+							obj.destory();   //在页面上
+							demo1();
+						},
+						'取消' : function(obj){
+							obj.destory(); //销毁
+							demo2();
+						}
+					},
+				}) 
+			}
+			
+			//自定义弹出层动画
+			function aniExtend(){
+				fyAlert.alert({
+					title   : "自定义弹出动画",
+					aniExtend:'lightSpeedIn',
+					content : '自定义弹出动画，隐藏动画添加_hide <p>例:显示动画为 opaicty;隐藏动画就为 opacity_hide</p> ',
+					btns    : {                  //按钮组
+						'确定' : function(obj){
+							obj.destory();   //在页面上
+							demo1();
+						},
+						'取消' : function(obj){
+							obj.destory(); //销毁
+							demo2();
+						}
+					},
+				}) 
+			}
+			
+			//开启全屏按钮
+			function minmaxScreen(){
+				fyAlert.alert({
+					minmax   : true,
+					content  : '点击确定关闭弹框...',//$("#contentText"),    //内容
+					btns     : {                  //按钮组
+						'确定' : function(obj){
+							obj.destory();   //在页面上
+						}
+					}
+				})
+			}
+			
+			
+			//另一种风格
+			function skin(){
+				fyAlert.alert({
+					closeBtn : false,
+					skin     : 'box-success',
+					content  : '点击确定关闭弹框，怎么样好看吧...我对好看可能有什么误解',//$("#contentText"),    //内容
+					btns     : {                  //按钮组
+						'确定' : function(obj){
+							obj.destory();   //在页面上
+							skin2();
+						}
+					}
+				})
+			}
+			
+			//另一种风格
+			function skin2(){
+				fyAlert.alert({
+					closeBtn : true,
+					skin     : 'box-danger',
+					content  : '点击右上角关闭弹框，怎么样好看吧... 我对好看可能有什么误解',//$("#contentText"),    //内容
+					btns     : {                  //按钮组
+						'确定' : function(obj){
+							obj.destory();   //在页面上
+							skin();
+						}
+					}
+				})
+			}
+			
+			function addMesk(){
+				fyAlert.alert({
+					minmax   : true,
+					type     : 1,
+					area     : ['450px','80%'],
+					content  : '<div>寄过来送过来人生酒馆老人家管理局商量个事据了解厉害个人理解过来诗歌朗诵几个老师井冈山路老师给老师干活了施工临时 <button onclick="skin()">弹出框提示</button> </div>',//$("#contentText"),    //内容
+					btns     : {                  //按钮组
+						'确定' : function(obj){
+							console.log(obj);
+							obj.destory();   //在页面上
+						},
+						'取消' : function(obj){
+							obj.destory(); //销毁
+						}
+					}     
+				})
+			}
+
+
+			</script>						
+	</body>
+</html>

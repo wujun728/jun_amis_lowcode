@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/include :: header"></head>
+<body class="gray-bg">
+<div class="container-div">
+    <div class="row">
+        <div class="col-sm-12 search-collapse">
+            <form id="order-search-form" autocomplete="off">
+                <div class="select-list">
+                    <ul>
+                        <li>
+                            报修单号：<input style="width:200px" type="text" name="orderId" placeholder="请输入报修单号"/>
+                        </li>
+                        <li class="select-time">
+                            <label>报修时间： </label>
+                            <input class="form-control layer-date" style="width:200px" name="searchStartTime"
+                                   placeholder="选择开始时间"
+                                   onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                            <span>-</span>
+                            <input class="form-control layer-date" style="width:200px" name="searchEndTime"
+                                   placeholder="选择结束时间"
+                                   onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                        </li>
+                        <li>
+                            状态：<select name="orderStatus" placeholder="选择状态">
+                            <!--前端显示对应状态：0=待分配,1=已指派,2=已受理,3=维修中,4=待确认,5=已确认,6=已退回,7=已评价,8=待分配-->
+                            <option value="">所有</option>
+                            <option value="0">待分配</option>
+                            <option value="1">已指派</option>
+                            <option value="2">已受理</option>
+                            <option value="3">维修中</option>
+                            <option value="4">待确认</option>
+                            <option value="5">已确认</option>
+                            <option value="6">已退回</option>
+                            <option value="7">已评价</option>
+                        </select>
+                        </li>
+                        <li>
+                            报修人：<input style="width:200px" type="text" name="initiatorUserName" placeholder="请输入报修人"/>
+                        </li>
+                        <li>
+                            维修人：<input style="width:200px" type="text" name="serviceUserName" placeholder="请输入维修人"/>
+                        </li>
+                        <li>
+                            紧急：<select style="width:100px" name="isExigence" placeholder="选择状态">
+                            <option value="">所有</option>
+                            <option value="0">否</option>
+                            <option value="1">是</option>
+                        </select>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i
+                                    class="fa fa-search"></i>&nbsp;搜索</a>
+                            <a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i
+                                    class="fa fa-refresh"></i>&nbsp;重置</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="btn-group-sm hidden-xs" id="toolbar" role="group">
+            <a class="btn btn-warning" onclick="$.table.exportExcelByFromData('order-search-form')">
+                <i class="fa fa-download"></i> 导出
+            </a>
+        </div>
+        <div class="col-sm-12 select-table table-striped">
+            <table id="bootstrap-table" data-mobile-responsive="true"></table>
+        </div>
+    </div>
+</div>
+<script th:inline="javascript">
+    $(function () {
+        var json = JSON.parse(localStorage.getItem('loginData'));
+        var token = json.data.token;
+        var options = {
+            url: ctx + "passPCApi/order/repairsOrderList?token=" + token,
+            exportExcel: ctx +"passPCApi/order/export?token=" + token,
+            detailUrl: ctx +"order/detail/{id}",
+            modalName: "报修",
+            search: false,
+            showExport: false,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'orderId',
+                    title: '报修单号'
+                },
+                {
+                    field: 'createTime',
+                    title: '报修时间'
+                },
+                {
+                    field: 'orderStatus',
+                    title: '状态',
+                    formatter: function (value, row, index) {
+                        /**
+                         * 状态描述===================>
+                         订单状态: 0:待分配 1:已指派 2:已受理 3:维修中 4:修好了 5:已确认-修好了 6已确认-退回 7:已评价 8:已退回
+                         0:待分配(初始状态)
+                         1:已指派(管理员已指派，维修员待受理)
+                         2:已受理(管理员已指派，维修员已受理)
+                         3:维修中(维修员点击开始维修，未开始维修的工单都可撤销/退回)
+                         4:修好了(维修员点击修好了并提交维修信息)
+                         5:已确认-修好了(已修好上报人已确认修好了)
+                         6:已确认-退回(已修好上报人已确认没修好)
+                         7:已评价(已修好上报人已评价,确认了的才能评价
+                         8:已退回(待维修列表-退回)
+                         前端显示对应状态：0=待分配,1=已指派,2=已受理,3=维修中,4=待确认,5=已确认,6=已退回,7=已评价,8=待分配
+                         首页统计状态：
+                         待受理1（待分配0 和 8 检修员退回类型 已指派1）
+                         待维修2(已受理2)
+                         维修中3(维修中3 已确认-退回6)
+                         已修好4(修好了4 已确认5 已评价7)
+                         */
+                        switch (row.orderStatus) {
+                            case '0' :
+                                return '<span class="badge badge-info">待分配</span>';
+                            case '1' :
+                                return '<span class="badge badge-info">已指派</span>';
+                            case '2' :
+                                return '<span class="badge badge-info">已受理</span>';
+                            case '3' :
+                                return '<span class="badge badge-info">维修中</span>';
+                            case '4' :
+                                return '<span class="badge badge-info">待确认</span>';
+                            case '5' :
+                                return '<span class="badge badge-info">已确认</span>';
+                            case '6' :
+                                return '<span class="badge badge-info">已退回</span>';
+                            case '7' :
+                                return '<span class="badge badge-info">已评价</span>';
+                            case '8' :
+                                return '<span class="badge badge-info">待分配</span>';
+                        }
+                    }
+                },
+                {
+                    field: 'isExigence',
+                    title: '是否紧急',
+                    formatter: function (value, row, index) {
+                        switch (row.isExigence) {
+                            case '0' :
+                                return '<span class="badge badge-info">否</span>';
+                            case '1' :
+                                return '<span class="badge badge-info">是</span>';
+                        }
+                    }
+                },
+                {
+                    field: 'equipmentName',
+                    title: '设备名字'
+                },
+                {
+                    field: 'description',
+                    title: '故障描述'
+                },
+                {
+                    field: 'initiatorUserName',
+                    title: '报修人'
+                },
+                {
+                    field: 'serviceUserName',
+                    title: '维修人'
+                },
+                {
+                    title: '操作',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        var actions = [];
+                        actions.push('<a class="btn btn-success btn-xs " href="#" onclick="$.operate.detail(\'' + row.orderId + '\')"><i class="fa fa fa-search"></i>查看详情</a> ');
+                        return actions.join('');
+                    }
+                }]
+        };
+        $.table.init(options);
+    });
+</script>
+</body>
+</html>

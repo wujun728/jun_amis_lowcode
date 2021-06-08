@@ -1,0 +1,66 @@
+.i-nav li:last-child {
+    margin-right: 50px;
+}
+
+.navbar-brand {
+    margin-left: 30px;
+}
+
+.i-nav {
+    font-size: 15px;
+}
+
+.i-nav > li:hover {
+    background-color: #babab4;
+}
+
+body {
+    padding-top: 70px;
+}
+
+nav > div.container {
+    border-bottom: solid #00b3ee 2px;
+}
+
+.thumbnail-hover {
+    border: solid #00b3ee 1px;
+}
+
+.thumbnail {
+    height: 250px;
+}
+
+#detail-pic {
+}
+
+#detail-desc h3, #detail-desc h5 {
+    border-left: solid #00b3ee 3px;
+    padding-left: 5px;
+}
+
+#detail-desc hr {
+    border: dashed #00b3ee 1px;
+}
+
+#mgr_nav {
+    position: fixed;
+    left: 12px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    width: 9em;
+    text-align: right;
+}
+
+#mgr_nav a {
+    display: block;
+    text-decoration: none;
+    padding: .7em 1em;
+    color: #000000;
+}
+
+#mgr_nav a:hover {
+    background-color: #00b3ee;
+    color: #f9f9f9;
+    text-decoration: none;
+    -webkit-transition: color .2s linear;
+}

@@ -1,0 +1,71 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<form class="form-horizontal" method="post" action="/system/role/doEdit" id="roleEditFrom">
+		<div class="box-body">
+			<input type="hidden" value="${sysRole.roleId}" name="roleId" id="roleId"/>
+			<div class="form-group">
+				<label for="uname" class="col-sm-2 control-label">角色名</label>
+				<div class="col-sm-10">
+					<input type="text" name="roleName" value="${(sysRole.roleName)!}" class="form-control" placeholder="请输入角色名" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">描述</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" name="roleDesc" rows="3" placeholder="请输入描述，最多300个字符 ..." required>${(sysRole.roleDesc)!}</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">状态</label>
+				<div class="col-sm-10">
+					<label class="radio-box"> 
+						<input name="roleState" type="radio" class="minimal" ${(sysRole.roleState == 1)?string('checked','')} value="1" required> 启用
+					</label>
+					<label class="radio-box">
+						<input name="roleState" type="radio" class="minimal" ${(sysRole.roleState== -1)?string('checked','')}  value="-1"> 禁用
+					</label>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</@body>
+<script type="text/javascript">
+	function submitHandler() {
+		if ($("#roleEditFrom").validate().form()) {
+			var formData = $("#roleEditFrom").serialize();
+			$.ajax({
+				url : $("#roleEditFrom").attr('action'),
+				type : 'POST',
+				dataType: "json",
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+						window.parent.data_oTable.draw(false);
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

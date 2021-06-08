@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>后台管理系统-登录</title>
+    <meta name="keywords" content="个人博客：https://github.com/java-aodeng">
+    <meta name="description" content="微信公众号：低调小熊猫">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/font-awesome.css?v=4.4.0}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <link th:href="@{/js/plugins/iCheck/custom.css}" rel="stylesheet"/>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <style>
+        .code{
+            background: #fff no-repeat 95% center;
+            color: #333;
+            margin: 0 0 15px 0;
+        }
+    </style>
+</head>
+
+<body class="signin">
+<div class="signinpanel wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m forget-form" id="forget" name="myform">
+        <h3 class="no-margins" style="text-align:center">忘记密码</h3>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">手机号：</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="text" name="phoneNumber" id="phoneNumber"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label ">图形验证码：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text" name="code" id="code" required="required"/>
+            </div>
+            <div class="col-sm-3">
+                <a href="javascript:void(0);" title="点击更换验证码">
+                    <img src="/verificationCode" class="imgcode" style="height: 40px;width: 100%;"/>
+                </a>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label ">短信验证码：</label>
+            <div class="col-sm-5">
+                <input class="form-control" type="text"  name="verifyCode" id="verifyCode" required="required"/>
+            </div>
+            <div class="col-sm-3">
+                <input class="btn btn-file btn-block" name="phone"  id="getsmscode" type="button" value="获取短信验证码"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label ">新密码：</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="password" name="newPassword" id="newPassword" required="required"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label ">确认密码：</label>
+            <div class="col-sm-8">
+                <input class="form-control" type="password" name="sureNewPassword" id="sureNewPassword"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6" style="text-align: left">
+                <a class="btn btn-box-tool btn-block" th:href="@{/login}">取消</a>
+            </div>
+            <div class="col-sm-6" style="text-align: right">
+                <input class="btn btn-success btn-block" id="forgetBtn" type="button" value="找回"/>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script th:src="@{/js/jquery.min.js?v=2.1.4}"></script>
+<script th:src="@{/js/bootstrap.min.js?v=3.3.6}"></script>
+<script th:src="@{/js/plugins/layer/layer.min.js}"></script>
+<!-- jquery-validate 表单验证插件 -->
+<script th:src="@{/js/plugins/validate/jquery.validate.min.js}"></script>
+<script th:src="@{/js/plugins/validate/messages_zh.min.js}"></script>
+<script th:src="@{/js/plugins/hope/validate/jquery.validate.extend.js}"></script>
+<script th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>
+<script th:inline="javascript"> var ctx = [[@{/}]]; </script>
+</html>
+<script>
+    $(function () {
+        $(".imgcode").click();
+    });
+
+    //找回密码
+    $("#forgetBtn").click(function () {
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var verifyCode = document.getElementById("verifyCode").value;
+        var newPassword = document.getElementById("newPassword").value;
+        var sureNewPassword = document.getElementById("sureNewPassword").value;
+        if (!phoneNumber){layer.msg("请输入手机号！"); return}
+        if (!verifyCode){layer.msg("请输入短信验证码！"); return}
+        if (!newPassword){layer.msg("请输入新密码！"); return}
+        if (!sureNewPassword){layer.msg("请输入确认密码！"); return}
+        if (newPassword!=sureNewPassword){layer.msg("两次密码不相同！");return}
+        forget()
+    });
+    function forget() {
+        $.ajax({
+            type:"POST",
+            url:"passPCApi/login/resetPwd",
+            data: $(".forget-form").serialize(),
+            dataType: "json",
+            //cache:false,
+            success: function(data) {
+                if (data.code == 200) {
+                    layer.msg("操作成功，请重新登录！");
+                    setTimeout(function(){
+                        parent.location.href="/login";
+                    },2000);
+                }else if (data.code ==400){
+                    layer.msg("<em style='color:red'>"+data.msg+"</em>", {
+                        icon: 2,
+                        offset: '30%',
+                        time: 2000
+                    });
+                    $(".imgcode").click();
+                }
+            }
+        });
+    }
+
+    //调用接口获取验证码
+    $("#getsmscode").click(function (){
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var code = document.getElementById("code").value;
+        if (!phoneNumber){layer.msg("请输入手机号！"); return}
+        if (!code){layer.msg("请输入图片验证码！"); return}
+        showtime(5);
+        var uuid = localStorage.getItem("uuid");
+        $.ajax({
+            type:"get",
+            url:"passPCApi/login/sendsms?phoneNumber="+phoneNumber+"&code="+code+"&uuid="+uuid,
+            dataType: "json",
+            success: function(data) {
+                if (data.code == 200) {
+                    layer.msg(data.msg);
+                }else if (data.code ==400){
+                    layer.msg("<em style='color:red'>"+data.msg+"</em>", {
+                        icon: 2,
+                        offset: '30%',
+                        time: 2000
+                    });
+                    $(".imgcode").click();
+                }
+            }
+        });
+    });
+
+    //点击图片 获取图片验证码 并且保存图片验证码uuid
+    $(".imgcode").on('click', function () {
+        $.ajax({
+            type:"get",
+            url:"/verificationCode",
+            dataType:"json",
+            success: function(data) {
+                localStorage.removeItem("uuid");
+                localStorage.setItem("uuid",data.uuid);
+                $(".imgcode").attr('src', 'data:image/jpg;base64,'+data.img);
+            }
+        });
+    });
+
+    //短信验证码按钮倒计时 表单名myform 按钮名phone
+    function showtime(t){
+        document.myform.phone.disabled=true;
+        for(i=1;i<=t;i++) {
+            window.setTimeout("update_p(" + i + ","+t+")", i * 1000);
+        }
+
+    }
+    function update_p(num,t) {
+        if(num == t) {
+            document.myform.phone.value =" 重新发送 ";
+            document.myform.phone.disabled=false;
+        }
+        else {
+            printnr = t-num;
+            document.myform.phone.value = " (" + printnr +")秒后重新发送";
+        }
+    }
+</script>

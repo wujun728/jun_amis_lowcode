@@ -1,0 +1,68 @@
+.checkout_list {
+  padding: 10px 15px 2px 15px;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.checkout_list .flow-shopList {
+  padding: 5rpx 0 10rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.checkout_list .flow-shopList:last-child {
+  border-bottom: 0;
+}
+
+.flow-header-left {
+  padding-left: 90rpx;
+}
+
+.coupon-box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin: 10px 0px;
+}
+
+.coupon-box .coupon-item {
+  width: 94%;
+  height: 108.3rpx;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  padding-left: 31.25rpx;
+}
+
+.coupon-box .l {
+  flex: 1;
+  height: 43rpx;
+  line-height: 43rpx;
+  padding-top: 35rpx;
+}
+
+.coupon-box .l .name {
+  float: left;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.coupon-box .l .txt {
+  float: right;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.coupon-box .r {
+  margin-top: 15.5rpx;
+  width: 77rpx;
+  height: 85rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon-box .r image {
+  width: 52.078rpx;
+  height: 52.078rpx;
+}

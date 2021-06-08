@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallCouponMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallCoupon">
+        <id column="coupon_id" property="couponId" />
+        <result column="coupon_name" property="couponName" />
+        <result column="condition_num" property="conditionNum" />
+        <result column="discount" property="discount" />
+        <result column="total_num" property="totalNum" />
+        <result column="remain_num" property="remainNum" />
+        <result column="range_type" property="rangeType" />
+        <result column="range_relation_id" property="rangeRelationId" />
+        <result column="range_relation_name" property="rangeRelationName" />
+        <result column="activity_status" property="activityStatus" />
+        <result column="time_type" property="timeType" />
+        <result column="days" property="days" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="del_time" property="delTime" />
+        <result column="activity_desc" property="activityDesc" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+    
+    <update id="reduceCouponNum" parameterType="map">
+		update mall_coupon
+		set remain_num = remain_num - 1, update_time = now()
+		where coupon_id = #{couponId} and remain_num >= 1
+	</update>
+
+</mapper>

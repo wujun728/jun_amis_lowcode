@@ -1,0 +1,211 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<div class="form-inline">
+							<div class="box-header">
+								<#if shiro.hasPermission("addMenu")>
+									<div class="input-group">
+										<a class="btn btn-sm btn-primary dialogFull" href="javascript:;" data-title="创建菜单" data-url="/system/menu/add"><i class="fa fa-plus"></i> 创建菜单</a>
+									</div>
+								</#if>
+								<div class="input-group input-group-sm">
+									<input type="text" name="search_value" id="search_value" class="form-control" placeholder="名称查询">
+									<div class="input-group-btn">
+										<a href="javascript:;" id="search_data" class="btn btn-default" ><i class="fa fa-search"></i> 搜索</a>
+										<a href="javascript:;" id="search_refresh" class="btn btn-default"><i class="fa fa-refresh"></i> 重置</a>
+									</div>
+								</div>
+								<div class="input-group">
+									<a class="btn btn-sm btn-default" href="javascript:;" onclick="collapseAll()"><i class="fa fa-exchange"></i> 折叠菜单</a>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<table id="menu_initTable" class="table table-bordered table-hover"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+<script src="/plugins/datatables/dataTables.treeGrid.js"></script>
+<script>
+	var dataTable;
+	var tree;
+	$(function(){
+	　　	//渲染表格
+		dataTable =  $('#menu_initTable').on('xhr.dt', function(e, settings, json) {
+		}).DataTable({
+			searching: false,
+			serverSide: true,
+			responsive: true,
+			bAutoWidth: false, //是否非自动宽度
+			bSort: false,
+			lengthMenu: [15, 30, 50, 100],
+			order: [],
+			pageLength: 15,
+			displayStart: 0,
+			headerCallback: function(e, a, t, n, s) {
+				$(e.getElementsByTagName("th")).parent().css("background-color", "#f7f7fa");
+			},
+			dom: "tr",
+			ajax: {
+				url: "/system/menu/listPage",
+				type: "POST",
+				data: query_data,
+			},
+			columnDefs: [{
+				targets: 0,
+				title: '',
+				className: 'treegrid-control',
+				width: '15px',
+				render: function (e, a, t, n) {
+					if (t.children) {
+						return '<span style="cursor:pointer;"><i class="glyphicon glyphicon-chevron-right"></i></span>';
+					}
+					return '';
+			    }
+			},{
+				targets: 1,
+				title: "菜单名称",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.menuName != null) {
+						return '<i class="'+ t.icon +'"></i>  ' + t.menuName;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 2,
+				title: "排序",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.sort != null) {
+						return t.sort;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 3,
+				title: "请求地址",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.url != null) {
+						return t.url;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 4,
+				title: "类型",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					var html = '';
+					if(t.deep == 1){
+						html += '<span class="label label-success">目录</span>';
+					}else if(t.deep == 2){
+						html += '<span class="label label-primary">菜单</span>';
+					}else{
+						html += '<span class="label label-warning">按钮</span>';
+					}
+					return html;
+				}
+			},{
+				targets: 5,
+				title: "编码",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.code != null) {
+						return t.code;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 6,
+				title: "权限标识",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.resource != null) {
+						return t.resource;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 7,
+				title: "操作",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					var html = '';
+						html += '<div>'
+						<#if shiro.hasPermission("editMenu")>
+							html += '<a class="btn btn-primary btn-xs dialogFull" href="javascript:void(0);" data-title="编辑菜单" data-url="/system/menu/edit/'+ t.menuId +'"><i class="fa fa-pencil"></i>编辑</a>'
+						</#if>
+						<#if shiro.hasPermission("deleteMenu")>
+							html += ' <a class="btn btn-danger btn-xs" delete-url="/system/menu/delete" data-id="'+ t.menuId +'"><i class="fa fa-trash"></i>删除</a>'
+						</#if>
+						html += '</div>';
+					return html;
+				}
+			}] 
+		});
+    	
+		// collapseAll();
+		tree = new $.fn.dataTable.TreeGrid(dataTable, {
+			left: 15,
+			expandAll: true,
+			expandIcon: '<span style="cursor:pointer;"><i class="glyphicon glyphicon-chevron-right"></i></span>',
+			collapseIcon: '<span style="cursor:pointer;"><i class="glyphicon glyphicon-chevron-down"></i></span>'
+		});
+		
+		dataTable.on("click", "*[delete-url]", function(){
+			var deleteUrl = $(this).attr('delete-url');
+			var id = $(this).attr('data-id');
+			$.modal.confirm('您确定要删除该条记录吗?', function(index){
+		    	$.post(deleteUrl,{"id": id},function(json){
+					if(json.code == 200){
+						dataTable.draw(false);
+						$.modal.msgSuccess("删除成功");
+					}else{
+						$.modal.msgWarning(json.msg);
+					}
+				});
+			});
+		});
+	});
+	var query_data = {
+		search: ''
+	}
+	//搜索
+	$("#search_data").off().on("click", function() {
+		query_data.search = $("#search_value").val();
+		reloadTable();
+	});
+	//重置
+	$("#search_refresh").off().on("click", function() {
+		query_data.search = "";
+		$("#search_value").val("");
+		reloadTable();
+	});
+	//重新加载表格
+	function reloadTable() {
+		var oSetting = dataTable.settings()[0];
+		oSetting.ajax.data = query_data;
+		dataTable.draw();
+	}
+	//折叠
+	function collapseAll(){
+	    tree.collapseAll();
+	}
+</script>

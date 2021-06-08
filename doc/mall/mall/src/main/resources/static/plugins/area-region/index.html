@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area test</title>
+    <script src="./area.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+</body>
+
+<script>
+    function ObjConvertToArray(data) {
+        let arr = [];
+        for (const key in data) {
+            if (data.hasOwnProperty(key)) {
+                const el = data[key];
+                arr.push({ code: key, name: el })
+            }
+        }
+        return arr;
+    }
+
+    let province_list = ObjConvertToArray(area.province_list);
+    let city_list = ObjConvertToArray(area.city_list);
+    let county_list = ObjConvertToArray(area.county_list);
+    let sqlDataList = new Array();
+    const defalutIndex = 10000000;
+    function Init() {
+
+        // id name code parent_id level_id
+        proviceInit();
+
+        let html = " <p>insert into province (id ,name,code,parent_id,level_id) values(10000000,'全国','100000',0,0), </p>"
+        for (let index = 0; index < sqlDataList.length; index++) {
+            const element = sqlDataList[index];
+            html += `<p>(${element.id},'${element.name}','${element.code}',${element.parent_id},${element.level_id}),</p>`
+        }
+        document.getElementById("box").innerHTML = html;
+    }
+
+    function proviceInit() {
+        province_list.forEach((province, index) => {
+            sqlDataList.push({
+                id: defalutIndex + index + 1,
+                name: province.name,
+                code: province.code,
+                parent_id: defalutIndex,
+                level_id: 1
+            })
+        });
+
+        province_list.forEach(province => {
+            let current_province = sqlDataList.find(x => { return x.code == province.code });
+
+            cityInit(sqlDataList, current_province)
+        });
+
+        city_list.forEach(city => {
+            let current_city = sqlDataList.find(p => { return p.code == city.code });
+            if (current_city) {
+                areaInit(sqlDataList, current_city)
+            }
+        });
+
+    }
+    function cityInit(sqlDataList, province) {
+        let currentCity = city_list.filter(x => { return x.code.substring(0, 2) == province.code.substring(0, 2) });
+        currentCity.forEach((city, index) => {
+            sqlDataList.push({
+                id: defalutIndex + sqlDataList.length + 1,
+                name: city.name,
+                code: city.code,
+                parent_id: province.id,
+                level_id: 2
+            })
+        });
+    }
+
+    function areaInit(sqlDataList, city) {
+
+        let currentArea = county_list.filter(x => { return x.code.substring(0, 4) == city.code.substring(0, 4) });
+        currentArea.forEach((area, index) => {
+            sqlDataList.push({
+                id: defalutIndex + sqlDataList.length + 1,
+                name: area.name,
+                code: area.code,
+                parent_id: city.id,
+                level_id: 3
+            })
+        });
+
+
+    }
+
+
+
+    window.onload = function () {
+        Init()
+    }
+
+</script>
+
+</html>

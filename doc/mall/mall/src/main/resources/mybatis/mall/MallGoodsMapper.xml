@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallGoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallGoods">
+        <id column="goods_id" property="goodsId" />
+        <result column="good_sn" property="goodSn" />
+        <result column="good_name" property="goodName" />
+        <result column="category_id" property="categoryId" />
+        <result column="keywords" property="keywords" />
+        <result column="gallery" property="gallery" />
+        <result column="brief" property="brief" />
+        <result column="pic_url" property="picUrl" />
+        <result column="unit" property="unit" />
+        <result column="line_price" property="linePrice" />
+        <result column="good_price" property="goodPrice" />
+        <result column="detail" property="detail" />
+        <result column="spec_type" property="specType" />
+        <result column="is_shelf" property="isShelf" />
+        <result column="is_new" property="isNew" />
+        <result column="is_hot" property="isHot" />
+        <result column="sort_order" property="sortOrder" />
+        <result column="deleted" property="deleted" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

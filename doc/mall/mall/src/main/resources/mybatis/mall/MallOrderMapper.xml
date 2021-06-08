@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallOrder">
+        <id column="order_id" property="orderId" />
+        <result column="user_id" property="userId" />
+        <result column="order_sn" property="orderSn" />
+        <result column="order_status" property="orderStatus" />
+        <result column="pay_status" property="payStatus" />
+        <result column="ship_status" property="shipStatus" />
+        <result column="consignee" property="consignee" />
+        <result column="mobile" property="mobile" />
+        <result column="address" property="address" />
+        <result column="message" property="message" />
+        <result column="total_price" property="totalPrice" />
+        <result column="ship_price" property="shipPrice" />
+        <result column="coupon_price" property="couponPrice" />
+        <result column="order_price" property="orderPrice" />
+        <result column="pay_id" property="payId" />
+        <result column="pay_time" property="payTime" />
+        <result column="ship_sn" property="shipSn" />
+        <result column="ship_channel" property="shipChannel" />
+        <result column="ship_time" property="shipTime" />
+        <result column="confirm_time" property="confirmTime" />
+        <result column="end_time" property="endTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

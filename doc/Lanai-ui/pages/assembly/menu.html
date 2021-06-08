@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+		<title></title>
+		<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section class="content no-padding">
+			<div class="box box-widget no-shadow">
+				<div class="box-body">
+					<div class="nav-tabs-custom no-shadow">
+                        <ul class="nav nav-tabs line-tabs tabs-danger">
+                            <li class="active"><a href="#tab_31" data-toggle="tab" aria-expanded="true">JSON数据</a></li>
+                            <li><a href="#tab_21" data-toggle="tab" aria-expanded="true">说明</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- /.tab-pane -->
+                            <div class="tab-pane active" id="tab_31">
+                                <code> <pre>
+    [
+    {
+        "addtab": "", //tab编码
+        "target": "", //tab目标 默认是#MasterTabs
+        "title": "布局",//tab标题
+        "url": "",//tab指向的URL ，iframe的话是打开此url，ajax未true的话 是加载此url内容，注意跨域
+        "icon": "fa-columns",//菜单图标
+        "nav": "layouts", //上级菜单分组编码         
+        "isUrl": false,//是否是独立Url，点击可在新窗口打开
+        "ajax":false,//是否ajax读取，true的话不生成iframe
+        "children": [ //子菜单
+            {
+                "addtab": "grid",
+                "target": "#MasterTabs",
+                "title": "栅格",
+                "url": "pages/layouts/grid.html",
+                "icon": "",
+                "nav": "layouts",
+                "children":[]
+            },
+            {
+                "addtab": "layout",
+                "target": "#MasterTabs",
+                "title": "后台布局",
+                "url": "pages/layouts/layout.html",
+                "icon": "",
+                "nav": "layouts",
+                "children":[]
+            }
+        ]
+    }, {
+        "addtab": "",
+        "target": "",
+        "title": "基本元素",
+        "url": "",
+        "icon": "fa-fonticons",
+        "nav": "ui",
+        "children": [
+            {
+                "addtab": "buttons",
+                "target": "#MasterTabs",
+                "title": "按钮",
+                "url": "pages/ui/buttons.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "forms",
+                "target": "#MasterTabs",
+                "title": "表单",
+                "url": "pages/ui/forms.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "tabs",
+                "target": "#MasterTabs",
+                "title": "选项卡",
+                "url": "pages/ui/tabs.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "progress",
+                "target": "#MasterTabs",
+                "title": "进度条",
+                "url": "pages/ui/progress.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "panel",
+                "target": "#MasterTabs",
+                "title": "面板",
+                "url": "pages/ui/panel.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "icons",
+                "target": "#MasterTabs",
+                "title": "图标",
+                "url": "pages/ui/icons.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "timeline",
+                "target": "#MasterTabs",
+                "title": "时间线",
+                "url": "pages/ui/timeline.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "table",
+                "target": "#MasterTabs",
+                "title": "静态表格",
+                "url": "pages/ui/table.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            },
+            {
+                "addtab": "auxiliar",
+                "target": "#MasterTabs",
+                "title": "辅助元素",
+                "url": "pages/ui/auxiliar.html",
+                "icon": "",
+                "nav": "ui",
+                "children":[]
+            }
+        ]
+    }, {
+        "addtab": "",
+        "target": "",
+        "title": "组件",
+        "url": "",
+        "icon": "fa-laptop",
+        "nav": "assembly",
+        "children": [
+            {
+                "addtab": "navtab",
+                "target": "#MasterTabs",
+                "title": "导航条",
+                "url": "pages/assembly/navtab.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "message",
+                "target": "#MasterTabs",
+                "title": "信息提示",
+                "url": "pages/assembly/message.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "data",
+                "target": "#MasterTabs",
+                "title": "bootstrap-table表格",
+                "url": "pages/assembly/data.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "jqgrid",
+                "target": "#MasterTabs",
+                "title": "jQgrid表格",
+                "url": "pages/assembly/jqgrid.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "carousel",
+                "target": "#MasterTabs",
+                "title": "轮播",
+                "url": "pages/assembly/carousel.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "tree",
+                "target": "#MasterTabs",
+                "title": "树组件",
+                "url": "pages/assembly/tree.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "video",
+                "target": "#MasterTabs",
+                "title": "播放器",
+                "url": "pages/assembly/video.html",
+                "icon": "",
+                "nav": "assembly",
+                "children":[]
+            },
+            {
+                "addtab": "menu",
+                "target": "#MasterTabs",
+                "title": "JSON菜单",
+                "url": "pages/assembly/menu.html",
+                "icon": "",
+                "isUrl": true,
+                "children":[]
+            }
+        ]
+    }, {
+        "addtab": "",
+        "target": "",
+        "title": "页面",
+        "url": "",
+        "icon": "fa-folder",
+        "nav": "page",
+        "children": [
+            {
+                "addtab": "profile",
+                "target": "#MasterTabs",
+                "title": "个人简介",
+                "url": "pages/page/profile.html",
+                "icon": "",
+                "nav": "page",
+                "children":[]
+            },
+            {
+                "addtab": "",
+                "target": "",
+                "title": "登录页",
+                "url": "pages/page/login.html",
+                "icon": "",
+                "isUrl": true,
+                "children":[]
+            },
+            {
+                "addtab": "",
+                "target": "",
+                "title": "注册页",
+                "url": "pages/page/register.html",
+                "icon": "",
+                "isUrl": true,
+                "children":[]
+            },
+            {
+                "addtab": "",
+                "target": "",
+                "title": "空白页",
+                "url": "blank.html",
+                "icon": "",
+                "isUrl": true,
+                "children":[]
+            },
+            {
+                "addtab": "404",
+                "target": "#MasterTabs",
+                "title": "404 Error",
+                "url": "pages/page/404.html",
+                "icon": "",
+                "nav": "page",
+                "isUrl": false,
+                "children":[]
+            },
+            {
+                "addtab": "500",
+                "target": "#MasterTabs",
+                "title": "500 Error",
+                "url": "pages/page/500.html",
+                "icon": "",
+                "nav": "page",
+                "isUrl": false,
+                "children":[]
+            }
+        ]
+    },
+    {
+        "addtab": "",
+        "target": "",
+        "title": "AJAX示例",
+        "url": "",
+        "icon": "fa-magnet",
+        "nav": "ajaxs",
+        "children":[
+                {
+                "addtab": "ajaxdemo",
+                "target": "#MasterTabs",
+                "title": "AJAX加载Viewer组件",
+                "url": "pages/ajaxs/views.html",
+                "icon": "",
+                "nav": "ajaxs",
+                "ajax":true,
+                "children":[]
+            }
+        ]
+    },
+    {
+        "addtab": "test1",
+        "target": "#MasterTabs",
+        "title": "百度",
+        "url": "http://wwww.baidu.com",
+        "icon": "",
+        "nav": "test1",
+        "isUrl": true,
+        "children":[]
+    }
+]
+                                </pre>
+                                </code>
+                            </div>
+
+                            <div class="tab-pane" id="tab_21">
+                                <div class="box box-widget no-shadow">
+                                    <div class="box-body">
+                                        1.此脚本已集成到Lanai.js里，无需单独引用<br/>
+                                        2.JSON字段说明：<code>
+                                            <pre>
+        "addtab": "", //tab编码
+        "target": "", //tab目标 默认是#MasterTabs
+        "title": "布局",//tab标题
+        "url": "",//tab指向的URL ，iframe的话是打开此url，ajax未true的话 是加载此url内容，注意跨域
+        "icon": "fa-columns",//菜单图标
+        "nav": "layouts", //上级菜单分组编码         
+        "isUrl": false,//是否是独立Url，点击可在新窗口打开
+        "ajax":false,//是否ajax读取，true的话不生成iframe
+        "children": [] //子菜单
+                                            </pre>
+                                        </code>
+                                        3.前端调用方法<code> 
+                                            <pre>
+        $.LanaiMenu(Menu, {
+            DirectionH: false, //横版菜单 默认false 纵向上-左排列                                                   
+            EnableNav:false, // 启用顶部菜单 
+            NavEl:'[role="menulist"]', //顶部菜单区域
+            El: '.sidebar-menu' //左侧菜单区域
+            })
+                                            </pre>
+                                        </code>
+                                        <button class="btn btn-primary btn-block" id="btnUseTopMenu">切换顶部菜单</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                        </div>
+			</div>		
+		</section>
+	</body>
+	<script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/lanai-ui.min.js"></script>
+    <script>
+        $(function(){
+            $("#btnUseTopMenu").click(function(){
+                $('[data-enableNav="toggle"]', parent.document).click();
+            })
+        })
+    </script>
+</html>
+	                					

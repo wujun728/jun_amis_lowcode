@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition skin-blue sidebar-mini" style="background-color:#ecf0f5">
+    <section class="content container-fluid">
+        <div class="box box-success">
+            <div class="box-body"> 
+                <table id="Bomlist" class="table table-bordered table-hover" data-filter-control="false"></table>
+            </div>
+        </div>
+    </section>
+    <!-- jQuery 3 -->
+    <script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/lanai-ui.min.js"></script>
+    <script type="text/javascript">
+        var TableInit = function () {
+            var oTableInit = new Object();
+            var cms = [{
+                field: 'BOM_CHLD_ID',
+                title: '子件编号'
+            }, {
+                field: 'PART_NAME',
+                title: '子件名称'
+            }, {
+                field: 'BOM_CHLD_AMNT',
+                title: '子件数量'
+            }];
+            var cms_master = [{
+                field: 'PART_ID',
+                title: '物料编号'
+            }, {
+                field: 'PART_NAME',
+                title: '物料名称'
+            }, {
+                field: 'PART_SPECS',
+                title: '规格'
+            }, {
+                field: 'PART_UNIT',
+                title: '单位'
+            }];
+
+            oTableInit.Init = function () {
+                $('#Bomlist').bootstrapTable("destroy");
+                $('#Bomlist').bootstrapTable({
+                    url: '../../ashx/ECRHandler.ashx',
+                    method: 'get',
+                    striped: true,
+                    cache: false,
+                    pagination: false,
+                    sortable: false,
+                    sortOrder: "asc",
+                    queryParams: {
+                        functionType: "querypart",
+                        partno: $("#txt_PART_No").val()
+                    },
+                    sidePagination: "server",
+                    pageNumber: 1,
+                    pageSize: 10,
+                    pageList: [10, 25, 50, 100],
+                    search: false,
+                    strictSearch: false,
+                    showColumns: false,
+                    showRefresh: false,
+                    minimumCountColumns: 2,
+                    clickToSelect: false,
+                    showToggle: false,
+                    cardView: false,
+                    detailView: true,
+                    iconSize: '',
+                    columns: cms_master,
+                    onExpandRow: function (index, row, $detail) {
+                        oTableInit.InitChildren($detail.html('<table></table>').find('table'), row.PART_ID);
+                    },
+                    onLoadError: function () {
+                        toastr.error('加载数据失败');
+                    }
+                });
+            };
+            oTableInit.InitChildren = function ($el, parentid) {
+                $($el).bootstrapTable({
+                    url: '../../ashx/ECRHandler.ashx',
+                    method: 'get',
+                    striped: true,
+                    cache: false,
+                    pagination: false,
+                    sortable: false,
+                    sortOrder: "asc",
+                    queryParams: {
+                        functionType: "queryBom",
+                        partno: parentid
+                    },
+                    sidePagination: "server",
+                    pageNumber: 1,
+                    pageSize: 10,
+                    pageList: [10, 25, 50, 100],
+                    search: false,
+                    strictSearch: false,
+                    showColumns: false,
+                    showRefresh: false,
+                    minimumCountColumns: 2,
+                    clickToSelect: false,
+                    showToggle: false,
+                    cardView: false,
+                    detailView: true,
+                    iconSize: '',
+                    columns: cms,
+                    onExpandRow: function (index, row, $detail) {
+                        oTableInit.InitChildren($detail.html('<table></table>').find('table'), row.BOM_CHLD_ID);
+                    },
+                    onLoadError: function () {
+                        toastr.error('加载数据失败');
+                    }
+                });
+            };
+
+            return oTableInit;
+        };
+    </script>
+</body>
+</html>

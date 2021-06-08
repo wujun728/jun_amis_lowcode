@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htmall.mapper.SysUserMapper">
+
+	<select id="selectUserList" resultType="java.util.HashMap">
+		SELECT u.*,d.`dept_name` FROM `sys_user` u
+		LEFT JOIN `sys_dept` d ON d.`id` = u.`dept_id` WHERE 1=1
+		<if test="search != null">
+			AND u.user_name LIKE CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+		</if>
+		ORDER BY u.`create_time` DESC
+	</select>
+
+</mapper>

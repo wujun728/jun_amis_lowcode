@@ -1,0 +1,11 @@
+server:
+  port: 8541
+spring:
+  application:
+    name: spring-cloud-consul-zuul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}	# 注册到consul的服务名称

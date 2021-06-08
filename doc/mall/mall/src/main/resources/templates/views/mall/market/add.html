@@ -1,0 +1,253 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<form role="form" class="form-horizontal" method="post" action="/mall/market/doAdd" id="addActivityForm">
+		<div class="box-body">
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">活动名称</label>
+				<div class="col-sm-10">
+					<input type="text" id="couponName" name="couponName" class="form-control" placeholder="请输入活动名称" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">活动门槛</label>
+				<div class="col-sm-4">
+					<div class="input-group">
+						<input type="text" id="conditionNum" name="conditionNum" class="form-control" placeholder="请输入限制门槛" required>
+						<span class="input-group-addon">元</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">满减金额</label>
+				<div class="col-sm-4">
+					<div class="input-group">
+						<input type="text" id="discount" name="discount" class="form-control" placeholder="请输入满减金额" required>
+						<span class="input-group-addon">元</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">优惠券数量</label>
+				<div class="col-sm-10">
+					<label class="radio-box">
+						<input name="numLimitType" type="radio" class="minimal" value="0" checked> 无限制
+					</label>
+					<label class="radio-box">
+						<input name="numLimitType" type="radio" class="minimal" value="1" required> 自定义
+					</label>
+				</div>
+			</div>
+			<div class="form-group display-none" id="numLimit">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-4">
+					<div class="input-group">
+						<input type="text" id="totalNum" name="totalNum" class="form-control" placeholder="请输入优惠券数量">
+						<span class="input-group-addon">张</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">有效期限</label>
+				<div class="col-sm-10">
+					<label class="radio-box">
+						<input name="timelimit" type="radio" class="minimal" value="1" checked> 相对天数
+					</label>
+					<label class="radio-box">
+						<input name="timelimit" type="radio" class="minimal" value="0" required> 绝对时间
+					</label>
+				</div>
+			</div>
+			<div class="form-group" id="dayTimelimit">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-4">
+					<div class="input-group">
+						<input type="text" id="days" name="days" class="form-control">
+						<span class="input-group-addon">天</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group display-none" id="rangTimeLimit">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-10">
+					<div class="col-sm-4 input-group date form_datetime pull-left">
+						<div class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+						</div>
+						<input type="text" size="20" class="form-control" placeholder="请输入开始时间" readonly id="startTime" name="startTime">
+					</div>
+					<div class="pull-left" style="text-align: center; margin: 0 5px; line-height: 34px;">至</div>
+					<div class="col-sm-4 input-group date form_datetime pull-left">
+						<div class="input-group-addon">
+							<i class="fa fa-calendar"></i>
+						</div>
+						<input type="text" size="20" class="form-control" placeholder="请输入关闭时间" readonly id="endTime" name="endTime">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">限制范围</label>
+				<div class="col-sm-10">
+					<label class="radio-box"><input name="ranglimit" type="radio" class="minimal" value="0" checked> 全场通用 </label>
+					<label class="radio-box"><input name="ranglimit" type="radio" class="minimal" value="1"> 指定分类 </label>
+					<label class="radio-box"><input name="ranglimit" type="radio" class="minimal" value="2"> 指定商品 </label>
+				</div>
+			</div>
+			<div class="form-group display-none" id="ranglimitType">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-4">
+					<select id="LimiteType" name="LimiteType" class="form-control select2" style="width: 100%;" data-placeholder="--请选择分类--">
+						<option></option>
+						<#list categoryMapList?keys as key>
+						<optgroup label="${categoryMapList[key][0].name}">
+							<#list categoryMapList[key] as categorys>
+							<#if categorys_index gt 0 >
+								<option value="${categorys.categoryId}">${categorys.name}</option>
+							</#if>
+							</#list>
+						</optgroup>
+						</#list>
+					</select>
+				</div>
+			</div>
+			<div class="form-group display-none" id="ranglimitProduct">
+				<label class="col-sm-2 control-label"></label>
+				<div class="col-sm-4">
+					<select id="LimiteProduct" name="LimiteProduct" class="form-control select2" style="width: 100%;" data-placeholder="--请选择商品--">
+						<option></option>
+						<#list goodList as goods>
+							<option value="${goods.goodsId}">${goods.goodName}</option>
+						</#list>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptDesc" class="col-sm-2 control-label">活动描述</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" id="desc" name="desc" rows="3" placeholder="请输入内容，最多300个字符 ..."></textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</@body> <script type="text/javascript">
+	$('input:radio[name="numLimitType"]').on('ifChecked', function(e) {
+		if (e.currentTarget.value == '0') {
+			$("#numLimit").hide();
+		} else {
+			$("#numLimit").show();
+		}
+	});
+	$('input:radio[name="timelimit"]').on('ifChecked', function(e) {
+		if (e.currentTarget.value == '1') {
+			$("#rangTimeLimit").hide();
+			$("#dayTimelimit").show();
+		} else {
+			$("#rangTimeLimit").show();
+			$("#dayTimelimit").hide();
+		}
+	});
+	$('input:radio[name="ranglimit"]').on('ifChecked', function(e) {
+		if (e.currentTarget.value == '0') {
+			$("#ranglimitType").hide();
+			$("#ranglimitProduct").hide();
+		} else if (e.currentTarget.value == '1') {
+			$("#ranglimitType").show();
+			$("#ranglimitProduct").hide();
+		} else if (e.currentTarget.value == '2') {
+			$("#ranglimitType").hide();
+			$("#ranglimitProduct").show();
+		}
+	});
+	function submitHandler() {
+		if ($("#addActivityForm").validate().form()) {
+			var formData = {};
+			formData.couponName = $("#couponName").val();
+			formData.conditionNum = $("#conditionNum").val();
+			formData.discount = $("#discount").val();
+			var numLimitType = $("input[name='numLimitType']:checked").val();
+			if (numLimitType == '0') {
+				formData.totalNum = 0;
+			} else {
+				formData.totalNum = $("#totalNum").val();
+			}
+			formData.timeType = $("input[name='timelimit']:checked").val();
+			if (formData.timeType == '1') {
+				formData.days = $("#days").val();
+			}
+			if (formData.timeType == '1' && $.common.isEmpty(formData.days)) {
+				layer.msg("请输入天数", {
+					icon : 2
+				});
+				return;
+			}
+			if (formData.timeType == '0') {
+				formData.startTime = $("#startTime").val();
+				formData.endTime = $("#endTime").val();
+			}
+			if (formData.timeType == '0' && ($.common.isEmpty(formData.startTime) || $.common.isEmpty(formData.endTime))) {
+				layer.msg("请输入起止时间", {
+					icon : 2
+				});
+				return;
+			}
+			formData.rangeType = $("input[name='ranglimit']:checked").val();
+			if (formData.rangeType == "0") {
+				formData.rangeRelationName = "全场通用";
+			}
+			if (formData.rangeType == "1") {
+				formData.rangeRelationId = $("#LimiteType").val();
+				formData.rangeRelationName = $("#LimiteType").select2('data')[0].text;
+			}
+			if (formData.rangeType == "1" && $.common.isEmpty(formData.rangeRelationId)) {
+				layer.msg("请选择类别", {
+					icon : 2
+				});
+				return;
+			}
+			if (formData.rangeType == "2") {
+				formData.rangeRelationId = $("#LimiteProduct").val();
+				formData.rangeRelationName = $("#LimiteProduct").select2('data')[0].text;
+			}
+			if (formData.rangeType == "2" && $.common.isEmpty(formData.rangeRelationId)) {
+				layer.msg("请选择商品", {
+					icon : 2
+				});
+				return;
+			}
+			formData.activityDesc = $("#desc").val();
+			var index = layer.load(3); // 换了种风格
+			$.ajax({
+				url : $("#addActivityForm").attr('action'),
+				type : 'POST',
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					layer.close(index);
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+						window.parent.location.reload();
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

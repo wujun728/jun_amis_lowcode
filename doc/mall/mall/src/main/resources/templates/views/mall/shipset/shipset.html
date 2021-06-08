@@ -1,0 +1,679 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper" id="ec_system_box">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box-body">
+						<form id="form-mallDelivery-add" class="form-horizontal">
+							<input id="setId" name="setId" type="hidden" value="${mallShipSet.setId}">
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">销售区域</h3>
+								</div>
+								<div class="panel-body">
+									<div class="form-group" style="margin-bottom: 0px;">
+										<div class="col-sm-12">
+											<label class="radio-box"><input type="radio" class="minimal" name="saleAreaType" value="1" ${(mallShipSet.saleAreaType?? && mallShipSet.saleAreaType== 1 )?string('checked','')}/>&nbsp;&nbsp;全国</label>
+											<label class="radio-box"><input type="radio" class="minimal" name="saleAreaType" value="0" ${(mallShipSet.saleAreaType?? && mallShipSet.saleAreaType== 0 )?string('checked','')}/>&nbsp;&nbsp;部分区域</label>
+										</div>
+										<div id="saleAreaShow" ${(mallShipSet.saleAreaType?? && mallShipSet.saleAreaType == 1)?string('style="display: none;"','')}>
+											<div class="col-sm-12">
+												<table class="table table-hover table-bordered" id="selectSaleAreaCity">
+													<thead style="background-color: #f7f7fa">
+														<tr>
+															<th style="text-align: center;">指定销售城市</th>
+														</tr>
+													</thead>
+													<tbody>
+														<#list saleAreaList as saleArea>
+														<tr>
+															<td style="text-align: left;">
+															<span class="selected-content-saleArea" style="margin-bottom: 6px;">${saleArea.saleArea}</span>
+															<span class="operation" style="margin-bottom: 6px;"> 
+																<a class="removeTr" href="javascript:;">删除</a>
+															</span> 
+															<input type="hidden" class="selected-saleArea-cityIds" value="${saleArea.saleIds}"></td>
+														</tr>
+														</#list>
+														<tr>
+															<td colspan="3" class="text-left">
+																<a class="btn btn-default btn-xs" href="javascript:openSaleArea();"> 
+																	<i class="fa fa-map-marker"></i> 点击添加城市
+																</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">配送方式</h3>
+								</div>
+								<div class="panel-body">
+									<div class="form-group" style="margin-bottom: 0px;">
+										<div class="col-sm-12">
+											<label class="radio-box"><input type="radio" class="minimal" name="deliverType" value="0" ${(mallShipSet.isSelfMention?? && mallShipSet.isSelfMention== 0 )?string('checked','')}/>&nbsp;&nbsp;快递</label>
+											<label class="radio-box"><input type="radio" class="minimal" name="deliverType" value="1" ${(mallShipSet.isSelfMention?? && mallShipSet.isSelfMention== 1 )?string('checked','')}/>&nbsp;&nbsp;自提</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<h3 class="panel-title">运费设置 </h3>
+								</div>
+								<div class="panel-body">
+									<div class="form-group">
+										<div class="col-sm-12">
+											<label class="radio-box"><input type="radio" class="minimal" name="deliverSet" value="1" ${(mallShipSet.freightType?? && mallShipSet.freightType== 1 )?string('checked','')}/>&nbsp;&nbsp;包邮</label>
+											<label class="radio-box"><input type="radio" class="minimal" name="deliverSet" value="0" ${(mallShipSet.freightType?? && mallShipSet.freightType== 0 )?string('checked','')}/>&nbsp;&nbsp;自定义运费</label>
+										</div>
+									</div>
+									<div id="shipSetShow" ${(mallShipSet.freightType?? && mallShipSet.freightType== 1)?string('style="display: none;"','')}>
+										<div class="form-group" style="margin-bottom: 0px;">
+											<div class="col-sm-12">
+												<table class="table table-hover table-bordered">
+													<thead style="background-color: #f7f7fa">
+														<tr>
+															<th colspan="4" style="text-align: center;">通用运费设置</th>
+														</tr>
+														<tr>
+															<th><span>默认首重 (kg)</span></th>
+															<th>运费 (元)</th>
+															<th><span>默认续重 (kg)</span></th>
+															<th>续费 (元)</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<input value="${mallShipSet.defaultExpense}" type="text" id="defaultExpense" name="defaultExpense" class="form-control" placeholder="请输入首重费用" />
+															</td>
+															<td>
+																<input value="${mallShipSet.defaultWeight}" type="text" id="defaultWeight" name="defaultWeight" class="form-control" placeholder="请输入首重重量" />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="1" disabled="disabled"/>
+															</td>
+															<td>
+																<input value="${mallShipSet.continueExpense}" type="text" id="continueExpense" name="continueExpense" class="form-control" placeholder="请输入续重费用" />
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom: 0px;">
+											<div class="col-sm-12">
+												<table class="table table-hover table-bordered" id="selectCityShipMoney">
+													<thead style="background-color: #f7f7fa">
+														<tr>
+															<th colspan="5" style="text-align: center;">指定城市运费</th>
+														</tr>
+														<tr>
+															<th style="width: 300px">城市</th>
+															<th><span>首重 (kg)</span></th>
+															<th>运费 (元)</th>
+															<th><span>续重 (kg)</span></th>
+															<th>续费 (元)</th>
+														</tr>
+													</thead>
+													<tbody>
+														<#list shipRuleList as rule>
+														<tr>
+															<td style="text-align: left;" width="40%">
+																<p class="selected-content-shipmoney" style="margin-bottom: 6px;">${rule.shipArea}</p>
+																<p class="operation" style="margin-bottom: 6px;">
+																	<a class="removeTr" href="javascript:;">删除</a>
+																</p> 
+																<input type="hidden" class="selected-shipmoney-cityIds" value="${rule.shipIds}"/>
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${rule.defaultWeight}" required />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${rule.defaultExpense}" required />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${rule.continueWeight}" />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${rule.continueExpense}" />
+															</td>
+														</tr>
+														</#list>
+														<tr>
+															<td colspan="5" class="text-left">
+																<a class="btn btn-default btn-xs" href="javascript:openShipMoneySelectCity();"> 
+																	<i class="fa fa-map-marker"></i>
+																	点击添加城市和运费
+																</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="form-group" style="margin-bottom: 0px;">
+											<div class="col-sm-12">
+												<table class="table table-hover table-bordered" id="selectCityFreeShip">
+													<thead style="background-color: #f7f7fa">
+														<tr>
+															<th colspan="3" style="text-align: center;">指定包邮条件</th>
+														</tr>
+														<tr>
+															<th style="width: 300px">城市</th>
+															<th><span>满重量包邮(Kg)</span></th>
+															<th><span>满金额包邮(元)</span></th>
+														</tr>
+													</thead>
+													<tbody>
+														<#list shipfreeList as shipfree>
+														<tr>
+															<td style="text-align: left;" width="40%">
+																<span class="selected-content-freeship" style="margin-bottom: 6px;">${shipfree.freeshipArea}</span>
+																<span class="operation" style="margin-bottom: 6px;">
+																	<a class="removeTr" href="javascript:;">删除</a>
+																</span> 
+																<input type="hidden" class="selected-freeship-cityIds" value="${shipfree.freeshipIds}" />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${shipfree.weightFree}" required />
+															</td>
+															<td>
+																<input type="text" class="form-control" value="${shipfree.expenseFee}" required />
+															</td>
+														</tr>
+														</#list>
+														<tr>
+															<td colspan="3" class="text-left">
+																<a class="btn btn-default btn-xs" href="javascript:openShipFreeSelectCity();">
+																	<i class="fa fa-map-marker"></i>点击添加城市和包邮条件
+																</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom: 0px;">
+								<label class="col-sm-2 control-label"></label>
+								<div class="col-sm-10 col-sm-offset-5">
+									<button type="button" class="btn btn-sm btn-primary" onclick="submitHandler()">
+										<i class="fa fa-save"></i>保 存
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="modal fade" id="pdDeliver_cityModel" tabindex="-1"
+			role="dialog" aria-hidden="true">
+			<div class="modal-dialog " style="min-width: 700px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">选择区域</h4>
+					</div>
+					<div class="modal-body">
+						<div class="city-div"></div>
+					</div>
+					<div class="modal-footer">
+						<#if shiro.hasPermission("editShipSet")>
+						<button type="button" class="btn btn-primary" id="saveCity">保存</button>
+						</#if>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</@body>
+<script type="text/javascript">
+	var deliver_global_val = {};
+	(function(){
+		$.modal.loading("数据加载中，请稍后...");
+		//销售区域单选
+		$('input:radio[name="saleAreaType"]').on('ifChecked', function(e) {
+			if (e.currentTarget.value === '1') {
+				$("#saleAreaShow").hide();
+			} else {
+				$("#saleAreaShow").show();
+			}
+		});
+		//运费设置单选
+		$('input:radio[name="deliverSet"]').on('ifChecked', function(e) {
+			if (e.currentTarget.value === '1') {
+				$("#shipSetShow").hide();
+			} else {
+				$("#shipSetShow").show();
+			}
+		});
+		//弹窗区域选择监控
+		$(".city-div").on('mouseover', '.place-model', function() {
+			$(this).find("i.arrow_list").removeClass("fa-caret-down").addClass("fa-caret-up");
+			$(this).children(".smallplace-model").show();
+		})
+		$(".city-div").on('mouseout', '.place-model', function() {
+			$(this).find("i.arrow_list").removeClass("fa-caret-up").addClass("fa-caret-down");
+			$(".smallplace-model").hide();
+		})
+		//销售区域删除
+		$("#selectSaleAreaCity").on('click', '.removeTr', function () {
+			var $delete = $(this);
+			layer.confirm('确定要删除吗？', function (index) {
+				$delete.parents('tr').remove();
+				layer.close(index);
+			});
+		});
+		//运费区域删除
+		$("#selectCityShipMoney").on('click', '.removeTr', function () {
+			var $delete = $(this);
+			layer.confirm('确定要删除吗？', function (index) {
+				$delete.parents('tr').remove();
+				layer.close(index);
+			});
+		});
+		//指定包邮区域删除
+		$("#selectCityFreeShip").on('click', '.removeTr', function () {
+		var $delete = $(this);
+			layer.confirm('确定要删除吗？', function (index) {
+				$delete.parents('tr').remove();
+				layer.close(index);
+			});
+		});
+		pdDeliver_listCommonArea();
+		$.modal.closeLoading();
+	})();
+	
+	// 获取省市数据
+	function pdDeliver_listCommonArea() {
+		var url = "/mall/region/listCommonArea";
+		$.ajax({
+			url: url,
+			type: "GET",
+			data: {},
+			async: false,
+			cache: false,
+			success: function(resultData) {
+				if (resultData.data.length > 0) {
+					deliver_global_val.commonAreaData = [];
+					deliver_global_val.commonAreaProvinceNoList = [];
+					deliver_global_val.commonAreaName = {};
+					deliver_global_val.commonAreaChildrenCount = {};
+					deliver_global_val.freeAreaChildrenListMap = {};
+					var resultDataList = resultData.data
+					var i = -1,
+						j = -1;
+					for (var x = 0; x < resultDataList.length; x++) {
+						if (resultDataList[x].level == 1) {
+							i++;
+							j = -1;
+							deliver_global_val.commonAreaData[i] = {};
+							deliver_global_val.commonAreaData[i].name = resultDataList[x].name;
+							deliver_global_val.commonAreaData[i].no = resultDataList[x].id;
+							deliver_global_val.commonAreaName[resultDataList[x].id] = resultDataList[x].name;
+							deliver_global_val.commonAreaProvinceNoList.push(resultDataList[x].id);
+							deliver_global_val.commonAreaChildrenCount[resultDataList[x].id] = 0;
+							deliver_global_val.freeAreaChildrenListMap[resultDataList[x].id] = [];
+						} else {
+							j++;
+							if (!deliver_global_val.commonAreaData[i].children) {
+								deliver_global_val.commonAreaData[i].children = [];
+							}
+							deliver_global_val.commonAreaData[i].children[j] = {};
+							deliver_global_val.commonAreaData[i].children[j].name = resultDataList[x].name;
+							deliver_global_val.commonAreaData[i].children[j].no = resultDataList[x].id;
+							deliver_global_val.commonAreaName[resultDataList[x].id] = resultDataList[x].name;
+							deliver_global_val.commonAreaChildrenCount[deliver_global_val.commonAreaData[i].no] = j + 1;
+						}
+					}
+				} else {
+					layer.msg("获取区域失败", {icon : 2 });
+				}
+			}
+		});
+	}
+	// 选择销售区域
+	function openSaleArea(){
+		getRegionPlug();
+		//选中和不可操作
+		var disabledList = [];
+		$(".selected-saleArea-cityIds").each(function(index, a) {
+			var ids = $(this).val().split(",");
+			disabledList = disabledList.concat(ids);
+		})
+		for (var j = 0; j < disabledList.length; j++) {
+			$("#pdDeliver_" + disabledList[j]).attr("disabled", true);
+			$("#pdDeliver_" + disabledList[j]).parent().parent().hide();
+		}
+		//判断一级行政区不可操作
+		var n = $(".place-div-model").find(".place-model");
+		n.each(function(index, a) {
+			var len = $(this).find(".smallplace-model").length;
+			if (len > 0) {
+				var m = $(this).find(".smallplace-model");
+				m.each(function(index, a) {
+					var len1 = $(this).find(".bigcity").length;
+					var len2 = $(this).find(".bigcity[disabled=disabled]").length;
+					if (len1 == len2) {
+						$(this).siblings(".bigplace").find("input").attr("disabled", true);
+						$(this).siblings(".bigplace").parent(".place-model").hide();
+					}
+				})
+			}
+		})
+		$("#pdDeliver_cityModel").modal("show");
+		//选择后确定按钮
+		$("#saveCity").off("click").on("click", function() {
+			selectSaleArea();
+		})
+	}
+	
+	function selectSaleArea() {
+		var data = deliver_getChecked();
+		var regionStr = data.name.join(',');
+		var checkedIds = data.no.join(',');
+		var $html = $(
+			'<tr>' +
+			'	<td style="width: 300px" class="text-left">' +
+			'		<span class="selected-content-saleArea" style="margin-bottom: .5rem;">' +
+			'			' + regionStr +
+			'			</span>' +
+			'			<span class="operation" style="margin-bottom: .5rem;">' +
+			'			<a class="removeTr" href="javascript:;">删除</a>' +
+			'			</span>' +
+			'			<input type="hidden" class="selected-saleArea-cityIds" value="' + checkedIds + '">' +
+			'	</td>' +
+			'</tr>'
+		);
+		$("#selectSaleAreaCity").find('tbody').find('tr:last').before($html); //在倒数第二位插入该选择项
+		$("#pdDeliver_cityModel").modal("hide");
+	}
+
+	//指定城市运费
+	function openShipMoneySelectCity(){
+		getRegionPlug();
+		//选中和不可操作
+		var disabledList = [];
+		$(".selected-shipmoney-cityIds").each(function(index, a) {
+			var ids = $(this).val().split(",");
+			disabledList = disabledList.concat(ids);
+		})
+		for (var j = 0; j < disabledList.length; j++) {
+			$("#pdDeliver_" + disabledList[j]).attr("disabled", true);
+			$("#pdDeliver_" + disabledList[j]).parent().parent().hide();
+		}
+		//判断一级行政区不可操作
+		var n = $(".place-div-model").find(".place-model");
+		n.each(function(index, a) {
+			var len = $(this).find(".smallplace-model").length;
+			if (len > 0) {
+				var m = $(this).find(".smallplace-model");
+				m.each(function(index, a) {
+					var len1 = $(this).find(".bigcity").length;
+					var len2 = $(this).find(".bigcity[disabled=disabled]").length;
+					if (len1 == len2) {
+						$(this).siblings(".bigplace").find("input").attr("disabled", true);
+						$(this).siblings(".bigplace").parent(".place-model").hide();
+					}
+				})
+			}
+		})
+		$("#pdDeliver_cityModel").modal("show");
+		//选择后确定按钮
+		$("#saveCity").off("click").on("click", function() {
+			selectShipMoneyCitys();
+		})
+	}
+	
+	function selectShipMoneyCitys(){
+		var data = deliver_getChecked();
+		var regionStr = data.name.join(',');
+		var checkedIds = data.no.join(',');
+		var $html = $(
+			'<tr>' +
+			'<td style="width: 300px" class="text-left">' +
+			'	<span class="selected-content-shipmoney" style="margin-bottom: .5rem;">' +
+			'	' + regionStr +
+			'	</span>' +
+			'	<span class="operation" style="margin-bottom: .5rem;">' +
+			'		<a class="removeTr" href="javascript:;">删除</a>' +
+			'	</span>' +
+			'	<input type="hidden" class="selected-shipmoney-cityIds" value="' + checkedIds + '">' +
+			'</td>' +
+			'<td>' +
+			'		<input class="form-control" type="text">' +
+			'</td>' +
+			'<td>' +
+			'		<input class="form-control" type="text">' +
+			'</td>' +
+			'<td>' +
+			'		<input class="form-control" type="text">' +
+			'</td>' +
+			'<td>' +
+			'	<input class="form-control" type="text">' +
+			'</td>' +
+			'</tr>'
+		);
+		$("#selectCityShipMoney").find('tbody').find('tr:last').before($html); //在倒数第二位插入该选择项
+		$("#pdDeliver_cityModel").modal("hide");
+	}
+	// 选择包邮城市
+	function openShipFreeSelectCity(){
+		getRegionPlug();
+		//选中和不可操作
+		var disabledList = [];
+		$(".selected-freeship-cityIds").each(function(index, a) {
+			var ids = $(this).val().split(",");
+			disabledList = disabledList.concat(ids);
+		})
+		for (var j = 0; j < disabledList.length; j++) {
+			$("#pdDeliver_" + disabledList[j]).attr("disabled", true);
+			$("#pdDeliver_" + disabledList[j]).parent().parent().hide();
+		}
+		//判断一级行政区不可操作
+		var n = $(".place-div-model").find(".place-model");
+		n.each(function(index, a) {
+			var len = $(this).find(".smallplace-model").length;
+			if (len > 0) {
+				var m = $(this).find(".smallplace-model");
+				m.each(function(index, a) {
+					var len1 = $(this).find(".bigcity").length;
+					var len2 = $(this).find(".bigcity[disabled=disabled]").length;
+					if (len1 == len2) {
+						$(this).siblings(".bigplace").find("input").attr("disabled", true);
+						$(this).siblings(".bigplace").parent(".place-model").hide();
+					}
+				})
+			}
+		})
+		$("#pdDeliver_cityModel").modal("show");
+		//选择后确定按钮
+		$("#saveCity").off("click").on("click", function() {
+			selectShipFreeCitys();
+		})
+	}
+	
+	function selectShipFreeCitys(){
+		var data = deliver_getChecked();
+		var regionStr = data.name.join(',');
+		var checkedIds = data.no.join(',');
+		var $html = $(
+			'<tr>' +
+			'<td style="width: 300px" class="text-left">' +
+			'	<span class="selected-content-freeship" style="margin-bottom: .5rem;">' +
+			'	' + regionStr +
+			'	</span>' +
+			'	<span class="operation" style="margin-bottom: .5rem;">' +
+			'		<a class="removeTr" href="javascript:;">删除</a>' +
+			'	</span>' +
+			'	<input type="hidden" class="selected-freeship-cityIds" value="' + checkedIds + '">' +
+			'</td>' +
+			'<td>' +
+			'		<input class="form-control" type="text">' +
+			'</td>' +
+			'<td>' +
+			'	<input class="form-control" type="text">' +
+			'</td>' +
+			'</tr>'
+		);
+		$("#selectCityFreeShip").find('tbody').find('tr:last').before($html); //在倒数第二位插入该选择项
+		$("#pdDeliver_cityModel").modal("hide");
+	}
+	//表单验证提交
+	function submitHandler() {
+		var shipSet = new Object();
+		shipSet.setId = $("#setId").val();
+		shipSet.saleAreaType = $("input[name=saleAreaType]:checked").val();
+		shipSet.isSelfMention = $("input[name=deliverType]:checked").val();
+		shipSet.freightType = $("input[name=deliverSet]:checked").val();
+		shipSet.defaultWeight = $("#defaultWeight").val();
+		shipSet.defaultExpense = $("#defaultExpense").val();
+		shipSet.continueWeight = 1;
+		shipSet.continueExpense = $("#continueExpense").val();
+		var saleArea = [];
+		if (shipSet.saleAreaType == '0') {
+			$("#selectSaleAreaCity tbody tr").each(
+			function(index, ele) {
+				var tableRow = $("#selectSaleAreaCity tbody tr").length;
+				if (index < tableRow - 1) {
+					var tdArr = $(ele).children();
+					var saleAreaObject = new Object();
+					saleAreaObject.saleArea = tdArr.eq(0).find(".selected-content-saleArea").text();
+					saleAreaObject.saleIds = tdArr.eq(0).find("input").val();
+					saleArea.push(saleAreaObject);
+				}
+			});
+		}
+		if (shipSet.saleAreaType == '0' && saleArea.length == 0) {
+			layer.msg("部分销售区域不能为空", {
+				icon : 2
+			});
+			return;
+		}
+		var shipRule = [];
+		var freeShip = [];
+		if (shipSet.freightType == '0') {
+			$("#selectCityShipMoney tbody tr").each(
+			function(index, ele) {
+				var tableRow = $("#selectCityShipMoney tbody tr").length;
+				if (index < tableRow - 1) {
+					var tdArr = $(ele).children();
+					var shipRuleObject = new Object();
+					shipRuleObject.shipArea = tdArr.eq(0).find(".selected-content-shipmoney").text();
+					shipRuleObject.shipIds = tdArr.eq(0).find("input").val();
+					shipRuleObject.defaultWeight = tdArr.eq(1).find("input").val();
+					shipRuleObject.defaultExpense = tdArr.eq(2).find("input").val();
+					shipRuleObject.continueWeight = tdArr.eq(3).find("input").val();
+					shipRuleObject.continueExpense = tdArr.eq(4).find("input").val();
+					shipRule.push(shipRuleObject);
+				}
+			});
+			$("#selectCityFreeShip tbody tr").each(
+			function(index, ele) {
+				var tableRow = $("#selectCityFreeShip tbody tr").length;
+				if (index < tableRow - 1) {
+					var tdArr = $(ele).children();
+					var freeShipObject = new Object();
+					freeShipObject.freeshipArea = tdArr.eq(0).find(".selected-content-freeship").text();
+					freeShipObject.freeshipIds = tdArr.eq(0).find("input").val();
+					freeShipObject.weightFree = tdArr.eq(1).find("input").val();
+					freeShipObject.expenseFee = tdArr.eq(2).find("input").val();
+					freeShip.push(freeShipObject);
+				}
+			});
+		}
+		if (shipSet.freightType == '0') {
+			if ($.common.isEmpty(shipSet.defaultWeight) || shipSet.defaultWeight <= 0) {
+				layer.msg("默认首重重量错误", {
+					icon : 2
+				});
+				return;
+			}
+		}
+		if (shipSet.freightType == '0') {
+			if ($.common.isEmpty(shipSet.defaultExpense) || shipSet.defaultExpense <= 0) {
+				layer.msg("默认首重费用错误", {
+					icon : 2
+				});
+				return;
+			}
+		}
+		if (shipSet.freightType == '0') {
+			if ($.common.isEmpty(shipSet.continueExpense)
+					|| shipSet.continueExpense <= 0) {
+				layer.msg("默认续重费用错误", {
+					icon : 2
+				});
+				return;
+			}
+		}
+		if (shipSet.freightType == '1') {
+			shipSet.defaultWeight = '';
+			shipSet.defaultExpense = '';
+			shipSet.continueExpense = '';
+		}
+		var data = {
+			"setId" : shipSet.setId,
+			"saleAreaType" : shipSet.saleAreaType,
+			"isSelfMention" : shipSet.isSelfMention,
+			"freightType" : shipSet.freightType,
+			"defaultWeight" : shipSet.defaultWeight,
+			"defaultExpense" : shipSet.defaultExpense,
+			"continueWeight" : shipSet.continueWeight,
+			"continueExpense" : shipSet.continueExpense,
+			"saleArea" : saleArea,
+			"shipRule" : shipRule,
+			"freeShip" : freeShip
+		};
+		var form_data = JSON.stringify(data);
+		$.ajax({
+			url : "/mall/shipSet/saveShipSet",
+			type : 'POST',
+			data : form_data,
+			dataType : 'json',
+			contentType : "application/json;charset=utf-8",
+			beforeSend: function () {
+				$.modal.loading("正在处理中，请稍后...");
+				$.modal.disable();
+			},
+			success : function(result) {
+				$.modal.closeLoading();
+				if (result.code == 200) {
+					window.location.reload();
+					if (data.msg) {
+						parent.layer.msg(data.msg, {
+							icon : 1
+						});
+					} else {
+						parent.layer.msg('保存成功', {
+							icon : 1
+						});
+					}
+				} else {
+					layer.msg(data.msg, {
+						icon : 2
+					});
+					$.modal.closeLoading();
+					$.modal.enable();
+				}
+			}
+		});
+	}
+</script>

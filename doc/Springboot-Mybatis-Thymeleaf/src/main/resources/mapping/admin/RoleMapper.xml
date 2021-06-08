@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lanyu.admin.mapper.RoleMapper" >
+  <resultMap id="ResultRoleMap" type="com.lanyu.common.model.Role" >
+    <id column="rcode" property="rcode" jdbcType="VARCHAR" />
+    <result column="rname" property="rname" jdbcType="VARCHAR" />
+    <result column="flag" property="flag" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="selectRoleList" resultMap="ResultRoleMap" parameterType="java.util.HashMap" >
+    SELECT rcode,rname,flag FROM sys_role
+    <where>
+      <if test="searchText!=null">
+        rname like #{searchText} or rcode like #{searchText}
+      </if>
+    </where>
+    <if test='sort!="" and sort!=null'>
+      ORDER BY ${sort} ${order}
+    </if>
+  </select>
+
+  <select id="getMultselectRoles" parameterType="java.lang.Integer" resultType="java.util.HashMap">
+    SELECT r.rcode,r.rname,ISNULL(u.rcode) AS chick
+    FROM sys_role r
+    LEFT JOIN sys_user_role u ON u.rcode=r.rcode AND u.uid=#{uid}
+  </select>
+
+  <insert id="insert" parameterType="java.util.HashMap">
+    insert into sys_role VALUES
+    (#{rcode},#{rname},#{flag})
+  </insert>
+
+  <update id="update" parameterType="java.util.HashMap">
+    UPDATE  sys_role SET
+    rcode=#{rcode},
+    rname = #{rname},
+    flag=#{flag}
+    WHERE rcode=#{oldrcode}
+  </update>
+
+  <delete id="deleteRole" parameterType="java.lang.String">
+    delete from sys_role
+    WHERE rcode = #{rcode}
+  </delete>
+
+  <delete id="deleteUserRole" parameterType="java.lang.Integer">
+    delete from sys_user_role
+    WHERE uid = #{uid}
+  </delete>
+
+  <delete id="deleteMdoules" parameterType="java.lang.String">
+    delete from sys_role_module
+    WHERE rcode = #{rcode}
+  </delete>
+
+  <insert id="addUserRoles">
+    insert into sys_user_role(uid,rcode)
+    values
+    <foreach collection="list" item="emp" separator=",">
+      (#{emp.uid},#{emp.rcode})
+    </foreach>
+  </insert>
+
+  <insert id="addModules">
+    insert into sys_role_module(rcode,mcode)
+    values
+    <foreach collection="list" item="emp" separator=",">
+      (#{emp.rcode},#{emp.mcode})
+    </foreach>
+  </insert>
+
+</mapper>

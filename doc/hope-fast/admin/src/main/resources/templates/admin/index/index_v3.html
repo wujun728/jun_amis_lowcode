@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/include :: header">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+    <h2>订单</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <img src="/img/index-i1.png" style="weight:48px;height: 48px">
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>总报修</h5>
+                    <h1 class="no-margins" id="repairsOrderTotal"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <!--<span class="label label-info pull-right">待受理</span>-->
+                    <img th:src="@{/img/index-i2.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>待受理</h5>
+                    <h1 class="no-margins" id="repairsOrderStatus1Total"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <!--<span class="label label-primary pull-right">待维修</span>-->
+                    <img th:src="@{/img/index-i3.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>待维修</h5>
+                    <h1 class="no-margins" id="repairsOrderStatus2Total"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <!--<span class="label label-danger pull-right">维修中</span>-->
+                    <img th:src="@{/img/index-i4.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>维修中</h5>
+                    <h1 class="no-margins" id="repairsOrderStatus3Total"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <!--<span class="label label-primary pull-right">已修好</span>-->
+                    <img th:src="@{/img/index-i5.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>已修好</h5>
+                    <h1 class="no-margins" id="repairsOrderStatus4Total"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="wrapper wrapper-content">
+    <h2>人员</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <img th:src="@{/img/index-img1.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>创建管理员</h5>
+                    <h1 class="no-margins" id="roleId1"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <img th:src="@{/img/index-img2.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>管理员</h5>
+                    <h1 class="no-margins" id="roleId2"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <img th:src="@{/img/index-img3.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>报修人员</h5>
+                    <h1 class="no-margins" id="roleId3"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="ibox float-e-margins" style="display: flex;">
+                <div class="ibox-title" style="width: 50%;text-align: center;border: 0;">
+                    <img th:src="@{/img/index-img4.png}" style="weight:48px;height: 48px"/>
+                </div>
+                <div class="ibox-content" style="width: 50%;text-align: center;">
+                    <h5>维修人员</h5>
+                    <h1 class="no-margins" id="roleId4"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.7"></script>
+
+<script th:inline="javascript">
+    //进入首页判断是否登录
+    $(function () {
+        var json = JSON.parse(localStorage.getItem('loginData'));//get对象
+        if (!json) {
+            //演示注释跳转
+            //parent.location.href="/login";//在父页面打开新页面
+        }
+        //演示注释token 数据模拟
+        //var token = json.data.token;
+        var token = "asdfsdfasfasdf";
+        orderCount(token);
+    });
+
+    //首页数据渲染
+    function orderCount(token) {
+        $.ajax({
+            type: "get",
+            url: "passPCApi/order/orderCount?token=" + token,
+            dataType: "json",
+            //cache:false,
+            success: function (data) {
+                if (data.code == 200) {
+                    //渲染订单数据
+                    document.getElementById("repairsOrderTotal").innerHTML = data.data.repairsOrderTotal;
+                    document.getElementById("repairsOrderStatus1Total").innerHTML = data.data.repairsOrderStatus1Total;
+                    document.getElementById("repairsOrderStatus2Total").innerHTML = data.data.repairsOrderStatus2Total;
+                    document.getElementById("repairsOrderStatus3Total").innerHTML = data.data.repairsOrderStatus3Total;
+                    document.getElementById("repairsOrderStatus4Total").innerHTML = data.data.repairsOrderStatus4Total;
+                    //渲染人员数据
+                    document.getElementById("roleId1").innerHTML = data.data.roleId1;
+                    document.getElementById("roleId2").innerHTML = data.data.roleId2;
+                    document.getElementById("roleId3").innerHTML = data.data.roleId3;
+                    document.getElementById("roleId4").innerHTML = data.data.roleId4;
+                } else if (data.code == 400) {
+                    layer.msg("<em style='color:red'>" + data.msg + "</em>", {
+                        icon: 2,
+                        offset: '30%',
+                        time: 2000
+                    });
+                }else if (data.code==401){
+                    //401 未授权处理 //跳转到登录页面
+                    layer.msg("<em style='color:red'>"+data.msg+"</em>", {
+                        icon: 2,
+                        offset: '30%',
+                        time: 2000
+                    });
+                    setTimeout(function(){
+                        parent.location.href="/login";//在父页面打开新页面
+                    },4000);
+                }
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

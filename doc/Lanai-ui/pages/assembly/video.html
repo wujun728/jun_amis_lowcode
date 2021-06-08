@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<title></title>
+	<link href="../../dist/css/lanai-ui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="content">
+		<div class="row">
+			<div class="col-sm-6 videos">
+				<video poster="../../dist/video/ckin.jpg" src="../../dist/video/ckin.mp4" data-ckin="default" data-title="The curious case of Chameleon..."></video>
+			</div>
+			<div class="col-sm-6">						
+				<div class="box box-primary box-solid no-radius">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							视频设置
+						</h3>
+					</div>
+					<div class="box-body">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon is-input-name">标题</div>
+								<input type="text" class="form-control" id="txtVideo" placeholder="输入视频标题" value="采访鬼才合集" />
+							</div>
+						</div>
+						<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon is-input-name">默认皮肤</div>
+									<input type="text" class="form-control" id="txtSkin" placeholder="default 其他皮肤后续添加" value="default" />
+								</div>
+						</div>
+						<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon is-input-name">视频遮罩</div>
+									<input type="text" class="form-control" id="txtVideoPoster" placeholder="http://" value="../../dist/video/ckin.jpg" />
+								</div>
+						</div>
+						<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon is-input-name">视频地址</div>
+									<input type="text" class="form-control" id="txtVideoAddr" placeholder="http://" value="http://smvideo.duowan.com/video_upload/12543.mp4" />
+								</div>
+							</div>
+						<div class="form-inline">
+							<div class="form-group pull-right">
+								<button class="btn btn-primary no-radius" data-btn="add">添加</button>
+								<button class="btn btn-default no-radius" data-btn="reset">重置当前播放器</button>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</section>
+<script src="../../dist/js/jquery.min.js"></script>
+<script src="../../dist/js/lanai-ui.min.js"></script>
+<!-- <script src="../../build/grunt/plugins/video.js"></script>
+<script>
+		$(function(){
+			$.LanaiVideo();
+		})
+</script> -->
+<script>
+	$(function(){
+		$('[data-btn="add"]').click(function(){
+			$(".videos").append($("<video>",{
+				'poster':$('#txtVideoPoster').val(),
+				'src':$('#txtVideoAddr').val(),
+				'data-ckin':$('#txtSkin').val(),
+				'data-title':$('#txtVideo').val()
+			}))
+
+			$.LanaiVideo();
+		})
+
+		$('[data-btn="reset"]').click(function(){
+			$("video").attr('data-ckin',$('#txtSkin').val())
+			.attr('src',$('#txtVideoAddr').val())
+			.attr('data-title',$('#txtVideo').val())
+			.attr('poster',$('#txtVideoPoster').val())			
+		})
+	});
+	</script>
+</body>
+</html>	
+	                						

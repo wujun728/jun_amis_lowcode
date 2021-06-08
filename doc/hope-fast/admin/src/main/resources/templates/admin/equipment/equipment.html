@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head th:include="common/include :: header"></head>
+<body class="gray-bg">
+<div class="container-div">
+    <div class="row">
+        <div class="col-sm-12 search-collapse">
+            <form id="equipment-search-form" autocomplete="off">
+                <div class="select-list">
+                    <ul>
+                        <li>
+                            设备编号：<input style="width:200px" type="text" name="equipmentNo" placeholder="请输入设备编号"/>
+                        </li>
+                        <li>
+                            设备名称：<input style="width:200px" type="text" name="equipmentName" placeholder="请输入设备名称"/>
+                        </li>
+                        <li>
+                            设备地点：<input style="width:200px" type="text" name="equipmentPlace" placeholder="请输入设备地点"/>
+                        </li>
+                        <li>
+                            设备型号：<input style="width:200px" type="text" name="equipmentModel" placeholder="请输入设备型号"/>
+                        </li>
+                        <li>
+                            设备厂家：<input style="width:200px" type="text" name="equipmentFactory" placeholder="请输入设备厂家"/>
+                        </li>
+                        <li>
+                            <a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i
+                                    class="fa fa-search"></i>&nbsp;搜索</a>
+                            <a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i
+                                    class="fa fa-refresh"></i>&nbsp;重置</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="btn-group-sm hidden-xs" id="toolbar" role="group">
+            <a class="btn btn-info" onclick="$.table.importExcel(null,null,null)">
+                <i class="fa fa-upload"></i> 导入设备
+            </a>
+            <a class="btn btn-success" onclick="$.operate.add()">
+                <i class="fa fa-plus"></i> 新增设备
+            </a>
+            <a class="btn btn-primary btn-del disabled" onclick="generateQRcode()">
+                <i class="fa fa-edit"></i> 生成二维码
+            </a>
+            <a class="btn btn-danger btn-del disabled" onclick="$.operate.removeAll()">
+                <i class="fa fa-remove"></i> 批量删除
+            </a>
+        </div>
+        <div class="col-sm-12 select-table table-striped">
+            <table id="bootstrap-table" data-mobile-responsive="true"></table>
+        </div>
+    </div>
+</div>
+<!-- 生成二维码区域 隐藏不显示 -->
+<div id="qrcode" style="display: none;"></div>
+<script th:inline="javascript">
+    $(function () {
+        var json = JSON.parse(localStorage.getItem('loginData'));
+        var token = json.data.token;
+        var options = {
+            url: ctx + "passPCApi/equipment/list?token=" + 123,
+            createUrl: ctx + "equipment/add",//打开添加页面的请求，非提交数据接口
+            updateUrl: ctx + "equipment/edit/{id}",//这里修改传id，打开编辑页面的请求，非提交数据接口
+            removeUrl: ctx + "passPCApi/equipment/del?token=" + token,
+            importUrl: ctx +"passPCApi/equipment/importEquipment?token=" + token,
+            modalName: "设备",
+            search: false,
+            showExport: false,
+            columns: [{
+                checkbox: true
+            },
+                {
+                    field: 'id',
+                    title: '序号'
+                },
+                {
+                    field: 'equipmentNo',
+                    title: '设备编号'
+                },
+                {
+                    field: 'equipmentName',
+                    title: '设备名称'
+                },
+                {
+                    field: 'equipmentPlace',
+                    title: '设备地点'
+                },
+                {
+                    field: 'equipmentModel',
+                    title: '设备型号'
+                },
+                {
+                    field: 'equipmentFactory',
+                    title: '设备厂家'
+                },
+                {
+                    field: 'employTime',
+                    title: '投用日期'
+                },
+                {
+                    field: 'personCharge',
+                    title: '责任人'
+                },
+                {
+                    field: 'remark',
+                    title: '备注'
+                },
+                {
+                    title: '操作',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        var actions = [];
+                        //这里id20位精度丢失 截取方法处理参数
+                        var idss = row.id.substring(0, 10);
+                        var e = row.id.substring(10);
+                        //这里修改传id，还是使用后端根据id查询返回到编辑页面 后期可以优化为前端存本地缓存的方式 独立前后端模块降低耦合度
+                        actions.push('<a class="btn btn-success btn-xs " href="#" onclick="$.operate.edit(\'' + row.id + '\')"><i class="fa fa-check-square-o"></i>修改</a> ');
+                        actions.push('<a class="btn btn-danger btn-xs " href="#" onclick="deleteBy(' + idss + ',' + e + ')"><i class="fa fa-remove"></i>删除</a>');
+                        return actions.join('');
+                    }
+                }]
+        };
+        $.table.init(options);
+    });
+    /**删除**/
+    function deleteBy(idss, e) {
+        var json = JSON.parse(localStorage.getItem('loginData'));
+        var token = json.data.token;
+        var delid = idss + "" + e;
+        $.modal.confirm("确定删除该条" + $.table._option.modalName + "信息吗？", function () {
+            $.ajax({
+                type: 'get',
+                url: ctx + "passPCApi/equipment/del?ids=" + delid + "&token=" + token,
+                success: function (data) {
+                    if (data.code == web_status.SUCCESS) {
+                        $.modal.alertSuccess(data.msg);
+                        $.table.refresh();
+                    } else {
+                        $.modal.alertError(data.msg);
+                    }
+                }
+            });
+        });
+    }
+
+    /**生成二维码*/
+    function generateQRcode(){
+        debugger
+        var rows = $.common.isEmpty($.table._option.uniqueId) ? $.table.selectFirstColumns() : $.table.selectColumns($.table._option.uniqueId);
+        if (rows.length == 0) {
+            $.modal.alertWarning("请至少选择一条记录");
+            return;
+        }
+        $.modal.confirm("确认要生成二维码吗？选中" + rows.length + "条数据", function() {
+            downloadQRcode(rows);
+        });
+    }
+
+    // 批量生成二维码且打包压缩zip下载
+    function downloadQRcode(rows) {
+        var that = this
+        this.loading = true
+        var zip = new JSZip()
+        var img = zip.folder("images")
+        var imageStr = ''
+        // 在页面中展示生成的二维码
+        for (var i=0; i< rows.length; i++) {
+            new QRCode('qrcode', {
+                width: 200,  // 设置宽度
+                height: 200, // 设置高度
+                text: rows[i] // 二维码内容
+            })
+            // 生成的二维码从canvas转成base64 放入到文件夹中
+            var imgs = document.getElementById('qrcode').getElementsByTagName("canvas")
+            var url = imgs[i].toDataURL("image/png")
+            // 转换后的文件如果带有data:image，base64：标识，解压后的png无法打开，所以去除掉
+            var regex = /data:image\/.*;base64,/
+            url = url.replace(regex,"")
+            img.file('设备编号-'+rows[i] + ".png", url, {base64: true}) // 二维码文件名
+        }
+        // JSzip，将二维码文件夹压缩并且模拟点击下载
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            var filename = '设备二维码下载' + '.zip'
+            var eleLink = document.createElement('a')
+            eleLink.download = filename
+            eleLink.style.display = 'none'
+            eleLink.href = URL.createObjectURL(content)
+            document.body.appendChild(eleLink)
+            eleLink.click()
+            document.body.removeChild(eleLink)
+            that.loading = false
+        })
+    }
+</script>
+</body>
+<!-- 导入区域 -->
+<script id="importTpl" type="text/template">
+    <form enctype="multipart/form-data" class="mt20 mb10">
+        <div class="col-xs-offset-1">
+            <input type="file" id="file" name="file"/>
+            <div class="mt10 pt5">
+                <input type="checkbox" id="updateSupport" name="updateSupport" title="如果登录账户已经存在，更新这条数据。"> 是否更新已经存在的用户数据
+                &nbsp;	<a href="http://129.211.12.225/resourceServer/xlsx/sbmb.xlsx" download="设备导入模板.xlsx" class="btn btn-default btn-xs"><i class="fa fa-file-excel-o"></i> 下载模板</a>
+            </div>
+            <font color="red" class="pull-left mt10">
+                提示：仅允许导入“xls”或“xlsx”格式文件！
+            </font>
+        </div>
+    </form>
+</script>
+</html>

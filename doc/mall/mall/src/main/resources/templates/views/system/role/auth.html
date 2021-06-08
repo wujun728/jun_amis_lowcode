@@ -1,0 +1,93 @@
+<#include "/common/layout.html">
+<style>
+	td > label{
+		padding: 3px;
+	}
+</style>
+<@body>
+	<div class="row">
+		<div class="col-md-12">
+			<form id="daAuthFrom" action="/system/role/doAuth" method="post" class="form-horizontal">
+				<input type="hidden" value="${(sysRole.roleId)!}" name="roleId" id="roleId"/>
+				<div class="box">
+					<div class="box-body">
+						<table class="table table-hover" id="authTable">
+							<#list treeMenuAllowAccesses as vo>
+							<tr>
+								<td width="150px">
+									<label><input name="mid" type="checkbox" ${(vo.allowAccess)?string('checked','')}  value="${(vo.sysMenu.menuId)!}" class="minimal checkbox-tr" > <i class="fa ${(vo.sysMenu.icon)!}"></i> ${(vo.sysMenu.menuName)!} ></label>
+								</td>
+								<td>
+									<#list vo.children as ch>
+									<label><input name="mid" type="checkbox" ${(ch.allowAccess)?string('checked','')} value="${(ch.sysMenu.menuId)!}" class="minimal checkbox-td" > <i class="fa ${(ch.sysMenu.icon)!}"></i> ${(ch.sysMenu.menuName)!}</label>&nbsp; > &nbsp;
+										<#list ch.children as it>
+											<label style="font-weight: normal;"><input name="mid" type="checkbox" ${(it.allowAccess)?string('checked','')}  value="${(it.sysMenu.menuId)!}" class="minimal checkbox-td" > ${(it.sysMenu.menuName)!}</label>&nbsp;
+										</#list>
+									<br>
+									</#list>
+								</td>
+							</tr>
+							</#list>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</@body>
+<script type="text/javascript">
+	//选择框监听
+	$("#authTable").on("ifChecked ifUnchecked", ".checkbox-tr", function() {
+		var e = $(this).parents('tr').find('.checkbox-td');
+		var a = $(this).is(":checked");
+		$(e).each(function() {
+			a ? $(this).iCheck("check") : $(this).iCheck("uncheck")
+		});
+	});
+	function submitHandler(){
+		//获取checkbox选中的值
+		var values = {};
+		var $ch = $("input:checkbox:checked");
+		var name = {};
+		var chvs = [];
+		if($ch && $ch[0]){
+			name = $ch[0].name;
+			$ch.each(function() {
+				chvs.push($(this).val());
+			});
+			values[name] = chvs;
+		}
+		values["roleId"] = $("input[name='roleId']").val();
+		$.ajax({
+			url : $("#daAuthFrom").attr('action'),
+			type : 'POST',
+			dataType: "json",
+			data : values,
+			beforeSend : function() {
+				$.modal.loading("正在处理中，请稍后...");
+				$.modal.disable();
+			},
+			success : function(data) {
+				if (data.code == 200) {
+					if (data.msg) {
+						parent.layer.msg(data.msg, {
+							icon : 1
+						});
+					} else {
+						parent.layer.msg('提交成功', {
+							icon : 1
+						});
+					}
+					parent.layer.closeAll('iframe'); // 关闭当前frame
+					window.parent.data_oTable.draw(false);
+				} else {
+					layer.msg(data.msg, {
+						icon : 2
+					});
+					$.modal.closeLoading();
+					$.modal.enable();
+				}
+			}
+		});
+	}
+</script>

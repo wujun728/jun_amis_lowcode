@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallOrderDetailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallOrderDetail">
+        <id column="order_detail_id" property="orderDetailId" />
+        <result column="order_id" property="orderId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="goods_sn" property="goodsSn" />
+        <result column="sku_detail_id" property="skuDetailId" />
+        <result column="number" property="number" />
+        <result column="good_price" property="goodPrice" />
+        <result column="specifications" property="specifications" />
+        <result column="pic_url" property="picUrl" />
+        <result column="comment" property="comment" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

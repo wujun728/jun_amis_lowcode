@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <title></title>
+    <link href="dist/css/lanai-ui.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition skin-blue layout-top-nav">
+    <header class="main-header">
+        <nav class="navbar navbar-static-top">
+            <div class="container width-all">
+                <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand"><b>Lanai</b>UI</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse pull-left" role="customer-navigation">
+                    <ul class="nav navbar-nav nav-addtabs disable-top-badge hidden-xs" role="menulist">
+                    </ul>
+                </div>
+                <!-- <div class="collapse navbar-collapse pull-left" id="navbar-collapse" role="customer-navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" data-addtab="layout" data-target="#MasterTabs" data-title="后台布局" data-url="pages/layouts/layout.html">后台布局<span class="sr-only">(current)</span></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">基本元素 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#" data-addtab="buttons" data-target="#MasterTabs" data-title="按钮" data-url="pages/ui/buttons.html">按钮</a></li>
+                                <li><a href="#" data-addtab="forms" data-target="#MasterTabs" data-title="表单" data-url="pages/ui/forms.html">表单</a></li>
+                                <li><a href="#">导航/面包屑</a></li>
+                                <li class="divider"></li>
+                                <li><a href="top_nav_menu.html">绑定菜单</a></li>
+                                <li><a href="#">其他</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> -->
+                <!-- /.navbar-collapse -->
+                <!-- Navbar Right Menu -->
+                
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the messages -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <!-- User Image -->
+                                                    <img src="dist/img/nm.jpg" class="img-circle" alt="User Image">
+                                                </div>
+                                                <!-- Message title and timestamp -->
+                                                <h4>
+                                                    Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <!-- The message -->
+                                                <p>Why not buy a new awesome theme?</p>
+                                            </a>
+                                        </li>
+                                        <!-- end message -->
+                                    </ul>
+                                    <!-- /.menu -->
+                                </li>
+                                <li class="footer"><a href="#" data-addtab="mailbox" data-target="#MasterTabs"
+                                        data-title="用户邮箱" data-url="pages/mailbox/mailbox.html">See All Messages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- /.messages-menu -->
+                        <!-- Notifications Menu -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning">10</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- Inner Menu: contains the notifications -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- start notification -->
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <!-- end notification -->
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- Tasks Menu -->
+                        <li class="dropdown tasks-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- Inner menu: contains the tasks -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- Task item -->
+                                            <a href="#">
+                                                <!-- Task title and progress text -->
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <!-- The progress bar -->
+                                                <div class="progress xs">
+                                                    <!-- Change the css width attribute to simulate progress -->
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%"
+                                                        role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <!-- The user image in the navbar-->
+                                <img src="dist/img/sl.jpg" class="user-image" alt="User Image" />
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">索隆</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img src="dist/img/sl.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        索隆
+                                        <small>海贼猎人</small>
+                                    </p>
+                                </li>
+                                <!-- ./ Menu Body -->
+                                <li class="user-body no-padding">
+                                    <ul class="nav nav-stacked">
+                                        <li><a href="#">战力 <span class="pull-right badge bg-blue">31</span></a></li>
+                                        <li><a href="#">饭量 <span class="pull-right badge bg-aqua">5</span></a></li>
+                                        <li><a href="#">击杀数 <span class="pull-right badge bg-green">12</span></a></li>
+                                        <li><a href="#">追随者 <span class="pull-right badge bg-red">842</span></a></li>
+                                    </ul>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <div class="btn-group">
+                                            <a href="#" class="btn btn-default btn-flat" data-addtab="UserProfile"
+                                                data-target="#MasterTabs" data-title="个人资料"
+                                                data-url="pages/examples/profile.html"><i class="fa fa-user"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-default btn-flat" data-addtab="UserPhoto"
+                                                data-target="#MasterTabs" data-title="修改头像"
+                                                data-url="pages/User/ChangePhoto.html">
+                                                <i class="fa fa-photo"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-default btn-flat">
+                                                <i class="fa fa-key"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat"><i class="fa fa-power-off"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-custom-menu -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- Full Width Column -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="container width-all no-padding">
+            <ul class="nav nav-tabs menu-tabs" id="MasterTabs" role="tablist">
+                    <li class="nav-tabs-header active" role="presentation">
+                        <a aria-controls="home" data-toggle="tab" href="#home" role="tab">
+                            <i class="fa fa-home"></i> Home
+                        </a>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content fixheight">
+                        <div class="tab-pane active" id="home" role="tabpanel">
+                                <div class="box box-widget no-shadow">
+                                        <div class="box-body">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <fieldset class="lanai-fieldset">
+                                                        <legend><i class="fa fa-paw"></i> Lanai介绍</legend>
+                                                        <div>
+                                                            <p class="text-muted">
+                                                                基于Bootstrap3.3.6最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术，
+                                                                她提供了诸多的强大的可以重新组合的UI组件， 并集成了最新的jQuery版本(v2.1.4)，
+                                                                当然，也集成了很多功能强大，用途广泛的jQuery插件，她可以用于所有的Web应用程序，如 网站管理后台，
+                                                                网站会员中心，CMS，CRM，OA等等，当然，您也可以对她进行深度定制，以做出更强系统。
+                                                            </p>
+                                                            <p class="text-muted">
+                                                                基于AdminLTE框架，增加丰富的bootstrap和Jquery插件，能够满足大多数系统的开发需求。
+                                                                已完善权限系统和SignalR在线聊天功能。
+                                                            </p>
+                                                            <hr>
+                                                            <p>
+                                                                <a class="btn btn-primary"
+                                                                    href="http://wpa.qq.com/msgrd?v=3&amp;uin=30821766&amp;site=qq&amp;menu=yes"><i
+                                                                        class="fa fa-qq"></i> 联系我</a>
+                                                                <a class="btn btn-default"><i class="fa fa-book"></i> 查看文档</a>
+                                                            </p>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="lanai-fieldset margin-t-15">
+                                                        <legend><i class="fa fa-info-circle"></i> 使用说明</legend>
+                                                        <div>
+                                                            <p class="text-muted">样式引用</p>
+                                                            <code> &lt;link href="css/lanai-ui.css" rel="stylesheet" /&gt;</code>
+                                                            <p class="text-muted">脚本引用</p>
+                                                            <code>&lt;script src="../../js/jquery.min.js"&gt;&lt;/script&gt;</code><br />
+                                                            <code>&lt;script src="../../js/lanai-ui.js"&gt;&lt;/script&gt;</code>
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="nav-tabs-custom margin-t-15 no-shadow">
+                                                        <ul class="nav nav-tabs line-tabs tabs-success">
+                                                            <li class="active"><a href="#tab_1" data-toggle="tab">轮播</a></li>
+                                                            <li><a href="#tab_3" data-toggle="tab">数据表格</a></li>
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <div class="tab-pane active" id="tab_1">
+                                                                <div id="carousel-example-generic" class="carousel slide"
+                                                                    data-ride="carousel">
+                                                                    <ol class="carousel-indicators">
+                                                                        <li data-target="#carousel-example-generic"
+                                                                            data-slide-to="0" class="active"></li>
+                                                                        <li data-target="#carousel-example-generic"
+                                                                            data-slide-to="1" class=""></li>
+                                                                        <li data-target="#carousel-example-generic"
+                                                                            data-slide-to="2" class=""></li>
+                                                                    </ol>
+                                                                    <div class="carousel-inner">
+                                                                        <div class="item active">
+                                                                            <img src="http://placehold.it/900x300/39CCCC/ffffff&amp;text=I+Love+Bootstrap"
+                                                                                alt="First slide">
+                                                                            <div class="carousel-caption">
+                                                                                First Slide
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <img src="http://placehold.it/900x300/3c8dbc/ffffff&amp;text=I+Love+Bootstrap"
+                                                                                alt="Second slide">
+                                                                            <div class="carousel-caption">
+                                                                                Second Slide
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <img src="http://placehold.it/900x300/f39c12/ffffff&amp;text=I+Love+Bootstrap"
+                                                                                alt="Third slide">
+                                                                            <div class="carousel-caption">
+                                                                                Third Slide
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <a class="left carousel-control"
+                                                                        href="#carousel-example-generic" data-slide="prev">
+                                                                        <span class="fa fa-angle-left"></span>
+                                                                    </a>
+                                                                    <a class="right carousel-control"
+                                                                        href="#carousel-example-generic" data-slide="next">
+                                                                        <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /.tab-pane -->
+                                                            <div class="tab-pane" id="tab_3">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width: 60px">编号</th>
+                                                                            <th>任务</th>
+                                                                            <th>进度</th>
+                                                                            <th style="width: 60px">完成量</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1.</td>
+                                                                            <td>更新软件</td>
+                                                                            <td>
+                                                                                <div class="progress progress-xs">
+                                                                                    <div class="progress-bar progress-bar-danger"
+                                                                                        style="width: 55%"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td><span class="badge bg-red">55%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>2.</td>
+                                                                            <td>清理数据库缓存</td>
+                                                                            <td>
+                                                                                <div class="progress progress-xs">
+                                                                                    <div class="progress-bar progress-bar-yellow"
+                                                                                        style="width: 70%"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td><span class="badge bg-yellow">70%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>3.</td>
+                                                                            <td>测试运行环境</td>
+                                                                            <td>
+                                                                                <div
+                                                                                    class="progress progress-xs progress-striped active">
+                                                                                    <div class="progress-bar progress-bar-primary"
+                                                                                        style="width: 30%"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td><span class="badge bg-light-blue">30%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>4.</td>
+                                                                            <td>发现Bug并修复</td>
+                                                                            <td>
+                                                                                <div
+                                                                                    class="progress progress-xs progress-striped active">
+                                                                                    <div class="progress-bar progress-bar-success"
+                                                                                        style="width: 90%"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td><span class="badge bg-green">90%</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>5.</td>
+                                                                            <td>安装新版本</td>
+                                                                            <td>
+                                                                                <div class="progress progress-xs progress-striped">
+                                                                                    <div class="progress-bar progress-bar-danger"
+                                                                                        style="width: 60%"></div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td><span class="badge bg-danger">60%</span></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- /.tab-pane -->
+                                                        </div>
+                                                        <!-- /.tab-content -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class=" home-page">
+                                                        <blockquote class="bg-gray-light blockquote-success">
+                                                            空白内容页面代码
+                                                        </blockquote>
+                                                        <textarea class="form-control" spellcheck="false" rows="30"
+                                                            style="height: 300px;">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+                <title></title>
+                <link href="../../css/lanai-ui.css" rel="stylesheet" />
+                </head>
+                <body>
+                <section class="content">
+                
+                </section>
+                <script src="../../js/jquery.min.js"></script>
+                <script src="../../js/lanai-ui.js"></script>
+                </body>
+                </html>	
+                                                        </textarea>
+                                                        <br />
+                                                        <blockquote class="bg-gray-light blockquote-primary">
+                                                            空白框架页代码
+                                                        </blockquote>
+                                                        <textarea class="form-control" spellcheck="false" rows="30"
+                                                            style="height: 300px;">
+                <!DOCTYPE html>
+                <html>
+                <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+                <title>空白页</title>
+                <link href="css/lanai-ui.css" rel="stylesheet" />
+                </head>
+                
+                <body class="hold-transition skin-blue sidebar-mini">
+                <div class="wrapper">
+                    <!-- Main Header -->
+                    <header class="main-header">
+                        <!-- Logo -->
+                        <a href="index.html" class="logo">
+                            <!-- mini logo for sidebar mini 50x50 pixels -->
+                            <span class="logo-mini"><b>L</b>AI</span>
+                            <!-- logo for regular state and mobile devices -->
+                            <span class="logo-lg"><b>Lanai</b>UI</span>
+                        </a>
+                        <!-- Header Navbar -->
+                        <nav class="navbar navbar-static-top" role="navigation">
+                            <!-- Sidebar toggle button-->
+                            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                                <span class="sr-only">Toggle navigation</span>
+                            </a>
+                            <!-- Navbar Right Menu -->
+                            <div class="navbar-custom-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown notifications-menu">
+                                        <!-- Menu toggle button -->
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-bell-o"></i>
+                                                提醒
+                                            <span class="label label-warning">1</span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="header">警示信息 </li>
+                                            <li>
+                                                <!-- Inner Menu: contains the notifications -->
+                                                <ul class="menu">
+                                                    <li>
+                                                        <!-- start notification -->
+                                                        <a href="#">
+                                                            <i class="fa fa-users text-aqua"></i> 信息内容
+                                                        </a>
+                                                    </li>
+                                                    <!-- end notification -->
+                                                </ul>
+                                            </li>
+                                            <li class="footer"><a href="#">查看</a></li>
+                                        </ul>
+                                    </li>                        	
+                                    <!-- User Account Menu -->
+                                    <li class="user user-menu">
+                                        <!-- Menu Toggle Button -->
+                                        <a href="#" >
+                                            <!-- The user image in the navbar-->
+                                            <img src="img/sl.jpg" class="user-image" alt="User Image" />
+                                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                            <span class="hidden-xs">User1</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+                    <!-- Left side column. contains the logo and sidebar -->
+                    <aside class="main-sidebar">
+                        <!-- sidebar: style can be found in sidebar.less -->
+                        <section class="sidebar">
+                            <!-- Sidebar Menu -->
+                            <ul class="sidebar-menu" data-widget="tree">
+                               <li class="treeview active">
+                                    <a href="#">
+                                        <i class="fa fa-folder"></i> <span>页面</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#" data-addtab="#" data-target="#MasterTabs" data-title="个人简介" data-url="#"><i class="fa fa-circle-o"></i> 页面一 </a></li>
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> 页面二 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.sidebar-menu -->
+                
+                            <div class="sidebar-footer hidden-small fadeInLeft animated"  id="sidebar-footer-bar">
+                                <a data-toggle="tooltip" data-placement="top" data-original-title="refresh" data-widget="tooltip-refresh">
+                                    <span class="fa fa-refresh" aria-hidden="true"></span>
+                                </a>
+                                <a id="fullscreen" data-toggle="tooltip" data-placement="top" title="" data-original-title="FullScreen" data-widget="tooltip-fullscreen">
+                                    <span class="fa fa-arrows-alt" aria-hidden="true"></span>
+                                </a>
+                                <a id="lockpage" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock" data-widget="tooltip-lock">
+                                    <span class="fa fa-eye-slash" aria-hidden="true"></span>
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="" href="#" data-original-title="Logout">
+                                    <span class="fa fa-power-off" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </section>
+                        <!-- /.sidebar -->
+                    </aside>
+                    <!-- Content Wrapper. Contains page content -->
+                    <div class="content-wrapper">
+                        <!-- Main content -->
+                        <section class="content container-fluid" style="padding:0px">
+                            <ul class="nav nav-tabs menu-tabs" id="MasterTabs" role="tablist">
+                                <li class="nav-tabs-header active" role="presentation">
+                                    <a aria-controls="home" data-toggle="tab" href="#home" role="tab">
+                                        <i class="fa fa-home"></i> Home
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content fixheight">
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                </div>
+                            </div>
+                        </section>
+                        <!-- /.content -->
+                    </div>
+                    <!-- /.content-wrapper -->
+                    <!-- Main Footer -->
+                    <footer class="main-footer">
+                        <!-- To the right -->
+                        <div class="pull-right hidden-xs">
+                            <b>Version</b> 1.0.0.1
+                        </div>
+                        <!-- Default to the left -->
+                        <strong>Copyright © 2017-2018 .</strong> All rights reserved.
+                    </footer>
+                    <!--Small Chat-->	
+                    <div class="box small-chat-box direct-chat direct-chat-primary  fadeInRight animated" data-widget="chat-small-box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title" id="chatTitle">LAI聊</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" id="btn_showContacts" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts">
+                                    <i class="fa fa-comments"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body" id="chatBody">
+                            <!-- Conversations are loaded here -->
+                            <div class="direct-chat-messages" id="listmsg">
+                                <div class="direct-chat-msg">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-left">索隆</span>
+                                        <span class="direct-chat-timestamp pull-right">18/02/05 6:00am</span>
+                                    </div>
+                                    <!-- /.direct-chat-info -->
+                                    <img class="direct-chat-img" src="img/sl.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                                    <div class="direct-chat-text">
+                                            早上好
+                                    </div>
+                                    <!-- /.direct-chat-text -->
+                                </div>
+                                <!-- /.direct-chat-msg -->
+                                <!-- Message to the right -->
+                                <div class="direct-chat-msg right">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-right">娜美</span>
+                                        <span class="direct-chat-timestamp pull-left">18/02/05 7:00am</span>
+                                    </div>
+                                    <!-- /.direct-chat-info -->
+                                    <img class="direct-chat-img" src="img/nm.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                                    <div class="direct-chat-text">
+                                            早上好!
+                                    </div>
+                                    <!-- /.direct-chat-text -->
+                                </div>
+                            </div>
+                            <!--/.direct-chat-messages-->
+                            <!-- Contacts are loaded here -->
+                            <div class="direct-chat-contacts">
+                                <ul class="contacts-list">
+                                    <li>
+                                        <a href="javascript:;" data-widget="chat-pane-toggle">
+                                            <img src="img/nm.jpg" class="contacts-list-img" />
+                                            <div class="contacts-list-info">
+                                                <span class="contacts-list-name">
+                                                    Polo
+                                                    <small class="contacts-list-date pull-right"><i class="fa fa-circle text-danger"></i> 离线</small>
+                                                </span>
+                                                <span class="contacts-list-msg">娜美@gmail.com</span>
+                                            </div>
+                                            <!-- /.contacts-list-info -->
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!-- /.contatcts-list -->
+                            </div>
+                            <!-- /.direct-chat-pane -->
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <form action="#" method="post">
+                                <div class="input-group">
+                                    <input type="text" id="message" name="message" placeholder="输入信息 ..." class="form-control">
+                                    <span class="input-group-btn">
+                                        <button type="button" id="sendmessage" class="btn btn-primary btn-flat">发送</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.box-footer-->
+                    </div>
+                    <div class="chat-area">
+                        <span class="badge badge-warning pull-right msgCount">2</span>
+                        <a class="open-small-chat" data-widget="chat-small-open">
+                            <i class="fa fa-comments"></i>
+                        </a>
+                    </div>
+                    <!-- /. Chat-Area-->
+                </div>
+                
+                <!-- ./wrapper -->
+                <div id="modal" class="hold-transition lockscreen" style="display:none">
+                    <div class="lockscreen-wrapper">
+                        <div class="lockscreen-logo">
+                            <a href="#"><b>Lanai</b>UI</a>
+                        </div>
+                        <div class="lockscreen-name">索隆</div>
+                        <div class="lockscreen-item">
+                            <div class="lockscreen-image">
+                                <img src="img/sl.jpg" />
+                            </div>
+                            <form class="lockscreen-credentials">
+                                <div class="input-group">
+                                    <input id="tbx_lock_password" type="password" class="form-control" placeholder="password" value="">
+                
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn" data-widget="tooltip-unlock" data-placement="top" title=""><i class="fa fa-arrow-right text-muted"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="help-block text-center">
+                            输入密码解除锁定
+                        </div>
+                        <div class="lockscreen-footer text-center">
+                            Copyright &copy; 2017-2018
+                            All rights reserved
+                        </div>
+                    </div>
+                </div>
+                <!-- ./ 锁定屏幕 -->
+                <script src="js/jquery.min.js"></script>
+                <script src="js/lanai-ui.js"></script>
+                </body>
+                </html>	
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                    
+                </div>
+        </section>
+        <!-- /.content -->
+        <!-- /.container -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 1.0.0.1
+            </div>
+            <strong>Copyright © 2017-2018 .</strong> All rights reserved.
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a href="#control-sidebar-users-tab" data-toggle="tab"><i class="fa fa-user"></i></a>
+            </li>
+            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- 联系人 tab content -->
+            <div class="tab-pane active" id="control-sidebar-users-tab">
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="#">
+                            <img class="menu-icon" src="dist/img/nm.jpg" alt="娜美">
+                            <div class="menu-info">
+
+                                <span class="control-sidebar-subheading">
+                                    娜美
+                                    <small class="contacts-list-date pull-right">2/28/2015</small>
+                                </span>
+                                <p>钱.钱.钱...！~</p>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                        <a href="#">
+                            <img class="menu-icon" src="dist/img/sj.jpg" alt="山治">
+                            <div class="menu-info">
+                                <span class="control-sidebar-subheading">
+                                    山治
+                                    <small class="contacts-list-date pull-right">2/23/2015</small>
+                                </span>
+                                <p>I will be waiting for...</p>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                        <a href="#">
+                            <img class="menu-icon" src="dist/img/lf.jpg" alt="路飞">
+                            <div class="menu-info">
+                                <span class="control-sidebar-subheading text-red">
+                                    路飞
+                                    <small class="contacts-list-date pull-right">2/20/2015</small>
+                                </span>
+                                <p>我是船长...</p>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                        <a href="#">
+                            <img class="menu-icon" src="dist/img/xl.jpg" alt="乔巴">
+                            <div class="menu-info">
+                                <span class="control-sidebar-subheading">
+                                    乔巴
+                                    <small class="contacts-list-date pull-right">2/10/2015</small>
+                                </span>
+                                <p>Where is your new...</p>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                    <!-- End Contact Item -->
+                    <li>
+                        <a href="#">
+                            <img class="menu-icon" src="dist/img/self1.jpg" alt="我自己">
+                            <div class="menu-info">
+                                <span class="control-sidebar-subheading">
+                                    我自己
+                                    <small class="contacts-list-date pull-right">1/27/2015</small>
+                                </span>
+                                <p>帅不？</p>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                    <!-- End Contact Item -->
+                </ul>
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <h3 class="control-sidebar-heading">样式选择</h3>
+                <ul class="list-unstyled clearfix" id="listthemes">
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-blue"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span><span
+                                    class="bg-light-blue"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">蓝色</p>
+                    </li>
+                    <!-- ./ 蓝色-->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-black"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span><span
+                                    style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">黑色</p>
+                    </li>
+                    <!--/. 黑色-->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-purple"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-purple-active"></span><span class="bg-purple"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">紫色</p>
+                    </li>
+                    <!-- /. 紫色-->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-green"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-green-active"></span><span class="bg-green"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">绿色</p>
+                    </li>
+                    <!-- /. 绿色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-red"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-red-active"></span><span class="bg-red"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">红色</p>
+                    </li>
+                    <!-- /. 红色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-yellow"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-yellow-active"></span><span class="bg-yellow"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin">黄色</p>
+                    </li>
+                    <!-- /. 黄色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-blue-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span><span
+                                    class="bg-light-blue"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡蓝色</p>
+                    </li>
+                    <!-- /. 淡蓝色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-black-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div style="box-shadow: 0 0 2px rgba(0,0,0,0.1)" class="clearfix"><span
+                                    style="display:block; width: 20%; float: left; height: 7px; background: #fefefe"></span><span
+                                    style="display:block; width: 80%; float: left; height: 7px; background: #fefefe"></span>
+                            </div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡黑色</p>
+                    </li>
+                    <!-- /. 淡黑色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-purple-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-purple-active"></span><span class="bg-purple"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡紫色</p>
+                    </li>
+                    <!-- /. 淡紫色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-green-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-green-active"></span><span class="bg-green"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡绿色</p>
+                    </li>
+                    <!-- /. 淡绿色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-red-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-red-active"></span><span class="bg-red"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡红色</p>
+                    </li>
+                    <!-- /. 淡红色 -->
+                    <li style="float:left; width: 33.33333%; padding: 5px;">
+                        <a href="javascript:void(0)" data-skin="skin-yellow-light"
+                            style="display: block; box-shadow: 0 0 3px rgba(0,0,0,0.4)"
+                            class="clearfix full-opacity-hover">
+                            <div><span style="display:block; width: 20%; float: left; height: 7px;"
+                                    class="bg-yellow-active"></span><span class="bg-yellow"
+                                    style="display:block; width: 80%; float: left; height: 7px;"></span></div>
+                            <div><span
+                                    style="display:block; width: 20%; float: left; height: 20px; background: #f9fafc"></span><span
+                                    style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+                            </div>
+                        </a>
+                        <p class="text-center no-margin" style="font-size: 12px">淡黄色</p>
+                    </li>
+                    <!-- /. 淡黄色 -->
+                </ul>
+                <!-- /. 样式变更-->
+                <h3 class="control-sidebar-heading">布局选项</h3>
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        <input type="checkbox" data-controlsidebar="control-sidebar-open" class="pull-right">
+                        右边栏固定显示
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="control-sidebar-subheading">
+                        <input type="checkbox" data-sidebarskin="toggle" class="pull-right">
+                        右边栏背景切换
+                    </label>
+                </div>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+    immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+    <!--Small Chat-->	
+    <div class="box small-chat-box direct-chat direct-chat-primary  fadeInRight animated" data-widget="chat-small-box">
+        <div class="box-header with-border">
+            <h3 class="box-title" id="chatTitle">LAI聊</h3>
+            <div class="box-tools pull-right">
+                <button type="button" id="btn_showContacts" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts">
+                    <i class="fa fa-comments"></i>
+                </button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body" id="chatBody">
+            <!-- Conversations are loaded here -->
+            <div class="direct-chat-messages" id="listmsg">
+                <div class="direct-chat-msg">
+                    <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">索隆</span>
+                        <span class="direct-chat-timestamp pull-right">18/02/05 6:00am</span>
+                    </div>
+                    <!-- /.direct-chat-info -->
+                    <img class="direct-chat-img" src="dist/img/sl.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                            早上好
+                    </div>
+                    <!-- /.direct-chat-text -->
+                </div>
+                <!-- /.direct-chat-msg -->
+                <!-- Message to the right -->
+                <div class="direct-chat-msg right">
+                    <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">娜美</span>
+                        <span class="direct-chat-timestamp pull-left">18/02/05 7:00am</span>
+                    </div>
+                    <!-- /.direct-chat-info -->
+                    <img class="direct-chat-img" src="dist/img/nm.jpg" alt="Message User Image"><!-- /.direct-chat-img -->
+                    <div class="direct-chat-text">
+                            早上好!
+                    </div>
+                    <!-- /.direct-chat-text -->
+                </div>
+            </div>
+            <!--/.direct-chat-messages-->
+            <!-- Contacts are loaded here -->
+            <div class="direct-chat-contacts">
+                <ul class="contacts-list">
+                    <li>
+                        <a href="javascript:;" data-widget="chat-pane-toggle">
+                            <img src="dist/img/nm.jpg" class="contacts-list-img" />
+                            <div class="contacts-list-info">
+                                <span class="contacts-list-name">
+                                    Polo
+                                    <small class="contacts-list-date pull-right"><i class="fa fa-circle text-danger"></i> 离线</small>
+                                </span>
+                                <span class="contacts-list-msg">娜美@gmail.com</span>
+                            </div>
+                            <!-- /.contacts-list-info -->
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.contatcts-list -->
+            </div>
+            <!-- /.direct-chat-pane -->
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <form action="#" method="post">
+                <div class="input-group">
+                    <input type="text" id="message" name="message" placeholder="输入信息 ..." class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" id="sendmessage" class="btn btn-primary btn-flat">发送</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <!-- /.box-footer-->
+    </div>
+    <div class="chat-area">
+        <span class="badge badge-warning pull-right msgCount">2</span>
+        <a class="open-small-chat" data-widget="chat-small-open">
+            <i class="fa fa-comments"></i>
+        </a>
+    </div>
+    <!-- /. Chat-Area-->
+    <script src="dist/js/jquery.min.js"></script>
+    <!-- <script src="dist/js/lanai-ui.js"></script> -->
+    <script src="dist/js/lanai-ui.min.js"></script>
+    <script src="top_nav.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            console.log('欢迎使用AdminGTL,此版本仅供个人学习和研究用,商业用途请购买，谢谢')
+        })
+    </script></body>
+</html>

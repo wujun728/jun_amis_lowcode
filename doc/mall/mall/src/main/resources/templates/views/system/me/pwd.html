@@ -1,0 +1,80 @@
+<#include "/common/layout.html">
+<@body>
+<div class="wrapper">
+	<section class="content">
+		<form class="form-horizontal" method="post" action="/system/me/doChangePwd" id="pwdFrom">
+			<div class="box-body">
+				<div class="form-group">
+					<label for="password" class="col-sm-2 control-label">旧密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="password"  name="password" placeholder="请输入旧密码" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="newpassword" class="col-sm-2 control-label">新密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="newpassword"  name="newpassword" placeholder="请输入新密码" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="newpassword2" class="col-sm-2 control-label">重复密码</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="newpassword2"  name="newpassword2" placeholder="请重复输入新密码" required>
+					</div>
+				</div>
+				<#if msg??>
+				<div class="form-group">
+					<div class="alert alert-danger alert-dismissible">
+					<h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i> ${msg!}</h4>
+					</div>
+				</div>
+				</#if>
+				<#if info??>
+				<div class="form-group">
+					<div  class="alert alert-success alert-dismissible">
+					<h4 style="margin-bottom: 0px;"><i class="fa fa-info"></i> ${info!}</h4>
+					</div>
+				</div>
+				</#if>
+			</div>
+		</form>
+	</section>
+</div>
+</@body>
+<script type="text/javascript">
+	function submitHandler() {
+		if ($("#pwdFrom").validate().form()) {
+			var formData = $("#pwdFrom").serialize();
+			$.ajax({
+				url : $("#pwdFrom").attr('action'),
+				type : 'POST',
+				dataType : "json",
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					if (data.code == 200) {
+						if (data.msg) {
+							layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							layer.msg('修改成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>
