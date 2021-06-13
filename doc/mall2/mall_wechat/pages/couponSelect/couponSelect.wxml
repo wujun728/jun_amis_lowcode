@@ -1,0 +1,26 @@
+<view class="container">
+
+  <scroll-view class="coupon-list" scroll-y="true" scroll-top="{{scrollTop}}">
+
+    <view class="unselect" bindtap='unselectCoupon'>不选择优惠券</view>
+
+    <view class="item" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="id" bindtap="selectCoupon" data-id="{{item.couponId}}">
+      <view class="tag">{{item.rangeRelationName}}</view>
+      <view class="content">
+        <view class="left">
+          <view class="discount">{{item.discount}}元</view>
+        </view>
+        <view class="right">
+          <view class="name">满{{item.conditionNum}}元使用</view>
+        </view>
+      </view>
+      <view class="content">
+        <view class="time"> 有效期：{{item.startTime}} - {{item.endTime}}</view>
+      </view>
+      <view class="condition">
+        <text class="txt">{{item.rangeRelationName}}</text>
+      </view>
+    </view>
+
+  </scroll-view>
+</view>  

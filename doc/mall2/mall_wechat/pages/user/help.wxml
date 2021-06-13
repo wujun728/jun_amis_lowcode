@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="help cont-box b-f" wx:for="{{list}}" wx:key="this">
+    <view>
+      <text class="h4">{{item.question}}</text>
+    </view>
+    <view>
+      <text class="p">{{item.answer}}</text>
+    </view>
+  </view>
+</view>

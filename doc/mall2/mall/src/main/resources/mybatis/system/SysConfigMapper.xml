@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.system.mapper.SysConfigMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.qingshop.mall.modules.system.entity.SysConfig">
+		<result column="config_id" property="configId" />
+		<result column="sys_key" property="sysKey" />
+		<result column="sys_value" property="sysValue" />
+		<result column="remark" property="remark" />
+		<result column="status" property="status" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		config_id,
+		sys_key,
+		sys_value,
+		remark,
+		status,
+		create_time,
+		update_time
+	</sql>
+
+	<update id="updateByKey">
+		update sys_config
+		set sys_value = #{value}, update_time=now()
+		where sys_key = #{key}
+	</update>
+
+	<select id="getByKey" resultType="string">
+		select sys_value
+		from sys_config
+		where sys_key = #{key}
+	</select>
+
+</mapper>

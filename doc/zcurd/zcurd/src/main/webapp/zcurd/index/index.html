@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>zcurd</title>
+<style type="text/css">
+body {font-family: Arial, Helvetica, sans-serif; line-height: 30px; color: #2f8ec7;}
+h2, .color1 {color: orange;}
+.zhichi {border: 2px solid orange; padding: 2px; font-size: 22px; width: 30px; height: 30px; line-height: 30px; border-radius: 30px; text-align: center; cursor: pointer; position: fixed; bottom: 50px; right: 50px;}
+</style>
+</head>
+<body>
+	<p>zcurd是一个通用的后台管理系统，有完善的用户、菜单和权限管理。且提供了一套快速的表单管理的开发方案。<br>简单业务可以通过 [表单配置] 快速生成，特定业务通过代码生成，完成具体业务。zcurd能够大大提高开发效率，节省更多时间去陪家人朋友，做自己喜欢的事情。</p>
+
+	<div>
+		<h2>zcurd的特点</h2> 
+		<ol>
+			<li>强大的表单配置功能，无需编写代码即可生成表单管理页面，快速搞定简单业务。</li>
+			<li>简单易用的代码生成，能够把通过表单配置生成的页面生成代码，提搞特定业务开发效率。</li>
+			<li>完善的权限控制，能够控制到菜单、按钮和数据权限，做到这些只需要在页面上进行配置。</li>
+			<li>采用jfinal+easyui开发，没有其它繁杂技术，项目简洁明了，方便二次开发。</li>
+			<li>ui布局整洁精致，支持chrome，firefox，safari，ie8+ 等常用浏览器</li>
+		</ol>
+		<div>　　<span class="color1">QQ群交流群：</span>497019074</div>
+		<div>　　<span class="color1">项目GIT地址：</span>https://git.oschina.net/515097842/zcurd</div>
+	</div>
+	
+	<div id="block_zczz" style="display: none;">
+		<h2>支持作者</h2>
+		<div>项目的发展离不开你的支持，赞助作者买服务器或加个餐吧。</div>
+		<img src="../../res/images/zcurd/wxzfb.png" width="400px;" />
+		<div>微信ID：z2872332</div>
+	</div>
+	
+	<div class="zhichi" onclick="zhichi()">+</div>
+	
+<script type="text/javascript">
+function zhichi() {
+	var d = document.getElementById("block_zczz");
+	if(d.style.display == "none") {
+		d.style.display = "block";
+	}else {
+		d.style.display = "none";
+	}
+}
+</script>	
+</body>
+</html>

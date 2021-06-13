@@ -1,0 +1,99 @@
+<view class="container">
+
+  <scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="position:absolute; top:0; left:0; right:0; bottom:0;">
+    <!-- 搜索 -->
+    <include src="components/search/search.wxml" />
+    <!-- banner轮播 -->
+    <include src="components/banner/banner.wxml" />
+    <!-- 商品推荐 -->
+    <view class="recommended-index-list m-top20">
+      <view class="title-header b-f t-c f-32 col-3">新品推荐</view>
+    </view>
+    <view class="index_sale ">
+      <scroll-view scroll-x="true">
+        <navigator style="display: inline-block;" url="../goods/index?goods_id={{item.goodsId}}" wx:for="{{newest}}" wx:key="this">
+          <view class="page-column">
+            <view class="sale_img">
+              <image mode="aspectFill" src="{{item.picUrl}}"></image>
+            </view>
+            <view class="content onelist-hidden">
+              <text>{{item.goodName}}</text>
+            </view>
+            <view class="price f-34 col-m m-top10">
+                  ￥{{item.goodPrice}}
+                  <text class="del f-22" wx:if="{{item.linePrice>0}}">￥{{item.linePrice}}</text>
+            </view>
+          </view>
+        </navigator>
+      </scroll-view>
+    </view>
+
+    <view class="a-section a-coupon" wx:if="{{coupon.length > 0}}">
+      <view class="h">
+        <view class="title">
+          <view>
+            <navigator url="/pages/coupon/coupon">
+              <text class="txt">优惠券</text>
+            </navigator>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{coupon.length>0}}">
+        <view class="item" wx:for="{{coupon}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+          <view class="tag">{{item.rangeRelationName}}</view>
+          <view class="content">
+            <view class="left">
+              <view class="discount">{{item.discount}}元</view>
+            </view>
+            <view class="right">
+              <view class="name">满{{item.conditionNum}}元使用</view>
+            </view>
+          </view>
+          <view class="content">
+            <view class="time" wx:if="{{item.timeType == 1}}">有效期：自领取之日起{{item.days}}天内有效</view>
+            <view class="time" wx:else> 有效期：{{item.startTime}} - {{item.endTime}}</view>
+          </view>
+          <view class="condition">
+            <button type="warn" bindtap="getCoupon" data-index="{{item.couponId}}" class="txt">立即领取</button> 
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 猜您喜欢 -->
+    <view class="title-hrbg" style="margin-top:10rpx">
+      <text class="cont">
+        <text class="iconfont icon-huo col-m"></text>猜您喜欢
+      </text>
+      <view class="hr"></view>
+    </view>
+    <view class="category-list">
+      <navigator class="list b-f" url="../goods/index?goods_id={{item.goodsId}}" wx:for="{{best}}" wx:key="this">
+        <view class="left">
+          <view class="img">
+            <image class="goodsImg" mode="scaleToFill" src="{{item.picUrl}}"></image>
+          </view>
+        </view>
+        <view class="right">
+          <view class="cont">
+            <text class="f-30 title twolist-hidden m-top10">{{item.goodName}}</text>
+            <view class="price f-34 col-m m-top10">
+                  ￥{{item.goodPrice}}
+                  <text class="del f-22" wx:if="{{item.linePrice>0}}">￥{{item.linePrice}}</text>
+                </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="clear morelist" bindtap="getMore">点击查看更多</view>
+    <!-- 底线 -->
+    <view class="title-footer p-r">
+      <text class="f-24 col-9 cont">我是有底线的</text>
+      <view class="hr"></view>
+    </view>
+  </scroll-view>
+  <!-- 返回顶部 -->
+  <view bindtap="goTop" class="widget-goTop" wx:if="{{floorstatus}}">
+    <text class="iconfont icon-fanhuidingbu"></text>
+  </view>
+</view>

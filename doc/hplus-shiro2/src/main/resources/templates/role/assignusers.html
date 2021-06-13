@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('角色分配')" />
+</head>
+<body>
+	<section class="content">
+		<input class="hidden" name="roleId" id="roleId" th:value="${roleId}">
+		<table id="assignUserTable"></table>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		var roleId = $("#roleId").val();
+		var userColumns = [{
+			field : 'userId',
+			title : '用户ID',
+			align : "center"
+		}, {
+			field : 'username',
+			title : '用户名称',
+			align : "center"
+		}, {
+			field : 'email',
+			title : '用户邮箱',
+			align : "center"
+		}, {
+			field : 'operation',
+			title : '操作',
+			align : "center",
+			formatter : function(value, row, index) {
+				if (row.isAssign) {
+					var assign = '<a class="btn btn-danger btn-xs cursor-pointer" href="javascript:;" onclick="cancelAssign('+ row.userId +')"><i class="fa fa-remove"></i>取消分配</a> ';
+				} else {
+					var assign = '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="assignUser('+ row.userId +')"><i class="fa fa-check"></i>分配用户</a> ';
+				}
+				return assign;
+			}
+		}];
+		var userOptions = {
+			id : "#assignUserTable",
+			url : "/role/assign/user/list",
+			columns : userColumns,
+			pagination : false,
+			queryParams : queryUserParams,
+			responseHandler : handleRoleData,
+		}
+		$.table.initTable(userOptions);
+		/*查询角色参数*/
+		function queryUserParams(params) {
+			var temp = {
+				roleId : roleId
+			};
+			return temp;
+		}
+		/*处理响应数据*/
+		function handleRoleData(res) {
+			var selectUserIds = res.hasUsers;
+			var data = res.rows;
+			for (i=0; i < data.length; i++) {
+				if(selectUserIds.indexOf(data[i].userId) >= 0) {
+					data[i].isAssign = true;
+				} else {
+					data[i].isAssign = false;
+				}
+			}
+			return data;
+		}
+		/*取消分配*/
+		function cancelAssign(userId) {
+			$.common.postAjax('/role/cancelAssign', {
+				userId : userId,
+				roleId : roleId
+			}, function(data) {
+				if (data.status == 200) {
+					$.table.refreshTable();
+					toastr.success(data.msg);
+				} else {
+					toastr.error(data.msg)
+				}
+			})
+		}
+		/*分配用户*/
+		function assignUser(userId) {
+			$.common.postAjax('/role/assignUser', {
+				userId : userId,
+				roleId : roleId
+			}, function(data) {
+				if (data.status == 200) {
+					$.table.refreshTable();
+					toastr.success(data.msg);
+				} else {
+					toastr.error(data.msg)
+				}
+			})
+		}
+	</script>
+</body>
+</html>

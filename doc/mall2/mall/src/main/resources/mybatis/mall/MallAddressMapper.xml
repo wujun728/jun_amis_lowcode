@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallAddressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallAddress">
+        <id column="address_id" property="addressId" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="user_id" property="userId" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="region" property="region" />
+        <result column="detail" property="detail" />
+        <result column="is_default" property="isDefault" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

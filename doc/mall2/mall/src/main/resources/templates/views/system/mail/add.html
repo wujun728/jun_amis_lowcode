@@ -1,0 +1,122 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<form role="form" class="form-horizontal" method="post" action="/system/mail/doAdd" id="addMailForm">
+		<div class="box-body">
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">收件人</label>
+				<div class="col-sm-10">
+					<input type="text" id="toMail" name="toMail" class="form-control" placeholder="请输入收件人" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptName" class="col-sm-2 control-label">主题</label>
+				<div class="col-sm-10">
+					<input type="text" id="title" name="title" class="form-control" placeholder="请输入主题" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="deptDesc" class="col-sm-2 control-label">正文</label>
+				<div class="col-sm-10">
+					<input id="content" name="content" type="hidden">
+					<div class="summernote"></div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</@body>
+<#include "/common/filelibrary.html">
+<script type="text/javascript">
+	document.emojiSource = '/plugins/summernote/tam-emoji/img';
+	var MyphotoButton = function (context) {
+		var ui = $.summernote.ui;
+		var button = ui.button({
+			contents: '<i class="note-icon-picture"/>',  //按钮样式
+			tooltip: '插入图片',
+			callback:function(e){
+				e.addClass("upload-editor");
+			}
+		});
+		return button.render();    //按钮渲染
+	}
+	//富文本编辑器
+	$('.summernote').summernote({
+		toolbar: [
+			['style', ['emoji', 'style','bold', 'italic', 'underline', 'clear']],
+			['font', ['strikethrough', 'superscript', 'subscript']],
+			['fontname', ['fontsize','height','fontname']],
+			['color', ['color']],
+			['para', ['ul', 'ol', 'paragraph']],
+			['table', ['table','hr']],
+			['insert', ['myphoto', 'link', 'video']], //'picture', 
+			['view', ['fullscreen', 'codeview', 'help']],
+		],
+		popover: {
+			image: [
+				['image', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+				['float', ['floatLeft', 'floatRight', 'floatNone']],
+				['remove', ['removeMedia']]
+			],
+		},
+		buttons: {
+			myphoto: MyphotoButton  //自已定义的按钮函数
+		},
+		placeholder: '请输入描述内容...',
+		minHeight: 500,
+		maxHeight: null,
+		lang : 'zh-CN',
+		dialogsInBody: true,
+		dialogsFade: true,
+		followingToolbar: false,
+	});
+	// 图片库选择图片
+	$('.upload-editor').selectImages({
+		imagesList: '.upload-editor'
+		, multiple: true
+		, done: function(data){
+			for(var i = 0; i < data.length; i++){
+				$('.summernote').summernote('editor.insertImage', data[i].fileUrl,  data[i].fileName);
+			}
+		}
+	});
+	function submitHandler() {
+		if ($("#addMailForm").validate().form()) {
+			$("#content").val($('.summernote').summernote('code'));
+			var formData = $("#addMailForm").serialize();
+			var index = layer.load(3); // 换了种风格
+			$.ajax({
+				url : $("#addMailForm").attr('action'),
+				type : 'POST',
+				dataType : "json",
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					layer.close(index);
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+						window.parent.data_oTable.draw(false);
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

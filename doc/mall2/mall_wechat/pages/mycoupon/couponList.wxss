@@ -1,0 +1,164 @@
+page {
+  background: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  background: #f4f4f4;
+  min-height: 100%;
+  padding-top: 30rpx;
+}
+
+.container .h {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  height: 84rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.container .h .item {
+  display: inline-block;
+  height: 82rpx;
+  width: 50%;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+.container .h .item .txt {
+  display: inline-block;
+  height: 82rpx;
+  padding: 0 20rpx;
+  line-height: 82rpx;
+  color: #333;
+  font-size: 30rpx;
+  width: 170rpx;
+}
+
+.container .h .item.active .txt {
+  color: #ab2b2b;
+  border-bottom: 4rpx solid #ab2b2b;
+}
+
+.container .b {
+  margin-top: 85rpx;
+  height: auto;
+}
+
+.container .b .coupon-list {
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container .b .item {
+  position: relative;
+  height: 290rpx;
+  background: gray;
+  margin-bottom: 30rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 52rpx;
+}
+
+.container .b .item.active {
+  background: linear-gradient(to right, #cfa568, #e3bf79);
+}
+
+.container .b .tag {
+  height: 32rpx;
+  background: #a48143;
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  position: absolute;
+  left: 20rpx;
+  color: #fff;
+  top: 20rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+
+.container .b .content {
+  margin-top: 24rpx;
+  margin-left: 40rpx;
+  display: flex;
+  margin-right: 40rpx;
+  flex-direction: row;
+}
+
+.container .b .content .left {
+  flex: 1;
+}
+
+.container .b .discount {
+  font-size: 50rpx;
+  color: #b4282d;
+}
+
+.container .b .content .right {
+  width: 400rpx;
+}
+
+.container .b .name {
+  font-size: 44rpx;
+  color: #fff;
+  margin-bottom: 14rpx;
+}
+
+.container .b .time {
+  font-size: 24rpx;
+  color: #fff;
+  line-height: 30rpx;
+}
+
+.container .b .condition {
+  position: absolute;
+  width: 89%;
+  bottom: 0;
+  left: 0;
+  height: 78rpx;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0rpx 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .b .condition .txt {
+  display: block;
+  height: 78rpx;
+  flex: 1;
+  overflow: hidden;
+  font-size: 24rpx;
+  line-height: 78rpx;
+  color: #fff;
+}
+
+.container .b .page {
+  width: 750rpx;
+  height: 108rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.container .b .page view {
+  height: 108rpx;
+  width: 49%;
+  float: left;
+  font-size: 29rpx;
+  color: #333;
+  text-align: center;
+  line-height: 108rpx;
+}
+
+.container .b .page .prev {
+  border-right: 1px solid #d9d9d9;
+}
+
+.container .b .page .disabled {
+  color: #ccc;
+}

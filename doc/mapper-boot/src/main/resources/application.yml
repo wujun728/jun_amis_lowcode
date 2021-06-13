@@ -1,0 +1,28 @@
+server:
+   port: 8080
+   context-path: /
+logging:
+   level:
+      tk.mybatis: TRACE
+spring:
+   profiles:
+      active: dev
+   mvc:
+      view:
+         prefix: /templates/
+         suffix: .ftl
+   freemarker:
+      cache: false
+      request-context-attribute: request
+mybatis:
+   type-aliases-package: hong.mybatis.springboot.model
+   mapper-locations: classpath:mapper/*.xml
+mapper:
+   mappers: hong.mybatis.springboot.util.MyMapper
+   not-empty: false
+   identity: MYSQL
+pagehelper:
+   helperDialect: mysql
+   reasonable: true
+   supportMethodsArguments: true
+   params: count=countSql

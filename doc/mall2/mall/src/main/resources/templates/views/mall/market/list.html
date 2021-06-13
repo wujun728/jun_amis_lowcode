@@ -1,0 +1,169 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box-body">
+						<div class="panel panel-danger">
+							<div class="panel-heading">
+								<div class="form-inline">
+									<div class="box-header">
+										<div class="input-group pull-left" style="font-size: 16px;">
+											<span>营销管理</span>
+										</div>
+										<#if shiro.hasPermission("addMarket")>
+										<div class="input-group pull-right" style="margin-right: 32px;">
+											<a class="btn btn-sm btn-primary dialog" href="javascript:;" data-title="创建活动" data-url="/mall/market/add">
+												<i class="fa fa-plus"></i> 添加活动
+											</a>
+										</div>
+										</#if>
+										<div class="input-group pull-right" style="margin-right: 20px;">
+											<button class="btn btn-sm btn-primary pull-right dropdown-toggle" data-toggle="dropdown">
+												<span id="search">全部活动</span> <i class="fa fa-caret-down"></i>
+											</button>
+											<ul class="dropdown-menu opensleft" style="min-width: 96px;">
+												<li><a href="javascript:void(0)"
+													onclick="reloadInitMarketList(0, '全部活动');">全部活动</a></li>
+												<li><a href="javascript:void(0)"
+													onclick="reloadInitMarketList(1, '进行中');">进行中</a></li>
+												<li><a href="javascript:void(0)"
+													onclick="reloadInitMarketList(2, '已失效');">已失效</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="content">
+									<div id="activityList" class="row activity-list"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+
+<script>
+	var query_data = {
+		status: '0'
+	};
+	$(function(){
+		$.modal.loading("数据加载中，请稍后...");
+		initmarketlist();
+		$.modal.closeLoading();
+	});
+	function reloadInitMarketList(status, text){
+		$("#search").html(text);
+		query_data.status = status;
+		initmarketlist();
+	}
+	function initmarketlist() {
+		var url = "/mall/market/marketslist";
+		$.ajax({
+			url: url,
+			type: "GET",
+			data: query_data,
+			cache: false,
+			success: function(resultData) {
+				if (resultData.code == "200") {
+					var shtml = '';
+					var couponLists = resultData.data.couponList;
+					var couponLists = couponLists.filter(function(value) {return value.activityStatus != '3';});
+					if(couponLists.length > 0){
+						for(let i = 0;i < couponLists.length;i++){
+								shtml += '<div class="col-md-4 col-sm-4 col-xs-4">'
+								if(couponLists[i].timeType == 0 && new Date(couponLists[i].endTime).getTime() < new Date().getTime()){
+									shtml += '<div style="height:205px;background-image: url(/images/card-coupon-invalid.png);background-repeat:no-repeat;background-size:100% 100%;margin-bottom:10px;">'
+								}else if(couponLists[i].activityStatus == 2){
+									shtml += '<div style="height:205px;background-image: url(/images/card-coupon-invalid.png);background-repeat:no-repeat;background-size:100% 100%;margin-bottom:10px;">'	
+								}else{
+									shtml += '<div style="height:205px;background-image: url(/images/card-coupon-normal.png);background-repeat:no-repeat;background-size:100% 100%;margin-bottom:10px;">'	
+								} 
+								shtml += '		<div style="height:50%;position:relative;">'
+								shtml += '			<div style="text-align:center;padding-top:15px;line-height:85px;">'
+								shtml += '			<span style="font-size:25px;font-weight:bold;color:#FFFFFF;">￥</span>'
+								shtml += '				<span style="font-size:30px;font-weight:bold; color:#FFFFFF;">'+ couponLists[i].discount +' </span>'
+								if(couponLists[i].conditionNum > 0){
+									shtml += '			<span style="font-size:20px;color:#FFFFFF;">满'+ couponLists[i].conditionNum +'可用</span>'
+								}else{
+									shtml += '			<span style="font-size:20px;color:#FFFFFF;">无门槛优惠</span>'
+								}
+								shtml += '			</div>'
+								shtml += '			<div style="position: absolute; top:15px; right:25px;">'
+								shtml += '				<button style="color:#FFFFFF;" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-chevron-down"></i></button>'
+								shtml += '				<ul class="dropdown-menu opensleft" style="min-width:96px;margin-top:-8px;margin-left:-78px;" role="menu">'
+								shtml += '					<li><a href="javascript:void(0);" onclick = "activityDetail('+ couponLists[i].couponId +')">详情</a></li>'
+								<#if shiro.hasPermission("editMarket")>
+									if(couponLists[i].activityStatus != 2){
+										shtml += '				<li><a href="javascript:void(0);" onclick = "activityCancel('+ couponLists[i].couponId +')">下架</a></li>'
+									}
+								</#if>
+								shtml += '					<li><a href="javascript:void(0);" onclick = "activityRecord('+ couponLists[i].couponId +')">领取记录</a></li>'
+								shtml += '				</ul>'
+								shtml += '			</div>'
+								shtml += '		</div>'
+								shtml += '		<div style="height:50%">'
+								shtml += '			<div style="text-align: center; padding-top:25px;">'
+								if(couponLists[i].rangeType == 2){
+									shtml += '			<div style="font-size:16px;font-weight:bold;color:#B1B1B8;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:0px 15px;" title="仅限'+ couponLists[i].rangeRelationName +'使用">仅限'+ couponLists[i].rangeRelationName +'使用</div>'
+								}else if(couponLists[i].rangeType == 1){
+									shtml += '			<div style="font-size:16px;font-weight:bold;color:#B1B1B8;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;padding:0px 15px;" title="仅限'+ couponLists[i].rangeRelationName +'类别使用">仅限'+ couponLists[i].rangeRelationName +'类别使用</div>'
+								}else{
+									shtml += '			<div style="font-size:16px;font-weight:bold;color:#B1B1B8;">' + couponLists[i].rangeRelationName + '</div>'
+								}
+								if(!couponLists[i].timeType){
+									shtml += '			<div style="font-size:16px;font-weight:bold;color:#B1B1B8;">'+ couponLists[i].startTime +' 至 '+ couponLists[i].endTime +'</div>'
+								}else{
+									shtml += '			<div style="font-size:16px;font-weight:bold;color:#B1B1B8;">自领取之日起' + couponLists[i].days + '天内有效</div>'
+								}
+								shtml += '			</div>'
+								shtml += '		</div>'
+								shtml += '	</div>'
+								shtml += '</div>'
+						}
+					}
+					if(couponLists.length == 0){
+						shtml += '	<div style="margin-top:100px;text-align:center;">'
+						shtml += '		<img alt="优惠券" src="/images/data_none.png">'
+						shtml += '		<div style="text-align: center;margin-top:20px;font-size:20px;color:#CACBCC;">暂无活动记录</div>'
+						shtml += '	</div>'
+					}
+					$("#activityList").html(shtml);
+				} else {
+					layer.msg("获取活动列表失败", {icon : 2 });
+				}
+			},
+			error: function(resp) {
+				layer.msg("网络错误", {icon : 2 });
+			}
+		});
+	}
+	
+	function activityDetail(couponId) {
+		$.modal.dialog_detail('活动详情', '/mall/market/detail/'+couponId, 500, 350, false);
+	}
+	
+	function activityCancel(couponId) {
+		$.modal.confirm('您确定要下架该活动吗?', function(index){
+			$.post('/mall/market/cancel',{"couponId": couponId},function(json){
+				if(json.code == 200){
+					parent.layer.msg(json.msg, {icon : 1});
+					initmarketlist();
+				}else{
+					$.modal.msgWarning(json.msg);
+				}
+			});
+		});
+	}
+	
+	function activityRecord(couponId) {
+		$.modal.dialog_detail("领取记录", "/mall/market/record/"+ couponId);
+	}
+</script>

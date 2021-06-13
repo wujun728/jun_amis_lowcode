@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+<th:block th:include="include :: header('用户列表')" />
+</head>
+<body class="gray-bg">
+	<section class="content">
+		<div class="box box-default" style="margin-bottom: 10px;">
+			<div class="box-body">
+				<div class="col-sm-12 search-collapse">
+					<form id="formSearch">
+						<div class="select-list">
+							<ul>
+								<li>
+									用户名称：<input type="text" id="username" name="username" placeholder="请输入名称"/>
+								</li>
+								<li>
+									邮箱账号：<input type="text" id="email" name="email" placeholder="请输入邮箱"/>
+								</li>
+								<li>
+									电话号码：<input type="text" id="phone" name="phone" placeholder="请输入电话"/>
+								</li>
+								<li>
+									<a class="btn btn-primary btn-rounded btn-sm" id="btn_query"><i class="fa fa-search"></i>&nbsp;搜索</a>
+									<a class="btn btn-warning btn-rounded btn-sm" id="btn_reset"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+									<a class="btn btn-rounded btn-sm bg-teal" id="btn_import"><i class="fa fa-upload"></i>&nbsp;导入</a>
+									<a class="btn btn-rounded btn-sm bg-orange" id="btn_export"><i class="fa fa-download"></i>&nbsp;导出</a>
+								</li>
+							</ul>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="jax-box-table">
+			<div id="toolbar">
+				<shiro:hasPermission name="user:add">
+					<button id="btn_add" type="button" class="btn btn-primary btn-sm">
+						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+					</button>
+				</shiro:hasPermission>
+				<shiro:hasPermission name="user:batchDelete">
+					<button id="btn_batch_delete" type="button" class="btn btn-danger btn-sm">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+					</button>
+				</shiro:hasPermission>
+			</div>
+			<table id="table"></table>
+		</div>
+	</section>
+	<form id="importForm" enctype="multipart/form-data" style="display: none;margin-top:20px; margin-bottom:10px;">
+		<div class="col-xs-offset-1">
+			<input type="file" id="file" name="file"/>
+			<div style="margin-top:10px; padding-top:10px;">
+				<input type="checkbox" id="updateSupport" name="updateSupport" title="如果登录账户已经存在，更新这条数据。"> 是否更新已经存在的用户数据
+				 &nbsp;	<a onclick="importTemplate()" class="btn btn-default btn-xs"><i class="fa fa-file-excel-o"></i> 下载模板</a>
+			</div>
+			<font color="red" class="pull-left"  style="margin-top:10px;">
+				提示：仅允许导入“xls”或“xlsx”格式文件！
+			</font>
+		</div>
+	</form>
+	<th:block th:include="include :: footer" />
+	<script>
+		var editFlag = "[[${@perms.hasPerm('user:edit')}]]";
+		var deleteFlag = "[[${@perms.hasPerm('user:delete')}]]";
+		var assignRoleFlag = "[[${@perms.hasPerm('user:assignRole')}]]";
+		var columns = [
+			{
+				checkbox : true
+			},
+			{
+				field : 'username',
+				title : '用户名',
+				align : "center"
+			},
+			{
+				field : 'email',
+				title : '邮箱',
+				align : "center"
+			},
+			{
+				field : 'phone',
+				title : '电话',
+				align : "center",
+			},
+			{
+				field : 'status',
+				title : '用户状态',
+				align : "center",
+				formatter : function(value, row, index) {
+					return row.status == '1' ? "启用" : "禁用";
+				}
+			},
+			{
+				field : 'operation',
+				title : '操作',
+				align : "center",
+				formatter : function(value, row, index) {
+					var edit = editFlag == "true" ? '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="editUser('
+							+ row.userId
+							+ ')"><i class="fa fa-edit"></i>编辑</a> '
+							: '';
+					var assign = '';
+					var del = '';
+					if (row.userId != 1) {
+						assign = assignRoleFlag == "true" ? '<a class="btn btn-info btn-xs cursor-pointer" href="javascript:;" onclick="assignRoleList('
+								+ row.userId
+								+ ')"><i class="fa fa-key"></i>分配角色</a> '
+								: '';
+						del = deleteFlag == "true" ? '<a class="btn btn-danger btn-xs cursor-pointer" href="javascript:;" onclick="deleteUser('
+								+ row.userId
+								+ ')"><i class="fa fa-remove"></i>删除</a> '
+								: '';
+					}
+					return edit + assign + del;
+
+				}
+			} ];
+		var options = {
+			id : "#table",
+			url : '/user/list',
+			columns : columns,
+			queryParams : queryParams
+		}
+		$.table.initTable(options);
+		/*查询用户参数*/
+		function queryParams(params) {
+			var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
+				limit : params.limit, //页面大小
+				offset : params.offset, //页码
+				username : $("#username").val(),
+				email : $("#email").val(),
+				phone : $("#phone").val()
+			};
+			return temp;
+		}
+		/*搜索*/
+		$("#btn_query").click(function() {
+			$.table.refreshTable();
+		});
+		/*重置*/
+		$("#btn_reset").click(function() {
+			$.common.clearForm("formSearch");
+			$.table.refreshTable();
+		});
+		/* 导出 */
+		$("#btn_export").click(function() {
+			$.common.postAjax("/user/export", {}, function(data) {
+				if (data.status == 200) {
+					window.location.href = "/common/download?fileName=" + encodeURI(data.msg) + "&delete=" + true;
+				} else {
+					toastr.error(data.msg);
+				}
+			})
+		});
+		/*新增*/
+		$("#btn_add").click(function() {
+			$.modal.dialog_open("新增用户", "/user/add")
+		});
+		/*编辑*/
+		function editUser(userId) {
+			$.modal.dialog_open("编辑用户", "/user/edit?userId=" + userId);
+		}
+		/*分配角色-列表查询*/
+		function assignRoleList(userId) {
+			$.modal.dialog_open("分配角色", "/user/assign?userId=" + userId);
+		}
+		/*删除*/
+		function deleteUser(userId) {
+			$.modal.confirm("确定删除该用户？", function() {
+				$.common.postAjax("/user/delete", {
+					"userId" : userId
+				}, function(data) {
+					if (data.status == 200) {
+						$.table.refreshTable("#table", true);
+						toastr.success(data.msg);
+					} else {
+						toastr.error(data.msg);
+					}
+				}, "get")
+			})
+		}
+		/*批量删除*/
+		$("#btn_batch_delete").click(
+			function() {
+				var checkedRows = $.table.selectMutiData("#table");
+				if (checkedRows) {
+					$.modal.confirm("确定删除选中的" + checkedRows.length
+							+ "条记录？", function() {
+						var userIdStr = "";
+						$.each(checkedRows, function(i, item) {
+							userIdStr += (item.userId + ",");
+						})
+						userIdStr = userIdStr.substring(0,
+								userIdStr.length - 1);
+						$.common.postAjax("/user/batch/delete", {
+							"userIdStr" : userIdStr
+						}, function(data) {
+							if (data.status == 200) {
+								$.table.refreshTable("#table", true);
+								toastr.success(data.msg);
+							} else {
+								toastr.error(data.msg);
+							}
+						}, "get")
+					})
+				}
+			}
+		);
+		
+		$("#btn_import").click(function() {
+        	layer.open({
+        		type: 1,
+        		area: ['400px', '230px'],
+        		fix: false,
+        		//不固定
+        		maxmin: true,
+        		shade: 0.3,
+        		title: '导入用户数据',
+        		content: $('#importForm'),
+        		btn: ['<i class="fa fa-check"></i> 导入', '<i class="fa fa-remove"></i> 取消'],
+        		shadeClose: true, // 弹层外区域关闭
+        		btn1: function(index, layero){
+        			var file = layero.find('#file').val();
+        			if (file == '' || (!$.common.endWith(file, '.xls') && !$.common.endWith(file, '.xlsx'))){
+        				toastr.error("请选择后缀为 “xls”或“xlsx”的文件。");
+        				return false;
+        			}
+        			var index = layer.load(2, {shade: false});
+        			var formData = new FormData();
+        			formData.append("file", $('#file')[0].files[0]);
+        			formData.append("updateSupport", $("input[name='updateSupport']").is(':checked'));
+        			$.ajax({
+        				url: "/user/importData",
+        				data: formData,
+        				cache: false,
+        				contentType: false,
+        				processData: false,
+        				type: 'POST',
+        				success: function (result) {
+        					if (result.status == 200) {
+        						layer.closeAll('iframe');
+        						$.table.refreshTable("#table", true);
+								toastr.success(result.msg);
+        					} else {
+        						layer.closeAll('iframe');
+        						toastr.error(result.msg);
+        					}
+        				}
+        			});
+        		}
+        	});
+		})
+		// 下载模板
+		function importTemplate() {
+			$.get("/user/importTemplate", function(result) {
+				if (result.status == 200) {
+			        window.location.href = "/common/download?fileName=" + result.msg + "&delete=" + true;
+				} else {
+					toastr.error(result.msg);
+				}
+			});
+        }
+	</script>
+</body>
+</html>

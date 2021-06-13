@@ -1,0 +1,47 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<div role="form" class="form-horizontal">
+		<div class="box-body">
+			<table class="table table-bordered">
+				<tr Style="background-color: #f7f7fa;">
+					<th>编号</th>
+					<th>规格名称</th>
+					<th>库存数量</th>
+					<th>操作</th>
+				</tr>
+				<#list skudetails as skudetail>
+				<tr>
+					<td>${skudetail_index + 1}</td>
+					<td>${skudetail.skudetails}</td>
+					<td><input type="text" class="form-control stockNum" value="${skudetail.number}" disabled="disabled" onblur="doEditNum(this, ${skudetail.skudetailId})"></td>
+					<td><a class="btn btn-primary btn-xs" href="javascript:void(0);" onclick="focusNum(this)" title="修改"><i class="fa fa-pencil"></i>修改</a></td>
+				</tr>
+				</#list>
+			</table>
+		</div>
+	</div>
+</div>
+</@body> <script type="text/javascript">
+	function focusNum(e){
+		$(e).parent().parent().find(".stockNum").removeAttr("disabled").focus();
+	}
+	function doEditNum(e, id){
+		var stockNum = $(e).val();
+		$.ajax({  
+            url: '/mall/stock/editStock',  
+            type: 'POST',  
+            data: {skudetailId: id, number: stockNum},  
+            cache: false,  
+            success: function (data) {  
+				if (data.code == 200) {
+					$(e).attr("disabled","disabled");
+					parent.layer.msg('保存成功', {icon : 1});
+					window.parent.data_oTable.draw(false);
+				} else {
+					layer.msg(data.msg, {icon : 2 });
+				}
+            }
+       });
+	}
+</script>

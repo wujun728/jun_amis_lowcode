@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.job.mapper.SysJobLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.job.entity.SysJobLog">
+        <id column="job_log_id" property="jobLogId" />
+        <result column="job_name" property="jobName" />
+        <result column="job_group" property="jobGroup" />
+        <result column="invoke_target" property="invokeTarget" />
+        <result column="job_message" property="jobMessage" />
+        <result column="status" property="status" />
+        <result column="exception_info" property="exceptionInfo" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>

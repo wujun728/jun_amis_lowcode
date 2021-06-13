@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallGoodsSkuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallGoodsSku">
+        <id column="sku_id" property="skuId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="skukey" property="skukey" />
+        <result column="skuvalue" property="skuvalue" />
+        <result column="keyclass_type" property="keyclassType" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="deleted" property="deleted" />
+    </resultMap>
+
+</mapper>

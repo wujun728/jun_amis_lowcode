@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache,must-revalidate">
+	<meta http-equiv="Cache" content="no-cache">
+	<title>HT-MALL</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="${request.contextPath}/plugins/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="${request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="${request.contextPath}/app/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="${request.contextPath}/app/css/skins/all-skins.min.css">
+	<!--[if lt IE 9]>
+	    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="${request.contextPath}/images/favicon.ico" />
+	<style type="text/css">
+		.has-feedback .form-control {
+			height: 50px;
+		}
+
+		.form-control-feedback {
+			top: 8px;
+			important !
+		}
+
+		label.error {
+			position: inherit;
+		}
+		
+		body.signin {
+			height:auto;
+			background:url(${request.contextPath}/images/login-background.jpg) no-repeat center fixed;
+			-webkit-background-size:cover;
+			-moz-background-size:cover;
+			-o-background-size:cover;
+			background-size:cover;
+			color:rgba(255,255,255,.95)
+		}
+	</style>
+</head>
+<body class="hold-transition login-page signin">
+	<div class="login-box">
+		<div class="login-logo"><b>HT-MALL</b></div>
+		<form action="/doLogin" method="post" id="signupForm">
+			<div class="login-box-body" style="background: rgba(255,255,255,.6);">
+				<p class="login-box-msg">请输入用户名和密码登录</p>
+				<#if error??>
+					<div class="alert alert-danger alert-dismissible">
+						<h4 style="margin-bottom: 0px;"><i class="fa fa-exclamation-triangle"></i> ${error!}</h4>
+					</div>
+				</#if>
+				<div class="form-group has-feedback mg">
+					<input type="hidden" name="return_url" value="${return_url!}">
+					<input type="text" class="form-control" name="userName" placeholder="用户名">
+					<span class="glyphicon glyphicon-user form-control-feedback"></span>
+				</div>
+				<div class="form-group has-feedback mg">
+					<input type="password" class="form-control" name="password" placeholder="密码">
+					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+				</div>
+				<div class="form-group has-feedback">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group has-feedback mg">
+								<input type="text" class="form-control" name="captcha" placeholder="验证码"
+									autocomplete="off">
+								<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group has-feedback">
+								<img alt="如果看不清楚，请单击图片刷新！" id="vcode-img" style="cursor:pointer;" src="/captcha" onclick="changeVcode();">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-8">
+						<div class="checkbox icheck"></div>
+					</div>
+					<div class="col-xs-4">
+						<button type="submit" class="btn btn-primary btn-block btn-flat"><i
+								class="fa fa-sign-in"></i>登录</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="${request.contextPath}/plugins/jQuery/jquery-2.2.3.min.js"></script>
+	<script src="${request.contextPath}/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="${request.contextPath}/plugins/jquery-validation/jquery.validate.min.js"></script>
+	<script src="${request.contextPath}/plugins/jquery-validation/jquery.validate.extend.js"></script>
+	<script src="${request.contextPath}/plugins/jquery-validation/messages_zh.min.js"></script>
+	<script type="text/javascript">
+		if (window.top!==window.self) { alert('未登录或登录超时。请重新登录'); window.top.location=window.location };
+		function changeVcode() {
+            $("#vcode-img").attr('src', '/captcha?' + Math.floor(Math.random() * 100));
+        };
+		var icon = "<i class='fa fa-times-circle'></i> ";
+		var validator = $("#signupForm").validate({
+			errorElement: 'span',
+			rules: {
+				userName: {
+					required: true
+				},
+				password: {
+					required: true
+				},
+				captcha: {
+					required: true,
+				}
+			},
+			messages: {
+				userName: {
+					required: icon + "请输入您的用户名",
+				},
+				password: {
+					required: icon + "请输入您的密码",
+				},
+				captcha: {
+					required: icon + "请输入验证码",
+					minlength: icon + "验证码长度不能小于 5 个字符",
+				}
+			}
+		})
+	</script>
+</body>
+</html>

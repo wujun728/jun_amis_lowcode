@@ -1,0 +1,105 @@
+<#include "/common/layout.html">
+<link rel="stylesheet" href="/plugins/bootstrap-fileinput/css/fileinput.min.css">
+<@body>
+<div class="wrapper">
+    <section class="content">
+      <form class="form-horizontal" method="post" action="/system/me/updateUser" id="infoFrom">
+          <div class="box-body">
+            	<input type="hidden" value="${(sysUser.id)!}" id="id" name="id">
+            	<div class="form-group">
+              		<label for="userName" class="col-sm-2 control-label">用户名</label>
+              		<div class="col-sm-10">
+                		<input type="text" name="userName" value="${(sysUser.userName)!}" class="form-control" readonly="readonly">
+              		</div>
+            	</div>
+            	<input type="hidden" value="${(sysUser.userImg)!}" id="userImg" name="userImg">
+            	<div class="form-group">
+                	<label for="systemLogo" class="col-sm-2 control-label">头像</label>
+                	<div class="col-sm-10">
+                  		<input name="file" type="file" class="file-loading" id="systemLogo">
+                	</div>
+              	</div>
+              	<#if info??>
+	            <div class="form-group">
+	              	<div  class="alert alert-success alert-dismissible">
+	          			<h4 style="margin-bottom: 0px;"><i class="fa fa-info"></i> ${info!}</h4>
+        			</div>
+            	</div>
+            	</#if>
+          </div>
+        </form>
+    </section>
+</div>
+</@body>
+
+<script src="/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+<script type="text/javascript">
+	//初始化fileinput控件（第一次初始化）
+	function initFileInput(ctrlName, uploadUrl) {    
+	    var control = $('#' + ctrlName); 
+	    control.fileinput({
+	    	initialPreview: [
+	        	'${(sysUser.userImg)!}'
+	        ],
+	        initialPreviewAsData: true,
+	        initialPreviewConfig: [
+	            {caption: "${(sysUser.userImg)!}", size: 930321, width: "120px", key: '${(sysUser.id)!}', showDelete: false}
+	        ],
+	        deleteUrl: "/file/delete",
+	        language: 'zh', //设置语言
+	        uploadUrl: uploadUrl, //上传的地址
+	        allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀
+	        showUpload: false, //是否显示上传按钮
+	        showCaption: false,//是否显示标题
+	        browseClass: "btn btn-primary"       
+	    });
+	}
+	
+	initFileInput("systemLogo", "/file/upload");
+
+	//上传成功回调函数
+	$('#systemLogo').on("fileuploaded", function(event, data, previewId, index) {
+	    var result = data.response;
+	    $('#userImg').val(result.urls[0]);
+	});
+
+	function submitHandler() {
+		if ($("#infoFrom").validate().form()) {
+			var formData = new FormData($("#infoFrom")[0]);
+			$.ajax({
+				url : $("#infoFrom").attr('action'),
+				type : 'POST',
+				data : formData,
+				cache: false,
+	            contentType: false,
+	            processData: false,
+	            dataType: 'json',
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					if (data.code == 200) {
+						if (data.msg) {
+							layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							layer.msg('修改成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

@@ -1,0 +1,75 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<input type="hidden" id="couponId" value="${couponId}" >
+	<table id="couponRecord_initTable" class="table table-bordered table-hover" >
+	</table>
+</div>
+</@body>
+<script>
+	$(function(){
+　　		initTable();
+	}); 
+	var query_data = {
+		couponId: $("#couponId").val()
+	}
+	//渲染表格
+	function initTable() {
+		var options = {
+			id: 'couponRecord_initTable',
+			ajax: {
+				url: "/mall/market/listRecord",
+				type: "POST",
+				data: query_data,
+			},
+			columnDefs: [{
+				targets: 0,
+				title: "领取用户",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.userName != null) {
+						return t.userName;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 1,
+				title: "联系电话",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.userDesc != null) {
+						return t.userMobile;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 2,
+				title: "领取时间",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.createTime != null) {
+						return t.createTime;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 3,
+				title: "使用情况",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.status == 1) {
+						return '<font color="green">已使用</font>';
+					} else {
+						return '<font color="red">未使用</font>';
+					}
+				}
+			}]
+		};
+		//渲染表格
+		data_oTable = $.table.init(options);
+	}
+</script>
+

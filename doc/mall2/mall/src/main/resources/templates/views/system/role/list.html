@@ -1,0 +1,150 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<div class="form-inline">
+							<div class="box-header">
+								<#if shiro.hasPermission("addRole")>
+									<div class="input-group">
+										<a class="btn btn-sm btn-primary dialog" href="javascript:;" data-url="/system/role/add" data-title="创建角色"><i class="fa fa-plus"></i> 创建角色</a>
+									</div>
+								</#if>
+								<div class="input-group input-group-sm">
+									<input type="text" name="search_value" id="search_value" class="form-control" placeholder="角色名称">
+									<div class="input-group-btn">
+										<a href="javascript:;" id="search_data" class="btn btn-default" ><i class="fa fa-search"></i> 搜索</a>
+										<a href="javascript:;" id="search_refresh" class="btn btn-default"><i class="fa fa-refresh"></i> 重置</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<table id="role_initTable" class="table table-bordered table-hover" ></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+<script>
+	$(function(){
+		initTable();
+	}); 
+	var query_data = {
+		search: ''
+	}
+	//搜索
+	$("#search_data").off().on("click", function() {
+		query_data.search = $("#search_value").val();
+		reloadTable();
+	});
+	//重置
+	$("#search_refresh").off().on("click", function() {
+		query_data.search = "";
+		$("#search_value").val("");
+		reloadTable();
+	});
+	//重新加载表格
+	function reloadTable() {
+		var oSetting = data_oTable.settings()[0];
+		oSetting.ajax.data = query_data;
+		data_oTable.draw();
+	}
+	//渲染表格
+	function initTable() {
+		var options = {
+			id: "role_initTable",
+			ajax: {
+				url: "/system/role/listPage",
+				type: "POST",
+				data: query_data,
+			},
+			columnDefs: [{
+				targets: 0,
+				title: "行号",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					return n.row+1;
+				}
+			},{
+				targets: 1,
+				title: "角色名称",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.roleName != null) {
+						var shtml= '<a class="btn btn-xs" href="javascript:;" onclick="toAssignUsers('+ t.roleId +')">'
+							shtml += ' <span>[分配用户]</span>'
+							shtml += '</a>';
+						return t.roleName+shtml;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 2,
+				title: "描述",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.roleDesc != null) {
+						return t.roleDesc;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 3,
+				title: "创建时间",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.createTime != null) {
+						return t.createTime;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 4,
+				title: "状态",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.roleState == 1) {
+						return '<font color="green">启用</font>';
+					} else {
+						return '<font color="red">禁用</font>';
+					}
+				}
+			},{
+				targets: 5,
+				title: "操作",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					var html = '';
+						html += '<div>'
+						<#if shiro.hasPermission("authRole")>
+							html += '<a class="btn btn-info btn-xs dialog" href="javascript:;" data-url="/system/role/auth/'+ t.roleId +'" data-title="授权"><i class="fa fa-key"></i>授权</a>'
+						</#if>
+						<#if shiro.hasPermission("editRole")>
+							html += ' <a class="btn btn-primary btn-xs dialog" href="javascript:;" data-url="/system/role/edit/'+ t.roleId +'" data-title="编辑"><i class="fa fa-pencil"></i>编辑</a>'
+						</#if>
+						<#if shiro.hasPermission("deleteRole")>
+							html += ' <a class="btn btn-danger btn-xs" delete-url="/system/role/delete" data-id="'+ t.roleId +'" data-title="删除"><i class="fa fa-trash"></i>删除</a>'
+						</#if>
+						html += '</div>';
+					return html;
+				}
+			}]
+		};
+		//渲染表格
+		data_oTable = $.table.init(options);
+	}
+	
+	function toAssignUsers(roleId) {
+		createMenuItem("/system/role/assignUsers/" + roleId, "分配用户");
+	}
+ </script>

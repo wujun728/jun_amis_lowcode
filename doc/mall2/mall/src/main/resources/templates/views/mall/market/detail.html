@@ -1,0 +1,28 @@
+<#include "/common/layout.html">
+<@body>
+	<div class="invoice-info">
+       <div class="col-sm-12 invoice-col">
+       	<div id="ec_system_box" style="padding: 15px;margin-right: auto;margin-left: auto;padding-left: 30px;padding-right: 30px;">
+			<p>活动名称：${coupon.couponName}</p>
+			<p>活动门槛：${coupon.conditionNum} 元</p>
+			<p>满减金额：${coupon.discount} 元</p>
+			<p>优惠券总数：${coupon.total} 张</p>
+			<#if coupon.timeType == 1>
+				<p>有效期限：自领取之日起 ${coupon.days} 天内有效</p>
+			<#else>
+				<p>有效期限：${coupon.startTime?string('yyyy-MM-dd HH:mm:ss')} 至    ${coupon.endTime?string('yyyy-MM-dd HH:mm:ss')} </p>
+			</#if>
+			<p>限制范围：
+			<#if coupon.rangeType == 1>
+				仅限类别（ ${coupon.rangeRelationName}）使用
+			<#elseif coupon.rangeType == 2>
+				仅限（ ${coupon.rangeRelationName}）使用
+			<#else>
+				${coupon.rangeRelationName}
+			</#if>
+			</p>
+			<p>活动描述：${coupon.activityDesc}</p>
+         </div>
+       </div>
+     </div>
+</@body>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.system.mapper.SysUserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.qingshop.mall.modules.system.entity.SysUser">
+		<id column="user_id" property="userId" />
+		<result column="user_name" property="userName" />
+		<result column="password" property="password" />
+		<result column="dept_id" property="deptId" />
+		<result column="user_state" property="userState" />
+		<result column="user_desc" property="userDesc" />
+		<result column="user_img" property="userImg" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+	</resultMap>
+	
+	<!-- 查询用户列表数据 -->
+	<select id="selectUserList" resultType="java.util.HashMap">
+		SELECT
+			u.user_id userId, u.user_name userName, u.user_state userState, u.user_img userImg, u.create_time createTime, d.`dept_name` deptName
+		FROM
+			`sys_user` u
+		LEFT JOIN
+			`sys_dept` d ON d.`dept_id` = u.`dept_id`
+		WHERE 1=1
+		<if test="search != null">
+			AND u.user_name LIKE CONCAT('%',#{search},'%')
+		</if>
+		ORDER BY 
+			u.`create_time` DESC
+	</select>
+	
+	<!-- 查询用户的所拥有的权限 -->
+	<select id="queryAllPermsByUserId" resultType="string">
+		select
+			m.resource 
+		FROM
+			sys_user_role ur 
+		LEFT JOIN
+			sys_role_menu rm ON ur.role_id = rm.role_id 
+		LEFT JOIN
+			sys_menu m ON rm.menu_id = m.menu_id 
+		WHERE 
+			ur.user_id = #{userId}
+	</select>
+
+</mapper>

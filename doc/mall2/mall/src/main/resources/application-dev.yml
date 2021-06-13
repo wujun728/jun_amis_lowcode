@@ -1,0 +1,52 @@
+# 数据源配置
+spring:
+   redis: #spring-redis的配置
+      database: 0 #Redis索引0~15，默认为0
+      host: 127.0.0.1
+      port: 6379
+      password:
+      timeout: 30000 #连接超时时间（毫秒））
+      jedis:
+         pool:
+            max-idle: 5 #连接池中的最大空闲连接
+            min-idle: 0 #连接池中的最小空闲连接
+            max-active: 8
+            max-wait: -1
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      druid:
+         master:
+            url: jdbc:mysql://127.0.0.1:3306/adminlte?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+            username: root
+            password: 123456
+         slave:
+            enabled: false
+            url: null
+            username: null
+            password: null
+         initialSize: 5
+         minIdle: 10
+         maxActive: 20
+         maxWait: 60000
+         timeBetweenEvictionRunsMillis: 60000
+         minEvictableIdleTimeMillis: 300000
+         maxEvictableIdleTimeMillis: 900000
+         validationQuery: SELECT 1 FROM DUAL
+         testWhileIdle: true
+         testOnBorrow: false
+         testOnReturn: false
+         webStatFilter:
+            enabled: true
+         statViewServlet:
+            enabled: true
+            url-pattern: /monitor/druid/*
+         filter:
+            stat:
+               enabled: true
+               log-slow-sql: true
+               slow-sql-millis: 1000
+               merge-sql: true
+            wall:
+               config:
+                  multi-statement-allow: true

@@ -1,0 +1,50 @@
+<#include "/common/dialogbox.html">
+<@header>
+</@header>
+<@body>
+<form method="post" action="/system/dept/doEdit" id="deptEditForm">
+  <div class="box-body">
+  	<input type="hidden" value="${(dept.id)}" name="id" />
+    <div class="form-group">
+      	<label for="deptName">部门名称</label>
+     	<input type="text" id="deptName" name="deptName" class="form-control" value="${(dept.deptName)!}" required placeholder="请输入部门名称">
+    </div>
+    <div class="form-group">
+        <label>部门描述</label>
+        <textarea class="form-control" name="deptDesc" rows="3" placeholder="请输入描述，最多300个字符 ..." >${(dept.deptDesc)!}</textarea>
+    </div>
+  </div>
+</form>
+</@body>
+<@footer>
+<script type="text/javascript">
+	function submitHandler() {
+		if ($("#deptEditForm").validate().form()) {
+			var formData = $("#deptEditForm").serialize();
+			$.ajax({
+				url : $("#deptEditForm").attr('action'),
+				type : 'POST',
+				dataType: "json",
+				data : formData,
+				success : function(data) {
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						window.parent.location.reload();
+						parent.layer.closeAll('iframe');
+					} else {
+						layer.msg(data.msg, { icon : 2 });
+					}
+				}
+			});
+		}
+	}
+</script>
+</@footer>

@@ -1,0 +1,83 @@
+<#include "/common/dialogbox.html">
+<@header>
+<link rel="stylesheet" href="/plugins/bootstrap-fileinput/css/fileinput.min.css">
+</@header>
+<@body>
+ <form method="post" id="importDeptForm">
+   <div class="box">
+   		<div class="box-body">
+  			<div class="form-group">
+				<button type="button" class="btn btn-primary" id="export_Template"><i class="fa fa-file-excel-o"></i> 点击下载导入模板</button>
+	     	</div>
+	     	<div class="form-group">
+	     		<label class="font-noraml">额外参数传递</label>
+               	<input type="text" id="searchName" name="searchName" class="form-control">
+     		</div>
+	     	<div class="form-group">
+				<label class="font-noraml">选择导入文件</label>
+				<div class="file-loading">
+		          <input id="importFile" name="importFile" type="file"'>
+		        </div>
+		        <div id="kartik-file-errors"></div>
+	     	</div>
+		</div>
+   </div>
+ </form>
+</@body>
+<@footer>
+<script src="/plugins/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="/plugins/bootstrap-fileinput/js/locales/zh.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+	    $("#importFile").fileinput({
+	    	language: 'zh',
+	        showPreview: false,
+	        showUpload: false,
+	        uploadAsync: false,
+	        maxFileCount : 1,
+	        uploadExtraData: uploadExtraData,
+	        elErrorContainer: '#kartik-file-errors',
+	        allowedFileExtensions: ["xls", "xlsx", "gif"],
+	        uploadUrl: '/system/dept/importDept',
+	    }).on("filebatchuploadsuccess", function(event, data) {
+	        if(data.response){
+	        	window.parent.location.reload();
+				parent.layer.closeAll('iframe'); // 关闭当前frame
+	        }
+	    }).on('fileerror', function(event, data, msg) {
+	        console.log('文件上传失败！'+msg);
+	    });
+	});
+	
+	function uploadExtraData() {
+		return {'extraData':$("#searchName").val()};
+	}
+	
+	function submitHandler() {
+		if ($("#importDeptForm").validate().form()) {
+	        $("#importFile").fileinput("upload");
+		}
+	}
+	$('#export_Template').on("click", function() {
+		const xhr = new XMLHttpRequest();
+		xhr.open("POST","/system/dept/importDeptTemplate");
+		xhr.responseType = "blob";
+		xhr.send();
+		xhr.onload = function() {
+		  if (this.status === 200) {
+		    const blob = this.response;
+		    const src = URL.createObjectURL(blob);
+		    const link = document.createElement("a");
+		    const filename = '部门导入模板.xlsx';
+		    link.download = filename;
+		    link.style.display = "none";
+		    link.href = src;
+		    document.body.appendChild(link);
+		    link.click();
+		    document.body.removeChild(link);
+		  }
+		};
+	})
+</script>
+</@footer>

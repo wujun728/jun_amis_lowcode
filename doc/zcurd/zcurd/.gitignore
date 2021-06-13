@@ -1,0 +1,9 @@
+# 不包含的文件类型 #
+/target/
+*.class
+*.log
+
+# eclipse配置文件 #
+/.settings/
+*.project
+*.classpath

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qingshop.mall.modules.mall.mapper.MallShipRuleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.qingshop.mall.modules.mall.entity.MallShipRule">
+        <id column="rule_id" property="ruleId" />
+        <result column="ship_area" property="shipArea" />
+        <result column="ship_ids" property="shipIds" />
+        <result column="default_weight" property="defaultWeight" />
+        <result column="default_expense" property="defaultExpense" />
+        <result column="continue_weight" property="continueWeight" />
+        <result column="continue_expense" property="continueExpense" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+</mapper>

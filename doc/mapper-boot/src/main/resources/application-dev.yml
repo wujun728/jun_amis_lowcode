@@ -1,0 +1,12 @@
+spring:
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/mapper-boot?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+      initialSize: 1 # 初始化大小，最小，最大
+      minIdle: 3
+      maxActive: 20
+      maxWait: 60000 # 配置获取连接等待超时的时间
+      filters: stat,wall,slf4j

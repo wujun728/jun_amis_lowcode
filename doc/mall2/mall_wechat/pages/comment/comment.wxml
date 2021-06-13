@@ -1,0 +1,26 @@
+<view class="comments">
+  <view class="h">
+    <view class="item {{ showType == 0 ? 'active' : ''}}" bindtap="switchTab0">
+      <view class="txt">好评({{goodCount}})</view>
+    </view>
+    <view class="item {{ showType == 0 ? '' : 'active'}}" bindtap="switchTab1">
+      <view class="txt">差评({{badCount}})</view>
+    </view>
+  </view>
+  <view class="b">
+    <view class="item" wx:for="{{comments}}" wx:key="id">
+      <view class="info">
+        <view class="user">
+          <image src="{{item.avatarUrl}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="time">{{item.time}}</view>
+      </view>
+      <view class="comment">{{item.cont}}</view>
+      <view class="customer-service" wx:if="{{item.reply}}">
+        <text class="u">小商场回复：</text>
+        <text class="c">{{item.reply}}</text>
+      </view>
+    </view>
+  </view>
+</view>

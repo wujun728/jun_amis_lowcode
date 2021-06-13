@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HongTech科技-登录</title>
+    <meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/plugins/font-awesome/font-awesome.min.css}"/>
+    <link rel="stylesheet" th:href="@{/plugins/iCheck/square/blue.css}"/>
+    <link rel="stylesheet" th:href="@{/plugins/validate/validate.css}"/>
+    <link rel="stylesheet" th:href="@{/common/css/common.css}"/>
+    <link rel="stylesheet" th:href="@{/common/css/login.css}"/>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="logo-a" th:href="@{/}"><img th:src="@{/img/logo.png}" alt="logo"></a>
+        </div>
+    </div>
+</nav>
+<div class="login-content">
+    <div class="login-bg"></div>
+    <div class="login-box">
+        <form id="loginForm" class="login-form">
+            <div class="login-title">用户登录</div>
+            <div class="form-group has-feedback">
+                <input type="text" name="username" id="username"  class="form-control" placeholder="Email"  max="14" min="3" require="必填项" >
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                <input  name="password"  type="password" id="password" class="form-control" placeholder="Password"  require="必填项" nochinese="密码不能包括中文" >
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback vcode">
+                <div class="vcode-content">
+                    <input type="text" name="validateCode" id="validateCode" class="form-control vcode-input" placeholder="验证码" require="必填项" data-position="position-a">
+                    <span class="fa fa-key vcode-icon form-control-feedback"></span>
+                </div>
+                <img id="verificationCode" src="/verificationCode" class="pointer vcode-img">
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label style="padding: 0">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" value="1"> 记住我
+                        </label>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button id="loginBtn" type="button" class="btn btn-primary btn-block btn-flat">登录</button>
+                </div>
+                <!-- /.col -->
+            </div>
+            <div class="mt-20">
+                <a href="#">忘记密码？点击这里</a>
+                <a th:href="@{/register}" style="float: right;">注册</a>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="copyright-light copyright-section">
+    <p>Copyright © 2020. All rights reserved.</p>
+</div>
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/plugins/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/plugins/layer/layer.min.js}"></script>
+<script th:src="@{/plugins/iCheck/icheck.min.js}"></script>
+<script th:src="@{/plugins/validate/validate.js}"></script>
+<script th:src="@{/plugins/blockUI/jquery.blockUI.js}"></script>
+<script th:src="@{/common/js/core.js}"></script>
+<script>
+    $(function () {
+        if(window.top!==window.self){alert('未登录或登录超时。请重新登录');window.top.location=window.location};
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%'
+        });
+        
+        $(".vcode-img").on('click', function () {
+            $(this).attr('src', '/verificationCode?_' + new Date().getTime());
+        });
+        
+        $("#loginBtn").on('click', function () {
+            if (!doValidForm(loginForm)) {
+                return;
+            }
+        	var username = $.common.trim($("input[name='username']").val());
+            var password = $.common.trim($("input[name='password']").val());
+            var validateCode = $("input[name='validateCode']").val();
+            var rememberMe = $("input[name='rememberMe']").is(':checked');
+            $.modal.loading("登录中...");
+            $.ajax({
+                type: "post",
+                url: "/login",
+                data: {
+                    "username": username,
+                    "password": password,
+                    "validateCode": validateCode,
+                    "rememberMe": rememberMe
+                },
+                success: function (data) {
+	                if (data.status == 200) {
+	                	location.href = "/index";
+	                } else {
+	                	$.modal.closeLoading();
+	                    layer.msg(data.msg, { offset: '30%', time: 2000 });
+	                    $("#verificationCode").click();
+	                }
+            	}
+            });
+        });
+
+        $(document).keyup(function (event) {
+            if (event.keyCode == 13) {
+                $("#loginBtn").click();
+            }
+        });
+    });
+</script>
+</body>
+</html>

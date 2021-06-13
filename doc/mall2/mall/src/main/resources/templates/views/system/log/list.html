@@ -1,0 +1,145 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<div class="box-header">
+							<div class="form-inline">
+								<#if shiro.hasPermission("deleteLog")>
+									<div class="input-group">
+										<a class="btn btn-sm btn-danger" onclick="removeAll(this);" remove-batch-url="/system/log/deleteAll" ><i class="fa fa-remove"></i> 清空系统日志</a>
+									</div>
+								</#if>
+								<div class="form-group">
+									<div class="input-group input-group-sm">
+									<div class="input-group-addon">
+										<i class="fa fa-calendar"></i>
+									</div>
+									<input type="text" class="form-control pull-right daterang" id="daterange" autocomplete="off" placeholder="开始日期  - 结束日期" style="width: 228px;">
+									</div>
+								</div>
+								<div class="input-group input-group-sm">
+									<input type="text" name="search_value" id="search_value" class="form-control" placeholder="名称查询">
+									<div class="input-group-btn">
+										<a href="javascript:;" id="search_data" class="btn btn-default" ><i class="fa fa-search"></i> 搜索</a>
+										<a href="javascript:;" id="search_refresh" class="btn btn-default"><i class="fa fa-refresh"></i> 重置</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<table id="log_initTable" class="table table-bordered table-hover" ></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+<script>
+	$(function(){
+	　　	initTable();
+	}); 
+	var query_data = {
+		search: '',
+		daterange: '',
+	}
+	//搜索
+	$("#search_data").off().on("click", function() {
+		query_data.search = $("#search_value").val();
+		query_data.daterange = $("#daterange").val();
+		reloadTable();
+	});
+	//重置
+	$("#search_refresh").off().on("click", function() {
+		query_data.search = "";
+		query_data.daterange = "";
+		$("#search_value").val("");
+		$("#daterange").val("");
+		reloadTable();
+	});
+	//重新加载表格
+	function reloadTable() {
+		var oSetting = data_oTable.settings()[0];
+		oSetting.ajax.data = query_data;
+		data_oTable.draw();
+	}
+	//渲染表格
+	function initTable() {
+		var options = {
+			id:"log_initTable",
+			searching: false,
+			serverSide: true,
+			ajax: {
+				url: "/system/log/listPage",
+				type: "POST",
+				data: query_data,
+			},
+			columnDefs: [{
+				targets: 0,
+				title: "行号",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					return n.row+1;
+				}
+			},{
+				targets: 1,
+				title: "日志操作",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.title != null) {
+						return t.title;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 2,
+				title: "用户",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.userName != null) {
+						return t.userName;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 3,
+				title: "URL地址",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.url != null) {
+						return t.url;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 4,
+				title: "时间",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.createTime != null) {
+						return t.createTime;
+					} else {
+						return "";
+					}
+				}
+			}]
+		};
+		//渲染表格
+		data_oTable = $.table.init(options);
+	}
+	//清空日志
+	function removeAll(obj){
+		var removeBatchUrl = $(obj).attr('remove-batch-url');
+		$.table.removeAll(removeBatchUrl, function(){
+			data_oTable.draw(false);
+		});
+	}
+</script>

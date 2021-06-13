@@ -1,0 +1,66 @@
+<#include "/common/layout.html">
+<@body>
+<div class="content">
+	<form role="form" class="form-horizontal" method="post" action="/mall/comment/doEdit" id="editCommentForm">
+		<div class="box-body">
+			<input type="hidden" value="${(comment.commentId)}" name="commentId" />
+			<div class="form-group">
+				<label for="isShow" class="col-sm-2 control-label">类目状态</label>
+				<div class="col-sm-10">
+					<label class="radio-box">
+						<input type="radio" name="isShow" value="1" ${(comment.isShow?? && comment.isShow == 1)?string('checked','')} class="form-control minimal"> 显示
+					</label>
+					<label class="radio-box">
+						<input type="radio" name="isShow" value="0" ${(comment.isShow?? && comment.isShow == 0)?string('checked','')} class="form-control minimal"> 不显示
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="replay" class="col-sm-2 control-label">回复评论</label>
+				<div class="col-sm-10">
+					<textarea class="form-control" id="replay" name="replay" rows="5" placeholder="请输入内容，最多300个字符 ...">${comment.replay}</textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+</@body> <script type="text/javascript">
+	function submitHandler() {
+		if ($("#editCommentForm").validate().form()) {
+			var formData = $("#editCommentForm").serialize();
+			var index = layer.load(3); // 换了种风格
+			$.ajax({
+				url : $("#editCommentForm").attr('action'),
+				type : 'POST',
+				dataType : "json",
+				data : formData,
+				beforeSend : function() {
+					$.modal.loading("正在处理中，请稍后...");
+					$.modal.disable();
+				},
+				success : function(data) {
+					layer.close(index);
+					if (data.code == 200) {
+						if (data.msg) {
+							parent.layer.msg(data.msg, {
+								icon : 1
+							});
+						} else {
+							parent.layer.msg('提交成功', {
+								icon : 1
+							});
+						}
+						parent.layer.closeAll('iframe'); // 关闭当前frame
+						window.parent.data_oTable.draw(false);
+					} else {
+						layer.msg(data.msg, {
+							icon : 2
+						});
+						$.modal.closeLoading();
+						$.modal.enable();
+					}
+				}
+			});
+		}
+	}
+</script>

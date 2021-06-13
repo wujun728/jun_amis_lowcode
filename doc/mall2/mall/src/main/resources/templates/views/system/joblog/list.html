@@ -1,0 +1,174 @@
+<#include "/common/layout.html">
+<@body>
+<body class="gray-bg">
+	<div class="wrapper">
+		<section class="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="box">
+						<div class="box-header">
+							<div class="form-inline">
+								<#if shiro.hasPermission("deleteJobLog")>
+								<div class="input-group">
+									<a class="btn btn-sm btn-danger" onclick="removeAll(this);" remove-batch-url="/system/sysJobLog/deleteAll" ><i class="fa fa-remove"></i> 清空日志</a>
+								</div>
+								</#if>
+								<div class="form-group">
+									<div class="input-group input-group-sm">
+										<div class="input-group-addon">
+											<i class="fa fa-calendar"></i>
+										</div>
+										<input type="text" class="form-control pull-right daterang" id="daterange" autocomplete="off" placeholder="开始日期  - 结束日期" style="width:160px;">
+									</div>
+								</div>
+								<div class="input-group input-group-sm">
+									<input type="text" name="search_value" id="search_value" class="form-control" placeholder="名称查询">
+									<div class="input-group-btn">
+										<a href="javascript:;" id="search_data" class="btn btn-default" ><i class="fa fa-search"></i> 搜索</a>
+										<a href="javascript:;" id="search_refresh" class="btn btn-default"><i class="fa fa-refresh"></i> 重置</a>
+									</div>
+								</div>
+								<#if shiro.hasPermission("listJob")>
+								<div class="input-group">
+									<a class="btn btn-sm btn-default toNewTab" href="javascript:;" tab-url="/system/sysJob/list"><i class="fa fa-reply"></i> 返回任务</a>
+								</div>
+								</#if>
+								<div class="input-group pull-right">
+									<button type="button" class="btn btn-sm btn-primary btn-flat" onclick="exportTo('定时任务日志');"><i class="fa fa-file-excel-o"></i> 导出</button>
+								</div>
+							</div>
+						</div>
+						<div class="box-body">
+							<table id="joblog_initTable" class="table table-bordered table-hover"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</@body>
+<script>
+	$(function(){
+		initTable();
+	}); 
+	var query_data = {
+		search: '',
+		daterange: '',
+	}
+	//搜索
+	$("#search_data").off().on("click", function() {
+		query_data.search = $("#search_value").val();
+		query_data.daterange = $("#daterange").val();
+		reloadTable();
+	});
+	//重置
+	$("#search_refresh").off().on("click", function() {
+		query_data.search = "";
+		query_data.daterange = "";
+		$("#search_value").val("");
+		$("#daterange").val("");
+		reloadTable();
+	});
+	//重新加载表格
+	function reloadTable() {
+		var oSetting = data_oTable.settings()[0];
+		oSetting.ajax.data = query_data;
+		data_oTable.draw();
+	}
+	//渲染表格
+	function initTable() {
+		var options = {
+			id: "joblog_initTable",
+			ajax: {
+				url: "/system/sysJobLog/listPage",
+				type: "POST",
+				data: query_data,
+			},
+			columnDefs: [{
+				targets: 0,
+				title: "日志编号",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.jobLogId != null) {
+						return t.jobLogId;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 1,
+				title: "任务名称",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.jobName != null) {
+						return t.jobName;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 2,
+				title: "任务分组",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.jobGroup != null) {
+						return t.jobGroup;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 3,
+				title: "日志信息",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.jobMessage != null) {
+						return t.jobMessage;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 4,
+				title: "状态",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.status != null) {
+						return t.status;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 5,
+				title: "创建时间",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					if (t.createTime != null) {
+						return t.createTime;
+					} else {
+						return "";
+					}
+				}
+			},{
+				targets: 6,
+				title: "操作",
+				orderable: !1,
+				render: function(e, a, t, n) {
+					var html = '<a class="btn btn-warning btn-xs dialog_detail" data-title="调度日志详情" data-url="/system/sysJobLog/detail/'+ t.jobLogId +'"><i class="fa fa-search"></i>详情</a>';
+					return html;
+				}
+			}]
+		};
+		//渲染表格
+		data_oTable = $.table.init(options);
+	}
+	//清空日志
+	function removeAll(obj){
+		var removeBatchUrl = $(obj).attr('remove-batch-url');
+		$.table.removeAll(removeBatchUrl, function(){
+			data_oTable.draw(false);
+		});
+	}
+</script>
