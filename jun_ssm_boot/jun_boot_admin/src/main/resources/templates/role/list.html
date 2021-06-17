@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('角色列表')" />
+</head>
+<body class="gray-bg">
+	<section class="content">
+		<div class="box box-default" style="margin-bottom: 10px;">
+			<div class="box-body">
+				<div class="col-sm-12 search-collapse">
+					<form id="formSearch">
+						<div class="select-list">
+							<ul>
+								<li>
+									角色名称：<input type="text" name="roleName" id="roleName" placeholder="请输入角色名称"/>
+								</li>
+								<li>
+									<a class="btn btn-primary btn-rounded btn-sm" id="btn_query"><i class="fa fa-search"></i>&nbsp;搜索</a>
+									<a class="btn btn-warning btn-rounded btn-sm" id="btn_reset"><i class="fa fa-refresh"></i>&nbsp;重置</a>
+								</li>
+							</ul>
+						</div>
+					</form>
+				</div>
+		    </div>
+	    </div>
+	    <div class="jax-box-table">
+	        <div id="toolbar">
+	            <shiro:hasPermission name="role:add">
+	                <button id="btn_add" type="button" class="btn btn-primary btn-sm">
+	                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+	                </button>
+	            </shiro:hasPermission>
+	            <shiro:hasPermission name="role:batchDelete">
+	                <button id="btn_batch_delete" type="button" class="btn btn-danger btn-sm">
+	                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+	                </button>
+	            </shiro:hasPermission>
+	        </div>
+	        <table id="table"></table>
+	    </div>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script>
+    var editFlag = "[[${@perms.hasPerm('role:edit')}]]";
+    var deleteFlag = "[[${@perms.hasPerm('role:delete')}]]";
+    var permsFlag="[[${@perms.hasPerm('role:assignPerms')}]]";
+    var columns=[
+        {checkbox: true },
+        {
+            field: 'name',
+            title: '角色名称',
+            align : "center"
+        }, {
+            field: 'description',
+            title: '角色描述',
+            align : "center"
+        },
+        {
+            field: 'createTime',
+            title: '创建时间',
+            align : "center"
+        },
+        {
+            field : 'operation',
+            title : '操作',
+            align : "center",
+            formatter : function(value, row, index) {
+                var edit = editFlag=="true" ? '<a class="btn btn-success btn-xs cursor-pointer" href="javascript:;" onclick="editRole('+row.roleId+')"><i class="fa fa-edit"></i>编辑</a> ' : '';
+                var roleAuth = permsFlag=="true" ? '<a class="btn btn-info btn-xs cursor-pointer" href="javascript:;" onclick="assignUsersList('+row.roleId+')"><i class="fa fa-user"></i>分配角色</a> ':'';
+                var assign = permsFlag=="true" ? '<a class="btn btn-info btn-xs cursor-pointer" href="javascript:;" onclick="assignMenusList('+row.roleId+')"><i class="fa fa-key"></i>分配权限</a> ':'';
+                var del = deleteFlag=="true" ? '<a class="btn btn-danger btn-xs cursor-pointer" href="javascript:;" onclick="deleteRole('+row.roleId+')"><i class="fa fa-remove"></i>删除</a> ' : '';
+                return edit + roleAuth + assign + del;
+            }
+        }];
+    var options={
+        id:"#table",
+        url: '/role/list',
+        columns:columns,
+        queryParams : queryParams
+    }
+    $.table.initTable(options);
+  	//查询参数
+    function queryParams(params) {
+        var temp = { //这里的键的名字和控制器的变量名必须一致，这边改动，控制器也需要改成一样的
+            limit : params.limit, //页面大小
+            offset : params.offset, //页码
+            name: $("#roleName").val()
+        };
+        return temp;
+    }
+    /*搜索*/
+    $("#btn_query").click(function(){
+    	$.table.refreshTable();
+    });
+    /*重置*/
+	$("#btn_reset").click(function() {
+		$.common.clearForm("formSearch");
+		$.table.refreshTable();
+	});
+    /*新增*/
+    $("#btn_add").click(function(){
+    	$.modal.dialog_open("新增角色", "/role/add");
+    });
+    /*编辑*/
+    function editRole(roleId) {
+    	$.modal.dialog_open("编辑角色", "/role/edit?&roleId=" + roleId);
+    }
+    /*删除*/
+    function deleteRole(roleId) {
+    	$.modal.confirm("确定删除该角色？",function () {
+        	$.common.postAjax("/role/delete", {"roleId": roleId}, function (data) {
+                if (data.status == 200) {
+                	$.table.refreshTable();
+                	toastr.success(data.msg);
+                } else {
+                	toastr.error(data.msg);
+                }
+            }, "get")
+        })
+    }
+    //批量删除
+    $("#btn_batch_delete").click(function(){
+        var checkedRows= $.table.selectMutiData("#table");
+        if(checkedRows!=false){
+        	$.modal.confirm("确定删除选中的"+checkedRows.length+"条记录？",function () {
+                var roleIdStr="";
+                $.each(checkedRows, function (i, item) {
+                    roleIdStr+=(item.roleId+",");
+                })
+                roleIdStr=roleIdStr.substring(0,roleIdStr.length-1);
+                $.common.postAjax("/role/batch/delete",{"roleIdStr":roleIdStr},function(data){
+                    if(data.status==200){
+                    	$.table.refreshTable();
+                    	toastr.success(data.msg);
+                    } else {
+                    	toastr.error(data.msg);
+                    }
+                },"get")
+            })
+        }
+    });
+
+    /*分配权限-列表查询*/
+    function assignMenusList(roleId) {
+    	$.modal.dialog_open("分配权限", "/role/assignMenus?&roleId=" + roleId);
+    }
+    
+    /*分配角色-列表查询*/
+    function assignUsersList(roleId) {
+    	$.modal.dialog_detail("分配角色", "/role/assignUsers?&roleId=" + roleId);
+    }
+	</script>
+</body>
+</html>

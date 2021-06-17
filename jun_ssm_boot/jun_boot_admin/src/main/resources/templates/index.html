@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<title>管理系统</title>
+	<link th:href="@{/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+	<link th:href="@{/plugins/font-awesome/font-awesome.min.css}" rel="stylesheet" />
+	<link th:href="@{/adminlte/css/AdminLTE.min.css}" rel="stylesheet" />
+	<link th:href="@{/adminlte/css/skins/all-skins.min.css}" rel="stylesheet" />
+	<link th:href="@{/adminlte/css/tab.css?v=1.0.0}" rel="stylesheet" />
+</head>
+<body class="hold-transition skin-blue sidebar-mini fixed">
+	<div class="wrapper">
+		<header class="main-header">
+			<a href="#" class="logo"> <span class="logo-mini">HT</span> <span
+				class="logo-lg">管理系统</span>
+			</a>
+			<nav class="navbar navbar-static-top">
+				<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+					<span class="sr-only">Toggle navigation</span>
+				</a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span><shiro:principal property="username" /></span>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="javascript:;"><i class="fa fa-user"></i> 个人中心</a></li>
+								<li><a href="javascript:;" onclick="updatePwd()"><i class="fa fa-key"></i> 修改密码</a></li>
+								<li><a href="javascript:;" onclick="switchSkin()"><i class="fa fa-dashboard"></i> 切换主题</a></li>
+								<li><a th:href="@{logout}"><i class="fa fa-sign-out"></i> 退出系统</a></li>
+							</ul>
+						</li>
+						<li><a th:href="@{logout}"><i class="fa fa-sign-out"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<form action="#" method="get" class="sidebar-form">
+					<div class="input-group">
+						<input type="text" name="q" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+							<button type="button" name="search" id="search-btn"
+								class="btn btn-flat" onclick="search_menu()">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</form>
+				<ul class="sidebar-menu" data-widget="tree">
+					<li class="treeview active">
+						<a class="J_menuItem noactive" th:href="@{/main}"><i class="fa fa-home"></i> <span class="nav-label">首页</span> </a>
+						<ul class="treeview-menu"></ul>
+					</li>
+					<li class="treeview" th:each="menu : ${menus}">
+						<a th:href="@{${menu.url == ''} ? |#| : ${menu.url}}">
+							<i class="fa fa-circle-o" th:class="${menu.icon}"></i>
+							<span th:text="${menu.name}">一级菜单</span>
+							<span class="pull-right-container">
+								<i th:class="${menu.url == '' || menu.url == '#'} ? |fa fa-angle-left pull-right|"></i>
+							</span>
+						</a>
+						<ul class="treeview-menu">
+							<li th:each="cmenu : ${menu.children}">
+								<a class="J_menuItem" th:if="${#lists.isEmpty(cmenu.children)}" th:href="@{${cmenu.url}}">
+									<i class="fa fa-circle-o" th:class="${cmenu.icon}"></i>
+									<span th:utext="${cmenu.name}">二级菜单</span>
+								</a>
+								<a th:if="${not #lists.isEmpty(cmenu.children)}" href="#">
+									<i class="fa fa-circle-o" th:class="${cmenu.icon}"></i> [[${cmenu.name}]]
+									<span class="pull-right-container">
+										<i th:class="${cmenu.url == '' || cmenu.url == '#'} ? |fa fa-angle-left pull-right|"></i>
+									</span>
+								</a>
+								<ul th:if="${not #lists.isEmpty(cmenu.children)}" class="nav nav-third-level">
+									<li th:each="emenu : ${cmenu.children}">
+										<a class="J_menuItem" th:if="${#lists.isEmpty(emenu.children)}" th:href="@{${emenu.url}}">
+											<i class="fa fa-circle-o" th:class="${cmenu.icon}"></i>
+											<span th:utext="${emenu.name}">三级菜单</span>
+										</a>
+										<a th:if="${not #lists.isEmpty(emenu.children)}" href="#">
+											<i class="fa fa-circle-o"></i> [[${emenu.name}]]
+											<span class="pull-right-container">
+												<i class="fa fa-angle-left pull-right"></i>
+											</span>
+										</a>
+									    <ul th:if="${not #lists.isEmpty(emenu.children)}" class="treeview-menu">
+									      	<li th:each="fmenu : ${emenu.children}"><a class="J_menuItem" th:if="${#lists.isEmpty(fmenu.children)}" th:text="${fmenu.name}" th:href="@{${fmenu.url}}">四级菜单</a></li>
+									    </ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</aside>
+
+		<div class="content-wrapper">
+			<div class="content-tabs">
+				<button class="roll-nav roll-left J_tabLeft">
+					<i class="fa fa-backward"></i>
+				</button>
+				<nav class="page-tabs J_menuTabs">
+					<div class="page-tabs-content">
+						<a href="javascript:;" class="active J_menuTab" data-id="/main">首页</a>
+					</div>
+				</nav>
+				<button class="roll-nav roll-right J_tabRight">
+					<i class="fa fa-forward"></i>
+				</button>
+				<div class="btn-group roll-nav roll-right">
+					<button class="dropdown" data-toggle="dropdown">
+						页签操作<span class="caret"></span>
+					</button>
+					<ul role="menu" class="dropdown-menu dropdown-menu-right">
+						<li class="tabCloseCurrent"><a>关闭当前</a></li>
+						<li class="J_tabCloseOther"><a>关闭其他</a></li>
+						<li class="J_tabCloseAll"><a>全部关闭</a></li>
+					</ul>
+				</div>
+				<a href="#" class="roll-nav roll-right tabReload"><i class="fa fa-refresh"></i> 刷新</a>
+				<a href="#" class="roll-nav roll-right fullscreen" id="fullScreen"><i class="fa fa-arrows-alt"></i></a>
+			</div>
+			<div class="J_mainContent" id="content-main">
+				<iframe class="J_iframe" name="iframe0" width="100%" height="100%" th:src="@{/main}" frameborder="0" data-id="/main" seamless></iframe>
+			</div>
+		</div>
+		
+		<footer class="main-footer">
+			<div class="pull-right hidden-xs">
+				<b>Version</b> 2.4.18
+			</div>
+			<strong>Copyright &copy; 2017-2020 <a href="#">Hong Tech</a>.</strong> All rights
+			reserved.
+		</footer>
+		<div class="control-sidebar-bg"></div>
+	</div>
+	<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+	<script th:src="@{/plugins/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/adminlte/js/adminlte.min.js}"></script>
+	<script th:src="@{/plugins/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+	<script th:src="@{/plugins/blockUI/jquery.blockUI.js}"></script>
+	<script th:src="@{/plugins/fullscreen/jquery.fullscreen.js}"></script>
+	<script th:src="@{/plugins/layer/layer.min.js}"></script>
+	<script th:src="@{/adminlte/js/contabs.js?v=1.0.0}"></script>
+	<script th:src="@{/common/js/core.js?v=1.0.0}"></script>
+	<script type="text/javascript">
+		//layer皮肤设置
+		layer.config({
+			extend: 'moon/style.css',
+			skin: 'layer-ext-moon'
+		});
+		function updatePwd(){
+			$.modal.dialog_open("修改密码", "/user/updatePwd", 600, 400);
+		}
+		/* 切换主题 */
+		function switchSkin() {
+		    layer.open({
+				type : 2,
+				shadeClose : true,
+				title : "切换主题",
+				area : ["530px", "386px"],
+				content : ["/switchSkin", 'no']
+			})
+		}
+	</script>
+</body>
+</html>

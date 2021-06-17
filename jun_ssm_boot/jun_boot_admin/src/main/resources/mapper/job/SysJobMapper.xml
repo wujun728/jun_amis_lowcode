@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.modules.job.mapper.SysJobMapper">
+	<resultMap id="BaseResultMap" type="com.jun.plugin.modules.job.model.SysJob">
+		<id column="job_id" jdbcType="BIGINT" property="jobId" />
+		<id column="job_name" jdbcType="VARCHAR" property="jobName" />
+		<id column="job_group" jdbcType="VARCHAR" property="jobGroup" />
+		<result column="invoke_target" jdbcType="VARCHAR" property="invokeTarget" />
+		<result column="cron_expression" jdbcType="VARCHAR" property="cronExpression" />
+		<result column="misfire_policy" jdbcType="VARCHAR" property="misfirePolicy" />
+		<result column="concurrent" jdbcType="CHAR" property="concurrent" />
+		<result column="status" jdbcType="CHAR" property="status" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+		<result column="remark" jdbcType="VARCHAR" property="remark" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		job_id, job_name, job_group, invoke_target,
+		cron_expression, misfire_policy, concurrent, status, create_time,
+		update_time, remark
+	</sql>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.modules.job.mapper.SysJobLogMapper">
+	<resultMap id="BaseResultMap" type="com.jun.plugin.modules.job.model.SysJobLog">
+		<id column="job_log_id" jdbcType="BIGINT" property="jobLogId" />
+		<result column="job_name" jdbcType="VARCHAR" property="jobName" />
+		<result column="job_group" jdbcType="VARCHAR" property="jobGroup" />
+		<result column="invoke_target" jdbcType="VARCHAR" property="invokeTarget" />
+		<result column="job_message" jdbcType="VARCHAR" property="jobMessage" />
+		<result column="status" jdbcType="CHAR" property="status" />
+		<result column="exception_info" jdbcType="VARCHAR" property="exceptionInfo" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		job_log_id, job_name, job_group, invoke_target,
+		job_message, status, exception_info, create_time
+	</sql>
+	
+</mapper>

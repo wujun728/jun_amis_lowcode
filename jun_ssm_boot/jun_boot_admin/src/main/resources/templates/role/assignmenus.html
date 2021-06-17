@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+	<th:block th:include="include :: header('权限分配')" />
+</head>
+<body>
+	<section class="content">
+		<input class="hidden" name="roleId" id="roleId" th:value="${roleId}">
+		<ul id="menuTree" class="ztree"></ul>
+	</section>
+	<th:block th:include="include :: footer" />
+	<script type="text/javascript">
+		var roleId = $("#roleId").val();
+		//树-初始化设置
+	    var treeSetting = {
+	        check: {
+	            enable: true
+	        },
+	        data: {
+	            simpleData: {
+	                enable: true,
+	                idKey: "menuId",
+	                pIdKey: "parentId"
+	            }
+	        }
+	    };
+    	$.common.postAjax("/role/assign/menu/list",{"roleId":roleId},function(data){
+            var zNodes=data;
+            $.fn.zTree.init($("#menuTree"), treeSetting, zNodes);
+        })
+		function submitHandler() {
+            var menuIdStr="";
+            var treeObj = $.fn.zTree.getZTreeObj("menuTree");
+            var nodes = treeObj.getCheckedNodes(true);
+            for(var i=0;i<nodes.length;i++){
+                if(i==(nodes.length-1)){
+                	menuIdStr += nodes[i].menuId;
+                }else{
+                	menuIdStr += nodes[i].menuId+",";
+                }
+            }
+            $.common.postAjax( '/role/assign/menu',{roleId:roleId,menuIdStr:menuIdStr},function (data) {
+                if(data.status==200){
+                	parent.layer.closeAll('iframe'); // 关闭当前frame
+					parent.$.table.refreshTable();
+					parent.toastr.success(data.msg);
+				} else {
+					parent.toastr.error(data.msg);
+				}
+            });
+		}
+	</script>
+</body>
+</html>

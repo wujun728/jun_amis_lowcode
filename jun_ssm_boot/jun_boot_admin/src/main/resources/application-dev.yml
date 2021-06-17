@@ -1,0 +1,45 @@
+spring:
+   datasource:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      druid:
+         url: jdbc:mysql://127.0.0.1:3306/db_boot?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+         username: root
+         password: 
+         initialSize: 5
+         minIdle: 10
+         maxActive: 20
+         maxWait: 60000
+         timeBetweenEvictionRunsMillis: 60000
+         minEvictableIdleTimeMillis: 300000
+         maxEvictableIdleTimeMillis: 900000
+         validationQuery: SELECT 1 FROM DUAL
+         testWhileIdle: true
+         testOnBorrow: false
+         testOnReturn: false
+         webStatFilter:
+            enabled: true
+         statViewServlet:
+            enabled: true
+            url-pattern: /monitor/druid/*
+         filter:
+            stat:
+               enabled: true
+               log-slow-sql: true
+               slow-sql-millis: 1000
+               merge-sql: true
+            wall:
+               config:
+                  multi-statement-allow: true
+   redis:
+      database: 1
+      host: 127.0.0.1
+      port: 6379
+      password:
+      timeout: 7000
+      jedis:
+         pool:
+            max-idle: 8
+            min-idle: 0
+            max-active: 8
+            max-wait: -1

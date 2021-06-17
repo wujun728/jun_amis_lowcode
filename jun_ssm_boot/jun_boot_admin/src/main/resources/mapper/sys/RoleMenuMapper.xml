@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jun.plugin.modules.sys.mapper.RoleMenuMapper">
+	<resultMap id="BaseResultMap" type="com.jun.plugin.modules.sys.model.SysRoleMenu">
+		<id column="role_perm_id" property="rolePermId" jdbcType="INTEGER" />
+		<result column="role_id" property="roleId" jdbcType="INTEGER" />
+		<result column="menu_id" property="menuId" jdbcType="INTEGER" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		role_id, menu_id
+	</sql>
+
+	<select id="countRoleMenuByMenuId" resultType="Integer">
+		select count(1) from sys_role_menu where menu_id=#{menuId}
+	</select>
+
+</mapper>
