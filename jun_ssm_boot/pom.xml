@@ -10,12 +10,13 @@
 	<url>http://www.nb666.net</url>
     
     <modules>
-        <!-- <module>jun_boot_admin</module>
-        <module>jun_boot_framework</module>
-        <module>jun_boot_system</module>
+        <!-- <module>jun_boot_admin</module> -->
+        <module>jun_boot_common</module>
+        <module>jun_boot_code_generator</module>
         <module>jun_boot_quartz</module>
         <module>jun_boot_generator</module>
-        <module>jun_boot_common</module> -->
+        <module>jun_boot_core</module>
+        <module>jun_boot_rbac</module>
     </modules>
     
     <properties>
@@ -42,11 +43,6 @@
     </properties>
 	
      <dependencies>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.40</version>
-		</dependency>
      </dependencies>
     <!-- 依赖声明,声明不引入 -->
     <dependencyManagement>

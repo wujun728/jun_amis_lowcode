@@ -1,22 +1,7 @@
-# 项目相关配置
-ruoyi:
-  # 名称
-  name: RuoYi
-  # 版本
-  version: 4.6.1
-  # 版权年份
-  copyrightYear: 2021
-  # 实例演示开关
-  demoEnabled: true
-  # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: D:/ruoyi/uploadPath
-  # 获取ip地址开关
-  addressEnabled: false
-
 # 开发环境配置
 server:
   # 服务器的HTTP端口，默认为80
-  port: 80
+  port: 8000
   servlet:
     # 应用的访问路径
     context-path: /
@@ -56,7 +41,7 @@ spring:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
   profiles: 
-    active: druid
+    active: dev
   # 文件上传
   servlet:
      multipart:
@@ -135,3 +120,18 @@ xss:
 swagger:
   # 是否开启swagger
   enabled: true
+
+# 项目相关配置
+ruoyi:
+  # 名称
+  name: RuoYi
+  # 版本
+  version: 4.6.1
+  # 版权年份
+  copyrightYear: 2021
+  # 实例演示开关
+  demoEnabled: true
+  # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
+  profile: D:/ruoyi/uploadPath
+  # 获取ip地址开关
+  addressEnabled: false
