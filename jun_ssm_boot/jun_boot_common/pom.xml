@@ -2,14 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>ruoyi</artifactId>
-        <groupId>com.ruoyi</groupId>
-        <version>4.6.1</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>ruoyi-common</artifactId>
+    <parent>
+        <groupId>com.jun.plugin</groupId>
+		<artifactId>jun_boot_parent</artifactId>
+		<version>1.0</version>
+    </parent>
+    
+    <groupId>com.jun.plugin</groupId>
+    <artifactId>jun_boot_common</artifactId>
+	<version>1.0</version>
 
     <description>
         common通用工具

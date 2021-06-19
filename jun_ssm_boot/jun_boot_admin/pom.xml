@@ -240,6 +240,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.jun.plugin</groupId>
+		    <artifactId>jun_boot_code_generator</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 	</dependencies>
 
