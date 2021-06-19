@@ -1,9 +1,10 @@
 
-### adminlte-shiro 轻量级权限管理脚手架
+### jun_boot_admin springboot权限管理项目开发脚手架
+
 
 ### 项目说明
 -------------
-1. adminlte-shiro是以Springboot+Shiro+Mybatis为核心，以shiro-redis、redis为辅开发的精简后台基础系统。
+1. jun_boot_admin是以Springboot+Shiro+MybatisPlus为核心，以shiro-redis、redis为辅开发的精简后台基础系统。
 2. 包含用户管理,角色管理,菜单管理,定时任务,文件管理,图标工具等常用业务模块。
 3. 使用AdminLTE作为前端UI框架，添加菜单Tab页签完成内嵌iframe多页面功能, 前端项目地址：https://gitee.com/liyucc/adminlte-tab
 4. 使用Mybatis集成通用Mapper作为ORM框架。
@@ -14,7 +15,7 @@
 
 ### 技术选型
 -------------
-AdminLTE、Springboot、Shiro、Mybatis、mybatis-plus、shiro-redis、Ehcache、redis、Mysql、Maven
+AdminLTE、Springboot、Shiro、Mybatis-plus、shiro-redis、Ehcache、Redis、Mysql、Maven and so on
 
 ### 快速开始
 -------------
@@ -24,16 +25,22 @@ AdminLTE、Springboot、Shiro、Mybatis、mybatis-plus、shiro-redis、Ehcache�
 4. 运行Application.java启动类
 5. 浏览器输入http://localhost:8081,账号/密码:admin/123456
 
+### 重点功能
+-------------
+文件管理
+http://localhost:8081/sysfile
+任务管理
+http://localhost:8081/sysJob
+静态页面跳转
+http://localhost:8081/icons
+
 ### 参考项目
 -------------
 1. https://github.com/almasaeed2010/AdminLTE
-2. https://github.com/abel533/Mapper
+2. https://github.com/baomidou/mybatis-plus
 3. https://github.com/alexxiyang/shiro-redis
 4. https://gitee.com/y_project/RuoYi
 5. https://gitee.com/renrenio/renren-security
 
 ### 实例截图
 -------------
-![](https://images.gitee.com/uploads/images/2020/0924/150412_b6690d42_947463.png "1.png")
-![](https://images.gitee.com/uploads/images/2020/0924/150432_89c61fb4_947463.png "2.png")
-![](https://images.gitee.com/uploads/images/2020/0924/150516_dc9de3bc_947463.png "3.png")

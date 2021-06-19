@@ -14,10 +14,15 @@
 	<version>1.0</version>
 
     <description>
-        generator代码生成
+        jun_boot_code_generator 代码生成
     </description>
 
     <dependencies>
+        <dependency>
+            <groupId>com.jun.plugin</groupId>
+		    <artifactId>jun_boot_common</artifactId>
+			<version>1.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
 
         <!--velocity代码生成使用模板 -->
         <dependency>
@@ -40,13 +45,6 @@
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.jun.plugin</groupId>
-		    <artifactId>jun_boot_common</artifactId>
-			<version>1.0</version><!--$NO-MVN-MAN-VER$-->
-        </dependency>
-
     </dependencies>
 
 </project>

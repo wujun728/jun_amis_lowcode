@@ -3,21 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ruoyi</artifactId>
-        <groupId>com.ruoyi</groupId>
-        <version>4.6.1</version>
+        <groupId>com.jun.plugin</groupId>
+		<artifactId>jun_boot_parent</artifactId>
+		<version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ruoyi-quartz</artifactId>
+    <groupId>com.jun.plugin</groupId>
+    <artifactId>jun_boot_quartz</artifactId>
+	<version>1.0</version>
 
     <description>
-        quartz定时任务
+        jun_boot_quartz 定时任务
     </description>
 
     <dependencies>
+    	<dependency>
+            <groupId>com.jun.plugin</groupId>
+		    <artifactId>jun_boot_common</artifactId>
+			<version>1.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
 
-        <!-- 定时任务 -->
         <dependency>
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
@@ -28,13 +34,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <!-- 通用工具-->
-        <dependency>
-            <groupId>com.ruoyi</groupId>
-            <artifactId>ruoyi-common</artifactId>
-        </dependency>
-
     </dependencies>
 
 </project>
