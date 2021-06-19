@@ -8,14 +8,14 @@
 		<version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    
     <groupId>com.jun.plugin</groupId>
     <artifactId>jun_boot_rbac</artifactId>
 	<version>1.0</version>
-    <packaging>jar</packaging>
-	
 
     <description>
-        jun_boot_rbac web服务
+        jun_boot_rbac web服务入口
     </description>
 
     <dependencies>
@@ -53,36 +53,24 @@
             <optional>true</optional> <!-- 表示依赖不会传递 -->
         </dependency>
 
-        <!-- swagger2-->
+        <!-- swagger3-->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
+            <artifactId>springfox-boot-starter</artifactId>
         </dependency>
 
-        <!--防止进入swagger页面报类型转换错误，排除2.9.2中的引用，手动增加1.5.21版本-->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.5.21</version>
-        </dependency>
-
+        <!-- 防止进入swagger页面报类型转换错误，排除3.0.0中的引用，手动增加1.6.2版本 -->
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-models</artifactId>
-            <version>1.5.21</version>
-        </dependency>
-
-        <!-- swagger2-UI-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
+            <version>1.6.2</version>
         </dependency>
 
         <!-- Mysql驱动包 -->
         <dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -110,7 +98,39 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warName>${project.artifactId}</warName>
                 </configuration>   
-           </plugin>   
+            </plugin>   
+            <!-- YUI Compressor (CSS/JS压缩) 
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                    <execution>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>compress</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <jswarn>false</jswarn>
+                    <nosuffix>true</nosuffix>
+                    <linebreakpos>50000</linebreakpos>
+                    <sourceDirectory>src/main/resources/static</sourceDirectory>
+                    <force>true</force>
+                    <includes>
+                        <include>**/*.js</include>
+                        <include>**/*.css</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*.min.js</exclude>
+                        <exclude>**/*.min.css</exclude>
+                        <exclude>**/fileinput.js</exclude>
+                        <exclude>**/bootstrap-table/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin> -->
         </plugins>
         <finalName>${project.artifactId}</finalName>
     </build>

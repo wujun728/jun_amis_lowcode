@@ -61,6 +61,9 @@ var table = {
                     showColumns: true,
                     showToggle: true,
                     showExport: false,
+                    showPrint: false,
+                    exportDataType: 'all',
+                    exportTypes: ['csv', 'txt', 'doc', 'excel'],
                     clickToSelect: false,
                     singleSelect: false,
                     mobileResponsive: true,
@@ -108,6 +111,7 @@ var table = {
                     showColumns: options.showColumns,                   // 是否显示隐藏某列下拉框
                     showToggle: options.showToggle,                     // 是否显示详细视图和列表视图的切换按钮
                     showExport: options.showExport,                     // 是否支持导出文件
+                    showPrint: options.showPrint,                       // 是否支持打印页面
                     showHeader: options.showHeader,                     // 是否显示表头
                     showFullscreen: options.showFullscreen,             // 是否显示全屏按钮
                     uniqueId: options.uniqueId,                         // 唯一的标识符
@@ -142,6 +146,8 @@ var table = {
                     responseHandler: $.table.responseHandler,           // 在加载服务器发送来的数据之前处理函数
                     onLoadSuccess: $.table.onLoadSuccess,               // 当所有数据被加载时触发处理函数
                     exportOptions: options.exportOptions,               // 前端导出忽略列索引
+                    exportDataType: options.exportDataType,             // 导出方式（默认all：导出所有数据；basic：导出当前页的数据；selected：导出选中的数据）
+                    exportTypes: options.exportTypes,                   // 导出文件类型 （json、xml、png、csv、txt、sql、doc、excel、xlsx、powerpoint、pdf）
                     printPageBuilder: options.printPageBuilder,         // 自定义打印页面模板
                     detailFormatter: options.detailFormatter,           // 在行下面展示其他数据列表
                 });
@@ -244,11 +250,6 @@ var table = {
                     if($.common.equals("self", target)) {
                         var height = $(this).data('height');
                         var width = $(this).data('width');
-                        // 如果是移动端，就使用自适应大小弹窗
-                        if ($.common.isMobile()) {
-                            width = 'auto';
-                            height = 'auto';
-                        }
                         layer.open({
                             title: false,
                             type: 1,
@@ -347,10 +348,16 @@ var table = {
                 }
             },
             // 搜索-默认第一个form
-            search: function(formId, tableId) {
+            search: function(formId, tableId, pageNumber, pageSize) {
                 table.set(tableId);
                 table.options.formId = $.common.isEmpty(formId) ? $('form').attr('id') : formId;
                 var params = $.common.isEmpty(tableId) ? $("#" + table.options.id).bootstrapTable('getOptions') : $("#" + tableId).bootstrapTable('getOptions');
+                if ($.common.isNotEmpty(pageNumber)) {
+                	params.pageNumber = pageNumber;
+                }
+                if ($.common.isNotEmpty(pageSize)) {
+                	params.pageSize = pageSize;
+                }
                 if($.common.isNotEmpty(tableId)){
                     $("#" + tableId).bootstrapTable('refresh', params);
                 } else{
@@ -446,11 +453,29 @@ var table = {
             	});
             },
             // 刷新表格
-            refresh: function(tableId) {
+            refresh: function(tableId, pageNumber, pageSize, url) {
             	var currentId = $.common.isEmpty(tableId) ? table.options.id : tableId;
+            	var params = $("#" + currentId).bootstrapTable('getOptions');
+            	if ($.common.isEmpty(pageNumber)) {
+            		pageNumber = params.pageNumber;
+            	}
+            	if ($.common.isEmpty(pageSize)) {
+            		pageSize = params.pageSize;
+            	}
+            	if ($.common.isEmpty(url)) {
+            		url = $.common.isEmpty(url) ? params.url : url;
+            	}
             	$("#" + currentId).bootstrapTable('refresh', {
-                    silent: true
+                    silent: true,
+                    url: url,
+                    pageNumber: pageNumber,
+                    pageSize: pageSize
                 });
+            },
+            // 刷新options配置
+            refreshOptions: function(options, tableId) {
+                var currentId = $.common.isEmpty(tableId) ? table.options.id : tableId;
+                $("#" + currentId).bootstrapTable('refreshOptions', options);
             },
             // 查询表格指定列值
             selectColumns: function(column) {
@@ -635,22 +660,22 @@ var table = {
         // 表单封装处理
     	form: {
             // 表单重置
-            reset: function(formId, tableId) {
+            reset: function(formId, tableId, pageNumber, pageSize) {
                 table.set(tableId);
-            	var currentId = $.common.isEmpty(formId) ? $('form').attr('id') : formId;
-            	$("#" + currentId)[0].reset();
+            	formId = $.common.isEmpty(formId) ? $('form').attr('id') : formId;
+            	$("#" + formId)[0].reset();
+            	var tableId = $.common.isEmpty(tableId) ? table.options.id : tableId;
             	if (table.options.type == table_type.bootstrapTable) {
-                    if($.common.isEmpty(tableId)){
-                        $("#" + table.options.id).bootstrapTable('refresh');
-                    } else{
-                        $("#" + tableId).bootstrapTable('refresh');
+            		var params = $("#" + tableId).bootstrapTable('getOptions');
+                    if ($.common.isNotEmpty(pageNumber)) {
+                    	params.pageNumber = pageNumber;
                     }
+                    if ($.common.isNotEmpty(pageSize)) {
+                    	params.pageSize = pageSize;
+                    }
+                    $("#" + tableId).bootstrapTable('refresh', params);
             	} else if (table.options.type == table_type.bootstrapTreeTable) {
-                    if($.common.isEmpty(tableId)){
-                        $("#" + table.options.id).bootstrapTreeTable('refresh', []);
-                    } else{
-                        $("#" + tableId).bootstrapTreeTable('refresh', []);
-                    }
+            		$("#" + tableId).bootstrapTreeTable('refresh', []);
             	}
             },
             // 获取选中复选框项

@@ -9,42 +9,29 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    
     <groupId>com.jun.plugin</groupId>
     <artifactId>jun_boot_code_generator</artifactId>
 	<version>1.0</version>
 
     <description>
-        jun_boot_code_generator 代码生成
+        generator代码生成
     </description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.jun.plugin</groupId>
-		    <artifactId>jun_boot_common</artifactId>
-			<version>1.0</version><!--$NO-MVN-MAN-VER$-->
-        </dependency>
 
         <!--velocity代码生成使用模板 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
         </dependency>
-        
+
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
-            <scope>provided</scope>
+            <groupId>com.jun.plugin</groupId>
+		    <artifactId>jun_boot_common</artifactId>
+			<version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
+
     </dependencies>
 
 </project>
