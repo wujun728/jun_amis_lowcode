@@ -27,6 +27,11 @@ public class SystemController{
         return "index/index";
     }
 
+	@GetMapping(value = "/icons2")
+	public String getIcons2() {
+		return "icon/icons2";
+	}
+
     /*注册*/
 //    @GetMapping(value = "/register")
 //    public String register(){

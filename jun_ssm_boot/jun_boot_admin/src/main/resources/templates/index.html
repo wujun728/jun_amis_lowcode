@@ -24,13 +24,42 @@
 				</a>
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
+						<li class="dropdown messages-menu">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                            <i class="fa fa-envelope-o"></i>
+	                            <span class="label label-success">4</span>
+	                        </a>
+	                    </li>
+	                    <li class="dropdown notifications-menu">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                            <i class="fa fa-bell-o"></i>
+	                            <span class="label label-warning">10</span>
+	                        </a>
+	                    </li>
+	                    <!-- <li class="dropdown user user-menu">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	                            <img th:src="@{/img/person.jpg}" class="user-image" alt="User Per Image">
+	                            <span><shiro:principal property="username" /></span>
+	                            <span id="userId" style="display: none"><shiro:principal property="userId" /></span>
+	                        </a>
+	                        <ul class="dropdown-menu" role="menu">
+	                            <li><a id="userInfoBtn" href="#">个人信息</a></li>
+								<li><a href="javascript:;" onclick="userInfo()"><i class="fa fa-user"></i> 个人中心</a></li>
+								<li><a href="javascript:;" onclick="updatePwd()"><i class="fa fa-key"></i> 修改密码</a></li>
+								<li><a href="javascript:;" onclick="switchSkin()"><i class="fa fa-dashboard"></i> 切换主题</a></li>
+								<li><a th:href="@{logout}"><i class="fa fa-sign-out"></i> 退出系统</a></li>
+	                        </ul>
+	                    </li> -->
+                    
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<span><shiro:principal property="username" /></span>
-								<span class="caret"></span>
-							</a>
+								<img th:src="@{/img/person.jpg}" class="user-image" alt="User Image">
+	                            <span><shiro:principal property="username" /></span>
+	                            <span id="userId" style="display: none"><shiro:principal property="userId" /></span>
+	                        </a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="javascript:;"><i class="fa fa-user"></i> 个人中心</a></li>
+<!-- 								<li><a id="userInfoBtn" href="#">个人信息</a></li> -->
+								<li><a href="javascript:;" onclick="userInfo()"><i class="fa fa-user"></i> 个人中心</a></li>
 								<li><a href="javascript:;" onclick="updatePwd()"><i class="fa fa-key"></i> 修改密码</a></li>
 								<li><a href="javascript:;" onclick="switchSkin()"><i class="fa fa-dashboard"></i> 切换主题</a></li>
 								<li><a th:href="@{logout}"><i class="fa fa-sign-out"></i> 退出系统</a></li>
@@ -138,7 +167,7 @@
 			<div class="pull-right hidden-xs">
 				<b>Version</b> 2.4.18
 			</div>
-			<strong>Copyright &copy; 2017-2020 <a href="#">Hong Tech</a>.</strong> All rights
+			<strong>Copyright &copy; 2018-2021 <a href="#">github.com/wujun728</a>.</strong> All rights
 			reserved.
 		</footer>
 		<div class="control-sidebar-bg"></div>
@@ -161,6 +190,15 @@
 		function updatePwd(){
 			$.modal.dialog_open("修改密码", "/user/updatePwd", 600, 400);
 		}
+		function userInfo(){
+			//修改信息
+			$.modal.dialog_open("修改密码", "/user/edit?userId="+$("#userId").text(), 800, 600);
+            /* $("#userInfoBtn").on('click', function () {
+                Core.load("#myInfoOpenWindow","/user/edit?userId="+$("#userId").text(), function(){
+                    $("#myModal").modal("show");
+                });
+            }) */
+		}
 		/* 切换主题 */
 		function switchSkin() {
 		    layer.open({
@@ -173,4 +211,14 @@
 		}
 	</script>
 </body>
+<style type="text/css">
+	.user-image {
+	    float: left;
+	    width: 25px;
+	    height: 25px;
+	    border-radius: 50%;
+	    margin-right: 10px;
+	    margin-top: -2px;
+	}
+</style>
 </html>
