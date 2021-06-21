@@ -25,7 +25,8 @@
 		<pagehelper.starter.version>1.3.0</pagehelper.starter.version>
 		<druid.spring.version>1.1.14</druid.spring.version>
 		<shiro.version>1.5.3</shiro.version>
-		<shiro.redis.version>3.2.3</shiro.redis.version>
+<!-- 		<shiro.redis.version>3.2.3</shiro.redis.version> -->
+		<shiro.redis.version>3.3.1</shiro.redis.version>
 		<thymeleaf.shiro.version>2.0.0</thymeleaf.shiro.version>
 		<poi.version>3.17</poi.version>
 		<easyexcel.version>2.2.6</easyexcel.version>
@@ -111,6 +112,7 @@
 			<artifactId>shiro-redis</artifactId>
 			<version>${shiro.redis.version}</version>
 		</dependency>
+		 
 		<!-- SpringBoot集成mybatis-plus框架 -->
 		<dependency>
 			<groupId>com.baomidou</groupId>

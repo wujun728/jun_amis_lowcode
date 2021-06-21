@@ -1,9 +1,11 @@
 package com.jun.plugin.modules.sys.service;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.jun.plugin.common.vo.ResponseVo;
 import com.jun.plugin.modules.sys.model.SysUser;
+import com.jun.plugin.modules.sys.vo.UserOnlineVo;
 
 public interface UserService {
 
@@ -81,5 +83,20 @@ public interface UserService {
 	 * @return
 	 */
 	String importUser(List<SysUser> userList, boolean updateSupport, String operName);
+
+    /**
+     * 查询在线用户
+     * @param userOnlineVo
+     * @return list
+     */
+    List<UserOnlineVo> selectOnlineUsers(UserOnlineVo userOnlineVo);
+
+    /**
+     * 踢出用户
+     * @param sessionId 会话id
+     * @param username 用户名
+     */
+    void kickout(Serializable sessionId, String username);
+    
 
 }
