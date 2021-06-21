@@ -16,6 +16,7 @@ import org.apache.shiro.config.ConfigurationException;
 import org.apache.shiro.io.ResourceUtils;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.mgt.SessionManager;
+import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
@@ -25,6 +26,7 @@ import org.apache.shiro.web.session.mgt.DefaultWebSessionManager;
 import org.crazycake.shiro.RedisCacheManager;
 import org.crazycake.shiro.RedisManager;
 import org.crazycake.shiro.RedisSessionDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -319,5 +321,47 @@ public class ShiroConfig {
 		cookieRememberMeManager.setCipherKey(Base64.decode(cipherKey));
 		return cookieRememberMeManager;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+ 
+    @Bean
+    public static LifecycleBeanPostProcessor getLifecycleBeanPostProcessor() {
+        return new LifecycleBeanPostProcessor();
+    }
+    
+
+    @Bean(name = "securityManager")
+    public SecurityManager securityManager(){
+        DefaultWebSecurityManager securityManager =  new DefaultWebSecurityManager();
+        //设置realm.
+        securityManager.setRealm(myShiroRealm());
+        /*记住我*/
+        securityManager.setRememberMeManager(rememberMeManager());
+        // 自定义缓存实现 使用redis
+        securityManager.setCacheManager(redisCacheManager());
+        // 自定义session管理 使用redis
+        securityManager.setSessionManager(sessionManager());
+        return securityManager;
+    }
+ 
+    /**
+     * cacheManager 缓存 redis实现
+     * 使用的是shiro-redis开源插件
+     * @return
+     */
+    @Bean
+    public RedisCacheManager redisCacheManager() {
+        RedisCacheManager redisCacheManager = new RedisCacheManager();
+        redisCacheManager.setRedisManager(redisManager());
+        return redisCacheManager;
+    }
+
+ 
 
 }
