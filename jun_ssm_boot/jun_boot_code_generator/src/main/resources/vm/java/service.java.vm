@@ -3,7 +3,7 @@ package ${packageName}.service;
 import java.util.List;
 import ${packageName}.domain.${ClassName};
 #if($table.tree)
-import com.ruoyi.common.core.domain.Ztree;
+import com.jun.plugin.common.core.domain.Ztree;
 #end
 
 /**

@@ -3,11 +3,11 @@ package ${packageName}.service.impl;
 import java.util.List;
 #if($table.tree)
 import java.util.ArrayList;
-import com.ruoyi.common.core.domain.Ztree;
+import com.jun.plugin.common.core.domain.Ztree;
 #end
 #foreach ($column in $columns)
 #if($column.javaField == 'createTime' || $column.javaField == 'updateTime')
-import com.ruoyi.common.utils.DateUtils;
+import com.jun.plugin.common.utils.DateUtils;
 #break
 #end
 #end
@@ -15,14 +15,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 #if($table.sub)
 import java.util.ArrayList;
-import com.ruoyi.common.utils.StringUtils;
+import com.jun.plugin.common.utils.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
 import ${packageName}.domain.${subClassName};
 #end
 import ${packageName}.mapper.${ClassName}Mapper;
 import ${packageName}.domain.${ClassName};
 import ${packageName}.service.I${ClassName}Service;
-import com.ruoyi.common.core.text.Convert;
+import com.jun.plugin.common.core.text.Convert;
 
 /**
  * ${functionName}Service业务层处理
