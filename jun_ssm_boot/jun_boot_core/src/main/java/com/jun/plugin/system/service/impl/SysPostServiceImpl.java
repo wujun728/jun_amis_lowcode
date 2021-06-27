@@ -16,7 +16,7 @@ import com.jun.plugin.system.service.ISysPostService;
 /**
  * 岗位信息 服务层处理
  * 
- * @author ruoyi
+ * 
  */
 @Service
 public class SysPostServiceImpl implements ISysPostService

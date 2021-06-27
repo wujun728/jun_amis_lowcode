@@ -19,7 +19,7 @@ import com.jun.plugin.common.utils.StringUtils;
 /**
  * 数据过滤处理
  * 
- * @author ruoyi
+ * 
  */
 @Aspect
 @Component
@@ -56,7 +56,7 @@ public class DataScopeAspect
     public static final String DATA_SCOPE = "dataScope";
 
     // 配置织入点
-    @Pointcut("@annotation(com.ruoyi.common.annotation.DataScope)")
+    @Pointcut("@annotation(com.jun.plugin.common.annotation.DataScope)")
     public void dataScopePointCut()
     {
     }

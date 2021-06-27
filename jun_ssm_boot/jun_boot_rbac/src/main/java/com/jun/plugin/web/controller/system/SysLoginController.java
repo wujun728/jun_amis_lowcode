@@ -19,7 +19,7 @@ import com.jun.plugin.common.utils.StringUtils;
 /**
  * 登录验证
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 public class SysLoginController extends BaseController

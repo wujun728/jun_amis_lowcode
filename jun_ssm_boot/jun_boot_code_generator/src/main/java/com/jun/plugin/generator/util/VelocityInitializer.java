@@ -8,7 +8,7 @@ import com.jun.plugin.common.constant.Constants;
 /**
  * VelocityEngine工厂
  * 
- * @author ruoyi
+ * 
  */
 public class VelocityInitializer
 {

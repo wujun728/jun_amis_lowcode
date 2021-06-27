@@ -14,7 +14,7 @@ import com.jun.plugin.common.xss.XssFilter;
 /**
  * Filter配置
  *
- * @author ruoyi
+ * 
  */
 @Configuration
 public class FilterConfig

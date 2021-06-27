@@ -3,7 +3,7 @@ package com.jun.plugin.common.exception.user;
 /**
  * 用户错误记数异常类
  * 
- * @author ruoyi
+ * 
  */
 public class UserPasswordRetryLimitCountException extends UserException
 {

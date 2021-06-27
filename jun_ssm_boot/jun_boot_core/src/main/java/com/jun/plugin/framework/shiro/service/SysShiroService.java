@@ -13,7 +13,7 @@ import com.jun.plugin.system.service.ISysUserOnlineService;
 /**
  * 会话db操作处理
  * 
- * @author ruoyi
+ * 
  */
 @Component
 public class SysShiroService

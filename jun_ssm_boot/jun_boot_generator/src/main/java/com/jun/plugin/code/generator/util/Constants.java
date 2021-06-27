@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * 通用常量信息
  * 
- * @author ruoyi
+ * 
  */
 public class Constants
 {

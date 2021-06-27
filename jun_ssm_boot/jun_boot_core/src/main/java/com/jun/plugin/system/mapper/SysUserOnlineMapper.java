@@ -7,7 +7,7 @@ import com.jun.plugin.system.domain.SysUserOnline;
 /**
  * 在线用户 数据层
  * 
- * @author ruoyi
+ * 
  */
 public interface SysUserOnlineMapper
 {

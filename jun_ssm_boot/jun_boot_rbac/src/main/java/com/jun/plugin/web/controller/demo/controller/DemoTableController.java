@@ -27,7 +27,7 @@ import com.jun.plugin.common.utils.poi.ExcelUtil;
 /**
  * 表格相关
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/demo/table")

@@ -3,7 +3,7 @@ package com.jun.plugin.common.enums;
 /**
  * 用户会话
  * 
- * @author ruoyi
+ * 
  */
 public enum OnlineStatus
 {

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 /**
  * 资源文件配置加载
  * 
- * @author ruoyi
+ * 
  */
 @Configuration
 public class I18nConfig implements WebMvcConfigurer

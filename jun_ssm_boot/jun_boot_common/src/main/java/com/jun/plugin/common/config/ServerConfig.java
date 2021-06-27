@@ -8,7 +8,7 @@ import com.jun.plugin.common.utils.ServletUtils;
 /**
  * 服务相关配置
  * 
- * @author ruoyi
+ * 
  *
  */
 @Component

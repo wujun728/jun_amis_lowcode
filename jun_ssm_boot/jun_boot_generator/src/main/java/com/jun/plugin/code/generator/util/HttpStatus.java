@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * 返回状态码
  * 
- * @author ruoyi
+ * 
  */
 public class HttpStatus
 {

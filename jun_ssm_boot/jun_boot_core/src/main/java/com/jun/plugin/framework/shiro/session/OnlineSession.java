@@ -9,7 +9,7 @@ import com.jun.plugin.common.enums.OnlineStatus;
 /**
  * 在线用户会话属性
  * 
- * @author ruoyi
+ * 
  */
 public class OnlineSession extends SimpleSession
 {

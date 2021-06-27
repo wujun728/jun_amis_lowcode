@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * 代码生成 操作处理
  *
- * @author ruoyi
+ * 
  */
 @RestController
 @RequestMapping("/api/gen")

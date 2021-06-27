@@ -5,7 +5,7 @@ import com.jun.plugin.common.utils.Arith;
 /**
  * 內存相关信息
  * 
- * @author ruoyi
+ * 
  */
 public class Mem
 {

@@ -19,7 +19,7 @@ import com.jun.plugin.common.utils.StringUtils;
 /**
  * 多数据源处理
  * 
- * @author ruoyi
+ * 
  */
 @Aspect
 @Order(1)
@@ -28,8 +28,8 @@ public class DataSourceAspect
 {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("@annotation(com.ruoyi.common.annotation.DataSource)"
-            + "|| @within(com.ruoyi.common.annotation.DataSource)")
+    @Pointcut("@annotation(com.jun.plugin.common.annotation.DataSource)"
+            + "|| @within(com.jun.plugin.common.annotation.DataSource)")
     public void dsPointCut()
     {
 

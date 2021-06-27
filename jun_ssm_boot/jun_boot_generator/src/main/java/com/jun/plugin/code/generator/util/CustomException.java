@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * 自定义异常
  * 
- * @author ruoyi
+ * 
  */
 public class CustomException extends RuntimeException
 {

@@ -27,7 +27,7 @@ import com.jun.plugin.framework.datasource.DynamicDataSource;
 /**
  * druid 配置多数据源
  * 
- * @author ruoyi
+ * 
  */
 @Configuration
 public class DruidConfig

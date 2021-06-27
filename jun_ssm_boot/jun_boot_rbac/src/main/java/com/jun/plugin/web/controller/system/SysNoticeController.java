@@ -23,7 +23,7 @@ import com.jun.plugin.system.service.ISysNoticeService;
 /**
  * 公告 信息操作处理
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/system/notice")

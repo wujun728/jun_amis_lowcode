@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * sql操作工具类
  * 
- * @author ruoyi
+ * 
  */
 public class SqlUtil
 {

@@ -6,7 +6,7 @@ import com.jun.plugin.common.utils.StringUtils;
 /**
  * sql操作工具类
  * 
- * @author ruoyi
+ * 
  */
 public class SqlUtil
 {

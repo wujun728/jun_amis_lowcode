@@ -8,7 +8,7 @@ import com.jun.plugin.framework.shiro.realm.UserRealm;
 /**
  * 用户授权信息
  * 
- * @author ruoyi
+ * 
  */
 public class AuthorizationUtils
 {

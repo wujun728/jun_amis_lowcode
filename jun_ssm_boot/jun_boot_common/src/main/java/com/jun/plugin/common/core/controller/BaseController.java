@@ -25,7 +25,7 @@ import com.jun.plugin.common.utils.sql.SqlUtil;
 /**
  * web层通用数据处理
  * 
- * @author ruoyi
+ * 
  */
 public class BaseController
 {

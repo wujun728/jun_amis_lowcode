@@ -17,7 +17,7 @@ import com.jun.plugin.common.utils.uuid.IdUtils;
 /**
  * 文件上传工具类
  * 
- * @author ruoyi
+ * 
  */
 public class FileUploadUtils
 {

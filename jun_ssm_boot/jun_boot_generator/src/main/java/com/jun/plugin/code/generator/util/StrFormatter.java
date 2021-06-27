@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * 字符串格式化
  * 
- * @author ruoyi
+ * 
  */
 public class StrFormatter
 {

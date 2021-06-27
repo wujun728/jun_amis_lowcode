@@ -13,7 +13,7 @@ import com.jun.plugin.code.generator.util.StringUtils;
 /**
  * 业务表 gen_table
  * 
- * @author ruoyi
+ * 
  */
 public class GenTable extends BaseEntity
 {

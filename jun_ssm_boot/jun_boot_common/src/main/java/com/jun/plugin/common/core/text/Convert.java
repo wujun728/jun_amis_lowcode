@@ -14,7 +14,7 @@ import com.jun.plugin.common.utils.StringUtils;
 /**
  * 类型转换器
  * 
- * @author ruoyi
+ * 
  */
 public class Convert
 {

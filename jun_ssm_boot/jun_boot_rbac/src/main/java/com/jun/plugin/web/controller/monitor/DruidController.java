@@ -10,7 +10,7 @@ import com.jun.plugin.common.core.controller.BaseController;
 /**
  * druid 监控
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/monitor/data")

@@ -3,7 +3,7 @@ package com.jun.plugin.code.generator.util;
 /**
  * 基础异常
  * 
- * @author ruoyi
+ * 
  */
 public class BaseException extends RuntimeException
 {

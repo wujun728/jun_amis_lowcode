@@ -3,7 +3,7 @@ package com.jun.plugin.common.enums;
 /**
  * 数据源
  * 
- * @author ruoyi
+ * 
  */
 public enum DataSourceType
 {

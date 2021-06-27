@@ -8,7 +8,7 @@ import com.jun.plugin.generator.domain.GenTable;
 /**
  * 业务 服务层
  * 
- * @author ruoyi
+ * 
  */
 public interface IGenTableService
 {

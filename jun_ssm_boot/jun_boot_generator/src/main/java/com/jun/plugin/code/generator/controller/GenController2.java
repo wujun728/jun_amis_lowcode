@@ -33,7 +33,7 @@ import com.jun.plugin.code.generator.util.page.TableDataInfo;
 /**
  * 代码生成 操作处理
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/tool/gen")
@@ -244,7 +244,7 @@ public class GenController2 extends BaseController
     private void genCode(HttpServletResponse response, byte[] data) throws IOException
     {
         response.reset();
-        response.setHeader("Content-Disposition", "attachment; filename=\"ruoyi.zip\"");
+        response.setHeader("Content-Disposition", "attachment; filename=\"code.zip\"");
         response.addHeader("Content-Length", "" + data.length);
         response.setContentType("application/octet-stream; charset=UTF-8");
         IOUtils.write(data, response.getOutputStream());

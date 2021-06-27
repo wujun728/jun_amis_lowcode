@@ -10,7 +10,7 @@ import com.jun.plugin.common.enums.OnlineStatus;
 /**
  * 当前在线会话 sys_user_online
  * 
- * @author ruoyi
+ * 
  */
 public class SysUserOnline extends BaseEntity
 {

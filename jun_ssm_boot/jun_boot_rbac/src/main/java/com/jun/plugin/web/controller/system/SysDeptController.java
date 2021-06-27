@@ -27,7 +27,7 @@ import com.jun.plugin.system.service.ISysDeptService;
 /**
  * 部门信息
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/system/dept")

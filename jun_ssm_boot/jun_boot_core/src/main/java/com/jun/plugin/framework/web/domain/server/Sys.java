@@ -3,7 +3,7 @@ package com.jun.plugin.framework.web.domain.server;
 /**
  * 系统相关信息
  * 
- * @author ruoyi
+ * 
  */
 public class Sys
 {

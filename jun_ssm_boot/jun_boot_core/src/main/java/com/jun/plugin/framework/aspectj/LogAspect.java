@@ -34,7 +34,7 @@ import com.jun.plugin.system.domain.SysOperLog;
 /**
  * 操作日志记录处理
  * 
- * @author ruoyi
+ * 
  */
 @Aspect
 @Component
@@ -46,7 +46,7 @@ public class LogAspect
     public static final String[] EXCLUDE_PROPERTIES = { "password", "oldPassword", "newPassword", "confirmPassword" };
 
     // 配置织入点
-    @Pointcut("@annotation(com.ruoyi.common.annotation.Log)")
+    @Pointcut("@annotation(com.jun.plugin.common.annotation.Log)")
     public void logPointCut()
     {
     }

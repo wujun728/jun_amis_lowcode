@@ -20,7 +20,7 @@ import com.jun.plugin.system.service.ISysUserOnlineService;
 /**
  * 退出过滤器
  * 
- * @author ruoyi
+ * 
  */
 public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter
 {

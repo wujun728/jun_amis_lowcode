@@ -23,7 +23,7 @@ import com.jun.plugin.common.utils.file.FileUtils;
 /**
  * 通用请求处理
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 public class CommonController

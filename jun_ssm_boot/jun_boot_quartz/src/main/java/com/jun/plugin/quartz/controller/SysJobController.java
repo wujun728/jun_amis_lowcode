@@ -29,7 +29,7 @@ import com.jun.plugin.quartz.util.CronUtils;
 /**
  * 调度任务信息操作处理
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/monitor/job")

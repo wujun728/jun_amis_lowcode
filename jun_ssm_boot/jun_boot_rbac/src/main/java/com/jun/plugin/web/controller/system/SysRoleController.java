@@ -30,7 +30,7 @@ import com.jun.plugin.system.service.ISysUserService;
 /**
  * 角色信息
  * 
- * @author ruoyi
+ * 
  */
 @Controller
 @RequestMapping("/system/role")

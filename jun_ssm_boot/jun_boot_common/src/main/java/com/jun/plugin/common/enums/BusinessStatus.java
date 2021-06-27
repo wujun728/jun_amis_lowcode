@@ -3,7 +3,7 @@ package com.jun.plugin.common.enums;
 /**
  * 操作状态
  * 
- * @author ruoyi
+ * 
  */
 public enum BusinessStatus
 {

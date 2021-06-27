@@ -7,7 +7,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * 客户测试信息
  * 
- * @author ruoyi
+ * 
  */
 public class CustomerModel
 {
