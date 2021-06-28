@@ -1,0 +1,41 @@
+export default{"1_1":{
+	"id":"1",
+	"title":"点心",
+	"shop_id":"1",
+	"image":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544799000&di=1610b5317bb15dbb6a36e4d57cf4eb3f&imgtype=jpg&er=1&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fc995d143ad4bd1138854651451afa40f4bfb057f.jpg",
+	"stock":"23",
+	"price":"88",
+	"number":3,
+	"versionIndex":1,
+	"versionName":"加糖",
+},"2_1":{
+	"id":"2",
+	"title":"大虾",
+	"shop_id":"1",
+	"image":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544204280786&di=e2033910f3763e04c9b50a9319e0c227&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1709%2F08%2Fc2%2F58457489_1504833134434_mthumb.jpg",
+	"price":"108",
+	"number":3,
+	"attributeIndex":1,
+	"versionIndex":1,
+	"versionName":"大盘",
+},"3_1":{
+	"id":"3",
+	"title":"韩国寿司",
+	"shop_id":"1",
+	"image":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544204280783&di=ba84702a966f569ff4e3f475efc8ee94&imgtype=0&src=http%3A%2F%2Fpic23.nipic.com%2F20120915%2F3127022_100650207192_2.jpg",
+	"price":"36",
+	"number":3,
+	"versionIndex":1,
+	"versionName":"鱼肉",
+	
+},"4_1":{
+	"id":"4",
+	"title":"清淡菜品",
+	"shop_id":"1",
+	"image":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544204280783&di=ba84702a966f569ff4e3f475efc8ee94&imgtype=0&src=http%3A%2F%2Fpic23.nipic.com%2F20120915%2F3127022_100650207192_2.jpg",
+	"price":"58",
+	"number":3,
+	"versionIndex":1,
+	"versionName":null,
+}
+}

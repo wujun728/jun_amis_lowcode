@@ -1,0 +1,134 @@
+{
+    "name" : "一指香飞",
+    "appid" : "__UNI__C7656DC",
+    "description" : "应用描述",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "app-plus" : {
+        /* 5+App特有相关 */
+        "modules" : {
+            "OAuth" : {},
+            "Payment" : {},
+            "Push" : {},
+            "Share" : {},
+            "Speech" : {},
+            "VideoPlayer" : {}
+        },
+        "distribute" : {
+            /* 应用发布信息 */
+            "android" : {
+                /* android打包配置 */
+                "permissions" : []
+            },
+            "ios" : {
+                /* ios打包配置 */
+                "UIBackgroundModes" : [ "audio" ]
+            },
+            "sdkConfigs" : {
+                "speech" : {
+                    "ifly" : {}
+                }
+            },
+            /* SDK配置 */
+            "orientation" : [ "portrait-primary" ],
+            "icons" : {
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                },
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "ldpi" : "unpackage/res/icons/48x48.png",
+                    "mdpi" : "unpackage/res/icons/48x48.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "android" : {
+                    "hdpi" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                    "xhdpi" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                    "xxhdpi" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png"
+                },
+                "ios" : {
+                    "ipad" : {
+                        "landscape-retina7" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "landscape7" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "portrait-retina7" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "portrait7" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "landscape-retina" : "C:/Users/Administrator/Desktop/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "landscape" : "C:/Users/Administrator/Desktop/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "portrait-retina" : "C:/Users/Administrator/Desktop/d058ccbf6c81800a3ffcc632ba3533fa828b47f4.png",
+                        "portrait" : "C:/Users/Administrator/Desktop/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png"
+                    },
+                    "iphone" : {
+                        "iphonexl" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "iphonex" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina55l" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina55" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina47l" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina47" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina40l" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina40" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png",
+                        "retina35" : "C:/Users/Administrator/Pictures/yizhixiangfei/023b5bb5c9ea15ce7cf8d627bd003af33a87b28d.png"
+                    }
+                }
+            }
+        },
+        "splashscreen" : {
+            "waiting" : true
+        }
+    },
+    "quickapp" : {},
+    /* 快应用特有相关 */
+    "mp-weixin" : {
+        /* 小程序特有相关 */
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : true,
+            "postcss" : true
+        }
+    },
+    "h5" : {
+        "title" : "一指香飞",
+        "template" : "h5",
+        "router" : {
+            "base" : ""
+        },
+        "devServer" : {
+            "port" : 80,
+            "https" : false
+        },
+        "domain" : "http://xl.01film.cn",
+        "sdkConfigs" : {
+            "maps" : {}
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        }
+    }
+}

@@ -1,0 +1,356 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path": "pages/home/index",
+            "style": {
+                "navigationBarTitleText": "首页",
+                "navigationStyle":"custom"
+            }
+        }, {
+            "path": "pages/home/list",
+            "style": {
+                "navigationBarTitleText": "商铺列表"
+            }
+        },
+        {
+            "path": "pages/goods/cart",
+            "style": {
+                "navigationBarTitleText": "填写备注"
+            }
+        },
+        {
+            "path": "pages/goods/order",
+            "style": {
+                "navigationBarTitleText": "订单补充"
+            }
+        },
+        {
+            "path": "pages/goods/shop",
+            "style": {
+                "navigationBarTitleText": "店铺"
+            }
+
+        }, {
+            "path": "pages/goods/detail",
+            "style": {
+                "navigationBarTitleText": "商品详情"
+            }
+        }, {
+            "path": "pages/goods/about",
+            "style": {
+                "navigationBarTitleText": "店家"
+            }
+        }, {
+            "path": "pages/user/wode",
+            "style": {
+                "navigationBarTitleText": "我的"
+            }
+        }, {
+            "path": "pages/user/info",
+            "style": {
+                "navigationBarTitleText": "个人信息"
+            }
+        }, {
+            "path": "pages/user/update",
+            "style": {
+                "navigationBarTitleText": "个人信息修改"
+            }
+        }, {
+            "path": "pages/goods/collect",
+            "style": {
+                "navigationBarTitleText": "收藏"
+            }
+        }, {
+            "path": "pages/user/address",
+            "style": {
+                "navigationBarTitleText": "地址信息"
+            }
+            // 		},{
+            // 			"path": "pages/user/security",
+            // 			"style": {
+            // 				"navigationBarTitleText": "安全中心"
+            // 			}
+        }, {
+            "path": "pages/chat/index",
+            "style": {
+                "navigationBarTitleText": "消息"
+            }
+        }, {
+            "path": "pages/chat/chat",
+            "style": {
+                "navigationBarTitleText": "对话"
+            }
+        }, {
+            "path": "pages/chat/order",
+            "style": {
+                "navigationBarTitleText": "订单通知"
+            }
+        }, {
+            "path": "pages/order/list",
+            "style": {
+                "navigationBarTitleText": "订单列表"
+            }
+        }, {
+            "path": "pages/order/detail",
+            "style": {
+                "navigationBarTitleText": "订单详情"
+            }
+        }, {
+            "path": "components/pages/pay/payment",
+            "style": {
+                "navigationBarTitleText": "支付"
+            }
+        }, {
+            "path": "pages/user/updateHeadimg",
+            "style": {
+                "navigationBarTitleText": "图片裁剪"
+            }
+        }, {
+            "path": "pages/login/login",
+            "style": {
+                "navigationBarTitleText": "登陆"
+            }
+        }, {
+            "path": "pages/login/reg",
+            "style": {
+                "navigationBarTitleText": "reg"
+            }
+        }, {
+            "path": "pages/login/pwd",
+            "style": {
+                "navigationBarTitleText": "pwd"
+            }
+        }
+    ],
+    "subPackages": [{
+        "root": "pages/pagesB",
+        "pages": [{
+                "path": "friend/my/add",
+                "style": {
+                    "navigationBarTitleText": "添加好友"
+
+                }
+            }, {
+                "path": "news/my/list",
+                "style": {
+                    "navigationBarTitleText": "我的新闻"
+
+                }
+            }, {
+                "path": "news/my/publish",
+                "style": {
+                    "navigationBarTitleText": "发布新闻"
+                }
+            }, {
+                "path": "news/my/collect",
+                "style": {
+                    "navigationBarTitleText": "收藏夹"
+                }
+            }, {
+                "path": "prove/my/edit",
+                "style": {
+                    "navigationBarTitleText": "实名认证"
+                }
+            }, {
+                "path": "user/my/address",
+                "style": {
+                    "navigationBarTitleText": "地址"
+                }
+            }, {
+                "path": "user/my/info",
+                "style": {
+                    "navigationBarTitleText": "信息"
+                }
+            }, {
+                "path": "user/my/update",
+                "style": {
+                    "navigationBarTitleText": "修改"
+                }
+            }, {
+                "path": "wallet/my/bill",
+                "style": {
+                    "navigationBarTitleText": "账单"
+
+                }
+            },
+            {
+                "path": "wallet/my/index",
+                "style": {
+                    "navigationBarTitleText": "钱包"
+
+                }
+            },
+            {
+                "path": "wallet/my/buyback",
+                "style": {
+                    "navigationBarTitleText": "提现"
+
+                }
+            }, {
+                "path": "wallet/my/billDetail",
+                "style": {
+                    "navigationBarTitleText": "订单详情"
+                }
+            }, {
+                "path": "wallet/my/payment",
+                "style": {
+                    "navigationBarTitleText": "支付"
+
+                }
+            }, {
+                "path": "login/my/bindPhone",
+                "style": {
+                    "navigationBarTitleText": "手机绑定"
+
+                }
+            }, {
+                "path": "login/my/bindEmail",
+                "style": {
+                    "navigationBarTitleText": "邮箱绑定"
+
+                }
+            }, {
+                "path": "login/my/index",
+                "style": {
+                    "navigationBarTitleText": "账号管理"
+
+                }
+            },
+            {
+                "path": "login/my/createUsername",
+                "style": {
+                    "navigationBarTitleText": "初始化用户名及密码"
+                }
+            }, {
+                "path": "cooperation/my/index",
+                "style": {
+                    "navigationBarTitleText": "开放合作"
+                }
+            }, {
+                "path": "shopwindow/my/index",
+                "style": {
+                    "navigationBarTitleText": "橱窗"
+                }
+            }, {
+                "path": "shopwindow/my/list",
+                "style": {
+                    "navigationBarTitleText": "我的货架"
+
+                }
+            }, {
+                "path": "shopwindow/my/publish",
+                "style": {
+                    "navigationBarTitleText": "添加商品"
+                }
+            }, {
+                "path": "storehouse/my/index",
+                "style": {
+                    "navigationBarTitleText": "仓库"
+                }
+            }, {
+                "path": "storehouse/my/list",
+                "style": {
+                    "navigationBarTitleText": "我的商品"
+
+                }
+            }, {
+                "path": "storehouse/my/publish",
+                "style": {
+                    "navigationBarTitleText": "新增商品"
+                }
+            }, {
+                "path": "storehouse/my/classify",
+                "style": {
+                    "navigationBarTitleText": "自定义分类"
+                }
+            }
+        ]
+    }],
+    // "workers":"workers",
+    "globalStyle": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "uni-app",
+        "navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8"
+    },
+    "condition": { //模式配置，仅开发期间生效
+        "current": 0, //当前激活的模式(list 的索引项)
+        "list": [{
+                "path": "pages/home/index",
+                "name": "首页", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/goods/shop",
+                "name": "店铺页", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/goods/about",
+                "name": "店家", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/goods/detail",
+                "name": "商品详情", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "name": "购物车", //模式名称
+                "path": "pages/goods/cart", //启动页面，必选
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            },
+            {
+                "path": "pages/goods/order",
+                "name": "订单补充", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            },
+            {
+                "path": "pages/user/address",
+                "name": "地址信息", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/order/list",
+                "name": "订单列表", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/order/detail",
+                "name": "订单详情", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/chat/order",
+                "name": "订单通知", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/chat/list",
+                "name": "消息列表", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/user/wode",
+                "name": "我的", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/user/info",
+                "name": "个人信息", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/user/update",
+                "name": "个人信息修改", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/goods/collect",
+                "name": "收藏", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/login/login",
+                "name": "登陆", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/login/reg",
+                "name": "注册", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }, {
+                "path": "pages/login/pwd",
+                "name": "找回密码", //模式名称
+                "query": "id=1&name=挺好&num=10" //启动参数，在页面的onLoad函数里面得到
+            }
+
+        ]
+    }
+}

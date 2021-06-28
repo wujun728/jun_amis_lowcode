@@ -1,0 +1,230 @@
+.tui{
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+}
+.tui-headimg{
+	width: 100upx;
+	height: 100upx;
+}
+.tui .tui-flex {
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+}
+/* 自定义flex布局 基础样式 */
+.tui .tui-row{
+	flex-direction: row;
+}
+.tui .tui-column{
+	flex-direction: column;
+}
+.tui .tui-between{
+	justify-content: space-between;
+}
+.tui .tui-around{
+	justify-content: space-around;
+}
+.tui .tui-center{
+	text-align: center;
+	justify-content: center;
+	align-self: center;
+	align-items:center;
+}
+.tui .tui-relative{
+	position:relative
+}
+.tui .tui-absolute{
+	position:absolute
+}
+.tui .tui-fixed{
+	position:fixed
+}
+.tui .tui-input{
+	flex: 1;
+}
+.tui .tui-padding{
+	padding: 15upx;
+}
+.tui .tui-tip{
+	position:absolute;
+	padding: 1upx 6upx;
+	background: #FF3030;
+	color: #fff;
+}
+.tui .tui-bagde{
+	width: 1.7em;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 1upx;
+	background: #ededed;
+	font-size:0.7em;
+	color: #555;
+}
+.tui .tui-tag{
+	border-radius: 5upx;
+	margin: 0 5upx;
+	padding: 0 6upx;
+	/* padding-bottom: 1upx; */
+	background: #ededed;
+	font-size:0.7em;
+	color: #555;
+}
+.tui  .tui-border{
+	border: 1upx solid #ededed;
+}
+.tui .tui-button{
+	padding:6upx 10upx;
+	line-height: 1em;
+	/* padding-bottom: 1upx; */
+	border-radius:5upx ;
+}
+.tui .tui-bottom-nav{
+	border-top: 1upx solid #ededed;
+	align-items: center;
+	height: 100upx;
+	bottom:0;
+	background: #FFFFFF;
+	width: 100%;
+	z-index: 999;
+}
+/* 自定义 html标签基础样式 */
+.tui label{
+	padding-left:20upx ;
+	padding-right: 20upx;
+}
+.tui nav{
+	position: fixed;
+	background: #F9F9F9;
+}
+
+/* 字体色 */
+/* .tui [color] { 
+	color: #666;
+	} */
+.tui [color~=hong],.color-hong { 
+	color: #09BB07;
+	}
+.tui [color~=lv], .color-lv{ 
+	color: #09BB07;
+}
+.tui [color~=lan], .color-lan{ 
+	color: #09BB07;
+}
+.tui [color~=ju], .color-ju{ 
+	color: #FF8C00;
+}
+.tui [color~=bai], .color-bai{ 
+	color: #fff;
+}
+/* 背景色 */
+
+.tui [bg~=hong], .bg-hong{ 
+	background: rgb(255,50,50);
+	color: #fff;
+	}
+.tui [bg~=lv], .bg-lv{ 
+	background: #09BB07;
+}
+
+.tui [bg~=lan], .bg-lan { 
+	background: #09BB07;
+}
+.tui [bg~=ju], .bg-ju { 
+	background: #FF8C00;
+	color: #fff;
+}
+.tui [bg~=bai], .bg-bai{ 
+	background:#FFFFFF;
+	color: #333;
+}
+
+
+/* 触发样式 */
+.tui .tui-hover:hover{
+	opacity: 0.9;
+	padding: 10upx;
+	background:#FF8C00;
+}
+.tui .tui-mask{
+	box-sizing: border-box;
+	z-index:1;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	overflow: auto;
+	background:rgba(0,0,0,0.8);
+}
+/* 字体样式 */
+.tui .tui-weight{
+	font-weight: bold;
+}
+.tui .tui-title{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.tui .tui-text{
+	opacity:0.8;
+}
+.tui .tui-nowrap{
+	overflow: hidden;/*超出部分隐藏*/
+	white-space: nowrap;/*不换行*/
+	text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+/* 自定义flex布局 元素功能组合样式 */
+
+.tui .tui-list{
+	box-sizing: border-box;
+	padding: 15upx;
+	background: #fff;
+}
+
+.tui .tui-item {
+	flex: 1;
+}
+
+.tui-from{
+	
+}
+
+/* 底部导航 */
+.tui-bottom-nav {
+	border-top: 1upx solid hsl(180,0%,90%);
+	font-size:1.2em ;
+	bottom: 0;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10upx 0;
+}
+.tui-bottom-nav view{
+	line-height: 1.3em;
+}
+.tui-bottom-nav .tui-botton{
+	line-height:100upx;
+	padding: 0 15upx;
+}
+.tui-bottom-nav .nav-msg .uni-badge{
+	top: 8upx;
+	text-align: center;
+	position: absolute;
+	padding:1upx 8upx;
+	font-size:0.6em;
+}
+
+.tui-bottom-nav   .nav-title{
+	font-size:0.7em ;
+}
+.tui-bottom-nav .nav-icon .iconfont{
+	font-size: 1.5em;
+}
+.tui-bottom-nav .nav-icon{
+	min-height: 1em;
+	line-height: 1em;
+	font-size: 1em;
+}
