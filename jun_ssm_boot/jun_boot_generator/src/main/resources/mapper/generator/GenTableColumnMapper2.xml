@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.github.wujun728.code.generator.mapper.GenTableColumnMapper">
+<mapper namespace="com.jun.plugin.code.generator.mapper.GenTableColumnMapper">
     
-    <resultMap type="com.github.wujun728.code.generator.domain.GenTableColumn" id="GenTableColumnResult">
+    <resultMap type="com.jun.plugin.code.generator.domain.GenTableColumn" id="GenTableColumnResult">
         <id     property="columnId"       column="column_id"      />
         <result property="tableId"        column="table_id"       />
         <result property="columnName"     column="column_name"    />
@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		order by ordinal_position
 	</select>
     
-    <insert id="insertGenTableColumn" parameterType="com.github.wujun728.code.generator.domain.GenTableColumn" useGeneratedKeys="true" keyProperty="columnId">
+    <insert id="insertGenTableColumn" parameterType="com.jun.plugin.code.generator.domain.GenTableColumn" useGeneratedKeys="true" keyProperty="columnId">
         insert into gen_table_column (
 			<if test="tableId != null and tableId != ''">table_id,</if>
 			<if test="columnName != null and columnName != ''">column_name,</if>
@@ -89,7 +89,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          )
     </insert>
 	 
-    <update id="updateGenTableColumn" parameterType="com.github.wujun728.code.generator.domain.GenTableColumn">
+    <update id="updateGenTableColumn" parameterType="com.jun.plugin.code.generator.domain.GenTableColumn">
         update gen_table_column
         <set>
             column_comment = #{columnComment},
