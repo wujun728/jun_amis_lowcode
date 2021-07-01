@@ -1,0 +1,17 @@
+package ${package}.mapper;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import ${package}.domain.${className};
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+/**
+ * ${tableComment} 数据层
+ * 
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${className}Mapper extends BaseMapper<${className}>
+{
+    List execSql(@Param(value="value") String sql) throws Exception;
+}
