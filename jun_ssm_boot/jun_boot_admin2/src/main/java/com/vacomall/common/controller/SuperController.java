@@ -1,4 +1,4 @@
-package com.vacomall.common.controller;
+package com.jun.plugin.api.common.controller;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.vacomall.common.util.HttpUtil;
+import com.jun.plugin.api.common.util.HttpUtil;
 
 /**
  * 基础控制器

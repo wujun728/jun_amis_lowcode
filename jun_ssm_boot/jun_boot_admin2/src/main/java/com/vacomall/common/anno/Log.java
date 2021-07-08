@@ -1,4 +1,4 @@
-package com.vacomall.common.anno;
+package com.jun.plugin.api.common.anno;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

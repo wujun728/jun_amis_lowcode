@@ -1,4 +1,4 @@
-package com.vacomall.common.enums;
+package com.jun.plugin.api.common.enums;
 
 public enum Action {
 	

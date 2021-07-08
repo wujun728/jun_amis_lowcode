@@ -1,10 +1,10 @@
-package com.vacomall.common.shiro;
+package com.jun.plugin.api.common.shiro;
 
 import java.io.IOException;
 
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
-import com.vacomall.common.shiro.tag.ShiroTags;
+import com.jun.plugin.api.common.shiro.tag.ShiroTags;
 
 import freemarker.template.TemplateException;
 

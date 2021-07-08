@@ -1,10 +1,10 @@
-package com.vacomall.common.util;
+package com.jun.plugin.api.common.util;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
 
-import com.vacomall.entity.SysUser;
+import com.jun.plugin.api.entity.SysUser;
 
 /**
  * Shiro工具类

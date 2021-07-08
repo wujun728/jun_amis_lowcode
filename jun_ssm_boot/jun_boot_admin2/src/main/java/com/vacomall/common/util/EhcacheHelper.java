@@ -1,4 +1,4 @@
-package com.vacomall.common.util;
+package com.jun.plugin.api.common.util;
 
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;

@@ -1,4 +1,4 @@
-package com.vacomall.common.shiro.tag;
+package com.jun.plugin.api.common.shiro.tag;
 
 import java.io.IOException;
 import java.util.Map;

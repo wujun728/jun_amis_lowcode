@@ -1,4 +1,4 @@
-package com.vacomall.controller;
+package com.jun.plugin.api.controller;
 
 import java.io.IOException;
 
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 
 import com.google.code.kaptcha.servlet.KaptchaExtend;
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.entity.SysUser;
-import com.vacomall.service.ISysLogService;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.service.ISysLogService;
 /**
  * 登录控制器
  * @author Gaojun.Zhou

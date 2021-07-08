@@ -1,11 +1,11 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysDept;
-import com.vacomall.mapper.SysDeptMapper;
-import com.vacomall.service.ISysDeptService;
+import com.jun.plugin.api.entity.SysDept;
+import com.jun.plugin.api.mapper.SysDeptMapper;
+import com.jun.plugin.api.service.ISysDeptService;
 
 /**
  *

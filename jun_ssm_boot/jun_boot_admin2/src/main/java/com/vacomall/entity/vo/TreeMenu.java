@@ -1,10 +1,10 @@
-package com.vacomall.entity.vo;
+package com.jun.plugin.api.entity.vo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.vacomall.entity.SysMenu;
+import com.jun.plugin.api.entity.SysMenu;
 /**
  * 菜单树
  * @author Gaojun.Zhou

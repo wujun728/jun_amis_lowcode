@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.Date;
 
@@ -6,9 +6,9 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysLog;
-import com.vacomall.mapper.SysLogMapper;
-import com.vacomall.service.ISysLogService;
+import com.jun.plugin.api.entity.SysLog;
+import com.jun.plugin.api.mapper.SysLogMapper;
+import com.jun.plugin.api.service.ISysLogService;
 
 /**
  *

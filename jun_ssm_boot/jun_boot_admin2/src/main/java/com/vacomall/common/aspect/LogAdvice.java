@@ -1,4 +1,4 @@
-package com.vacomall.common.aspect;
+package com.jun.plugin.api.common.aspect;
 
 import java.lang.reflect.Method;
 import java.util.Date;
@@ -16,12 +16,12 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.google.gson.Gson;
-import com.vacomall.common.anno.Log;
-import com.vacomall.common.util.ShiroUtil;
-import com.vacomall.common.util.SpringUtil;
-import com.vacomall.entity.SysLog;
-import com.vacomall.entity.SysUser;
-import com.vacomall.service.ISysLogService;
+import com.jun.plugin.api.common.anno.Log;
+import com.jun.plugin.api.common.util.ShiroUtil;
+import com.jun.plugin.api.common.util.SpringUtil;
+import com.jun.plugin.api.entity.SysLog;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.service.ISysLogService;
 /**
  * 正常业务日志记录
  * @author Administrator
@@ -33,7 +33,7 @@ public class LogAdvice {
 	
 	public static final Logger LOG = Logger.getLogger(LogAdvice.class);
 	
-	@Pointcut("@annotation(com.vacomall.common.anno.Log)")
+	@Pointcut("@annotation(com.jun.plugin.api.common.anno.Log)")
 	public void controllerAspect() {
 		
 	}

@@ -1,4 +1,4 @@
-package com.vacomall.controller;
+package com.jun.plugin.api.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.vacomall.common.controller.SuperController;
+import com.jun.plugin.api.common.controller.SuperController;
 
 /**
  * 文件上传控制器

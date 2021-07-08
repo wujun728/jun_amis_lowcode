@@ -1,11 +1,11 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysRole;
-import com.vacomall.mapper.SysRoleMapper;
-import com.vacomall.service.ISysRoleService;
+import com.jun.plugin.api.entity.SysRole;
+import com.jun.plugin.api.mapper.SysRoleMapper;
+import com.jun.plugin.api.service.ISysRoleService;
 
 /**
  *

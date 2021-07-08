@@ -1,7 +1,7 @@
-package com.vacomall.service;
+package com.jun.plugin.api.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.vacomall.entity.SysDept;
+import com.jun.plugin.api.entity.SysDept;
 
 /**
  *

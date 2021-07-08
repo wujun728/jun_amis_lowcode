@@ -1,4 +1,4 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -9,11 +9,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.common.util.CommonUtil;
-import com.vacomall.common.util.ShiroUtil;
-import com.vacomall.entity.SysUser;
-import com.vacomall.service.ISysUserService;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.common.util.CommonUtil;
+import com.jun.plugin.api.common.util.ShiroUtil;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.service.ISysUserService;
 /**
  * 用户中心控制器
  * @author Gaojun.Zhou

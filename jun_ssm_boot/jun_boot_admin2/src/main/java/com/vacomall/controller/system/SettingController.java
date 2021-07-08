@@ -1,4 +1,4 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.vacomall.common.anno.Log;
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.entity.SysSetting;
-import com.vacomall.service.ISysSettingService;
+import com.jun.plugin.api.common.anno.Log;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.entity.SysSetting;
+import com.jun.plugin.api.service.ISysSettingService;
 /**
  * 系统设置控制器
  * @author Gaojun.Zhou

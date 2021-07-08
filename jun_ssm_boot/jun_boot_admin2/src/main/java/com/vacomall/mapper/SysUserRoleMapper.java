@@ -1,9 +1,9 @@
-package com.vacomall.mapper;
+package com.jun.plugin.api.mapper;
 
 import java.util.List;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.vacomall.entity.SysUserRole;
+import com.jun.plugin.api.entity.SysUserRole;
 
 /**
  *

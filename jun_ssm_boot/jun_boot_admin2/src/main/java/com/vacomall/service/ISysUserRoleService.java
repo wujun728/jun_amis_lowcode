@@ -1,9 +1,9 @@
-package com.vacomall.service;
+package com.jun.plugin.api.service;
 
 import java.util.Set;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.vacomall.entity.SysUserRole;
+import com.jun.plugin.api.entity.SysUserRole;
 
 /**
  *

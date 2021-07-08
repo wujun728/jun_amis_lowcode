@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.HashSet;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysRoleMenu;
-import com.vacomall.mapper.SysMenuMapper;
-import com.vacomall.mapper.SysRoleMenuMapper;
-import com.vacomall.service.ISysRoleMenuService;
+import com.jun.plugin.api.entity.SysRoleMenu;
+import com.jun.plugin.api.mapper.SysMenuMapper;
+import com.jun.plugin.api.mapper.SysRoleMenuMapper;
+import com.jun.plugin.api.service.ISysRoleMenuService;
 
 /**
  *

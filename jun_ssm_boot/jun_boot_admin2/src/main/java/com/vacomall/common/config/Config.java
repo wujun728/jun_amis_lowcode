@@ -1,4 +1,4 @@
-package com.vacomall.common.config;
+package com.jun.plugin.api.common.config;
 
 /**
  * 全局静态配置

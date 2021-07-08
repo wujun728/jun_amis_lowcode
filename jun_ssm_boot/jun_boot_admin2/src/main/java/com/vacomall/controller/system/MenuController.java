@@ -1,4 +1,4 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.google.common.collect.Maps;
-import com.vacomall.common.anno.Log;
-import com.vacomall.common.bean.Rest;
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.entity.SysMenu;
-import com.vacomall.service.ISysMenuService;
+import com.jun.plugin.api.common.anno.Log;
+import com.jun.plugin.api.common.bean.Rest;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.entity.SysMenu;
+import com.jun.plugin.api.service.ISysMenuService;
 /**
  * 角色控制器
  * @author Gaojun.Zhou

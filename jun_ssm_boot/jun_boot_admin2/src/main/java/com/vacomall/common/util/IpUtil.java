@@ -1,4 +1,4 @@
-package com.vacomall.common.util;
+package com.jun.plugin.api.common.util;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

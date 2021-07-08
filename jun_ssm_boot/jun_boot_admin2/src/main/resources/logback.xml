@@ -38,7 +38,7 @@
     </appender>
 	
 	 <!-- logback为java中的包 -->   
-  	<logger name="com.vacomall.mapper" level="debug">
+  	<logger name="com.jun.plugin.api.mapper" level="debug">
   		<appender-ref ref="SQL" />
   	</logger>   
 	

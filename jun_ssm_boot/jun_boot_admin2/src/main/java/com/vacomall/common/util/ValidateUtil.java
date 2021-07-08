@@ -1,4 +1,4 @@
-package com.vacomall.common.util;
+package com.jun.plugin.api.common.util;
 
 import java.util.HashMap;
 import java.util.Map;

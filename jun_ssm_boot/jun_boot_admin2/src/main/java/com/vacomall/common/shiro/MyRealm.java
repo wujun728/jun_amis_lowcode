@@ -1,4 +1,4 @@
-package com.vacomall.common.shiro;
+package com.jun.plugin.api.common.shiro;
 
 import java.util.Set;
 
@@ -18,10 +18,10 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.vacomall.entity.SysUser;
-import com.vacomall.service.ISysRoleMenuService;
-import com.vacomall.service.ISysUserRoleService;
-import com.vacomall.service.ISysUserService;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.service.ISysRoleMenuService;
+import com.jun.plugin.api.service.ISysUserRoleService;
+import com.jun.plugin.api.service.ISysUserService;
 
 /**
  * shiro Realm

@@ -14,8 +14,8 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 	
 	
-	<context:component-scan base-package="com.vacomall.controller" />
-	<context:component-scan base-package="com.vacomall.common" />
+	<context:component-scan base-package="com.jun.plugin.api.controller" />
+	<context:component-scan base-package="com.jun.plugin.api.common" />
 
 	<!-- 开启aop，对类代理 -->
 	<aop:config proxy-target-class="true" />
@@ -23,7 +23,7 @@
 
 	<!-- freemarker的配置 -->
 	<bean id="shiroFreemarkerConfig"
-          class="com.vacomall.common.shiro.ShiroTagFreeMarkerConfigurer">
+          class="com.jun.plugin.api.common.shiro.ShiroTagFreeMarkerConfigurer">
         <property name="templateLoaderPath" value="WEB-INF/views/" />
         <property name="defaultEncoding" value="UTF-8" />
         <property name="freemarkerSettings">
@@ -85,7 +85,7 @@
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="com.vacomall.interceptor.GlobalInterceptor" />
+			<bean class="com.jun.plugin.api.interceptor.GlobalInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 

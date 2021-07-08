@@ -1,4 +1,4 @@
-package com.vacomall.common;
+package com.jun.plugin.api.common;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.AbstractJsonpResponseBodyAdvice;
 /**

@@ -1,4 +1,4 @@
-package com.vacomall.entity;
+package com.jun.plugin.api.entity;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableId;

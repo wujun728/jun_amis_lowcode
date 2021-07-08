@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysSetting;
-import com.vacomall.mapper.SysSettingMapper;
-import com.vacomall.service.ISysSettingService;
+import com.jun.plugin.api.entity.SysSetting;
+import com.jun.plugin.api.mapper.SysSettingMapper;
+import com.jun.plugin.api.service.ISysSettingService;
 
 /**
  *

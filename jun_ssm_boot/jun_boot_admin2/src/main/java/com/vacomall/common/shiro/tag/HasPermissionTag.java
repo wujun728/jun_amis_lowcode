@@ -1,4 +1,4 @@
-package com.vacomall.common.shiro.tag;
+package com.jun.plugin.api.common.shiro.tag;
 
 /**
  * <p>Equivalent to {@link org.apache.shiro.web.tags.HasPermissionTag}</p>

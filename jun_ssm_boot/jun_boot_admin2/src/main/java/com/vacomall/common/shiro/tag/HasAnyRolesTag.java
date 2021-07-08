@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package com.vacomall.common.shiro.tag;
+package com.jun.plugin.api.common.shiro.tag;
 
 import org.apache.shiro.subject.Subject;
 

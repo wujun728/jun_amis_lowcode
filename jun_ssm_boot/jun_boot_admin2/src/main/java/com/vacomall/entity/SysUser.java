@@ -1,4 +1,4 @@
-package com.vacomall.entity;
+package com.jun.plugin.api.entity;
 
 import java.io.Serializable;
 import java.util.Date;

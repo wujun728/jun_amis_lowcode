@@ -1,6 +1,6 @@
-package com.vacomall.mapper;
+package com.jun.plugin.api.mapper;
 
-import com.vacomall.entity.SysLog;
+import com.jun.plugin.api.entity.SysLog;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

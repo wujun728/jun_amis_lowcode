@@ -1,4 +1,4 @@
-package com.vacomall.test;
+package com.jun.plugin.api.test;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;

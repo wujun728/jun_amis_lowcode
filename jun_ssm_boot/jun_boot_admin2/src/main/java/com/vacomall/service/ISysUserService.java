@@ -1,10 +1,10 @@
-package com.vacomall.service;
+package com.jun.plugin.api.service;
 
 import java.util.Map;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
-import com.vacomall.entity.SysUser;
+import com.jun.plugin.api.entity.SysUser;
 
 /**
  *

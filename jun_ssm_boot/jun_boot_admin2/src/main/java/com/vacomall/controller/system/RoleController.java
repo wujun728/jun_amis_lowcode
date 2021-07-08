@@ -1,4 +1,4 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,19 +17,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.google.common.collect.Lists;
-import com.vacomall.common.anno.Log;
-import com.vacomall.common.bean.Rest;
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.entity.SysRole;
-import com.vacomall.entity.SysRoleMenu;
-import com.vacomall.entity.SysUser;
-import com.vacomall.entity.SysUserRole;
-import com.vacomall.entity.vo.TreeMenuAllowAccess;
-import com.vacomall.service.ISysMenuService;
-import com.vacomall.service.ISysRoleMenuService;
-import com.vacomall.service.ISysRoleService;
-import com.vacomall.service.ISysUserRoleService;
-import com.vacomall.service.ISysUserService;
+import com.jun.plugin.api.common.anno.Log;
+import com.jun.plugin.api.common.bean.Rest;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.entity.SysRole;
+import com.jun.plugin.api.entity.SysRoleMenu;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.entity.SysUserRole;
+import com.jun.plugin.api.entity.vo.TreeMenuAllowAccess;
+import com.jun.plugin.api.service.ISysMenuService;
+import com.jun.plugin.api.service.ISysRoleMenuService;
+import com.jun.plugin.api.service.ISysRoleService;
+import com.jun.plugin.api.service.ISysUserRoleService;
+import com.jun.plugin.api.service.ISysUserService;
 /**
  * 角色控制器
  * @author Gaojun.Zhou

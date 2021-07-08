@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.Date;
 import java.util.Map;
@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.common.util.ShiroUtil;
-import com.vacomall.entity.SysUser;
-import com.vacomall.entity.SysUserRole;
-import com.vacomall.mapper.SysUserMapper;
-import com.vacomall.mapper.SysUserRoleMapper;
-import com.vacomall.service.ISysUserService;
+import com.jun.plugin.api.common.util.ShiroUtil;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.entity.SysUserRole;
+import com.jun.plugin.api.mapper.SysUserMapper;
+import com.jun.plugin.api.mapper.SysUserRoleMapper;
+import com.jun.plugin.api.service.ISysUserService;
 
 /**
  *

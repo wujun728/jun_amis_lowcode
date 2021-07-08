@@ -1,4 +1,4 @@
-package com.vacomall.test;
+package com.jun.plugin.api.test;
 
 import java.util.Date;
 import java.util.List;
@@ -11,13 +11,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.vacomall.entity.SysMenu;
-import com.vacomall.entity.SysRole;
-import com.vacomall.entity.SysUser;
-import com.vacomall.service.ISysMenuService;
-import com.vacomall.service.ISysRoleMenuService;
-import com.vacomall.service.ISysRoleService;
-import com.vacomall.service.ISysUserService;
+import com.jun.plugin.api.entity.SysMenu;
+import com.jun.plugin.api.entity.SysRole;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.service.ISysMenuService;
+import com.jun.plugin.api.service.ISysRoleMenuService;
+import com.jun.plugin.api.service.ISysRoleService;
+import com.jun.plugin.api.service.ISysUserService;
 
 @RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration(locations = {

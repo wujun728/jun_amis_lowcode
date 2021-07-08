@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.HashSet;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.vacomall.entity.SysUserRole;
-import com.vacomall.mapper.SysUserRoleMapper;
-import com.vacomall.service.ISysUserRoleService;
+import com.jun.plugin.api.entity.SysUserRole;
+import com.jun.plugin.api.mapper.SysUserRoleMapper;
+import com.jun.plugin.api.service.ISysUserRoleService;
 
 /**
  *

@@ -1,4 +1,4 @@
-package com.vacomall.common.util;
+package com.jun.plugin.api.common.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.vacomall.common.config.Config;
+import com.jun.plugin.api.common.config.Config;
 
 
 public class HttpUtil {

@@ -1,11 +1,11 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.vacomall.common.controller.SuperController;
+import com.jun.plugin.api.common.controller.SuperController;
 /**
  * 监控
  * @author Gaojun.Zhou

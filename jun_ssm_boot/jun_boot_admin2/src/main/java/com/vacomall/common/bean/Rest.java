@@ -1,4 +1,4 @@
-package com.vacomall.common.bean;
+package com.jun.plugin.api.common.bean;
 /**
  * @author GaoJun.Zhou
  * @Time：2017年9月6日 下午1:29:08

@@ -1,4 +1,4 @@
-package com.vacomall.mapper;
+package com.jun.plugin.api.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.vacomall.entity.SysUser;
+import com.jun.plugin.api.entity.SysUser;
 
 /**
  *

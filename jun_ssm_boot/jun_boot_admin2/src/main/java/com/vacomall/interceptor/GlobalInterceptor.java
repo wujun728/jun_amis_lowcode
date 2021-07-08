@@ -1,4 +1,4 @@
-package com.vacomall.interceptor;
+package com.jun.plugin.api.interceptor;
 
 import java.util.List;
 
@@ -9,13 +9,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.vacomall.common.util.ShiroUtil;
-import com.vacomall.common.util.SpringUtil;
-import com.vacomall.entity.SysSetting;
-import com.vacomall.entity.SysUser;
-import com.vacomall.entity.vo.TreeMenu;
-import com.vacomall.service.ISysMenuService;
-import com.vacomall.service.ISysSettingService;
+import com.jun.plugin.api.common.util.ShiroUtil;
+import com.jun.plugin.api.common.util.SpringUtil;
+import com.jun.plugin.api.entity.SysSetting;
+import com.jun.plugin.api.entity.SysUser;
+import com.jun.plugin.api.entity.vo.TreeMenu;
+import com.jun.plugin.api.service.ISysMenuService;
+import com.jun.plugin.api.service.ISysSettingService;
 /**
  * 全局拦截器
  * @author jameszhou

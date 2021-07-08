@@ -1,4 +1,4 @@
-package com.vacomall.controller.system;
+package com.jun.plugin.api.controller.system;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.vacomall.common.anno.Log;
-import com.vacomall.common.bean.Rest;
-import com.vacomall.common.controller.SuperController;
-import com.vacomall.entity.SysDept;
-import com.vacomall.service.ISysDeptService;
+import com.jun.plugin.api.common.anno.Log;
+import com.jun.plugin.api.common.bean.Rest;
+import com.jun.plugin.api.common.controller.SuperController;
+import com.jun.plugin.api.entity.SysDept;
+import com.jun.plugin.api.service.ISysDeptService;
 /**
  * 部门控制器
  * @author Gaojun.Zhou

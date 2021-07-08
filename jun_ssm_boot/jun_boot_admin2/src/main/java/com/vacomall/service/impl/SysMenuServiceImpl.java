@@ -1,4 +1,4 @@
-package com.vacomall.service.impl;
+package com.jun.plugin.api.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,12 @@ import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.google.common.collect.Lists;
-import com.vacomall.entity.SysMenu;
-import com.vacomall.entity.vo.TreeMenu;
-import com.vacomall.entity.vo.TreeMenuAllowAccess;
-import com.vacomall.mapper.SysMenuMapper;
-import com.vacomall.mapper.SysRoleMenuMapper;
-import com.vacomall.service.ISysMenuService;
+import com.jun.plugin.api.entity.SysMenu;
+import com.jun.plugin.api.entity.vo.TreeMenu;
+import com.jun.plugin.api.entity.vo.TreeMenuAllowAccess;
+import com.jun.plugin.api.mapper.SysMenuMapper;
+import com.jun.plugin.api.mapper.SysRoleMenuMapper;
+import com.jun.plugin.api.service.ISysMenuService;
 
 /**
  *

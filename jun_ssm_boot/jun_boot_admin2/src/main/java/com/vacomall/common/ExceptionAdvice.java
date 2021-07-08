@@ -1,4 +1,4 @@
-package com.vacomall.common;
+package com.jun.plugin.api.common;
 
 import javax.validation.ValidationException;
 

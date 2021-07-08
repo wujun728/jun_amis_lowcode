@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	
 	<!-- 扫描包加载Service实现类 -->
-	<context:component-scan base-package="com.vacomall.service"></context:component-scan>
+	<context:component-scan base-package="com.jun.plugin.api.service"></context:component-scan>
 	
 	<!-- 事务管理器 -->
 	<bean id="transactionManager"
@@ -35,6 +35,6 @@
 	<!-- 切面 -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"
-			pointcut="execution(* com.vacomall.service.impl.*.*(..))" />
+			pointcut="execution(* com.jun.plugin.api.service.impl.*.*(..))" />
 	</aop:config>
 </beans>

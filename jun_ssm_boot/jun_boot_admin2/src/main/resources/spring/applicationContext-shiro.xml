@@ -27,7 +27,7 @@
     <!-- Used by the SecurityManager to access security data (users, roles, etc).
          Many other realm implementations can be used too (PropertiesRealm,
          LdapRealm, etc. -->
-    <bean id="myRealm" class="com.vacomall.common.shiro.MyRealm">
+    <bean id="myRealm" class="com.jun.plugin.api.common.shiro.MyRealm">
         <property name="credentialsMatcher">
         	<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
         		<property name="hashAlgorithmName" value="MD5"></property>

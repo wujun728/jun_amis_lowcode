@@ -1,11 +1,11 @@
-package com.vacomall.service;
+package com.jun.plugin.api.service;
 
 import java.util.List;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.vacomall.entity.SysMenu;
-import com.vacomall.entity.vo.TreeMenu;
-import com.vacomall.entity.vo.TreeMenuAllowAccess;
+import com.jun.plugin.api.entity.SysMenu;
+import com.jun.plugin.api.entity.vo.TreeMenu;
+import com.jun.plugin.api.entity.vo.TreeMenuAllowAccess;
 
 /**
  *

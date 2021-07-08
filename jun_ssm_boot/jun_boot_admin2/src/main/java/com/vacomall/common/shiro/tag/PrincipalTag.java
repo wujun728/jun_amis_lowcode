@@ -1,4 +1,4 @@
-package com.vacomall.common.shiro.tag;
+package com.jun.plugin.api.common.shiro.tag;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
