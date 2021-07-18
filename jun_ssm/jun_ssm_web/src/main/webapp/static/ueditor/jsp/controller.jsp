@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=gbk"
-	import="com.baidu.ueditor.ActionEnter"
+	import="com.jun.plugin.mybatisplus.ActionEnter"
     pageEncoding="gbk"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%
