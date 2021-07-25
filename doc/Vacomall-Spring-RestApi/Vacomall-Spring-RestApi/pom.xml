@@ -4,7 +4,7 @@
 	<groupId>com.vacomall</groupId>
 	<artifactId>Vacomall-Spring-RestApi</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>Vacomall-Spring-RestApi Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
