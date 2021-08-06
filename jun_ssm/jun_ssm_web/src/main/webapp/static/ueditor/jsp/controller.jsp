@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=gbk"
-	import="com.jun.plugin.mybatisplus.ActionEnter"
+	import="com.jun.plugin.teamplate.ActionEnter"
     pageEncoding="gbk"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%
