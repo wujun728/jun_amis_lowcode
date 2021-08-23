@@ -1,8 +1,0 @@
-*.classpath
-*.iml
-.idea/
-target/
-logs/
-log/
-*.zip
-ruoyi/
