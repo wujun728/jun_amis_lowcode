@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.system.mapper.MenuMapper">
+    <resultMap id="BaseResultMap" type="com.jun.plugin.system.domain.Menu">
+        <!--@mbg.generated-->
+        <!--@Table sys_menu-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="pid" jdbcType="INTEGER" property="pid"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="typecode" jdbcType="VARCHAR" property="typecode"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="href" jdbcType="VARCHAR" property="href"/>
+        <result column="target" jdbcType="VARCHAR" property="target"/>
+        <result column="spread" jdbcType="INTEGER" property="spread"/>
+        <result column="ordernum" jdbcType="INTEGER" property="ordernum"/>
+        <result column="available" jdbcType="INTEGER" property="available"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, pid, `type`, typecode, title, icon, href, target, spread, ordernum, available
+    </sql>
+    <select id="queryMenuMaxOrderNum" resultType="java.lang.Integer">
+      select max(ordernum) from sys_menu
+    </select>
+    <select id="queryMenuChildrenCountById" resultType="java.lang.Integer">
+    select count(1) from sys_menu where pid=#{value}
+  </select>
+</mapper>

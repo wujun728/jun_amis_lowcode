@@ -1,0 +1,106 @@
+server:
+  port: 8080
+spring:
+  datasource: #数据源配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_qixing?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 
+    # 德鲁伊 配置
+    druid:
+      max-active: 10
+      min-idle: 5
+      max-wait: 5000
+      initial-size: 5
+      validation-query: select 1
+      stat-view-servlet:
+        enabled: true
+        #        login-username: admin
+        #        login-password: admin
+        #        allow:
+        #        deny:
+        url-pattern: "/druid/*"
+      web-stat-filter:
+        enabled: true
+        url-pattern: "/druid/**"
+        exclusions: '*.js,*.gif,*.jpg,*.jpeg,*.png,*.css,*.ico,*.html,*.jsp,/druid/*'
+        principal-session-name: ''
+        session-stat-enable: true
+        session-stat-max-count: 1000
+      filters: "stat,wall,logback"
+#  thymeleaf:
+#    cache: false
+  resources:    static-locations:    - /static/
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss     # 配置全局时间格式  jsonformate  timefromat
+    time-zone: GMT+8
+  #redis
+  redis:
+    host: 127.0.0.1
+    #password: 
+    port: 6379
+    jedis:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: 2000
+        # 缓存时间
+#  cache:
+#    redis:
+#      time-to-live: 6000
+
+
+      # 设置 文件上传基础  大小
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+
+#shiro的配置
+#http://127.0.0.1:8080/page/abc.html
+#http://127.0.0.1:8080/api/login/captcha?codeKey=1336
+shiro:
+  hash-iterations: 2
+  hash-algorithm-name: md5
+  login-url: /login.html
+  unauthorized-url: /unauthorized.html
+  anon-urls:
+    - /api/login/doLogin*
+    - /druid/**
+    - /swagger-ui.html
+    - /webjars/**
+    - /swagger-resources/**
+    - /v2/**
+    - /api/login/captcha
+    - /api/login/checkLogin
+    - /api/public/**
+    - /resources/**
+    - /page/**
+  logout-url: /api/login/logout*
+  authc-urls:
+    - /**
+
+#mybatisplus的配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*/*Mapper.xml
+
+
+#fastdfs设置
+fdfs:
+  so-timeout: 2500       # 读取时间
+  connect-timeout: 5000   # 连接超时时间
+  thumb-image:           # 缩略图
+    width: 100
+    height: 100
+  tracker-list:          # tracker服务配置地址列表
+  - www.abcde.top:22122
+upload:
+  base-url: http://abcde.top:81/   # 配置前缀
+  allow-types:
+  - image/jpeg
+  - image/png
+  - image/bmp
+  - image/gif
