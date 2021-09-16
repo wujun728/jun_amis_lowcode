@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.jun.plugin</groupId>
-    <artifactId>jun_springboot_shiro_jwt_layui</artifactId>
+    <artifactId>jun_ssm_shiro_jwt_layui</artifactId>
     <version>1.0</version>
-    <name>nb666-erp-2020</name>
-    <description>前后端分离项目</description>
+    <name>jun_ssm_shiro_jwt_layui</name>
+    <description>Layui前后端分离项目</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -40,12 +40,12 @@
 
 
         <!--  打包  jar包时  版本冲突 -->
-       <!-- <dependency>
+		<!-- <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>${spring.version}</version>
         </dependency>
--->
+		-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
