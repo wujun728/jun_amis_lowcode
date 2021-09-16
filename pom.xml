@@ -8,7 +8,8 @@
 	<packaging>pom</packaging>
 	
   <modules>
-  	<module>jun_ssh_easyui</module>
+  	<module>jun_ssm_shiro_jwt_layui</module>
+	<module>jun_ssh_easyui</module>
 	<module>jun_ssm</module>
 	<module>jun_ssm_jwt</module>
 	<module>jun_spring_plugin</module> 
