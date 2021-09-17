@@ -15,7 +15,6 @@ TODO：
 3、整ssm_jwt的common工具包
 4、整ssm_jwt的api跟rbac跟表结构
 
-
 spring_activemq\    干掉，放到mq里面
 spring_atomikos\    调整
 spring_autowired\    干掉，合并到spring_demos
