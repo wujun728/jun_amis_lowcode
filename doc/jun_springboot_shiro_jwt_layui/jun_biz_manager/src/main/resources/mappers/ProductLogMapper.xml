@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.ProductLogDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.ProductLog">
+        	    <id column="id"  property="id" />
+	       		<result property="time" column="time"/>
+	       		<result property="type" column="type"/>
+	       		<result property="adminId" column="admin_id"/>
+	       		<result property="productId" column="product_id"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,time,type,admin_id,product_id
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	p_product_log 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="time != null">
+				       	 time ,
+				      </if>
+	     				<if test="type != null">
+				       	 type ,
+				      </if>
+	     				<if test="adminId != null">
+				       	 admin_id ,
+				      </if>
+	     				<if test="productId != null">
+				       	 product_id ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="time != null">
+					       	 #{time} ,
+					      </if>
+		     				<if test="type != null">
+					       	 #{type} ,
+					      </if>
+		     				<if test="adminId != null">
+					       	 #{adminId} ,
+					      </if>
+		     				<if test="productId != null">
+					       	 #{productId} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	p_product_log 
+		     where 
+				p_product_log.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update p_product_log
+    <set>
+    		<if test="time != null">
+		        time = #{time},
+		      </if><if test="type != null">
+		        type = #{type},
+		      </if><if test="adminId != null">
+		        admin_id = #{adminId},
+		      </if><if test="productId != null">
+		        product_id = #{productId},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and p_product_log.id = #{id}
+						</if>
+	       <if test="minTime != null">
+    			<![CDATA[
+					and p_product_log.time >= #{minTime}
+	    		]]>
+		   </if>
+	       <if test="maxTime != null">
+	    		<![CDATA[
+					and p_product_log.time <= #{maxTime}
+		    	]]>
+		   </if>
+				       <if test="type != null">
+							and p_product_log.type = #{type}
+						</if>
+				       <if test="adminId != null">
+							and p_product_log.admin_id = #{adminId}
+						</if>
+				       <if test="productId != null">
+							and p_product_log.product_id = #{productId}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			p_product_log
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			p_product_log
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from p_product_log
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+   
+	
+</mapper>
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.UserDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.User">
+        	    <id column="id"  property="id" />
+	       		<result property="username" column="username"/>
+	       		<result property="email" column="email"/>
+	       		<result property="password" column="password"/>
+	       		<result property="type" column="type"/>
+	       		<result property="status" column="status"/>
+	       		<result property="lastLoginTime" column="last_login_time"/>
+	       		<result property="registerTime" column="register_time"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,username,email,password,type,status,last_login_time,register_time
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	u_user 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="username != null">
+				       	 username ,
+				      </if>
+	     				<if test="email != null">
+				       	 email ,
+				      </if>
+	     				<if test="password != null">
+				       	 password ,
+				      </if>
+	     				<if test="type != null">
+				       	 type ,
+				      </if>
+	     				<if test="status != null">
+				       	 status ,
+				      </if>
+	     				<if test="lastLoginTime != null">
+				       	 last_login_time ,
+				      </if>
+	     				<if test="registerTime != null">
+				       	 register_time ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="username != null">
+					       	 #{username} ,
+					      </if>
+		     				<if test="email != null">
+					       	 #{email} ,
+					      </if>
+		     				<if test="password != null">
+					       	 #{password} ,
+					      </if>
+		     				<if test="type != null">
+					       	 #{type} ,
+					      </if>
+		     				<if test="status != null">
+					       	 #{status} ,
+					      </if>
+		     				<if test="lastLoginTime != null">
+					       	 #{lastLoginTime} ,
+					      </if>
+		     				<if test="registerTime != null">
+					       	 #{registerTime} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	u_user 
+		     where 
+				u_user.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update u_user
+    <set>
+    		<if test="username != null">
+		        username = #{username},
+		      </if><if test="email != null">
+		        email = #{email},
+		      </if><if test="password != null">
+		        password = #{password},
+		      </if><if test="type != null">
+		        type = #{type},
+		      </if><if test="status != null">
+		        status = #{status},
+		      </if><if test="lastLoginTime != null">
+		        last_login_time = #{lastLoginTime},
+		      </if><if test="registerTime != null">
+		        register_time = #{registerTime},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and u_user.id = #{id}
+						</if>
+	       		 	 <if test="username != null and username != '' ">
+							and u_user.username = #{username}
+						</if>
+	       		 	 <if test="email != null and email != '' ">
+							and u_user.email = #{email}
+						</if>
+	       		 	 <if test="password != null and password != '' ">
+							and u_user.password = #{password}
+						</if>
+				       <if test="type != null">
+							and u_user.type = #{type}
+						</if>
+				       <if test="status != null">
+							and u_user.status = #{status}
+						</if>
+	       <if test="minLastLoginTime != null">
+    			<![CDATA[
+					and u_user.last_login_time >= #{minLastLoginTime}
+	    		]]>
+		   </if>
+	       <if test="maxLastLoginTime != null">
+	    		<![CDATA[
+					and u_user.last_login_time <= #{maxLastLoginTime}
+		    	]]>
+		   </if>
+	       <if test="minRegisterTime != null">
+    			<![CDATA[
+					and u_user.register_time >= #{minRegisterTime}
+	    		]]>
+		   </if>
+	       <if test="maxRegisterTime != null">
+	    		<![CDATA[
+					and u_user.register_time <= #{maxRegisterTime}
+		    	]]>
+		   </if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			u_user
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			u_user
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from u_user
+	    where id = #{id}
+  </delete>
+  -->
+   
+    <select id="selectByUsername" resultMap="BaseResultMap" parameterType="String">
+	   select 
+   			 <include refid="BaseColumnList"/>
+   		from
+	        u_user 
+	     where username = #{username}
+    </select>
+   
+    <select id="selectByEmail" resultMap="BaseResultMap" parameterType="String">
+	   select 
+   			 <include refid="BaseColumnList"/>
+   		from
+	        u_user 
+	     where email = #{email}
+    </select>
+   
+   
+   
+   
+   
+   
+	
+</mapper>
+

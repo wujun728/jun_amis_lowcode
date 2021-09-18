@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jun.biz.manager.dao.AdItemDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.AdItem">
+		<id column="id" property="id"/>
+		<result property="adSpaceId" column="ad_space_id"/>
+		<result property="name" column="name"/>
+		<result property="objectid" column="objectid"/>
+		<result property="status" column="status"/>
+		<result property="content" column="content"/>
+		<result property="weight" column="weight"/>
+		<result property="createAdminId" column="create_admin_id"/>
+		<result property="createTime" column="create_time"/>
+	</resultMap>
+
+	<sql id="BaseColumnList">
+		id,ad_space_id,name,objectid,status,content,weight,create_admin_id,create_time
+	</sql>
+
+	<delete id="deleteBySpaceId">
+		delete from a_ad_item where ad_space_id = #{spaceId}
+	</delete>
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	a_ad_item 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="adSpaceId != null">
+				       	 ad_space_id ,
+				      </if>
+	     				<if test="name != null">
+				       	 name ,
+				      </if>
+	     				<if test="objectid != null">
+				       	 objectid ,
+				      </if>
+	     				<if test="status != null">
+				       	 status ,
+				      </if>
+	     				<if test="content != null">
+				       	 content ,
+				      </if>
+	     				<if test="weight != null">
+				       	 weight ,
+				      </if>
+	     				<if test="createAdminId != null">
+				       	 create_admin_id ,
+				      </if>
+	     				<if test="createTime != null">
+				       	 create_time ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="adSpaceId != null">
+					       	 #{adSpaceId} ,
+					      </if>
+		     				<if test="name != null">
+					       	 #{name} ,
+					      </if>
+		     				<if test="objectid != null">
+					       	 #{objectid} ,
+					      </if>
+		     				<if test="status != null">
+					       	 #{status} ,
+					      </if>
+		     				<if test="content != null">
+					       	 #{content} ,
+					      </if>
+		     				<if test="weight != null">
+					       	 #{weight} ,
+					      </if>
+		     				<if test="createAdminId != null">
+					       	 #{createAdminId} ,
+					      </if>
+		     				<if test="createTime != null">
+					       	 #{createTime} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	a_ad_item 
+		     where 
+				a_ad_item.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update a_ad_item
+    <set>
+    		<if test="adSpaceId != null">
+		        ad_space_id = #{adSpaceId},
+		      </if><if test="name != null">
+		        name = #{name},
+		      </if><if test="objectid != null">
+		        objectid = #{objectid},
+		      </if><if test="status != null">
+		        status = #{status},
+		      </if><if test="content != null">
+		        content = #{content},
+		      </if><if test="weight != null">
+		        weight = #{weight},
+		      </if><if test="createAdminId != null">
+		        create_admin_id = #{createAdminId},
+		      </if><if test="createTime != null">
+		        create_time = #{createTime},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and a_ad_item.id = #{id}
+						</if>
+				       <if test="adSpaceId != null">
+							and a_ad_item.ad_space_id = #{adSpaceId}
+						</if>
+	       		 	 <if test="name != null and name != '' ">
+							and a_ad_item.name = #{name}
+						</if>
+				       <if test="objectid != null">
+							and a_ad_item.objectid = #{objectid}
+						</if>
+				       <if test="status != null">
+							and a_ad_item.status = #{status}
+						</if>
+	       		 	 <if test="content != null and content != '' ">
+							and a_ad_item.content = #{content}
+						</if>
+				       <if test="weight != null">
+							and a_ad_item.weight = #{weight}
+						</if>
+				       <if test="createAdminId != null">
+							and a_ad_item.create_admin_id = #{createAdminId}
+						</if>
+	       <if test="minCreateTime != null">
+    			<![CDATA[
+					and a_ad_item.create_time >= #{minCreateTime}
+	    		]]>
+		   </if>
+	       <if test="maxCreateTime != null">
+	    		<![CDATA[
+					and a_ad_item.create_time <= #{maxCreateTime}
+		    	]]>
+		   </if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			a_ad_item
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			a_ad_item
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from a_ad_item
+	    where id = #{id}
+  </delete>
+  -->
+
+
+</mapper>
+

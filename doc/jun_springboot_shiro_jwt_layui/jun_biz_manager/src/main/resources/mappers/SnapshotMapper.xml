@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.SnapshotDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Snapshot">
+        	    <id column="id"  property="id" />
+	       		<result property="productId" column="product_id"/>
+	       		<result property="content" column="content"/>
+	       		<result property="createTime" column="create_time"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,product_id,content,create_time
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	p_snapshot 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="productId != null">
+				       	 product_id ,
+				      </if>
+	     				<if test="content != null">
+				       	 content ,
+				      </if>
+	     				<if test="createTime != null">
+				       	 create_time ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="productId != null">
+					       	 #{productId} ,
+					      </if>
+		     				<if test="content != null">
+					       	 #{content} ,
+					      </if>
+		     				<if test="createTime != null">
+					       	 #{createTime} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	p_snapshot 
+		     where 
+				p_snapshot.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update p_snapshot
+    <set>
+    		<if test="productId != null">
+		        product_id = #{productId},
+		      </if><if test="content != null">
+		        content = #{content},
+		      </if><if test="createTime != null">
+		        create_time = #{createTime},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and p_snapshot.id = #{id}
+						</if>
+				       <if test="productId != null">
+							and p_snapshot.product_id = #{productId}
+						</if>
+	       		 	 <if test="content != null and content != '' ">
+							and p_snapshot.content = #{content}
+						</if>
+	       <if test="minCreateTime != null">
+    			<![CDATA[
+					and p_snapshot.create_time >= #{minCreateTime}
+	    		]]>
+		   </if>
+	       <if test="maxCreateTime != null">
+	    		<![CDATA[
+					and p_snapshot.create_time <= #{maxCreateTime}
+		    	]]>
+		   </if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			p_snapshot
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			p_snapshot
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from p_snapshot
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+	
+</mapper>
+

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jun.biz.manager.dao.RoleDao">
+
+    <resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Role">
+        <id column="id" property="id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createAdmin" column="create_admin"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id,name,description,create_time,create_admin
+    </sql>
+
+    <select id="selectPermissionIds" resultType="long">
+        select rp.permission_id
+        from s_role_permission rp
+        where rp.role_id = #{id}
+    </select>
+
+    <!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+            insert into
+                s_role
+            <trim prefix="(" suffix=")" suffixOverrides="," >
+                         <if test="name != null">
+                            name ,
+                      </if>
+                         <if test="description != null">
+                            description ,
+                      </if>
+                         <if test="adminCount != null">
+                            admin_count ,
+                      </if>
+                         <if test="createTime != null">
+                            create_time ,
+                      </if>
+                         <if test="status != null">
+                            status ,
+                      </if>
+                         <if test="sort != null">
+                            sort ,
+                      </if>
+            </trim>
+            <trim prefix="values (" suffix=")" suffixOverrides="," >
+                             <if test="name != null">
+                                #{name} ,
+                          </if>
+                             <if test="description != null">
+                                #{description} ,
+                          </if>
+                             <if test="adminCount != null">
+                                #{adminCount} ,
+                          </if>
+                             <if test="createTime != null">
+                                #{createTime} ,
+                          </if>
+                             <if test="status != null">
+                                #{status} ,
+                          </if>
+                             <if test="sort != null">
+                                #{sort} ,
+                          </if>
+           </trim>
+    </insert>
+
+
+
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+            select
+                 <include refid="BaseColumnList" />
+            from
+                s_role
+             where
+                s_role.id = #{id}
+    </select>
+
+
+    <update id="update"   >
+            update s_role
+    <set>
+            <if test="name != null">
+                name = #{name},
+              </if><if test="description != null">
+                description = #{description},
+              </if><if test="adminCount != null">
+                admin_count = #{adminCount},
+              </if><if test="createTime != null">
+                create_time = #{createTime},
+              </if><if test="status != null">
+                status = #{status},
+              </if><if test="sort != null">
+                sort = #{sort},
+              </if>
+    </set>
+    where id = #{id}
+   </update>
+
+
+    <sql id="listWhere">
+                       <if test="id != null">
+                            and s_role.id = #{id}
+                        </if>
+                         <if test="name != null and name != '' ">
+                            and s_role.name = #{name}
+                        </if>
+                         <if test="description != null and description != '' ">
+                            and s_role.description = #{description}
+                        </if>
+                       <if test="adminCount != null">
+                            and s_role.admin_count = #{adminCount}
+                        </if>
+           <if test="minCreateTime != null">
+                <![CDATA[
+                    and s_role.create_time >= #{minCreateTime}
+                ]]>
+           </if>
+           <if test="maxCreateTime != null">
+                <![CDATA[
+                    and s_role.create_time <= #{maxCreateTime}
+                ]]>
+           </if>
+                       <if test="status != null">
+                            and s_role.status = #{status}
+                        </if>
+                       <if test="sort != null">
+                            and s_role.sort = #{sort}
+                        </if>
+   </sql>
+
+    <select id="count" resultType="long">
+           select
+               count(*)
+           from
+               s_role
+           <where>
+               <include refid="listWhere"/>
+           </where>
+   </select>
+
+
+    <select id="selectList" resultMap="BaseResultMap" >
+           select
+                <include refid="BaseColumnList"/>
+           from
+               s_role
+           <where>
+               <include refid="listWhere"/>
+           </where>
+           <if test="orderBy != null ">
+               order by ${orderBy}
+               <if test="sort != null ">
+                   ${ sort}
+               </if>
+           </if>
+           <if test="beginIndex != null and resultSize != null">
+            limit #{beginIndex} , #{resultSize}
+        </if>
+   </select>
+
+
+    <delete id="deleteById" parameterType="long" >
+        delete from s_role
+        where id = #{id}
+  </delete>
+  -->
+
+
+</mapper>
+

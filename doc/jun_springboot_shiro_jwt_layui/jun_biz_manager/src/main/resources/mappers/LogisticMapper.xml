@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.LogisticDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Logistic">
+        	    <id column="id"  property="id" />
+	       		<result property="name" column="name"/>
+	       		<result property="code" column="code"/>
+	       		<result property="companyUrl" column="company_url"/>
+	       		<result property="weight" column="weight"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,name,code,company_url,weight
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	o_logistic 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="name != null">
+				       	 name ,
+				      </if>
+	     				<if test="code != null">
+				       	 code ,
+				      </if>
+	     				<if test="companyUrl != null">
+				       	 company_url ,
+				      </if>
+	     				<if test="weight != null">
+				       	 weight ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="name != null">
+					       	 #{name} ,
+					      </if>
+		     				<if test="code != null">
+					       	 #{code} ,
+					      </if>
+		     				<if test="companyUrl != null">
+					       	 #{companyUrl} ,
+					      </if>
+		     				<if test="weight != null">
+					       	 #{weight} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	o_logistic 
+		     where 
+				o_logistic.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update o_logistic
+    <set>
+    		<if test="name != null">
+		        name = #{name},
+		      </if><if test="code != null">
+		        code = #{code},
+		      </if><if test="companyUrl != null">
+		        company_url = #{companyUrl},
+		      </if><if test="weight != null">
+		        weight = #{weight},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and o_logistic.id = #{id}
+						</if>
+	       		 	 <if test="name != null and name != '' ">
+							and o_logistic.name = #{name}
+						</if>
+	       		 	 <if test="code != null and code != '' ">
+							and o_logistic.code = #{code}
+						</if>
+	       		 	 <if test="companyUrl != null and companyUrl != '' ">
+							and o_logistic.company_url = #{companyUrl}
+						</if>
+				       <if test="weight != null">
+							and o_logistic.weight = #{weight}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			o_logistic
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			o_logistic
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from o_logistic
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+   
+	
+</mapper>
+

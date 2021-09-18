@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.EvaluationDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Evaluation">
+        	    <id column="id"  property="id" />
+	       		<result property="userId" column="user_id"/>
+	       		<result property="nickname" column="nickname"/>
+	       		<result property="type" column="type"/>
+	       		<result property="description" column="description"/>
+	       		<result property="agree" column="agree"/>
+	       		<result property="productId" column="product_id"/>
+	       		<result property="time" column="time"/>
+	       		<result property="attitudeScore" column="attitude_score"/>
+	       		<result property="describeScore" column="describe_score"/>
+	       		<result property="speedScore" column="speed_score"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,user_id,nickname,type,description,agree,product_id,time,attitude_score,describe_score,speed_score
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	p_evaluation 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="userId != null">
+				       	 user_id ,
+				      </if>
+	     				<if test="nickname != null">
+				       	 nickname ,
+				      </if>
+	     				<if test="type != null">
+				       	 type ,
+				      </if>
+	     				<if test="description != null">
+				       	 description ,
+				      </if>
+	     				<if test="agree != null">
+				       	 agree ,
+				      </if>
+	     				<if test="productId != null">
+				       	 product_id ,
+				      </if>
+	     				<if test="time != null">
+				       	 time ,
+				      </if>
+	     				<if test="attitudeScore != null">
+				       	 attitude_score ,
+				      </if>
+	     				<if test="describeScore != null">
+				       	 describe_score ,
+				      </if>
+	     				<if test="speedScore != null">
+				       	 speed_score ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="userId != null">
+					       	 #{userId} ,
+					      </if>
+		     				<if test="nickname != null">
+					       	 #{nickname} ,
+					      </if>
+		     				<if test="type != null">
+					       	 #{type} ,
+					      </if>
+		     				<if test="description != null">
+					       	 #{description} ,
+					      </if>
+		     				<if test="agree != null">
+					       	 #{agree} ,
+					      </if>
+		     				<if test="productId != null">
+					       	 #{productId} ,
+					      </if>
+		     				<if test="time != null">
+					       	 #{time} ,
+					      </if>
+		     				<if test="attitudeScore != null">
+					       	 #{attitudeScore} ,
+					      </if>
+		     				<if test="describeScore != null">
+					       	 #{describeScore} ,
+					      </if>
+		     				<if test="speedScore != null">
+					       	 #{speedScore} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	p_evaluation 
+		     where 
+				p_evaluation.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update p_evaluation
+    <set>
+    		<if test="userId != null">
+		        user_id = #{userId},
+		      </if><if test="nickname != null">
+		        nickname = #{nickname},
+		      </if><if test="type != null">
+		        type = #{type},
+		      </if><if test="description != null">
+		        description = #{description},
+		      </if><if test="agree != null">
+		        agree = #{agree},
+		      </if><if test="productId != null">
+		        product_id = #{productId},
+		      </if><if test="time != null">
+		        time = #{time},
+		      </if><if test="attitudeScore != null">
+		        attitude_score = #{attitudeScore},
+		      </if><if test="describeScore != null">
+		        describe_score = #{describeScore},
+		      </if><if test="speedScore != null">
+		        speed_score = #{speedScore},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and p_evaluation.id = #{id}
+						</if>
+				       <if test="userId != null">
+							and p_evaluation.user_id = #{userId}
+						</if>
+	       		 	 <if test="nickname != null and nickname != '' ">
+							and p_evaluation.nickname = #{nickname}
+						</if>
+				       <if test="type != null">
+							and p_evaluation.type = #{type}
+						</if>
+	       		 	 <if test="description != null and description != '' ">
+							and p_evaluation.description = #{description}
+						</if>
+				       <if test="agree != null">
+							and p_evaluation.agree = #{agree}
+						</if>
+				       <if test="productId != null">
+							and p_evaluation.product_id = #{productId}
+						</if>
+	       <if test="minTime != null">
+    			<![CDATA[
+					and p_evaluation.time >= #{minTime}
+	    		]]>
+		   </if>
+	       <if test="maxTime != null">
+	    		<![CDATA[
+					and p_evaluation.time <= #{maxTime}
+		    	]]>
+		   </if>
+				       <if test="attitudeScore != null">
+							and p_evaluation.attitude_score = #{attitudeScore}
+						</if>
+				       <if test="describeScore != null">
+							and p_evaluation.describe_score = #{describeScore}
+						</if>
+				       <if test="speedScore != null">
+							and p_evaluation.speed_score = #{speedScore}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			p_evaluation
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			p_evaluation
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from p_evaluation
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+	
+</mapper>
+

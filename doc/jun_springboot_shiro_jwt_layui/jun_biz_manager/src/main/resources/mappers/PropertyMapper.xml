@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.PropertyDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Property">
+        	    <id column="id"  property="id" />
+	       		<result property="categoryid" column="categoryid"/>
+	       		<result property="name" column="name"/>
+	       		<result property="propertyValues" column="property_values"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,categoryid,name,property_values
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	p_property 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="categoryid != null">
+				       	 categoryid ,
+				      </if>
+	     				<if test="name != null">
+				       	 name ,
+				      </if>
+	     				<if test="propertyValues != null">
+				       	 property_values ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="categoryid != null">
+					       	 #{categoryid} ,
+					      </if>
+		     				<if test="name != null">
+					       	 #{name} ,
+					      </if>
+		     				<if test="propertyValues != null">
+					       	 #{propertyValues} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	p_property 
+		     where 
+				p_property.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update p_property
+    <set>
+    		<if test="categoryid != null">
+		        categoryid = #{categoryid},
+		      </if><if test="name != null">
+		        name = #{name},
+		      </if><if test="propertyValues != null">
+		        property_values = #{propertyValues},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and p_property.id = #{id}
+						</if>
+				       <if test="categoryid != null">
+							and p_property.categoryid = #{categoryid}
+						</if>
+	       		 	 <if test="name != null and name != '' ">
+							and p_property.name = #{name}
+						</if>
+	       		 	 <if test="propertyValues != null and propertyValues != '' ">
+							and p_property.property_values = #{propertyValues}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			p_property
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			p_property
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from p_property
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+	
+</mapper>
+

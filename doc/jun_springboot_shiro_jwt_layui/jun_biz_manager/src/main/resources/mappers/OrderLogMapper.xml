@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.OrderLogDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.OrderLog">
+        	    <id column="id"  property="id" />
+	       		<result property="orderId" column="order_id"/>
+	       		<result property="type" column="type"/>
+	       		<result property="time" column="time"/>
+	       		<result property="adminId" column="admin_id"/>
+	       		<result property="note" column="note"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,order_id,type,time,admin_id,note
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	o_order_log 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="orderId != null">
+				       	 order_id ,
+				      </if>
+	     				<if test="type != null">
+				       	 type ,
+				      </if>
+	     				<if test="time != null">
+				       	 time ,
+				      </if>
+	     				<if test="adminId != null">
+				       	 admin_id ,
+				      </if>
+	     				<if test="note != null">
+				       	 note ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="orderId != null">
+					       	 #{orderId} ,
+					      </if>
+		     				<if test="type != null">
+					       	 #{type} ,
+					      </if>
+		     				<if test="time != null">
+					       	 #{time} ,
+					      </if>
+		     				<if test="adminId != null">
+					       	 #{adminId} ,
+					      </if>
+		     				<if test="note != null">
+					       	 #{note} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	o_order_log 
+		     where 
+				o_order_log.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update o_order_log
+    <set>
+    		<if test="orderId != null">
+		        order_id = #{orderId},
+		      </if><if test="type != null">
+		        type = #{type},
+		      </if><if test="time != null">
+		        time = #{time},
+		      </if><if test="adminId != null">
+		        admin_id = #{adminId},
+		      </if><if test="note != null">
+		        note = #{note},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and o_order_log.id = #{id}
+						</if>
+				       <if test="orderId != null">
+							and o_order_log.order_id = #{orderId}
+						</if>
+				       <if test="type != null">
+							and o_order_log.type = #{type}
+						</if>
+	       <if test="minTime != null">
+    			<![CDATA[
+					and o_order_log.time >= #{minTime}
+	    		]]>
+		   </if>
+	       <if test="maxTime != null">
+	    		<![CDATA[
+					and o_order_log.time <= #{maxTime}
+		    	]]>
+		   </if>
+				       <if test="adminId != null">
+							and o_order_log.admin_id = #{adminId}
+						</if>
+	       		 	 <if test="note != null and note != '' ">
+							and o_order_log.note = #{note}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			o_order_log
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			o_order_log
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from o_order_log
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+   
+   
+	
+</mapper>
+

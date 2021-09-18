@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.OrderDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.Order">
+        	    <id column="id"  property="id" />
+	       		<result property="no" column="no"/>
+	       		<result property="status" column="status"/>
+	       		<result property="totalAmount" column="total_amount"/>
+	       		<result property="payAmount" column="pay_amount"/>
+	       		<result property="refundAmount" column="refund_amount"/>
+	       		<result property="totalQuantity" column="total_quantity"/>
+	       		<result property="consumerUserId" column="consumer_user_id"/>
+	       		<result property="consigneeTel" column="consignee_tel"/>
+	       		<result property="consigneeCellphone" column="consignee_cellphone"/>
+	       		<result property="consigneeName" column="consignee_name"/>
+	       		<result property="consigneeAddress" column="consignee_address"/>
+	       		<result property="createTime" column="create_time"/>
+	       		<result property="payTime" column="pay_time"/>
+	       		<result property="logisticid" column="logisticid"/>
+	       		<result property="logisticNo" column="logistic_no"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,no,status,total_amount,pay_amount,refund_amount,total_quantity,consumer_user_id,consignee_tel,consignee_cellphone,consignee_name,consignee_address,create_time,pay_time,logisticid,logistic_no
+		</sql>
+
+	<select id="sumAmount"  resultType="double">
+		select sum(pay_amount) from o_order
+		<where>
+			<if test="status != null">
+				status = #{status}
+			</if>
+		</where>
+	</select>
+
+	<select id="countOrder" resultType="com.jun.biz.manager.model.dao.DateCount">
+		select date_format(create_time, '%Y-%m-%d') date, count(1) num from o_order
+		<where>
+			<if test="minCreateTime != null">
+				<![CDATA[
+					and o_order.create_time >= #{minCreateTime}
+	    		]]>
+			</if>
+			<if test="maxCreateTime != null">
+				<![CDATA[
+					and o_order.create_time <= #{maxCreateTime}
+		    	]]>
+			</if>
+		</where>
+		group by date
+	</select>
+
+
+	<select id="selectByNo" resultMap="BaseResultMap" parameterType="String">
+	   select 
+   			 <include refid="BaseColumnList"/>
+   		from
+	        o_order 
+	     where no = #{no}
+    </select>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+	
+</mapper>
+

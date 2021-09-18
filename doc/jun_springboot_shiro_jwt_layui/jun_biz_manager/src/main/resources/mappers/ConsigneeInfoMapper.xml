@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+
+<mapper namespace="com.jun.biz.manager.dao.ConsigneeInfoDao">
+
+	<resultMap id="BaseResultMap" type="com.jun.biz.manager.model.ConsigneeInfo">
+        	    <id column="id"  property="id" />
+	       		<result property="name" column="name"/>
+	       		<result property="cellphone" column="cellphone"/>
+	       		<result property="tel" column="tel"/>
+	       		<result property="region" column="region"/>
+	       		<result property="address" column="address"/>
+	       		<result property="postcode" column="postcode"/>
+	       		<result property="userId" column="user_id"/>
+	       		<result property="defaultUse" column="default_use"/>
+	</resultMap>
+
+<sql id="BaseColumnList">
+id,name,cellphone,tel,region,address,postcode,user_id,default_use
+		</sql>
+
+
+	<!--<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+	        insert into
+	        	u_consignee_info 
+	        <trim prefix="(" suffix=")" suffixOverrides="," >
+	     				<if test="name != null">
+				       	 name ,
+				      </if>
+	     				<if test="cellphone != null">
+				       	 cellphone ,
+				      </if>
+	     				<if test="tel != null">
+				       	 tel ,
+				      </if>
+	     				<if test="region != null">
+				       	 region ,
+				      </if>
+	     				<if test="address != null">
+				       	 address ,
+				      </if>
+	     				<if test="postcode != null">
+				       	 postcode ,
+				      </if>
+	     				<if test="userId != null">
+				       	 user_id ,
+				      </if>
+	     				<if test="defaultUse != null">
+				       	 default_use ,
+				      </if>
+	        </trim>
+    		<trim prefix="values (" suffix=")" suffixOverrides="," >
+		     				<if test="name != null">
+					       	 #{name} ,
+					      </if>
+		     				<if test="cellphone != null">
+					       	 #{cellphone} ,
+					      </if>
+		     				<if test="tel != null">
+					       	 #{tel} ,
+					      </if>
+		     				<if test="region != null">
+					       	 #{region} ,
+					      </if>
+		     				<if test="address != null">
+					       	 #{address} ,
+					      </if>
+		     				<if test="postcode != null">
+					       	 #{postcode} ,
+					      </if>
+		     				<if test="userId != null">
+					       	 #{userId} ,
+					      </if>
+		     				<if test="defaultUse != null">
+					       	 #{defaultUse} ,
+					      </if>
+	       </trim>
+	</insert>
+	
+	
+	
+
+     <select id="selectById" resultMap="BaseResultMap" parameterType="long">
+			select
+				 <include refid="BaseColumnList" />
+		    from
+		    	u_consignee_info 
+		     where 
+				u_consignee_info.id = #{id}
+	</select>
+    
+    
+    <update id="update"   >
+   		 update u_consignee_info
+    <set>
+    		<if test="name != null">
+		        name = #{name},
+		      </if><if test="cellphone != null">
+		        cellphone = #{cellphone},
+		      </if><if test="tel != null">
+		        tel = #{tel},
+		      </if><if test="region != null">
+		        region = #{region},
+		      </if><if test="address != null">
+		        address = #{address},
+		      </if><if test="postcode != null">
+		        postcode = #{postcode},
+		      </if><if test="userId != null">
+		        user_id = #{userId},
+		      </if><if test="defaultUse != null">
+		        default_use = #{defaultUse},
+		      </if>
+    </set>
+    where id = #{id}
+   </update>
+    
+    
+    <sql id="listWhere">
+				       <if test="id != null">
+							and u_consignee_info.id = #{id}
+						</if>
+	       		 	 <if test="name != null and name != '' ">
+							and u_consignee_info.name = #{name}
+						</if>
+	       		 	 <if test="cellphone != null and cellphone != '' ">
+							and u_consignee_info.cellphone = #{cellphone}
+						</if>
+	       		 	 <if test="tel != null and tel != '' ">
+							and u_consignee_info.tel = #{tel}
+						</if>
+	       		 	 <if test="region != null and region != '' ">
+							and u_consignee_info.region = #{region}
+						</if>
+	       		 	 <if test="address != null and address != '' ">
+							and u_consignee_info.address = #{address}
+						</if>
+	       		 	 <if test="postcode != null and postcode != '' ">
+							and u_consignee_info.postcode = #{postcode}
+						</if>
+				       <if test="userId != null">
+							and u_consignee_info.user_id = #{userId}
+						</if>
+				       <if test="defaultUse != null">
+							and u_consignee_info.default_use = #{defaultUse}
+						</if>
+   </sql>
+    
+    <select id="count" resultType="long">
+   		select 
+   			count(*)
+   		from
+   			u_consignee_info
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   </select>
+	
+
+    <select id="selectList" resultMap="BaseResultMap" >
+   		select 
+   			 <include refid="BaseColumnList"/>
+   		from
+   			u_consignee_info
+   		<where>
+   			<include refid="listWhere"/>
+   		</where>
+   		<if test="orderBy != null ">
+   			order by ${orderBy}
+   			<if test="sort != null ">
+   				${ sort}
+   			</if>
+   		</if>
+   		<if test="beginIndex != null and resultSize != null">
+			limit #{beginIndex} , #{resultSize}
+		</if>
+   </select>
+    
+   
+	<delete id="deleteById" parameterType="long" >
+	    delete from u_consignee_info
+	    where id = #{id}
+  </delete>
+  -->
+   
+   
+   
+   
+   
+   
+   
+   
+   
+	
+</mapper>
+
