@@ -3,16 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
     <groupId>com.jun.plugin</groupId>
-	<artifactId>jun_ssm_springboot</artifactId>
+	<artifactId>jun_springboot_plugin</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 	
   <modules>
-  	<module>jun_ssm_shiro_jwt_layui</module>
-	<module>jun_ssh_easyui</module>
-	<module>jun_ssm</module>
-	<module>jun_ssm_jwt</module>
-	<module>jun_spring_plugin</module> 
+  	<module>jun_springboot_admin</module>
+	<module>jun_springboot_modules</module>
+	<module>jun_springboot_plugin</module>
+	<module>jun_springboot_vue</module>
   </modules> 
 
   <name>jun_springboot</name>
