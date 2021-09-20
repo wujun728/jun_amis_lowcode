@@ -311,7 +311,7 @@ function show(){
     $('.layui-side cite').show();
     $('.layui-side').animate({width:'200px'});
     $('.layui-body').animate({left:'200px'});
-    $('.layui-logo').html("Springboot-Manager")
+    $('.layui-logo').html("springboot-admin")
     $('.layui-logo').animate({width:'200px'});
     document.getElementById('hide').className="layui-color layui-icon layui-icon-shrink-right";
     var id = $(".layui-tab-title li.layui-this").attr("lay-id");

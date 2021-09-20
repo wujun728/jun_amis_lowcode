@@ -8,7 +8,7 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.company.project</groupId>
+    <groupId>com.jun.plugin</groupId>
     <artifactId>jun_springboot_admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>company-frame</name>

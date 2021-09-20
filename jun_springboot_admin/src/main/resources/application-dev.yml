@@ -13,12 +13,12 @@ spring:
           url: jdbc:mysql://localhost:3306/db_ssm?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2b8
         oracle:
           username: root
-          password: 123456
+          password: 
           driver-class-name: oracle.jdbc.driver.OracleDriver
           url: jdbc:oracle:thin:@localhost:1521/company_project
         sqlServer:
           username: sa
-          password: 123456
+          password: 
           driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
           url: jdbc:sqlserver://localhost:1433;databaseName=company_project
   redis:

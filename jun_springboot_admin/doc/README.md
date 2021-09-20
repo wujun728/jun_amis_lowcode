@@ -1,4 +1,4 @@
-# springboot-manager
+# springboot-admin
 
 ## 介绍
 基于SpringBoot + Thymeleaf + Layui + Apache Shiro + Redis + Mybatis Plus 的后台管理系统  
@@ -22,9 +22,9 @@
 - 提供代码生成器(MySQL、Oracle、sqlServer等主流数据库)，生成从Html到Mapper，爽歪歪  
 
 ## 代码仓库
-Gitee地址：[https://gitee.com/zwens/springboot-manager](https://gitee.com/zwens/springboot-manager)   
-GitHub地址：[https://github.com/aitangbao/springboot-manager](https://github.com/aitangbao/springboot-manager)  
-如需更简洁版，请移步:[https://gitee.com/zwens/springboot-manager/tree/simple/](https://gitee.com/zwens/springboot-manager/tree/simple/) 
+Gitee地址：[https://gitee.com/zwens/springboot-admin](https://gitee.com/zwens/springboot-admin)   
+GitHub地址：[https://github.com/aitangbao/springboot-admin](https://github.com/aitangbao/springboot-admin)  
+如需更简洁版，请移步:[https://gitee.com/zwens/springboot-admin/tree/simple/](https://gitee.com/zwens/springboot-admin/tree/simple/) 
 
 ## 开发文档&项目演示
 - 代码文档地址：[http://doc.aitangbao.cn](http://121.42.10.80:9000)
