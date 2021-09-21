@@ -33,6 +33,21 @@ public class IndexController {
     public String home() {
         return "home";
     }
+    
+    @GetMapping("/welcome1")
+    public String welcome1() {
+    	return "welcome1";
+    }
+    
+    @GetMapping("/welcome2")
+    public String welcome2() {
+    	return "welcome2";
+    }
+    
+    @GetMapping("/welcome3")
+    public String welcome3() {
+    	return "welcome3";
+    }
 
     @GetMapping("/users/password")
     public String updatePassword() {
