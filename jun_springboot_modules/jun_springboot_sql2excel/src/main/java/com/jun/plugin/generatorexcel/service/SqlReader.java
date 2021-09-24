@@ -1,12 +1,13 @@
-package com.chen.generator.service;
+package com.jun.plugin.generatorexcel.service;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.db.Db;
 import cn.hutool.db.Entity;
-import com.chen.generator.model.ColumnEntity;
-import com.chen.generator.model.DatasourceProperties;
-import com.chen.generator.model.ExcelView;
-import com.chen.generator.model.TableEntity;
+
+import com.jun.plugin.generatorexcel.model.ColumnEntity;
+import com.jun.plugin.generatorexcel.model.DatasourceProperties;
+import com.jun.plugin.generatorexcel.model.ExcelView;
+import com.jun.plugin.generatorexcel.model.TableEntity;
 import com.mysql.cj.MysqlConnection;
 import com.mysql.cj.jdbc.MysqlDataSource;
 

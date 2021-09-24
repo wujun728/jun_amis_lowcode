@@ -33,12 +33,6 @@ exportPath=D://Soft
 6. 运行Main方法
 7. 查看自动生成的 Excel 数据库文档文件
 
-##### 2. 使用构建好的发行版
-1. 下载构建好的压缩包文件：https://gitee.com/Jack-chendeng/sql-generator-excel/raw/master/packages/SqlGeneratorExcel-hotfix20210603.jar
-2. 解压
-3. 配置``datasource.properties``里的参数为你自己的
-4. 打开命令行窗口，输入命令 java -jar SqlGeneratorExcel-xxx-xxx.jar
-5. 查看自动生成的 Excel 数据库文档文件
 
 #### 参与贡献
 

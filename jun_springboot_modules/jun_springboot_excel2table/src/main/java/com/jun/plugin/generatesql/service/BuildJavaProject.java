@@ -1,6 +1,5 @@
-package cn.chen.project.generatesql.service;
+package com.jun.plugin.generatesql.service;
 
-import cn.chen.project.generatesql.entity.GenerateProperties;
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
@@ -9,6 +8,8 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import com.jun.plugin.generatesql.entity.GenerateProperties;
+
 import org.apache.commons.lang3.StringUtils;
 
 /**

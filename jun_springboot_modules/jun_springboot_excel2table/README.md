@@ -10,7 +10,6 @@
 
 
 模板Excel.xlsx
-![输入图片说明](https://images.gitee.com/uploads/images/2020/0312/011312_2b1eb642_1635778.png "屏幕截图.png")
 
 
 ### 编译Jar后的配置文件内容：
@@ -47,8 +46,6 @@ dataSource.password=chenzedeng
 ```
 
 
-### 下载直接用
-https://gitee.com/Jack-chendeng/GenerateSqlScript/releases
 
 使用说明：
 解压后 配置config.properties后

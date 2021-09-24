@@ -1,10 +1,10 @@
-package cn.chen.project.generatesql;
+package com.jun.plugin.generatesql;
 
-import cn.chen.project.generatesql.entity.GenerateProperties;
-import cn.chen.project.generatesql.service.BuildJavaProject;
-import cn.chen.project.generatesql.service.DataBaseAutoImport;
-import cn.chen.project.generatesql.service.ReadConfiguration;
-import cn.chen.project.generatesql.service.ReadExcel;
+import com.jun.plugin.generatesql.entity.GenerateProperties;
+import com.jun.plugin.generatesql.service.BuildJavaProject;
+import com.jun.plugin.generatesql.service.DataBaseAutoImport;
+import com.jun.plugin.generatesql.service.ReadConfiguration;
+import com.jun.plugin.generatesql.service.ReadExcel;
 
 /**
  * @Author chenzedeng

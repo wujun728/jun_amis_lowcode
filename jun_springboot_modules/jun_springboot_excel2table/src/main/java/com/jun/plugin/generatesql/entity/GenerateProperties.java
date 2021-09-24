@@ -1,4 +1,4 @@
-package cn.chen.project.generatesql.entity;
+package com.jun.plugin.generatesql.entity;
 
 import lombok.Data;
 

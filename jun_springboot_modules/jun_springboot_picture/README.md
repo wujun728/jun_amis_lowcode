@@ -31,12 +31,6 @@
 
 
 
-​		
-
-​		**:fist_right: Linux 与 Win 软件包下载地址：** https://gitee.com/Jack-chendeng/picture-manage/releases/v1.0
-
-
-
 3. Docker下部署方案 **(推荐)**  
 
    1. 系统确保安装了Docker环境
@@ -60,13 +54,3 @@
 
  **默认登录用户名和密码为:** ``root``
 
-
-![](./readme/1.png)
-
-![](./readme/2.png)
-
-![](./readme/3.png)
-
-![](./readme/4.png)
-
-![](./readme/5.png)

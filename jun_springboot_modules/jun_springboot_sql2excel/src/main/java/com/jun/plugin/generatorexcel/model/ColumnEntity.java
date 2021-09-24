@@ -1,4 +1,4 @@
-package com.chen.generator.model;
+package com.jun.plugin.generatorexcel.model;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
 import cn.afterturn.easypoi.excel.annotation.ExcelTarget;

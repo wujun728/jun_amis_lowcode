@@ -1,9 +1,9 @@
-package com.chen.generator;
+package com.jun.plugin.generatorexcel;
 
-import com.chen.generator.model.DatasourceProperties;
-import com.chen.generator.model.ReadConfiguration;
-import com.chen.generator.service.ExportService;
-import com.chen.generator.service.SqlReader;
+import com.jun.plugin.generatorexcel.model.DatasourceProperties;
+import com.jun.plugin.generatorexcel.model.ReadConfiguration;
+import com.jun.plugin.generatorexcel.service.ExportService;
+import com.jun.plugin.generatorexcel.service.SqlReader;
 
 /**
  * @Author: Chenzedeng

@@ -25,6 +25,9 @@
 		<module>jun_springboot_quartz</module> 
 		<module>jun_springboot_rbac</module> 
 		<module>jun_springboot_excel</module> 
+		<module>jun_springboot_excel2table</module> 
+		<module>jun_springboot_sql2excel</module> 
+		<module>jun_springboot_picture</module> 
 	</modules>
 
 	<dependencies>

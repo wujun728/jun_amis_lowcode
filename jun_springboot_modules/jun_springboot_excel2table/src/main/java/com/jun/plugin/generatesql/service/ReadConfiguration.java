@@ -1,10 +1,11 @@
-package cn.chen.project.generatesql.service;
+package com.jun.plugin.generatesql.service;
 
-import cn.chen.project.generatesql.entity.GenerateProperties;
 import cn.hutool.setting.dialect.Props;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
+
+import com.jun.plugin.generatesql.entity.GenerateProperties;
 
 /**
  * @Author Eddy·Chen

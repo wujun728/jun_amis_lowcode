@@ -1,4 +1,4 @@
-package com.chen.generator.model;
+package com.jun.plugin.generatorexcel.model;
 
 import cn.afterturn.easypoi.excel.entity.params.ExcelExportEntity;
 import cn.afterturn.easypoi.excel.export.styler.AbstractExcelExportStyler;

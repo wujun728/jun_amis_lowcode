@@ -1,4 +1,4 @@
-package com.chen.generator.model;
+package com.jun.plugin.generatorexcel.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

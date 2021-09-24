@@ -1,7 +1,8 @@
-package cn.chen.project.generatesql.service;
+package com.jun.plugin.generatesql.service;
 
-import cn.chen.project.generatesql.entity.GenerateProperties;
 import cn.hutool.db.Session;
+
+import com.jun.plugin.generatesql.entity.GenerateProperties;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import org.apache.commons.lang3.StringUtils;
 
