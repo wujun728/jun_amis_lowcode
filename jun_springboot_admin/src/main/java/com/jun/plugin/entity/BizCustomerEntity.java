@@ -26,7 +26,7 @@ public class BizCustomerEntity extends BaseEntity implements Serializable {
 	 * 主键
 	 */
 	@TableId("id")
-	private Integer id;
+	private String id;
 
 	/**
 	 * 客户名称
