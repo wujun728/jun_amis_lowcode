@@ -28,7 +28,7 @@ outputScriptFile=false
 buildJava=true
 #	Java构建配置
 #Java的构建包名
-buildConf.packageName=cn.yustart.book.app
+buildConf.packageName=com.jun.plugin.book.app
 #注释作者
 buildConf.author=Yuchen
 #要忽略生成的表名 逗号分隔
