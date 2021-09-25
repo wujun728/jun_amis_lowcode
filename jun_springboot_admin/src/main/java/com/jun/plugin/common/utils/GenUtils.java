@@ -70,6 +70,8 @@ public class GenUtils {
             columnEntity.setDataType(column.get("dataType"));
             columnEntity.setComments(column.get("columnComment"));
             columnEntity.setExtra(column.get("extra"));
+            columnEntity.setMaxLength(String.valueOf(column.get("maxLength")));
+            columnEntity.setIsNull(column.get("isNull"));
 
             //列名转换成Java属性名
             String attrName = columnToJava(columnEntity.getColumnName());

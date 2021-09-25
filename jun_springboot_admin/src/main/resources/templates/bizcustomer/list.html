@@ -14,39 +14,45 @@
 <form class="layui-form " action="" lay-filter="info" style="width: 700px;margin-top: 10px">
       <input name="id" hidden/>
         <div class="layui-form-item">
-      <label class="layui-form-label">客户名称</label>
+      <label class="layui-form-label  layui-required  ">客户名称</label>
       <div class="layui-input-block">
-        <input type="cusname" name="cusname" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+		<input type="cusname" name="cusname"  lay-verify="required|cusname" lay-max="255"   placeholder="请输入客户名称"  autocomplete="off" class="layui-input">
+	      </div>
+    </div>
+        <div class="layui-form-item">
+      <label class="layui-form-label  layui-required  ">客户描述</label>
+      <div class="layui-input-block">
+		<input type="cusdesc" name="cusdesc"  lay-verify="required|cusdesc" lay-max="255"   placeholder="请输入客户描述"  autocomplete="off" class="layui-input">
+	      </div>
+    </div>
+        <div class="layui-form-item">
+      <label class="layui-form-label  ">客户全称</label>
+      <div class="layui-input-block">
+		<input type="text" name="fullname"  placeholder="请输入fullname" autocomplete="off" class="layui-input">
+	      </div>
+    </div>
+        <div class="layui-form-item">
+      <label class="layui-form-label  ">客户性质</label>
+      <div class="layui-input-block">
+		<input type="text" name="cussex"  placeholder="请输入cussex" autocomplete="off" class="layui-input">
+	      </div>
+    </div>
+        <div class="layui-form-item">
+      <label class="layui-form-label  layui-required  ">注册时间</label>
+      <div class="layui-input-block">
+	<input type="registerDate" name="registerDate" id="date" lay-verify="required| date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
       </div>
     </div>
         <div class="layui-form-item">
-      <label class="layui-form-label">客户描述</label>
+      <label class="layui-form-label  ">客户类型</label>
       <div class="layui-input-block">
-        <input type="cusdesc" name="cusdesc" placeholder="请输入客户描述" autocomplete="off" class="layui-input">
-      </div>
+		<input type="text" name="custype"  placeholder="请输入custype" autocomplete="off" class="layui-input">
+	      </div>
     </div>
         <div class="layui-form-item">
-      <label class="layui-form-label">客户全称</label>
+      <label class="layui-form-label  ">备注</label>
       <div class="layui-input-block">
-        <input type="fullname" name="fullname" placeholder="请输入客户全称" autocomplete="off" class="layui-input">
-      </div>
-    </div>
-        <div class="layui-form-item">
-      <label class="layui-form-label">客户性质</label>
-      <div class="layui-input-block">
-        <input type="cussex" name="cussex" placeholder="请输入客户性质" autocomplete="off" class="layui-input">
-      </div>
-    </div>
-        <div class="layui-form-item">
-      <label class="layui-form-label">注册时间</label>
-      <div class="layui-input-block">
-        <input type="registerDate" name="registerDate" placeholder="请输入注册时间" autocomplete="off" class="layui-input">
-      </div>
-    </div>
-        <div class="layui-form-item">
-      <label class="layui-form-label">客户类型</label>
-      <div class="layui-input-block">
-        <input type="custype" name="custype" placeholder="请输入客户类型" autocomplete="off" class="layui-input">
+	<textarea placeholder="请输入内容" class="layui-textarea" name="remark"></textarea>
       </div>
     </div>
   <div class="layui-form-item">
@@ -99,10 +105,11 @@
   var table = layui.table;
   var form = layui.form;
   var layer = layui.layer;
+  var layedit = layui.layedit;
   var $ = jQuery = layui.jquery;
   var laydate = layui.laydate;
 
-  layui.use(['table', 'layer', 'laydate'], function () {
+  layui.use(['table', 'layer', 'laydate' ,'form', 'layedit'], function () {
 
     //加载table
     tableIns1 = table.render({
@@ -123,18 +130,33 @@
       , cols: [
         [
           {type: 'checkbox', fixed: 'left'},
-          {field: 'id', title: '主键', sort: true,hide: true},
-          {field: 'cusname', title: '客户名称', sort: true},
-          {field: 'cusdesc', title: '客户描述', sort: true},
-          {field: 'fullname', title: '客户全称', sort: true},
-          {field: 'cussex', title: '客户性质', sort: true},
-          {field: 'registerDate', title: '注册时间', sort: true},
-          {field: 'custype', title: '客户类型', sort: true},
-          {width: 120, toolbar: "#tool", title: '操作'}
+	          {field: 'id', title: '主键', sort: true  ,hide:true },
+          
+	          {field: 'cusname', title: '客户名称', sort: true },
+          
+	          {field: 'cusdesc', title: '客户描述', sort: true },
+          
+	          {field: 'fullname', title: '客户全称', sort: true },
+          
+	          {field: 'cussex', title: '客户性质', sort: true },
+          
+	          {field: 'registerDate', title: '注册时间', sort: true },
+          
+	          {field: 'custype', title: '客户类型', sort: true },
+          
+	          {field: 'remark', title: '备注', sort: true },
+          
+	          {width: 120, toolbar: "#tool", title: '操作'}
         ]
       ]
       , toolbar: '#toolbar'
     });
+    
+   //日期
+  laydate.render({
+    elem: '#date'
+    ,type: 'datetime'
+  });
 
 
     //表头工具
@@ -157,14 +179,15 @@
           $(".table_div").hide();
           $(".operation").show();
           $(".title").html("新增");
-          $(".operation input[name=id]").val("");
-          $(".operation input[name=cusname]").val("");
-          $(".operation input[name=cusdesc]").val("");
-          $(".operation input[name=fullname]").val("");
-          $(".operation input[name=cussex]").val("");
-          $(".operation input[name=registerDate]").val("");
-          $(".operation input[name=custype]").val("");
-          break;
+	          $(".operation input[name=id]").val("");
+	          $(".operation input[name=cusname]").val("");
+	          $(".operation input[name=cusdesc]").val("");
+	          $(".operation input[name=fullname]").val("");
+	          $(".operation input[name=cussex]").val("");
+	          $(".operation input[name=registerDate]").val("");
+	          $(".operation input[name=custype]").val("");
+	          $(".operation input[name=remark]").val("");
+	          break;
       };
     });
     //列操作
@@ -180,14 +203,15 @@
           $(".table_div").hide();
           $(".operation").show();
           $(".title").html("编辑");
-          $(".operation input[name=id]").val(data.id);
-          $(".operation input[name=cusname]").val(data.cusname);
-          $(".operation input[name=cusdesc]").val(data.cusdesc);
-          $(".operation input[name=fullname]").val(data.fullname);
-          $(".operation input[name=cussex]").val(data.cussex);
-          $(".operation input[name=registerDate]").val(data.registerDate);
-          $(".operation input[name=custype]").val(data.custype);
-          break;
+	          $(".operation input[name=id]").val(data.id);
+	          $(".operation input[name=cusname]").val(data.cusname);
+	          $(".operation input[name=cusdesc]").val(data.cusdesc);
+	          $(".operation input[name=fullname]").val(data.fullname);
+	          $(".operation input[name=cussex]").val(data.cussex);
+	          $(".operation input[name=registerDate]").val(data.registerDate);
+	          $(".operation input[name=custype]").val(data.custype);
+	          $(".operation input[name=remark]").val(data.remark);
+	          break;
       }
     });
 
@@ -260,4 +284,25 @@
       }
     });
   };
+  
+  //检查输入的账号长度
+  //lay-verify="required|account" lay-min="6" 
+  // https://blog.csdn.net/m0_48373030/article/details/108783184
+    form.verify({
+  cusname: function(value, item){
+            var max = item.getAttribute('lay-max');
+            if(value.length >= max){
+                return 'cusname不能大于'+max+'个字符的长度！';
+            }
+        }  ,   cusdesc: function(value, item){
+            var max = item.getAttribute('lay-max');
+            if(value.length >= max){
+                return 'cusdesc不能大于'+max+'个字符的长度！';
+            }
+        }  ,     registerDate: function(value, item){
+            var max = item.getAttribute('lay-max');
+            if(value.length >= max){
+                return 'registerDate不能大于'+max+'个字符的长度！';
+            }
+        }  ,        });
 </script>

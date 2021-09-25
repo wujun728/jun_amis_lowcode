@@ -8,22 +8,23 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.jun.plugin.common.utils.DataResult;
-import com.jun.plugin.entity.BizCustomerEntity;
-import com.jun.plugin.service.BizCustomerService;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import java.util.List;
+import com.jun.plugin.common.utils.DataResult;
+
+import com.jun.plugin.entity.BizCustomerEntity;
+import com.jun.plugin.service.BizCustomerService;
 
 
 
 /**
  * 客户信息
  *
- * @author wenbin
- * @email *****@mail.com
- * @date 2021-09-19 08:27:14
+ * @author wujun
+ * @email wujun728@mail.com
+ * @date 2021-09-25 20:46:48
  */
 @Controller
 @RequestMapping("/")

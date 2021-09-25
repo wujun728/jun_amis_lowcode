@@ -36,3 +36,10 @@
     overflow: hidden;
     box-sizing: border-box;
 }
+.layui-form-label.layui-required:after{
+    content:"*";
+    color:red;
+    position: absolute;
+    top:13px;
+    left:24px;
+}

@@ -40,6 +40,16 @@ public class ColumnEntity {
      * 属性类型
      */
     private String attrType;
+    
+    /**
+     * 属性长度
+     */
+    private String maxLength;
+    
+    /**
+     * 属性是否必填
+     */
+    private String isNull;
 
     /**
      * auto_increment
@@ -101,4 +111,5 @@ public class ColumnEntity {
     public void setExtra(String extra) {
         this.extra = extra;
     }
+    
 }

@@ -12,6 +12,7 @@
         <result property="cussex" column="cussex"/>
         <result property="registerDate" column="register_date"/>
         <result property="custype" column="custype"/>
+        <result property="remark" column="remark"/>
     </resultMap>
 
 

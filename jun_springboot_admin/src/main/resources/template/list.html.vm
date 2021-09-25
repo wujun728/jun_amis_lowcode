@@ -17,9 +17,19 @@
     <input name="${column.attrname}" hidden/>
   #else
     <div class="layui-form-item">
-      <label class="layui-form-label">${column.comments}</label>
+      <label class="layui-form-label #if($column.isNull == 'NO') layui-required #end ">${column.comments}</label>
       <div class="layui-input-block">
-        <input type="${column.attrname}" name="${column.attrname}" placeholder="请输入${column.comments}" autocomplete="off" class="layui-input">
+#if($column.dataType == 'datetime')
+	<input type="${column.attrname}" name="${column.attrname}" id="date" lay-verify="#if($column.isNull == 'NO')required|#end date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+#elseif($column.dataType == 'text')
+	<textarea placeholder="请输入内容" class="layui-textarea" name="${column.attrname}"></textarea>
+#else
+	#if($column.isNull == 'NO') 
+	<input type="${column.attrname}" name="${column.attrname}"  lay-verify="required|${column.attrname}" lay-max="${column.maxLength}"   placeholder="请输入${column.comments}"  autocomplete="off" class="layui-input">
+	#else
+	<input type="text" name="${column.attrname}"  placeholder="请输入${column.attrname}" autocomplete="off" class="layui-input">
+	#end
+#end
       </div>
     </div>
   #end
@@ -74,10 +84,11 @@
   var table = layui.table;
   var form = layui.form;
   var layer = layui.layer;
+  var layedit = layui.layedit;
   var $ = jQuery = layui.jquery;
   var laydate = layui.laydate;
 
-  layui.use(['table', 'layer', 'laydate'], function () {
+  layui.use(['table', 'layer', 'laydate' ,'form', 'layedit'], function () {
 
     //加载table
     tableIns1 = table.render({
@@ -98,14 +109,21 @@
       , cols: [
         [
           {type: 'checkbox', fixed: 'left'},
-#foreach($column in $columns)
-          {field: '${column.attrname}', title: '${column.comments}', sort: true},
-#end
+	#foreach($column in $columns)
+          {field: '${column.attrname}', title: '${column.comments}', sort: true #if($column.columnName == $pk.columnName) ,hide:true #end},
+          
+	#end
           {width: 120, toolbar: "#tool", title: '操作'}
         ]
       ]
       , toolbar: '#toolbar'
     });
+    
+   //日期
+  laydate.render({
+    elem: '#date'
+    ,type: 'datetime'
+  });
 
 
     //表头工具
@@ -128,9 +146,9 @@
           $(".table_div").hide();
           $(".operation").show();
           $(".title").html("新增");
-#foreach($column in $columns)
+	#foreach($column in $columns)
           $(".operation input[name=${column.attrname}]").val("");
-#end
+	#end
           break;
       };
     });
@@ -147,9 +165,9 @@
           $(".table_div").hide();
           $(".operation").show();
           $(".title").html("编辑");
-#foreach($column in $columns)
+	#foreach($column in $columns)
           $(".operation input[name=${column.attrname}]").val(data.${column.attrname});
-#end
+	#end
           break;
       }
     });
@@ -223,4 +241,21 @@
       }
     });
   };
+  
+  //检查输入的账号长度
+  //lay-verify="required|account" lay-min="6" 
+  // https://blog.csdn.net/m0_48373030/article/details/108783184
+    form.verify({
+#foreach($column in $columns) #if($column.columnName != $pk.columnName)
+#if($column.isNull == 'NO')
+${column.attrname}: function(value, item){
+            var max = item.getAttribute('lay-max');
+            if(value.length >= max){
+                return '${column.attrname}不能大于'+max+'个字符的长度！';
+            }
+        } #if($columns.size() != ${velocityCount}) ,  #end
+#end
+#end
+#end
+    });
 </script>

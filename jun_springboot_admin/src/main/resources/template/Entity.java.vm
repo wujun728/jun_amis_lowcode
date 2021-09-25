@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.jun.plugin.entity.BaseEntity;
-
+import org.springframework.data.annotation.Id;
 
 #if(${hasBigDecimal})
 #end
@@ -30,6 +30,7 @@ public class ${className}Entity extends BaseEntity implements Serializable {
 	 * $column.comments
 	 */
 #if($column.columnName == $pk.columnName)
+	@Id
 	@TableId("$column.columnName")
 	private $column.attrType $column.attrname;
 #end
