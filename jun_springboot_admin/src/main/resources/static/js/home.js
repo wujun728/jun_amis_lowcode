@@ -157,18 +157,17 @@ var buildBgColorHtml = function () {
  function bgColorConfigFun(bgcolorId) {
     var bgColorConfig = [
         {
-            headerRight: '#1aa094',
-            headerRightThis: '#197971',
-            headerLogo: '#243346',
-            menuLeft: '#2f4056',
-            menuLeftThis: '#1aa094',
-            menuLeftHover: '#3b3f4b',
-        },
-        {
             headerRight: '#23262e',
             headerRightThis: '#0c0c0c',
             headerLogo: '#0c0c0c',
             menuLeft: '#23262e',
+            menuLeftThis: '#1aa094',
+            menuLeftHover: '#3b3f4b',
+        },{
+            headerRight: '#1aa094',
+            headerRightThis: '#197971',
+            headerLogo: '#243346',
+            menuLeft: '#2f4056',
             menuLeftThis: '#1aa094',
             menuLeftHover: '#3b3f4b',
         },
@@ -299,7 +298,7 @@ function hide(){
 
     $('.layui-side cite').hide();
     $('.layui-side').animate({width:'55px'});
-    $('.layui-logo').html("SM")
+    $('.layui-logo').html("QX")
     $('.layui-logo').animate({width:'55px'});
     $('.layui-body').animate({left:'60px'});
     document.getElementById('hide').className="layui-color layui-icon layui-icon-spread-left";
@@ -311,7 +310,7 @@ function show(){
     $('.layui-side cite').show();
     $('.layui-side').animate({width:'200px'});
     $('.layui-body').animate({left:'200px'});
-    $('.layui-logo').html("springboot-admin")
+    $('.layui-logo').html("齐兴会计师事务所")
     $('.layui-logo').animate({width:'200px'});
     document.getElementById('hide').className="layui-color layui-icon layui-icon-shrink-right";
     var id = $(".layui-tab-title li.layui-this").attr("lay-id");
