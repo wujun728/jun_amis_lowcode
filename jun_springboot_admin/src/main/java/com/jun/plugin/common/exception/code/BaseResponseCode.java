@@ -13,7 +13,7 @@ public enum BaseResponseCode implements ResponseCodeInterface {
      * 错误码
      */
     SUCCESS(0, "操作成功"),
-    SYSTEM_BUSY(500001, "系统繁忙，请稍候再试"),
+    SYSTEM_BUSY(500001, "系统繁忙，请稍候再试!"),
     OPERATION_ERRO(500002, "操作失败"),
 
     TOKEN_ERROR(401001, "登录凭证已过期，请重新登录"),
