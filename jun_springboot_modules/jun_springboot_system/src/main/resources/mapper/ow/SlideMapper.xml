@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.royal.ow.mapper.SlideMapper">
+    
+    <resultMap type="Slide" id="SlideResult">
+        <result property="id"    column="id"    />
+        <result property="img"    column="img"    />
+        <result property="url"    column="url"    />
+        <result property="sort"    column="sort"    />
+        <result property="content"    column="content"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+	
+	<sql id="selectSlideVo">
+        select id, img, url, sort, content, create_by, create_time, update_by, update_time from ow_slide
+    </sql>
+	
+    <select id="selectSlideList" parameterType="Slide" resultMap="SlideResult">
+        <include refid="selectSlideVo"/>
+        <where>  
+            <if test="id != null "> and id = #{id}</if>
+             <if test="img != null  and img != '' "> and img = #{img}</if>
+             <if test="url != null  and url != '' "> and url = #{url}</if>
+             <if test="sort != null  and sort != '' "> and sort = #{sort}</if>
+             <if test="content != null  and content != '' "> and content = #{content}</if>
+             <if test="createBy != null  and createBy != '' "> and create_by = #{createBy}</if>
+             <if test="createTime != null "> and create_time = #{createTime}</if>
+             <if test="updateBy != null  and updateBy != '' "> and update_by = #{updateBy}</if>
+             <if test="updateTime != null "> and update_time = #{updateTime}</if>
+         </where>
+order by sort asc
+    </select>
+    
+    <select id="selectSlideById" parameterType="Integer" resultMap="SlideResult">
+        <include refid="selectSlideVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertSlide" parameterType="Slide">
+        insert into ow_slide
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">id,</if>
+			<if test="img != null  and img != ''  ">img,</if>
+			<if test="url != null  and url != ''  ">url,</if>
+			<if test="sort != null  and sort != ''  ">sort,</if>
+			<if test="content != null  and content != ''  ">content,</if>
+			<if test="createBy != null  and createBy != ''  ">create_by,</if>
+            create_time
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">#{id},</if>
+			<if test="img != null  and img != ''  ">#{img},</if>
+			<if test="url != null  and url != ''  ">#{url},</if>
+			<if test="sort != null  and sort != ''  ">#{sort},</if>
+			<if test="content != null  and content != ''  ">#{content},</if>
+			<if test="createBy != null  and createBy != ''  ">#{createBy},</if>
+            sysdate()
+         </trim>
+    </insert>
+	 
+    <update id="updateSlide" parameterType="Slide">
+        update ow_slide
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="img != null  and img != ''  ">img = #{img},</if>
+            <if test="url != null  and url != ''  ">url = #{url},</if>
+            <if test="sort != null  and sort != ''  ">sort = #{sort},</if>
+            <if test="content != null  and content != ''  ">content = #{content},</if>
+            <if test="updateBy != null  and updateBy != ''  ">update_by = #{updateBy},</if>
+            update_time = sysdate()
+        </trim>
+        where id = #{id}
+    </update>
+
+	<delete id="deleteSlideById" parameterType="Integer">
+        delete from ow_slide where id = #{id}
+    </delete>
+	
+    <delete id="deleteSlideByIds" parameterType="String">
+        delete from ow_slide where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>

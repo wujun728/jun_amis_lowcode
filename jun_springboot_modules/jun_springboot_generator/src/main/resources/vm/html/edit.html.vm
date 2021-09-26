@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html  lang="zh" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="white-bg">
+    <div class="wrapper wrapper-content animated fadeInRight ibox-content">
+        <form class="form-horizontal m" id="form-${classname}-edit" th:object="${${classname}}">
+            <input id="${primaryKey.attrname}" name="${primaryKey.attrname}" th:field="*{${primaryKey.attrname}}"  type="hidden">
+#foreach($column in $columns)
+#if($column.columnName != $primaryKey.columnName)
+#if(!${column.configInfo})
+			<div class="form-group">	
+				<label class="col-sm-3 control-label">${column.columnComment}：</label>
+				<div class="col-sm-8">
+					<input id="${column.attrname}" name="${column.attrname}" th:field="*{${column.attrname}}" class="form-control" type="text">
+				</div>
+			</div>
+#else
+#if(${column.configInfo.type} == "dict")
+			<div class="form-group">	
+				<label class="col-sm-3 control-label">${column.columnComment}：</label>
+				<div class="col-sm-8">
+					<select name="${column.attrname}" class="form-control m-b" th:with="type=${@dict.getType('${column.configInfo.value}')}">
+						<option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{${column.attrname}}"></option>
+					</select>
+				</div>
+			</div>
+#elseif(${column.configInfo.type} == "date")
+			<div class="form-group">	
+				<label class="col-sm-3 control-label">${column.columnComment}：</label>
+				<div class="col-sm-8">
+					<input id="${column.attrname}"  name="${column.attrname}" th:field="*{${column.attrname}}" class="form-control time-input" type="text">
+				</div>
+			</div>
+#elseif(${column.configInfo.type} == "fk")	
+#end
+#end
+#end
+#end
+            <!--<div class="form-group">-->
+            <!--<div class="form-control-static col-sm-offset-9">-->
+            <!--<button type="submit" class="btn btn-primary">提交</button>-->
+            <!--<button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>-->
+            <!--</div>-->
+            <!--</div>-->
+		</form>
+    </div>
+    <div th:include="include::footer"></div>
+	<script th:src="@{/wangedit/wangEditor.min.js}"></script>
+    <script type="text/javascript">
+		var prefix = ctx + "${moduleName}/${classname}"
+
+		//	<div  id="editor" class="editor"></div>
+		//var E = window.wangEditor
+		// var editor = new E('#editor')
+		// var content = $('#content')
+		// editor.customConfig.onchange = function (html) {
+		// 	// 监控变化，同步更新到 $content
+		// 	content.val(html)
+		// }
+		// editor.customConfig.uploadImgServer = 'http://api.iamyihao.com/WebUploader/uploaderPic'
+		// editor.customConfig.uploadImgHooks = {
+		// 	customInsert: function (insertImg, result, editor) {
+		// 		console.log(result.url)
+		// 		// 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+		// 		// insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+		// 		// 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+		// 		insertImg(result.url)
+		// 	}
+		// };
+		// editor.create()
+		// editor.txt.html($('#content').val());
+		// // 初始化 content 的值
+		// content.val(editor.txt.html())
+
+
+		$("#form-${classname}-edit").validate({
+			rules:{
+				xxxx:{
+					required:true,
+				},
+			}
+		});
+		function submitHandler() {
+	        if ($.validate.form()) {
+	            $.operate.save(prefix + "/edit", $('#form-${classname}-edit').serialize());
+	        }
+	    }
+     //   如果是editFull用这个
+        <!--
+        $("#form-${classname}-edit").validate({
+            rules:{
+                xxxx:{
+                    required:true,
+                },
+            },
+            submitHandler: function(form) {
+                $.operate.save(prefix + "/edit", $('#form-${classname}-edit').serialize());
+            }
+        });
+			-->
+
+
+
+	</script>
+</body>
+</html>

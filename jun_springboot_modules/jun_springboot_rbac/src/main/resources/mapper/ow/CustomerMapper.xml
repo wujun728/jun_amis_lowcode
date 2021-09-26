@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.royal.ow.mapper.CustomerMapper">
+    
+    <resultMap type="Customer" id="CustomerResult">
+        <result property="id"    column="id"    />
+        <result property="cusname"    column="cusname"    />
+        <result property="cusdesc"    column="cusdesc"    />
+        <result property="fullname"    column="fullname"    />
+        <result property="cussex"    column="cussex"    />
+        <result property="registerDate"    column="register_date"    />
+        <result property="custype"    column="custype"    />
+    </resultMap>
+	
+	<sql id="selectCustomerVo">
+        select id, cusname, cusdesc, fullname, cussex, register_date, custype from biz_customer
+    </sql>
+    <sql id="selectCustomerVoForOw">
+        select id, cusname, cusdesc, fullname, cussex, register_date, custype from biz_customer
+    </sql>
+	
+    <select id="selectCustomerList" parameterType="Customer" resultMap="CustomerResult">
+        <include refid="selectCustomerVo"/>
+        <where>  
+            <if test="id != null "> and id = #{id}</if>
+             <if test="cusname != null  and cusname != '' "> and cusname = #{cusname}</if>
+             <if test="cusdesc != null  and cusdesc != '' "> and cusdesc = #{cusdesc}</if>
+             <if test="fullname != null  and fullname != '' "> and fullname = #{fullname}</if>
+             <if test="cussex != null  and cussex != '' "> and cussex = #{cussex}</if>
+             <if test="registerDate != null "> and register_date = #{registerDate}</if>
+             <if test="custype != null  and custype != '' "> and custype = #{custype}</if>
+         </where>
+    </select>
+
+    <select id="selectCustomerListForOw" parameterType="Customer" resultMap="CustomerResult">
+        <include refid="selectCustomerVoForOw"/>
+        <where>
+                            <if test="id != null "> and id = #{id}</if>
+                            <if test="cusname != null  and cusname != '' "> and cusname = #{cusname}</if>
+                            <if test="cusdesc != null  and cusdesc != '' "> and cusdesc = #{cusdesc}</if>
+                            <if test="fullname != null  and fullname != '' "> and fullname = #{fullname}</if>
+                            <if test="cussex != null  and cussex != '' "> and cussex = #{cussex}</if>
+                            <if test="registerDate != null "> and register_date = #{registerDate}</if>
+                            <if test="custype != null  and custype != '' "> and custype = #{custype}</if>
+                    </where>
+    </select>
+    
+    <select id="selectCustomerById" parameterType="Integer" resultMap="CustomerResult">
+        <include refid="selectCustomerVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertCustomer" parameterType="Customer">
+        insert into biz_customer
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">id,</if>
+			<if test="cusname != null  and cusname != ''  ">cusname,</if>
+			<if test="cusdesc != null  and cusdesc != ''  ">cusdesc,</if>
+			<if test="fullname != null  and fullname != ''  ">fullname,</if>
+			<if test="cussex != null  and cussex != ''  ">cussex,</if>
+			<if test="registerDate != null  ">register_date,</if>
+			<if test="custype != null  and custype != ''  ">custype,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">#{id},</if>
+			<if test="cusname != null  and cusname != ''  ">#{cusname},</if>
+			<if test="cusdesc != null  and cusdesc != ''  ">#{cusdesc},</if>
+			<if test="fullname != null  and fullname != ''  ">#{fullname},</if>
+			<if test="cussex != null  and cussex != ''  ">#{cussex},</if>
+			<if test="registerDate != null  ">#{registerDate},</if>
+			<if test="custype != null  and custype != ''  ">#{custype},</if>
+         </trim>
+    </insert>
+	 
+    <update id="updateCustomer" parameterType="Customer">
+        update biz_customer
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="cusname != null  and cusname != ''  ">cusname = #{cusname},</if>
+            <if test="cusdesc != null  and cusdesc != ''  ">cusdesc = #{cusdesc},</if>
+            <if test="fullname != null  and fullname != ''  ">fullname = #{fullname},</if>
+            <if test="cussex != null  and cussex != ''  ">cussex = #{cussex},</if>
+            <if test="registerDate != null  ">register_date = #{registerDate},</if>
+            <if test="custype != null  and custype != ''  ">custype = #{custype},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+	<delete id="deleteCustomerById" parameterType="Integer">
+        delete from biz_customer where id = #{id}
+    </delete>
+	
+    <delete id="deleteCustomerByIds" parameterType="String">
+        delete from biz_customer where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>

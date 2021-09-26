@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.royal.ow.mapper.JobsMapper">
+    
+    <resultMap type="Jobs" id="JobsResult">
+        <result property="id"    column="id"    />
+        <result property="jobName"    column="job_name"    />
+        <result property="workExperience"    column="work_experience"    />
+        <result property="jobNumber"    column="job_number"    />
+        <result property="salary"    column="salary"    />
+        <result property="remark"    column="remark"    />
+        <result property="status"    column="status"    />
+        <result property="content"    column="content"    />
+        <result property="education"    column="education"    />
+    </resultMap>
+	
+	<sql id="selectJobsVo">
+        select id, job_name, work_experience, job_number, salary, remark, status, content, education from ow_jobs
+    </sql>
+	<sql id="selectJobsVoForOw">
+        select id, job_name, work_experience, job_number, salary, remark, status, education from ow_jobs
+    </sql>
+
+    <select id="selectJobsList" parameterType="Jobs" resultMap="JobsResult">
+        <include refid="selectJobsVo"/>
+        <where>  
+            <if test="id != null "> and id = #{id}</if>
+             <if test="jobName != null  and jobName != '' "> and job_name = #{jobName}</if>
+             <if test="workExperience != null  and workExperience != '' "> and work_experience = #{workExperience}</if>
+             <if test="jobNumber != null "> and job_number = #{jobNumber}</if>
+             <if test="salary != null  and salary != '' "> and salary = #{salary}</if>
+             <if test="remark != null  and remark != '' "> and remark = #{remark}</if>
+             <if test="status != null  and status != '' "> and status = #{status}</if>
+             <if test="content != null  and content != '' "> and content = #{content}</if>
+             <if test="education != null  and education != '' "> and education = #{education}</if>
+         </where>
+    </select>
+    <select id="selectJobsListForOw" parameterType="Jobs" resultMap="JobsResult">
+        <include refid="selectJobsVoForOw"/>
+        <where>
+            <if test="id != null "> and id = #{id}</if>
+             <if test="jobName != null  and jobName != '' "> and job_name = #{jobName}</if>
+             <if test="workExperience != null  and workExperience != '' "> and work_experience = #{workExperience}</if>
+             <if test="jobNumber != null "> and job_number = #{jobNumber}</if>
+             <if test="salary != null  and salary != '' "> and salary = #{salary}</if>
+             <if test="remark != null  and remark != '' "> and remark = #{remark}</if>
+             <if test="status != null  and status != '' "> and status = #{status}</if>
+             <if test="content != null  and content != '' "> and content = #{content}</if>
+             <if test="education != null  and education != '' "> and education = #{education}</if>
+         </where>
+    </select>
+
+    <select id="selectJobsById" parameterType="Integer" resultMap="JobsResult">
+        <include refid="selectJobsVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertJobs" parameterType="Jobs">
+        insert into ow_jobs
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">id,</if>
+			<if test="jobName != null  and jobName != ''  ">job_name,</if>
+			<if test="workExperience != null  and workExperience != ''  ">work_experience,</if>
+			<if test="jobNumber != null  ">job_number,</if>
+			<if test="salary != null  and salary != ''  ">salary,</if>
+			<if test="remark != null  and remark != ''  ">remark,</if>
+			<if test="status != null  and status != ''  ">status,</if>
+			<if test="content != null  and content != ''  ">content,</if>
+			<if test="education != null  and education != ''  ">education,</if>
+            <if test="createBy != null  and createBy != ''  ">create_by,</if>
+            create_time
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null  ">#{id},</if>
+			<if test="jobName != null  and jobName != ''  ">#{jobName},</if>
+			<if test="workExperience != null  and workExperience != ''  ">#{workExperience},</if>
+			<if test="jobNumber != null  ">#{jobNumber},</if>
+			<if test="salary != null  and salary != ''  ">#{salary},</if>
+			<if test="remark != null  and remark != ''  ">#{remark},</if>
+			<if test="status != null  and status != ''  ">#{status},</if>
+			<if test="content != null  and content != ''  ">#{content},</if>
+			<if test="education != null  and education != ''  ">#{education},</if>
+            <if test="createBy != null  and createBy != ''  ">#{createBy},</if>
+            sysdate()
+         </trim>
+    </insert>
+	 
+    <update id="updateJobs" parameterType="Jobs">
+        update ow_jobs
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="jobName != null  and jobName != ''  ">job_name = #{jobName},</if>
+            <if test="workExperience != null  and workExperience != ''  ">work_experience = #{workExperience},</if>
+            <if test="jobNumber != null  ">job_number = #{jobNumber},</if>
+            <if test="salary != null  and salary != ''  ">salary = #{salary},</if>
+            <if test="remark != null  and remark != ''  ">remark = #{remark},</if>
+            <if test="status != null  and status != ''  ">status = #{status},</if>
+            <if test="content != null  and content != ''  ">content = #{content},</if>
+            <if test="education != null  and education != ''  ">education = #{education},</if>
+            <if test="updateBy != null  and updateBy != ''  ">update_by = #{updateBy},</if>
+            update_time = sysdate()
+        </trim>
+        where id = #{id}
+    </update>
+
+	<delete id="deleteJobsById" parameterType="Integer">
+        delete from ow_jobs where id = #{id}
+    </delete>
+	
+    <delete id="deleteJobsByIds" parameterType="String">
+        delete from ow_jobs where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+    
+</mapper>
