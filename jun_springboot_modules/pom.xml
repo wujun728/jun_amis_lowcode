@@ -19,12 +19,6 @@
 	</properties>
 
 	<modules> 
-		<module>jun_springboot_code_generator</module> 
-		<module>jun_springboot_common</module> 
-		<module>jun_springboot_core</module> 
-		<module>jun_springboot_quartz</module> 
-		<module>jun_springboot_rbac</module> 
-		<module>jun_springboot_excel</module> 
 		<module>jun_springboot_excel2table</module> 
 		<module>jun_springboot_sql2excel</module> 
 		<module>jun_springboot_picture</module> 
