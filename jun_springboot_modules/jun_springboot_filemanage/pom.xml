@@ -2,12 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.free</groupId>
-    <artifactId>free-fs</artifactId>
+    <groupId>com.jun.plugin</groupId>
+    <artifactId>jun_springboot_filemanage</artifactId>
     <version>1.1.0</version>
-    <name>free-fs</name>
-    <packaging>jar</packaging>
-    <description>free-fs 文件管理系统</description>
+    <name>jun_springboot_filemanage</name>
+    <packaging>jar</packaging> 
 
     <parent>
         <groupId>org.springframework.boot</groupId>
