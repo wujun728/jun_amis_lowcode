@@ -203,15 +203,18 @@
           $(".table_div").hide();
           $(".operation").show();
           $(".title").html("编辑");
-	          $(".operation input[name=id]").val(data.id);
-	          $(".operation input[name=cusname]").val(data.cusname);
-	          $(".operation input[name=cusdesc]").val(data.cusdesc);
-	          $(".operation input[name=fullname]").val(data.fullname);
-	          $(".operation input[name=cussex]").val(data.cussex);
-	          $(".operation input[name=registerDate]").val(data.registerDate);
-	          $(".operation input[name=custype]").val(data.custype);
-	          $(".operation input[name=remark]").val(data.remark);
-	          break;
+          CoreUtil.sendGet("/sys/user/roles/" + data.id, null, function (res) {
+        	  console.log(res.data);
+          });
+          $(".operation input[name=id]").val(data.id);
+          $(".operation input[name=cusname]").val(data.cusname);
+          $(".operation input[name=cusdesc]").val(data.cusdesc);
+          $(".operation input[name=fullname]").val(data.fullname);
+          $(".operation input[name=cussex]").val(data.cussex);
+          $(".operation input[name=registerDate]").val(data.registerDate);
+          $(".operation input[name=custype]").val(data.custype);
+          $(".operation input[name=remark]").val(data.remark);
+          break;
       }
     });
 

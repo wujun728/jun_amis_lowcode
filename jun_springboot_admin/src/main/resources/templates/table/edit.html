@@ -68,7 +68,11 @@
         var form = layui.form,
             layer = layui.layer,
             $ = layui.$;
-
+        
+        CoreUtil.sendGet("/sys/user/roles/" + data.id, null, function (res) {
+      	  console.log(res.data);
+        });
+        
         //监听提交
         form.on('submit(saveBtn)', function (data) {
             var index = layer.alert(JSON.stringify(data.field), {

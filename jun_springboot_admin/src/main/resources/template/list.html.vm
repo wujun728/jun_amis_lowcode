@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/custom.form.css">
 </head>
 <body>
+<!-- 新增修改的DIV页面-begin,默认hidden -->
 <div class="panel panel-default operation" hidden>
   <div class="panel-heading title"></div>
 <div class="layui-card-body">
@@ -43,7 +44,9 @@
 </form>
 </div>
 </div>
+<!-- 新增修改的DIV页面-end -->
 
+<!-- 查询列表的DIV页面-start -->
 <div class="table_div">
   <div id="searchParam"  shiro:hasPermission="${classname}:list">
     <div class="layui-form-item">
@@ -56,10 +59,11 @@
         <button class="layui-btn"   id="export">导出全部</button>
       </div>
     </div>
-
   </div>
+  <!-- 渲染列表，上面的是工具栏 -->
   <table class="layui-table" id="showTable" lay-filter="showTable" ></table>
 </div>
+<!-- 查询列表的DIV页面-end -->
 <script type="text/html" id="toolbar">
   <div class="layui-btn-container">
     <button class="layui-btn layui-btn-sm" lay-event="add"  shiro:hasPermission="${classname}:add">添加</button>
@@ -87,6 +91,7 @@
   var layedit = layui.layedit;
   var $ = jQuery = layui.jquery;
   var laydate = layui.laydate;
+  //定义lay全局对象
 
   layui.use(['table', 'layer', 'laydate' ,'form', 'layedit'], function () {
 
@@ -224,7 +229,6 @@
           search();
         });
       }
-
       return false;
     });
   });
@@ -242,7 +246,7 @@
     });
   };
   
-  //检查输入的账号长度
+  //根据数据库字段长度及是否必填属性生成校验表单字段长度
   //lay-verify="required|account" lay-min="6" 
   // https://blog.csdn.net/m0_48373030/article/details/108783184
     form.verify({
