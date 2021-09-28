@@ -72,6 +72,14 @@
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.5</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -97,10 +105,10 @@
 				<version>3.0.0</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<warName>${artifactId}</warName>
+					<warName>${project.artifactId}</warName>
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>${artifactId}</finalName>
+		<finalName>${project.artifactId}</finalName>
 	</build>
 </project>

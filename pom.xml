@@ -10,6 +10,7 @@
 
 	<modules>
 		<module>jun_springboot_admin</module>
+		<module>jun_springboot_codegenerator</module>
 		<module>jun_springboot_excel2table</module>
 		<module>jun_springboot_sql2excel</module>
 		<module>jun_springboot_picture</module>

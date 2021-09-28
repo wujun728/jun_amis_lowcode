@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.royal.ow.mapper.EquipmentMapper">
+<mapper namespace="com.jun.plugin.ow.mapper.EquipmentMapper">
     
     <resultMap type="Equipment" id="EquipmentResult">
         <result property="id"    column="id"    />

@@ -6,7 +6,7 @@ fork自若依/RuoYi ,兼具RuoYi,不定期更新源项目代码保持同步,在�
 ###### 多数据源切面
 根据方法名自动切换，默认主从分离（当然主从地址一样），当只有一个数据源的时候虽然会打印日志，实际主从还是同一个
 ###### 集成通用mapper
-一开始想整合mybatis-plus，这玩意太重了，而且crud和本项目很多地方八字不合。mapper继承com.royal.common.base.BaseMapper<T>后就可以策马奔腾啦，谁用谁知道
+一开始想整合mybatis-plus，这玩意太重了，而且crud和本项目很多地方八字不合。mapper继承com.jun.plugin.common.base.BaseMapper<T>后就可以策马奔腾啦，谁用谁知道
 ###### 控制台日志分等级彩色渲染和多环境修改
 具体看logback-spring.xml和application.xml改动
 ###### 集成七牛云，阿里云，腾讯云OSS

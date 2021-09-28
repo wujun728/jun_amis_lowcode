@@ -2,7 +2,7 @@ package ${package}.mapper;
 
 import ${package}.domain.${className};
 import java.util.List;
-import com.royal.common.base.BaseMapper;
+import com.jun.plugin.common.base.BaseMapper;
 
 /**
  * ${tableComment} 数据层

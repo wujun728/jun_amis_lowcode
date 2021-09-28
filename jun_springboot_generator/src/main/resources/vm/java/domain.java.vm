@@ -2,7 +2,7 @@ package ${package}.domain;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import com.royal.common.base.BaseEntity;
+import com.jun.plugin.common.base.BaseEntity;
 import javax.persistence.Table;
 #foreach ($column in $columns)
 #if($column.attrType == 'Date')

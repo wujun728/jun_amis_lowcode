@@ -29,7 +29,7 @@ server:
 # 日志配置
 logging:
   level:
-    com.royal: debug
+    com.jun.plugin: debug
     org.springframework: WARN
     org.spring.springboot.dao: debug
 
@@ -73,7 +73,7 @@ spring:
 # MyBatis
 mybatis:
     # 搜索指定包别名
-    typeAliasesPackage: com.royal
+    typeAliasesPackage: com.jun.plugin
     # 配置mapper的扫描，找到所有的mapper.xml映射文件
     mapperLocations: classpath*:mapper/**/*Mapper.xml
 
@@ -132,7 +132,7 @@ gen:
   # 作者
   author: royal
   # 默认生成包路径 system 根据实际情况可改成自己的模块名称 如 system monitor tool
-  packageName: com.royal.ow
+  packageName: com.jun.plugin.ow
   # 自动去除表前缀，默认是true
   autoRemovePre: true
   # 表前缀(类名不会包含表前缀)
