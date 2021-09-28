@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jun.plugin</groupId>
-    <artifactId>jun_springboot_bizservice</artifactId>
+    <artifactId>jun_springboot_common</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -40,28 +40,25 @@
 	</dependencyManagement>
 
     <dependencies>
-		<!-- 公共模块 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.jun.plugin</groupId>
-			<artifactId>jun_springboot_common</artifactId>
-			<version>1.0</version>
-		</dependency>
+			<artifactId>jun_springboot_framework</artifactId>
+			<version>${plugin.version}</version>
+		</dependency> -->
 		
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
+        </dependency> -->
 
         <!--数据源-->
         <dependency>
@@ -76,11 +73,11 @@
         </dependency>
 
         <!--shiro 依赖-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>${shiro.version}</version>
-        </dependency>
+        </dependency> -->
         <!--lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -94,7 +91,7 @@
         </dependency>
 
         <!--thymeleaf默认使用html5规则标签必须闭合等 使用次此包正常解析-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
@@ -102,7 +99,7 @@
             <groupId>com.github.theborakompanioni</groupId>
             <artifactId>thymeleaf-extras-shiro</artifactId>
             <version>${thymeleaf-shiro.version}</version>
-        </dependency>
+        </dependency> -->
         <!--数据库持久化 及 插件依赖-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -180,10 +177,15 @@
             <artifactId>easy-captcha</artifactId>
             <version>${easy-captcha.version}</version>
         </dependency>
+        <dependency>
+        	<groupId>javax.servlet</groupId>
+        	<artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>manager</finalName>
+        <finalName>common</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

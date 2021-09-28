@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.jun.plugin.common.config.FileUploadProperties;
+import com.jun.plugin.common.comfig.FileUploadProperties;
 
 import javax.annotation.Resource;
 import javax.servlet.Filter;
