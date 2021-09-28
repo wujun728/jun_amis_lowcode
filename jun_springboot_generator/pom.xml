@@ -3,20 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>jun_springboot_modules</artifactId>
+        <artifactId>jun_springboot_plugin</artifactId>
         <groupId>com.jun.plugin</groupId>
-        <version>3.1</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    
-    <artifactId>jun_springboot_system</artifactId>
-    
-    <description>
-	    system系统模块
+
+    <artifactId>jun_springboot_generator</artifactId>
+	
+	<description>
+	    generator代码生成
 	</description>
 	
+	<properties>
+        <velocity.version>1.7</velocity.version>
+    </properties>
+
     <dependencies>
-		<!-- 通用工具-->
+    
+        <!--velocity代码生成使用模板 -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>${velocity.version}</version>
+        </dependency>
+
+        <!-- 通用工具-->
         <dependency>
             <groupId>com.jun.plugin</groupId>
             <artifactId>jun_springboot_common</artifactId>
