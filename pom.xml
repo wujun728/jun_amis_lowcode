@@ -14,13 +14,6 @@
 		<module>jun_springboot_excel2table</module>
 		<module>jun_springboot_sql2excel</module>
 		<module>jun_springboot_picture</module>
-		<module>jun_springboot_rbac</module>
-		<module>jun_springboot_app</module>
-		<module>jun_springboot_framework</module>
-		<module>jun_springboot_system</module>
-		<module>jun_springboot_quartz</module>
-		<module>jun_springboot_generator</module>
-		<module>jun_springboot_common</module>
 	</modules>
 
 	<properties>
