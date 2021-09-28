@@ -87,7 +87,7 @@ public class Global
      */
     public static String getVersion()
     {
-        return StringUtils.nvl(getConfig("royal.version"), "3.0.0");
+        return StringUtils.nvl(getConfig("plugin.version"), "3.0.0");
     }
 
     /**

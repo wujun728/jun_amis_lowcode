@@ -29,9 +29,17 @@
         <thymeleaf-shiro.version>2.0.0</thymeleaf-shiro.version>
         <knife4j.version>2.0.2</knife4j.version>
         <easy-captcha.version>1.6.2</easy-captcha.version>
+        <plugin.version>1.0</plugin.version>
     </properties>
 
     <dependencies>
+    	<!-- 核心模块 -->
+		<!-- <dependency>
+			<groupId>com.jun.plugin</groupId>
+			<artifactId>jun_springboot_framework</artifactId>
+			<version>${plugin.version}</version>
+		</dependency> -->
+		
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

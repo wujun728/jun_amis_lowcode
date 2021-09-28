@@ -35,7 +35,6 @@
 		<hutool.version>5.0.0</hutool.version>
 		<guava.version>28.1-jre</guava.version>
 		<user.agent.version>1.20</user.agent.version>
-		<royal.version>1.0</royal.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -52,6 +51,7 @@
 		<qcloud.cos.version>4.4</qcloud.cos.version>
 		<fastjson.version>1.2.49</fastjson.version>
 		<oshi.version>3.9.1</oshi.version>
+		<plugin.version>1.0</plugin.version>
 	</properties>
 
 	<dependencyManagement>

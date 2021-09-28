@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.jun.plugin</groupId>
             <artifactId>jun_springboot_common</artifactId>
-            <version>${royal.version}</version>
+            <version>${plugin.version}</version>
         </dependency>
     </dependencies>
 	

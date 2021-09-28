@@ -94,21 +94,21 @@
         <dependency>
             <groupId>com.jun.plugin</groupId>
             <artifactId>jun_springboot_system</artifactId>
-            <version>${royal.version}</version>
+            <version>${plugin.version}</version>
         </dependency>
         
         <!-- 定时任务-->
         <dependency>
             <groupId>com.jun.plugin</groupId>
             <artifactId>jun_springboot_quartz</artifactId>
-            <version>${royal.version}</version>
+            <version>${plugin.version}</version>
         </dependency>
         
         <!-- 代码生成-->
         <dependency>
             <groupId>com.jun.plugin</groupId>
             <artifactId>jun_springboot_generator</artifactId>
-            <version>${royal.version}</version>
+            <version>${plugin.version}</version>
         </dependency>
         
 		<!-- pagehelper 分页插件 -->
