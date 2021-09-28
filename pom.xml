@@ -14,10 +14,7 @@
 	<module>jun_springboot_vue</module>
   </modules> 
 
-  <name>jun_springboot</name>
-  <url>http://www.oracle.com</url>
-
-  <properties>
+  <!-- <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
@@ -28,7 +25,7 @@
     <hutool.version>5.0.0</hutool.version>
     <guava.version>28.1-jre</guava.version>
     <user.agent.version>1.20</user.agent.version>
-  </properties>
+  </properties> -->
 
   <repositories>
     <repository>
@@ -44,7 +41,7 @@
     </repository>
   </repositories>
 
-  <dependencyManagement>
+  <!-- <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -58,28 +55,28 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql.version}</version>
       </dependency>
-      <!-- hutool工具类 -->
+      hutool工具类
       <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-all</artifactId>
         <version>${hutool.version}</version>
       </dependency>
-      <!-- guava工具类 -->
+      guava工具类
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
         <version>${guava.version}</version>
       </dependency>
-      <!-- 解析 UserAgent 信息 -->
+      解析 UserAgent 信息
       <dependency>
         <groupId>eu.bitwalker</groupId>
         <artifactId>UserAgentUtils</artifactId>
         <version>${user.agent.version}</version>
       </dependency>
     </dependencies>
-  </dependencyManagement>
+  </dependencyManagement> -->
 
-  <build>
+  <!-- <build>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -124,5 +121,5 @@
         </plugin>
       </plugins>
     </pluginManagement>
-  </build>
+  </build> -->
 </project>
