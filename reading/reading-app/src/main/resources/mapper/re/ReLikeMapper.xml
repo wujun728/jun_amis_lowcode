@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.ReLikeMapper">
+    
+    <resultMap type="ReLike" id="ReLikeResult">
+        <result property="id"    column="id"    />
+        <result property="uid"    column="uid"    />
+        <result property="pid"    column="pid"    />
+        <result property="state"    column="state"    />
+        <result property="time"    column="time"    />
+    </resultMap>
+
+    <sql id="selectReLikeVo">
+        select id, uid, pid, state, time from re_like
+    </sql>
+
+    <select id="selectReLikeList" parameterType="ReLike" resultMap="ReLikeResult">
+        <include refid="selectReLikeVo"/>
+        <where>  
+            <if test="uid != null "> and uid = #{uid}</if>
+            <if test="pid != null "> and pid = #{pid}</if>
+            <if test="state != null "> and state = #{state}</if>
+            <if test="time != null "> and time = #{time}</if>
+        </where>
+    </select>
+    
+    <select id="selectReLikeById" parameterType="Long" resultMap="ReLikeResult">
+        <include refid="selectReLikeVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertReLike" parameterType="ReLike" useGeneratedKeys="true" keyProperty="id">
+        insert into re_like
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">uid,</if>
+            <if test="pid != null">pid,</if>
+            <if test="state != null">state,</if>
+            <if test="time != null">time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">#{uid},</if>
+            <if test="pid != null">#{pid},</if>
+            <if test="state != null">#{state},</if>
+            <if test="time != null">#{time},</if>
+         </trim>
+    </insert>
+
+    <update id="updateReLike" parameterType="ReLike">
+        update re_like
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="uid != null">uid = #{uid},</if>
+            <if test="pid != null">pid = #{pid},</if>
+            <if test="state != null">state = #{state},</if>
+            <if test="time != null">time = #{time},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteReLikeById" parameterType="Long">
+        delete from re_like where id = #{id}
+    </delete>
+
+    <delete id="deleteReLikeByIds" parameterType="String">
+        delete from re_like where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

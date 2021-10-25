@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reading.app.mapper.IntegralMapper">
+    <insert id="insertIntegral" parameterType="Integral">
+        insert into re_integral (aid, integral) value (#{aid}, #{integral});
+    </insert>
+
+    <select id="selectByAid" resultType="Integral">
+        select *
+        from re_integral
+        where aid = #{aid};
+    </select>
+
+    <update id="update" parameterType="Integral">
+        update re_integral
+        set integral=#{integral}
+        where aid = #{aid}
+    </update>
+</mapper>

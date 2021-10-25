@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.ReAttentionMapper">
+    
+    <resultMap type="ReAttention" id="ReAttentionResult">
+        <result property="id"    column="id"    />
+        <result property="uid"    column="uid"    />
+        <result property="auid"    column="auid"    />
+    </resultMap>
+
+    <sql id="selectReAttentionVo">
+        select id, uid, auid from re_attention
+    </sql>
+
+    <select id="selectReAttentionList" parameterType="ReAttention" resultMap="ReAttentionResult">
+        <include refid="selectReAttentionVo"/>
+        <where>  
+            <if test="uid != null "> and uid = #{uid}</if>
+            <if test="auid != null "> and auid = #{auid}</if>
+        </where>
+    </select>
+    
+    <select id="selectReAttentionById" parameterType="Long" resultMap="ReAttentionResult">
+        <include refid="selectReAttentionVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertReAttention" parameterType="ReAttention">
+        insert into re_attention
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="uid != null">uid,</if>
+            <if test="auid != null">auid,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="uid != null">#{uid},</if>
+            <if test="auid != null">#{auid},</if>
+         </trim>
+    </insert>
+
+    <update id="updateReAttention" parameterType="ReAttention">
+        update re_attention
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="uid != null">uid = #{uid},</if>
+            <if test="auid != null">auid = #{auid},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteReAttentionById" parameterType="Long">
+        delete from re_attention where id = #{id}
+    </delete>
+
+    <delete id="deleteReAttentionByIds" parameterType="String">
+        delete from re_attention where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

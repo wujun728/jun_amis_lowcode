@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.ReRemarkMapper">
+    
+    <resultMap type="ReRemark" id="ReRemarkResult">
+        <result property="id"    column="id"    />
+        <result property="remark"    column="remark"    />
+        <result property="pid"    column="pid"    />
+        <result property="updateTime"    column="update_time"    />
+        <!-- 一对一，对象成员（类的属性是另一个类对象）使用 association 映射 javaType 指定该属性的类型-->
+        <association property="reUser" javaType="User" select="com.reading.app.mapper.UserMapper.selectUserzbyAid" column="aid">
+        </association>
+    </resultMap>
+
+    <sql id="selectReRemarkVo">
+        select id, remark, aid, pid, update_time from re_remark
+    </sql>
+
+    <select id="selectReRemarkList" parameterType="ReRemark" resultMap="ReRemarkResult">
+        <include refid="selectReRemarkVo"/>
+        <where>  
+            <if test="aid != null "> and aid = #{aid}</if>
+            <if test="pid != null "> and pid = #{pid}</if>
+        </where>
+    </select>
+    
+    <select id="selectReRemarkById" parameterType="Long" resultMap="ReRemarkResult">
+        <include refid="selectReRemarkVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertReRemark" parameterType="ReRemark" useGeneratedKeys="true" keyProperty="id">
+        insert into re_remark
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="remark != null">remark,</if>
+            <if test="aid != null">aid,</if>
+            <if test="pid != null">pid,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="remark != null">#{remark},</if>
+            <if test="aid != null">#{aid},</if>
+            <if test="pid != null">#{pid},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateReRemark" parameterType="ReRemark">
+        update re_remark
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="remark != null">remark = #{remark},</if>
+            <if test="aid != null">aid = #{aid},</if>
+            <if test="pid != null">pid = #{pid},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteReRemarkById" parameterType="Long">
+        delete from re_remark where id = #{id}
+    </delete>
+
+    <delete id="deleteReRemarkByIds" parameterType="String">
+        delete from re_remark where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reading.app.mapper.RemarkMapper">
+
+    <resultMap type="ReRemark" id="ReRemarkResult">
+        <result property="id"    column="id"    />
+        <result property="remark"    column="remark"    />
+        <result property="pid"    column="pid"    />
+        <result property="updateTime"    column="update_time"    />
+        <!-- 一对一，对象成员（类的属性是另一个类对象）使用 association 映射 javaType 指定该属性的类型-->
+        <association property="reUser" javaType="User" select="com.reading.app.mapper.UserMapper.selectUserzbyAid" column="aid">
+        </association>
+    </resultMap>
+
+    <insert id="insert" parameterType="Remark">
+        insert into re_remark (aid, remark, pid) value (#{aid}, #{remark}, #{pid});
+    </insert>
+
+    <select id="getListByAid" resultMap="ReRemarkResult">
+        select id as rid, remark, aid, pid
+        from re_remark
+        where pid = #{pid};
+    </select>
+
+    <select id="getRemark" resultType="Remark">
+        select * from re_remark where aid = #{aid} and pid = #{pid}
+    </select>
+
+    <delete id="delete">
+        delete
+        from re_remark
+        where id = #{rid}
+    </delete>
+
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reading.app.mapper.UserMapper">
+
+
+    <insert id="insertUser" parameterType="User">
+        insert into re_user (email, nick) value (#{email}, #{nickName});
+    </insert>
+
+    <select id="selectUserzbyAid" resultType="User">
+        select *
+        from re_user
+        where aid = #{aid};
+    </select>
+
+    <update id="updateUser" parameterType="User">
+        update re_user
+        <set>
+            <if test="name != null and name !=''">
+                name = #{name},
+            </if>
+            <if test="nick != null and nick !=''">
+                nick = #{nick},
+            </if>
+            <if test="email != null and email !=''">
+                email = #{email},
+            </if>
+            <if test="tel != null and tel !=''">
+                tel = #{tel},
+            </if>
+            <if test="birthday != null and birthday != ''">
+                birthday = #{birthday},
+            </if>
+            <if test="note != null and note != '' ">
+                note = #{note},
+            </if>
+            <if test="pic != null and pic != ''">
+                pic = #{pic},
+            </if>
+            <if test="picName != null and picName != ''">
+                picName = #{picName},
+            </if>
+        </set>
+        where id = #{aid}
+    </update>
+</mapper>

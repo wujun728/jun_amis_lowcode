@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.ReIntegralMapper">
+    
+    <resultMap type="ReIntegral" id="ReIntegralResult">
+        <result property="id"    column="id"    />
+        <result property="aid"    column="aid"    />
+        <result property="integral"    column="integral"    />
+    </resultMap>
+
+    <sql id="selectReIntegralVo">
+        select id, aid, integral from re_integral
+    </sql>
+
+    <select id="selectReIntegralList" parameterType="ReIntegral" resultMap="ReIntegralResult">
+        <include refid="selectReIntegralVo"/>
+        <where>  
+            <if test="aid != null "> and aid = #{aid}</if>
+            <if test="integral != null "> and integral = #{integral}</if>
+        </where>
+    </select>
+    
+    <select id="selectReIntegralById" parameterType="Long" resultMap="ReIntegralResult">
+        <include refid="selectReIntegralVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertReIntegral" parameterType="ReIntegral" useGeneratedKeys="true" keyProperty="id">
+        insert into re_integral
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="aid != null">aid,</if>
+            <if test="integral != null">integral,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="aid != null">#{aid},</if>
+            <if test="integral != null">#{integral},</if>
+         </trim>
+    </insert>
+
+    <update id="updateReIntegral" parameterType="ReIntegral">
+        update re_integral
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="aid != null">aid = #{aid},</if>
+            <if test="integral != null">integral = #{integral},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteReIntegralById" parameterType="Long">
+        delete from re_integral where id = #{id}
+    </delete>
+
+    <delete id="deleteReIntegralByIds" parameterType="String">
+        delete from re_integral where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

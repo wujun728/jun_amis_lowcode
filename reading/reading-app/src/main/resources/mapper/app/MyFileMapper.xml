@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.reading.app.mapper.MyFileMapper">
+    <insert id="insertFile" parameterType="MyFile">
+        insert into re_file (name, url, origin_name) value (#{name}, #{url}, #{originName});
+    </insert>
+
+    <select id="getFile" resultType="MyFile">
+        select id,name,url,origin_name as originName
+        from re_file
+        <where>
+            <if test="id!=null">
+                and id = #{id}
+            </if>
+            <if test="name!=null">
+                and id = #{name,jdbcType=VARCHAR}
+            </if>
+        </where>
+        ;
+    </select>
+</mapper>

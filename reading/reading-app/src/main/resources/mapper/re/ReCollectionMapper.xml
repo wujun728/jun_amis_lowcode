@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.ReCollectionMapper">
+    
+    <resultMap type="ReCollection" id="ReCollectionResult">
+        <result property="id"    column="id"    />
+        <result property="uid"    column="uid"    />
+        <result property="pid"    column="pid"    />
+        <result property="state"    column="state"    />
+        <result property="collectionTime"    column="collection_time"    />
+    </resultMap>
+
+    <sql id="selectReCollectionVo">
+        select id, uid, pid, state, collection_time from re_collection
+    </sql>
+
+    <select id="selectReCollectionList" parameterType="ReCollection" resultMap="ReCollectionResult">
+        <include refid="selectReCollectionVo"/>
+        <where>  
+            <if test="uid != null "> and uid = #{uid}</if>
+            <if test="pid != null "> and pid = #{pid}</if>
+            <if test="state != null "> and state = #{state}</if>
+            <if test="collectionTime != null "> and collection_time = #{collectionTime}</if>
+        </where>
+    </select>
+    
+    <select id="selectReCollectionById" parameterType="Long" resultMap="ReCollectionResult">
+        <include refid="selectReCollectionVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertReCollection" parameterType="ReCollection" useGeneratedKeys="true" keyProperty="id">
+        insert into re_collection
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="uid != null">uid,</if>
+            <if test="pid != null">pid,</if>
+            <if test="state != null">state,</if>
+            <if test="collectionTime != null">collection_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="uid != null">#{uid},</if>
+            <if test="pid != null">#{pid},</if>
+            <if test="state != null">#{state},</if>
+            <if test="collectionTime != null">#{collectionTime},</if>
+         </trim>
+    </insert>
+
+    <update id="updateReCollection" parameterType="ReCollection">
+        update re_collection
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="uid != null">uid = #{uid},</if>
+            <if test="pid != null">pid = #{pid},</if>
+            <if test="state != null">state = #{state},</if>
+            <if test="collectionTime != null">collection_time = #{collectionTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteReCollectionById" parameterType="Long">
+        delete from re_collection where id = #{id}
+    </delete>
+
+    <delete id="deleteReCollectionByIds" parameterType="String">
+        delete from re_collection where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

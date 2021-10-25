@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.reading.app.mapper.RePostMapper">
+    
+    <resultMap type="RePost" id="RePostResult">
+        <result property="id"    column="id"    />
+        <result property="type"    column="type"    />
+        <result property="title"    column="title"    />
+        <result property="createtime"    column="createTime"    />
+        <result property="classType"    column="class_type"    />
+        <result property="content"    column="content"    />
+        <result property="pictures"    column="pictures"    />
+        <result property="picnames"    column="picnames"    />
+        <!-- 一对一，对象成员（类的属性是另一个类对象）使用 association 映射 javaType 指定该属性的类型-->
+        <association property="reUser" javaType="User" select="com.reading.app.mapper.UserMapper.selectUserzbyAid" column="aid">
+        </association>
+        <!-- 一对多，对象成员（类的属性是另一个类对象数组）使用 collection 映射 ofType 指定该属性的类型-->
+        <collection property="remarks" javaType="list" ofType="ReRemark" select="com.reading.app.mapper.RemarkMapper.getListByAid" column="id">
+        </collection>
+    </resultMap>
+
+    <sql id="selectRePostVo">
+        select id, type, title, aid, createTime, class_type, content, pictures, picnames from re_post
+    </sql>
+
+    <select id="selectRePostList" parameterType="RePost" resultMap="RePostResult">
+        <include refid="selectRePostVo"/>
+        <where>  
+            <if test="type != null "> and type = #{type}</if>
+            <if test="title != null  and title != ''"> or title like concat('%',#{title},'%') </if>
+            <if test="aid != null "> and aid = #{aid}</if>
+            <if test="createtime != null "> and createTime = #{createtime}</if>
+            <if test="classType != null  and classType != ''"> and class_type = #{classType}</if>
+            <if test="content != null  and content != ''"> or content like concat('%',#{content},'%') </if>
+            <if test="pictures != null  and pictures != ''"> and pictures = #{pictures}</if>
+            <if test="picnames != null  and picnames != ''"> and picnames = #{picnames}</if>
+        </where>
+    </select>
+    
+    <select id="selectRePostById" parameterType="Long" resultMap="RePostResult">
+        <include refid="selectRePostVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertRePost" parameterType="RePost" useGeneratedKeys="true" keyProperty="id">
+        insert into re_post
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="type != null">type,</if>
+            <if test="title != null">title,</if>
+            <if test="aid != null">aid,</if>
+            <if test="createtime != null">createTime,</if>
+            <if test="classType != null">class_type,</if>
+            <if test="content != null">content,</if>
+            <if test="pictures != null">pictures,</if>
+            <if test="picnames != null">picnames,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="type != null">#{type},</if>
+            <if test="title != null">#{title},</if>
+            <if test="aid != null">#{aid},</if>
+            <if test="createtime != null">#{createtime},</if>
+            <if test="classType != null">#{classType},</if>
+            <if test="content != null">#{content},</if>
+            <if test="pictures != null">#{pictures},</if>
+            <if test="picnames != null">#{picnames},</if>
+         </trim>
+    </insert>
+
+    <update id="updateRePost" parameterType="RePost">
+        update re_post
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="type != null">type = #{type},</if>
+            <if test="title != null">title = #{title},</if>
+            <if test="aid != null">aid = #{aid},</if>
+            <if test="createtime != null">createTime = #{createtime},</if>
+            <if test="classType != null">class_type = #{classType},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="pictures != null">pictures = #{pictures},</if>
+            <if test="picnames != null">picnames = #{picnames},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteRePostById" parameterType="Long">
+        delete from re_post where id = #{id}
+    </delete>
+
+    <delete id="deleteRePostByIds" parameterType="String">
+        delete from re_post where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
