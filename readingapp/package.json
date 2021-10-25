@@ -1,0 +1,13 @@
+{
+    "id": "uni-easyinput",
+    "name": "Easyinput 增强输入框",
+    "version": "0.0.8",
+    "description": "easyinput 组件是对原生input组件的增强 ",
+    "keywords": [
+        "uni-ui",
+        "ui",
+        "input",
+        "uni-easyinput",
+        "输入框"
+    ]
+}
