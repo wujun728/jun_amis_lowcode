@@ -1,0 +1,8 @@
+
+.home-container {
+	height: 80%;
+}
+. {
+	z-index: 999;
+}
+

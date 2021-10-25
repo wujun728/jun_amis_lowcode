@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/test/test",
+    "pages/home/edit_post",
+    "pages/home/upload_file",
+    "pages/search/search",
+    "pages/message/sys_msg_detail",
+    "pages/message/like_detail",
+    "pages/my/login",
+    "pages/my/registor",
+    "pages/my/reset_password",
+    "pages/detail/detail",
+    "pages/detail/user_detail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "阅读APP",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "演示定位能力"
+    }
+  },
+  "usingComponents": {
+    "community": "/pages/community/index",
+    "find": "/pages/find/index",
+    "home": "/pages/home/index",
+    "message": "/pages/message/index",
+    "my": "/pages/my/index",
+    "cu-custom": "/colorui/components/cu-custom"
+  }
+}

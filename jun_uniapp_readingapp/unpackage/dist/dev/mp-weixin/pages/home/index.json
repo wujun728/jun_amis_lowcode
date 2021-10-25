@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uni-fab": "/components/uni-fab/uni-fab"
+  },
+  "component": true
+}

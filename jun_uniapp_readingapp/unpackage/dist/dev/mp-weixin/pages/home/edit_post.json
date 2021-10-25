@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "推书",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "l-file": "/components/l-file/l-file",
+    "post-item": "/pages/components/post/post-item"
+  }
+}

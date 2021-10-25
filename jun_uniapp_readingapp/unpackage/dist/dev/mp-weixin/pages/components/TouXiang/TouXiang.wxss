@@ -1,0 +1,12 @@
+
+.imageView.data-v-5ff1eb4f{
+	width: 100%;
+	height: 100%;
+	padding: 5%;
+}
+.imageC.data-v-5ff1eb4f{
+	border-radius: 50%;
+	width: 90%;
+	height: 90%;
+}
+

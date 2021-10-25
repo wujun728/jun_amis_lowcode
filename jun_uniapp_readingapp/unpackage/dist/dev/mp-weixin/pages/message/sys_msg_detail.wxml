@@ -1,0 +1,1 @@
+<view><cu-custom vue-id="ae3d58f8-1" bgColor="bg-gradual-pink" isBack="{{true}}" bind:__l="__l" vue-slots="{{['backText','content']}}"><view slot="backText">返回</view><view slot="content">系统消息</view></cu-custom>消息为空</view>

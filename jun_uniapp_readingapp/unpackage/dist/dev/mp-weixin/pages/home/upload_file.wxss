@@ -1,0 +1,8 @@
+
+.padding-sm {
+	padding: 20rpx;
+}
+.padding {
+	padding: 30rpx;
+}
+

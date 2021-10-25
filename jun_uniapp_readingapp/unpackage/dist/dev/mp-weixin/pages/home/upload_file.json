@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "文件上传",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "l-file": "/components/l-file/l-file"
+  }
+}

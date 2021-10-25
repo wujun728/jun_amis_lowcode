@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "post-list": "/pages/components/PostList/PostList",
+    "post-page": "/pages/components/post/post-page"
+  },
+  "component": true
+}

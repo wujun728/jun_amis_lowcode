@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tou-xiang": "/pages/components/TouXiang/TouXiang"
+  },
+  "component": true
+}

@@ -1,0 +1,1 @@
+<view class="data-v-5ff1eb4f"><view class="imageView data-v-5ff1eb4f"><image class="imageC data-v-5ff1eb4f" src="{{src}}" data-event-opts="{{[['tap',[['handleClick']]]]}}" catchtap="__e"></image></view></view>

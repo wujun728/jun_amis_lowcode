@@ -1,0 +1,13 @@
+
+.mu-login-image.data-v-ba7da882 {
+	width: 100%;
+}
+.mu-login-label.data-v-ba7da882 {
+	width: 80%;
+	margin: 0 5%;
+}
+.popup-content.data-v-ba7da882 {
+	background-color: #fff;
+	padding: 15px;
+}
+
