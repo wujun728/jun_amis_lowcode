@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.system.mapper.DeptMapper">
+    <resultMap id="BaseResultMap" type="com.jun.plugin.system.domain.Dept">
+        <!--@mbg.generated-->
+        <!--@Table sys_dept-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="pid" jdbcType="INTEGER" property="pid"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="spread" jdbcType="INTEGER" property="spread"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="available" jdbcType="INTEGER" property="available"/>
+        <result column="ordernum" jdbcType="INTEGER" property="ordernum"/>
+        <result column="createtime" jdbcType="TIMESTAMP" property="createtime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, pid, title, spread, remark, address, available, ordernum, createtime
+    </sql>
+
+    <!-- 查询最大排序码 -->
+    <select id="queryDeptMaxOrderNum" resultType="java.lang.Integer">
+        select  MAX(ordernum)  from  sys_dept
+    </select>
+
+    <!-- 根据id获取自己的子部门 -->
+    <select id="queryDeptChildrenCountById" resultType="java.lang.Integer">
+        select count(1) from  sys_dept where pid=#{value}
+    </select>
+
+
+</mapper>

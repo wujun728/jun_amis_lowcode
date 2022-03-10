@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.business.mapper.OutportMapper">
+  <resultMap id="BaseResultMap" type="com.jun.plugin.business.domain.Outport">
+    <!--@mbg.generated-->
+    <!--@Table bus_outport-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="providerid" jdbcType="INTEGER" property="providerid" />
+    <result column="paytype" jdbcType="VARCHAR" property="paytype" />
+    <result column="outporttime" jdbcType="TIMESTAMP" property="outporttime" />
+    <result column="operateperson" jdbcType="VARCHAR" property="operateperson" />
+    <result column="outportprice" jdbcType="DOUBLE" property="outportprice" />
+    <result column="number" jdbcType="INTEGER" property="number" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="goodsid" jdbcType="INTEGER" property="goodsid" />
+    <result column="inportid" jdbcType="INTEGER" property="inportid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, providerid, paytype, outporttime, operateperson, outportprice, `number`, remark, 
+    goodsid, inportid
+  </sql>
+</mapper>
