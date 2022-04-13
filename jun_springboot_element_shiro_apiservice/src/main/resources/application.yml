@@ -1,0 +1,51 @@
+server:
+  port: 8087
+  servlet:
+    context-path: /element-shiro-crm
+
+spring:
+  profiles:
+    active: dev # 环境 dev|test|prod
+  jackson: # jackson时间格式化
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    throw-exception-if-no-handler-found: true
+  redis:
+    open: false # 是否开启redis缓存
+    database: 0
+    host: localhost
+    port: 6379
+    password: # 密码（默认为空）
+    timeout: 6000ms  # 连接超时时长（毫秒）
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  typeAliasesPackage: com.element.modules.*.entity
+  global-config:
+    banner: true
+    db-config:
+      id-type: AUTO #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+
+element:
+  jwt:
+    secret: f4e2e52034358f86b33cde581c0f8eb3[www.qingcong.com] # 加密秘钥
+    expire: 604800 # token有效时长，7天，单位秒
+    header: token

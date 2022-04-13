@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">    
+<mapper namespace="com.element.modules.sys.mapper.SysConfigMapper">
+
+	<!-- 根据key，查询value -->
+	<select id="queryByKey" parameterType="string" resultType="com.element.modules.sys.entity.SysConfigEntity">
+		SELECT
+			*
+		FROM
+			sys_config
+		WHERE
+			param_key = #{paramKey}
+	</select>
+	
+</mapper>
