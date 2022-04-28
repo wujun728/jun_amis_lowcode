@@ -20,8 +20,6 @@ element-shiro轻量级脚手架,基于element ui、springboot、shiro、 mybatis
 
 #### 运行截图
 
-
-
 <table>
     <tr>
         <td><img src="screenshot/1.png"/></td>
