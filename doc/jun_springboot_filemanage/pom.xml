@@ -23,7 +23,7 @@
         <druid-starter>1.1.17</druid-starter>
         <mybatis-plus-boot-starter.version>3.3.0</mybatis-plus-boot-starter.version>
         <hutool.version>5.3.7</hutool.version>
-        <fastjson.version>1.2.70</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <qiniu.version>7.2.23</qiniu.version>
         <aliyun-sdk-oss>3.8.1</aliyun-sdk-oss>
         <commons-lang3.version>3.9</commons-lang3.version>
