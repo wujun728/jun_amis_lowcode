@@ -11,7 +11,7 @@
     <properties>
         <hutool.version>5.1.5</hutool.version>
         <easypoi.version>4.1.0</easypoi.version>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
 
     <dependencies>
