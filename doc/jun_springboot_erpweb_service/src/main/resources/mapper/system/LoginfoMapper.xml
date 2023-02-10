@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jun.plugin.system.mapper.LoginfoMapper">
+  <resultMap id="BaseResultMap" type="com.jun.plugin.system.domain.Loginfo">
+    <!--@mbg.generated-->
+    <!--@Table sys_loginfo-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="loginname" jdbcType="VARCHAR" property="loginname" />
+    <result column="loginip" jdbcType="VARCHAR" property="loginip" />
+    <result column="logintime" jdbcType="TIMESTAMP" property="logintime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, loginname, loginip, logintime
+  </sql>
+</mapper>
