@@ -1,50 +1,33 @@
-######################################################################
-# Build Tools
+*.class
+.DS_Store
+application.pid
 
-.gradle
-/build/
-!gradle/wrapper/gradle-wrapper.jar
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
 
-target/
-!.mvn/wrapper/maven-wrapper.jar
+# Package Files #
+# *.jar
+*.war
+*.ear
 
-######################################################################
-# IDE
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
-### STS ###
-.apt_generated
+# Eclipse
 .classpath
-.factorypath
 .project
+target
+classes
+bin
 .settings
-.springBeans
-
-node_modules
+.factorypath
 doc2
+.mvn
 
-### IntelliJ IDEA ###
+# Idea
 .idea
-*.iws
+.idea
 *.iml
-*.ipr
 
-### JRebel ###
-rebel.xml
-
-### NetBeans ###
-nbproject/private/
-build/*
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-
-######################################################################
-# Others
-*.log
-*.xml.versionsBackup
-*.swp
-
-!*/build/*.java
-!*/build/*.html
-!*/build/*.xml
+# git
+*.orig
