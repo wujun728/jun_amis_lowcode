@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/amis-editor/favicon.ico"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="apple-touch-icon" href="/amis-editor/logo192.png"/>
+    <link rel="manifest" href="/amis-editor/manifest.json"/>
+    <script src="/pages/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery = $.noConflict();
+    </script>
+    <script th:src="${js}"></script>
+    <script>
+        // AMIS_JSON={
+        //     type:"page",
+        //     title:"我的编辑器",
+        //     body:"测试我的编辑器"
+        // }
+        saveAmis=function(schema){
+            jQuery.ajax({
+                url:"/admin/custom/saveSchema/[[${code}]]",
+                type:"POST",
+                data:{
+                    schema:JSON.stringify(schema)
+                },
+                success:function(data){
+                    if(data.status == 0){
+                        alert("保存成功");
+                    }else{
+                        alert("保存失败"+data.msg);
+                    }
+                }
+            })
+        }
+    </script>
+    <title>jqp-amis-editor</title>
+    <script defer="defer" src="/amis-editor/static/js/main.a4b77c97.js"></script>
+    <link href="/amis-editor/static/css/main.2098ee69.css" rel="stylesheet">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+</body>
+</html>
