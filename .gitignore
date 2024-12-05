@@ -17,15 +17,17 @@ hs_err_pid*
 .classpath
 .project
 target
-classes
 bin
+classes
 .settings
 .factorypath
 doc2
-.mvn
+*bak
+target
+
+node_modules
 
 # Idea
-.idea
 .idea
 *.iml
 
