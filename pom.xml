@@ -16,7 +16,7 @@
 	</properties>
 
 	<modules>   
-		<module>jun_amis_admin</module>
+		<module>jqp-admin-back</module>
 	</modules>
 
 	<dependencies>
