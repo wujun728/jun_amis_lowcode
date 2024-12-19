@@ -44,7 +44,9 @@ public class WebConfig implements WebMvcConfigurer {
                 "/swagger-resources",
                 "/swagger-resources/**",
                 "/openApi/**",
-                "/v2/api-docs/**"
+                "/v2/api-docs/**",
+
+                "/*/*.json"
                 );
 
         InterceptorRegistration allInterceptorRegistration = registry.addInterceptor(allInterceptor);
